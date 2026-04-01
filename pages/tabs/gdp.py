@@ -4,50 +4,22 @@ from pages.helpers.macro import macro_functions as mf
 from pages.helpers.macro import macro_charts as mc
 import translations.gdp_spend as t
 from translations.gdp_production import production_summarize_terms as p
-
-def generalities(df: pd.DataFrame, terms: dict, variable: int|list) -> None:
-    """
-    General utilities used in several parts of this section.
-    filters in the sidebar and the logic to plot the chart
-    """
-    with st.sidebar: 
-        st.header("Filters:")
-        years =  df.columns[1:].str.split("-").str[0].unique()
-        choice_year = st.multiselect("Year:", sorted(years, reverse=True))
-
-        tmp = st.multiselect("Variable:", terms.values())
-        if tmp:
-            variable = [k for k, v in terms.items() if v in tmp]
-
-        st.info("You may choose more than one option.")
-
-    if choice_year:
-        pattern = "|".join(choice_year)
-        mask = df.columns.str.contains(pattern)
-        mask[0] = True
-        df = df.loc[:, mask]
-
-    # plot the chart
-    gdp_series = mf.clean_gdp(df, variable)
-    fig = mc.total_gdp_line(gdp_series, terms) 
-    st.plotly_chart(fig)
-    st.caption("Chained volume series, base year 2015")
-    st.caption("Source: DANE")
-    st.info("\'p\' is provisional and \'pr\' is preliminary data.")
+from translations.gdp_income import income_summarize_terms as i
+from translations.presidents import presidents
 
 def render_gdp(gdp_df: pd.DataFrame) -> None:
     gdp_local = gdp_df.copy()
  
-    st.title("Real GDP")
+    st.title("GDP")
 
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        method = st.selectbox("Method:", ["Total Values", "Annual Growth", "Quarter Growth"]) 
+        method = st.selectbox("Method:", ["Total Values", "Growth"]) 
 
     if method == "Total Values":
         with col2:
-            perspective = st.selectbox("Perspective:", ["Spend", "Production"])
+            perspective = st.selectbox("Perspective:", ["Spend", "Production", "Income"])
 
         if perspective == "Spend":
             with col3:
@@ -64,8 +36,8 @@ def render_gdp(gdp_df: pd.DataFrame) -> None:
             else:
                 variable = -1
 
-            generalities(gdp_local, selected_terms, variable)
-        else:
+            mf.generalities_spend_product(gdp_local, selected_terms, variable, "Chained volume series")
+        elif perspective == "Production":
             path = "./data/dane/GDP/production/summarize.csv" 
             gdp_local = pd.read_csv(path, encoding="utf-8", dtype=str)
 
@@ -74,6 +46,63 @@ def render_gdp(gdp_df: pd.DataFrame) -> None:
                 
             variable = -1
 
-            generalities(gdp_local, p, variable)
+            mf.generalities_spend_product(gdp_local, p, variable, "Chained volume series")
+        else:
+            path = "./data/dane/GDP/income/summarize.csv"
+            gdp_local = pd.read_csv(path, encoding="utf-8", dtype=str)
+
+            with col3:
+                category = st.selectbox("Category:", ["Summarize"])
+                
+            variable = -1
+
+            mf.generalities_spend_product(gdp_local, i, variable, "Current Prices")
     else:
-        st.write("SOON")
+        with col2:
+            perspective = st.selectbox("Perspective:", ["Annual", "Quarter"])
+
+        if perspective == "Annual":
+            path = "./data/banco_republica/GDP/annual_growth.csv"
+
+            gdp_local = pd.read_csv(path, encoding="utf-8", dtype=str) 
+
+            quarter = None
+        else:
+            path = "./data/banco_republica/GDP/quarter_growth.csv"
+
+            gdp_local = pd.read_csv(path, encoding="utf-8", dtype=str)
+
+            quarter = "I"
+
+        with col3: 
+            years = gdp_local[gdp_local.columns[0]].str.split("-").str[0].unique()
+
+            tmp_years = years.astype(int)
+
+            valid_presidents = [
+                name for name, years in presidents.items() 
+                if not set(years).isdisjoint(tmp_years)
+            ]
+
+            president = st.selectbox("President:", valid_presidents, index=None)
+
+        with st.sidebar:
+            st.title("Filters")
+
+            years = gdp_local["Fecha"]
+
+            if quarter is not None:
+                quarter = st.selectbox("Quarter:", ["I", "II", "III", "IV"])
+                years = gdp_local["Fecha"].str.split("-").str[0].unique()
+
+            if president:
+                choice_year = st.multiselect("Year:", sorted(presidents[president], reverse=True)) 
+            else:
+                choice_year = st.multiselect("Year:", sorted(years, reverse=True)) 
+
+            st.info("You may choose more than one option.")
+
+        fig = mc.gdp_growth(gdp_local, choice_year, president, 1, quarter) 
+        st.plotly_chart(fig)
+        st.caption("Spliced series, base 2015")
+        st.caption("Source: DANE")
