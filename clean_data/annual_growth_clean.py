@@ -1,8 +1,4 @@
 import pandas as pd
-import matplotlib.pyplot as plt
-import warnings
-warnings.filterwarnings("ignore", category=FutureWarning)
-pd.set_option("display.max_rows", None)
 
 path = "./data/banco_republica/GDP/annual_growth.csv"
 
