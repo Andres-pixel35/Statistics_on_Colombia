@@ -1,5 +1,11 @@
 presidents = {
-    "Alfonso López Michelsen": list(range(1975, 1979)),   
+    "Gustavo Rojas Pinilla":    list(range(1954, 1958)),
+    "Junta Militar":            list(range(1958, 1959)),
+    "Alberto Lleras Camargo":   list(range(1959, 1963)),
+    "Guillermo León Valencia":  list(range(1963, 1967)),
+    "Carlos Lleras Restrepo":   list(range(1967, 1971)),
+    "Misael Pastrana Borrero":  list(range(1971, 1975)),
+    "Alfonso López Michelsen":  list(range(1975, 1979)),
     "Julio César Turbay Ayala": list(range(1979, 1983)),  
     "Belisario Betancur":       list(range(1983, 1987)),
     "Virgilio Barco Vargas":    list(range(1987, 1991)),
