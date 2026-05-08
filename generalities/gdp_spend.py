@@ -54,7 +54,15 @@ spend_exports_and_imports_terms = {
 spend_categories = {
     "summarize": "Summarize",
     "capital_formation": "Capital Formation",
-    "exports_and_imports": "Exports and Imports", 
+    "exports_and_imports": "Exports and Imports",
     "durability_homes_spend": "Durability Homes Spend",
     "goal_homes_spend": "Goal Homes Spend"
+}
+
+spend_terms_map = {
+    "summarize": spend_summarize_terms,
+    "capital_formation": spend_capital_formation_terms,
+    "exports_and_imports": spend_exports_and_imports_terms,
+    "durability_homes_spend": spend_durability_homes_spend_terms,
+    "goal_homes_spend": spend_goal_homes_spend_terms,
 }

@@ -1,25 +1,25 @@
 import pandas as pd
 import streamlit as st
 from pages.helpers.macro import macro_charts as mc
-from translations.presidents import presidents
+from generalities.presidents import presidents
+from generalities.function import get_valid_presidents
 
-def clean_gdp(df: pd.DataFrame, columns):
+def clean_gdp(df: pd.DataFrame, rows):
     gdp_local = df.copy()
 
     gdp_local = gdp_local.set_index("Concepto")
     gdp_local = gdp_local.apply(lambda col: col.str.replace(".", "", regex=False))
 
-    if isinstance(columns, int):
-        gdp_series = gdp_local.iloc[columns,:]
+    if isinstance(rows, int):
+        gdp_series = gdp_local.iloc[rows,:]
     else:
-        gdp_series = gdp_local.loc[columns,:]
+        gdp_series = gdp_local.loc[rows,:]
 
     gdp_series = gdp_series.T
+    gdp_series = gdp_series.astype(int)
 
     if len(gdp_series) > 5:
         gdp_series.index = gdp_series.index.str.split("-").str[0]
-        gdp_series = gdp_series.astype(int)
-
         gdp_series = gdp_series.groupby(gdp_series.index).sum()
 
     return gdp_series
@@ -31,15 +31,15 @@ def generalities_spend_product(df: pd.DataFrame, terms: dict, variable: int|list
     """
     with st.sidebar: 
         st.header("Filters:")
+        
+        chart_type = st.selectbox("Chart Type:", ["Line", "Bar"])
+
         years =  df.columns[1:].str.split("-").str[0].unique()
 
         tmp_years = years.str.replace("p|r", "", regex=True)
         tmp_years = tmp_years.astype(int)
 
-        valid_presidents = [
-            name for name, years in presidents.items() 
-            if not set(years).isdisjoint(tmp_years)
-        ]
+        valid_presidents = get_valid_presidents(tmp_years)
 
         president = st.selectbox("President:", valid_presidents, index=None)
 
@@ -69,7 +69,11 @@ def generalities_spend_product(df: pd.DataFrame, terms: dict, variable: int|list
 
     # plot the chart
     gdp_series = clean_gdp(df, variable)
-    fig = mc.total_gdp_line(gdp_series, terms) 
+    if chart_type == "Bar":
+        fig = mc.total_gdp_bar(gdp_series, terms)
+    else:
+        fig = mc.total_gdp_line(gdp_series, terms)
+
     st.plotly_chart(fig)
     st.caption(f"{caption}, base year 2015")
     st.caption("Source: DANE")

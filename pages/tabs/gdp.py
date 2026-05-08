@@ -2,10 +2,11 @@ import streamlit as st
 import pandas as pd
 from pages.helpers.macro import macro_functions as mf
 from pages.helpers.macro import macro_charts as mc
-import translations.gdp_spend as t
-from translations.gdp_production import production_summarize_terms as p
-from translations.gdp_income import income_summarize_terms as i
-from translations.presidents import presidents
+import generalities.gdp_spend as t
+from generalities.gdp_production import production_summarize_terms as p
+from generalities.gdp_income import income_summarize_terms as i
+from generalities.presidents import presidents
+from generalities.function import get_valid_presidents
 
 def render_gdp(gdp_df: pd.DataFrame) -> None:
     gdp_local = gdp_df.copy()
@@ -22,12 +23,12 @@ def render_gdp(gdp_df: pd.DataFrame) -> None:
             perspective = st.selectbox("Perspective:", ["Spend", "Production", "Income"])
 
         if perspective == "Spend":
+            cats = t.spend_categories
             with col3:
-                category = st.selectbox("Category:", t.spend_categories.values())
+                category = st.selectbox("Category:", cats.values())
 
-            file = next((k for k, v in t.spend_categories.items() if v == category), None)
-            term_name = f"spend_{file}_terms"
-            selected_terms = getattr(t, term_name, None)
+            file = next((k for k, v in cats.items() if v == category), None)
+            selected_terms = t.spend_terms_map.get(file)
 
             if category != "Summarize":
                 path = f"./data/dane/GDP/spend/{file}.csv"
@@ -79,10 +80,7 @@ def render_gdp(gdp_df: pd.DataFrame) -> None:
 
             tmp_years = years.astype(int)
 
-            valid_presidents = [
-                name for name, years in presidents.items() 
-                if not set(years).isdisjoint(tmp_years)
-            ]
+            valid_presidents = get_valid_presidents(tmp_years)
 
             president = st.selectbox("President:", valid_presidents, index=None)
 
