@@ -5,8 +5,8 @@ from pages.helpers.macro import macro_charts as mc
 import generalities.gdp_spend as t
 from generalities.gdp_production import production_summarize_terms as p
 from generalities.gdp_income import income_summarize_terms as i
-from generalities.presidents import presidents
-from generalities.function import get_valid_presidents
+from generalities.dictionaries import presidents
+from generalities.function import get_valid_presidents, find_key_by_value 
 
 def render_gdp(gdp_df: pd.DataFrame) -> None:
     gdp_local = gdp_df.copy()
@@ -27,37 +27,40 @@ def render_gdp(gdp_df: pd.DataFrame) -> None:
             with col3:
                 category = st.selectbox("Category:", cats.values())
 
-            file = next((k for k, v in cats.items() if v == category), None)
-            selected_terms = t.spend_terms_map.get(file)
+            filename = find_key_by_value(cats, category)
+            selected_terms = t.spend_terms_map.get(filename)
 
             if category != "Summarize":
-                path = f"./data/dane/GDP/spend/{file}.csv"
+                path = f"./data/dane/GDP/spend/{filename}.csv"
                 gdp_local = pd.read_csv(path, encoding="utf-8", dtype=str)
                 variable = 0
             else:
                 variable = -1
 
-            mf.generalities_spend_product(gdp_local, selected_terms, variable, "Chained volume series")
+            gdp_info = ["Real GDP per Year", "Year", "Billions (COP)", "Chained volume series"]
+            mf.generalities_spend_product(gdp_local, selected_terms, variable, gdp_info)
         elif perspective == "Production":
-            path = "./data/dane/GDP/production/summarize.csv" 
+            path = "./data/dane/GDP/production/summarize.csv"
             gdp_local = pd.read_csv(path, encoding="utf-8", dtype=str)
 
             with col3:
                 category = st.selectbox("Category:", ["Summarize"])
-                
+
             variable = -1
 
-            mf.generalities_spend_product(gdp_local, p, variable, "Chained volume series")
+            gdp_info = ["Real GDP per Year", "Year", "Billions (COP)", "Chained volume series"]
+            mf.generalities_spend_product(gdp_local, p, variable, gdp_info)
         else:
             path = "./data/dane/GDP/income/summarize.csv"
             gdp_local = pd.read_csv(path, encoding="utf-8", dtype=str)
 
             with col3:
                 category = st.selectbox("Category:", ["Summarize"])
-                
+
             variable = -1
 
-            mf.generalities_spend_product(gdp_local, i, variable, "Current Prices")
+            gdp_info = ["Real GDP per Year", "Year", "Billions (COP)", "Current Prices"]
+            mf.generalities_spend_product(gdp_local, i, variable, gdp_info)
     else:
         with col2:
             perspective = st.selectbox("Perspective:", ["Annual", "Quarter"])
