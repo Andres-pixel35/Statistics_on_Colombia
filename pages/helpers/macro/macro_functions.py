@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 from pages.helpers.macro import macro_charts as mc
-from generalities.presidents import presidents
+from generalities.dictionaries import presidents, months
 from generalities.function import get_valid_presidents
 
 def clean_gdp(df: pd.DataFrame, rows):
@@ -24,7 +24,7 @@ def clean_gdp(df: pd.DataFrame, rows):
 
     return gdp_series
 
-def generalities_spend_product(df: pd.DataFrame, terms: dict, variable: int|list, caption: str) -> None:
+def generalities_spend_product(df: pd.DataFrame, terms: dict, variable: int|list, info: list) -> None:
     """
     General utilities used in several parts of this section.
     filters in the sidebar and the logic to plot the chart
@@ -70,12 +70,12 @@ def generalities_spend_product(df: pd.DataFrame, terms: dict, variable: int|list
     # plot the chart
     gdp_series = clean_gdp(df, variable)
     if chart_type == "Bar":
-        fig = mc.total_gdp_bar(gdp_series, terms)
+        fig = mc.bar_chart(gdp_series, terms, info)
     else:
-        fig = mc.total_gdp_line(gdp_series, terms)
+        fig = mc.line_chart(gdp_series, terms, info)
 
     st.plotly_chart(fig)
-    st.caption(f"{caption}, base year 2015")
+    st.caption(f"{info[3]}, base year 2015")
     st.caption("Source: DANE")
     st.info("\'p\' is provisional and \'pr\' is preliminary data.")
 
@@ -112,4 +112,30 @@ def clean_annual_growth(df: pd.DataFrame, year: list, president: str, index: int
 
     return df, df_local
 
+# CPI
+def build_yearly_table(df: pd.DataFrame, selected_year: list, column: str, method: str) -> tuple:
+    series_list = []
+    for yr in selected_year:
+        s = df.loc[:, column].copy()
+        s = s[df.index.year == yr].dropna()
+        s.index = s.index.month
+        s.index = s.index.map(months)
+        s.name = yr
+        series_list.append(s)
 
+    cpi_series = pd.concat(series_list, axis=1)
+    cpi_info = [f"{method}", "Month", "%"]
+
+    return cpi_series, cpi_info
+
+def cpi_sidebar_filters(years) -> tuple:
+    with st.sidebar:
+        st.header("Filters")
+
+        chart_type = st.selectbox("Chart Type:", ["Line", "Bar"])
+        valid_presidents = get_valid_presidents(years)
+        president = st.selectbox("President:", valid_presidents, index=None)
+
+        st.info("You may choose more than one option.")
+
+    return president, chart_type
