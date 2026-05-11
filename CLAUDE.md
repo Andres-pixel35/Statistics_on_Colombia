@@ -19,12 +19,12 @@ Multi-page Streamlit app displaying Colombian macroeconomic statistics. Entry po
 2. Raw data comes from two sources: **DANE** (National Statistics Dept) and **Banco de la República** (Central Bank)
 
 **Key modules:**
-- `pages/Macroeconomics.py` — page entry point, loads data, delegates to tab renderers
+- `pages/Macroeconomics.py` — page entry point, loads data, sidebar radio selects section (GDP/CPI), delegates to renderers
 - `pages/tabs/gdp.py` — GDP tab logic: method/perspective/category selectors, sidebar filters, calls macro_functions + macro_charts
 - `pages/tabs/cpi.py` — CPI tab logic: method/perspective/category selectors, sidebar filters, calls macro_functions + macro_charts
 - `pages/helpers/macro/macro_functions.py` — data cleaning (`clean_gdp`, `clean_annual_growth`) and Streamlit sidebar/filter logic (`generalities_spend_product`)
-- `pages/helpers/macro/macro_charts.py` — Plotly chart builders (`total_gdp_line`, `gdp_growth`; single-year selection renders gauge indicator instead of line chart)
-- `generalities/` — dicts mapping Spanish column names (from source CSVs) to English display labels; also `presidents.py` which maps president names to year ranges for filter UI
+- `pages/helpers/macro/macro_charts.py` — Plotly chart builders (`line_chart`, `bar_chart` — generic, take `info` list for titles/axis labels; `gdp_growth` — single-year selection renders gauge indicator instead of line chart)
+- `generalities/` — dicts mapping Spanish column names (from source CSVs) to English display labels; `dictionaries.py` has filter UI dicts (presidents, months); `inflation.py` has CPI perspective name mappings (Spanish CSV column → English label); `function.py` has shared helpers (`get_valid_presidents`, `find_key_by_value`)
 - `clean_data/` — one-off scripts for transforming raw Excel/CSV source files into the cleaned CSVs in `data/`
 
 **Data directory layout:**
