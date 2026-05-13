@@ -1,9 +1,10 @@
 import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
+import streamlit as st
 from pages.helpers.macro import macro_functions as mf
 
-def line_chart(data: pd.DataFrame, labels: dict, info: list):
+def line_chart(data: pd.DataFrame, labels: dict, info: list, highlight: str = None):
     fig = px.line(data, labels={data.index.name or "index": info[1], "value": info[2]})
     fig.update_layout(
 
@@ -43,6 +44,11 @@ def line_chart(data: pd.DataFrame, labels: dict, info: list):
     fig.for_each_trace(lambda t: t.update(name = labels.get(t.name, t.name),
                                           hovertemplate = f"<b>%{{fullData.name}}</b><br>{info[1]}: %{{x}}<br>{info[2]}: %{{y:~.2f}}<extra></extra>"))
 
+    if highlight:
+        for trace in fig.data:
+            if trace.name != highlight:
+                trace.update(line=dict(color="rgba(180,180,180,0.3)"))
+
     fig.update_layout(legend_title_text="")
 
     fig.update_layout(
@@ -59,7 +65,7 @@ def line_chart(data: pd.DataFrame, labels: dict, info: list):
     )
     return fig
 
-def bar_chart(data: pd.DataFrame, labels: dict, info: list):
+def bar_chart(data: pd.DataFrame, labels: dict, info: list, highlight: str = None):
     fig = px.bar(data, barmode="group", labels={data.index.name or "index": info[1], "value": info[2]})
     fig.update_layout(
         height=600,
@@ -95,6 +101,11 @@ def bar_chart(data: pd.DataFrame, labels: dict, info: list):
 
     fig.for_each_trace(lambda t: t.update(name=labels.get(t.name, t.name),
                                           hovertemplate=f"<b>%{{fullData.name}}</b><br>{info[1]}: %{{x}}<br>{info[2]}: %{{y:~.2f}}<extra></extra>"))
+
+    if highlight:
+        for trace in fig.data:
+            if trace.name != highlight:
+                trace.update(marker=dict(color="rgba(180,180,180,0.3)"))
 
     fig.update_layout(legend_title_text="")
 
@@ -159,11 +170,15 @@ def gdp_growth(df: pd.DataFrame, year: list, president: str, index: int, quarter
         ))
 
     else:
-        column = df_local.columns[index - 1] 
-        growth = df_local[column].iloc[0]
-        min_growth = df[column].min()
-        max_growth = df[column].max()
-        avg_growth = df[column].median()
+        try:
+            column = df_local.columns[index - 1] 
+            growth = df_local[column].iloc[0]
+            min_growth = df[column].min()
+            max_growth = df[column].max()
+            avg_growth = df[column].median()
+        except Exception:
+            st.error("Remember to press 'Show all years' if you want to select a year prior to 2000")
+            st.stop()
 
         fig = go.Figure(go.Indicator(
             mode = "gauge+number+delta",

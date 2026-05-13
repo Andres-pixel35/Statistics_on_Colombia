@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 from pages.helpers.macro import macro_charts as mc
 from generalities.dictionaries import presidents, months
-from generalities.function import get_valid_presidents
+from generalities.function import get_valid_presidents, find_key_by_value, show_all_years
 
 def clean_gdp(df: pd.DataFrame, rows):
     gdp_local = df.copy()
@@ -34,7 +34,7 @@ def generalities_spend_product(df: pd.DataFrame, terms: dict, variable: int|list
         
         chart_type = st.selectbox("Chart Type:", ["Line", "Bar"])
 
-        years =  df.columns[1:].str.split("-").str[0].unique()
+        years = df.columns[1:].str.split("-").str[0].unique()
 
         tmp_years = years.str.replace("p|r", "", regex=True)
         tmp_years = tmp_years.astype(int)
@@ -53,8 +53,6 @@ def generalities_spend_product(df: pd.DataFrame, terms: dict, variable: int|list
         if tmp:
             variable = [k for k, v in terms.items() if v in tmp]
 
-        st.info("You may choose more than one option.")
-
     if choice_year:
         pattern = "|".join(choice_year)
     elif president:
@@ -69,10 +67,18 @@ def generalities_spend_product(df: pd.DataFrame, terms: dict, variable: int|list
 
     # plot the chart
     gdp_series = clean_gdp(df, variable)
+
+    highlight = None
+    if isinstance(gdp_series, pd.DataFrame) and len(gdp_series.columns) > 1:
+        display_names = [terms.get(col, col) for col in gdp_series.columns]
+        with st.sidebar:
+            highlight_choice = st.selectbox("Highlight variable:", ["—"] + display_names)
+            highlight = None if highlight_choice == "—" else highlight_choice
+
     if chart_type == "Bar":
-        fig = mc.bar_chart(gdp_series, terms, info)
+        fig = mc.bar_chart(gdp_series, terms, info, highlight=highlight)
     else:
-        fig = mc.line_chart(gdp_series, terms, info)
+        fig = mc.line_chart(gdp_series, terms, info, highlight=highlight)
 
     st.plotly_chart(fig)
     st.caption(f"{info[3]}, base year 2015")
@@ -136,6 +142,31 @@ def cpi_sidebar_filters(years) -> tuple:
         valid_presidents = get_valid_presidents(years)
         president = st.selectbox("President:", valid_presidents, index=None)
 
-        st.info("You may choose more than one option.")
-
     return president, chart_type
+
+def build_cpi_series(df: pd.DataFrame, perspective_column: str, president, method: str) -> tuple:
+    selected_month = st.multiselect("Month:", months.values(), default="December")
+
+    if not selected_month:
+        selected_month = ["December"]
+
+    number_months = [find_key_by_value(months, m) for m in selected_month]
+
+    series_list = []
+    for num, name in zip(number_months, selected_month):
+        s = df.loc[:, perspective_column].copy()
+        s = s[df.index.month == num].dropna()
+        s.index = s.index.year
+        s.name = name
+        series_list.append(s)
+
+    cpi_series = pd.concat(series_list, axis=1)
+
+    cpi_series = show_all_years(cpi_series, president)
+
+    if president:
+        cpi_series = cpi_series[cpi_series.index.isin(presidents[president])]
+
+    cpi_info = [f"{method}", "Year", "%"]
+
+    return cpi_series, cpi_info

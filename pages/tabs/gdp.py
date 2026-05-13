@@ -6,7 +6,7 @@ import generalities.gdp_spend as t
 from generalities.gdp_production import production_summarize_terms as p
 from generalities.gdp_income import income_summarize_terms as i
 from generalities.dictionaries import presidents
-from generalities.function import get_valid_presidents, find_key_by_value 
+from generalities.function import get_valid_presidents, find_key_by_value, show_all_years 
 
 def render_gdp(gdp_df: pd.DataFrame) -> None:
     gdp_local = gdp_df.copy()
@@ -90,18 +90,23 @@ def render_gdp(gdp_df: pd.DataFrame) -> None:
         with st.sidebar:
             st.title("Filters")
 
-            years = gdp_local["Fecha"]
-
             if quarter is not None:
                 quarter = st.selectbox("Quarter:", ["I", "II", "III", "IV"])
-                years = gdp_local["Fecha"].str.split("-").str[0].unique()
 
             if president:
-                choice_year = st.multiselect("Year:", sorted(presidents[president], reverse=True)) 
+                pres_years = [y for y in tmp_years if y in presidents[president]]
+                choice_year = st.multiselect("Year:", sorted(pres_years, reverse=True)) 
             else:
                 choice_year = st.multiselect("Year:", sorted(years, reverse=True)) 
 
-            st.info("You may choose more than one option.")
+            if quarter is None:
+                gdp_local.index = tmp_years
+
+                gdp_local = show_all_years(gdp_local, president)
+
+                gdp_local = gdp_local.reset_index(drop=True)
+
+                st.info("If you want to choose a year prior to 2000, make sure you click \'Show all years\'")
 
         fig = mc.gdp_growth(gdp_local, choice_year, president, 1, quarter) 
         st.plotly_chart(fig)
