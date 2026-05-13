@@ -23,7 +23,7 @@ def xlsx_to_csv_by_city(filepath):
         filename = f"{str(city).strip().replace(' ', '_')}.csv"
         
         city_df = city_df.iloc[1:]
-        city_df.to_csv(f"../data/banco_republica/CPI/spend_category//{filename}", index=False)
+        city_df.to_csv(f"../data/banco_republica/CPI/spend_category/{filename}", index=False)
         print(f"Saved: {filename}")
 
 xlsx_to_csv_by_city("../data/original/banco_republica/CPI/2_IPC_2018_por_division_de_gasto_iqy.xlsx")
