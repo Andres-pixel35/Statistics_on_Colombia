@@ -190,7 +190,7 @@ def gdp_growth(df: pd.DataFrame, year: list, president: str, index: int, quarter
                 "valueformat": ".2f",
                 "suffix": " vs Median" 
             },
-            title = {"text": f"<b>{year[0]} GDP Growth</b>", "font": {"size": 24}},
+            title = {"text": f"<b>{year[0]}-{quarter} GDP Growth</b>", "font": {"size": 24}},
             gauge = {
                 "axis": {
                     "range": [min_growth, max_growth],
