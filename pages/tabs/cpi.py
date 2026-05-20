@@ -160,9 +160,9 @@ def render_cpi(cpi_df: pd.DataFrame) -> None:
             highlight = None if highlight_choice == "—" else highlight_choice
 
     if chart_type == "Bar" or len(cpi_series) == 1:
-        fig = mc.bar_chart(cpi_series, pers_names, cpi_info, highlight=highlight)
+        fig = mc.bar_chart(cpi_series, {}, cpi_info, highlight=highlight)
     else:
-        fig = mc.line_chart(cpi_series, pers_names, cpi_info, highlight=highlight)
+        fig = mc.line_chart(cpi_series, {}, cpi_info, highlight=highlight)
 
     st.plotly_chart(fig)
     st.caption("Base 2018")

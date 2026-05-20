@@ -123,6 +123,45 @@ def bar_chart(data: pd.DataFrame, labels: dict, info: list, highlight: str = Non
     )
     return fig
 
+def indicator(data: pd.DataFrame, full_series: pd.Series, reference: float, info: list):
+    title, valueformat, suffix, delta_suffix = info
+
+    value = data.iloc[0, 0]
+    base = full_series.dropna()
+    vmin, vmax = base.min(), base.max()
+
+    fig = go.Figure(go.Indicator(
+        mode = "gauge+number+delta",
+        value = value,
+        number = {"valueformat": valueformat, "suffix": suffix},
+        delta = {
+            "reference": reference,
+            "position": "bottom",
+            "valueformat": valueformat,
+            "suffix": delta_suffix
+        },
+        title = {"text": f"<b>{title}</b>", "font": {"size": 24}},
+        gauge = {
+            "axis": {
+                "range": [vmin, vmax],
+                "tickformat": valueformat
+            },
+            "bar": {"color": "darkblue"},
+            "steps": [
+                {"range": [vmin, reference], "color": "lightgray"},
+                {"range": [reference, vmax], "color": "#e5f5e0"}
+            ],
+            "threshold": {
+                "line": {"color": "red", "width": 4},
+                "thickness": 0.75,
+                "value": reference
+            }
+        }
+    ))
+
+    fig.update_layout(margin=dict(t=80, b=20, l=30, r=30), height=400)
+    return fig
+
 def gdp_growth(df: pd.DataFrame, year: list, president: str, index: int, quarter: str|None):
     df, df_local = mf.clean_annual_growth(df, year, president, index, quarter)
     if len(df_local) > 1:
@@ -177,7 +216,7 @@ def gdp_growth(df: pd.DataFrame, year: list, president: str, index: int, quarter
             max_growth = df[column].max()
             avg_growth = df[column].median()
         except Exception:
-            st.error("Remember to press 'Show all years' if you want to select a year prior to 2000")
+            st.warning("Remember to press 'Show all years' if you want to select a year prior to 2000")
             st.stop()
 
         fig = go.Figure(go.Indicator(

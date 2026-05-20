@@ -19,9 +19,10 @@ Multi-page Streamlit app displaying Colombian macroeconomic statistics. Entry po
 2. Raw data comes from two sources: **DANE** (National Statistics Dept) and **Banco de la República** (Central Bank)
 
 **Key modules:**
-- `pages/Macroeconomics.py` — page entry point, loads data, sidebar radio selects section (GDP/CPI), delegates to renderers
+- `pages/Macroeconomics.py` — page entry point, loads data, sidebar radio selects section (GDP/CPI/Population), delegates to renderers
 - `pages/tabs/gdp.py` — GDP tab logic: method/perspective/category selectors, sidebar filters, calls macro_functions + macro_charts
 - `pages/tabs/cpi.py` — CPI tab logic: method/perspective/category selectors, sidebar filters, calls macro_functions + macro_charts
+- `pages/tabs/population.py` — Population tab logic: Total/Growth metric selector, president + year sidebar filters, calls macro_charts. Growth is year-over-year `pct_change`; single year selection renders a gauge indicator instead of a chart
 - `pages/helpers/macro/macro_functions.py` — data cleaning (`clean_gdp`, `clean_annual_growth`) and Streamlit sidebar/filter logic (`generalities_spend_product`)
 - `pages/helpers/macro/macro_charts.py` — Plotly chart builders (`line_chart`, `bar_chart` — generic, take `info` list for titles/axis labels; `gdp_growth` — single-year selection renders gauge indicator instead of line chart)
 - `generalities/` — dicts mapping Spanish column names (from source CSVs) to English display labels; `dictionaries.py` has filter UI dicts (presidents, months); `inflation.py` has CPI perspective name mappings (Spanish CSV column → English label); `function.py` has shared helpers (`get_valid_presidents`, `find_key_by_value`)
@@ -33,7 +34,7 @@ data/
   dane/GDP/{spend,production,income}/   ← DANE quarterly GDP tables (columns = year-quarter, rows = concepts)
   banco_republica/GDP/                  ← annual_growth.csv, quarter_growth.csv
   banco_republica/CPI/                  ← inflacion_15.csv + spend_category/ by city
-  banco_republica/population/
+  banco_republica/population/           ← population.csv (annual, Fecha = 31/12, Población)
   banco_republica/unemployment/
 ```
 
