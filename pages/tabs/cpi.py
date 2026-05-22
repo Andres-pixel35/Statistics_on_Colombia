@@ -82,7 +82,7 @@ def render_cpi(cpi_df: pd.DataFrame) -> None:
                     selected_item = st.selectbox(cfg["label"] + ":", display, index=display.index(cfg["default"]))
 
                 key = find_key_by_value(cfg["items_dict"], selected_item)
-                data_df = to_datatime(pd.read_csv(f"{cfg['base_path']}{key}.csv", encoding="utf-8"), False)
+                data_df = to_datatime(mf._load_csv(f"{cfg['base_path']}{key}.csv"), False)
                 sidebar_df = data_df
         else:
             data_df = cpi_local
@@ -144,7 +144,7 @@ def render_cpi(cpi_df: pd.DataFrame) -> None:
             core_items = st.selectbox("Exclude items:", [15, 20])
 
         path = CPI_15_PATH if core_items == 15 else CPI_20_PATH
-        cpi_core = pd.read_csv(path, encoding="utf-8")
+        cpi_core = mf._load_csv(path)
         cpi_core = to_datatime(cpi_core, True)
 
         president, chart_type = mf.cpi_sidebar_filters(cpi_core, top_placeholder, president_placeholder)
