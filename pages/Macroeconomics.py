@@ -8,9 +8,17 @@ path_gdp = "./data/dane/GDP/spend/summarize.csv"
 path_cpi = "./data/banco_republica/CPI/city/Total_Nacional.csv"
 path_population = "./data/banco_republica/population/population.csv"
 
-gdp_df = pd.read_csv(path_gdp, encoding="utf-8", dtype=str)
-cpi_df = pd.read_csv(path_cpi, encoding="utf-8")
-population_df = pd.read_csv(path_population, encoding="utf-8")
+@st.cache_data
+def _load_gdp():
+    return pd.read_csv(path_gdp, encoding="utf-8", dtype=str)
+
+@st.cache_data
+def _load_generic(path: str):
+    return pd.read_csv(path, encoding="utf-8")
+
+gdp_df = _load_gdp()
+cpi_df = _load_generic(path_cpi)
+population_df = _load_generic(path_population)
 
 st.title("Statistics on Colombia")
 
