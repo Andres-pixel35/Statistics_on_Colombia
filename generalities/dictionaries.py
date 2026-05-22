@@ -16,6 +16,8 @@ presidents = {
     "Alberto Lleras Camargo":   list(range(1959, 1963)),
     "Junta Militar":            list(range(1958, 1959)),
     "Gustavo Rojas Pinilla":    list(range(1954, 1958)),
+    "Laureano Gómez Castro":    list(range(1951, 1954)),
+    "Mariano Ospina Pérez":     list(range(1947, 1951)),
 }
 
 months = {
