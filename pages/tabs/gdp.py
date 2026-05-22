@@ -14,6 +14,10 @@ PRODUCTION_PATH = "./data/dane/GDP/production/summarize.csv"
 INCOME_PATH = "./data/dane/GDP/income/summarize.csv"
 SPEND_BASE_PATH = "./data/dane/GDP/spend/"
 
+@st.cache_data
+def _load_csv(path: str) -> pd.DataFrame:
+    return pd.read_csv(path, encoding="utf-8", dtype=str)
+
 def render_gdp(gdp_df: pd.DataFrame) -> None:
     gdp_local = gdp_df.copy()
  
@@ -38,7 +42,7 @@ def render_gdp(gdp_df: pd.DataFrame) -> None:
 
             if category != "Summarize":
                 path = f"{SPEND_BASE_PATH}{filename}.csv"
-                gdp_local = pd.read_csv(path, encoding="utf-8", dtype=str)
+                gdp_local = _load_csv(path).copy()
                 variable = 0
             else:
                 variable = -1
@@ -46,7 +50,7 @@ def render_gdp(gdp_df: pd.DataFrame) -> None:
             gdp_info = ["Real GDP per Year", "Year", "Billions (COP)", "Chained volume series"]
             mf.generalities_spend_product(gdp_local, selected_terms, variable, gdp_info)
         elif perspective == "Production":
-            gdp_local = pd.read_csv(PRODUCTION_PATH, encoding="utf-8", dtype=str)
+            gdp_local = _load_csv(PRODUCTION_PATH)
 
             with col3:
                 category = st.selectbox("Category:", ["Summarize"])
@@ -56,7 +60,7 @@ def render_gdp(gdp_df: pd.DataFrame) -> None:
             gdp_info = ["Real GDP per Year", "Year", "Billions (COP)", "Chained volume series"]
             mf.generalities_spend_product(gdp_local, p, variable, gdp_info)
         else:
-            gdp_local = pd.read_csv(INCOME_PATH, encoding="utf-8", dtype=str)
+            gdp_local = _load_csv(INCOME_PATH)
 
             with col3:
                 category = st.selectbox("Category:", ["Summarize"])
@@ -70,10 +74,10 @@ def render_gdp(gdp_df: pd.DataFrame) -> None:
             perspective = st.selectbox("Perspective:", ["Annual", "Annual per Quarter"])
 
         if perspective == "Annual":
-            gdp_local = pd.read_csv(ANNUAL_GROWTH_PATH, encoding="utf-8", dtype=str)
+            gdp_local = _load_csv(ANNUAL_GROWTH_PATH).copy()
             quarter = None
         else:
-            gdp_local = pd.read_csv(QUARTER_GROWTH_PATH, encoding="utf-8", dtype=str)
+            gdp_local = _load_csv(QUARTER_GROWTH_PATH).copy()
             quarter = "I"
 
         with col3: 

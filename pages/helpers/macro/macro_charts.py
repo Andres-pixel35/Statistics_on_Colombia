@@ -162,6 +162,37 @@ def indicator(data: pd.DataFrame, full_series: pd.Series, reference: float, info
     fig.update_layout(margin=dict(t=80, b=20, l=30, r=30), height=400)
     return fig
 
+def choropleth_map(data: pd.DataFrame, col: str, info: list):
+    fig = px.choropleth(
+        data,
+        locations="Location",
+        locationmode="country names",
+        color=col,
+        hover_name="Location",
+        color_continuous_scale="Blues",
+        labels={col: info[2]},
+    )
+    fig.update_traces(
+        hovertemplate="<b>%{hovertext}</b><br>" + info[2] + ": %{z:,.0f}<extra></extra>"
+    )
+    fig.update_geos(
+        showocean=True,
+        oceancolor="rgb(15, 30, 50)",
+        showland=True,
+        landcolor="rgb(45, 45, 45)",
+        showframe=False,
+        showcoastlines=True,
+        coastlinecolor="rgb(80, 80, 80)",
+    )
+    fig.update_layout(
+        height=600,
+        title={"text": info[0], "font": {"size": 25}, "x": 0, "xanchor": "left"},
+        margin=dict(l=50, r=20, t=80, b=0),
+        coloraxis_colorbar=dict(title=info[2]),
+        paper_bgcolor="rgba(0,0,0,0)",
+    )
+    return fig
+
 def gdp_growth(df: pd.DataFrame, year: list, president: str, index: int, quarter: str|None):
     df, df_local = mf.clean_annual_growth(df, year, president, index, quarter)
     if len(df_local) > 1:
