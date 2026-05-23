@@ -3,13 +3,13 @@ import pandas as pd
 from pages.helpers.macro import macro_charts as mc
 from pages.helpers.macro import macro_functions as mf
 from generalities.dictionaries import presidents, months
-from generalities.function import find_key_by_value, to_datatime
+from generalities.function import find_key_by_value, to_datatime, reshape_by_presidents, load_csv, BASE_DIR
 import generalities.inflation as gi
 
-CPI_15_PATH = "./data/banco_republica/CPI/inflacion_15.csv"
-CPI_20_PATH = "./data/banco_republica/CPI/inflacion_20.csv"
-CITY_BASE = "./data/banco_republica/CPI/city/"
-CAT_BASE = "./data/banco_republica/CPI/spend_category/"
+CPI_15_PATH = BASE_DIR / "data/banco_republica/CPI/inflacion_15.csv"
+CPI_20_PATH = BASE_DIR / "data/banco_republica/CPI/inflacion_20.csv"
+CITY_BASE   = str(BASE_DIR / "data/banco_republica/CPI/city") + "/"
+CAT_BASE    = str(BASE_DIR / "data/banco_republica/CPI/spend_category") + "/"
 
 VIEW_CONFIG = {
     "Per City": {
@@ -82,15 +82,17 @@ def render_cpi(cpi_df: pd.DataFrame) -> None:
                     selected_item = st.selectbox(cfg["label"] + ":", display, index=display.index(cfg["default"]))
 
                 key = find_key_by_value(cfg["items_dict"], selected_item)
-                data_df = to_datatime(mf._load_csv(f"{cfg['base_path']}{key}.csv"), False)
+                data_df = to_datatime(load_csv(f"{cfg['base_path']}{key}.csv"), False)
                 sidebar_df = data_df
         else:
             data_df = cpi_local
             sidebar_df = cpi_local
 
-        president, chart_type = mf.cpi_sidebar_filters(
-            sidebar_df, top_placeholder, president_placeholder, show_president=not comparing
+        selected_presidents, chart_type = mf.cpi_sidebar_filters(
+            sidebar_df, top_placeholder, president_placeholder
         )
+        president = selected_presidents[0] if len(selected_presidents) == 1 else None
+        multi_pres = len(selected_presidents) >= 2
 
         subtitle = selected_item if (cfg and not comparing) else None
 
@@ -101,28 +103,38 @@ def render_cpi(cpi_df: pd.DataFrame) -> None:
 
                 fixed_value = find_key_by_value(months, selected_month)
 
-                with st.sidebar:
-                    show_all = st.checkbox("Show all years", value=False)
+                compare_pres = multi_pres
+                if compare_pres:
+                    show_all = True
+                else:
+                    with st.sidebar:
+                        show_all = st.checkbox("Show all years", value=False)
             else:
                 years = cpi_local.index.year.unique().astype(int)
                 with col4:
                     fixed_value = st.selectbox("Year:", sorted(years, reverse=True))
 
                 show_all = False
+                compare_pres = False
 
             cpi_series, cpi_info = mf.build_comparison_series(
                 selected_items, cfg["items_dict"], cfg["base_path"], perspective_column,
-                perspective, fixed_value, president, show_all, method,
+                perspective, fixed_value, None if compare_pres else president, show_all, method,
             )
+            if compare_pres:
+                cpi_series, cpi_info = reshape_by_presidents(cpi_series, selected_presidents, cpi_info)
         elif perspective == "Annual":
+            compare_pres = multi_pres
             with col4:
                 cpi_series, cpi_info = mf.build_cpi_series(
                     data_df, cpi_local,
-                    [perspective_column, president, method],
+                    [perspective_column, None if compare_pres else president, method],
                     subtitle=subtitle,
                     flags=[view == "Per Category", view != "Total"],
-
+                    comparing=compare_pres,
                 )
+            if compare_pres:
+                cpi_series, cpi_info = reshape_by_presidents(cpi_series, selected_presidents, cpi_info)
         else:
             years = data_df.index.year.unique().astype(int)
             with col4:
@@ -144,13 +156,21 @@ def render_cpi(cpi_df: pd.DataFrame) -> None:
             core_items = st.selectbox("Exclude items:", [15, 20])
 
         path = CPI_15_PATH if core_items == 15 else CPI_20_PATH
-        cpi_core = mf._load_csv(path)
+        cpi_core = load_csv(path)
         cpi_core = to_datatime(cpi_core, True)
 
-        president, chart_type = mf.cpi_sidebar_filters(cpi_core, top_placeholder, president_placeholder)
+        selected_presidents, chart_type = mf.cpi_sidebar_filters(cpi_core, top_placeholder, president_placeholder)
+        president = selected_presidents[0] if len(selected_presidents) == 1 else None
+        multi_pres = len(selected_presidents) >= 2
 
         with col3:
-            cpi_series, cpi_info = mf.build_cpi_series(cpi_core, cpi_local, ["Inflación", president, method], flags=[False, True])
+            cpi_series, cpi_info = mf.build_cpi_series(
+                cpi_core, cpi_local,
+                ["Inflación", None if multi_pres else president, method],
+                flags=[False, True], comparing=multi_pres,
+            )
+        if multi_pres:
+            cpi_series, cpi_info = reshape_by_presidents(cpi_series, selected_presidents, cpi_info)
 
     highlight = None
     if len(cpi_series.columns) > 1:
