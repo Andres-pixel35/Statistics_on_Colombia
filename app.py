@@ -4,6 +4,7 @@ st.set_page_config(layout="wide", page_title="Homepage", initial_sidebar_state="
 
 st.title("Statistics on Colombia")
 
+st.info("Go to the sidebar.")
 st.write("SOON")
 
 
