@@ -2,15 +2,11 @@ import pandas as pd
 import streamlit as st
 from pages.helpers.macro import macro_charts as mc
 from generalities.dictionaries import presidents, months
-from generalities.function import get_valid_presidents, find_key_by_value, show_all_years, to_datatime
+from generalities.function import get_valid_presidents, find_key_by_value, show_all_years, to_datatime, president_multiselect, reshape_by_presidents, load_csv, BASE_DIR
 from generalities.inflation import perspective_names
 from generalities.migration import COUNTRY_EN, COL_MAP
 
-GOAL_PATH = "./data/banco_republica/CPI/goal.csv"
-
-@st.cache_data
-def _load_csv(path: str) -> pd.DataFrame:
-    return pd.read_csv(path, encoding="utf-8")
+GOAL_PATH = BASE_DIR / "data/banco_republica/CPI/goal.csv"
 
 def clean_gdp(df: pd.DataFrame, rows):
     gdp_local = df.copy()
@@ -49,9 +45,13 @@ def generalities_spend_product(df: pd.DataFrame, terms: dict, variable: int|list
 
         valid_presidents = get_valid_presidents(tmp_years)
 
-        president = st.selectbox("President:", valid_presidents, index=None)
+        selected_presidents = president_multiselect(valid_presidents)
+        comparing = len(selected_presidents) >= 2
+        president = selected_presidents[0] if len(selected_presidents) == 1 else None
 
-        if president:
+        if comparing:
+            choice_year = []
+        elif president:
             pres_years = [y for y, ty in zip(years, tmp_years) if ty in presidents[president]]
             choice_year = st.multiselect("Year:", sorted(pres_years, reverse=True))
         else:
@@ -61,7 +61,9 @@ def generalities_spend_product(df: pd.DataFrame, terms: dict, variable: int|list
         if tmp:
             variable = [k for k, v in terms.items() if v in tmp]
 
-    if choice_year:
+    if comparing:
+        pattern = None
+    elif choice_year:
         pattern = "|".join(choice_year)
     elif president:
         pattern = "|".join(pres_years)
@@ -76,6 +78,14 @@ def generalities_spend_product(df: pd.DataFrame, terms: dict, variable: int|list
     # plot the chart
     gdp_series = clean_gdp(df, variable)
 
+    if comparing:
+        if isinstance(gdp_series, pd.Series):
+            gdp_series = gdp_series.to_frame()
+        gdp_series, info = reshape_by_presidents(gdp_series, selected_presidents, info, col_labels=terms)
+        labels_arg = {}
+    else:
+        labels_arg = terms
+
     highlight = None
     if isinstance(gdp_series, pd.DataFrame) and len(gdp_series.columns) > 1:
         display_names = [terms.get(col, col) for col in gdp_series.columns]
@@ -84,9 +94,9 @@ def generalities_spend_product(df: pd.DataFrame, terms: dict, variable: int|list
             highlight = None if highlight_choice == "—" else highlight_choice
 
     if chart_type == "Bar":
-        fig = mc.bar_chart(gdp_series, terms, info, highlight=highlight)
+        fig = mc.bar_chart(gdp_series, labels_arg, info, highlight=highlight)
     else:
-        fig = mc.line_chart(gdp_series, terms, info, highlight=highlight)
+        fig = mc.line_chart(gdp_series, labels_arg, info, highlight=highlight)
 
     st.plotly_chart(fig)
     st.caption(f"{info[3]}, base year 2015")
@@ -143,7 +153,7 @@ def build_yearly_table(df: pd.DataFrame, selected_year: list, column: str, metho
 
     return cpi_series, cpi_info
 
-def cpi_sidebar_filters(df: pd.DataFrame, placeholder, president_placeholder, show_president: bool = True) -> tuple:
+def cpi_sidebar_filters(df: pd.DataFrame, placeholder, president_placeholder) -> tuple:
     df = df.dropna()
     years = df.index.year.unique().astype(int)
 
@@ -151,15 +161,13 @@ def cpi_sidebar_filters(df: pd.DataFrame, placeholder, president_placeholder, sh
         st.header("Filters")
         chart_type = st.selectbox("Chart Type:", ["Line", "Bar"])
 
-    president = None
-    if show_president:
-        valid_presidents = get_valid_presidents(years)
-        with president_placeholder.container():
-            president = st.selectbox("President:", valid_presidents, index=None)
+    valid_presidents = get_valid_presidents(years)
+    with president_placeholder.container():
+        selected_presidents = president_multiselect(valid_presidents)
 
-    return president, chart_type
+    return selected_presidents, chart_type
 
-def build_cpi_series(cpi: pd.DataFrame, cpi_c: pd.DataFrame, params: list, subtitle: str = None, flags: list = [False, True]) -> tuple:
+def build_cpi_series(cpi: pd.DataFrame, cpi_c: pd.DataFrame, params: list, subtitle: str = None, flags: list = [False, True], comparing: bool = False) -> tuple:
     perspective_column = params[0]
     president          = params[1]
     method             = params[2]
@@ -181,7 +189,7 @@ def build_cpi_series(cpi: pd.DataFrame, cpi_c: pd.DataFrame, params: list, subti
 
     cpi_series = pd.concat(series_list, axis=1)
 
-    if not flags[0]:
+    if not flags[0] and not comparing:
         cpi_series = show_all_years(cpi_series, president)
 
     if president:
@@ -191,7 +199,7 @@ def build_cpi_series(cpi: pd.DataFrame, cpi_c: pd.DataFrame, params: list, subti
     compare_headline = False
     compare_goal = False
 
-    if flags[1]:
+    if flags[1] and not comparing:
         with st.sidebar:
             compare_headline = st.checkbox("Compare with Headline Inflation", value=False)
 
@@ -207,12 +215,12 @@ def build_cpi_series(cpi: pd.DataFrame, cpi_c: pd.DataFrame, params: list, subti
                 h_list.append(s)
             cpi_series = pd.concat([cpi_series] + h_list, axis=1)
 
-    if cpi_series.index.min() > 1990:
+    if cpi_series.index.min() > 1990 and not comparing:
         with st.sidebar:
             compare_goal = st.checkbox("Compare with Goal Inflation", value=False)
 
         if compare_goal:
-            goal_df = to_datatime(_load_csv(GOAL_PATH), True)
+            goal_df = to_datatime(load_csv(GOAL_PATH), True)
             g = goal_df.loc[:, "Inflación"]
             g = g[g.index.year.isin(cpi_series.index)].dropna()
             g.index = g.index.year
@@ -244,7 +252,7 @@ def build_comparison_series(
     series_list = []
     for name in items:
         key = find_key_by_value(items_dict, name)
-        df = to_datatime(_load_csv(f"{base_path}{key}.csv"), False)
+        df = to_datatime(load_csv(f"{base_path}{key}.csv"), False)
         s = df[perspective_column]
         if by_year:
             s = s[s.index.month == fixed_value].dropna()
@@ -266,12 +274,6 @@ def build_comparison_series(
     return cpi_series, cpi_info
 
 # Migration
-
-@st.cache_data
-def load_migration(path: str) -> pd.DataFrame:
-    df = pd.read_csv(path, encoding="utf-8")
-    df["Fecha"] = pd.to_datetime(df["Fecha"])
-    return df
 
 def build_migration_map_data(df: pd.DataFrame, year: int | None, month_name: str, data_col: str, meta: list) -> tuple:
     direction, _, _ = meta

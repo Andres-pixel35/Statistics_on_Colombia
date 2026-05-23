@@ -1,24 +1,16 @@
 import streamlit as st
-import pandas as pd
 from pages.tabs import gdp, cpi, population
+from generalities.function import load_csv, BASE_DIR
 
 st.set_page_config(layout="wide", page_title="Macroeconomic")
 
-path_gdp = "./data/dane/GDP/spend/summarize.csv"
-path_cpi = "./data/banco_republica/CPI/city/Total_Nacional.csv"
-path_population = "./data/banco_republica/population/population.csv"
+path_gdp        = BASE_DIR / "data/dane/GDP/spend/summarize.csv"
+path_cpi        = BASE_DIR / "data/banco_republica/CPI/city/Total_Nacional.csv"
+path_population = BASE_DIR / "data/banco_republica/population/population.csv"
 
-@st.cache_data
-def _load_gdp():
-    return pd.read_csv(path_gdp, encoding="utf-8", dtype=str)
-
-@st.cache_data
-def _load_generic(path: str):
-    return pd.read_csv(path, encoding="utf-8")
-
-gdp_df = _load_gdp()
-cpi_df = _load_generic(path_cpi)
-population_df = _load_generic(path_population)
+gdp_df = load_csv(path_gdp, dtype=str)
+cpi_df = load_csv(path_cpi)
+population_df = load_csv(path_population)
 
 st.title("Statistics on Colombia")
 

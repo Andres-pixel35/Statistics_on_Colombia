@@ -3,10 +3,10 @@ import pandas as pd
 from pages.helpers.macro import macro_charts as mc
 from pages.helpers.macro import macro_functions as mf
 from generalities.dictionaries import presidents, months
-from generalities.function import get_valid_presidents, show_all_years, to_datatime, find_key_by_value
+from generalities.function import get_valid_presidents, show_all_years, to_datatime, find_key_by_value, president_multiselect, reshape_by_presidents, load_csv, BASE_DIR
 from generalities.migration import COUNTRY_EN, METRIC_LABEL, VIEW
 
-MIGRATION_PATH = "./data/datos_abiertos/migration.csv"
+MIGRATION_PATH = BASE_DIR / "data/datos_abiertos/migration.csv"
 
 def render_population(pop_df: pd.DataFrame) -> None:
     with st.sidebar:
@@ -55,13 +55,24 @@ def _render_population_tab(pop_df: pd.DataFrame) -> None:
         st.header("Filters")
         chart_type = st.selectbox("Chart Type:", ["Line", "Bar"])
         valid_presidents = get_valid_presidents(years)
-        president = st.selectbox("President:", valid_presidents, index=None)
+        selected_presidents = president_multiselect(valid_presidents)
+        comparing = len(selected_presidents) >= 2
+        president = selected_presidents[0] if len(selected_presidents) == 1 else None
 
-        if president:
+        if comparing:
+            choice_year = []
+        elif president:
             pres_years = [y for y in years if y in presidents[president]]
-            choice_year = st.multiselect("Year:", sorted(pres_years, reverse=True), key="pop_year")
+            choice_year = st.multiselect("Year:", sorted(pres_years, reverse=True))
         else:
-            choice_year = st.multiselect("Year:", sorted(years, reverse=True), key="pop_year")
+            choice_year = st.multiselect("Year:", sorted(years, reverse=True))
+
+    if comparing:
+        data, info = reshape_by_presidents(full_series.to_frame(name=column), selected_presidents, info)
+        fig = mc.bar_chart(data, {}, info) if chart_type == "Bar" else mc.line_chart(data, {}, info)
+        st.plotly_chart(fig)
+        st.caption("Source: Banco de la República")
+        return
 
     series = show_all_years(series, president)
 
@@ -106,7 +117,8 @@ def _render_population_tab(pop_df: pd.DataFrame) -> None:
 
 
 def _render_migration_tab() -> None:
-    migration_df = mf.load_migration(MIGRATION_PATH)
+    migration_df = load_csv(MIGRATION_PATH)
+    migration_df["Fecha"] = pd.to_datetime(migration_df["Fecha"])
 
     st.title("Population")
 
@@ -130,9 +142,9 @@ def _render_map(migration_df, all_years):
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        direction = st.selectbox("Direction:", ["Inbound", "Outbound"], key="mig_direction")
+        direction = st.selectbox("Direction:", ["Inbound", "Outbound"])
     with col2:
-        metric = st.selectbox("Metric:", ["Total", "Female", "Male"], key="mig_metric")
+        metric = st.selectbox("Metric:", ["Total", "Female", "Male"])
     with col3:
         year_sel = st.selectbox("Year:", ["All"] + all_years, index=0)
         year = None if year_sel == "All" else year_sel
@@ -158,10 +170,11 @@ def _render_line_bar(migration_df, chart_type, all_years, valid_pres):
     compare_by = st.session_state.get("mig_compare", "Countries")
 
     with st.sidebar:
-        president = st.selectbox(
-            "President:", [None] + valid_pres,
-            format_func=lambda x: x or "All",
-        )
+        selected_presidents = president_multiselect(valid_pres)
+
+    comparing = len(selected_presidents) >= 2
+    president = selected_presidents[0] if len(selected_presidents) == 1 else None
+    pres_compare = comparing and compare_by in ("Countries", "Direction", "Gender")
 
     year_opts = [y for y in all_years if y in presidents[president]] if president else all_years
 
@@ -172,25 +185,24 @@ def _render_line_bar(migration_df, chart_type, all_years, valid_pres):
 
     if compare_by == "Direction":
         with c1:
-            metric = st.selectbox("Metric:", ["Total", "Female", "Male"], key="mig_metric")
+            metric = st.selectbox("Metric:", ["Total", "Female", "Male"])
         with c2:
-            selected_years = st.multiselect("Year:", year_opts, key="mig_years")
+            selected_years = [] if pres_compare else st.multiselect("Year:", year_opts)
     elif compare_by == "Gender":
         with c1:
-            direction = st.selectbox("Direction:", ["Inbound", "Outbound"], key="mig_direction")
+            direction = st.selectbox("Direction:", ["Inbound", "Outbound"])
         with c2:
-            selected_years = st.multiselect("Year:", year_opts, key="mig_years")
+            selected_years = [] if pres_compare else st.multiselect("Year:", year_opts)
     else:  # Countries or Year
         with c1:
-            direction = st.selectbox("Direction:", ["Inbound", "Outbound"], key="mig_direction")
+            direction = st.selectbox("Direction:", ["Inbound", "Outbound"])
         with c2:
-            metric = st.selectbox("Metric:", ["Total", "Female", "Male"], key="mig_metric")
+            metric = st.selectbox("Metric:", ["Total", "Female", "Male"])
         with c3:
             if compare_by == "Year":
-                default_year = 2019
-                selected_years = st.multiselect("Year:", year_opts, default=default_year)
+                selected_years = st.multiselect("Year:", year_opts)
             else:
-                selected_years = st.multiselect("Year:", year_opts, key="mig_years")
+                selected_years = [] if pres_compare else st.multiselect("Year:", year_opts)
 
     label = METRIC_LABEL[metric]
     data_col = mf.COL_MAP[(direction, metric)]
@@ -238,6 +250,9 @@ def _render_line_bar(migration_df, chart_type, all_years, valid_pres):
             pivot, info = mf.migration_single_pivot(df_f, all_countries_en, compare_by, meta, period_label)
 
         force_bar = not annual_mode and len(pivot) == 1 if pivot is not None else False
+
+    if pres_compare and pivot is not None and not pivot.empty:
+        pivot, info = reshape_by_presidents(pivot, selected_presidents, info)
 
     highlight = None
 
