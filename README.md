@@ -2,6 +2,9 @@
 
 Statistics on Colombia (provisional name) is a open source project where I intend to show in a simple and interactive way several statistics about colombia. Such as (but not limited to): GDP, CPI, unemployment rate, debt... 
 
+You can give a look to its current state [here](https://statoncolombia.streamlit.app/).
+
+You may also check its [Instagaram account](https://www.instagram.com/statisticscolombia/)
 I will use strealit as the host for the app and the charts, and Python and pandas to manipulate the data. 
 
 The project is still in progress, thus several thing surely will change. By now and until I finish this project it will be available only in **English**, I will create a Spanish version once I finished the project though.
