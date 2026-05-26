@@ -33,10 +33,12 @@ def generalities_spend_product(df: pd.DataFrame, terms: dict, variable: int|list
     General utilities used in several parts of this section.
     filters in the sidebar and the logic to plot the chart
     """
-    with st.sidebar: 
+    with st.sidebar:
         st.header("Filters:")
-        
+
         chart_type = st.selectbox("Chart Type:", ["Line", "Bar"])
+
+        quarter = st.selectbox("Quarter:", ["All", "I", "II", "III", "IV"])
 
         years = df.columns[1:].str.split("-").str[0].unique()
 
@@ -75,6 +77,13 @@ def generalities_spend_product(df: pd.DataFrame, terms: dict, variable: int|list
         mask[0] = True
         df = df.loc[:, mask]
 
+    if quarter != "All":
+        qmask = df.columns.str.contains(rf"-{quarter}$", regex=True)
+        qmask = qmask | (df.columns == "Concepto")
+        df = df.loc[:, qmask]
+        info = list(info)
+        info[0] = f"{info[0]} — Q{quarter}"
+
     # plot the chart
     gdp_series = clean_gdp(df, variable)
 
@@ -93,7 +102,7 @@ def generalities_spend_product(df: pd.DataFrame, terms: dict, variable: int|list
             highlight_choice = st.selectbox("Highlight variable:", ["—"] + display_names)
             highlight = None if highlight_choice == "—" else highlight_choice
 
-    if chart_type == "Bar":
+    if chart_type == "Bar" or len(gdp_series) == 1:
         fig = mc.bar_chart(gdp_series, labels_arg, info, highlight=highlight)
     else:
         fig = mc.line_chart(gdp_series, labels_arg, info, highlight=highlight)
@@ -112,8 +121,6 @@ def clean_annual_growth(df: pd.DataFrame, year: list, president: str, index: int
 
     if quarter is not None:
         df_local = df_local[df_local.index.str.contains(f"-{quarter}$", regex=True)]
-
-        df_local = df_local.drop(columns=["Variación Año Corrido"])
 
         if year:
             pattern = "|".join(map(str, year))
