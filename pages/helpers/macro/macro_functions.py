@@ -6,13 +6,13 @@ from generalities.function import get_valid_presidents, find_key_by_value, show_
 from generalities.inflation import perspective_names
 from generalities.migration import COUNTRY_EN, COL_MAP
 
-GOAL_PATH = BASE_DIR / "data/banco_republica/CPI/goal.csv"
+GOAL_PATH       = BASE_DIR / "data/banco_republica/CPI/goal.csv"
+POPULATION_PATH = BASE_DIR / "data/banco_republica/population/population.csv"
 
 def clean_gdp(df: pd.DataFrame, rows):
     gdp_local = df.copy()
 
     gdp_local = gdp_local.set_index("Concepto")
-    gdp_local = gdp_local.apply(lambda col: col.str.replace(".", "", regex=False))
 
     if isinstance(rows, int):
         gdp_series = gdp_local.iloc[rows,:]
@@ -20,7 +20,7 @@ def clean_gdp(df: pd.DataFrame, rows):
         gdp_series = gdp_local.loc[rows,:]
 
     gdp_series = gdp_series.T
-    gdp_series = gdp_series.astype(int)
+    gdp_series = gdp_series.astype(float)
 
     if len(gdp_series) > 5:
         gdp_series.index = gdp_series.index.str.split("-").str[0]
@@ -63,6 +63,8 @@ def generalities_spend_product(df: pd.DataFrame, terms: dict, variable: int|list
         if tmp:
             variable = [k for k, v in terms.items() if v in tmp]
 
+        per_capita = st.checkbox("GDP per Capita")
+
     if comparing:
         pattern = None
     elif choice_year:
@@ -81,11 +83,24 @@ def generalities_spend_product(df: pd.DataFrame, terms: dict, variable: int|list
         qmask = df.columns.str.contains(rf"-{quarter}$", regex=True)
         qmask = qmask | (df.columns == "Concepto")
         df = df.loc[:, qmask]
-        info = list(info)
         info[0] = f"{info[0]} — Q{quarter}"
 
     # plot the chart
     gdp_series = clean_gdp(df, variable)
+
+    if per_capita:
+        pop_raw = load_csv(POPULATION_PATH)
+        pop_raw = to_datatime(pop_raw, dayfirst=True)
+        pop = pop_raw["Población"].astype(int)
+        pop.index = pop.index.year
+        clean_years = gdp_series.index.str.replace(r'[a-z]+', '', regex=True).astype(int)
+        pop_aligned = pd.Series(pop.reindex(clean_years).values, index=gdp_series.index)
+        original_name = gdp_series.name if isinstance(gdp_series, pd.Series) else None
+        gdp_series = gdp_series.div(pop_aligned, axis=0) * 1_000_000_000_000
+        gdp_series = gdp_series.dropna()
+        if original_name is not None:
+            gdp_series.name = original_name
+        info[2] = "COP per capita"
 
     if comparing:
         if isinstance(gdp_series, pd.Series):

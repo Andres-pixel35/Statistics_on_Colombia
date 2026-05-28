@@ -42,7 +42,7 @@ def line_chart(data: pd.DataFrame, labels: dict, info: list, highlight: str = No
     )
 
     fig.for_each_trace(lambda t: t.update(name = labels.get(t.name, t.name),
-                                          hovertemplate = f"<b>%{{fullData.name}}</b><br>{info[1]}: %{{x}}<br>{info[2]}: %{{y:~.2f}}<extra></extra>"))
+                                          hovertemplate = f"<b>%{{fullData.name}}</b><br>{info[1]}: %{{x}}<br>{info[2]}: %{{y:,.2f}}<extra></extra>"))
 
     if highlight:
         for trace in fig.data:
@@ -100,7 +100,7 @@ def bar_chart(data: pd.DataFrame, labels: dict, info: list, highlight: str = Non
     )
 
     fig.for_each_trace(lambda t: t.update(name=labels.get(t.name, t.name),
-                                          hovertemplate=f"<b>%{{fullData.name}}</b><br>{info[1]}: %{{x}}<br>{info[2]}: %{{y:~.2f}}<extra></extra>"))
+                                          hovertemplate=f"<b>%{{fullData.name}}</b><br>{info[1]}: %{{x}}<br>{info[2]}: %{{y:,.2f}}<extra></extra>"))
 
     if highlight:
         for trace in fig.data:
@@ -208,9 +208,8 @@ def gdp_growth(df: pd.DataFrame, year: list, president: str, index: int, quarter
                 "x": 0,            
                 "xanchor": "left"
             },
-            
+
             showlegend=False,
-            
             margin=dict(l=50, r=20, t=80, b=0),
         )
 
