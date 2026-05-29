@@ -7,9 +7,11 @@ df = pd.read_excel(path_in, skiprows=3)
 
 df = df[df.iloc[:, 0] == "Colombia"]
 
-df = df.drop(df.columns[[1, 2, 3]], axis=1)
+df = df.drop(df.columns[[0, 1, 2, 3]], axis=1)
 
-df = df.rename(columns={df.columns[0]: "Country"})
+a = df.T
+a.reset_index(inplace=True)
+a = a.rename(columns={a.columns[0]: "Fecha", a.columns[1]: "Migration"})
 
-df.to_csv(path_out, index=False)
-print(f"Saved {len(df)} row(s) → {path_out}")
+a.to_csv(path_out, index=False)
+print(f"Saved {len(a)} row(s) → {path_out}")

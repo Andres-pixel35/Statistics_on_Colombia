@@ -5,6 +5,7 @@ from generalities.dictionaries import presidents, months
 from generalities.function import get_valid_presidents, find_key_by_value, show_all_years, to_datatime, president_multiselect, reshape_by_presidents, load_csv, BASE_DIR
 from generalities.inflation import perspective_names
 from generalities.migration import COUNTRY_EN, COL_MAP
+from generalities.births import GENDER_EN, AGE_EN, EDU_EN
 
 GOAL_PATH       = BASE_DIR / "data/banco_republica/CPI/goal.csv"
 POPULATION_PATH = BASE_DIR / "data/banco_republica/population/population.csv"
@@ -93,7 +94,7 @@ def generalities_spend_product(df: pd.DataFrame, terms: dict, variable: int|list
         pop_raw = to_datatime(pop_raw, dayfirst=True)
         pop = pop_raw["Población"].astype(int)
         pop.index = pop.index.year
-        clean_years = gdp_series.index.str.replace(r'[a-z]+', '', regex=True).astype(int)
+        clean_years = gdp_series.index.str.replace(r'\D+', '', regex=True).astype(int)
         pop_aligned = pd.Series(pop.reindex(clean_years).values, index=gdp_series.index)
         original_name = gdp_series.name if isinstance(gdp_series, pd.Series) else None
         gdp_series = gdp_series.div(pop_aligned, axis=0) * 1_000_000_000_000
@@ -402,3 +403,67 @@ def migration_year_pivot(df_f: pd.DataFrame, data_col: str, meta: list) -> tuple
         info = [f"{direction} — {metric} year comparison", "Month", label]
 
     return pivot, info
+
+# Births
+
+def births_national_series(total_df: pd.DataFrame) -> pd.Series:
+    s = total_df.set_index("year")["total_nacional"].astype(float)
+    s.index = s.index.astype(int)
+    return s
+
+def births_gender_pivot(total_df: pd.DataFrame) -> tuple:
+    df = total_df.set_index("year")[["hombres", "mujeres"]].astype(int).rename(columns=GENDER_EN)
+    df.index = df.index.astype(int)
+    df.index.name = "Year"
+    return df, ["Births by gender", "Year", "Births"]
+
+def births_age_pivot(age_df: pd.DataFrame) -> tuple:
+    df = age_df.copy()
+    df["age"] = df["grupo_edad"].map(AGE_EN).fillna(df["grupo_edad"])
+    pivot = df.pivot_table(index="year", columns="age", values="total", aggfunc="sum").astype(int)
+    order = [v for v in AGE_EN.values() if v in pivot.columns]
+    pivot = pivot[order]
+    pivot.index = pivot.index.astype(int)
+    pivot.index.name = "Year"
+    return pivot, ["Births by mother's age group", "Year", "Births"]
+
+def births_education_pivot(edu_df: pd.DataFrame, age_label: str | None) -> tuple:
+    df = edu_df.copy()
+    edu_cols = [c for c in EDU_EN if c in df.columns]
+
+    title = "Births by mother's education level"
+    if age_label and age_label != "All ages":
+        es = find_key_by_value(AGE_EN, age_label) or age_label
+        df = df[df["grupo_edad"] == es]
+        title += f" — mothers {age_label}"
+
+    g = df.groupby("year")[edu_cols].sum().astype(int)
+    g.columns = [EDU_EN[c] for c in g.columns]
+    g.index = g.index.astype(int)
+    g.index.name = "Year"
+    return g, [title, "Year", "Births"]
+
+def births_department_data(dept_df: pd.DataFrame, years: list, metric_col: str) -> pd.DataFrame:
+    df = dept_df.copy()
+    if years:
+        df = df[df["year"].isin(years)]
+    grouped = df.groupby("departamento")[metric_col].sum().reset_index()
+    grouped["Code"] = grouped["departamento"].str.split(n=1).str[0]
+    grouped["Name"] = grouped["departamento"].str.split(n=1).str[1]
+    return grouped
+
+def births_geo_trend(df: pd.DataFrame, entity_col: str, selected: list, years: list, value_col: str = "total") -> pd.DataFrame:
+    d = df.copy()
+    d["Name"] = d[entity_col].str.split(n=1).str[1]
+    if years:
+        d = d[d["year"].isin(years)]
+    if selected:
+        d = d[d["Name"].isin(selected)]
+    pivot = (
+        d.pivot_table(index="year", columns="Name", values=value_col, aggfunc="sum")
+        .fillna(0)
+        .astype(int)
+    )
+    pivot.index = pivot.index.astype(int)
+    pivot.index.name = "Year"
+    return pivot
