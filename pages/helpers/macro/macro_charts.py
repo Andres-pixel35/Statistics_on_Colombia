@@ -193,6 +193,58 @@ def choropleth_map(data: pd.DataFrame, col: str, info: list):
     )
     return fig
 
+def ranked_bar_chart(series: pd.Series, info: list):
+    data = series.sort_values(ascending=True)
+    fig = px.bar(
+        x=data.values,
+        y=data.index.astype(str),
+        orientation="h",
+        labels={"x": info[1], "y": info[2]},
+    )
+    fig.update_layout(
+        height=max(400, 18 * len(data)),
+        title={"text": info[0], "font": {"size": 25}, "x": 0, "xanchor": "left"},
+        margin=dict(l=50, r=20, t=80, b=0),
+        showlegend=False,
+        xaxis_title_font=dict(size=15),
+        yaxis_title_font=dict(size=15),
+    )
+    fig.update_xaxes(
+        showgrid=True, gridwidth=0.5, gridcolor="rgba(255, 255, 255, 0.1)",
+        tickfont=dict(size=15), tickformat=",.0f",
+    )
+    fig.update_yaxes(showgrid=False, tickfont=dict(size=13))
+    fig.update_traces(
+        marker_color="darkblue",
+        hovertemplate=f"<b>%{{y}}</b><br>{info[1]}: %{{x:,.0f}}<extra></extra>",
+    )
+    return fig
+
+def colombia_choropleth(data: pd.DataFrame, geojson: dict, feature_key: str, col: str, info: list):
+    fig = px.choropleth(
+        data,
+        geojson=geojson,
+        featureidkey=feature_key,
+        locations="Code",
+        color=col,
+        hover_name="Name",
+        color_continuous_scale="Blues",
+        labels={col: info[2]},
+    )
+    fig.update_geos(fitbounds="locations", visible=False)
+    fig.update_traces(
+        hovertemplate="<b>%{hovertext}</b><br>" + info[2] + ": %{z:,.0f}<extra></extra>"
+    )
+    fig.update_layout(
+        height=600,
+        title={"text": info[0], "font": {"size": 25}, "x": 0, "xanchor": "left"},
+        margin=dict(l=50, r=20, t=80, b=0),
+        coloraxis_colorbar=dict(title=info[2]),
+        paper_bgcolor="rgba(0,0,0,0)",
+        geo=dict(bgcolor="rgba(0,0,0,0)"),
+    )
+    return fig
+
 def gdp_growth(df: pd.DataFrame, year: list, president: str, index: int, quarter: str|None):
     df, df_local = mf.clean_annual_growth(df, year, president, index, quarter)
     if len(df_local) > 1:
