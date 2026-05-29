@@ -3,10 +3,12 @@ import pandas as pd
 from pages.helpers.macro import macro_charts as mc
 from pages.helpers.macro import macro_functions as mf
 from generalities.dictionaries import presidents, months
-from generalities.function import get_valid_presidents, show_all_years, to_datatime, find_key_by_value, president_multiselect, reshape_by_presidents, load_csv, BASE_DIR
+from generalities.function import get_valid_presidents, show_all_years, to_datatime, find_key_by_value, president_multiselect, reshape_by_presidents, load_csv, load_geojson, BASE_DIR
 from generalities.migration import COUNTRY_EN, METRIC_LABEL, VIEW
+from generalities.births import BIRTHS_PATHS, BIRTHS_COMPARE, AGE_EN, DEPT_GEOJSON_PATH, DEPT_FEATURE_KEY
 
 MIGRATION_PATH = BASE_DIR / "data/datos_abiertos/migration.csv"
+NET_MIGRATION_PATH = BASE_DIR / "data/world_bank/net_migration.csv"
 
 def render_population(pop_df: pd.DataFrame) -> None:
     with st.sidebar:
@@ -14,8 +16,10 @@ def render_population(pop_df: pd.DataFrame) -> None:
 
     if view == VIEW[0]:
         _render_population_tab(pop_df)
-    else:
+    elif view == VIEW[1]:
         _render_migration_tab()
+    else:
+        _render_births_tab()
 
 def _render_population_tab(pop_df: pd.DataFrame) -> None:
     pop_local = to_datatime(pop_df, True)
@@ -44,10 +48,32 @@ def _render_population_tab(pop_df: pd.DataFrame) -> None:
         column = "Growth"
         years = pop_local.index[1:]
     else:
-        series = pop_local["Población"]
-        info = ["Population", "Year", "People"]
-        column = "Population"
-        years = pop_local.index
+        with col2:
+            perspective = st.selectbox("Perspective:", ["National", "Net Migration", "Births"])
+
+        if perspective == "Net Migration":
+            net_migration = load_csv(NET_MIGRATION_PATH)
+
+            years = net_migration["Fecha"]
+            series = net_migration["Migration"].astype(int)
+            series.index = years
+        elif perspective == "Births":
+            series = mf.births_national_series(load_csv(BIRTHS_PATHS["total"]))
+            years = series.index
+        else:
+            series = pop_local["Población"]
+            years = pop_local.index
+
+        a = "Population" if perspective == "National" else f"{perspective}"
+
+        info = [a, "Year", "People" if perspective != "Births" else "Births"]
+        column = f"{a}"
+
+    source = (
+        "World Bank" if method == "Total" and perspective == "Net Migration"
+        else "DANE" if method == "Total" and perspective == "Births"
+        else "Banco de la República"
+    )
 
     full_series = series
 
@@ -57,7 +83,7 @@ def _render_population_tab(pop_df: pd.DataFrame) -> None:
         valid_presidents = get_valid_presidents(years)
         selected_presidents = president_multiselect(valid_presidents)
         comparing = len(selected_presidents) >= 2
-        president = selected_presidents[0] if len(selected_presidents) == 1 else None
+        president = selected_presidents[0] if len(selected_presidents) == 1 else None 
 
         if comparing:
             choice_year = []
@@ -67,14 +93,34 @@ def _render_population_tab(pop_df: pd.DataFrame) -> None:
         else:
             choice_year = st.multiselect("Year:", sorted(years, reverse=True))
 
+        compare_births = compare_migration = False
+        if method == "Growth" and metric == "Absolute" and not comparing:
+            compare_births = st.checkbox("Compare with Births")
+            compare_migration = st.checkbox("Compare with Net Migration")
+
+    extras = []
+    if compare_births:
+        b = mf.births_national_series(load_csv(BIRTHS_PATHS["total"]))
+        b.name = "Births"
+        extras.append(b)
+    if compare_migration:
+        m = load_csv(NET_MIGRATION_PATH).set_index("Fecha")["Migration"].astype(int)
+        m.name = "Net Migration"
+        extras.append(m)
+    if extras:
+        series = pd.concat([series.rename(column)] + extras, axis=1)
+        suffixes = (["Births"] if compare_births else []) + (["Net Migration"] if compare_migration else [])
+        info[0] = f"{info[0]} vs {' & '.join(suffixes)}"
+
     if comparing:
         data, info = reshape_by_presidents(full_series.to_frame(name=column), selected_presidents, info)
         fig = mc.bar_chart(data, {}, info) if chart_type == "Bar" else mc.line_chart(data, {}, info)
         st.plotly_chart(fig)
-        st.caption("Source: Banco de la República")
+        st.caption(f"Source: {source}")
         return
 
-    series = show_all_years(series, president)
+    if source != "DANE":
+        series = show_all_years(series, president)
 
     if president:
         series = series[series.index.isin(presidents[president])]
@@ -82,15 +128,15 @@ def _render_population_tab(pop_df: pd.DataFrame) -> None:
     if choice_year:
         series = series[series.index.isin(choice_year)]
 
-    series = series.dropna()
+    series = series.dropna(how="all") if isinstance(series, pd.DataFrame) else series.dropna()
 
     if series.empty:
         st.warning("Remember to select 'Show all years' to see info about years prior to 2000")
         return
 
-    data = series.to_frame(name=column)
+    data = series if isinstance(series, pd.DataFrame) else series.to_frame(name=column)
 
-    if len(data) == 1:
+    if len(data) == 1 and data.shape[1] == 1:
         year = data.index[0]
         if method == "Growth":
             reference = full_series.median()
@@ -112,8 +158,17 @@ def _render_population_tab(pop_df: pd.DataFrame) -> None:
         fig = mc.line_chart(data, {}, info)
 
     st.plotly_chart(fig)
-    st.caption("Source: Banco de la República")
-    st.info("If you want to choose a year prior to 2000, make sure you click 'Show all years'")
+
+    if source == "World Bank":
+        st.caption("Net migration is the net total of migrants during the period, that is, the number of immigrants minus the number of emigrants, including both citizens and noncitizens.")
+
+    st.caption(f"Source: {source}")
+
+    if extras:
+        st.caption("Births: DANE · Net migration: World Bank")
+
+    if source != "DANE":
+        st.info("If you want to choose a year prior to 2000, make sure you click 'Show all years'")
 
 
 def _render_migration_tab() -> None:
@@ -290,3 +345,168 @@ def _render_line_bar(migration_df, chart_type, all_years, valid_pres):
             "Compare by:", ["Countries", "Direction", "Gender", "Year"],
             horizontal=True, key="mig_compare",
         )
+
+
+def _render_births_tab() -> None:
+    st.title("Births")
+
+    compare_by = st.session_state.get("births_compare", BIRTHS_COMPARE[0])
+
+    with st.sidebar:
+        st.header("Filters")
+
+    if compare_by == "Department":
+        _render_births_department()
+    elif compare_by == "Municipality":
+        _render_births_municipality()
+    else:
+        _render_births_breakdown(compare_by)
+
+    with st.sidebar:
+        st.radio("Compare by:", BIRTHS_COMPARE, horizontal=True, key="births_compare")
+
+    st.caption("Source: DANE")
+
+
+def _render_births_breakdown(compare_by: str) -> None:
+    if compare_by == "Gender":
+        df = load_csv(BIRTHS_PATHS["total"])
+    elif compare_by == "Mother Age":
+        df = load_csv(BIRTHS_PATHS["age"])
+    else:  # Education
+        df = load_csv(BIRTHS_PATHS["education"])
+
+    years = sorted(df["year"].unique().astype(int).tolist(), reverse=True)
+    valid_presidents = get_valid_presidents(years)
+
+    with st.sidebar:
+        chart_type = st.selectbox("Chart Type:", ["Line", "Bar"])
+        selected_presidents = president_multiselect(valid_presidents)
+
+    comparing = len(selected_presidents) >= 2
+    president = selected_presidents[0] if len(selected_presidents) == 1 else None
+    year_opts = [y for y in years if y in presidents[president]] if president else years
+
+    age_label = None
+    if compare_by == "Education":
+        present = [AGE_EN.get(a, a) for a in df["grupo_edad"].unique()]
+        age_opts = ["All ages"] + [v for v in AGE_EN.values() if v in present]
+        with st.sidebar:
+            age_label = st.selectbox("Mother age:", age_opts)
+
+    with st.sidebar:
+        selected_years = [] if comparing else st.multiselect("Year:", year_opts)
+
+    if compare_by == "Gender":
+        pivot, info = mf.births_gender_pivot(df)
+    elif compare_by == "Mother Age":
+        pivot, info = mf.births_age_pivot(df)
+        with st.sidebar:
+            chosen = st.multiselect("Age groups:", list(pivot.columns))
+        if chosen:
+            pivot = pivot[chosen]
+    else:
+        pivot, info = mf.births_education_pivot(df, age_label)
+        with st.sidebar:
+            chosen = st.multiselect("Education levels:", list(pivot.columns))
+        if chosen:
+            pivot = pivot[chosen]
+
+    if president:
+        pivot = pivot[pivot.index.isin(presidents[president])]
+    elif selected_years:
+        pivot = pivot[pivot.index.isin(selected_years)]
+
+    if comparing and not pivot.empty:
+        pivot, info = reshape_by_presidents(pivot, selected_presidents, info)
+
+    if pivot.empty:
+        st.warning("No data for selected filters.")
+        return
+
+    highlight = None
+    if len(pivot.columns) > 1:
+        with st.sidebar:
+            names = list(pivot.columns.astype(str))
+            choice = st.selectbox("Highlight variable:", ["—"] + names)
+            highlight = None if choice == "—" else choice
+
+    if chart_type == "Bar" or len(pivot) == 1:
+        fig = mc.bar_chart(pivot, {}, info, highlight=highlight)
+    else:
+        fig = mc.line_chart(pivot, {}, info, highlight=highlight)
+
+    st.plotly_chart(fig)
+
+
+def _render_births_department() -> None:
+    dept_df = load_csv(BIRTHS_PATHS["department"])
+    all_years = sorted(dept_df["year"].unique().astype(int).tolist(), reverse=True)
+    dept_names = sorted(dept_df["departamento"].str.split(n=1).str[1].unique())
+
+    with st.sidebar:
+        chart_type = st.selectbox("Chart Type:", ["Map", "Line", "Bar"])
+
+        if chart_type != "Map":
+            selected_depts = st.multiselect("Departments:", dept_names)
+
+        selected_years = st.multiselect("Year:", all_years)
+
+    scope = "all years" if not selected_years else ", ".join(map(str, sorted(selected_years)))
+
+    if chart_type == "Map":
+        grouped = mf.births_department_data(dept_df, selected_years, "total")
+        info = [f"Births by department — {scope}", "Department", "Births"]
+        geojson = load_geojson(DEPT_GEOJSON_PATH)
+        fig = mc.colombia_choropleth(grouped, geojson, DEPT_FEATURE_KEY, "total", info)
+        st.plotly_chart(fig)
+        return
+
+    if not selected_depts:
+        st.info("Select one or more departments.")
+        return
+
+    pivot = mf.births_geo_trend(dept_df, "departamento", selected_depts, selected_years)
+    _render_geo_bar_line(pivot, chart_type, "department", scope)
+
+
+def _render_births_municipality() -> None:
+    muni_df = load_csv(BIRTHS_PATHS["municipality"])
+    all_years = sorted(muni_df["year"].unique().astype(int).tolist(), reverse=True)
+    dept_names = sorted(muni_df["departamento"].str.split(n=1).str[1].dropna().unique())
+
+    with st.sidebar:
+        chart_type = st.selectbox("Chart Type:", ["Line", "Bar"])
+        dept = st.selectbox("Department:", dept_names)
+        scoped = muni_df[muni_df["departamento"].str.split(n=1).str[1] == dept]
+        muni_names = sorted(scoped["municipio"].str.split(n=1).str[1].unique())
+        selected_munis = st.multiselect("Municipios:", muni_names)
+        selected_years = st.multiselect("Year:", all_years)
+
+    if not selected_munis:
+        st.info("Select one or more municipios.")
+        return
+
+    scope = "all years" if not selected_years else ", ".join(map(str, sorted(selected_years)))
+    pivot = mf.births_geo_trend(scoped, "municipio", selected_munis, selected_years)
+    _render_geo_bar_line(pivot, chart_type, "municipio", scope)
+
+
+def _render_geo_bar_line(pivot, chart_type: str, entity: str, scope: str) -> None:
+    if pivot.empty:
+        st.warning("No data for selected filters.")
+        return
+
+    if chart_type == "Bar" or len(pivot) == 1:
+        info = [f"Total births by {entity} — {scope}", "Births", entity.capitalize()]
+        fig = mc.ranked_bar_chart(pivot.sum(axis=0), info)
+    else:
+        highlight = None
+        if len(pivot.columns) > 1:
+            with st.sidebar:
+                choice = st.selectbox("Highlight variable:", ["—"] + list(pivot.columns))
+                highlight = None if choice == "—" else choice
+        info = [f"Births trend by {entity}", "Year", "Births"]
+        fig = mc.line_chart(pivot, {}, info, highlight=highlight)
+
+    st.plotly_chart(fig)
