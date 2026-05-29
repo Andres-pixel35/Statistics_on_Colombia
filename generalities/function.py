@@ -1,3 +1,4 @@
+import json
 from pathlib import Path
 import pandas as pd
 import streamlit as st
@@ -24,8 +25,13 @@ def show_all_years(df: pd.DataFrame|pd.Series, president) -> pd.DataFrame | pd.S
     return df
 
 @st.cache_data
-def load_csv(path: str, dtype=None) -> pd.DataFrame:
+def load_csv(path: str | Path, dtype=None) -> pd.DataFrame:
     return pd.read_csv(path, encoding="utf-8", dtype=dtype)
+
+@st.cache_data
+def load_geojson(path: str | Path) -> dict:
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
 
 def to_datatime(df: pd.DataFrame, dayfirst: bool) -> pd.DataFrame | pd.Series:
     df_local = df.copy()

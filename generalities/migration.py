@@ -263,4 +263,4 @@ COL_MAP = {
 
 METRIC_LABEL = {"Total": "People", "Female": "Women", "Male": "Men"}
 
-VIEW = ["General", "Migration"]
+VIEW = ["National", "Migration", "Births"]
