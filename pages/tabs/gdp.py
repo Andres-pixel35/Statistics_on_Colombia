@@ -6,7 +6,7 @@ import generalities.gdp_spend as t
 from generalities.gdp_production import production_summarize_terms as p
 from generalities.gdp_income import income_summarize_terms as i
 from generalities.dictionaries import presidents
-from generalities.function import get_valid_presidents, find_key_by_value, show_all_years, president_multiselect, reshape_by_presidents, load_csv, to_datatime, BASE_DIR
+from generalities.function import get_valid_presidents, find_key_by_value, show_all_years, president_multiselect, reshape_by_presidents, load_csv, BASE_DIR
 
 ANNUAL_GROWTH_PATH  = BASE_DIR / "data/banco_republica/GDP/annual_growth.csv"
 POPULATION_PATH     = BASE_DIR / "data/banco_republica/population/population.csv"
