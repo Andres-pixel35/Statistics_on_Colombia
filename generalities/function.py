@@ -2,6 +2,8 @@ import json
 from pathlib import Path
 import pandas as pd
 import streamlit as st
+import re
+import unicodedata
 from generalities.dictionaries import presidents
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -14,6 +16,12 @@ def get_valid_presidents(tmp_years: dict) -> list:
 
 def find_key_by_value(d: dict, value: str):
     return next((k for k, v in d.items() if v == value), None)
+
+def cap_series(data: pd.DataFrame, limit: int = 6) -> pd.DataFrame:
+    if isinstance(data, pd.DataFrame) and data.shape[1] > limit:
+        st.session_state["chart_warning"] = f"Showing first {limit} of {data.shape[1]} series."
+        return data.iloc[:, :limit]
+    return data
 
 def show_all_years(df: pd.DataFrame|pd.Series, president) -> pd.DataFrame | pd.Series:
     with st.sidebar:
@@ -81,3 +89,14 @@ def reshape_by_presidents(df: pd.DataFrame, selected_presidents: list, info: lis
 
     new_info = [f"{info[0]} — {' vs '.join(ordered)}", "Term Year", info[2], *info[3:]]
     return result, new_info
+
+def norm(label: str) -> str:
+    """Accent/case/space-insensitive key so 'Úlcera' and 'Ulcera' collapse to one cause."""
+    text = unicodedata.normalize("NFKD", str(label)).encode("ascii", "ignore").decode()
+    return re.sub(r"\s+", " ", text).strip().lower()
+
+def render_chart(fig):
+    st.plotly_chart(fig)
+    msg = st.session_state.pop("chart_warning", None)
+    if msg:
+        st.warning(msg)

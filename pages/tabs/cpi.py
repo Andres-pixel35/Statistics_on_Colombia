@@ -184,6 +184,6 @@ def render_cpi(cpi_df: pd.DataFrame) -> None:
     else:
         fig = mc.line_chart(cpi_series, {}, cpi_info, highlight=highlight)
 
-    st.plotly_chart(fig)
+    mc.render_chart(fig)
     st.caption("Base 2018")
     st.caption("Source: DANE, Banco de la República")
