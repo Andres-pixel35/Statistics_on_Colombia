@@ -3,8 +3,10 @@ import plotly.graph_objects as go
 import pandas as pd
 import streamlit as st
 from pages.helpers.macro import macro_functions as mf
+from generalities.function import cap_series, render_chart
 
 def line_chart(data: pd.DataFrame, labels: dict, info: list, highlight: str = None):
+    data = cap_series(data)
     fig = px.line(data, labels={data.index.name or "index": info[1], "value": info[2]})
     fig.update_layout(
 
@@ -66,6 +68,7 @@ def line_chart(data: pd.DataFrame, labels: dict, info: list, highlight: str = No
     return fig
 
 def bar_chart(data: pd.DataFrame, labels: dict, info: list, highlight: str = None):
+    data = cap_series(data)
     fig = px.bar(data, barmode="group", labels={data.index.name or "index": info[1], "value": info[2]})
     fig.update_layout(
         height=600,
@@ -202,7 +205,7 @@ def ranked_bar_chart(series: pd.Series, info: list):
         labels={"x": info[1], "y": info[2]},
     )
     fig.update_layout(
-        height=max(400, 18 * len(data)),
+        height=max(450, 42 * len(data)),
         title={"text": info[0], "font": {"size": 25}, "x": 0, "xanchor": "left"},
         margin=dict(l=50, r=20, t=80, b=0),
         showlegend=False,
@@ -213,7 +216,7 @@ def ranked_bar_chart(series: pd.Series, info: list):
         showgrid=True, gridwidth=0.5, gridcolor="rgba(255, 255, 255, 0.1)",
         tickfont=dict(size=15), tickformat=",.0f",
     )
-    fig.update_yaxes(showgrid=False, tickfont=dict(size=13))
+    fig.update_yaxes(showgrid=False, tickfont=dict(size=13), automargin=True)
     fig.update_traces(
         marker_color="darkblue",
         hovertemplate=f"<b>%{{y}}</b><br>{info[1]}: %{{x:,.0f}}<extra></extra>",
