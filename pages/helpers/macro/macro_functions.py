@@ -2,10 +2,11 @@ import pandas as pd
 import streamlit as st
 from pages.helpers.macro import macro_charts as mc
 from generalities.dictionaries import presidents, months
-from generalities.function import get_valid_presidents, find_key_by_value, show_all_years, to_datatime, president_multiselect, reshape_by_presidents, load_csv, BASE_DIR
+from generalities.function import get_valid_presidents, find_key_by_value, show_all_years, to_datatime, president_multiselect, reshape_by_presidents, load_csv, BASE_DIR, norm 
 from generalities.inflation import perspective_names
 from generalities.migration import COUNTRY_EN, COL_MAP
 from generalities.births import GENDER_EN, AGE_EN, EDU_EN
+from generalities.deaths import GENDER_EN as DEATHS_GENDER_EN, AREA_EN, AGE_EN as DEATHS_AGE_EN, CAUSE_EN
 
 GOAL_PATH       = BASE_DIR / "data/banco_republica/CPI/goal.csv"
 POPULATION_PATH = BASE_DIR / "data/banco_republica/population/population.csv"
@@ -123,7 +124,7 @@ def generalities_spend_product(df: pd.DataFrame, terms: dict, variable: int|list
     else:
         fig = mc.line_chart(gdp_series, labels_arg, info, highlight=highlight)
 
-    st.plotly_chart(fig)
+    mc.render_chart(fig)
     st.caption(f"{info[3]}, base year 2015")
     st.caption("Source: DANE")
     st.info("\'p\' is provisional and \'pr\' is preliminary data.")
@@ -467,3 +468,103 @@ def births_geo_trend(df: pd.DataFrame, entity_col: str, selected: list, years: l
     pivot.index = pivot.index.astype(int)
     pivot.index.name = "Year"
     return pivot
+
+def deaths_national_series(total_df: pd.DataFrame) -> pd.Series:
+    s = total_df.set_index("Fecha")["total"].astype(float)
+    s.index = s.index.astype(int)
+    return s
+
+def deaths_gender_pivot(total_df: pd.DataFrame) -> tuple:
+    cols = {f"Total_{es}": en for es, en in DEATHS_GENDER_EN.items()}
+    df = total_df.set_index("Fecha")[list(cols)].astype(int).rename(columns=cols)
+    df.index = df.index.astype(int)
+    df.index.name = "Year"
+    return df, ["Deaths by gender", "Year", "Deaths"]
+
+def deaths_gender_cause_pivot(dept_df: pd.DataFrame, cause: str) -> tuple:
+    df = _dept_filter(dept_df, [], None)
+    df["cause"] = _cause_label(df["causa"])
+    df = df[df["cause"] == cause]
+    cols = {f"Total_{es}": en for es, en in DEATHS_GENDER_EN.items()}
+    out = df.groupby("Fecha")[list(cols)].sum().astype(int).rename(columns=cols)
+    out.index = out.index.astype(int)
+    out.index.name = "Year"
+    return out, [f"Deaths by gender — {cause}", "Year", "Deaths"]
+
+def deaths_area_pivot(area_df: pd.DataFrame, age_label: str = "All ages") -> tuple:
+    df = area_df.copy()
+    df["age"] = df["grupo_edad"].map(DEATHS_AGE_EN).fillna(df["grupo_edad"])
+    title = "Deaths by area"
+    if age_label and age_label != "All ages":
+        df = df[df["age"] == age_label]
+        title += f" — age {age_label}"
+    out = pd.DataFrame(index=sorted(df["Fecha"].unique()))
+    for es, en in AREA_EN.items():
+        gender_cols = [f"{es}_{g}" for g in DEATHS_GENDER_EN]
+        out[en] = df.groupby("Fecha")[gender_cols].sum().sum(axis=1).astype(int)
+    out.index = out.index.astype(int)
+    out.index.name = "Year"
+    return out, [title, "Year", "Deaths"]
+
+def deaths_age_pivot(area_df: pd.DataFrame, gender: str = "Total", area: str = "Total") -> tuple:
+    df = area_df.copy()
+    df["age"] = df["grupo_edad"].map(DEATHS_AGE_EN).fillna(df["grupo_edad"])
+
+    area_es = find_key_by_value(AREA_EN, area)  # None when area == "Total"
+    gender_es = find_key_by_value(DEATHS_GENDER_EN, gender)  # None when gender == "Total"
+
+    if area == "Total" and gender == "Total":
+        df["val"] = df["total"]
+    elif area == "Total":
+        df["val"] = df[f"Total_{gender_es}"]
+    elif gender == "Total":
+        df["val"] = df[[f"{area_es}_{g}" for g in DEATHS_GENDER_EN]].sum(axis=1)
+    else:
+        df["val"] = df[f"{area_es}_{gender_es}"]
+
+    pivot = df.pivot_table(index="Fecha", columns="age", values="val", aggfunc="sum").astype(int)
+    order = list(dict.fromkeys(DEATHS_AGE_EN.values()))  # dedupe typo collisions, keep order
+    pivot = pivot[[c for c in order if c in pivot.columns]]
+    pivot.index = pivot.index.astype(int)
+    pivot.index.name = "Year"
+
+    parts = [p for p in (None if area == "Total" else area, None if gender == "Total" else gender) if p]
+    title = "Deaths by age group" + (f" — {', '.join(parts)}" if parts else "")
+    return pivot, [title, "Year", "Deaths"]
+
+def _cause_label(causa: pd.Series) -> pd.Series:
+    """Strip the leading NNN code, then map to English (accent-variants collapse to one)."""
+    stripped = causa.astype(str).str.replace(r"^\d+\s+", "", regex=True).str.replace(r"\s+", " ", regex=True).str.strip()
+    return stripped.map(lambda s: CAUSE_EN.get(norm(s), s))
+
+def _dept_filter(dept_df: pd.DataFrame, years: list, president: str, dept_name: str = None) -> pd.DataFrame:
+    df = dept_df[~dept_df["departamento"].str.strip().str.lower().eq("total nacional")].copy()
+    df["Name"] = df["departamento"].str.split(n=1).str[1]
+    if dept_name and dept_name != "All":
+        df = df[df["Name"] == dept_name]
+    if president:
+        df = df[df["Fecha"].isin(presidents[president])]
+    elif years:
+        df = df[df["Fecha"].isin(years)]
+    return df
+
+def deaths_top_causes(dept_df: pd.DataFrame, years: list, dept_name: str, president: str, value_col: str = "total") -> pd.Series:
+    df = _dept_filter(dept_df, years, president, dept_name)
+    df["cause"] = _cause_label(df["causa"])
+    return df.groupby("cause")[value_col].sum().astype(int).nlargest(5)
+
+def deaths_cause_pivot(dept_df: pd.DataFrame, selected_causes: list, years: list, president: str, value_col: str = "total", dept_name: str = "All") -> pd.DataFrame:
+    df = _dept_filter(dept_df, years, president, dept_name)
+    df["cause"] = _cause_label(df["causa"])
+    df = df[df["cause"].isin(selected_causes)]
+    pivot = (
+        df.pivot_table(index="Fecha", columns="cause", values=value_col, aggfunc="sum")
+        .fillna(0)
+        .astype(int)
+    )
+    pivot.index = pivot.index.astype(int)
+    pivot.index.name = "Year"
+    return pivot
+
+def deaths_cause_names(dept_df: pd.DataFrame) -> list:
+    return sorted(_cause_label(dept_df[~dept_df["departamento"].str.strip().str.lower().eq("total nacional")]["causa"]).unique())

@@ -131,6 +131,6 @@ def render_gdp(gdp_df: pd.DataFrame) -> None:
         else:
             fig = mc.gdp_growth(gdp_local, choice_year, president, 1, quarter)
 
-        st.plotly_chart(fig)
+        mc.render_chart(fig)
         st.caption("Spliced series, base 2015")
         st.caption("Source: DANE")
