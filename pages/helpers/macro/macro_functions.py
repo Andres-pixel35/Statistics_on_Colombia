@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 from pages.helpers.macro import macro_charts as mc
 from generalities.dictionaries import presidents, months
-from generalities.function import get_valid_presidents, find_key_by_value, show_all_years, to_datatime, president_multiselect, reshape_by_presidents, load_csv, BASE_DIR, norm 
+from generalities.function import get_valid_presidents, find_key_by_value, show_all_years, to_datatime, president_multiselect, reshape_by_presidents, load_csv, BASE_DIR, norm, highlight_selectbox
 from generalities.inflation import perspective_names
 from generalities.migration import COUNTRY_EN, COL_MAP
 from generalities.births import GENDER_EN, AGE_EN, EDU_EN
@@ -112,12 +112,7 @@ def generalities_spend_product(df: pd.DataFrame, terms: dict, variable: int|list
     else:
         labels_arg = terms
 
-    highlight = None
-    if isinstance(gdp_series, pd.DataFrame) and len(gdp_series.columns) > 1:
-        display_names = [terms.get(col, col) for col in gdp_series.columns]
-        with st.sidebar:
-            highlight_choice = st.selectbox("Highlight variable:", ["—"] + display_names)
-            highlight = None if highlight_choice == "—" else highlight_choice
+    highlight = highlight_selectbox(gdp_series, [terms.get(c, c) for c in gdp_series.columns] if isinstance(gdp_series, pd.DataFrame) else None)
 
     if chart_type == "Bar" or len(gdp_series) == 1:
         fig = mc.bar_chart(gdp_series, labels_arg, info, highlight=highlight)
@@ -547,6 +542,15 @@ def _dept_filter(dept_df: pd.DataFrame, years: list, president: str, dept_name: 
     elif years:
         df = df[df["Fecha"].isin(years)]
     return df
+
+def deaths_age_gender_value(df: pd.DataFrame, gender: str, age_label: str) -> pd.Series:
+    """Series of deaths for a (gender, age) combo from dept×cause frames (cols: total, Total_<gender>, <age>_<gender>)."""
+    genders = list(DEATHS_GENDER_EN) if gender == "Total" else [find_key_by_value(DEATHS_GENDER_EN, gender)]
+    if not age_label or age_label == "All ages":
+        return df["total"] if gender == "Total" else df[f"Total_{genders[0]}"]
+    age_keys = [k for k, v in DEATHS_AGE_EN.items() if v == age_label]
+    cols = [f"{a}_{g}" for a in age_keys for g in genders if f"{a}_{g}" in df.columns]
+    return df[cols].sum(axis=1)
 
 def deaths_top_causes(dept_df: pd.DataFrame, years: list, dept_name: str, president: str, value_col: str = "total") -> pd.Series:
     df = _dept_filter(dept_df, years, president, dept_name)
