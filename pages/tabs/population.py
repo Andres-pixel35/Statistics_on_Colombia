@@ -3,10 +3,10 @@ import pandas as pd
 from pages.helpers.macro import macro_charts as mc
 from pages.helpers.macro import macro_functions as mf
 from generalities.dictionaries import presidents, months
-from generalities.function import get_valid_presidents, show_all_years, to_datatime, find_key_by_value, president_multiselect, reshape_by_presidents, load_csv, load_geojson, BASE_DIR
+from generalities.function import get_valid_presidents, show_all_years, to_datatime, find_key_by_value, president_multiselect, reshape_by_presidents, load_csv, load_geojson, BASE_DIR, highlight_selectbox
 from generalities.migration import COUNTRY_EN, METRIC_LABEL, VIEW
 from generalities.births import BIRTHS_PATHS, BIRTHS_COMPARE, AGE_EN, GENDER_EN, DEPT_GEOJSON_PATH, DEPT_FEATURE_KEY
-from generalities.deaths import DEATHS_PATHS, DEATHS_COMPARE, AREA_EN, AGE_EN as DEATHS_AGE_EN, GENDER_EN as DEATHS_GENDER_EN
+from generalities.deaths import DEATHS_PATHS, DEATHS_COMPARE, AREA_EN, AGE_EN as DEATHS_AGE_EN
 
 MIGRATION_PATH = BASE_DIR / "data/datos_abiertos/migration.csv"
 NET_MIGRATION_PATH = BASE_DIR / "data/world_bank/net_migration.csv"
@@ -326,15 +326,7 @@ def _render_line_bar(migration_df, chart_type, all_years, valid_pres):
     if pres_compare and pivot is not None and not pivot.empty:
         pivot, info = reshape_by_presidents(pivot, selected_presidents, info)
 
-    highlight = None
-
-    if pivot is not None and not pivot.empty and len(pivot.columns) > 1:
-        with st.sidebar:
-            display_names = list(pivot.columns.astype(str))
-            highlight_choice = st.selectbox(
-                "Highlight variable:", ["—"] + display_names,
-            )
-            highlight = None if highlight_choice == "—" else highlight_choice
+    highlight = highlight_selectbox(pivot)
 
     compare_placeholder = st.sidebar.empty()
 
@@ -441,12 +433,7 @@ def _render_births_breakdown(compare_by: str) -> None:
         st.warning("No data for selected filters.")
         return
 
-    highlight = None
-    if len(pivot.columns) > 1:
-        with st.sidebar:
-            names = list(pivot.columns.astype(str))
-            choice = st.selectbox("Highlight variable:", ["—"] + names)
-            highlight = None if choice == "—" else choice
+    highlight = highlight_selectbox(pivot)
 
     if chart_type == "Bar" or len(pivot) == 1:
         fig = mc.bar_chart(pivot, {}, info, highlight=highlight)
@@ -521,11 +508,7 @@ def _render_geo_bar_line(pivot, chart_type: str, entity: str, scope: str, noun: 
         info = [f"Total {noun.lower()} by {entity} — {scope}", noun, entity.capitalize()]
         fig = mc.ranked_bar_chart(pivot.sum(axis=0), info)
     else:
-        highlight = None
-        if len(pivot.columns) > 1:
-            with st.sidebar:
-                choice = st.selectbox("Highlight variable:", ["—"] + list(pivot.columns))
-                highlight = None if choice == "—" else choice
+        highlight = highlight_selectbox(pivot)
         info = [f"{noun} trend by {entity}", "Year", noun]
         fig = mc.line_chart(pivot, {}, info, highlight=highlight)
 
@@ -598,11 +581,13 @@ def _render_deaths_breakdown(compare_by: str) -> None:
             age_label = st.selectbox("Age group:", ["All ages"] + age_labels)
         pivot, info = mf.deaths_area_pivot(df, age_label)
     else:  # Age Group
-        with st.sidebar:
+        col1, col2 = st.columns(2)
+        with col1:
             gender = st.selectbox("Gender:", ["Total", "Men", "Women"])
+        with st.sidebar:
             area = st.selectbox("Area:", ["Total"] + list(AREA_EN.values()))
         pivot, info = mf.deaths_age_pivot(df, gender, area)
-        with st.sidebar:
+        with col2:
             chosen = st.multiselect("Age groups:", list(pivot.columns))
         if chosen:
             pivot = pivot[chosen]
@@ -619,12 +604,7 @@ def _render_deaths_breakdown(compare_by: str) -> None:
         st.warning("No data for selected filters.")
         return
 
-    highlight = None
-    if len(pivot.columns) > 1:
-        with st.sidebar:
-            names = list(pivot.columns.astype(str))
-            choice = st.selectbox("Highlight variable:", ["—"] + names)
-            highlight = None if choice == "—" else choice
+    highlight = highlight_selectbox(pivot)
 
     if chart_type == "Bar" or len(pivot) == 1:
         fig = mc.bar_chart(pivot, {}, info, highlight=highlight)
@@ -647,19 +627,28 @@ def _render_deaths_department() -> None:
 
     all_years = sorted(dept_df["year"].unique().astype(int).tolist(), reverse=True)
     dept_names = sorted(dept_df["departamento"].str.split(n=1).str[1].dropna().unique())
+    age_labels = list(dict.fromkeys(DEATHS_AGE_EN.values()))
 
     with st.sidebar:
         chart_type = st.selectbox("Chart Type:", ["Map", "Line", "Bar"])
-
-        if chart_type != "Map":
-            selected_depts = st.multiselect("Departments:", dept_names)
-
-        gender = st.selectbox("Gender:", ["Total", "Men", "Women"])
         selected_years = st.multiselect("Year:", all_years)
 
-    col = "total" if gender == "Total" else f"Total_{find_key_by_value(DEATHS_GENDER_EN, gender)}"
+    col1, col2, col3 = st.columns(3)
+    selected_depts = []
+    if chart_type != "Map":
+        with col3:
+            selected_depts = st.multiselect("Departments:", dept_names)
+    with col1:
+        gender = st.selectbox("Gender:", ["Total", "Men", "Women"])
+    with col2:
+        age_label = st.selectbox("Age:", ["All ages"] + age_labels)
+
+    dept_df["_val"] = mf.deaths_age_gender_value(dept_df, gender, age_label)
+    col = "_val"
     noun = "Deaths" if gender == "Total" else gender
     scope = "all years" if not selected_years else ", ".join(map(str, sorted(selected_years)))
+    if age_label != "All ages":
+        scope = f"{scope}, age {age_label}"
 
     if chart_type == "Map":
         grouped = mf.births_department_data(dept_df, selected_years, col)
@@ -684,27 +673,36 @@ def _render_deaths_top_causes() -> None:
     all_years = sorted(no_nat["Fecha"].unique().astype(int).tolist(), reverse=True)
     dept_names = sorted(no_nat["departamento"].str.split(n=1).str[1].dropna().unique())
     valid_presidents = get_valid_presidents(all_years)
+    age_labels = list(dict.fromkeys(DEATHS_AGE_EN.values()))
 
     with st.sidebar:
-        opts = ["All"] + dept_names
-        saved = st.session_state.get("deaths_cause_dept", "All")
-        idx = opts.index(saved) if saved in opts else 0
-        dept = st.selectbox("Department:", opts, index=idx)
-        st.session_state["deaths_cause_dept"] = dept
-        gender = st.selectbox("Gender:", ["Total", "Men", "Women"])
         selected_presidents = president_multiselect(valid_presidents)
         president = selected_presidents[0] if len(selected_presidents) == 1 else None
         year_opts = [y for y in all_years if y in presidents[president]] if president else all_years
         selected_years = [] if president else st.multiselect("Year:", year_opts)
 
-    col = "total" if gender == "Total" else f"Total_{find_key_by_value(DEATHS_GENDER_EN, gender)}"
-    series = mf.deaths_top_causes(dept_df, selected_years, dept, president, value_col=col)
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        opts = ["All"] + dept_names
+        saved = st.session_state.get("deaths_cause_dept", "All")
+        idx = opts.index(saved) if saved in opts else 0
+        dept = st.selectbox("Department:", opts, index=idx)
+        st.session_state["deaths_cause_dept"] = dept
+    with col2:
+        gender = st.selectbox("Gender:", ["Total", "Men", "Women"])
+    with col3:
+        age_label = st.selectbox("Age:", ["All ages"] + age_labels)
+
+    dept_df["_val"] = mf.deaths_age_gender_value(dept_df, gender, age_label)
+    series = mf.deaths_top_causes(dept_df, selected_years, dept, president, value_col="_val")
 
     if series.empty:
         st.warning("No data for selected filters.")
         return
 
     scope = ", ".join(map(str, sorted(selected_years))) if selected_years else (president or "all years")
+    if age_label != "All ages":
+        scope = f"{scope}, age {age_label}"
     place = dept if dept != "All" else "Colombia"
     g = "" if gender == "Total" else f" ({gender})"
     info = [f"Top 5 causes of death{g} — {place}, {scope}", "Deaths", "Cause"]
@@ -720,16 +718,23 @@ def _render_deaths_cause_compare() -> None:
     dept_names = sorted(no_nat["departamento"].str.split(n=1).str[1].dropna().unique())
     valid_presidents = get_valid_presidents(all_years)
     cause_names = mf.deaths_cause_names(dept_df)
+    age_labels = list(dict.fromkeys(DEATHS_AGE_EN.values()))
 
-    with st.sidebar:
+    col1, col2, col3 = st.columns(3)
+    with col1:
         opts = ["All"] + dept_names
         saved = st.session_state.get("deaths_cause_dept", "All")
         idx = opts.index(saved) if saved in opts else 0
         dept = st.selectbox("Department:", opts, index=idx)
         st.session_state["deaths_cause_dept"] = dept
+    with col2:
+        gender = st.selectbox("Gender:", ["Total", "Men", "Women"])
+    with col3:
+        age_label = st.selectbox("Age:", ["All ages"] + age_labels)
+
+    with st.sidebar:
         chart_type = st.selectbox("Chart Type:", ["Line", "Bar"])
         selected_causes = st.multiselect("Causes (max 5):", cause_names)
-        gender = st.selectbox("Gender:", ["Total", "Men", "Women"])
         selected_presidents = president_multiselect(valid_presidents)
 
     if not selected_causes:
@@ -746,10 +751,12 @@ def _render_deaths_cause_compare() -> None:
     with st.sidebar:
         selected_years = [] if comparing else st.multiselect("Year:", year_opts)
 
-    col = "total" if gender == "Total" else f"Total_{find_key_by_value(DEATHS_GENDER_EN, gender)}"
-    pivot = mf.deaths_cause_pivot(dept_df, selected_causes, selected_years, president, value_col=col, dept_name=dept)
+    dept_df["_val"] = mf.deaths_age_gender_value(dept_df, gender, age_label)
+    pivot = mf.deaths_cause_pivot(dept_df, selected_causes, selected_years, president, value_col="_val", dept_name=dept)
     place = dept if dept != "All" else "Colombia"
     title = f"Deaths by cause — {place}" if gender == "Total" else f"Deaths by cause ({gender}) — {place}"
+    if age_label != "All ages":
+        title = f"{title} (age {age_label})"
     info = [title, "Year", "Deaths"]
 
     if comparing and not pivot.empty:
@@ -759,12 +766,7 @@ def _render_deaths_cause_compare() -> None:
         st.warning("No data for selected filters.")
         return
 
-    highlight = None
-    if len(pivot.columns) > 1:
-        with st.sidebar:
-            names = list(pivot.columns.astype(str))
-            choice = st.selectbox("Highlight variable:", ["—"] + names)
-            highlight = None if choice == "—" else choice
+    highlight = highlight_selectbox(pivot)
 
     if chart_type == "Bar" or len(pivot) == 1:
         fig = mc.bar_chart(pivot, {}, info, highlight=highlight)
