@@ -3,7 +3,7 @@ import pandas as pd
 from pages.helpers.macro import macro_charts as mc
 from pages.helpers.macro import macro_functions as mf
 from generalities.dictionaries import presidents, months
-from generalities.function import find_key_by_value, to_datatime, reshape_by_presidents, load_csv, BASE_DIR
+from generalities.function import find_key_by_value, to_datatime, reshape_by_presidents, load_csv, BASE_DIR, highlight_selectbox
 import generalities.inflation as gi
 
 CPI_15_PATH = BASE_DIR / "data/banco_republica/CPI/inflacion_15.csv"
@@ -110,9 +110,14 @@ def render_cpi(cpi_df: pd.DataFrame) -> None:
                     with st.sidebar:
                         show_all = st.checkbox("Show all years", value=False)
             else:
-                years = cpi_local.index.year.unique().astype(int)
+                year_set = set()
+                for name in selected_items:
+                    key = find_key_by_value(cfg["items_dict"], name)
+                    idf = to_datatime(load_csv(f"{cfg['base_path']}{key}.csv"), False)
+                    year_set |= set(idf[perspective_column].dropna().index.year.astype(int))
+                years = sorted(year_set, reverse=True)
                 with col4:
-                    fixed_value = st.selectbox("Year:", sorted(years, reverse=True))
+                    fixed_value = st.selectbox("Year:", years)
 
                 show_all = False
                 compare_pres = False
@@ -136,7 +141,7 @@ def render_cpi(cpi_df: pd.DataFrame) -> None:
             if compare_pres:
                 cpi_series, cpi_info = reshape_by_presidents(cpi_series, selected_presidents, cpi_info)
         else:
-            years = data_df.index.year.unique().astype(int)
+            years = data_df[perspective_column].dropna().index.year.unique().astype(int)
             with col4:
                 if president:
                     pres_years = [y for y in years if y in set(presidents[president])]
@@ -172,12 +177,7 @@ def render_cpi(cpi_df: pd.DataFrame) -> None:
         if multi_pres:
             cpi_series, cpi_info = reshape_by_presidents(cpi_series, selected_presidents, cpi_info)
 
-    highlight = None
-    if len(cpi_series.columns) > 1:
-        display_names = [str(col) for col in cpi_series.columns]
-        with st.sidebar:
-            highlight_choice = st.selectbox("Highlight variable:", ["—"] + display_names)
-            highlight = None if highlight_choice == "—" else highlight_choice
+    highlight = highlight_selectbox(cpi_series)
 
     if chart_type == "Bar" or len(cpi_series) == 1:
         fig = mc.bar_chart(cpi_series, {}, cpi_info, highlight=highlight)

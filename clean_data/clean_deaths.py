@@ -7,8 +7,8 @@ import pandas as pd
 from xlrd.biffh import XLRDError
 from generalities.function import norm
 
-src_dir = "../data/original/dane/deaths"
-out_dir = "../data/dane/deaths"
+src_dir = "./data/original/dane/deaths"
+out_dir = "./data/dane/deaths"
 
 CAUSE_RE = re.compile(r"^\d+\s")  # "001 Enfermedades..."
 

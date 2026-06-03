@@ -17,6 +17,14 @@ def get_valid_presidents(tmp_years: dict) -> list:
 def find_key_by_value(d: dict, value: str):
     return next((k for k, v in d.items() if v == value), None)
 
+def highlight_selectbox(df, display_names=None, label="Highlight variable:"):
+    if not isinstance(df, pd.DataFrame) or df.empty or len(df.columns) <= 1:
+        return None
+    names = display_names if display_names is not None else [str(c) for c in df.columns]
+    with st.sidebar:
+        choice = st.selectbox(label, ["—"] + names)
+    return None if choice == "—" else choice
+
 def cap_series(data: pd.DataFrame, limit: int = 6) -> pd.DataFrame:
     if isinstance(data, pd.DataFrame) and data.shape[1] > limit:
         st.session_state["chart_warning"] = f"Showing first {limit} of {data.shape[1]} series."
