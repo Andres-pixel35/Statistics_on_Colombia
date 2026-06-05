@@ -477,9 +477,7 @@ def deaths_gender_pivot(total_df: pd.DataFrame) -> tuple:
     return df, ["Deaths by gender", "Year", "Deaths"]
 
 def deaths_gender_cause_pivot(dept_df: pd.DataFrame, cause: str) -> tuple:
-    df = _dept_filter(dept_df, [], None)
-    df["cause"] = _cause_label(df["causa"])
-    df = df[df["cause"] == cause]
+    df = dept_df[dept_df["cause"] == cause]
     cols = {f"Total_{es}": en for es, en in DEATHS_GENDER_EN.items()}
     out = df.groupby("Fecha")[list(cols)].sum().astype(int).rename(columns=cols)
     out.index = out.index.astype(int)
@@ -532,9 +530,16 @@ def _cause_label(causa: pd.Series) -> pd.Series:
     stripped = causa.astype(str).str.replace(r"^\d+\s+", "", regex=True).str.replace(r"\s+", " ", regex=True).str.strip()
     return stripped.map(lambda s: CAUSE_EN.get(norm(s), s))
 
-def _dept_filter(dept_df: pd.DataFrame, years: list, president: str, dept_name: str = None) -> pd.DataFrame:
-    df = dept_df[~dept_df["departamento"].str.strip().str.lower().eq("total nacional")].copy()
+@st.cache_data
+def deaths_dept_prepared(path) -> pd.DataFrame:
+    df = load_csv(path)
+    df = df[~df["departamento"].str.strip().str.lower().eq("total nacional")].copy()
     df["Name"] = df["departamento"].str.split(n=1).str[1]
+    df["cause"] = _cause_label(df["causa"])
+    return df
+
+def _dept_filter(dept_df: pd.DataFrame, years: list, president: str, dept_name: str = None) -> pd.DataFrame:
+    df = dept_df
     if dept_name and dept_name != "All":
         df = df[df["Name"] == dept_name]
     if president:
@@ -554,12 +559,10 @@ def deaths_age_gender_value(df: pd.DataFrame, gender: str, age_label: str) -> pd
 
 def deaths_top_causes(dept_df: pd.DataFrame, years: list, dept_name: str, president: str, value_col: str = "total") -> pd.Series:
     df = _dept_filter(dept_df, years, president, dept_name)
-    df["cause"] = _cause_label(df["causa"])
     return df.groupby("cause")[value_col].sum().astype(int).nlargest(5)
 
 def deaths_cause_pivot(dept_df: pd.DataFrame, selected_causes: list, years: list, president: str, value_col: str = "total", dept_name: str = "All") -> pd.DataFrame:
     df = _dept_filter(dept_df, years, president, dept_name)
-    df["cause"] = _cause_label(df["causa"])
     df = df[df["cause"].isin(selected_causes)]
     pivot = (
         df.pivot_table(index="Fecha", columns="cause", values=value_col, aggfunc="sum")
@@ -571,4 +574,4 @@ def deaths_cause_pivot(dept_df: pd.DataFrame, selected_causes: list, years: list
     return pivot
 
 def deaths_cause_names(dept_df: pd.DataFrame) -> list:
-    return sorted(_cause_label(dept_df[~dept_df["departamento"].str.strip().str.lower().eq("total nacional")]["causa"]).unique())
+    return sorted(dept_df["cause"].unique())

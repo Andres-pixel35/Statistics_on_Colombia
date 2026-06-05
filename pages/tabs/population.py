@@ -545,13 +545,13 @@ def _render_deaths_breakdown(compare_by: str) -> None:
     gender_cause = None
     dept_df = None
     if compare_by == "Gender":
-        cause_names = mf.deaths_cause_names(load_csv(DEATHS_PATHS["dept_death"]))
+        cause_names = mf.deaths_cause_names(mf.deaths_dept_prepared(DEATHS_PATHS["dept_death"]))
         with st.sidebar:
             gender_cause = st.selectbox("Cause:", ["All causes"] + cause_names)
         if gender_cause == "All causes":
             df = load_csv(DEATHS_PATHS["total"])
         else:
-            dept_df = load_csv(DEATHS_PATHS["dept_death"])
+            dept_df = mf.deaths_dept_prepared(DEATHS_PATHS["dept_death"])
             df = dept_df
     else:
         df = load_csv(DEATHS_PATHS["area_age"])
@@ -618,20 +618,27 @@ def _deaths_dept_source():
     with st.sidebar:
         place = st.selectbox("Place:", ["Occurrence", "Residence"])
     path = DEATHS_PATHS["dept_death"] if place == "Occurrence" else DEATHS_PATHS["dept_residence"]
-    return load_csv(path)
+    return mf.deaths_dept_prepared(path)
 
 
 def _render_deaths_department() -> None:
     dept_df = _deaths_dept_source().rename(columns={"Fecha": "year"})
-    dept_df = dept_df[~dept_df["departamento"].str.strip().str.lower().eq("total nacional")]
 
     all_years = sorted(dept_df["year"].unique().astype(int).tolist(), reverse=True)
-    dept_names = sorted(dept_df["departamento"].str.split(n=1).str[1].dropna().unique())
+    dept_names = sorted(dept_df["Name"].dropna().unique())
     age_labels = list(dict.fromkeys(DEATHS_AGE_EN.values()))
+    valid_presidents = get_valid_presidents(all_years)
 
     with st.sidebar:
         chart_type = st.selectbox("Chart Type:", ["Map", "Line", "Bar"])
-        selected_years = st.multiselect("Year:", all_years)
+        selected_presidents = president_multiselect(valid_presidents)
+
+    comparing = len(selected_presidents) >= 2
+    president = selected_presidents[0] if len(selected_presidents) == 1 else None
+    year_opts = [y for y in all_years if y in presidents[president]] if president else all_years
+
+    with st.sidebar:
+        selected_years = [] if comparing else st.multiselect("Year:", year_opts)
 
     col1, col2, col3 = st.columns(3)
     selected_depts = []
@@ -647,11 +654,17 @@ def _render_deaths_department() -> None:
     col = "_val"
     noun = "Deaths" if gender == "Total" else gender
     scope = "all years" if not selected_years else ", ".join(map(str, sorted(selected_years)))
+    if president and not selected_years:
+        scope = president
     if age_label != "All ages":
         scope = f"{scope}, age {age_label}"
 
     if chart_type == "Map":
-        grouped = mf.births_department_data(dept_df, selected_years, col)
+        if comparing:
+            st.info("Map can't compare presidents — pick a single president or switch to Line/Bar.")
+            return
+        map_years = selected_years or ([y for y in all_years if y in presidents[president]] if president else [])
+        grouped = mf.births_department_data(dept_df, map_years, col)
         info = [f"{noun} by department — {scope}", "Department", noun]
         geojson = load_geojson(DEPT_GEOJSON_PATH)
         fig = mc.colombia_choropleth(grouped, geojson, DEPT_FEATURE_KEY, col, info)
@@ -663,15 +676,30 @@ def _render_deaths_department() -> None:
         return
 
     pivot = mf.births_geo_trend(dept_df, "departamento", selected_depts, selected_years, value_col=col)
+
+    if president:
+        pivot = pivot[pivot.index.isin(presidents[president])]
+
+    if comparing:
+        info = [f"{noun} trend by department", "Year", noun]
+        if not pivot.empty:
+            pivot, info = reshape_by_presidents(pivot, selected_presidents, info)
+        if pivot.empty:
+            st.warning("No data for selected filters.")
+            return
+        highlight = highlight_selectbox(pivot)
+        fig = mc.bar_chart(pivot, {}, info, highlight=highlight) if chart_type == "Bar" else mc.line_chart(pivot, {}, info, highlight=highlight)
+        mc.render_chart(fig)
+        return
+
     _render_geo_bar_line(pivot, chart_type, "department", scope, noun=noun)
 
 
 def _render_deaths_top_causes() -> None:
     dept_df = _deaths_dept_source()
-    no_nat = dept_df[~dept_df["departamento"].str.strip().str.lower().eq("total nacional")]
 
-    all_years = sorted(no_nat["Fecha"].unique().astype(int).tolist(), reverse=True)
-    dept_names = sorted(no_nat["departamento"].str.split(n=1).str[1].dropna().unique())
+    all_years = sorted(dept_df["Fecha"].unique().astype(int).tolist(), reverse=True)
+    dept_names = sorted(dept_df["Name"].dropna().unique())
     valid_presidents = get_valid_presidents(all_years)
     age_labels = list(dict.fromkeys(DEATHS_AGE_EN.values()))
 
@@ -712,10 +740,9 @@ def _render_deaths_top_causes() -> None:
 
 def _render_deaths_cause_compare() -> None:
     dept_df = _deaths_dept_source()
-    no_nat = dept_df[~dept_df["departamento"].str.strip().str.lower().eq("total nacional")]
 
-    all_years = sorted(no_nat["Fecha"].unique().astype(int).tolist(), reverse=True)
-    dept_names = sorted(no_nat["departamento"].str.split(n=1).str[1].dropna().unique())
+    all_years = sorted(dept_df["Fecha"].unique().astype(int).tolist(), reverse=True)
+    dept_names = sorted(dept_df["Name"].dropna().unique())
     valid_presidents = get_valid_presidents(all_years)
     cause_names = mf.deaths_cause_names(dept_df)
     age_labels = list(dict.fromkeys(DEATHS_AGE_EN.values()))
