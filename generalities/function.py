@@ -102,9 +102,3 @@ def norm(label: str) -> str:
     """Accent/case/space-insensitive key so 'Úlcera' and 'Ulcera' collapse to one cause."""
     text = unicodedata.normalize("NFKD", str(label)).encode("ascii", "ignore").decode()
     return re.sub(r"\s+", " ", text).strip().lower()
-
-def render_chart(fig):
-    st.plotly_chart(fig)
-    msg = st.session_state.pop("chart_warning", None)
-    if msg:
-        st.warning(msg)

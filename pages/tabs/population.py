@@ -131,7 +131,7 @@ def _render_population_tab(pop_df: pd.DataFrame) -> None:
 
     if comparing:
         data, info = reshape_by_presidents(full_series.to_frame(name=column), selected_presidents, info)
-        fig = mc.bar_chart(data, {}, info) if chart_type == "Bar" else mc.line_chart(data, {}, info)
+        fig = mc.line_or_bar(chart_type, data, info, bar_if_single=False)
         mc.render_chart(fig)
         st.caption(f"Source: {source}")
         return
@@ -169,10 +169,8 @@ def _render_population_tab(pop_df: pd.DataFrame) -> None:
             gauge_info = [f"{year} Population", ",.0f", "", " vs Prior Year"]
 
         fig = mc.indicator(data, full_series, reference, gauge_info)
-    elif chart_type == "Bar":
-        fig = mc.bar_chart(data, {}, info)
     else:
-        fig = mc.line_chart(data, {}, info)
+        fig = mc.line_or_bar(chart_type, data, info, bar_if_single=False)
 
     mc.render_chart(fig)
 
@@ -342,10 +340,7 @@ def _render_line_bar(migration_df, chart_type, all_years, valid_pres):
         st.warning("No data for selected filters.")
         st.stop()
 
-    if chart_type == "Bar" or force_bar or len(pivot) == 1:
-        fig = mc.bar_chart(pivot, {}, info, highlight=highlight)
-    else:
-        fig = mc.line_chart(pivot, {}, info, highlight=highlight)
+    fig = mc.line_or_bar(chart_type, pivot, info, highlight=highlight, force_bar=force_bar)
 
     mc.render_chart(fig)
 
@@ -435,10 +430,7 @@ def _render_births_breakdown(compare_by: str) -> None:
 
     highlight = highlight_selectbox(pivot)
 
-    if chart_type == "Bar" or len(pivot) == 1:
-        fig = mc.bar_chart(pivot, {}, info, highlight=highlight)
-    else:
-        fig = mc.line_chart(pivot, {}, info, highlight=highlight)
+    fig = mc.line_or_bar(chart_type, pivot, info, highlight=highlight)
 
     mc.render_chart(fig)
 
@@ -606,10 +598,7 @@ def _render_deaths_breakdown(compare_by: str) -> None:
 
     highlight = highlight_selectbox(pivot)
 
-    if chart_type == "Bar" or len(pivot) == 1:
-        fig = mc.bar_chart(pivot, {}, info, highlight=highlight)
-    else:
-        fig = mc.line_chart(pivot, {}, info, highlight=highlight)
+    fig = mc.line_or_bar(chart_type, pivot, info, highlight=highlight)
 
     mc.render_chart(fig)
 
@@ -688,7 +677,7 @@ def _render_deaths_department() -> None:
             st.warning("No data for selected filters.")
             return
         highlight = highlight_selectbox(pivot)
-        fig = mc.bar_chart(pivot, {}, info, highlight=highlight) if chart_type == "Bar" else mc.line_chart(pivot, {}, info, highlight=highlight)
+        fig = mc.line_or_bar(chart_type, pivot, info, highlight=highlight, bar_if_single=False)
         mc.render_chart(fig)
         return
 
@@ -795,9 +784,6 @@ def _render_deaths_cause_compare() -> None:
 
     highlight = highlight_selectbox(pivot)
 
-    if chart_type == "Bar" or len(pivot) == 1:
-        fig = mc.bar_chart(pivot, {}, info, highlight=highlight)
-    else:
-        fig = mc.line_chart(pivot, {}, info, highlight=highlight)
+    fig = mc.line_or_bar(chart_type, pivot, info, highlight=highlight)
 
     mc.render_chart(fig)
