@@ -25,7 +25,7 @@ def highlight_selectbox(df, display_names=None, label="Highlight variable:"):
         choice = st.selectbox(label, ["—"] + names)
     return None if choice == "—" else choice
 
-def cap_series(data: pd.DataFrame, limit: int = 6) -> pd.DataFrame:
+def cap_series(data: pd.DataFrame, limit: int = 10) -> pd.DataFrame:
     if isinstance(data, pd.DataFrame) and data.shape[1] > limit:
         st.session_state["chart_warning"] = f"Showing first {limit} of {data.shape[1]} series."
         return data.iloc[:, :limit]
