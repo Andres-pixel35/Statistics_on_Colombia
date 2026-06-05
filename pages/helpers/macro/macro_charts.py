@@ -3,7 +3,7 @@ import plotly.graph_objects as go
 import pandas as pd
 import streamlit as st
 from pages.helpers.macro import macro_functions as mf
-from generalities.function import cap_series, render_chart
+from generalities.function import cap_series
 
 def line_chart(data: pd.DataFrame, labels: dict, info: list, highlight: str = None):
     data = cap_series(data)
@@ -126,6 +126,16 @@ def bar_chart(data: pd.DataFrame, labels: dict, info: list, highlight: str = Non
     )
     return fig
 
+
+def line_or_bar(chart_type, data, info, labels=None, highlight=None,
+                force_bar=False, bar_if_single=True):
+
+    if chart_type == "Bar" or force_bar or (bar_if_single and len(data) == 1):
+        return bar_chart(data, labels or {}, info, highlight=highlight)
+
+    return line_chart(data, labels or {}, info, highlight=highlight)
+
+
 def indicator(data: pd.DataFrame, full_series: pd.Series, reference: float, info: list):
     title, valueformat, suffix, delta_suffix = info
 
@@ -213,7 +223,7 @@ def ranked_bar_chart(series: pd.Series, info: list):
         yaxis_title_font=dict(size=15),
     )
     fig.update_xaxes(
-        showgrid=True, gridwidth=0.5, gridcolor="rgba(255, 255, 255, 0.1)",
+        showgrid=False, gridwidth=0.5, gridcolor="rgba(255, 255, 255, 0.1)",
         tickfont=dict(size=15), tickformat=",.0f",
     )
     fig.update_yaxes(showgrid=False, tickfont=dict(size=13), automargin=True)
@@ -335,3 +345,10 @@ def gdp_growth(df: pd.DataFrame, year: list, president: str, index: int, quarter
 
         fig.update_layout(margin=dict(t=80, b=20, l=30, r=30), height=400)    
     return fig
+
+
+def render_chart(fig):
+    st.plotly_chart(fig)
+    msg = st.session_state.pop("chart_warning", None)
+    if msg:
+        st.warning(msg)
