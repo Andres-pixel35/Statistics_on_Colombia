@@ -114,10 +114,7 @@ def generalities_spend_product(df: pd.DataFrame, terms: dict, variable: int|list
 
     highlight = highlight_selectbox(gdp_series, [terms.get(c, c) for c in gdp_series.columns] if isinstance(gdp_series, pd.DataFrame) else None)
 
-    if chart_type == "Bar" or len(gdp_series) == 1:
-        fig = mc.bar_chart(gdp_series, labels_arg, info, highlight=highlight)
-    else:
-        fig = mc.line_chart(gdp_series, labels_arg, info, highlight=highlight)
+    fig = mc.line_or_bar(chart_type, gdp_series, info, labels=labels_arg, highlight=highlight)
 
     mc.render_chart(fig)
     st.caption(f"{info[3]}, base year 2015")

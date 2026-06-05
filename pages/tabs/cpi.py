@@ -179,10 +179,7 @@ def render_cpi(cpi_df: pd.DataFrame) -> None:
 
     highlight = highlight_selectbox(cpi_series)
 
-    if chart_type == "Bar" or len(cpi_series) == 1:
-        fig = mc.bar_chart(cpi_series, {}, cpi_info, highlight=highlight)
-    else:
-        fig = mc.line_chart(cpi_series, {}, cpi_info, highlight=highlight)
+    fig = mc.line_or_bar(chart_type, cpi_series, cpi_info, highlight=highlight)
 
     mc.render_chart(fig)
     st.caption("Base 2018")
