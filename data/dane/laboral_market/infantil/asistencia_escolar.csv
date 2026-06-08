@@ -1,73 +1,73 @@
-Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
-2022,Total nacional,Total,Población de 5 a 17 años,IV,10730.01
-2023,Total nacional,Total,Población de 5 a 17 años,IV,10662.12
-2024,Total nacional,Total,Población de 5 a 17 años,IV,10830.539
-2025,Total nacional,Total,Población de 5 a 17 años,IV,10913.032
-2022,Total nacional,Total,Asiste,IV,9703.589
-2023,Total nacional,Total,Asiste,IV,9700.219
-2024,Total nacional,Total,Asiste,IV,9877.139
-2025,Total nacional,Total,Asiste,IV,10048.592
-2022,Total nacional,Total,No asiste,IV,1026.421
-2023,Total nacional,Total,No asiste,IV,961.901
-2024,Total nacional,Total,No asiste,IV,953.4
-2025,Total nacional,Total,No asiste,IV,864.441
-2022,Total nacional,Total,Población de 5 a 17 años que trabaja,IV,369.383
-2023,Total nacional,Total,Población de 5 a 17 años que trabaja,IV,310.379
-2024,Total nacional,Total,Población de 5 a 17 años que trabaja,IV,310.579
-2025,Total nacional,Total,Población de 5 a 17 años que trabaja,IV,301.52
-2022,Total nacional,Total,Asiste,IV,210.07
-2023,Total nacional,Total,Asiste,IV,161.848
-2024,Total nacional,Total,Asiste,IV,167.71
-2025,Total nacional,Total,Asiste,IV,149.214
-2022,Total nacional,Total,No asiste,IV,159.313
-2023,Total nacional,Total,No asiste,IV,148.531
-2024,Total nacional,Total,No asiste,IV,142.869
-2025,Total nacional,Total,No asiste,IV,152.307
-2022,Total cabeceras,Total,Población de 5 a 17 años,IV,7825.201
-2023,Total cabeceras,Total,Población de 5 a 17 años,IV,7849.076
-2024,Total cabeceras,Total,Población de 5 a 17 años,IV,7955.257
-2025,Total cabeceras,Total,Población de 5 a 17 años,IV,7938.331
-2022,Total cabeceras,Total,Asiste,IV,7164.377
-2023,Total cabeceras,Total,Asiste,IV,7262.847
-2024,Total cabeceras,Total,Asiste,IV,7326.323
-2025,Total cabeceras,Total,Asiste,IV,7398.103
-2022,Total cabeceras,Total,No asiste,IV,660.824
-2023,Total cabeceras,Total,No asiste,IV,586.229
-2024,Total cabeceras,Total,No asiste,IV,628.933
-2025,Total cabeceras,Total,No asiste,IV,540.229
-2022,Total cabeceras,Total,Población de 5 a 17 años que trabaja,IV,163.844
-2023,Total cabeceras,Total,Población de 5 a 17 años que trabaja,IV,132.527
-2024,Total cabeceras,Total,Población de 5 a 17 años que trabaja,IV,136.75
-2025,Total cabeceras,Total,Población de 5 a 17 años que trabaja,IV,145.863
-2022,Total cabeceras,Total,Asiste,IV,86.634
-2023,Total cabeceras,Total,Asiste,IV,81.004
-2024,Total cabeceras,Total,Asiste,IV,73.362
-2025,Total cabeceras,Total,Asiste,IV,75.213
-2022,Total cabeceras,Total,No asiste,IV,77.211
-2023,Total cabeceras,Total,No asiste,IV,51.524
-2024,Total cabeceras,Total,No asiste,IV,63.388
-2025,Total cabeceras,Total,No asiste,IV,70.65
-2022,Total centros poblados y rural disperso,Total,Población de 5 a 17 años,IV,2904.809
-2023,Total centros poblados y rural disperso,Total,Población de 5 a 17 años,IV,2813.043
-2024,Total centros poblados y rural disperso,Total,Población de 5 a 17 años,IV,2875.283
-2025,Total centros poblados y rural disperso,Total,Población de 5 a 17 años,IV,2974.701
-2022,Total centros poblados y rural disperso,Total,Asiste,IV,2539.212
-2023,Total centros poblados y rural disperso,Total,Asiste,IV,2437.372
-2024,Total centros poblados y rural disperso,Total,Asiste,IV,2550.816
-2025,Total centros poblados y rural disperso,Total,Asiste,IV,2650.489
-2022,Total centros poblados y rural disperso,Total,No asiste,IV,365.597
-2023,Total centros poblados y rural disperso,Total,No asiste,IV,375.671
-2024,Total centros poblados y rural disperso,Total,No asiste,IV,324.467
-2025,Total centros poblados y rural disperso,Total,No asiste,IV,324.212
-2022,Total centros poblados y rural disperso,Total,Población de 5 a 17 años que trabaja,IV,205.538
-2023,Total centros poblados y rural disperso,Total,Población de 5 a 17 años que trabaja,IV,177.852
-2024,Total centros poblados y rural disperso,Total,Población de 5 a 17 años que trabaja,IV,173.829
-2025,Total centros poblados y rural disperso,Total,Población de 5 a 17 años que trabaja,IV,155.657
-2022,Total centros poblados y rural disperso,Total,Asiste,IV,123.436
-2023,Total centros poblados y rural disperso,Total,Asiste,IV,80.844
-2024,Total centros poblados y rural disperso,Total,Asiste,IV,94.348
-2025,Total centros poblados y rural disperso,Total,Asiste,IV,74.0
-2022,Total centros poblados y rural disperso,Total,No asiste,IV,82.102
-2023,Total centros poblados y rural disperso,Total,No asiste,IV,97.008
-2024,Total centros poblados y rural disperso,Total,No asiste,IV,79.481
-2025,Total centros poblados y rural disperso,Total,No asiste,IV,81.657
+Fecha,Perspectiva,Concepto,Valor
+2022,Total nacional,Población de 5 a 17 años,10730.01
+2023,Total nacional,Población de 5 a 17 años,10662.12
+2024,Total nacional,Población de 5 a 17 años,10830.539
+2025,Total nacional,Población de 5 a 17 años,10913.032
+2022,Total nacional,Asiste,9703.589
+2023,Total nacional,Asiste,9700.219
+2024,Total nacional,Asiste,9877.139
+2025,Total nacional,Asiste,10048.592
+2022,Total nacional,No asiste,1026.421
+2023,Total nacional,No asiste,961.901
+2024,Total nacional,No asiste,953.4
+2025,Total nacional,No asiste,864.441
+2022,Total nacional,Población de 5 a 17 años que trabaja,369.383
+2023,Total nacional,Población de 5 a 17 años que trabaja,310.379
+2024,Total nacional,Población de 5 a 17 años que trabaja,310.579
+2025,Total nacional,Población de 5 a 17 años que trabaja,301.52
+2022,Total nacional,Asiste,210.07
+2023,Total nacional,Asiste,161.848
+2024,Total nacional,Asiste,167.71
+2025,Total nacional,Asiste,149.214
+2022,Total nacional,No asiste,159.313
+2023,Total nacional,No asiste,148.531
+2024,Total nacional,No asiste,142.869
+2025,Total nacional,No asiste,152.307
+2022,Total cabeceras,Población de 5 a 17 años,7825.201
+2023,Total cabeceras,Población de 5 a 17 años,7849.076
+2024,Total cabeceras,Población de 5 a 17 años,7955.257
+2025,Total cabeceras,Población de 5 a 17 años,7938.331
+2022,Total cabeceras,Asiste,7164.377
+2023,Total cabeceras,Asiste,7262.847
+2024,Total cabeceras,Asiste,7326.323
+2025,Total cabeceras,Asiste,7398.103
+2022,Total cabeceras,No asiste,660.824
+2023,Total cabeceras,No asiste,586.229
+2024,Total cabeceras,No asiste,628.933
+2025,Total cabeceras,No asiste,540.229
+2022,Total cabeceras,Población de 5 a 17 años que trabaja,163.844
+2023,Total cabeceras,Población de 5 a 17 años que trabaja,132.527
+2024,Total cabeceras,Población de 5 a 17 años que trabaja,136.75
+2025,Total cabeceras,Población de 5 a 17 años que trabaja,145.863
+2022,Total cabeceras,Asiste,86.634
+2023,Total cabeceras,Asiste,81.004
+2024,Total cabeceras,Asiste,73.362
+2025,Total cabeceras,Asiste,75.213
+2022,Total cabeceras,No asiste,77.211
+2023,Total cabeceras,No asiste,51.524
+2024,Total cabeceras,No asiste,63.388
+2025,Total cabeceras,No asiste,70.65
+2022,Total centros poblados y rural disperso,Población de 5 a 17 años,2904.809
+2023,Total centros poblados y rural disperso,Población de 5 a 17 años,2813.043
+2024,Total centros poblados y rural disperso,Población de 5 a 17 años,2875.283
+2025,Total centros poblados y rural disperso,Población de 5 a 17 años,2974.701
+2022,Total centros poblados y rural disperso,Asiste,2539.212
+2023,Total centros poblados y rural disperso,Asiste,2437.372
+2024,Total centros poblados y rural disperso,Asiste,2550.816
+2025,Total centros poblados y rural disperso,Asiste,2650.489
+2022,Total centros poblados y rural disperso,No asiste,365.597
+2023,Total centros poblados y rural disperso,No asiste,375.671
+2024,Total centros poblados y rural disperso,No asiste,324.467
+2025,Total centros poblados y rural disperso,No asiste,324.212
+2022,Total centros poblados y rural disperso,Población de 5 a 17 años que trabaja,205.538
+2023,Total centros poblados y rural disperso,Población de 5 a 17 años que trabaja,177.852
+2024,Total centros poblados y rural disperso,Población de 5 a 17 años que trabaja,173.829
+2025,Total centros poblados y rural disperso,Población de 5 a 17 años que trabaja,155.657
+2022,Total centros poblados y rural disperso,Asiste,123.436
+2023,Total centros poblados y rural disperso,Asiste,80.844
+2024,Total centros poblados y rural disperso,Asiste,94.348
+2025,Total centros poblados y rural disperso,Asiste,74.0
+2022,Total centros poblados y rural disperso,No asiste,82.102
+2023,Total centros poblados y rural disperso,No asiste,97.008
+2024,Total centros poblados y rural disperso,No asiste,79.481
+2025,Total centros poblados y rural disperso,No asiste,81.657

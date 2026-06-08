@@ -12,7 +12,7 @@ DEATHS_COMPARE = ["Gender", "Age Group", "Area", "Department", "Cause (Top 5)", 
 GENDER_EN = {"Hombres": "Men", "Mujeres": "Women", "Indeterminado": "Undetermined"}
 
 AREA_EN = {
-    "Cabecera municipal": "Urban center",
+    "Cabecera municipal": "Municipal seat",
     "Centro poblado":     "Populated center",
     "Rural disperso":     "Dispersed rural",
     "Sin información":     "Unknown",
