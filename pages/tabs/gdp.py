@@ -4,7 +4,7 @@ from pages.helpers.macro import macro_functions as mf
 from pages.helpers.macro import macro_charts as mc
 import generalities.gdp_spend as t
 from generalities.gdp_production import production_summarize_terms as p
-from generalities.gdp_income import income_summarize_terms as i
+from generalities.gdp_income import income_summarize_terms as income
 from generalities.dictionaries import presidents
 from generalities.function import get_valid_presidents, find_key_by_value, show_all_years, president_multiselect, reshape_by_presidents, load_csv, BASE_DIR
 
@@ -64,37 +64,94 @@ def render_gdp(gdp_df: pd.DataFrame) -> None:
 
             variable = -1
 
-            gdp_info = ["Real GDP per Year", "Year", "Billions (COP)", "Current Prices"]
-            mf.generalities_spend_product(gdp_local, i, variable, gdp_info)
+            gdp_info = ["GDP per Year", "Year", "Billions (COP)", "Current Prices"]
+            mf.generalities_spend_product(gdp_local, income, variable, gdp_info)
     else:
         with col2:
-            perspective = st.selectbox("Perspective:", ["Annual", "Annual per Quarter"])
-
-        if perspective == "Annual":
-            gdp_local = load_csv(ANNUAL_GROWTH_PATH, dtype=str).copy()
-            quarter = None
-        else:
-            gdp_local = load_csv(QUARTER_GROWTH_PATH, dtype=str).copy()
-            quarter = "I"
+            source = st.selectbox("Source:", ["Spend", "Production", "Income"])
         with col3:
-            years = gdp_local[gdp_local.columns[0]].str.split("-").str[0].unique()
-
-            tmp_years = years.astype(int)
-
-            valid_presidents = get_valid_presidents(tmp_years)
-
-            selected_presidents = president_multiselect(valid_presidents)
-
-        comparing = len(selected_presidents) >= 2
-        president = selected_presidents[0] if len(selected_presidents) == 1 else None
-
-        if comparing and quarter is not None:
-            st.info("President comparison is only available in Annual mode.")
-            comparing = False
-            president = selected_presidents[0]
+            growth_type = st.selectbox("Growth:", ["Annual", "Annual per Quarter", "Quarter over Quarter"])
 
         with st.sidebar:
             st.title("Filters")
+
+            if source == "Spend":
+                category = st.selectbox("Category:", t.spend_categories.values())
+                filename = find_key_by_value(t.spend_categories, category)
+                terms = t.spend_terms_map[filename]
+            elif source == "Production":
+                terms = p
+            else:
+                terms = income
+
+            var_labels = list(terms.values())
+            default = var_labels.index("Gross Domestic Product") if "Gross Domestic Product" in var_labels else 0
+            var_label = st.selectbox("Variable:", var_labels, index=default)
+            chart_type = st.selectbox("Chart:", ["Line", "Bar"])
+
+        if source == "Spend":
+            level_df = gdp_df if filename == "summarize" else load_csv(f"{SPEND_BASE_PATH}{filename}.csv", dtype=str)
+        elif source == "Production":
+            level_df = load_csv(PRODUCTION_PATH, dtype=str)
+        else:
+            level_df = load_csv(INCOME_PATH, dtype=str)
+
+        concepto = find_key_by_value(terms, var_label)
+
+        is_total  = concepto == "Producto Interno Bruto"
+        use_banco = is_total and source in ("Spend", "Production")
+        nominal   = source == "Income"
+        title     = f"{'' if nominal else 'Real '}{var_label} Growth"
+
+        if growth_type == "Quarter over Quarter":
+            qoq = mf.quarter_over_quarter(level_df, concepto)
+            labels = list(qoq.index)
+
+            with st.sidebar:
+                start = st.selectbox("From:", labels, index=len(labels) - 20)
+                end   = st.selectbox("To:", labels, index=len(labels) - 1)
+
+            i, j = labels.index(start), labels.index(end)
+            if i > j:
+                i, j = j, i
+            window = qoq.iloc[i:j + 1]
+
+            info = [f"Quarter-over-Quarter {title}", "Quarter", "Growth (%)"]
+            fig = mc.line_or_bar(chart_type, window, info)
+            mc.render_chart(fig)
+            st.caption("Source: DANE")
+            if nominal:
+                st.caption("Current prices (nominal)")
+            return
+
+        if growth_type == "Annual":
+            quarter = None
+            gdp_local = load_csv(ANNUAL_GROWTH_PATH, dtype=str).copy() if use_banco \
+                        else mf.variable_growth(level_df, concepto, "annual")
+        else:
+            quarter = "I"
+            gdp_local = load_csv(QUARTER_GROWTH_PATH, dtype=str).copy() if use_banco \
+                        else mf.variable_growth(level_df, concepto, "quarter")
+
+        years = gdp_local[gdp_local.columns[0]].str.split("-").str[0].unique()
+
+        tmp_years = years.astype(int)
+
+        valid_presidents = get_valid_presidents(tmp_years)
+
+        comparing = False
+        president = None
+
+        with st.sidebar:
+            selected_presidents = president_multiselect(valid_presidents)
+
+            comparing = len(selected_presidents) >= 2
+            president = selected_presidents[0] if len(selected_presidents) == 1 else None
+
+            if comparing and quarter is not None:
+                st.info("President comparison is only available in Annual mode.")
+                comparing = False
+                president = selected_presidents[0]
 
             if quarter is not None:
                 quarter = st.selectbox("Quarter:", ["I", "II", "III", "IV"])
@@ -125,12 +182,15 @@ def render_gdp(gdp_df: pd.DataFrame) -> None:
             growth["Growth"] = growth["Growth"].astype(float)
             growth, growth_info = reshape_by_presidents(
                 growth[["Growth"]], selected_presidents,
-                ["Real Annual GDP Growth", "Year", "Growth (%)"],
+                [title, "Year", "Growth (%)"],
             )
-            fig = mc.line_chart(growth, {}, growth_info)
+            fig = mc.line_or_bar(chart_type, growth, growth_info)
         else:
-            fig = mc.gdp_growth(gdp_local, choice_year, president, 1, quarter)
+            fig = mc.gdp_growth(gdp_local, choice_year, president, 1, quarter, title, chart_type)
 
         mc.render_chart(fig)
-        st.caption("Spliced series, base 2015")
+        if use_banco:
+            st.caption("Spliced series, base 2015")
         st.caption("Source: DANE")
+        if nominal:
+            st.caption("Current prices (nominal)")
