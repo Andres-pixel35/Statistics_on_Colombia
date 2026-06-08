@@ -1,13 +1,34 @@
-# Statistics on Colombia (in progress)
+# Statistics on Colombia
 
-Statistics on Colombia (provisional name) is a open source project where I intend to show in a simple and interactive way several statistics about colombia. Such as (but not limited to): GDP, CPI, unemployment rate, debt... 
+> 🚧 **Work in progress.** This project is under active development — features, data, and structure may change.
 
-You can give a look to its current state [here](https://statoncolombia.streamlit.app/).
+**Statistics on Colombia** (provisional name) is an open-source project that presents Colombian
+macroeconomic statistics in a simple, interactive way — GDP, CPI (inflation), and population
+(births, deaths, and migration), with labor-market and unemployment indicators in progress.
 
-You may also check its [Instagaram account](https://www.instagram.com/statisticscolombia/)
-I will use strealit as the host for the app and the charts, and Python and pandas to manipulate the data. 
+## Live demo
 
-The project is still in progress, thus several thing surely will change. By now and until I finish this project it will be available only in **English**, I will create a Spanish version once I finished the project though.
+- **App:** https://statoncolombia.streamlit.app/
+- **Instagram:** https://www.instagram.com/statisticscolombia/
 
-**Want** to contact me for anything **related** to this project? 
-Please do it through the following email: statistics-colombia@proton.me
+## Status
+
+The project is not finished yet, so several things will still change. Until it is complete it is
+available in **English only**; a Spanish version is planned once the project is finished.
+
+## Tech stack
+
+- **Streamlit** — hosts the app and renders the interactive charts
+- **Python** + **pandas** — data cleaning and manipulation
+- **Plotly** — charting
+
+## Data sources
+
+- **DANE** — Colombia's National Administrative Department of Statistics
+- **Banco de la República** — Colombia's central bank
+- **World Bank** — net migration
+- **Migración Colombia** — inbound/outbound travelers
+
+## Contact
+
+Questions or anything related to this project? Reach me at **statistics-colombia@proton.me**.

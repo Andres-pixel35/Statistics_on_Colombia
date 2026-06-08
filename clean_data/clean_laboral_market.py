@@ -1,5 +1,6 @@
 import os
 import re
+import openpyxl
 import pandas as pd
 from generalities.function import norm
 
@@ -40,6 +41,22 @@ FILE_SEXO = {("departamentos.xls", 3): "Hombres",
 def read_sheet(path, sheet_idx):
     engine = "openpyxl" if path.lower().endswith(".xlsx") else "xlrd"
     return pd.read_excel(path, sheet_name=sheet_idx, header=None, engine=engine)
+
+
+def read_bold(path, sheet_idx):
+    """0-based row indices whose col-0 cell is bold (group headers).
+
+    Only .xlsx carries readable formatting (xlrd 2.x drops it); the .xls files
+    are flat, so they return an empty set and gain no grouping.
+    """
+    if not path.lower().endswith(".xlsx"):
+        return frozenset()
+    wb = openpyxl.load_workbook(path, data_only=True)
+    ws = wb.worksheets[sheet_idx]
+    bold = {r for r in range(ws.max_row)
+            if ws.cell(row=r + 1, column=1).font.bold
+            and ws.cell(row=r + 1, column=1).value not in (None, "")}
+    return bold
 
 
 def is_year(v):
@@ -135,7 +152,7 @@ def classify(df, H):
     return H + 1, {}
 
 
-def parse_sheet(df, dim, default_sexo="Total"):
+def parse_sheet(df, dim, default_sexo="Total", bold_rows=frozenset()):
     anchors = [r for r in range(len(df)) if norm(df.iloc[r, 0]) == "concepto"]
     titles = {a: title_above(df, a) for a in anchors}
     records = []
@@ -148,15 +165,16 @@ def parse_sheet(df, dim, default_sexo="Total"):
             continue
         end = titles_index(anchors, titles, i, df)
 
-        def emit(row, concept, sexo):
+        def emit(row, concept, sexo, grupo):
             for c, (year, periodo) in colmap.items():
                 num = pd.to_numeric(df.iloc[row, c], errors="coerce")
                 if pd.notna(num):
                     records.append({"Fecha": year, dim: perspectiva, "Sexo": sexo,
-                                    "Concepto": concept, "Periodo": periodo,
-                                    "Valor": float(num)})
+                                    "Grupo": grupo, "Concepto": concept,
+                                    "Periodo": periodo, "Valor": float(num)})
 
         sexo = title_sexo or default_sexo
+        group = None  # bold formality header (Población ocupada / Formal / Informal)
         headline = None  # first normal concept of the block (e.g. 'Población ocupada')
         for r in range(data_start, end):
             c0 = df.iloc[r, 0]
@@ -168,16 +186,18 @@ def parse_sheet(df, dim, default_sexo="Total"):
             if norm(label) in GENDER:  # nested gender sub-header (valued or not)
                 sexo = GENDER[norm(label)]
                 if headline is not None and any(is_num(df.iloc[r, c]) for c in colmap):
-                    emit(r, headline, sexo)  # valued header = that gender's headline total
+                    emit(r, headline, sexo, group)  # valued header = gender's headline total
                 continue
+            if r in bold_rows:  # bold concept = group header for the rows below it
+                group = label
             if not any(is_num(df.iloc[r, c]) for c in colmap):
                 continue
             if headline is None:
                 headline = label
-            emit(r, label, sexo)
+            emit(r, label, sexo, group)
 
-    return pd.DataFrame(records, columns=["Fecha", dim, "Sexo", "Concepto",
-                                          "Periodo", "Valor"])
+    return pd.DataFrame(records, columns=["Fecha", dim, "Sexo", "Grupo",
+                                          "Concepto", "Periodo", "Valor"])
 
 
 def titles_index(anchors, titles, i, df):
@@ -192,6 +212,23 @@ def titles_index(anchors, titles, i, df):
     return len(df)
 
 
+def drop_dead_columns(out):
+    """Drop Grupo unless it disambiguates, then drop any single-value column.
+
+    Grupo is kept only when some Concepto repeats under >=2 distinct groups
+    (the real ambiguity it solves); flat sheets lose it. Sexo/Periodo (and a
+    surviving constant Grupo) are dropped when they carry a single value.
+    """
+    distinct_groups = out.groupby("Concepto")["Grupo"].nunique(dropna=True)
+    if (distinct_groups >= 2).any():
+        out["Grupo"] = out["Grupo"].fillna("")
+    else:
+        out = out.drop(columns="Grupo")
+    dead = [c for c in ("Sexo", "Grupo", "Periodo")
+            if c in out.columns and out[c].nunique(dropna=False) <= 1]
+    return out.drop(columns=dead)
+
+
 def main():
     total_csv = 0
     for cfg in FILES:
@@ -201,7 +238,8 @@ def main():
         for idx, name in cfg["sheets"].items():
             df = read_sheet(path, idx)
             default_sexo = FILE_SEXO.get((cfg["file"], idx), "Total")
-            out = parse_sheet(df, cfg["dim"], default_sexo)
+            out = parse_sheet(df, cfg["dim"], default_sexo, read_bold(path, idx))
+            out = drop_dead_columns(out)
             out.to_csv(os.path.join(folder, name + ".csv"), index=False)
             total_csv += 1
             print(f"{cfg['folder']}/{name}.csv: {len(out)} rows")
