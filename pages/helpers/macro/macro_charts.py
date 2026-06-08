@@ -258,18 +258,19 @@ def colombia_choropleth(data: pd.DataFrame, geojson: dict, feature_key: str, col
     )
     return fig
 
-def gdp_growth(df: pd.DataFrame, year: list, president: str, index: int, quarter: str|None):
+def gdp_growth(df: pd.DataFrame, year: list, president: str, index: int, quarter: str|None, title: str = "Real Annual GDP Growth", chart_type: str = "Line"):
     df, df_local = mf.clean_annual_growth(df, year, president, index, quarter)
     if len(df_local) > 1:
-        fig = px.line(df_local, labels={"value": "Growth (%)", "Fecha": "Year"})
+        plot = px.bar if chart_type == "Bar" else px.line
+        fig = plot(df_local, labels={"value": "Growth (%)", "Fecha": "Year"})
 
         fig.update_layout(
 
             height=600,
 
             title={
-                "text": "Real Annual GDP Growth",
-                "font": {"size": 25}, 
+                "text": title,
+                "font": {"size": 25},
                 "x": 0,            
                 "xanchor": "left"
             },
@@ -324,7 +325,7 @@ def gdp_growth(df: pd.DataFrame, year: list, president: str, index: int, quarter
                 "valueformat": ".2f",
                 "suffix": " vs Median" 
             },
-            title = {"text": f"<b>{year[0]}-{quarter} GDP Growth</b>", "font": {"size": 24}},
+            title = {"text": f"<b>{year[0]}-{quarter} {title}</b>", "font": {"size": 24}},
             gauge = {
                 "axis": {
                     "range": [min_growth, max_growth],

@@ -373,8 +373,12 @@ def _render_births_tab() -> None:
 
 
 def _render_births_breakdown(compare_by: str) -> None:
+    age_df = None
     if compare_by == "Gender":
         df = load_csv(BIRTHS_PATHS["total"])
+        age_df = load_csv(BIRTHS_PATHS["age"])
+        present = [AGE_EN.get(a, a) for a in age_df["grupo_edad"].unique()]
+        age_opts = ["All ages"] + [v for v in AGE_EN.values() if v in present]
     elif compare_by == "Mother Age":
         df = load_csv(BIRTHS_PATHS["age"])
     else:  # Education
@@ -392,20 +396,30 @@ def _render_births_breakdown(compare_by: str) -> None:
     year_opts = [y for y in years if y in presidents[president]] if president else years
 
     age_label = None
+    gender_age = "All ages"
     if compare_by == "Education":
         present = [AGE_EN.get(a, a) for a in df["grupo_edad"].unique()]
         age_opts = ["All ages"] + [v for v in AGE_EN.values() if v in present]
         with st.sidebar:
             age_label = st.selectbox("Mother age:", age_opts)
+    elif compare_by == "Gender":
+        with st.sidebar:
+            gender_age = st.selectbox("Mother age:", age_opts)
 
     with st.sidebar:
         selected_years = [] if comparing else st.multiselect("Year:", year_opts)
 
     if compare_by == "Gender":
-        pivot, info = mf.births_gender_pivot(df)
+        if gender_age == "All ages":
+            pivot, info = mf.births_gender_pivot(df)
+        else:
+            pivot, info = mf.births_gender_age_pivot(age_df, gender_age)
     elif compare_by == "Mother Age":
-        pivot, info = mf.births_age_pivot(df)
-        with st.sidebar:
+        c1, c2 = st.columns(2)
+        with c1:
+            gender = st.selectbox("Gender:", ["Total", "Boys", "Girls"])
+        pivot, info = mf.births_age_pivot(df, gender)
+        with c2:
             chosen = st.multiselect("Age groups:", list(pivot.columns))
         if chosen:
             pivot = pivot[chosen]
@@ -536,6 +550,7 @@ def _render_deaths_breakdown(compare_by: str) -> None:
 
     gender_cause = None
     dept_df = None
+    age_cause = age_gender = age_col3 = None
     if compare_by == "Gender":
         cause_names = mf.deaths_cause_names(mf.deaths_dept_prepared(DEATHS_PATHS["dept_death"]))
         with st.sidebar:
@@ -545,6 +560,17 @@ def _render_deaths_breakdown(compare_by: str) -> None:
         else:
             dept_df = mf.deaths_dept_prepared(DEATHS_PATHS["dept_death"])
             df = dept_df
+    elif compare_by == "Age Group":
+        cause_names = mf.deaths_cause_names(mf.deaths_dept_prepared(DEATHS_PATHS["dept_death"]))
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            age_gender = st.selectbox("Gender:", ["Total", "Men", "Women"])
+        with col2:
+            age_cause = st.selectbox("Cause:", ["All causes"] + cause_names)
+        if age_cause == "All causes":
+            df = load_csv(DEATHS_PATHS["area_age"])
+        else:
+            df = mf.deaths_dept_prepared(DEATHS_PATHS["dept_death"])
     else:
         df = load_csv(DEATHS_PATHS["area_age"])
 
@@ -569,17 +595,22 @@ def _render_deaths_breakdown(compare_by: str) -> None:
         else:
             pivot, info = mf.deaths_gender_cause_pivot(dept_df, gender_cause)
     elif compare_by == "Area":
-        with st.sidebar:
-            age_label = st.selectbox("Age group:", ["All ages"] + age_labels)
-        pivot, info = mf.deaths_area_pivot(df, age_label)
-    else:  # Age Group
-        col1, col2 = st.columns(2)
+        col1, col2, col3 = st.columns(3)
         with col1:
-            gender = st.selectbox("Gender:", ["Total", "Men", "Women"])
-        with st.sidebar:
-            area = st.selectbox("Area:", ["Total"] + list(AREA_EN.values()))
-        pivot, info = mf.deaths_age_pivot(df, gender, area)
+            area_gender = st.selectbox("Gender:", ["Total", "Men", "Women"])
         with col2:
+            age_label = st.selectbox("Age group:", ["All ages"] + age_labels)
+        with col3:
+            area_sel = st.selectbox("Area:", ["All areas"] + list(AREA_EN.values()))
+        pivot, info = mf.deaths_area_pivot(df, age_label, area_gender, area_sel)
+    else:  # Age Group
+        if age_cause == "All causes":
+            with st.sidebar:
+                area = st.selectbox("Area:", ["Total"] + list(AREA_EN.values()))
+            pivot, info = mf.deaths_age_pivot(df, age_gender, area)
+        else:
+            pivot, info = mf.deaths_age_cause_pivot(df, age_gender, age_cause)
+        with col3:
             chosen = st.multiselect("Age groups:", list(pivot.columns))
         if chosen:
             pivot = pivot[chosen]
@@ -616,10 +647,12 @@ def _render_deaths_department() -> None:
     all_years = sorted(dept_df["year"].unique().astype(int).tolist(), reverse=True)
     dept_names = sorted(dept_df["Name"].dropna().unique())
     age_labels = list(dict.fromkeys(DEATHS_AGE_EN.values()))
+    cause_names = mf.deaths_cause_names(dept_df)
     valid_presidents = get_valid_presidents(all_years)
 
     with st.sidebar:
         chart_type = st.selectbox("Chart Type:", ["Map", "Line", "Bar"])
+        cause = st.selectbox("Cause:", ["All causes"] + cause_names)
         selected_presidents = president_multiselect(valid_presidents)
 
     comparing = len(selected_presidents) >= 2
@@ -639,6 +672,9 @@ def _render_deaths_department() -> None:
     with col2:
         age_label = st.selectbox("Age:", ["All ages"] + age_labels)
 
+    if cause != "All causes":
+        dept_df = dept_df[dept_df["cause"] == cause]
+
     dept_df["_val"] = mf.deaths_age_gender_value(dept_df, gender, age_label)
     col = "_val"
     noun = "Deaths" if gender == "Total" else gender
@@ -647,6 +683,8 @@ def _render_deaths_department() -> None:
         scope = president
     if age_label != "All ages":
         scope = f"{scope}, age {age_label}"
+    if cause != "All causes":
+        scope = f"{scope} — {cause}"
 
     if chart_type == "Map":
         if comparing:
