@@ -152,6 +152,38 @@ def clean_annual_growth(df: pd.DataFrame, year: list, president: str, index: int
 
     return df, df_local
 
+def _variable_levels(df: pd.DataFrame, concepto: str) -> pd.Series:
+    df = df.copy()
+    df.columns = df.columns.str.strip()
+
+    row = df[df["Concepto"] == concepto]
+    return row.drop(columns="Concepto").iloc[0].astype(float)
+
+def quarter_over_quarter(df: pd.DataFrame, concepto: str = "Producto Interno Bruto") -> pd.DataFrame:
+    series = _variable_levels(df, concepto)
+
+    growth = (series.pct_change() * 100).dropna()
+    growth = growth.to_frame(name="Growth")
+    growth.index.name = "Quarter"
+
+    return growth
+
+def variable_growth(df: pd.DataFrame, concepto: str, mode: str) -> pd.DataFrame:
+    series = _variable_levels(df, concepto)
+
+    if mode == "annual":
+        years = series.index.str.replace(r"\D+", "", regex=True)
+        full = series.groupby(years).size() == 4
+        annual = series.groupby(years).sum()[full].sort_index()
+        growth = (annual.pct_change() * 100).dropna()
+    else:
+        labels = [f"{q.split('-')[0].rstrip('pr')}-{q.split('-')[1]}" for q in series.index]
+        series.index = labels
+        growth = (series.pct_change(4) * 100).dropna()
+
+    growth = growth.rename("Growth").rename_axis("Fecha").reset_index()
+    return growth
+
 # CPI
 def build_yearly_table(df: pd.DataFrame, selected_year: list, column: str, method: str, subtitle: str = None) -> tuple:
     series_list = []
@@ -410,15 +442,25 @@ def births_gender_pivot(total_df: pd.DataFrame) -> tuple:
     df.index.name = "Year"
     return df, ["Births by gender", "Year", "Births"]
 
-def births_age_pivot(age_df: pd.DataFrame) -> tuple:
+def births_gender_age_pivot(age_df: pd.DataFrame, age_label: str) -> tuple:
+    es = find_key_by_value(AGE_EN, age_label) or age_label
+    df = age_df[age_df["grupo_edad"] == es].set_index("year")[["hombres", "mujeres"]]
+    df = df.astype(int).rename(columns=GENDER_EN)
+    df.index = df.index.astype(int)
+    df.index.name = "Year"
+    return df, [f"Births by gender — mothers {age_label}", "Year", "Births"]
+
+def births_age_pivot(age_df: pd.DataFrame, gender: str = "Total") -> tuple:
+    col = "total" if gender == "Total" else find_key_by_value(GENDER_EN, gender)
     df = age_df.copy()
     df["age"] = df["grupo_edad"].map(AGE_EN).fillna(df["grupo_edad"])
-    pivot = df.pivot_table(index="year", columns="age", values="total", aggfunc="sum").astype(int)
+    pivot = df.pivot_table(index="year", columns="age", values=col, aggfunc="sum").astype(int)
     order = [v for v in AGE_EN.values() if v in pivot.columns]
     pivot = pivot[order]
     pivot.index = pivot.index.astype(int)
     pivot.index.name = "Year"
-    return pivot, ["Births by mother's age group", "Year", "Births"]
+    title = "Births by mother's age group" + ("" if gender == "Total" else f" ({gender})")
+    return pivot, [title, "Year", "Births"]
 
 def births_education_pivot(edu_df: pd.DataFrame, age_label: str | None) -> tuple:
     df = edu_df.copy()
@@ -481,19 +523,25 @@ def deaths_gender_cause_pivot(dept_df: pd.DataFrame, cause: str) -> tuple:
     out.index.name = "Year"
     return out, [f"Deaths by gender — {cause}", "Year", "Deaths"]
 
-def deaths_area_pivot(area_df: pd.DataFrame, age_label: str = "All ages") -> tuple:
+def deaths_area_pivot(area_df: pd.DataFrame, age_label: str = "All ages", gender: str = "Total", area: str = "All areas") -> tuple:
     df = area_df.copy()
     df["age"] = df["grupo_edad"].map(DEATHS_AGE_EN).fillna(df["grupo_edad"])
     title = "Deaths by area"
     if age_label and age_label != "All ages":
         df = df[df["age"] == age_label]
         title += f" — age {age_label}"
+    gender_es = find_key_by_value(DEATHS_GENDER_EN, gender)  # None when "Total"
+    items = AREA_EN.items() if area == "All areas" else [(find_key_by_value(AREA_EN, area), area)]
     out = pd.DataFrame(index=sorted(df["Fecha"].unique()))
-    for es, en in AREA_EN.items():
-        gender_cols = [f"{es}_{g}" for g in DEATHS_GENDER_EN]
-        out[en] = df.groupby("Fecha")[gender_cols].sum().sum(axis=1).astype(int)
+    for es, en in items:
+        cols = [f"{es}_{g}" for g in DEATHS_GENDER_EN] if gender == "Total" else [f"{es}_{gender_es}"]
+        out[en] = df.groupby("Fecha")[cols].sum().sum(axis=1).astype(int)
     out.index = out.index.astype(int)
     out.index.name = "Year"
+    if area != "All areas":
+        title += f" — {area}"
+    if gender != "Total":
+        title += f" — {gender}"
     return out, [title, "Year", "Deaths"]
 
 def deaths_age_pivot(area_df: pd.DataFrame, gender: str = "Total", area: str = "Total") -> tuple:
@@ -521,6 +569,23 @@ def deaths_age_pivot(area_df: pd.DataFrame, gender: str = "Total", area: str = "
     parts = [p for p in (None if area == "Total" else area, None if gender == "Total" else gender) if p]
     title = "Deaths by age group" + (f" — {', '.join(parts)}" if parts else "")
     return pivot, [title, "Year", "Deaths"]
+
+def deaths_age_cause_pivot(dept_df: pd.DataFrame, gender: str = "Total", cause: str = "All causes") -> tuple:
+    df = dept_df if cause == "All causes" else dept_df[dept_df["cause"] == cause]
+    genders = list(DEATHS_GENDER_EN) if gender == "Total" else [find_key_by_value(DEATHS_GENDER_EN, gender)]
+    order = list(dict.fromkeys(DEATHS_AGE_EN.values()))
+    out = pd.DataFrame(index=sorted(df["Fecha"].unique()))
+    for en in order:
+        age_keys = [k for k, v in DEATHS_AGE_EN.items() if v == en]
+        cols = [f"{a}_{g}" for a in age_keys for g in genders if f"{a}_{g}" in df.columns]
+        if cols:
+            out[en] = df.groupby("Fecha")[cols].sum().sum(axis=1).astype(int)
+    out.index = out.index.astype(int)
+    out.index.name = "Year"
+    title = "Deaths by age group" + (f" — {gender}" if gender != "Total" else "")
+    if cause != "All causes":
+        title += f" ({cause})"
+    return out, [title, "Year", "Deaths"]
 
 def _cause_label(causa: pd.Series) -> pd.Series:
     """Strip the leading NNN code, then map to English (accent-variants collapse to one)."""

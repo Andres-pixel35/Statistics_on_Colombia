@@ -14,7 +14,7 @@ use_columns = [0, 1, 2, 4, 5, 7]  # Año, Mes, País, Femenino, Masculino, Total
 
 
 def load_and_clean(path):
-    df = pd.read_csv(path, encoding="utf-8", usecols=use_columns, decimal=",")
+    df = pd.read_csv(path, encoding="utf-8", usecols=use_columns, thousands=",")
     col = df.columns[2]
     df[col] = df[col].astype(str).str.strip().str.title()
     df["Fecha"] = pd.to_datetime(
