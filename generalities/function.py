@@ -4,7 +4,7 @@ import pandas as pd
 import streamlit as st
 import re
 import unicodedata
-from generalities.dictionaries import presidents
+from generalities.macro_generalities.dictionaries import presidents
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 

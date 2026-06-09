@@ -2,7 +2,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
 import streamlit as st
-from pages.helpers.macro import macro_functions as mf
+from pages.helpers.macro import gdp_functions as mf
 from generalities.function import cap_series
 
 def line_chart(data: pd.DataFrame, labels: dict, info: list, highlight: str = None):
@@ -131,6 +131,11 @@ def line_or_bar(chart_type, data, info, labels=None, highlight=None,
                 force_bar=False, bar_if_single=True):
 
     if chart_type == "Bar" or force_bar or (bar_if_single and len(data) == 1):
+        if len(data) == 1:
+            series = data.iloc[0]
+            if labels:
+                series.index = [labels.get(c, c) for c in series.index]
+            return ranked_bar_chart(series, [info[0], info[2], ""])
         return bar_chart(data, labels or {}, info, highlight=highlight)
 
     return line_chart(data, labels or {}, info, highlight=highlight)
@@ -208,6 +213,7 @@ def choropleth_map(data: pd.DataFrame, col: str, info: list):
 
 def ranked_bar_chart(series: pd.Series, info: list):
     data = series.sort_values(ascending=True)
+    fmt = ",.0f" if (data == data.round()).all() else ",.2f"
     fig = px.bar(
         x=data.values,
         y=data.index.astype(str),
@@ -224,12 +230,12 @@ def ranked_bar_chart(series: pd.Series, info: list):
     )
     fig.update_xaxes(
         showgrid=False, gridwidth=0.5, gridcolor="rgba(255, 255, 255, 0.1)",
-        tickfont=dict(size=15), tickformat=",.0f",
+        tickfont=dict(size=15), tickformat=fmt,
     )
     fig.update_yaxes(showgrid=False, tickfont=dict(size=13), automargin=True)
     fig.update_traces(
         marker_color="darkblue",
-        hovertemplate=f"<b>%{{y}}</b><br>{info[1]}: %{{x:,.0f}}<extra></extra>",
+        hovertemplate=f"<b>%{{y}}</b><br>{info[1]}: %{{x:{fmt}}}<extra></extra>",
     )
     return fig
 
