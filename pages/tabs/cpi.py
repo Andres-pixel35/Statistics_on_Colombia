@@ -1,10 +1,10 @@
 import streamlit as st
 import pandas as pd
 from pages.helpers.macro import macro_charts as mc
-from pages.helpers.macro import macro_functions as mf
-from generalities.dictionaries import presidents, months
+from pages.helpers.macro import cpi_functions as mf
+from generalities.macro_generalities.dictionaries import presidents, months
 from generalities.function import find_key_by_value, to_datatime, reshape_by_presidents, load_csv, BASE_DIR, highlight_selectbox
-import generalities.inflation as gi
+import generalities.macro_generalities.inflation as gi
 
 CPI_15_PATH = BASE_DIR / "data/banco_republica/CPI/inflacion_15.csv"
 CPI_20_PATH = BASE_DIR / "data/banco_republica/CPI/inflacion_20.csv"
@@ -60,8 +60,14 @@ def render_cpi(cpi_df: pd.DataFrame) -> None:
 
         # Render radio first (need its value), but it appears below placeholders visually
         if cfg:
+            comparing_dim = st.session_state.get("cpi_comparing_dim", False)
+            options = [default_unit, cfg["label"]]
             with st.sidebar:
-                compare_by = st.radio("Compare by:", [default_unit, cfg["label"]], horizontal=True)
+                compare_by = st.radio(
+                    "Compare by:", options, horizontal=True,
+                    index=1 if comparing_dim else 0,
+                )
+            st.session_state["cpi_comparing_dim"] = compare_by == cfg["label"]
         else:
             compare_by = default_unit
 
