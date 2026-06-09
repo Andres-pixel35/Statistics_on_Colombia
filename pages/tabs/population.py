@@ -1,12 +1,14 @@
 import streamlit as st
 import pandas as pd
 from pages.helpers.macro import macro_charts as mc
-from pages.helpers.macro import macro_functions as mf
-from generalities.dictionaries import presidents, months
+from pages.helpers.macro import migration_functions as mig
+from pages.helpers.macro import births_functions as bir
+from pages.helpers.macro import deaths_functions as dth
+from generalities.macro_generalities.dictionaries import presidents, months
 from generalities.function import get_valid_presidents, show_all_years, to_datatime, find_key_by_value, president_multiselect, reshape_by_presidents, load_csv, load_geojson, BASE_DIR, highlight_selectbox
-from generalities.migration import COUNTRY_EN, METRIC_LABEL, VIEW
-from generalities.births import BIRTHS_PATHS, BIRTHS_COMPARE, AGE_EN, GENDER_EN, DEPT_GEOJSON_PATH, DEPT_FEATURE_KEY
-from generalities.deaths import DEATHS_PATHS, DEATHS_COMPARE, AREA_EN, AGE_EN as DEATHS_AGE_EN
+from generalities.macro_generalities.migration import COUNTRY_EN, METRIC_LABEL, VIEW, COL_MAP
+from generalities.macro_generalities.births import BIRTHS_PATHS, BIRTHS_COMPARE, AGE_EN, GENDER_EN, DEPT_GEOJSON_PATH, DEPT_FEATURE_KEY
+from generalities.macro_generalities.deaths import DEATHS_PATHS, DEATHS_COMPARE, AREA_EN, AGE_EN as DEATHS_AGE_EN
 
 MIGRATION_PATH = BASE_DIR / "data/datos_abiertos/migration.csv"
 NET_MIGRATION_PATH = BASE_DIR / "data/world_bank/net_migration.csv"
@@ -61,10 +63,10 @@ def _render_population_tab(pop_df: pd.DataFrame) -> None:
             series = net_migration["Migration"].astype(int)
             series.index = years
         elif perspective == "Births":
-            series = mf.births_national_series(load_csv(BIRTHS_PATHS["total"]))
+            series = bir.births_national_series(load_csv(BIRTHS_PATHS["total"]))
             years = series.index
         elif perspective == "Deaths":
-            series = mf.deaths_national_series(load_csv(DEATHS_PATHS["total"]))
+            series = dth.deaths_national_series(load_csv(DEATHS_PATHS["total"]))
             years = series.index
         else:
             series = pop_local["Población"]
@@ -113,7 +115,7 @@ def _render_population_tab(pop_df: pd.DataFrame) -> None:
 
     extras = []
     if compare_births:
-        b = mf.births_national_series(load_csv(BIRTHS_PATHS["total"]))
+        b = bir.births_national_series(load_csv(BIRTHS_PATHS["total"]))
         b.name = "Births"
         extras.append(b)
     if compare_migration:
@@ -121,7 +123,7 @@ def _render_population_tab(pop_df: pd.DataFrame) -> None:
         m.name = "Net Migration"
         extras.append(m)
     if compare_deaths:
-        d = mf.deaths_national_series(load_csv(DEATHS_PATHS["total"]))
+        d = dth.deaths_national_series(load_csv(DEATHS_PATHS["total"]))
         d.name = "Deaths"
         extras.append(d)
     if extras:
@@ -219,7 +221,7 @@ def _render_map(migration_df, all_years):
         year_sel = st.selectbox("Year:", ["All"] + all_years, index=0)
         year = None if year_sel == "All" else year_sel
 
-    data_col = mf.COL_MAP[(direction, metric)]
+    data_col = COL_MAP[(direction, metric)]
     label = METRIC_LABEL[metric]
     meta = [direction, metric, label]
 
@@ -227,7 +229,7 @@ def _render_map(migration_df, all_years):
         month_opts = ["All"] + list(months.values())
         month_name = st.selectbox("Month:", month_opts, index=0)
 
-    grouped, title = mf.build_migration_map_data(migration_df, year, month_name, data_col, meta)
+    grouped, title = mig.build_migration_map_data(migration_df, year, month_name, data_col, meta)
 
     if grouped.empty:
         st.warning("No data for selected filters.")
@@ -275,7 +277,7 @@ def _render_line_bar(migration_df, chart_type, all_years, valid_pres):
                 selected_years = [] if pres_compare else st.multiselect("Year:", year_opts)
 
     label = METRIC_LABEL[metric]
-    data_col = mf.COL_MAP[(direction, metric)]
+    data_col = COL_MAP[(direction, metric)]
     meta = [direction, metric, label]
 
     df_f = migration_df.copy()
@@ -290,14 +292,14 @@ def _render_line_bar(migration_df, chart_type, all_years, valid_pres):
         all_countries_en = sorted([COUNTRY_EN[c] for c in all_countries_es])
 
         with st.sidebar:
-            country_en = st.selectbox("Country:", ["All"] + all_countries_en)
+            country_en = st.selectbox("Country:", ["All"] + all_countries_en, key="mig_country")
 
         if country_en != "All":
             country_es = find_key_by_value(COUNTRY_EN, country_en)
             df_f = df_f[df_f["País"] == country_es]
             meta = [direction, metric, label, country_en]
 
-        pivot, info = mf.migration_year_pivot(df_f, data_col, meta)
+        pivot, info = mig.migration_year_pivot(df_f, data_col, meta)
         force_bar = False
     else:
         annual_mode = len(selected_years) != 1
@@ -311,13 +313,13 @@ def _render_line_bar(migration_df, chart_type, all_years, valid_pres):
             df_f["Period"] = df_f["Fecha"].dt.strftime("%Y-%m")
             period_label = "Month"
 
-        all_countries_es = [c for c in sorted(df_f["País"].unique()) if c in COUNTRY_EN]
+        all_countries_es = [c for c in sorted(migration_df["País"].unique()) if c in COUNTRY_EN]
         all_countries_en = sorted([COUNTRY_EN[c] for c in all_countries_es])
 
         if compare_by == "Countries":
-            pivot, info = mf.migration_countries_pivot(df_f, all_countries_en, data_col, period_label, meta)
+            pivot, info = mig.migration_countries_pivot(df_f, all_countries_en, data_col, period_label, meta)
         else:  # Direction or Gender
-            pivot, info = mf.migration_single_pivot(df_f, all_countries_en, compare_by, meta, period_label)
+            pivot, info = mig.migration_single_pivot(df_f, all_countries_en, compare_by, meta, period_label)
 
         force_bar = not annual_mode and len(pivot) == 1 if pivot is not None else False
 
@@ -411,20 +413,20 @@ def _render_births_breakdown(compare_by: str) -> None:
 
     if compare_by == "Gender":
         if gender_age == "All ages":
-            pivot, info = mf.births_gender_pivot(df)
+            pivot, info = bir.births_gender_pivot(df)
         else:
-            pivot, info = mf.births_gender_age_pivot(age_df, gender_age)
+            pivot, info = bir.births_gender_age_pivot(age_df, gender_age)
     elif compare_by == "Mother Age":
         c1, c2 = st.columns(2)
         with c1:
             gender = st.selectbox("Gender:", ["Total", "Boys", "Girls"])
-        pivot, info = mf.births_age_pivot(df, gender)
+        pivot, info = bir.births_age_pivot(df, gender)
         with c2:
             chosen = st.multiselect("Age groups:", list(pivot.columns))
         if chosen:
             pivot = pivot[chosen]
     else:
-        pivot, info = mf.births_education_pivot(df, age_label)
+        pivot, info = bir.births_education_pivot(df, age_label)
         with st.sidebar:
             chosen = st.multiselect("Education levels:", list(pivot.columns))
         if chosen:
@@ -468,7 +470,7 @@ def _render_births_department() -> None:
     scope = "all years" if not selected_years else ", ".join(map(str, sorted(selected_years)))
 
     if chart_type == "Map":
-        grouped = mf.births_department_data(dept_df, selected_years, col)
+        grouped = bir.births_department_data(dept_df, selected_years, col)
         info = [f"{noun} by department — {scope}", "Department", noun]
         geojson = load_geojson(DEPT_GEOJSON_PATH)
         fig = mc.colombia_choropleth(grouped, geojson, DEPT_FEATURE_KEY, col, info)
@@ -479,7 +481,7 @@ def _render_births_department() -> None:
         st.info("Select one or more departments.")
         return
 
-    pivot = mf.births_geo_trend(dept_df, "departamento", selected_depts, selected_years, value_col=col)
+    pivot = bir.births_geo_trend(dept_df, "departamento", selected_depts, selected_years, value_col=col)
     _render_geo_bar_line(pivot, chart_type, "department", scope, noun=noun)
 
 
@@ -501,7 +503,7 @@ def _render_births_municipality() -> None:
         return
 
     scope = "all years" if not selected_years else ", ".join(map(str, sorted(selected_years)))
-    pivot = mf.births_geo_trend(scoped, "municipio", selected_munis, selected_years)
+    pivot = bir.births_geo_trend(scoped, "municipio", selected_munis, selected_years)
     _render_geo_bar_line(pivot, chart_type, "municipio", scope)
 
 
@@ -552,16 +554,16 @@ def _render_deaths_breakdown(compare_by: str) -> None:
     dept_df = None
     age_cause = age_gender = age_col3 = None
     if compare_by == "Gender":
-        cause_names = mf.deaths_cause_names(mf.deaths_dept_prepared(DEATHS_PATHS["dept_death"]))
+        cause_names = dth.deaths_cause_names(dth.deaths_dept_prepared(DEATHS_PATHS["dept_death"]))
         with st.sidebar:
             gender_cause = st.selectbox("Cause:", ["All causes"] + cause_names)
         if gender_cause == "All causes":
             df = load_csv(DEATHS_PATHS["total"])
         else:
-            dept_df = mf.deaths_dept_prepared(DEATHS_PATHS["dept_death"])
+            dept_df = dth.deaths_dept_prepared(DEATHS_PATHS["dept_death"])
             df = dept_df
     elif compare_by == "Age Group":
-        cause_names = mf.deaths_cause_names(mf.deaths_dept_prepared(DEATHS_PATHS["dept_death"]))
+        cause_names = dth.deaths_cause_names(dth.deaths_dept_prepared(DEATHS_PATHS["dept_death"]))
         col1, col2, col3 = st.columns(3)
         with col1:
             age_gender = st.selectbox("Gender:", ["Total", "Men", "Women"])
@@ -570,7 +572,7 @@ def _render_deaths_breakdown(compare_by: str) -> None:
         if age_cause == "All causes":
             df = load_csv(DEATHS_PATHS["area_age"])
         else:
-            df = mf.deaths_dept_prepared(DEATHS_PATHS["dept_death"])
+            df = dth.deaths_dept_prepared(DEATHS_PATHS["dept_death"])
     else:
         df = load_csv(DEATHS_PATHS["area_age"])
 
@@ -591,9 +593,9 @@ def _render_deaths_breakdown(compare_by: str) -> None:
 
     if compare_by == "Gender":
         if gender_cause == "All causes":
-            pivot, info = mf.deaths_gender_pivot(df)
+            pivot, info = dth.deaths_gender_pivot(df)
         else:
-            pivot, info = mf.deaths_gender_cause_pivot(dept_df, gender_cause)
+            pivot, info = dth.deaths_gender_cause_pivot(dept_df, gender_cause)
     elif compare_by == "Area":
         col1, col2, col3 = st.columns(3)
         with col1:
@@ -602,14 +604,14 @@ def _render_deaths_breakdown(compare_by: str) -> None:
             age_label = st.selectbox("Age group:", ["All ages"] + age_labels)
         with col3:
             area_sel = st.selectbox("Area:", ["All areas"] + list(AREA_EN.values()))
-        pivot, info = mf.deaths_area_pivot(df, age_label, area_gender, area_sel)
+        pivot, info = dth.deaths_area_pivot(df, age_label, area_gender, area_sel)
     else:  # Age Group
         if age_cause == "All causes":
             with st.sidebar:
                 area = st.selectbox("Area:", ["Total"] + list(AREA_EN.values()))
-            pivot, info = mf.deaths_age_pivot(df, age_gender, area)
+            pivot, info = dth.deaths_age_pivot(df, age_gender, area)
         else:
-            pivot, info = mf.deaths_age_cause_pivot(df, age_gender, age_cause)
+            pivot, info = dth.deaths_age_cause_pivot(df, age_gender, age_cause)
         with col3:
             chosen = st.multiselect("Age groups:", list(pivot.columns))
         if chosen:
@@ -638,7 +640,7 @@ def _deaths_dept_source():
     with st.sidebar:
         place = st.selectbox("Place:", ["Occurrence", "Residence"])
     path = DEATHS_PATHS["dept_death"] if place == "Occurrence" else DEATHS_PATHS["dept_residence"]
-    return mf.deaths_dept_prepared(path)
+    return dth.deaths_dept_prepared(path)
 
 
 def _render_deaths_department() -> None:
@@ -647,7 +649,7 @@ def _render_deaths_department() -> None:
     all_years = sorted(dept_df["year"].unique().astype(int).tolist(), reverse=True)
     dept_names = sorted(dept_df["Name"].dropna().unique())
     age_labels = list(dict.fromkeys(DEATHS_AGE_EN.values()))
-    cause_names = mf.deaths_cause_names(dept_df)
+    cause_names = dth.deaths_cause_names(dept_df)
     valid_presidents = get_valid_presidents(all_years)
 
     with st.sidebar:
@@ -675,7 +677,7 @@ def _render_deaths_department() -> None:
     if cause != "All causes":
         dept_df = dept_df[dept_df["cause"] == cause]
 
-    dept_df["_val"] = mf.deaths_age_gender_value(dept_df, gender, age_label)
+    dept_df["_val"] = dth.deaths_age_gender_value(dept_df, gender, age_label)
     col = "_val"
     noun = "Deaths" if gender == "Total" else gender
     scope = "all years" if not selected_years else ", ".join(map(str, sorted(selected_years)))
@@ -691,7 +693,7 @@ def _render_deaths_department() -> None:
             st.info("Map can't compare presidents — pick a single president or switch to Line/Bar.")
             return
         map_years = selected_years or ([y for y in all_years if y in presidents[president]] if president else [])
-        grouped = mf.births_department_data(dept_df, map_years, col)
+        grouped = bir.births_department_data(dept_df, map_years, col)
         info = [f"{noun} by department — {scope}", "Department", noun]
         geojson = load_geojson(DEPT_GEOJSON_PATH)
         fig = mc.colombia_choropleth(grouped, geojson, DEPT_FEATURE_KEY, col, info)
@@ -702,7 +704,7 @@ def _render_deaths_department() -> None:
         st.info("Select one or more departments.")
         return
 
-    pivot = mf.births_geo_trend(dept_df, "departamento", selected_depts, selected_years, value_col=col)
+    pivot = bir.births_geo_trend(dept_df, "departamento", selected_depts, selected_years, value_col=col)
 
     if president:
         pivot = pivot[pivot.index.isin(presidents[president])]
@@ -748,8 +750,8 @@ def _render_deaths_top_causes() -> None:
     with col3:
         age_label = st.selectbox("Age:", ["All ages"] + age_labels)
 
-    dept_df["_val"] = mf.deaths_age_gender_value(dept_df, gender, age_label)
-    series = mf.deaths_top_causes(dept_df, selected_years, dept, president, value_col="_val")
+    dept_df["_val"] = dth.deaths_age_gender_value(dept_df, gender, age_label)
+    series = dth.deaths_top_causes(dept_df, selected_years, dept, president, value_col="_val")
 
     if series.empty:
         st.warning("No data for selected filters.")
@@ -771,7 +773,7 @@ def _render_deaths_cause_compare() -> None:
     all_years = sorted(dept_df["Fecha"].unique().astype(int).tolist(), reverse=True)
     dept_names = sorted(dept_df["Name"].dropna().unique())
     valid_presidents = get_valid_presidents(all_years)
-    cause_names = mf.deaths_cause_names(dept_df)
+    cause_names = dth.deaths_cause_names(dept_df)
     age_labels = list(dict.fromkeys(DEATHS_AGE_EN.values()))
 
     col1, col2, col3 = st.columns(3)
@@ -805,8 +807,8 @@ def _render_deaths_cause_compare() -> None:
     with st.sidebar:
         selected_years = [] if comparing else st.multiselect("Year:", year_opts)
 
-    dept_df["_val"] = mf.deaths_age_gender_value(dept_df, gender, age_label)
-    pivot = mf.deaths_cause_pivot(dept_df, selected_causes, selected_years, president, value_col="_val", dept_name=dept)
+    dept_df["_val"] = dth.deaths_age_gender_value(dept_df, gender, age_label)
+    pivot = dth.deaths_cause_pivot(dept_df, selected_causes, selected_years, president, value_col="_val", dept_name=dept)
     place = dept if dept != "All" else "Colombia"
     title = f"Deaths by cause — {place}" if gender == "Total" else f"Deaths by cause ({gender}) — {place}"
     if age_label != "All ages":

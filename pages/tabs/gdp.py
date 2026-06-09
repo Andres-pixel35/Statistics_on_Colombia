@@ -1,11 +1,11 @@
 import streamlit as st
 import pandas as pd
-from pages.helpers.macro import macro_functions as mf
+from pages.helpers.macro import gdp_functions as mf
 from pages.helpers.macro import macro_charts as mc
-import generalities.gdp_spend as t
-from generalities.gdp_production import production_summarize_terms as p
-from generalities.gdp_income import income_summarize_terms as income
-from generalities.dictionaries import presidents
+import generalities.macro_generalities.gdp_spend as t
+from generalities.macro_generalities.gdp_production import production_summarize_terms as p
+from generalities.macro_generalities.gdp_income import income_summarize_terms as income
+from generalities.macro_generalities.dictionaries import presidents
 from generalities.function import get_valid_presidents, find_key_by_value, show_all_years, president_multiselect, reshape_by_presidents, load_csv, BASE_DIR
 
 ANNUAL_GROWTH_PATH  = BASE_DIR / "data/banco_republica/GDP/annual_growth.csv"
@@ -44,7 +44,7 @@ def render_gdp(gdp_df: pd.DataFrame) -> None:
             else:
                 variable = -1
 
-            gdp_info = ["Real GDP per Year", "Year", "Billions (COP)", "Chained volume series"]
+            gdp_info = ["Real GDP per Year", "Year", "Trillion (COP)", "Chained volume series"]
             mf.generalities_spend_product(gdp_local, selected_terms, variable, gdp_info)
         elif perspective == "Production":
             gdp_local = load_csv(PRODUCTION_PATH, dtype=str)
@@ -54,7 +54,7 @@ def render_gdp(gdp_df: pd.DataFrame) -> None:
 
             variable = -1
 
-            gdp_info = ["Real GDP per Year", "Year", "Billions (COP)", "Chained volume series"]
+            gdp_info = ["Real GDP per Year", "Year", "Trillion (COP)", "Chained volume series"]
             mf.generalities_spend_product(gdp_local, p, variable, gdp_info)
         else:
             gdp_local = load_csv(INCOME_PATH, dtype=str)
@@ -64,7 +64,7 @@ def render_gdp(gdp_df: pd.DataFrame) -> None:
 
             variable = -1
 
-            gdp_info = ["GDP per Year", "Year", "Billions (COP)", "Current Prices"]
+            gdp_info = ["GDP per Year", "Year", "Trillion (COP)", "Current Prices"]
             mf.generalities_spend_product(gdp_local, income, variable, gdp_info)
     else:
         with col2:
@@ -167,7 +167,8 @@ def render_gdp(gdp_df: pd.DataFrame) -> None:
             if quarter is None and not comparing:
                 gdp_local.index = tmp_years
 
-                gdp_local = show_all_years(gdp_local, president)
+                if is_total and not nominal:
+                    gdp_local = show_all_years(gdp_local, president)
 
                 gdp_local = gdp_local.reset_index(drop=True)
 
