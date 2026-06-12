@@ -1,6 +1,6 @@
 import pandas as pd
 from generalities.function import find_key_by_value
-from generalities.macro_generalities.births import GENDER_EN, AGE_EN, EDU_EN
+from generalities.demography_generalities.births import GENDER_EN, AGE_EN, EDU_EN
 
 
 def births_national_series(total_df: pd.DataFrame) -> pd.Series:

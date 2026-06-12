@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+from datetime import datetime
 import pandas as pd
 import streamlit as st
 import re
@@ -7,6 +8,8 @@ import unicodedata
 from generalities.macro_generalities.dictionaries import presidents
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+PREV_YEAR = datetime.now().year - 1  # last observed year before projections
 
 def get_valid_presidents(tmp_years: dict) -> list:
     return [
