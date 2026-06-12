@@ -1,5 +1,5 @@
 import pandas as pd
-from generalities.macro_generalities.population import GENDER_AGG, GENDER_PREFIX, PYRAMID_GROUPS
+from generalities.demography_generalities.population import GENDER_AGG, GENDER_PREFIX, PYRAMID_GROUPS
 
 
 def pop_value(df: pd.DataFrame, gender: str, age_label: str) -> pd.Series:
