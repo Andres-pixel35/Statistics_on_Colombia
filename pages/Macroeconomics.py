@@ -6,7 +6,7 @@ st.set_page_config(layout="wide", page_title="Macroeconomic")
 
 path_gdp        = BASE_DIR / "data/dane/GDP/spend/summarize.csv"
 path_cpi        = BASE_DIR / "data/banco_republica/CPI/city/Total_Nacional.csv"
-path_population = BASE_DIR / "data/banco_republica/population/population.csv"
+path_population = BASE_DIR / "data/dane/population/nacional.csv"
 
 gdp_df = load_csv(path_gdp, dtype=str)
 cpi_df = load_csv(path_cpi)

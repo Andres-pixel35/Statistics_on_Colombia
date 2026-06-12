@@ -2,9 +2,9 @@
 
 > 🚧 **Work in progress.** This project is under active development — features, data, and structure may change.
 
-**Statistics on Colombia** (provisional name) is an open-source project that presents Colombian
-macroeconomic statistics in a simple, interactive way — GDP, CPI (inflation), and population
-(births, deaths, and migration), with labor-market and unemployment indicators in progress.
+**Statistics on Colombia** is an open-source project that presents Colombian
+statistics in a simple, interactive way — GDP, CPI (inflation), and population
+(births, deaths, and migration), with labor-market and unemployment indicators in progress. (Thus far)
 
 ## Live demo
 
@@ -13,7 +13,7 @@ macroeconomic statistics in a simple, interactive way — GDP, CPI (inflation), 
 
 ## Status
 
-The project is not finished yet, so several things will still change. Until it is complete it is
+The project is not finished yet, thus several things will still change. Until it is complete it is
 available in **English only**; a Spanish version is planned once the project is finished.
 
 ## Tech stack
@@ -28,7 +28,7 @@ available in **English only**; a Spanish version is planned once the project is 
 - **Banco de la República** — Colombia's central bank
 - **World Bank** — net migration
 - **Migración Colombia** — inbound/outbound travelers
-
+- **Datos Abiertos Colombia** - Colombia biggest plataform to access and download data
 ## Contact
 
 Questions or anything related to this project? Reach me at **statistics-colombia@proton.me**.

@@ -9,7 +9,7 @@ from generalities.macro_generalities.dictionaries import presidents
 from generalities.function import get_valid_presidents, find_key_by_value, show_all_years, president_multiselect, reshape_by_presidents, load_csv, BASE_DIR
 
 ANNUAL_GROWTH_PATH  = BASE_DIR / "data/banco_republica/GDP/annual_growth.csv"
-POPULATION_PATH     = BASE_DIR / "data/banco_republica/population/population.csv"
+POPULATION_PATH     = BASE_DIR / "data/dane/population/nacional.csv"
 QUARTER_GROWTH_PATH = BASE_DIR / "data/banco_republica/GDP/quarter_growth.csv"
 PRODUCTION_PATH     = BASE_DIR / "data/dane/GDP/production/summarize.csv"
 INCOME_PATH         = BASE_DIR / "data/dane/GDP/income/summarize.csv"

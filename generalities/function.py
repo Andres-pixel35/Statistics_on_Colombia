@@ -31,14 +31,14 @@ def cap_series(data: pd.DataFrame, limit: int = 10) -> pd.DataFrame:
         return data.iloc[:, :limit]
     return data
 
-def show_all_years(df: pd.DataFrame|pd.Series, president) -> pd.DataFrame | pd.Series:
+def show_all_years(df: pd.DataFrame|pd.Series, president, return_flag=False) -> pd.DataFrame | pd.Series:
     with st.sidebar:
         show_all = st.checkbox("Show all years", value=False)
 
     if not show_all and not president:
         df = df[df.index >= 2000]
 
-    return df
+    return (df, show_all) if return_flag else df
 
 @st.cache_data
 def load_csv(path: str | Path, dtype=None) -> pd.DataFrame:

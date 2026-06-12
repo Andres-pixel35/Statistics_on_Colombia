@@ -4,54 +4,70 @@ from pages.helpers.macro import macro_charts as mc
 from pages.helpers.macro import migration_functions as mig
 from pages.helpers.macro import births_functions as bir
 from pages.helpers.macro import deaths_functions as dth
+from pages.helpers.macro import population_functions as pop
 from generalities.macro_generalities.dictionaries import presidents, months
-from generalities.function import get_valid_presidents, show_all_years, to_datatime, find_key_by_value, president_multiselect, reshape_by_presidents, load_csv, load_geojson, BASE_DIR, highlight_selectbox
+from generalities.function import get_valid_presidents, show_all_years, find_key_by_value, president_multiselect, reshape_by_presidents, load_csv, load_geojson, BASE_DIR, highlight_selectbox
 from generalities.macro_generalities.migration import COUNTRY_EN, METRIC_LABEL, VIEW, COL_MAP
 from generalities.macro_generalities.births import BIRTHS_PATHS, BIRTHS_COMPARE, AGE_EN, GENDER_EN, DEPT_GEOJSON_PATH, DEPT_FEATURE_KEY
 from generalities.macro_generalities.deaths import DEATHS_PATHS, DEATHS_COMPARE, AREA_EN, AGE_EN as DEATHS_AGE_EN
+from generalities.macro_generalities.population import POP_PATHS, GENDER_AGG, AGE_SINGLE, PREV_YEAR
 
 MIGRATION_PATH = BASE_DIR / "data/datos_abiertos/migration.csv"
 NET_MIGRATION_PATH = BASE_DIR / "data/world_bank/net_migration.csv"
+
+PROJECTED_NOTE = ("Projected data is based on the 2018 National Population and Housing Census (CNPV), "
+                  "updated with information following the COVID-19 pandemic.")
 
 def render_population(pop_df: pd.DataFrame) -> None:
     with st.sidebar:
         view = st.radio("View:", VIEW)
 
-    if view == VIEW[0]:
+    if view == "National":
         _render_population_tab(pop_df)
-    elif view == VIEW[1]:
+    elif view == "Department":
+        _render_population_department()
+    elif view == "Municipality":
+        _render_population_municipality()
+    elif view == "Migration":
         _render_migration_tab()
-    elif view == VIEW[2]:
+    elif view == "Births":
         _render_births_tab()
     else:
         _render_deaths_tab()
 
 def _render_population_tab(pop_df: pd.DataFrame) -> None:
-    pop_local = to_datatime(pop_df, True)
-    pop_local.index = pop_local.index.year.astype(int)
-
     st.title("Population")
-
-    metric = "Absolute"
 
     col1, col2 = st.columns(2)
 
     with col1:
-        method = st.selectbox("Method:", ["Total", "Growth"])
+        method = st.selectbox("Method:", ["Total", "Growth", "Projection", "By Age"])
+
+    if method == "Projection":
+        _render_population_projection(pop_df)
+        return
+    if method == "By Age":
+        with st.sidebar:
+            st.header("Filters")
+        _render_pyramid(pop_df, "Colombia")
+        return
+
+    national = pop.national_total_series(pop_df, cap=PREV_YEAR)
+    metric = "Absolute"
 
     if method == "Growth":
         with col2:
             metric = st.selectbox("Metric", ["Absolute", "Percentage"])
 
         if metric == "Percentage":
-            series = round(pop_local["Población"].pct_change() * 100, 2)
+            series = round(national.pct_change() * 100, 2)
             info = ["Annual Population Growth", "Year", "%"]
         else:
-            series = pop_local["Población"].diff()
+            series = national.diff()
             info = ["Annual Population Growth", "Year", "New People"]
 
         column = "Growth"
-        years = pop_local.index[1:]
+        years = national.index[1:]
     else:
         with col2:
             perspective = st.selectbox("Perspective:", ["National", "Net Migration", "Births", "Deaths"])
@@ -69,8 +85,8 @@ def _render_population_tab(pop_df: pd.DataFrame) -> None:
             series = dth.deaths_national_series(load_csv(DEATHS_PATHS["total"]))
             years = series.index
         else:
-            series = pop_local["Población"]
-            years = pop_local.index
+            series = national
+            years = national.index
 
         a = "Population" if perspective == "National" else f"{perspective}"
 
@@ -78,11 +94,9 @@ def _render_population_tab(pop_df: pd.DataFrame) -> None:
         info = [a, "Year", unit]
         column = f"{a}"
 
-    source = (
-        "World Bank" if method == "Total" and perspective == "Net Migration"
-        else "DANE" if method == "Total" and perspective in ("Births", "Deaths")
-        else "Banco de la República"
-    )
+    source = "World Bank" if (method == "Total" and perspective == "Net Migration") else "DANE"
+
+    show_all_applies = method == "Growth" or source != "DANE" or (method == "Total" and perspective == "National")
 
     full_series = series
 
@@ -138,7 +152,7 @@ def _render_population_tab(pop_df: pd.DataFrame) -> None:
         st.caption(f"Source: {source}")
         return
 
-    if source != "DANE":
+    if show_all_applies:
         series = show_all_years(series, president)
 
     if president:
@@ -184,7 +198,7 @@ def _render_population_tab(pop_df: pd.DataFrame) -> None:
     if extras:
         st.caption("Births & deaths: DANE · Net migration: World Bank")
 
-    if source != "DANE":
+    if show_all_applies:
         st.info("If you want to choose a year prior to 2000, make sure you click 'Show all years'")
 
 
@@ -288,7 +302,7 @@ def _render_line_bar(migration_df, chart_type, all_years, valid_pres):
         df_f = df_f[df_f["Fecha"].dt.year.isin(selected_years)]
 
     if compare_by == "Year":
-        all_countries_es = [c for c in sorted(migration_df["País"].unique()) if c in COUNTRY_EN]
+        all_countries_es = [c for c in sorted(df_f["País"].unique()) if c in COUNTRY_EN]
         all_countries_en = sorted([COUNTRY_EN[c] for c in all_countries_es])
 
         with st.sidebar:
@@ -495,16 +509,16 @@ def _render_births_municipality() -> None:
         dept = st.selectbox("Department:", dept_names)
         scoped = muni_df[muni_df["departamento"].str.split(n=1).str[1] == dept]
         muni_names = sorted(scoped["municipio"].str.split(n=1).str[1].unique())
-        selected_munis = st.multiselect("Municipios:", muni_names)
+        selected_munis = st.multiselect("Municipalities:", muni_names)
         selected_years = st.multiselect("Year:", all_years)
 
     if not selected_munis:
-        st.info("Select one or more municipios.")
+        st.info("Select one or more municipalities.")
         return
 
     scope = "all years" if not selected_years else ", ".join(map(str, sorted(selected_years)))
     pivot = bir.births_geo_trend(scoped, "municipio", selected_munis, selected_years)
-    _render_geo_bar_line(pivot, chart_type, "municipio", scope)
+    _render_geo_bar_line(pivot, chart_type, "municipality", scope)
 
 
 def _render_geo_bar_line(pivot, chart_type: str, entity: str, scope: str, noun: str = "Births") -> None:
@@ -827,3 +841,225 @@ def _render_deaths_cause_compare() -> None:
     fig = mc.line_or_bar(chart_type, pivot, info, highlight=highlight)
 
     mc.render_chart(fig)
+
+
+def _render_population_projection(pop_df: pd.DataFrame) -> None:
+    series = pop.national_total_series(pop_df)
+
+    with st.sidebar:
+        st.header("Filters")
+        show_all = st.checkbox("Show all years", value=False)
+
+    if not show_all:
+        series = series[series.index >= 2020]
+
+    info = ["Population projection", "Year", "People"]
+    fig = mc.projection_line(series.to_frame(name="Population"), info, split_year=PREV_YEAR)
+    mc.render_chart(fig)
+    st.caption(f"Projected from {PREV_YEAR + 1} onward (dashed).")
+    st.caption(PROJECTED_NOTE)
+    st.caption("Source: DANE")
+
+
+def _render_pyramid(df: pd.DataFrame, scope_label: str) -> None:
+    years = sorted(df["AÑO"].unique().astype(int), reverse=True)
+    default = years.index(PREV_YEAR) if PREV_YEAR in years else 0
+
+    with st.sidebar:
+        year = st.selectbox("Year:", years, index=default)
+
+    men, women = pop.pyramid_rows(df[df["AÑO"] == year])
+
+    if men.sum() == 0 and women.sum() == 0:
+        st.warning("No data for selected filters.")
+        return
+
+    title = f"Population pyramid — {scope_label}, {year}"
+    fig = mc.population_pyramid(men, women, [title], projected=year > PREV_YEAR)
+    mc.render_chart(fig)
+    if year > PREV_YEAR:
+        st.caption("Projected (expected) data.")
+        st.caption(PROJECTED_NOTE)
+    st.caption("Source: DANE")
+
+
+def _render_pop_geo_chart(pivot, chart_type, entity, noun, comparing, president, selected_presidents) -> None:
+    if president:
+        pivot = pivot[pivot.index.isin(presidents[president])]
+
+    if comparing:
+        info = [f"{noun} trend by {entity}", "Year", noun]
+        if not pivot.empty:
+            pivot, info = reshape_by_presidents(pivot, selected_presidents, info)
+        if pivot.empty:
+            st.warning("No data for selected filters.")
+            return
+        highlight = highlight_selectbox(pivot)
+        fig = mc.line_or_bar(chart_type, pivot, info, highlight=highlight, bar_if_single=False)
+        mc.render_chart(fig)
+        return
+
+    if pivot.empty:
+        st.warning("No data for selected filters.")
+        return
+
+    info = [f"{noun} by {entity}", "Year", noun]
+    highlight = highlight_selectbox(pivot)
+    if len(pivot) == 1:
+        fig = mc.line_or_bar(chart_type, pivot, info, highlight=highlight)
+    elif chart_type == "Bar":
+        fig = mc.bar_chart(pivot, {}, info, highlight=highlight)
+    else:
+        fig = mc.projection_line(pivot, info, split_year=PREV_YEAR, highlight=highlight)
+    mc.render_chart(fig)
+
+
+def _render_population_department() -> None:
+    st.title("Population")
+
+    df = pop.dept_normalize(load_csv(POP_PATHS["departmental"]))
+    all_years = sorted(df["AÑO"].unique().astype(int), reverse=True)
+    dept_names = sorted(df["Name"].unique())
+    genders = list(GENDER_AGG)
+
+    with st.sidebar:
+        st.header("Filters")
+        chart_type = st.selectbox("Chart Type:", ["Map", "Line", "Bar", "Population pyramid"])
+
+    if chart_type == "Population pyramid":
+        c1, _ = st.columns(2)
+        with c1:
+            dept = st.selectbox("Department:", dept_names)
+        _render_pyramid(df[df["Name"] == dept], dept)
+        return
+
+    if chart_type == "Map":
+        c1, c2 = st.columns(2)
+    else:
+        c1, c2, c3 = st.columns(3)
+    with c1:
+        gender = st.selectbox("Gender:", genders)
+    with c2:
+        age = st.selectbox("Age:", AGE_SINGLE)
+    noun = "Population" if gender == "Total" else gender
+
+    if chart_type == "Map":
+        default = all_years.index(PREV_YEAR) if PREV_YEAR in all_years else 0
+        with st.sidebar:
+            year = st.selectbox("Year:", all_years, index=default)
+        grouped = pop.dept_map_data(df, year, gender, age)
+        info = [f"{noun} by department — {year}", "Department", noun]
+        geojson = load_geojson(DEPT_GEOJSON_PATH)
+        fig = mc.colombia_choropleth(grouped, geojson, DEPT_FEATURE_KEY, "_val", info)
+        mc.render_chart(fig)
+        if year > PREV_YEAR:
+            st.caption("Projected (expected) data.")
+            st.caption(PROJECTED_NOTE)
+        st.caption("Source: DANE")
+        return
+
+    with c3:
+        selected_depts = st.multiselect("Departments:", dept_names)
+    with st.sidebar:
+        selected_presidents = president_multiselect(get_valid_presidents(all_years))
+        comparing = len(selected_presidents) >= 2
+        selected_years = [] if comparing else st.multiselect("Year:", all_years)
+        show_projected = st.checkbox("Show projected", value=False)
+    president = selected_presidents[0] if len(selected_presidents) == 1 else None
+
+    future_years = [y for y in selected_years if y > PREV_YEAR]
+    if future_years and not show_projected:
+        st.warning(
+            f"Year {future_years[0]} contain projected data. "
+            "Enable 'Show projected' to include them."
+        )
+        st.stop()
+
+    if not selected_depts:
+        st.info("Select one or more departments.")
+        return
+
+    pivot = pop.geo_trend(df, "Name", selected_depts, gender, age)
+    pivot, show_all = show_all_years(pivot, president, return_flag=True)
+
+    past_years = [y for y in selected_years if y < 2000]
+    if past_years and not show_all and not president:
+        st.warning("Remember to select 'Show all years' to see info about years prior to 2000")
+        st.stop()
+
+    if not show_projected:
+        pivot = pivot[pivot.index <= PREV_YEAR]
+    if selected_years:
+        pivot = pivot[pivot.index.isin(selected_years)]
+    _render_pop_geo_chart(pivot, chart_type, "department", noun, comparing, president, selected_presidents)
+    if show_projected and (pivot.index > PREV_YEAR).any():
+        st.caption(PROJECTED_NOTE)
+    st.caption("Source: DANE")
+
+
+def _render_population_municipality() -> None:
+    st.title("Population")
+
+    df = pop.dept_normalize(load_csv(POP_PATHS["municipal"]))
+    dept_names = sorted(df["Name"].unique())
+    genders = list(GENDER_AGG)
+
+    with st.sidebar:
+        st.header("Filters")
+        chart_type = st.selectbox("Chart Type:", ["Line", "Bar", "Population pyramid"])
+        dept = st.selectbox("Department:", dept_names)
+
+    scoped = df[df["Name"] == dept]
+    muni_names = sorted(scoped["Municipio"].dropna().unique())
+
+    if chart_type == "Population pyramid":
+        c1, _ = st.columns(2)
+        with c1:
+            muni = st.selectbox("Municipality:", muni_names)
+        _render_pyramid(scoped[scoped["Municipio"] == muni], muni)
+        return
+
+    all_years = sorted(scoped["AÑO"].unique().astype(int), reverse=True)
+    c1, c2, c3 = st.columns(3)
+    with c1:
+        gender = st.selectbox("Gender:", genders)
+    with c2:
+        age = st.selectbox("Age:", AGE_SINGLE)
+    with c3:
+        selected_munis = st.multiselect("Municipalities:", muni_names)
+    with st.sidebar:
+        selected_presidents = president_multiselect(get_valid_presidents(all_years))
+        comparing = len(selected_presidents) >= 2
+        selected_years = [] if comparing else st.multiselect("Year:", all_years)
+        show_projected = st.checkbox("Show projected", value=False)
+    president = selected_presidents[0] if len(selected_presidents) == 1 else None
+
+    future_years = [y for y in selected_years if y > PREV_YEAR]
+    if future_years and not show_projected:
+        st.warning(
+            f"Year {future_years[0]} contain projected data. "
+            "Enable 'Show projected' to include them."
+        )
+        st.stop()
+
+    if not selected_munis:
+        st.info("Select one or more municipalities.")
+        return
+
+    noun = "Population" if gender == "Total" else gender
+    pivot = pop.geo_trend(scoped, "Municipio", selected_munis, gender, age)
+    pivot, show_all = show_all_years(pivot, president, return_flag=True)
+
+    past_years = [y for y in selected_years if y < 2000]
+    if past_years and not show_all and not president:
+        st.warning("Remember to select 'Show all years' to see info about years prior to 2000")
+        st.stop()
+
+    if not show_projected:
+        pivot = pivot[pivot.index <= PREV_YEAR]
+    if selected_years:
+        pivot = pivot[pivot.index.isin(selected_years)]
+    _render_pop_geo_chart(pivot, chart_type, "municipality", noun, comparing, president, selected_presidents)
+    if show_projected and (pivot.index > PREV_YEAR).any():
+        st.caption(PROJECTED_NOTE)
+    st.caption("Source: DANE")

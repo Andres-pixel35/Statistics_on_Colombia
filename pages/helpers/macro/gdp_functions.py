@@ -2,9 +2,10 @@ import pandas as pd
 import streamlit as st
 from pages.helpers.macro import macro_charts as mc
 from generalities.macro_generalities.dictionaries import presidents
-from generalities.function import get_valid_presidents, to_datatime, president_multiselect, reshape_by_presidents, load_csv, BASE_DIR, highlight_selectbox
+from generalities.function import get_valid_presidents, president_multiselect, reshape_by_presidents, load_csv, BASE_DIR, highlight_selectbox
+from generalities.macro_generalities.population import PREV_YEAR
 
-POPULATION_PATH = BASE_DIR / "data/banco_republica/population/population.csv"
+POPULATION_PATH = BASE_DIR / "data/dane/population/nacional.csv"
 
 
 def clean_gdp(df: pd.DataFrame, rows):
@@ -88,9 +89,8 @@ def generalities_spend_product(df: pd.DataFrame, terms: dict, variable: int|list
 
     if per_capita:
         pop_raw = load_csv(POPULATION_PATH)
-        pop_raw = to_datatime(pop_raw, dayfirst=True)
-        pop = pop_raw["Población"].astype(int)
-        pop.index = pop.index.year
+        pop = pop_raw.set_index("AÑO")["Total"].astype(int)
+        pop = pop[pop.index <= PREV_YEAR]            # exclude projected years
         clean_years = gdp_series.index.str.replace(r'\D+', '', regex=True).astype(int)
         pop_aligned = pd.Series(pop.reindex(clean_years).values, index=gdp_series.index)
         original_name = gdp_series.name if isinstance(gdp_series, pd.Series) else None
