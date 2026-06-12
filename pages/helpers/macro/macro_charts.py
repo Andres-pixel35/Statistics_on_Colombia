@@ -354,6 +354,83 @@ def gdp_growth(df: pd.DataFrame, year: list, president: str, index: int, quarter
     return fig
 
 
+def projection_line(data: pd.DataFrame, info: list, split_year: int, highlight: str = None, labels: dict = None):
+    """Line chart where each series is solid up to `split_year` and dashed after it
+    (projected years)."""
+    data = cap_series(data)
+    if isinstance(data, pd.Series):
+        data = data.to_frame()
+    labels = labels or {}
+    palette = px.colors.qualitative.Plotly
+
+    fig = go.Figure()
+    for i, col in enumerate(data.columns):
+        name = labels.get(col, col)
+        color = palette[i % len(palette)]
+        if highlight and name != highlight:
+            color = "rgba(180,180,180,0.3)"
+        s = data[col].dropna()
+        obs = s[s.index <= split_year]
+        proj = s[s.index >= split_year]
+        fig.add_trace(go.Scatter(
+            x=[str(j) for j in obs.index], y=obs.values, mode="lines", name=name,
+            line=dict(color=color),
+            hovertemplate=f"<b>{name}</b><br>{info[1]}: %{{x}}<br>{info[2]}: %{{y:,.0f}}<extra></extra>",
+        ))
+        if len(proj) > 1:
+            fig.add_trace(go.Scatter(
+                x=[str(j) for j in proj.index], y=proj.values, mode="lines", name=name,
+                line=dict(color=color, dash="dash"), showlegend=False,
+                hovertemplate=f"<b>{name} (projected)</b><br>{info[1]}: %{{x}}<br>{info[2]}: %{{y:,.0f}}<extra></extra>",
+            ))
+
+    fig.update_layout(
+        height=600,
+        title={"text": info[0], "font": {"size": 25}, "x": 0, "xanchor": "left"},
+        margin=dict(l=50, r=20, t=80, b=0),
+        xaxis_title=info[1], yaxis_title=info[2],
+        xaxis_title_font=dict(size=15), yaxis_title_font=dict(size=15),
+        legend_title_text="",
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="center", x=0.5),
+    )
+    fig.update_yaxes(showgrid=True, gridwidth=0.5, gridcolor="rgba(255, 255, 255, 0.1)",
+                     tickfont=dict(size=15), tickformat=",.0f")
+    fig.update_xaxes(type="category", dtick=1, tickangle=45, showgrid=False, tickfont=dict(size=15))
+    return fig
+
+def population_pyramid(men: pd.Series, women: pd.Series, info: list, projected: bool = False):
+    """Diverging horizontal bars: men to the left (negative), women to the right."""
+    groups = list(men.index)
+    title = info[0] + (" — projected" if projected else "")
+    maxv = max(men.max(), women.max()) or 1
+    ticks = [(-maxv) + (2 * maxv) * k / 6 for k in range(7)]
+
+    fig = go.Figure()
+    fig.add_trace(go.Bar(
+        y=groups, x=[-v for v in men.values], orientation="h", name="Men",
+        marker_color="#1f77b4", customdata=list(men.values),
+        hovertemplate="<b>Men</b><br>Age: %{y}<br>People: %{customdata:,.0f}<extra></extra>",
+    ))
+    fig.add_trace(go.Bar(
+        y=groups, x=list(women.values), orientation="h", name="Women",
+        marker_color="#e377c2",
+        hovertemplate="<b>Women</b><br>Age: %{y}<br>People: %{x:,.0f}<extra></extra>",
+    ))
+    fig.update_layout(
+        barmode="overlay", bargap=0.1, height=600,
+        title={"text": title, "font": {"size": 25}, "x": 0, "xanchor": "left"},
+        margin=dict(l=50, r=20, t=80, b=0),
+        xaxis_title="People", yaxis_title="Age group",
+        xaxis_title_font=dict(size=15), yaxis_title_font=dict(size=15),
+        legend_title_text="",
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="center", x=0.5),
+    )
+    fig.update_xaxes(tickvals=ticks, ticktext=[f"{abs(t):,.0f}" for t in ticks],
+                     showgrid=False, gridwidth=0.5, gridcolor="rgba(255, 255, 255, 0.1)",
+                     tickfont=dict(size=14))
+    fig.update_yaxes(showgrid=False, tickfont=dict(size=13), automargin=True)
+    return fig
+
 def render_chart(fig):
     st.plotly_chart(fig)
     msg = st.session_state.pop("chart_warning", None)
