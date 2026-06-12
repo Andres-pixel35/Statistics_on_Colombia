@@ -1,7 +1,4 @@
-from datetime import datetime
-from generalities.function import BASE_DIR
-
-PREV_YEAR = datetime.now().year - 1
+from generalities.function import BASE_DIR, PREV_YEAR  # PREV_YEAR re-exported for demography consumers
 
 POP_PATHS = {
     "national":     BASE_DIR / "data/dane/population/nacional.csv",

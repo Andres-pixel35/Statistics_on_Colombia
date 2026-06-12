@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 from generalities.macro_generalities.dictionaries import presidents
 from generalities.function import find_key_by_value, load_csv, norm
-from generalities.macro_generalities.deaths import GENDER_EN as DEATHS_GENDER_EN, AREA_EN, AGE_EN as DEATHS_AGE_EN, CAUSE_EN
+from generalities.demography_generalities.deaths import GENDER_EN as DEATHS_GENDER_EN, AREA_EN, AGE_EN as DEATHS_AGE_EN, CAUSE_EN
 
 
 def _cause_label(causa: pd.Series) -> pd.Series:
