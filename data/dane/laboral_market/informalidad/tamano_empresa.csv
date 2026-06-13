@@ -57,8 +57,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,Población ocupada,Ago - Oct,24035.76622
 2025,Total nacional,Población ocupada,Población ocupada,Sep - Nov,24298.367977
 2025,Total nacional,Población ocupada,Población ocupada,Oct - Dic,24397.302737
-2026,Total nacional,Población ocupada,Población ocupada,Nov - Ene,24016.432111
-2026,Total nacional,Población ocupada,Población ocupada,Dic - Feb,23848.204876
+2025,Total nacional,Población ocupada,Población ocupada,Nov - Ene,24016.432111
+2025,Total nacional,Población ocupada,Población ocupada,Dic - Feb,23848.204876
 2026,Total nacional,Población ocupada,Población ocupada,Ene - Mar,23890.987975
 2021,Total nacional,Población ocupada,Microempresa,Ene - Mar,13428.778877666666
 2021,Total nacional,Población ocupada,Microempresa,Feb - Abr,13487.410765666666
@@ -118,8 +118,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,Microempresa,Ago - Oct,14862.954573
 2025,Total nacional,Población ocupada,Microempresa,Sep - Nov,15043.869906
 2025,Total nacional,Población ocupada,Microempresa,Oct - Dic,15187.2068
-2026,Total nacional,Población ocupada,Microempresa,Nov - Ene,14945.184952
-2026,Total nacional,Población ocupada,Microempresa,Dic - Feb,14838.221966
+2025,Total nacional,Población ocupada,Microempresa,Nov - Ene,14945.184952
+2025,Total nacional,Población ocupada,Microempresa,Dic - Feb,14838.221966
 2026,Total nacional,Población ocupada,Microempresa,Ene - Mar,14890.118115
 2021,Total nacional,Población ocupada,Empresa pequeña,Ene - Mar,2376.930778333333
 2021,Total nacional,Población ocupada,Empresa pequeña,Feb - Abr,2365.616847
@@ -179,8 +179,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,Empresa pequeña,Ago - Oct,2422.270624
 2025,Total nacional,Población ocupada,Empresa pequeña,Sep - Nov,2463.75468
 2025,Total nacional,Población ocupada,Empresa pequeña,Oct - Dic,2493.558542
-2026,Total nacional,Población ocupada,Empresa pequeña,Nov - Ene,2471.611406
-2026,Total nacional,Población ocupada,Empresa pequeña,Dic - Feb,2406.99771
+2025,Total nacional,Población ocupada,Empresa pequeña,Nov - Ene,2471.611406
+2025,Total nacional,Población ocupada,Empresa pequeña,Dic - Feb,2406.99771
 2026,Total nacional,Población ocupada,Empresa pequeña,Ene - Mar,2347.826394
 2021,Total nacional,Población ocupada,Empresa mediana,Ene - Mar,1492.4112723333335
 2021,Total nacional,Población ocupada,Empresa mediana,Feb - Abr,1509.7818963333332
@@ -240,8 +240,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,Empresa mediana,Ago - Oct,1550.473885
 2025,Total nacional,Población ocupada,Empresa mediana,Sep - Nov,1615.715796
 2025,Total nacional,Población ocupada,Empresa mediana,Oct - Dic,1627.910774
-2026,Total nacional,Población ocupada,Empresa mediana,Nov - Ene,1580.56278
-2026,Total nacional,Población ocupada,Empresa mediana,Dic - Feb,1537.911454
+2025,Total nacional,Población ocupada,Empresa mediana,Nov - Ene,1580.56278
+2025,Total nacional,Población ocupada,Empresa mediana,Dic - Feb,1537.911454
 2026,Total nacional,Población ocupada,Empresa mediana,Ene - Mar,1526.243951
 2021,Total nacional,Población ocupada,Empresa grande,Ene - Mar,2489.0895306666666
 2021,Total nacional,Población ocupada,Empresa grande,Feb - Abr,2641.3480036666665
@@ -301,8 +301,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,Empresa grande,Ago - Oct,5200.067138
 2025,Total nacional,Población ocupada,Empresa grande,Sep - Nov,5175.027595
 2025,Total nacional,Población ocupada,Empresa grande,Oct - Dic,5088.626621
-2026,Total nacional,Población ocupada,Empresa grande,Nov - Ene,5019.072974
-2026,Total nacional,Población ocupada,Empresa grande,Dic - Feb,5065.073746
+2025,Total nacional,Población ocupada,Empresa grande,Nov - Ene,5019.072974
+2025,Total nacional,Población ocupada,Empresa grande,Dic - Feb,5065.073746
 2026,Total nacional,Población ocupada,Empresa grande,Ene - Mar,5126.799515
 2021,Total nacional,Formal,Formal,Ene - Mar,7785.653908666667
 2021,Total nacional,Formal,Formal,Feb - Abr,7909.355157000001
@@ -362,8 +362,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,Formal,Ago - Oct,10710.24066
 2025,Total nacional,Formal,Formal,Sep - Nov,10848.084908
 2025,Total nacional,Formal,Formal,Oct - Dic,10811.989069
-2026,Total nacional,Formal,Formal,Nov - Ene,10726.999686
-2026,Total nacional,Formal,Formal,Dic - Feb,10659.72814
+2025,Total nacional,Formal,Formal,Nov - Ene,10726.999686
+2025,Total nacional,Formal,Formal,Dic - Feb,10659.72814
 2026,Total nacional,Formal,Formal,Ene - Mar,10672.697775
 2021,Total nacional,Formal,Microempresa,Ene - Mar,2355.1082743333336
 2021,Total nacional,Formal,Microempresa,Feb - Abr,2274.9905403333337
@@ -423,8 +423,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,Microempresa,Ago - Oct,2250.239385
 2025,Total nacional,Formal,Microempresa,Sep - Nov,2332.343754
 2025,Total nacional,Formal,Microempresa,Oct - Dic,2359.841291
-2026,Total nacional,Formal,Microempresa,Nov - Ene,2383.896238
-2026,Total nacional,Formal,Microempresa,Dic - Feb,2334.376666
+2025,Total nacional,Formal,Microempresa,Nov - Ene,2383.896238
+2025,Total nacional,Formal,Microempresa,Dic - Feb,2334.376666
 2026,Total nacional,Formal,Microempresa,Ene - Mar,2335.415781
 2021,Total nacional,Formal,Empresa pequeña,Ene - Mar,1822.7867143333333
 2021,Total nacional,Formal,Empresa pequeña,Feb - Abr,1823.3912400000002
@@ -484,8 +484,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,Empresa pequeña,Ago - Oct,1914.695357
 2025,Total nacional,Formal,Empresa pequeña,Sep - Nov,1923.194129
 2025,Total nacional,Formal,Empresa pequeña,Oct - Dic,1938.615697
-2026,Total nacional,Formal,Empresa pequeña,Nov - Ene,1943.422228
-2026,Total nacional,Formal,Empresa pequeña,Dic - Feb,1906.541188
+2025,Total nacional,Formal,Empresa pequeña,Nov - Ene,1943.422228
+2025,Total nacional,Formal,Empresa pequeña,Dic - Feb,1906.541188
 2026,Total nacional,Formal,Empresa pequeña,Ene - Mar,1860.467601
 2021,Total nacional,Formal,Empresa mediana,Ene - Mar,1318.9767543333335
 2021,Total nacional,Formal,Empresa mediana,Feb - Abr,1356.5766433333333
@@ -545,8 +545,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,Empresa mediana,Ago - Oct,1473.28279
 2025,Total nacional,Formal,Empresa mediana,Sep - Nov,1530.310199
 2025,Total nacional,Formal,Empresa mediana,Oct - Dic,1532.871083
-2026,Total nacional,Formal,Empresa mediana,Nov - Ene,1494.714871
-2026,Total nacional,Formal,Empresa mediana,Dic - Feb,1463.646441
+2025,Total nacional,Formal,Empresa mediana,Nov - Ene,1494.714871
+2025,Total nacional,Formal,Empresa mediana,Dic - Feb,1463.646441
 2026,Total nacional,Formal,Empresa mediana,Ene - Mar,1460.355652
 2021,Total nacional,Formal,Empresa grande,Ene - Mar,2288.7821653333335
 2021,Total nacional,Formal,Empresa grande,Feb - Abr,2454.3967329999996
@@ -606,8 +606,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,Empresa grande,Ago - Oct,5072.023128
 2025,Total nacional,Formal,Empresa grande,Sep - Nov,5062.236825
 2025,Total nacional,Formal,Empresa grande,Oct - Dic,4980.660998
-2026,Total nacional,Formal,Empresa grande,Nov - Ene,4904.966348
-2026,Total nacional,Formal,Empresa grande,Dic - Feb,4955.163845
+2025,Total nacional,Formal,Empresa grande,Nov - Ene,4904.966348
+2025,Total nacional,Formal,Empresa grande,Dic - Feb,4955.163845
 2026,Total nacional,Formal,Empresa grande,Ene - Mar,5016.458742
 2021,Total nacional,Informal,Informal,Ene - Mar,12001.55655
 2021,Total nacional,Informal,Informal,Feb - Abr,12094.802355666665
@@ -667,8 +667,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,Informal,Ago - Oct,13325.525561
 2025,Total nacional,Informal,Informal,Sep - Nov,13450.283069
 2025,Total nacional,Informal,Informal,Oct - Dic,13585.313668
-2026,Total nacional,Informal,Informal,Nov - Ene,13289.432426
-2026,Total nacional,Informal,Informal,Dic - Feb,13188.476735
+2025,Total nacional,Informal,Informal,Nov - Ene,13289.432426
+2025,Total nacional,Informal,Informal,Dic - Feb,13188.476735
 2026,Total nacional,Informal,Informal,Ene - Mar,13218.2902
 2021,Total nacional,Informal,Microempresa,Ene - Mar,11073.670603333332
 2021,Total nacional,Informal,Microempresa,Feb - Abr,11212.420225333333
@@ -728,8 +728,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,Microempresa,Ago - Oct,12612.715189
 2025,Total nacional,Informal,Microempresa,Sep - Nov,12711.526151
 2025,Total nacional,Informal,Microempresa,Oct - Dic,12827.365509
-2026,Total nacional,Informal,Microempresa,Nov - Ene,12561.288714
-2026,Total nacional,Informal,Microempresa,Dic - Feb,12503.8453
+2025,Total nacional,Informal,Microempresa,Nov - Ene,12561.288714
+2025,Total nacional,Informal,Microempresa,Dic - Feb,12503.8453
 2026,Total nacional,Informal,Microempresa,Ene - Mar,12554.702335
 2021,Total nacional,Informal,Empresa pequeña,Ene - Mar,554.1440636666666
 2021,Total nacional,Informal,Empresa pequeña,Feb - Abr,542.225607
@@ -789,8 +789,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,Empresa pequeña,Ago - Oct,507.575267
 2025,Total nacional,Informal,Empresa pequeña,Sep - Nov,540.560551
 2025,Total nacional,Informal,Empresa pequeña,Oct - Dic,554.942845
-2026,Total nacional,Informal,Empresa pequeña,Nov - Ene,528.189178
-2026,Total nacional,Informal,Empresa pequeña,Dic - Feb,500.456522
+2025,Total nacional,Informal,Empresa pequeña,Nov - Ene,528.189178
+2025,Total nacional,Informal,Empresa pequeña,Dic - Feb,500.456522
 2026,Total nacional,Informal,Empresa pequeña,Ene - Mar,487.358793
 2021,Total nacional,Informal,Empresa mediana,Ene - Mar,173.43451800000003
 2021,Total nacional,Informal,Empresa mediana,Feb - Abr,153.205253
@@ -850,8 +850,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,Empresa mediana,Ago - Oct,77.191095
 2025,Total nacional,Informal,Empresa mediana,Sep - Nov,85.405597
 2025,Total nacional,Informal,Empresa mediana,Oct - Dic,95.039691
-2026,Total nacional,Informal,Empresa mediana,Nov - Ene,85.847908
-2026,Total nacional,Informal,Empresa mediana,Dic - Feb,74.265013
+2025,Total nacional,Informal,Empresa mediana,Nov - Ene,85.847908
+2025,Total nacional,Informal,Empresa mediana,Dic - Feb,74.265013
 2026,Total nacional,Informal,Empresa mediana,Ene - Mar,65.888299
 2021,Total nacional,Informal,Empresa grande,Ene - Mar,200.30736533333334
 2021,Total nacional,Informal,Empresa grande,Feb - Abr,186.951271
@@ -911,8 +911,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,Empresa grande,Ago - Oct,128.04401
 2025,Total nacional,Informal,Empresa grande,Sep - Nov,112.79077
 2025,Total nacional,Informal,Empresa grande,Oct - Dic,107.965623
-2026,Total nacional,Informal,Empresa grande,Nov - Ene,114.106626
-2026,Total nacional,Informal,Empresa grande,Dic - Feb,109.9099
+2025,Total nacional,Informal,Empresa grande,Nov - Ene,114.106626
+2025,Total nacional,Informal,Empresa grande,Dic - Feb,109.9099
 2026,Total nacional,Informal,Empresa grande,Ene - Mar,110.340773
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Ene - Mar,9226.413326333335
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Feb - Abr,9320.446573000001
@@ -972,8 +972,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Ago - Oct,11497.298445
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Sep - Nov,11566.757859
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Oct - Dic,11613.486667
-2026,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Nov - Ene,11384.962974
-2026,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Dic - Feb,11260.998726
+2025,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Nov - Ene,11384.962974
+2025,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Dic - Feb,11260.998726
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Ene - Mar,11227.725964
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Microempresa,Ene - Mar,5216.088568666667
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Microempresa,Feb - Abr,5222.334708333333
@@ -1033,8 +1033,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Microempresa,Ago - Oct,5835.877085
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Microempresa,Sep - Nov,5874.884405
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Microempresa,Oct - Dic,5915.329357
-2026,13 Ciudades y áreas metropolitanas,Población ocupada,Microempresa,Nov - Ene,5718.294605
-2026,13 Ciudades y áreas metropolitanas,Población ocupada,Microempresa,Dic - Feb,5647.991865
+2025,13 Ciudades y áreas metropolitanas,Población ocupada,Microempresa,Nov - Ene,5718.294605
+2025,13 Ciudades y áreas metropolitanas,Población ocupada,Microempresa,Dic - Feb,5647.991865
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Microempresa,Ene - Mar,5652.04427
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Empresa pequeña,Ene - Mar,1441.5185566666667
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Empresa pequeña,Feb - Abr,1425.4297383333333
@@ -1094,8 +1094,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Empresa pequeña,Ago - Oct,1441.905684
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Empresa pequeña,Sep - Nov,1459.686561
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Empresa pequeña,Oct - Dic,1473.979622
-2026,13 Ciudades y áreas metropolitanas,Población ocupada,Empresa pequeña,Nov - Ene,1464.992164
-2026,13 Ciudades y áreas metropolitanas,Población ocupada,Empresa pequeña,Dic - Feb,1413.840552
+2025,13 Ciudades y áreas metropolitanas,Población ocupada,Empresa pequeña,Nov - Ene,1464.992164
+2025,13 Ciudades y áreas metropolitanas,Población ocupada,Empresa pequeña,Dic - Feb,1413.840552
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Empresa pequeña,Ene - Mar,1356.815533
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Empresa mediana,Ene - Mar,965.192458
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Empresa mediana,Feb - Abr,989.3509523333333
@@ -1155,8 +1155,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Empresa mediana,Ago - Oct,937.506035
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Empresa mediana,Sep - Nov,981.702203
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Empresa mediana,Oct - Dic,1025.110505
-2026,13 Ciudades y áreas metropolitanas,Población ocupada,Empresa mediana,Nov - Ene,980.903774
-2026,13 Ciudades y áreas metropolitanas,Población ocupada,Empresa mediana,Dic - Feb,937.296037
+2025,13 Ciudades y áreas metropolitanas,Población ocupada,Empresa mediana,Nov - Ene,980.903774
+2025,13 Ciudades y áreas metropolitanas,Población ocupada,Empresa mediana,Dic - Feb,937.296037
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Empresa mediana,Ene - Mar,937.350777
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Empresa grande,Ene - Mar,1603.6137426666667
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Empresa grande,Feb - Abr,1683.3311736666665
@@ -1216,8 +1216,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Empresa grande,Ago - Oct,3282.009641
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Empresa grande,Sep - Nov,3250.48469
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Empresa grande,Oct - Dic,3199.067183
-2026,13 Ciudades y áreas metropolitanas,Población ocupada,Empresa grande,Nov - Ene,3220.772432
-2026,13 Ciudades y áreas metropolitanas,Población ocupada,Empresa grande,Dic - Feb,3261.870272
+2025,13 Ciudades y áreas metropolitanas,Población ocupada,Empresa grande,Nov - Ene,3220.772432
+2025,13 Ciudades y áreas metropolitanas,Población ocupada,Empresa grande,Dic - Feb,3261.870272
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Empresa grande,Ene - Mar,3281.515384
 2021,13 Ciudades y áreas metropolitanas,Formal,Formal,Ene - Mar,4990.366199666666
 2021,13 Ciudades y áreas metropolitanas,Formal,Formal,Feb - Abr,4999.7586716666665
@@ -1277,8 +1277,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,Formal,Ago - Oct,6616.207533
 2025,13 Ciudades y áreas metropolitanas,Formal,Formal,Sep - Nov,6677.690246
 2025,13 Ciudades y áreas metropolitanas,Formal,Formal,Oct - Dic,6701.28994
-2026,13 Ciudades y áreas metropolitanas,Formal,Formal,Nov - Ene,6713.179559
-2026,13 Ciudades y áreas metropolitanas,Formal,Formal,Dic - Feb,6634.691589
+2025,13 Ciudades y áreas metropolitanas,Formal,Formal,Nov - Ene,6713.179559
+2025,13 Ciudades y áreas metropolitanas,Formal,Formal,Dic - Feb,6634.691589
 2026,13 Ciudades y áreas metropolitanas,Formal,Formal,Ene - Mar,6625.45175
 2021,13 Ciudades y áreas metropolitanas,Formal,Microempresa,Ene - Mar,1518.8882979999998
 2021,13 Ciudades y áreas metropolitanas,Formal,Microempresa,Feb - Abr,1411.7116286666667
@@ -1338,8 +1338,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,Microempresa,Ago - Oct,1284.739426
 2025,13 Ciudades y áreas metropolitanas,Formal,Microempresa,Sep - Nov,1323.571028
 2025,13 Ciudades y áreas metropolitanas,Formal,Microempresa,Oct - Dic,1341.470105
-2026,13 Ciudades y áreas metropolitanas,Formal,Microempresa,Nov - Ene,1384.745665
-2026,13 Ciudades y áreas metropolitanas,Formal,Microempresa,Dic - Feb,1334.992133
+2025,13 Ciudades y áreas metropolitanas,Formal,Microempresa,Nov - Ene,1384.745665
+2025,13 Ciudades y áreas metropolitanas,Formal,Microempresa,Dic - Feb,1334.992133
 2026,13 Ciudades y áreas metropolitanas,Formal,Microempresa,Ene - Mar,1351.953687
 2021,13 Ciudades y áreas metropolitanas,Formal,Empresa pequeña,Ene - Mar,1138.5225706666668
 2021,13 Ciudades y áreas metropolitanas,Formal,Empresa pequeña,Feb - Abr,1126.1910613333332
@@ -1399,8 +1399,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,Empresa pequeña,Ago - Oct,1212.673286
 2025,13 Ciudades y áreas metropolitanas,Formal,Empresa pequeña,Sep - Nov,1228.631596
 2025,13 Ciudades y áreas metropolitanas,Formal,Empresa pequeña,Oct - Dic,1237.753169
-2026,13 Ciudades y áreas metropolitanas,Formal,Empresa pequeña,Nov - Ene,1239.074557
-2026,13 Ciudades y áreas metropolitanas,Formal,Empresa pequeña,Dic - Feb,1205.884575
+2025,13 Ciudades y áreas metropolitanas,Formal,Empresa pequeña,Nov - Ene,1239.074557
+2025,13 Ciudades y áreas metropolitanas,Formal,Empresa pequeña,Dic - Feb,1205.884575
 2026,13 Ciudades y áreas metropolitanas,Formal,Empresa pequeña,Ene - Mar,1157.239038
 2021,13 Ciudades y áreas metropolitanas,Formal,Empresa mediana,Ene - Mar,861.6928953333332
 2021,13 Ciudades y áreas metropolitanas,Formal,Empresa mediana,Feb - Abr,893.3268606666667
@@ -1460,8 +1460,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,Empresa mediana,Ago - Oct,896.997967
 2025,13 Ciudades y áreas metropolitanas,Formal,Empresa mediana,Sep - Nov,929.094017
 2025,13 Ciudades y áreas metropolitanas,Formal,Empresa mediana,Oct - Dic,971.053397
-2026,13 Ciudades y áreas metropolitanas,Formal,Empresa mediana,Nov - Ene,931.949108
-2026,13 Ciudades y áreas metropolitanas,Formal,Empresa mediana,Dic - Feb,894.315967
+2025,13 Ciudades y áreas metropolitanas,Formal,Empresa mediana,Nov - Ene,931.949108
+2025,13 Ciudades y áreas metropolitanas,Formal,Empresa mediana,Dic - Feb,894.315967
 2026,13 Ciudades y áreas metropolitanas,Formal,Empresa mediana,Ene - Mar,892.632999
 2021,13 Ciudades y áreas metropolitanas,Formal,Empresa grande,Ene - Mar,1471.262436
 2021,13 Ciudades y áreas metropolitanas,Formal,Empresa grande,Feb - Abr,1568.5291210000003
@@ -1521,8 +1521,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,Empresa grande,Ago - Oct,3221.796853
 2025,13 Ciudades y áreas metropolitanas,Formal,Empresa grande,Sep - Nov,3196.393605
 2025,13 Ciudades y áreas metropolitanas,Formal,Empresa grande,Oct - Dic,3151.013269
-2026,13 Ciudades y áreas metropolitanas,Formal,Empresa grande,Nov - Ene,3157.410229
-2026,13 Ciudades y áreas metropolitanas,Formal,Empresa grande,Dic - Feb,3199.498914
+2025,13 Ciudades y áreas metropolitanas,Formal,Empresa grande,Nov - Ene,3157.410229
+2025,13 Ciudades y áreas metropolitanas,Formal,Empresa grande,Dic - Feb,3199.498914
 2026,13 Ciudades y áreas metropolitanas,Formal,Empresa grande,Ene - Mar,3223.626025
 2021,13 Ciudades y áreas metropolitanas,Informal,Informal,Ene - Mar,4236.047126666667
 2021,13 Ciudades y áreas metropolitanas,Informal,Informal,Feb - Abr,4320.687901333334
@@ -1582,8 +1582,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,Informal,Ago - Oct,4881.090912
 2025,13 Ciudades y áreas metropolitanas,Informal,Informal,Sep - Nov,4889.067612
 2025,13 Ciudades y áreas metropolitanas,Informal,Informal,Oct - Dic,4912.196727
-2026,13 Ciudades y áreas metropolitanas,Informal,Informal,Nov - Ene,4671.783415
-2026,13 Ciudades y áreas metropolitanas,Informal,Informal,Dic - Feb,4626.307137
+2025,13 Ciudades y áreas metropolitanas,Informal,Informal,Nov - Ene,4671.783415
+2025,13 Ciudades y áreas metropolitanas,Informal,Informal,Dic - Feb,4626.307137
 2026,13 Ciudades y áreas metropolitanas,Informal,Informal,Ene - Mar,4602.274214
 2021,13 Ciudades y áreas metropolitanas,Informal,Microempresa,Ene - Mar,3697.2002706666667
 2021,13 Ciudades y áreas metropolitanas,Informal,Microempresa,Feb - Abr,3810.6230796666664
@@ -1643,8 +1643,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,Microempresa,Ago - Oct,4551.137659
 2025,13 Ciudades y áreas metropolitanas,Informal,Microempresa,Sep - Nov,4551.313376
 2025,13 Ciudades y áreas metropolitanas,Informal,Microempresa,Oct - Dic,4573.859252
-2026,13 Ciudades y áreas metropolitanas,Informal,Microempresa,Nov - Ene,4333.54894
-2026,13 Ciudades y áreas metropolitanas,Informal,Microempresa,Dic - Feb,4312.999731
+2025,13 Ciudades y áreas metropolitanas,Informal,Microempresa,Nov - Ene,4333.54894
+2025,13 Ciudades y áreas metropolitanas,Informal,Microempresa,Dic - Feb,4312.999731
 2026,13 Ciudades y áreas metropolitanas,Informal,Microempresa,Ene - Mar,4300.090582
 2021,13 Ciudades y áreas metropolitanas,Informal,Empresa pequeña,Ene - Mar,302.9959866666666
 2021,13 Ciudades y áreas metropolitanas,Informal,Empresa pequeña,Feb - Abr,299.2386773333333
@@ -1704,8 +1704,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,Empresa pequeña,Ago - Oct,229.232398
 2025,13 Ciudades y áreas metropolitanas,Informal,Empresa pequeña,Sep - Nov,231.054965
 2025,13 Ciudades y áreas metropolitanas,Informal,Empresa pequeña,Oct - Dic,236.226453
-2026,13 Ciudades y áreas metropolitanas,Informal,Empresa pequeña,Nov - Ene,225.917606
-2026,13 Ciudades y áreas metropolitanas,Informal,Empresa pequeña,Dic - Feb,207.955977
+2025,13 Ciudades y áreas metropolitanas,Informal,Empresa pequeña,Nov - Ene,225.917606
+2025,13 Ciudades y áreas metropolitanas,Informal,Empresa pequeña,Dic - Feb,207.955977
 2026,13 Ciudades y áreas metropolitanas,Informal,Empresa pequeña,Ene - Mar,199.576495
 2021,13 Ciudades y áreas metropolitanas,Informal,Empresa mediana,Ene - Mar,103.49956300000001
 2021,13 Ciudades y áreas metropolitanas,Informal,Empresa mediana,Feb - Abr,96.024092
@@ -1765,8 +1765,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,Empresa mediana,Ago - Oct,40.508067
 2025,13 Ciudades y áreas metropolitanas,Informal,Empresa mediana,Sep - Nov,52.608187
 2025,13 Ciudades y áreas metropolitanas,Informal,Empresa mediana,Oct - Dic,54.057108
-2026,13 Ciudades y áreas metropolitanas,Informal,Empresa mediana,Nov - Ene,48.954667
-2026,13 Ciudades y áreas metropolitanas,Informal,Empresa mediana,Dic - Feb,42.98007
+2025,13 Ciudades y áreas metropolitanas,Informal,Empresa mediana,Nov - Ene,48.954667
+2025,13 Ciudades y áreas metropolitanas,Informal,Empresa mediana,Dic - Feb,42.98007
 2026,13 Ciudades y áreas metropolitanas,Informal,Empresa mediana,Ene - Mar,44.717777
 2021,13 Ciudades y áreas metropolitanas,Informal,Empresa grande,Ene - Mar,132.3513066666667
 2021,13 Ciudades y áreas metropolitanas,Informal,Empresa grande,Feb - Abr,114.80205266666667
@@ -1826,8 +1826,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,Empresa grande,Ago - Oct,60.212788
 2025,13 Ciudades y áreas metropolitanas,Informal,Empresa grande,Sep - Nov,54.091084
 2025,13 Ciudades y áreas metropolitanas,Informal,Empresa grande,Oct - Dic,48.053914
-2026,13 Ciudades y áreas metropolitanas,Informal,Empresa grande,Nov - Ene,63.362202
-2026,13 Ciudades y áreas metropolitanas,Informal,Empresa grande,Dic - Feb,62.371358
+2025,13 Ciudades y áreas metropolitanas,Informal,Empresa grande,Nov - Ene,63.362202
+2025,13 Ciudades y áreas metropolitanas,Informal,Empresa grande,Dic - Feb,62.371358
 2026,13 Ciudades y áreas metropolitanas,Informal,Empresa grande,Ene - Mar,57.889359
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Ene - Mar,10207.340572
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Feb - Abr,10314.171929333332
@@ -1887,8 +1887,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Ago - Oct,12699.154455
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Sep - Nov,12774.461218
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Oct - Dic,12813.274178
-2026,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Nov - Ene,12564.239348
-2026,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Dic - Feb,12429.285203
+2025,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Nov - Ene,12564.239348
+2025,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Dic - Feb,12429.285203
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Ene - Mar,12402.357556
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Microempresa,Ene - Mar,5867.750447000001
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Microempresa,Feb - Abr,5880.449617333333
@@ -1948,8 +1948,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Microempresa,Ago - Oct,6586.347263
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Microempresa,Sep - Nov,6629.304536
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Microempresa,Oct - Dic,6663.47163
-2026,23 Ciudades y áreas metropolitanas,Población ocupada,Microempresa,Nov - Ene,6449.643852
-2026,23 Ciudades y áreas metropolitanas,Población ocupada,Microempresa,Dic - Feb,6363.57683
+2025,23 Ciudades y áreas metropolitanas,Población ocupada,Microempresa,Nov - Ene,6449.643852
+2025,23 Ciudades y áreas metropolitanas,Población ocupada,Microempresa,Dic - Feb,6363.57683
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Microempresa,Ene - Mar,6366.788147
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Empresa pequeña,Ene - Mar,1571.9327990000002
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Empresa pequeña,Feb - Abr,1557.0965039999999
@@ -2009,8 +2009,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Empresa pequeña,Ago - Oct,1569.572062
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Empresa pequeña,Sep - Nov,1595.724867
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Empresa pequeña,Oct - Dic,1612.860497
-2026,23 Ciudades y áreas metropolitanas,Población ocupada,Empresa pequeña,Nov - Ene,1602.273336
-2026,23 Ciudades y áreas metropolitanas,Población ocupada,Empresa pequeña,Dic - Feb,1547.640931
+2025,23 Ciudades y áreas metropolitanas,Población ocupada,Empresa pequeña,Nov - Ene,1602.273336
+2025,23 Ciudades y áreas metropolitanas,Población ocupada,Empresa pequeña,Dic - Feb,1547.640931
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Empresa pequeña,Ene - Mar,1489.780464
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Empresa mediana,Ene - Mar,1037.1175653333332
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Empresa mediana,Feb - Abr,1064.9483146666666
@@ -2070,8 +2070,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Empresa mediana,Ago - Oct,1017.082884
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Empresa mediana,Sep - Nov,1064.223954
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Empresa mediana,Oct - Dic,1108.712541
-2026,23 Ciudades y áreas metropolitanas,Población ocupada,Empresa mediana,Nov - Ene,1061.96008
-2026,23 Ciudades y áreas metropolitanas,Población ocupada,Empresa mediana,Dic - Feb,1016.284837
+2025,23 Ciudades y áreas metropolitanas,Población ocupada,Empresa mediana,Nov - Ene,1061.96008
+2025,23 Ciudades y áreas metropolitanas,Población ocupada,Empresa mediana,Dic - Feb,1016.284837
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Empresa mediana,Ene - Mar,1018.245495
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Empresa grande,Ene - Mar,1730.5397606666666
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Empresa grande,Feb - Abr,1811.6774933333334
@@ -2131,8 +2131,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Empresa grande,Ago - Oct,3526.152246
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Empresa grande,Sep - Nov,3485.20786
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Empresa grande,Oct - Dic,3428.22951
-2026,23 Ciudades y áreas metropolitanas,Población ocupada,Empresa grande,Nov - Ene,3450.36208
-2026,23 Ciudades y áreas metropolitanas,Población ocupada,Empresa grande,Dic - Feb,3501.782606
+2025,23 Ciudades y áreas metropolitanas,Población ocupada,Empresa grande,Nov - Ene,3450.36208
+2025,23 Ciudades y áreas metropolitanas,Población ocupada,Empresa grande,Dic - Feb,3501.782606
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Empresa grande,Ene - Mar,3527.54345
 2021,23 Ciudades y áreas metropolitanas,Formal,Formal,Ene - Mar,5381.842067
 2021,23 Ciudades y áreas metropolitanas,Formal,Formal,Feb - Abr,5397.806292666667
@@ -2192,8 +2192,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,Formal,Ago - Oct,7144.69372
 2025,23 Ciudades y áreas metropolitanas,Formal,Formal,Sep - Nov,7207.580947
 2025,23 Ciudades y áreas metropolitanas,Formal,Formal,Oct - Dic,7225.806379
-2026,23 Ciudades y áreas metropolitanas,Formal,Formal,Nov - Ene,7233.551609
-2026,23 Ciudades y áreas metropolitanas,Formal,Formal,Dic - Feb,7158.345735
+2025,23 Ciudades y áreas metropolitanas,Formal,Formal,Nov - Ene,7233.551609
+2025,23 Ciudades y áreas metropolitanas,Formal,Formal,Dic - Feb,7158.345735
 2026,23 Ciudades y áreas metropolitanas,Formal,Formal,Ene - Mar,7162.025443
 2021,23 Ciudades y áreas metropolitanas,Formal,Microempresa,Ene - Mar,1630.325211
 2021,23 Ciudades y áreas metropolitanas,Formal,Microempresa,Feb - Abr,1520.6255446666667
@@ -2253,8 +2253,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,Microempresa,Ago - Oct,1397.906795
 2025,23 Ciudades y áreas metropolitanas,Formal,Microempresa,Sep - Nov,1439.811104
 2025,23 Ciudades y áreas metropolitanas,Formal,Microempresa,Oct - Dic,1454.2847
-2026,23 Ciudades y áreas metropolitanas,Formal,Microempresa,Nov - Ene,1495.943653
-2026,23 Ciudades y áreas metropolitanas,Formal,Microempresa,Dic - Feb,1442.494083
+2025,23 Ciudades y áreas metropolitanas,Formal,Microempresa,Nov - Ene,1495.943653
+2025,23 Ciudades y áreas metropolitanas,Formal,Microempresa,Dic - Feb,1442.494083
 2026,23 Ciudades y áreas metropolitanas,Formal,Microempresa,Ene - Mar,1464.104953
 2021,23 Ciudades y áreas metropolitanas,Formal,Empresa pequeña,Ene - Mar,1239.0251606666668
 2021,23 Ciudades y áreas metropolitanas,Formal,Empresa pequeña,Feb - Abr,1230.136683
@@ -2314,8 +2314,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,Empresa pequeña,Ago - Oct,1315.503452
 2025,23 Ciudades y áreas metropolitanas,Formal,Empresa pequeña,Sep - Nov,1335.831533
 2025,23 Ciudades y áreas metropolitanas,Formal,Empresa pequeña,Oct - Dic,1346.997809
-2026,23 Ciudades y áreas metropolitanas,Formal,Empresa pequeña,Nov - Ene,1347.026184
-2026,23 Ciudades y áreas metropolitanas,Formal,Empresa pequeña,Dic - Feb,1313.041859
+2025,23 Ciudades y áreas metropolitanas,Formal,Empresa pequeña,Nov - Ene,1347.026184
+2025,23 Ciudades y áreas metropolitanas,Formal,Empresa pequeña,Dic - Feb,1313.041859
 2026,23 Ciudades y áreas metropolitanas,Formal,Empresa pequeña,Ene - Mar,1264.626329
 2021,23 Ciudades y áreas metropolitanas,Formal,Empresa mediana,Ene - Mar,923.9507096666666
 2021,23 Ciudades y áreas metropolitanas,Formal,Empresa mediana,Feb - Abr,960.1041453333333
@@ -2375,8 +2375,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,Empresa mediana,Ago - Oct,972.584899
 2025,23 Ciudades y áreas metropolitanas,Formal,Empresa mediana,Sep - Nov,1007.692841
 2025,23 Ciudades y áreas metropolitanas,Formal,Empresa mediana,Oct - Dic,1050.804529
-2026,23 Ciudades y áreas metropolitanas,Formal,Empresa mediana,Nov - Ene,1008.883232
-2026,23 Ciudades y áreas metropolitanas,Formal,Empresa mediana,Dic - Feb,969.714123
+2025,23 Ciudades y áreas metropolitanas,Formal,Empresa mediana,Nov - Ene,1008.883232
+2025,23 Ciudades y áreas metropolitanas,Formal,Empresa mediana,Dic - Feb,969.714123
 2026,23 Ciudades y áreas metropolitanas,Formal,Empresa mediana,Ene - Mar,969.810047
 2021,23 Ciudades y áreas metropolitanas,Formal,Empresa grande,Ene - Mar,1588.5409856666665
 2021,23 Ciudades y áreas metropolitanas,Formal,Empresa grande,Feb - Abr,1686.93992
@@ -2436,8 +2436,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,Empresa grande,Ago - Oct,3458.698574
 2025,23 Ciudades y áreas metropolitanas,Formal,Empresa grande,Sep - Nov,3424.24547
 2025,23 Ciudades y áreas metropolitanas,Formal,Empresa grande,Oct - Dic,3373.719341
-2026,23 Ciudades y áreas metropolitanas,Formal,Empresa grande,Nov - Ene,3381.69854
-2026,23 Ciudades y áreas metropolitanas,Formal,Empresa grande,Dic - Feb,3433.09567
+2025,23 Ciudades y áreas metropolitanas,Formal,Empresa grande,Nov - Ene,3381.69854
+2025,23 Ciudades y áreas metropolitanas,Formal,Empresa grande,Dic - Feb,3433.09567
 2026,23 Ciudades y áreas metropolitanas,Formal,Empresa grande,Ene - Mar,3463.484115
 2021,23 Ciudades y áreas metropolitanas,Informal,Informal,Ene - Mar,4825.498504666667
 2021,23 Ciudades y áreas metropolitanas,Informal,Informal,Feb - Abr,4916.365636333333
@@ -2497,8 +2497,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,Informal,Ago - Oct,5554.460735
 2025,23 Ciudades y áreas metropolitanas,Informal,Informal,Sep - Nov,5566.880271
 2025,23 Ciudades y áreas metropolitanas,Informal,Informal,Oct - Dic,5587.467798
-2026,23 Ciudades y áreas metropolitanas,Informal,Informal,Nov - Ene,5330.68774
-2026,23 Ciudades y áreas metropolitanas,Informal,Informal,Dic - Feb,5270.939468
+2025,23 Ciudades y áreas metropolitanas,Informal,Informal,Nov - Ene,5330.68774
+2025,23 Ciudades y áreas metropolitanas,Informal,Informal,Dic - Feb,5270.939468
 2026,23 Ciudades y áreas metropolitanas,Informal,Informal,Ene - Mar,5240.332113
 2021,23 Ciudades y áreas metropolitanas,Informal,Microempresa,Ene - Mar,4237.425235666667
 2021,23 Ciudades y áreas metropolitanas,Informal,Microempresa,Feb - Abr,4359.824072333333
@@ -2558,8 +2558,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,Microempresa,Ago - Oct,5188.440468
 2025,23 Ciudades y áreas metropolitanas,Informal,Microempresa,Sep - Nov,5189.493432
 2025,23 Ciudades y áreas metropolitanas,Informal,Microempresa,Oct - Dic,5209.186929
-2026,23 Ciudades y áreas metropolitanas,Informal,Microempresa,Nov - Ene,4953.700199
-2026,23 Ciudades y áreas metropolitanas,Informal,Microempresa,Dic - Feb,4921.082747
+2025,23 Ciudades y áreas metropolitanas,Informal,Microempresa,Nov - Ene,4953.700199
+2025,23 Ciudades y áreas metropolitanas,Informal,Microempresa,Dic - Feb,4921.082747
 2026,23 Ciudades y áreas metropolitanas,Informal,Microempresa,Ene - Mar,4902.683195
 2021,23 Ciudades y áreas metropolitanas,Informal,Empresa pequeña,Ene - Mar,332.9076386666666
 2021,23 Ciudades y áreas metropolitanas,Informal,Empresa pequeña,Feb - Abr,326.9598213333333
@@ -2619,8 +2619,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,Empresa pequeña,Ago - Oct,254.06861
 2025,23 Ciudades y áreas metropolitanas,Informal,Empresa pequeña,Sep - Nov,259.893335
 2025,23 Ciudades y áreas metropolitanas,Informal,Empresa pequeña,Oct - Dic,265.862689
-2026,23 Ciudades y áreas metropolitanas,Informal,Empresa pequeña,Nov - Ene,255.247153
-2026,23 Ciudades y áreas metropolitanas,Informal,Empresa pequeña,Dic - Feb,234.599072
+2025,23 Ciudades y áreas metropolitanas,Informal,Empresa pequeña,Nov - Ene,255.247153
+2025,23 Ciudades y áreas metropolitanas,Informal,Empresa pequeña,Dic - Feb,234.599072
 2026,23 Ciudades y áreas metropolitanas,Informal,Empresa pequeña,Ene - Mar,225.154136
 2021,23 Ciudades y áreas metropolitanas,Informal,Empresa mediana,Ene - Mar,113.16685533333333
 2021,23 Ciudades y áreas metropolitanas,Informal,Empresa mediana,Feb - Abr,104.84416900000001
@@ -2680,8 +2680,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,Empresa mediana,Ago - Oct,44.497985
 2025,23 Ciudades y áreas metropolitanas,Informal,Empresa mediana,Sep - Nov,56.531114
 2025,23 Ciudades y áreas metropolitanas,Informal,Empresa mediana,Oct - Dic,57.908011
-2026,23 Ciudades y áreas metropolitanas,Informal,Empresa mediana,Nov - Ene,53.076848
-2026,23 Ciudades y áreas metropolitanas,Informal,Empresa mediana,Dic - Feb,46.570714
+2025,23 Ciudades y áreas metropolitanas,Informal,Empresa mediana,Nov - Ene,53.076848
+2025,23 Ciudades y áreas metropolitanas,Informal,Empresa mediana,Dic - Feb,46.570714
 2026,23 Ciudades y áreas metropolitanas,Informal,Empresa mediana,Ene - Mar,48.435448
 2021,23 Ciudades y áreas metropolitanas,Informal,Empresa grande,Ene - Mar,141.99877466666666
 2021,23 Ciudades y áreas metropolitanas,Informal,Empresa grande,Feb - Abr,124.73757333333333
@@ -2741,6 +2741,6 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,Empresa grande,Ago - Oct,67.453672
 2025,23 Ciudades y áreas metropolitanas,Informal,Empresa grande,Sep - Nov,60.96239
 2025,23 Ciudades y áreas metropolitanas,Informal,Empresa grande,Oct - Dic,54.510169
-2026,23 Ciudades y áreas metropolitanas,Informal,Empresa grande,Nov - Ene,68.66354
-2026,23 Ciudades y áreas metropolitanas,Informal,Empresa grande,Dic - Feb,68.686936
+2025,23 Ciudades y áreas metropolitanas,Informal,Empresa grande,Nov - Ene,68.66354
+2025,23 Ciudades y áreas metropolitanas,Informal,Empresa grande,Dic - Feb,68.686936
 2026,23 Ciudades y áreas metropolitanas,Informal,Empresa grande,Ene - Mar,64.059335

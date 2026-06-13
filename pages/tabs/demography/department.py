@@ -27,10 +27,8 @@ def render_department() -> None:
         _render_pyramid(df[df["Name"] == dept], dept)
         return
 
-    if chart_type == "Map":
-        c1, c2 = st.columns(2)
-    else:
-        c1, c2, c3 = st.columns(3)
+    c1, c2, c3 = st.columns(3)
+
     with c1:
         gender = st.selectbox("Gender:", genders)
     with c2:

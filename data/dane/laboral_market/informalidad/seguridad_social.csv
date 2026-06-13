@@ -221,8 +221,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Total Nacional,Población ocupada,Ago - Oct,24035.766
 2025,Total Nacional,Población ocupada,Sep - Nov,24298.368
 2025,Total Nacional,Población ocupada,Oct - Dic,24397.303
-2026,Total Nacional,Población ocupada,Nov - Ene,24016.432
-2026,Total Nacional,Población ocupada,Dic - Feb,23848.205
+2025,Total Nacional,Población ocupada,Nov - Ene,24016.432
+2025,Total Nacional,Población ocupada,Dic - Feb,23848.205
 2026,Total Nacional,Población ocupada,Ene - Mar,23890.988
 2007,Total Nacional,Afiliada a salud,Ene - Mar,13435.845666666666
 2007,Total Nacional,Afiliada a salud,Feb - Abr,13701.767333333331
@@ -450,8 +450,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Total Nacional,Afiliada a salud,Ago - Oct,22970.072
 2025,Total Nacional,Afiliada a salud,Sep - Nov,23227.082
 2025,Total Nacional,Afiliada a salud,Oct - Dic,23291.996
-2026,Total Nacional,Afiliada a salud,Nov - Ene,23047.589
-2026,Total Nacional,Afiliada a salud,Dic - Feb,22890.043
+2025,Total Nacional,Afiliada a salud,Nov - Ene,23047.589
+2025,Total Nacional,Afiliada a salud,Dic - Feb,22890.043
 2026,Total Nacional,Afiliada a salud,Ene - Mar,22933.976
 2007,Total Nacional,Régimen contributivo,Ene - Mar,7247.422333333333
 2007,Total Nacional,Régimen contributivo,Feb - Abr,7515.325666666667
@@ -679,8 +679,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Total Nacional,Régimen contributivo,Ago - Oct,12243.813
 2025,Total Nacional,Régimen contributivo,Sep - Nov,12315.201
 2025,Total Nacional,Régimen contributivo,Oct - Dic,12327.886
-2026,Total Nacional,Régimen contributivo,Nov - Ene,12286.159
-2026,Total Nacional,Régimen contributivo,Dic - Feb,12255.751
+2025,Total Nacional,Régimen contributivo,Nov - Ene,12286.159
+2025,Total Nacional,Régimen contributivo,Dic - Feb,12255.751
 2026,Total Nacional,Régimen contributivo,Ene - Mar,12271.972
 2007,Total Nacional,Régimen especial,Ene - Mar,286.124
 2007,Total Nacional,Régimen especial,Feb - Abr,273.888
@@ -908,8 +908,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Total Nacional,Régimen especial,Ago - Oct,576.529
 2025,Total Nacional,Régimen especial,Sep - Nov,577.044
 2025,Total Nacional,Régimen especial,Oct - Dic,593.915
-2026,Total Nacional,Régimen especial,Nov - Ene,556.361
-2026,Total Nacional,Régimen especial,Dic - Feb,587.847
+2025,Total Nacional,Régimen especial,Nov - Ene,556.361
+2025,Total Nacional,Régimen especial,Dic - Feb,587.847
 2026,Total Nacional,Régimen especial,Ene - Mar,598.574
 2007,Total Nacional,Aportantes,Ene - Mar,6002.186333333334
 2007,Total Nacional,Aportantes,Feb - Abr,6157.433666666667
@@ -1137,8 +1137,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Total Nacional,Aportantes,Ago - Oct,11326.867
 2025,Total Nacional,Aportantes,Sep - Nov,11371.693
 2025,Total Nacional,Aportantes,Oct - Dic,11344.814
-2026,Total Nacional,Aportantes,Nov - Ene,11304.58
-2026,Total Nacional,Aportantes,Dic - Feb,11299.779
+2025,Total Nacional,Aportantes,Nov - Ene,11304.58
+2025,Total Nacional,Aportantes,Dic - Feb,11299.779
 2026,Total Nacional,Aportantes,Ene - Mar,11344.601
 2007,Total Nacional,Beneficiarios,Ene - Mar,1524.4616666666668
 2007,Total Nacional,Beneficiarios,Feb - Abr,1625.2386666666669
@@ -1366,8 +1366,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Total Nacional,Beneficiarios,Ago - Oct,1442.042
 2025,Total Nacional,Beneficiarios,Sep - Nov,1473.857
 2025,Total Nacional,Beneficiarios,Oct - Dic,1539.587
-2026,Total Nacional,Beneficiarios,Nov - Ene,1503.906
-2026,Total Nacional,Beneficiarios,Dic - Feb,1507.608
+2025,Total Nacional,Beneficiarios,Nov - Ene,1503.906
+2025,Total Nacional,Beneficiarios,Dic - Feb,1507.608
 2026,Total Nacional,Beneficiarios,Ene - Mar,1488.586
 2007,Total Nacional,Otro,Ene - Mar,6.897666666666666
 2007,Total Nacional,Otro,Feb - Abr,6.5409999999999995
@@ -1595,8 +1595,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Total Nacional,Otro,Ago - Oct,51.433
 2025,Total Nacional,Otro,Sep - Nov,46.695
 2025,Total Nacional,Otro,Oct - Dic,37.4
-2026,Total Nacional,Otro,Nov - Ene,34.034
-2026,Total Nacional,Otro,Dic - Feb,36.211
+2025,Total Nacional,Otro,Nov - Ene,34.034
+2025,Total Nacional,Otro,Dic - Feb,36.211
 2026,Total Nacional,Otro,Ene - Mar,37.359
 2007,Total Nacional,Régimen subsidiado,Ene - Mar,5894.918333333334
 2007,Total Nacional,Régimen subsidiado,Feb - Abr,5907.201
@@ -1824,8 +1824,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Total Nacional,Régimen subsidiado,Ago - Oct,10138.96
 2025,Total Nacional,Régimen subsidiado,Sep - Nov,10314.352
 2025,Total Nacional,Régimen subsidiado,Oct - Dic,10345.067
-2026,Total Nacional,Régimen subsidiado,Nov - Ene,10178.085
-2026,Total Nacional,Régimen subsidiado,Dic - Feb,10027.211
+2025,Total Nacional,Régimen subsidiado,Nov - Ene,10178.085
+2025,Total Nacional,Régimen subsidiado,Dic - Feb,10027.211
 2026,Total Nacional,Régimen subsidiado,Ene - Mar,10045.431
 2007,Total Nacional,No sabe,Ene - Mar,7.381
 2007,Total Nacional,No sabe,Feb - Abr,5.352666666666667
@@ -2053,8 +2053,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Total Nacional,No sabe,Ago - Oct,10.77
 2025,Total Nacional,No sabe,Sep - Nov,20.485
 2025,Total Nacional,No sabe,Oct - Dic,25.128
-2026,Total Nacional,No sabe,Nov - Ene,26.984
-2026,Total Nacional,No sabe,Dic - Feb,19.234
+2025,Total Nacional,No sabe,Nov - Ene,26.984
+2025,Total Nacional,No sabe,Dic - Feb,19.234
 2026,Total Nacional,No sabe,Ene - Mar,18.0
 2007,Total Nacional,Cotiza a pensión,Ene - Mar,4760.038333333334
 2007,Total Nacional,Cotiza a pensión,Feb - Abr,4847.689666666666
@@ -2282,8 +2282,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Total Nacional,Cotiza a pensión,Ago - Oct,10464.854
 2025,Total Nacional,Cotiza a pensión,Sep - Nov,10511.882
 2025,Total Nacional,Cotiza a pensión,Oct - Dic,10510.934
-2026,Total Nacional,Cotiza a pensión,Nov - Ene,10492.0
-2026,Total Nacional,Cotiza a pensión,Dic - Feb,10468.177
+2025,Total Nacional,Cotiza a pensión,Nov - Ene,10492.0
+2025,Total Nacional,Cotiza a pensión,Dic - Feb,10468.177
 2026,Total Nacional,Cotiza a pensión,Ene - Mar,10487.426
 2007,Cabeceras,Población ocupada,Ene - Mar,12281.866999999998
 2007,Cabeceras,Población ocupada,Feb - Abr,12577.047333333334
@@ -2511,8 +2511,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Cabeceras,Población ocupada,Ago - Oct,19229.901
 2025,Cabeceras,Población ocupada,Sep - Nov,19381.126
 2025,Cabeceras,Población ocupada,Oct - Dic,19496.368
-2026,Cabeceras,Población ocupada,Nov - Ene,19124.361
-2026,Cabeceras,Población ocupada,Dic - Feb,18976.945
+2025,Cabeceras,Población ocupada,Nov - Ene,19124.361
+2025,Cabeceras,Población ocupada,Dic - Feb,18976.945
 2026,Cabeceras,Población ocupada,Ene - Mar,18968.795
 2007,Cabeceras,Afiliada a salud,Ene - Mar,10475.637333333334
 2007,Cabeceras,Afiliada a salud,Feb - Abr,10719.212333333335
@@ -2740,8 +2740,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Cabeceras,Afiliada a salud,Ago - Oct,18381.463
 2025,Cabeceras,Afiliada a salud,Sep - Nov,18525.859
 2025,Cabeceras,Afiliada a salud,Oct - Dic,18615.332
-2026,Cabeceras,Afiliada a salud,Nov - Ene,18348.585
-2026,Cabeceras,Afiliada a salud,Dic - Feb,18225.857
+2025,Cabeceras,Afiliada a salud,Nov - Ene,18348.585
+2025,Cabeceras,Afiliada a salud,Dic - Feb,18225.857
 2026,Cabeceras,Afiliada a salud,Ene - Mar,18215.196
 2007,Cabeceras,Régimen contributivo,Ene - Mar,6752.766333333333
 2007,Cabeceras,Régimen contributivo,Feb - Abr,6981.069333333333
@@ -2969,8 +2969,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Cabeceras,Régimen contributivo,Ago - Oct,11303.216
 2025,Cabeceras,Régimen contributivo,Sep - Nov,11371.235
 2025,Cabeceras,Régimen contributivo,Oct - Dic,11367.275
-2026,Cabeceras,Régimen contributivo,Nov - Ene,11355.208
-2026,Cabeceras,Régimen contributivo,Dic - Feb,11334.393
+2025,Cabeceras,Régimen contributivo,Nov - Ene,11355.208
+2025,Cabeceras,Régimen contributivo,Dic - Feb,11334.393
 2026,Cabeceras,Régimen contributivo,Ene - Mar,11331.948
 2007,Cabeceras,Régimen especial,Ene - Mar,258.9733333333333
 2007,Cabeceras,Régimen especial,Feb - Abr,250.0086666666667
@@ -3198,8 +3198,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Cabeceras,Régimen especial,Ago - Oct,527.521
 2025,Cabeceras,Régimen especial,Sep - Nov,523.561
 2025,Cabeceras,Régimen especial,Oct - Dic,535.834
-2026,Cabeceras,Régimen especial,Nov - Ene,500.537
-2026,Cabeceras,Régimen especial,Dic - Feb,535.054
+2025,Cabeceras,Régimen especial,Nov - Ene,500.537
+2025,Cabeceras,Régimen especial,Dic - Feb,535.054
 2026,Cabeceras,Régimen especial,Ene - Mar,554.069
 2007,Cabeceras,Aportantes,Ene - Mar,5603.308333333333
 2007,Cabeceras,Aportantes,Feb - Abr,5743.639
@@ -3427,8 +3427,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Cabeceras,Aportantes,Ago - Oct,10479.572
 2025,Cabeceras,Aportantes,Sep - Nov,10516.315
 2025,Cabeceras,Aportantes,Oct - Dic,10467.822
-2026,Cabeceras,Aportantes,Nov - Ene,10449.146
-2026,Cabeceras,Aportantes,Dic - Feb,10454.134
+2025,Cabeceras,Aportantes,Nov - Ene,10449.146
+2025,Cabeceras,Aportantes,Dic - Feb,10454.134
 2026,Cabeceras,Aportantes,Ene - Mar,10494.174
 2007,Cabeceras,Beneficiarios,Ene - Mar,1402.0143333333333
 2007,Cabeceras,Beneficiarios,Feb - Abr,1481.3783333333333
@@ -3656,8 +3656,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Cabeceras,Beneficiarios,Ago - Oct,1301.649
 2025,Cabeceras,Beneficiarios,Sep - Nov,1334.089
 2025,Cabeceras,Beneficiarios,Oct - Dic,1400.189
-2026,Cabeceras,Beneficiarios,Nov - Ene,1374.169
-2026,Cabeceras,Beneficiarios,Dic - Feb,1380.301
+2025,Cabeceras,Beneficiarios,Nov - Ene,1374.169
+2025,Cabeceras,Beneficiarios,Dic - Feb,1380.301
 2026,Cabeceras,Beneficiarios,Ene - Mar,1355.684
 2007,Cabeceras,Otro,Ene - Mar,6.416999999999999
 2007,Cabeceras,Otro,Feb - Abr,6.0603333333333325
@@ -3885,8 +3885,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Cabeceras,Otro,Ago - Oct,49.515
 2025,Cabeceras,Otro,Sep - Nov,44.392
 2025,Cabeceras,Otro,Oct - Dic,35.097
-2026,Cabeceras,Otro,Nov - Ene,32.429
-2026,Cabeceras,Otro,Dic - Feb,35.011
+2025,Cabeceras,Otro,Nov - Ene,32.429
+2025,Cabeceras,Otro,Dic - Feb,35.011
 2026,Cabeceras,Otro,Ene - Mar,36.159
 2007,Cabeceras,Régimen subsidiado,Ene - Mar,3457.398333333333
 2007,Cabeceras,Régimen subsidiado,Feb - Abr,3483.6633333333334
@@ -4114,8 +4114,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Cabeceras,Régimen subsidiado,Ago - Oct,6542.528
 2025,Cabeceras,Régimen subsidiado,Sep - Nov,6614.302
 2025,Cabeceras,Régimen subsidiado,Oct - Dic,6698.483
-2026,Cabeceras,Régimen subsidiado,Nov - Ene,6475.072
-2026,Cabeceras,Régimen subsidiado,Dic - Feb,6346.439
+2025,Cabeceras,Régimen subsidiado,Nov - Ene,6475.072
+2025,Cabeceras,Régimen subsidiado,Dic - Feb,6346.439
 2026,Cabeceras,Régimen subsidiado,Ene - Mar,6315.086
 2007,Cabeceras,No sabe,Ene - Mar,6.499333333333333
 2007,Cabeceras,No sabe,Feb - Abr,4.471
@@ -4343,8 +4343,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Cabeceras,No sabe,Ago - Oct,8.198
 2025,Cabeceras,No sabe,Sep - Nov,16.761
 2025,Cabeceras,No sabe,Oct - Dic,13.741
-2026,Cabeceras,No sabe,Nov - Ene,17.769
-2026,Cabeceras,No sabe,Dic - Feb,9.971
+2025,Cabeceras,No sabe,Nov - Ene,17.769
+2025,Cabeceras,No sabe,Dic - Feb,9.971
 2026,Cabeceras,No sabe,Ene - Mar,14.093
 2007,Cabeceras,Cotiza a pensión,Ene - Mar,4472.228
 2007,Cabeceras,Cotiza a pensión,Feb - Abr,4548.743
@@ -4572,8 +4572,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Cabeceras,Cotiza a pensión,Ago - Oct,9675.425
 2025,Cabeceras,Cotiza a pensión,Sep - Nov,9715.981
 2025,Cabeceras,Cotiza a pensión,Oct - Dic,9703.702
-2026,Cabeceras,Cotiza a pensión,Nov - Ene,9708.413
-2026,Cabeceras,Cotiza a pensión,Dic - Feb,9698.491
+2025,Cabeceras,Cotiza a pensión,Nov - Ene,9708.413
+2025,Cabeceras,Cotiza a pensión,Dic - Feb,9698.491
 2026,Cabeceras,Cotiza a pensión,Ene - Mar,9710.061
 2007,Centros poblados y rural disperso,Población ocupada,Ene - Mar,3736.7296666666666
 2007,Centros poblados y rural disperso,Población ocupada,Feb - Abr,3873.238
@@ -4801,8 +4801,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Población ocupada,Ago - Oct,4805.866
 2025,Centros poblados y rural disperso,Población ocupada,Sep - Nov,4917.242
 2025,Centros poblados y rural disperso,Población ocupada,Oct - Dic,4900.935
-2026,Centros poblados y rural disperso,Población ocupada,Nov - Ene,4892.071
-2026,Centros poblados y rural disperso,Población ocupada,Dic - Feb,4871.26
+2025,Centros poblados y rural disperso,Población ocupada,Nov - Ene,4892.071
+2025,Centros poblados y rural disperso,Población ocupada,Dic - Feb,4871.26
 2026,Centros poblados y rural disperso,Población ocupada,Ene - Mar,4922.193
 2007,Centros poblados y rural disperso,Afiliada a salud,Ene - Mar,2960.2083333333335
 2007,Centros poblados y rural disperso,Afiliada a salud,Feb - Abr,2982.5556666666666
@@ -5030,8 +5030,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Afiliada a salud,Ago - Oct,4588.609
 2025,Centros poblados y rural disperso,Afiliada a salud,Sep - Nov,4701.223
 2025,Centros poblados y rural disperso,Afiliada a salud,Oct - Dic,4676.664
-2026,Centros poblados y rural disperso,Afiliada a salud,Nov - Ene,4699.004
-2026,Centros poblados y rural disperso,Afiliada a salud,Dic - Feb,4664.186
+2025,Centros poblados y rural disperso,Afiliada a salud,Nov - Ene,4699.004
+2025,Centros poblados y rural disperso,Afiliada a salud,Dic - Feb,4664.186
 2026,Centros poblados y rural disperso,Afiliada a salud,Ene - Mar,4718.78
 2007,Centros poblados y rural disperso,Régimen contributivo,Ene - Mar,494.6556666666667
 2007,Centros poblados y rural disperso,Régimen contributivo,Feb - Abr,534.2563333333334
@@ -5259,8 +5259,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Régimen contributivo,Ago - Oct,940.597
 2025,Centros poblados y rural disperso,Régimen contributivo,Sep - Nov,943.966
 2025,Centros poblados y rural disperso,Régimen contributivo,Oct - Dic,960.611
-2026,Centros poblados y rural disperso,Régimen contributivo,Nov - Ene,930.952
-2026,Centros poblados y rural disperso,Régimen contributivo,Dic - Feb,921.358
+2025,Centros poblados y rural disperso,Régimen contributivo,Nov - Ene,930.952
+2025,Centros poblados y rural disperso,Régimen contributivo,Dic - Feb,921.358
 2026,Centros poblados y rural disperso,Régimen contributivo,Ene - Mar,940.024
 2007,Centros poblados y rural disperso,Régimen especial,Ene - Mar,27.150666666666666
 2007,Centros poblados y rural disperso,Régimen especial,Feb - Abr,23.879666666666665
@@ -5488,8 +5488,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Régimen especial,Ago - Oct,49.008
 2025,Centros poblados y rural disperso,Régimen especial,Sep - Nov,53.483
 2025,Centros poblados y rural disperso,Régimen especial,Oct - Dic,58.082
-2026,Centros poblados y rural disperso,Régimen especial,Nov - Ene,55.824
-2026,Centros poblados y rural disperso,Régimen especial,Dic - Feb,52.793
+2025,Centros poblados y rural disperso,Régimen especial,Nov - Ene,55.824
+2025,Centros poblados y rural disperso,Régimen especial,Dic - Feb,52.793
 2026,Centros poblados y rural disperso,Régimen especial,Ene - Mar,44.505
 2007,Centros poblados y rural disperso,Aportantes,Ene - Mar,398.87833333333333
 2007,Centros poblados y rural disperso,Aportantes,Feb - Abr,413.79466666666667
@@ -5717,8 +5717,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Aportantes,Ago - Oct,847.295
 2025,Centros poblados y rural disperso,Aportantes,Sep - Nov,855.378
 2025,Centros poblados y rural disperso,Aportantes,Oct - Dic,876.992
-2026,Centros poblados y rural disperso,Aportantes,Nov - Ene,855.434
-2026,Centros poblados y rural disperso,Aportantes,Dic - Feb,845.645
+2025,Centros poblados y rural disperso,Aportantes,Nov - Ene,855.434
+2025,Centros poblados y rural disperso,Aportantes,Dic - Feb,845.645
 2026,Centros poblados y rural disperso,Aportantes,Ene - Mar,850.427
 2007,Centros poblados y rural disperso,Beneficiarios,Ene - Mar,122.44733333333333
 2007,Centros poblados y rural disperso,Beneficiarios,Feb - Abr,143.86033333333333
@@ -5946,8 +5946,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Beneficiarios,Ago - Oct,140.392
 2025,Centros poblados y rural disperso,Beneficiarios,Sep - Nov,139.768
 2025,Centros poblados y rural disperso,Beneficiarios,Oct - Dic,139.398
-2026,Centros poblados y rural disperso,Beneficiarios,Nov - Ene,129.737
-2026,Centros poblados y rural disperso,Beneficiarios,Dic - Feb,127.307
+2025,Centros poblados y rural disperso,Beneficiarios,Nov - Ene,129.737
+2025,Centros poblados y rural disperso,Beneficiarios,Dic - Feb,127.307
 2026,Centros poblados y rural disperso,Beneficiarios,Ene - Mar,132.902
 2007,Centros poblados y rural disperso,Otro,Ene - Mar,0.48066666666666663
 2007,Centros poblados y rural disperso,Otro,Feb - Abr,0.48066666666666663
@@ -6175,8 +6175,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Otro,Ago - Oct,1.918
 2025,Centros poblados y rural disperso,Otro,Sep - Nov,2.303
 2025,Centros poblados y rural disperso,Otro,Oct - Dic,2.303
-2026,Centros poblados y rural disperso,Otro,Nov - Ene,1.605
-2026,Centros poblados y rural disperso,Otro,Dic - Feb,1.2
+2025,Centros poblados y rural disperso,Otro,Nov - Ene,1.605
+2025,Centros poblados y rural disperso,Otro,Dic - Feb,1.2
 2026,Centros poblados y rural disperso,Otro,Ene - Mar,1.2
 2007,Centros poblados y rural disperso,Régimen subsidiado,Ene - Mar,2437.52
 2007,Centros poblados y rural disperso,Régimen subsidiado,Feb - Abr,2423.5376666666666
@@ -6404,8 +6404,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Régimen subsidiado,Ago - Oct,3596.432
 2025,Centros poblados y rural disperso,Régimen subsidiado,Sep - Nov,3700.05
 2025,Centros poblados y rural disperso,Régimen subsidiado,Oct - Dic,3646.583
-2026,Centros poblados y rural disperso,Régimen subsidiado,Nov - Ene,3703.013
-2026,Centros poblados y rural disperso,Régimen subsidiado,Dic - Feb,3680.772
+2025,Centros poblados y rural disperso,Régimen subsidiado,Nov - Ene,3703.013
+2025,Centros poblados y rural disperso,Régimen subsidiado,Dic - Feb,3680.772
 2026,Centros poblados y rural disperso,Régimen subsidiado,Ene - Mar,3730.344
 2007,Centros poblados y rural disperso,No sabe,Ene - Mar,0.882
 2007,Centros poblados y rural disperso,No sabe,Feb - Abr,0.882
@@ -6633,8 +6633,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,No sabe,Ago - Oct,2.571
 2025,Centros poblados y rural disperso,No sabe,Sep - Nov,3.723
 2025,Centros poblados y rural disperso,No sabe,Oct - Dic,11.388
-2026,Centros poblados y rural disperso,No sabe,Nov - Ene,9.215
-2026,Centros poblados y rural disperso,No sabe,Dic - Feb,9.263
+2025,Centros poblados y rural disperso,No sabe,Nov - Ene,9.215
+2025,Centros poblados y rural disperso,No sabe,Dic - Feb,9.263
 2026,Centros poblados y rural disperso,No sabe,Ene - Mar,3.906
 2007,Centros poblados y rural disperso,Cotiza a pensión,Ene - Mar,287.81033333333335
 2007,Centros poblados y rural disperso,Cotiza a pensión,Feb - Abr,298.94666666666666
@@ -6862,8 +6862,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Cotiza a pensión,Ago - Oct,789.429
 2025,Centros poblados y rural disperso,Cotiza a pensión,Sep - Nov,795.901
 2025,Centros poblados y rural disperso,Cotiza a pensión,Oct - Dic,807.232
-2026,Centros poblados y rural disperso,Cotiza a pensión,Nov - Ene,783.587
-2026,Centros poblados y rural disperso,Cotiza a pensión,Dic - Feb,769.686
+2025,Centros poblados y rural disperso,Cotiza a pensión,Nov - Ene,783.587
+2025,Centros poblados y rural disperso,Cotiza a pensión,Dic - Feb,769.686
 2026,Centros poblados y rural disperso,Cotiza a pensión,Ene - Mar,777.365
 2007,Total nacional,Afiliada a salud,Ene - Mar,83.8765498965494
 2007,Total nacional,Afiliada a salud,Feb - Abr,83.29197876275816
@@ -7091,8 +7091,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Total nacional,Afiliada a salud,Ago - Oct,95.56621578026679
 2025,Total nacional,Afiliada a salud,Sep - Nov,95.59111953527083
 2025,Total nacional,Afiliada a salud,Oct - Dic,95.46955251570225
-2026,Total nacional,Afiliada a salud,Nov - Ene,95.96591616939601
-2026,Total nacional,Afiliada a salud,Dic - Feb,95.9822468818932
+2025,Total nacional,Afiliada a salud,Nov - Ene,95.96591616939601
+2025,Total nacional,Afiliada a salud,Dic - Feb,95.9822468818932
 2026,Total nacional,Afiliada a salud,Ene - Mar,95.99425523967446
 2007,Total nacional,Régimen contributivo,Ene - Mar,45.24380497100578
 2007,Total nacional,Régimen contributivo,Feb - Abr,45.68508066111846
@@ -7320,8 +7320,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Total nacional,Régimen contributivo,Ago - Oct,50.93997420344331
 2025,Total nacional,Régimen contributivo,Sep - Nov,50.68324341782954
 2025,Total nacional,Régimen contributivo,Oct - Dic,50.52970814028092
-2026,Total nacional,Régimen contributivo,Nov - Ene,51.157303466226786
-2026,Total nacional,Régimen contributivo,Dic - Feb,51.3906644126885
+2025,Total nacional,Régimen contributivo,Nov - Ene,51.157303466226786
+2025,Total nacional,Régimen contributivo,Dic - Feb,51.3906644126885
 2026,Total nacional,Régimen contributivo,Ene - Mar,51.3665320161728
 2007,Total nacional,Régimen especial,Ene - Mar,1.7861989902236128
 2007,Total nacional,Régimen especial,Feb - Abr,1.6649438663197977
@@ -7549,8 +7549,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Total nacional,Régimen especial,Ago - Oct,2.398629608892015
 2025,Total nacional,Régimen especial,Sep - Nov,2.374826161164404
 2025,Total nacional,Régimen especial,Oct - Dic,2.4343469440044254
-2026,Total nacional,Régimen especial,Nov - Ene,2.316584744977938
-2026,Total nacional,Régimen especial,Dic - Feb,2.4649528130104548
+2025,Total nacional,Régimen especial,Nov - Ene,2.316584744977938
+2025,Total nacional,Régimen especial,Dic - Feb,2.4649528130104548
 2026,Total nacional,Régimen especial,Ene - Mar,2.505438452357014
 2007,Total nacional,Aportantes,Ene - Mar,37.470114942241715
 2007,Total nacional,Aportantes,Feb - Abr,37.43056072404666
@@ -7778,8 +7778,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Total nacional,Aportantes,Ago - Oct,47.12505105932551
 2025,Total nacional,Aportantes,Sep - Nov,46.80023366178337
 2025,Total nacional,Aportantes,Oct - Dic,46.50027914970766
-2026,Total nacional,Aportantes,Nov - Ene,47.07018927707496
-2026,Total nacional,Aportantes,Dic - Feb,47.382094375656365
+2025,Total nacional,Aportantes,Nov - Ene,47.07018927707496
+2025,Total nacional,Aportantes,Dic - Feb,47.382094375656365
 2026,Total nacional,Aportantes,Ene - Mar,47.484854958698236
 2007,Total nacional,Beneficiarios,Ene - Mar,9.51682448740618
 2007,Total nacional,Beneficiarios,Feb - Abr,9.87969954642932
@@ -8007,8 +8007,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Total nacional,Beneficiarios,Ago - Oct,5.999567477899394
 2025,Total nacional,Beneficiarios,Sep - Nov,6.065662516922948
 2025,Total nacional,Beneficiarios,Oct - Dic,6.310480301859594
-2026,Total nacional,Beneficiarios,Nov - Ene,6.261987625805531
-2026,Total nacional,Beneficiarios,Dic - Feb,6.3216833300451745
+2025,Total nacional,Beneficiarios,Nov - Ene,6.261987625805531
+2025,Total nacional,Beneficiarios,Dic - Feb,6.3216833300451745
 2026,Total nacional,Beneficiarios,Ene - Mar,6.230742738642705
 2007,Total nacional,Otro,Ene - Mar,0.04306036975192249
 2007,Total nacional,Otro,Feb - Abr,0.03976223065485818
@@ -8236,8 +8236,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Total nacional,Otro,Ago - Oct,0.21398527511043336
 2025,Total nacional,Otro,Sep - Nov,0.19217340028762428
 2025,Total nacional,Otro,Oct - Dic,0.15329563271809182
-2026,Total nacional,Otro,Nov - Ene,0.14171130832423398
-2026,Total nacional,Otro,Dic - Feb,0.151839519997417
+2025,Total nacional,Otro,Nov - Ene,0.14171130832423398
+2025,Total nacional,Otro,Dic - Feb,0.151839519997417
 2026,Total nacional,Otro,Ene - Mar,0.15637277118886836
 2007,Total nacional,Régimen subsidiado,Ene - Mar,36.80046823912242
 2007,Total nacional,Régimen subsidiado,Feb - Abr,35.909415790645
@@ -8465,8 +8465,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Total nacional,Régimen subsidiado,Ago - Oct,42.18280374338808
 2025,Total nacional,Régimen subsidiado,Sep - Nov,42.44874388271674
 2025,Total nacional,Régimen subsidiado,Oct - Dic,42.402502440536146
-2026,Total nacional,Régimen subsidiado,Nov - Ene,42.37967155154438
-2026,Total nacional,Régimen subsidiado,Dic - Feb,42.04597788387008
+2025,Total nacional,Régimen subsidiado,Nov - Ene,42.37967155154438
+2025,Total nacional,Régimen subsidiado,Dic - Feb,42.04597788387008
 2026,Total nacional,Régimen subsidiado,Ene - Mar,42.04694673991716
 2007,Total nacional,No sabe,Ene - Mar,0.04607769619759435
 2007,Total nacional,No sabe,Feb - Abr,0.03253844467490765
@@ -8694,8 +8694,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Total nacional,No sabe,Ago - Oct,0.044808224543374235
 2025,Total nacional,No sabe,Sep - Nov,0.08430607356016667
 2025,Total nacional,No sabe,Oct - Dic,0.10299499088075431
-2026,Total nacional,No sabe,Nov - Ene,0.11235640664691575
-2026,Total nacional,No sabe,Dic - Feb,0.08065177232416444
+2025,Total nacional,No sabe,Nov - Ene,0.11235640664691575
+2025,Total nacional,No sabe,Dic - Feb,0.08065177232416444
 2026,Total nacional,No sabe,Ene - Mar,0.07534221690622422
 2007,Total nacional,Cotiza a pensión,Ene - Mar,29.715702508093305
 2007,Total nacional,Cotiza a pensión,Feb - Abr,29.46872873706965
@@ -8923,8 +8923,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Total nacional,Cotiza a pensión,Ago - Oct,43.53867482317809
 2025,Total nacional,Cotiza a pensión,Sep - Nov,43.26167913828616
 2025,Total nacional,Cotiza a pensión,Oct - Dic,43.08236037401347
-2026,Total nacional,Cotiza a pensión,Nov - Ene,43.686755801194785
-2026,Total nacional,Cotiza a pensión,Dic - Feb,43.895031093535124
+2025,Total nacional,Cotiza a pensión,Nov - Ene,43.686755801194785
+2025,Total nacional,Cotiza a pensión,Dic - Feb,43.895031093535124
 2026,Total nacional,Cotiza a pensión,Ene - Mar,43.89699580444308
 2007,Cabeceras,Afiliada a salud,Ene - Mar,85.29352527049295
 2007,Cabeceras,Afiliada a salud,Feb - Abr,85.22836918108655
@@ -9152,8 +9152,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Cabeceras,Afiliada a salud,Ago - Oct,95.58792320355678
 2025,Cabeceras,Afiliada a salud,Sep - Nov,95.58711397882662
 2025,Cabeceras,Afiliada a salud,Oct - Dic,95.48102497860114
-2026,Cabeceras,Afiliada a salud,Nov - Ene,95.94351936778436
-2026,Cabeceras,Afiliada a salud,Dic - Feb,96.04210266721014
+2025,Cabeceras,Afiliada a salud,Nov - Ene,95.94351936778436
+2025,Cabeceras,Afiliada a salud,Dic - Feb,96.04210266721014
 2026,Cabeceras,Afiliada a salud,Ene - Mar,96.02716461430472
 2007,Cabeceras,Régimen contributivo,Ene - Mar,54.98159468208973
 2007,Cabeceras,Régimen contributivo,Feb - Abr,55.50642490492336
@@ -9381,8 +9381,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Cabeceras,Régimen contributivo,Ago - Oct,58.77937697131149
 2025,Cabeceras,Régimen contributivo,Sep - Nov,58.671694307131595
 2025,Cabeceras,Régimen contributivo,Oct - Dic,58.30457755003393
-2026,Cabeceras,Régimen contributivo,Nov - Ene,59.37562044556678
-2026,Cabeceras,Régimen contributivo,Dic - Feb,59.72717421060134
+2025,Cabeceras,Régimen contributivo,Nov - Ene,59.37562044556678
+2025,Cabeceras,Régimen contributivo,Dic - Feb,59.72717421060134
 2026,Cabeceras,Régimen contributivo,Ene - Mar,59.73994658068686
 2007,Cabeceras,Régimen especial,Ene - Mar,2.10858278577136
 2007,Cabeceras,Régimen especial,Feb - Abr,1.9878168543109562
@@ -9610,8 +9610,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Cabeceras,Régimen especial,Ago - Oct,2.743233051485808
 2025,Cabeceras,Régimen especial,Sep - Nov,2.7013961933893835
 2025,Cabeceras,Régimen especial,Oct - Dic,2.748378569793102
-2026,Cabeceras,Régimen especial,Nov - Ene,2.617274375860192
-2026,Cabeceras,Régimen especial,Dic - Feb,2.819494918702668
+2025,Cabeceras,Régimen especial,Nov - Ene,2.617274375860192
+2025,Cabeceras,Régimen especial,Dic - Feb,2.819494918702668
 2026,Cabeceras,Régimen especial,Ene - Mar,2.920949907466447
 2007,Cabeceras,Aportantes,Ene - Mar,45.622610416912465
 2007,Cabeceras,Aportantes,Feb - Abr,45.66762649272582
@@ -9839,8 +9839,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Cabeceras,Aportantes,Ago - Oct,54.49623479600857
 2025,Cabeceras,Aportantes,Sep - Nov,54.26059868760979
 2025,Cabeceras,Aportantes,Oct - Dic,53.69113878031027
-2026,Cabeceras,Aportantes,Nov - Ene,54.63788306443285
-2026,Cabeceras,Aportantes,Dic - Feb,55.08860356606397
+2025,Cabeceras,Aportantes,Nov - Ene,54.63788306443285
+2025,Cabeceras,Aportantes,Dic - Feb,55.08860356606397
 2026,Cabeceras,Aportantes,Ene - Mar,55.3233560697978
 2007,Cabeceras,Beneficiarios,Ene - Mar,11.415319294154004
 2007,Cabeceras,Beneficiarios,Feb - Abr,11.778426955643166
@@ -10068,8 +10068,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Cabeceras,Beneficiarios,Ago - Oct,6.768880401412362
 2025,Cabeceras,Beneficiarios,Sep - Nov,6.883444233322667
 2025,Cabeceras,Beneficiarios,Oct - Dic,7.181794065438241
-2026,Cabeceras,Beneficiarios,Nov - Ene,7.185437463766764
-2026,Cabeceras,Beneficiarios,Dic - Feb,7.273568005809154
+2025,Cabeceras,Beneficiarios,Nov - Ene,7.185437463766764
+2025,Cabeceras,Beneficiarios,Dic - Feb,7.273568005809154
 2026,Cabeceras,Beneficiarios,Ene - Mar,7.146916817857961
 2007,Cabeceras,Otro,Ene - Mar,0.05224775679463065
 2007,Cabeceras,Otro,Feb - Abr,0.04818566053473811
@@ -10297,8 +10297,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Cabeceras,Otro,Ago - Oct,0.2574896251415959
 2025,Cabeceras,Otro,Sep - Nov,0.2290475795885131
 2025,Cabeceras,Otro,Oct - Dic,0.18001814491806886
-2026,Cabeceras,Otro,Nov - Ene,0.16956906429448806
-2026,Cabeceras,Otro,Dic - Feb,0.18449228787879188
+2025,Cabeceras,Otro,Nov - Ene,0.16956906429448806
+2025,Cabeceras,Otro,Dic - Feb,0.18449228787879188
 2026,Cabeceras,Otro,Ene - Mar,0.190623600497554
 2007,Cabeceras,Régimen subsidiado,Ene - Mar,28.150429680872897
 2007,Cabeceras,Régimen subsidiado,Feb - Abr,27.698578537591047
@@ -10526,8 +10526,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Cabeceras,Régimen subsidiado,Ago - Oct,34.02268165603141
 2025,Cabeceras,Régimen subsidiado,Sep - Nov,34.12754243484098
 2025,Cabeceras,Régimen subsidiado,Oct - Dic,34.35759419395449
-2026,Cabeceras,Régimen subsidiado,Nov - Ene,33.857716866984475
-2026,Cabeceras,Régimen subsidiado,Dic - Feb,33.44289083411476
+2025,Cabeceras,Régimen subsidiado,Nov - Ene,33.857716866984475
+2025,Cabeceras,Régimen subsidiado,Dic - Feb,33.44289083411476
 2026,Cabeceras,Régimen subsidiado,Ene - Mar,33.29197242102095
 2007,Cabeceras,No sabe,Ene - Mar,0.05291812175895842
 2007,Cabeceras,No sabe,Feb - Abr,0.035548884261176084
@@ -10755,8 +10755,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Cabeceras,No sabe,Ago - Oct,0.04263152472807842
 2025,Cabeceras,No sabe,Sep - Nov,0.0864810434646573
 2025,Cabeceras,No sabe,Oct - Dic,0.07047979398008902
-2026,Cabeceras,No sabe,Nov - Ene,0.09291290830579907
-2026,Cabeceras,No sabe,Dic - Feb,0.05254270379136368
+2025,Cabeceras,No sabe,Nov - Ene,0.09291290830579907
+2025,Cabeceras,No sabe,Dic - Feb,0.05254270379136368
 2026,Cabeceras,No sabe,Ene - Mar,0.07429570513045242
 2007,Cabeceras,Cotiza a pensión,Ene - Mar,36.41325866824645
 2007,Cabeceras,Cotiza a pensión,Feb - Abr,36.167018215351135
@@ -10984,8 +10984,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Cabeceras,Cotiza a pensión,Ago - Oct,50.31448159821519
 2025,Cabeceras,Cotiza a pensión,Sep - Nov,50.131148210893414
 2025,Cabeceras,Cotiza a pensión,Oct - Dic,49.77184468409706
-2026,Cabeceras,Cotiza a pensión,Nov - Ene,50.7646399270543
-2026,Cabeceras,Cotiza a pensión,Dic - Feb,51.10670342354895
+2025,Cabeceras,Cotiza a pensión,Nov - Ene,50.7646399270543
+2025,Cabeceras,Cotiza a pensión,Dic - Feb,51.10670342354895
 2026,Cabeceras,Cotiza a pensión,Ene - Mar,51.189656485823164
 2007,Centros poblados y rural disperso,Afiliada a salud,Ene - Mar,79.21922636629944
 2007,Centros poblados y rural disperso,Afiliada a salud,Feb - Abr,77.00419304640373
@@ -11213,8 +11213,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Afiliada a salud,Ago - Oct,95.47933712675302
 2025,Centros poblados y rural disperso,Afiliada a salud,Sep - Nov,95.60690728664564
 2025,Centros poblados y rural disperso,Afiliada a salud,Oct - Dic,95.42391400824535
-2026,Centros poblados y rural disperso,Afiliada a salud,Nov - Ene,96.05347101462755
-2026,Centros poblados y rural disperso,Afiliada a salud,Dic - Feb,95.7490669765112
+2025,Centros poblados y rural disperso,Afiliada a salud,Nov - Ene,96.05347101462755
+2025,Centros poblados y rural disperso,Afiliada a salud,Dic - Feb,95.7490669765112
 2026,Centros poblados y rural disperso,Afiliada a salud,Ene - Mar,95.86743144773071
 2007,Centros poblados y rural disperso,Régimen contributivo,Ene - Mar,13.237662629952093
 2007,Centros poblados y rural disperso,Régimen contributivo,Feb - Abr,13.793532267661668
@@ -11442,8 +11442,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Régimen contributivo,Ago - Oct,19.571852398714405
 2025,Centros poblados y rural disperso,Régimen contributivo,Sep - Nov,19.197062092937465
 2025,Centros poblados y rural disperso,Régimen contributivo,Oct - Dic,19.600566014444183
-2026,Centros poblados y rural disperso,Régimen contributivo,Nov - Ene,19.02981375372516
-2026,Centros poblados y rural disperso,Régimen contributivo,Dic - Feb,18.91416183903138
+2025,Centros poblados y rural disperso,Régimen contributivo,Nov - Ene,19.02981375372516
+2025,Centros poblados y rural disperso,Régimen contributivo,Dic - Feb,18.91416183903138
 2026,Centros poblados y rural disperso,Régimen contributivo,Ene - Mar,19.09766642632664
 2007,Centros poblados y rural disperso,Régimen especial,Ene - Mar,0.7265889986332968
 2007,Centros poblados y rural disperso,Régimen especial,Feb - Abr,0.616529804434085
@@ -11671,8 +11671,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Régimen especial,Ago - Oct,1.0197537759063613
 2025,Centros poblados y rural disperso,Régimen especial,Sep - Nov,1.087662555554516
 2025,Centros poblados y rural disperso,Régimen especial,Oct - Dic,1.1851207983782686
-2026,Centros poblados y rural disperso,Régimen especial,Nov - Ene,1.1411118113371617
-2026,Centros poblados y rural disperso,Régimen especial,Dic - Feb,1.083764775437977
+2025,Centros poblados y rural disperso,Régimen especial,Nov - Ene,1.1411118113371617
+2025,Centros poblados y rural disperso,Régimen especial,Dic - Feb,1.083764775437977
 2026,Centros poblados y rural disperso,Régimen especial,Ene - Mar,0.9041701534255159
 2007,Centros poblados y rural disperso,Aportantes,Ene - Mar,10.674530108279173
 2007,Centros poblados y rural disperso,Aportantes,Feb - Abr,10.683429901975213
@@ -11900,8 +11900,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Aportantes,Ago - Oct,17.63043330796156
 2025,Centros poblados y rural disperso,Aportantes,Sep - Nov,17.39548307770901
 2025,Centros poblados y rural disperso,Aportantes,Oct - Dic,17.89438137824721
-2026,Centros poblados y rural disperso,Aportantes,Nov - Ene,17.48613215139355
-2026,Centros poblados y rural disperso,Aportantes,Dic - Feb,17.359882248124713
+2025,Centros poblados y rural disperso,Aportantes,Nov - Ene,17.48613215139355
+2025,Centros poblados y rural disperso,Aportantes,Dic - Feb,17.359882248124713
 2026,Centros poblados y rural disperso,Aportantes,Ene - Mar,17.27740054077522
 2007,Centros poblados y rural disperso,Beneficiarios,Ene - Mar,3.2768582224617266
 2007,Centros poblados y rural disperso,Beneficiarios,Feb - Abr,3.71421362005984
@@ -12129,8 +12129,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Beneficiarios,Ago - Oct,2.921263306134628
 2025,Centros poblados y rural disperso,Beneficiarios,Sep - Nov,2.8424063733287888
 2025,Centros poblados y rural disperso,Beneficiarios,Oct - Dic,2.8443144012316015
-2026,Centros poblados y rural disperso,Beneficiarios,Nov - Ene,2.651985222618396
-2026,Centros poblados y rural disperso,Beneficiarios,Dic - Feb,2.61343061138186
+2025,Centros poblados y rural disperso,Beneficiarios,Nov - Ene,2.651985222618396
+2025,Centros poblados y rural disperso,Beneficiarios,Dic - Feb,2.61343061138186
 2026,Centros poblados y rural disperso,Beneficiarios,Ene - Mar,2.700056661735937
 2007,Centros poblados y rural disperso,Otro,Ene - Mar,0.012863297844487722
 2007,Centros poblados y rural disperso,Otro,Feb - Abr,0.012409943996900439
@@ -12358,8 +12358,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Otro,Ago - Oct,0.03990956052457559
 2025,Centros poblados y rural disperso,Otro,Sep - Nov,0.046835197454182645
 2025,Centros poblados y rural disperso,Otro,Oct - Dic,0.04699103334363748
-2026,Centros poblados y rural disperso,Otro,Nov - Ene,0.03280819105037519
-2026,Centros poblados y rural disperso,Otro,Dic - Feb,0.024634283532392026
+2025,Centros poblados y rural disperso,Otro,Nov - Ene,0.03280819105037519
+2025,Centros poblados y rural disperso,Otro,Dic - Feb,0.024634283532392026
 2026,Centros poblados y rural disperso,Otro,Ene - Mar,0.024379377240998066
 2007,Centros poblados y rural disperso,Régimen subsidiado,Ene - Mar,65.23137121060135
 2007,Centros poblados y rural disperso,Régimen subsidiado,Feb - Abr,62.57135932949814
@@ -12587,8 +12587,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Régimen subsidiado,Ago - Oct,74.83421302216915
 2025,Centros poblados y rural disperso,Régimen subsidiado,Sep - Nov,75.24644912737669
 2025,Centros poblados y rural disperso,Régimen subsidiado,Oct - Dic,74.405863370969
-2026,Centros poblados y rural disperso,Régimen subsidiado,Nov - Ene,75.69417941808285
-2026,Centros poblados y rural disperso,Régimen subsidiado,Dic - Feb,75.56098422174139
+2025,Centros poblados y rural disperso,Régimen subsidiado,Nov - Ene,75.69417941808285
+2025,Centros poblados y rural disperso,Régimen subsidiado,Dic - Feb,75.56098422174139
 2026,Centros poblados y rural disperso,Régimen subsidiado,Ene - Mar,75.78621967891141
 2007,Centros poblados y rural disperso,No sabe,Ene - Mar,0.023603527112700775
 2007,Centros poblados y rural disperso,No sabe,Feb - Abr,0.02277164480984644
@@ -12816,8 +12816,8 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,No sabe,Ago - Oct,0.053497122058750714
 2025,Centros poblados y rural disperso,No sabe,Sep - Nov,0.07571317417365263
 2025,Centros poblados y rural disperso,No sabe,Oct - Dic,0.23236382445390522
-2026,Centros poblados y rural disperso,No sabe,Nov - Ene,0.1883660314823722
-2026,Centros poblados y rural disperso,No sabe,Dic - Feb,0.19015614030045613
+2025,Centros poblados y rural disperso,No sabe,Nov - Ene,0.1883660314823722
+2025,Centros poblados y rural disperso,No sabe,Dic - Feb,0.19015614030045613
 2026,Centros poblados y rural disperso,No sabe,Ene - Mar,0.0793548729194487
 2007,Centros poblados y rural disperso,Cotiza a pensión,Ene - Mar,7.70219841966982
 2007,Centros poblados y rural disperso,Cotiza a pensión,Feb - Abr,7.718262256713031
@@ -13045,6 +13045,6 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Cotiza a pensión,Ago - Oct,16.426363115409377
 2025,Centros poblados y rural disperso,Cotiza a pensión,Sep - Nov,16.18592292183301
 2025,Centros poblados y rural disperso,Cotiza a pensión,Oct - Dic,16.470979517173763
-2026,Centros poblados y rural disperso,Cotiza a pensión,Nov - Ene,16.01749034304694
-2026,Centros poblados y rural disperso,Cotiza a pensión,Dic - Feb,15.800552629093911
+2025,Centros poblados y rural disperso,Cotiza a pensión,Nov - Ene,16.01749034304694
+2025,Centros poblados y rural disperso,Cotiza a pensión,Dic - Feb,15.800552629093911
 2026,Centros poblados y rural disperso,Cotiza a pensión,Ene - Mar,15.793062157457053
