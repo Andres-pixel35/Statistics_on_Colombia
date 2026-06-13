@@ -1,5 +1,5 @@
 import streamlit as st
-from pages.tabs import gdp, cpi
+from pages.tabs.macroeconomics import gdp, cpi
 from generalities.function import load_csv, BASE_DIR
 
 st.set_page_config(layout="wide", page_title="Macroeconomic")

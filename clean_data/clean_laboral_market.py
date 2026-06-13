@@ -85,6 +85,20 @@ def normalize_period(label):
     return " ".join(t.capitalize() if t.lower() in MONTHS else t for t in s.split(" "))
 
 
+def period_start_year(label):
+    """First year token in a cross-year period label ('Nov 25 - ene 26' -> 2025).
+
+    DANE embeds the start month's year only on cross-year quarters; plain labels
+    ('Ene - mar') carry no digits and return None so the caller keeps the header year.
+    Two-digit tokens are 2000-relative.
+    """
+    m = re.search(r"\b(\d{2,4})\b", str(label))
+    if not m:
+        return None
+    y = int(m.group(1))
+    return y if y >= 1990 else 2000 + y
+
+
 def title_above(df, anchor):
     """Nearest non-null col0 text above the anchor row = the block title."""
     for r in range(anchor - 1, -1, -1):
@@ -136,10 +150,13 @@ def classify(df, H):
                 if is_year(row_h[c]):
                     last = int(row_h[c])
                 year_by_col[c] = last
-            colmap = {c: (year_by_col[c], normalize_period(row_h1[c]))
-                      for c in cols
-                      if isinstance(row_h1[c], str) and row_h1[c].strip()
-                      and year_by_col[c] is not None}
+            colmap = {}
+            for c in cols:
+                if (isinstance(row_h1[c], str) and row_h1[c].strip()
+                        and year_by_col[c] is not None):
+                    sy = period_start_year(row_h1[c])
+                    colmap[c] = (sy if sy is not None else year_by_col[c],
+                                 normalize_period(row_h1[c]))
             return H + 2, colmap
         # Annual: years on the Concepto row, no period row
         return H + 1, {c: (int(row_h[c]), "Anual") for c in years_h}
