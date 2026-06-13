@@ -228,6 +228,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total Nacional,Hombres,Población ocupada,Nov - Ene,14018.053
 2025,Total Nacional,Hombres,Población ocupada,Dic - Feb,13912.632
 2026,Total Nacional,Hombres,Población ocupada,Ene - Mar,13930.006
+2026,Total Nacional,Hombres,Población ocupada,Feb - Abr,14044.359
 2007,Total Nacional,Hombres,Afiliada a salud,Ene - Mar,8093.670666666666
 2007,Total Nacional,Hombres,Afiliada a salud,Feb - Abr,8159.924666666667
 2007,Total Nacional,Hombres,Afiliada a salud,Mar - May,8244.883333333333
@@ -457,6 +458,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total Nacional,Hombres,Afiliada a salud,Nov - Ene,13314.249
 2025,Total Nacional,Hombres,Afiliada a salud,Dic - Feb,13221.163
 2026,Total Nacional,Hombres,Afiliada a salud,Ene - Mar,13226.972
+2026,Total Nacional,Hombres,Afiliada a salud,Feb - Abr,13319.119
 2007,Total Nacional,Hombres,Régimen contributivo,Ene - Mar,4077.375666666667
 2007,Total Nacional,Hombres,Régimen contributivo,Feb - Abr,4205.105333333333
 2007,Total Nacional,Hombres,Régimen contributivo,Mar - May,4354.733333333333
@@ -686,6 +688,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total Nacional,Hombres,Régimen contributivo,Nov - Ene,6740.36
 2025,Total Nacional,Hombres,Régimen contributivo,Dic - Feb,6733.4
 2026,Total Nacional,Hombres,Régimen contributivo,Ene - Mar,6725.442
+2026,Total Nacional,Hombres,Régimen contributivo,Feb - Abr,6711.585
 2007,Total Nacional,Hombres,Régimen especial,Ene - Mar,183.15
 2007,Total Nacional,Hombres,Régimen especial,Feb - Abr,170.53466666666665
 2007,Total Nacional,Hombres,Régimen especial,Mar - May,163.92
@@ -915,6 +918,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total Nacional,Hombres,Régimen especial,Nov - Ene,308.029
 2025,Total Nacional,Hombres,Régimen especial,Dic - Feb,324.065
 2026,Total Nacional,Hombres,Régimen especial,Ene - Mar,318.204
+2026,Total Nacional,Hombres,Régimen especial,Feb - Abr,333.572
 2007,Total Nacional,Hombres,Aportantes,Ene - Mar,3599.023333333333
 2007,Total Nacional,Hombres,Aportantes,Feb - Abr,3677.8043333333335
 2007,Total Nacional,Hombres,Aportantes,Mar - May,3777.1173333333336
@@ -1144,6 +1148,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total Nacional,Hombres,Aportantes,Nov - Ene,6400.625
 2025,Total Nacional,Hombres,Aportantes,Dic - Feb,6386.95
 2026,Total Nacional,Hombres,Aportantes,Ene - Mar,6381.187
+2026,Total Nacional,Hombres,Aportantes,Feb - Abr,6387.778
 2007,Total Nacional,Hombres,Beneficiarios,Ene - Mar,656.5263333333334
 2007,Total Nacional,Hombres,Beneficiarios,Feb - Abr,692.9846666666667
 2007,Total Nacional,Hombres,Beneficiarios,Mar - May,735.6513333333334
@@ -1373,6 +1378,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total Nacional,Hombres,Beneficiarios,Nov - Ene,631.077
 2025,Total Nacional,Hombres,Beneficiarios,Dic - Feb,655.793
 2026,Total Nacional,Hombres,Beneficiarios,Ene - Mar,646.805
+2026,Total Nacional,Hombres,Beneficiarios,Feb - Abr,640.432
 2007,Total Nacional,Hombres,Otro,Ene - Mar,4.975666666666666
 2007,Total Nacional,Hombres,Otro,Feb - Abr,4.850666666666666
 2007,Total Nacional,Hombres,Otro,Mar - May,5.884666666666667
@@ -1602,6 +1608,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total Nacional,Hombres,Otro,Nov - Ene,16.686
 2025,Total Nacional,Hombres,Otro,Dic - Feb,14.722
 2026,Total Nacional,Hombres,Otro,Ene - Mar,15.654
+2026,Total Nacional,Hombres,Otro,Feb - Abr,16.946
 2007,Total Nacional,Hombres,Régimen subsidiado,Ene - Mar,3827.4996666666666
 2007,Total Nacional,Hombres,Régimen subsidiado,Feb - Abr,3781.194
 2007,Total Nacional,Hombres,Régimen subsidiado,Mar - May,3718.376
@@ -1831,6 +1838,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total Nacional,Hombres,Régimen subsidiado,Nov - Ene,6246.824
 2025,Total Nacional,Hombres,Régimen subsidiado,Dic - Feb,6152.49
 2026,Total Nacional,Hombres,Régimen subsidiado,Ene - Mar,6171.933
+2026,Total Nacional,Hombres,Régimen subsidiado,Feb - Abr,6258.464
 2007,Total Nacional,Hombres,No sabe,Ene - Mar,5.645333333333333
 2007,Total Nacional,Hombres,No sabe,Feb - Abr,3.090666666666667
 2007,Total Nacional,Hombres,No sabe,Mar - May,7.853999999999999
@@ -2060,6 +2068,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total Nacional,Hombres,No sabe,Nov - Ene,19.036
 2025,Total Nacional,Hombres,No sabe,Dic - Feb,11.207
 2026,Total Nacional,Hombres,No sabe,Ene - Mar,11.394
+2026,Total Nacional,Hombres,No sabe,Feb - Abr,15.498
 2007,Total Nacional,Hombres,Cotiza a pensión,Ene - Mar,2782.243
 2007,Total Nacional,Hombres,Cotiza a pensión,Feb - Abr,2829.619
 2007,Total Nacional,Hombres,Cotiza a pensión,Mar - May,2922.8709999999996
@@ -2289,6 +2298,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total Nacional,Hombres,Cotiza a pensión,Nov - Ene,5908.042
 2025,Total Nacional,Hombres,Cotiza a pensión,Dic - Feb,5886.834
 2026,Total Nacional,Hombres,Cotiza a pensión,Ene - Mar,5870.577
+2026,Total Nacional,Hombres,Cotiza a pensión,Feb - Abr,5894.375
 2007,Total Nacional,Mujeres,Población ocupada,Ene - Mar,6162.011333333333
 2007,Total Nacional,Mujeres,Población ocupada,Feb - Abr,6400.310333333334
 2007,Total Nacional,Mujeres,Población ocupada,Mar - May,6437.013666666667
@@ -2518,6 +2528,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total Nacional,Mujeres,Población ocupada,Nov - Ene,9998.379
 2025,Total Nacional,Mujeres,Población ocupada,Dic - Feb,9935.572
 2026,Total Nacional,Mujeres,Población ocupada,Ene - Mar,9960.982
+2026,Total Nacional,Mujeres,Población ocupada,Feb - Abr,10196.663
 2007,Total Nacional,Mujeres,Afiliada a salud,Ene - Mar,5342.175333333334
 2007,Total Nacional,Mujeres,Afiliada a salud,Feb - Abr,5541.843
 2007,Total Nacional,Mujeres,Afiliada a salud,Mar - May,5576.0126666666665
@@ -2747,6 +2758,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total Nacional,Mujeres,Afiliada a salud,Nov - Ene,9733.341
 2025,Total Nacional,Mujeres,Afiliada a salud,Dic - Feb,9668.88
 2026,Total Nacional,Mujeres,Afiliada a salud,Ene - Mar,9707.004
+2026,Total Nacional,Mujeres,Afiliada a salud,Feb - Abr,9924.345
 2007,Total Nacional,Mujeres,Régimen contributivo,Ene - Mar,3170.047
 2007,Total Nacional,Mujeres,Régimen contributivo,Feb - Abr,3310.2206666666666
 2007,Total Nacional,Mujeres,Régimen contributivo,Mar - May,3379.6603333333333
@@ -2976,6 +2988,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total Nacional,Mujeres,Régimen contributivo,Nov - Ene,5545.8
 2025,Total Nacional,Mujeres,Régimen contributivo,Dic - Feb,5522.351
 2026,Total Nacional,Mujeres,Régimen contributivo,Ene - Mar,5546.529
+2026,Total Nacional,Mujeres,Régimen contributivo,Feb - Abr,5730.912
 2007,Total Nacional,Mujeres,Régimen especial,Ene - Mar,102.97433333333333
 2007,Total Nacional,Mujeres,Régimen especial,Feb - Abr,103.35333333333334
 2007,Total Nacional,Mujeres,Régimen especial,Mar - May,95.15266666666666
@@ -3205,6 +3218,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total Nacional,Mujeres,Régimen especial,Nov - Ene,248.332
 2025,Total Nacional,Mujeres,Régimen especial,Dic - Feb,263.782
 2026,Total Nacional,Mujeres,Régimen especial,Ene - Mar,280.371
+2026,Total Nacional,Mujeres,Régimen especial,Feb - Abr,283.899
 2007,Total Nacional,Mujeres,Aportantes,Ene - Mar,2403.163
 2007,Total Nacional,Mujeres,Aportantes,Feb - Abr,2479.6293333333333
 2007,Total Nacional,Mujeres,Aportantes,Mar - May,2522.7083333333335
@@ -3434,6 +3448,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total Nacional,Mujeres,Aportantes,Nov - Ene,4903.955
 2025,Total Nacional,Mujeres,Aportantes,Dic - Feb,4912.829
 2026,Total Nacional,Mujeres,Aportantes,Ene - Mar,4963.414
+2026,Total Nacional,Mujeres,Aportantes,Feb - Abr,5133.049
 2007,Total Nacional,Mujeres,Beneficiarios,Ene - Mar,867.9356666666666
 2007,Total Nacional,Mujeres,Beneficiarios,Feb - Abr,932.254
 2007,Total Nacional,Mujeres,Beneficiarios,Mar - May,950.5186666666667
@@ -3663,6 +3678,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total Nacional,Mujeres,Beneficiarios,Nov - Ene,872.829
 2025,Total Nacional,Mujeres,Beneficiarios,Dic - Feb,851.815
 2026,Total Nacional,Mujeres,Beneficiarios,Ene - Mar,841.781
+2026,Total Nacional,Mujeres,Beneficiarios,Feb - Abr,855.107
 2007,Total Nacional,Mujeres,Otro,Ene - Mar,1.922666666666667
 2007,Total Nacional,Mujeres,Otro,Feb - Abr,1.6906666666666668
 2007,Total Nacional,Mujeres,Otro,Mar - May,1.5856666666666666
@@ -3892,6 +3908,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total Nacional,Mujeres,Otro,Nov - Ene,17.348
 2025,Total Nacional,Mujeres,Otro,Dic - Feb,21.489
 2026,Total Nacional,Mujeres,Otro,Ene - Mar,21.704
+2026,Total Nacional,Mujeres,Otro,Feb - Abr,26.655
 2007,Total Nacional,Mujeres,Régimen subsidiado,Ene - Mar,2067.418333333333
 2007,Total Nacional,Mujeres,Régimen subsidiado,Feb - Abr,2126.007
 2007,Total Nacional,Mujeres,Régimen subsidiado,Mar - May,2100.168666666667
@@ -4121,6 +4138,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total Nacional,Mujeres,Régimen subsidiado,Nov - Ene,3931.261
 2025,Total Nacional,Mujeres,Régimen subsidiado,Dic - Feb,3874.72
 2026,Total Nacional,Mujeres,Régimen subsidiado,Ene - Mar,3873.498
+2026,Total Nacional,Mujeres,Régimen subsidiado,Feb - Abr,3906.026
 2007,Total Nacional,Mujeres,No sabe,Ene - Mar,1.7356666666666667
 2007,Total Nacional,Mujeres,No sabe,Feb - Abr,2.262
 2007,Total Nacional,Mujeres,No sabe,Mar - May,1.031
@@ -4350,6 +4368,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total Nacional,Mujeres,No sabe,Nov - Ene,7.948
 2025,Total Nacional,Mujeres,No sabe,Dic - Feb,8.027
 2026,Total Nacional,Mujeres,No sabe,Ene - Mar,6.606
+2026,Total Nacional,Mujeres,No sabe,Feb - Abr,3.509
 2007,Total Nacional,Mujeres,Cotiza a pensión,Ene - Mar,1977.7953333333335
 2007,Total Nacional,Mujeres,Cotiza a pensión,Feb - Abr,2018.0706666666667
 2007,Total Nacional,Mujeres,Cotiza a pensión,Mar - May,2038.7146666666667
@@ -4579,6 +4598,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total Nacional,Mujeres,Cotiza a pensión,Nov - Ene,4583.958
 2025,Total Nacional,Mujeres,Cotiza a pensión,Dic - Feb,4581.343
 2026,Total Nacional,Mujeres,Cotiza a pensión,Ene - Mar,4616.849
+2026,Total Nacional,Mujeres,Cotiza a pensión,Feb - Abr,4779.621
 2007,Cabeceras,Hombres,Población ocupada,Ene - Mar,7014.732
 2007,Cabeceras,Hombres,Población ocupada,Feb - Abr,7149.730666666666
 2007,Cabeceras,Hombres,Población ocupada,Mar - May,7172.173666666667
@@ -4808,6 +4828,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Hombres,Población ocupada,Nov - Ene,10620.901
 2025,Cabeceras,Hombres,Población ocupada,Dic - Feb,10547.32
 2026,Cabeceras,Hombres,Población ocupada,Ene - Mar,10536.191
+2026,Cabeceras,Hombres,Población ocupada,Feb - Abr,10638.799
 2007,Cabeceras,Hombres,Afiliada a salud,Ene - Mar,5886.049333333333
 2007,Cabeceras,Hombres,Afiliada a salud,Feb - Abr,5973.838000000001
 2007,Cabeceras,Hombres,Afiliada a salud,Mar - May,6008.428000000001
@@ -5037,6 +5058,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Hombres,Afiliada a salud,Nov - Ene,10075.318
 2025,Cabeceras,Hombres,Afiliada a salud,Dic - Feb,10021.089
 2026,Cabeceras,Hombres,Afiliada a salud,Ene - Mar,9994.74
+2026,Cabeceras,Hombres,Afiliada a salud,Feb - Abr,10095.42
 2007,Cabeceras,Hombres,Régimen contributivo,Ene - Mar,3706.6273333333334
 2007,Cabeceras,Hombres,Régimen contributivo,Feb - Abr,3819.9743333333336
 2007,Cabeceras,Hombres,Régimen contributivo,Mar - May,3883.24
@@ -5266,6 +5288,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Hombres,Régimen contributivo,Nov - Ene,6101.101
 2025,Cabeceras,Hombres,Régimen contributivo,Dic - Feb,6115.855
 2026,Cabeceras,Hombres,Régimen contributivo,Ene - Mar,6114.556
+2026,Cabeceras,Hombres,Régimen contributivo,Feb - Abr,6108.706
 2007,Cabeceras,Hombres,Régimen especial,Ene - Mar,167.72033333333334
 2007,Cabeceras,Hombres,Régimen especial,Feb - Abr,158.70666666666668
 2007,Cabeceras,Hombres,Régimen especial,Mar - May,158.23466666666667
@@ -5495,6 +5518,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Hombres,Régimen especial,Nov - Ene,274.254
 2025,Cabeceras,Hombres,Régimen especial,Dic - Feb,292.496
 2026,Cabeceras,Hombres,Régimen especial,Ene - Mar,291.744
+2026,Cabeceras,Hombres,Régimen especial,Feb - Abr,306.731
 2007,Cabeceras,Hombres,Aportantes,Ene - Mar,3275.673666666667
 2007,Cabeceras,Hombres,Aportantes,Feb - Abr,3347.0663333333337
 2007,Cabeceras,Hombres,Aportantes,Mar - May,3377.732
@@ -5724,6 +5748,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Hombres,Aportantes,Nov - Ene,5787.739
 2025,Cabeceras,Hombres,Aportantes,Dic - Feb,5795.144
 2026,Cabeceras,Hombres,Aportantes,Ene - Mar,5801.281
+2026,Cabeceras,Hombres,Aportantes,Feb - Abr,5808.43
 2007,Cabeceras,Hombres,Beneficiarios,Ene - Mar,594.096
 2007,Cabeceras,Hombres,Beneficiarios,Feb - Abr,627.1616666666667
 2007,Cabeceras,Hombres,Beneficiarios,Mar - May,658.5026666666666
@@ -5953,6 +5978,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Hombres,Beneficiarios,Nov - Ene,571.677
 2025,Cabeceras,Hombres,Beneficiarios,Dic - Feb,598.485
 2026,Cabeceras,Hombres,Beneficiarios,Ene - Mar,589.364
+2026,Cabeceras,Hombres,Beneficiarios,Feb - Abr,590.06
 2007,Cabeceras,Hombres,Otro,Ene - Mar,4.578
 2007,Cabeceras,Hombres,Otro,Feb - Abr,4.453
 2007,Cabeceras,Hombres,Otro,Mar - May,5.24
@@ -6182,6 +6208,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Hombres,Otro,Nov - Ene,15.94
 2025,Cabeceras,Hombres,Otro,Dic - Feb,14.722
 2026,Cabeceras,Hombres,Otro,Ene - Mar,15.654
+2026,Cabeceras,Hombres,Otro,Feb - Abr,16.946
 2007,Cabeceras,Hombres,Régimen subsidiado,Ene - Mar,2006.1963333333333
 2007,Cabeceras,Hombres,Régimen subsidiado,Feb - Abr,1992.2063333333333
 2007,Cabeceras,Hombres,Régimen subsidiado,Mar - May,1963.2226666666666
@@ -6411,6 +6438,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Hombres,Régimen subsidiado,Nov - Ene,3687.471
 2025,Cabeceras,Hombres,Régimen subsidiado,Dic - Feb,3608.123
 2026,Cabeceras,Hombres,Régimen subsidiado,Ene - Mar,3580.734
+2026,Cabeceras,Hombres,Régimen subsidiado,Feb - Abr,3671.351
 2007,Cabeceras,Hombres,No sabe,Ene - Mar,5.505333333333333
 2007,Cabeceras,Hombres,No sabe,Feb - Abr,2.9506666666666668
 2007,Cabeceras,Hombres,No sabe,Mar - May,3.7306666666666666
@@ -6640,6 +6668,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Hombres,No sabe,Nov - Ene,12.492
 2025,Cabeceras,Hombres,No sabe,Dic - Feb,4.615
 2026,Cabeceras,Hombres,No sabe,Ene - Mar,7.706
+2026,Cabeceras,Hombres,No sabe,Feb - Abr,8.632
 2007,Cabeceras,Hombres,Cotiza a pensión,Ene - Mar,2555.896
 2007,Cabeceras,Hombres,Cotiza a pensión,Feb - Abr,2600.2863333333335
 2007,Cabeceras,Hombres,Cotiza a pensión,Mar - May,2642.887
@@ -6869,6 +6898,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Hombres,Cotiza a pensión,Nov - Ene,5351.376
 2025,Cabeceras,Hombres,Cotiza a pensión,Dic - Feb,5351.212
 2026,Cabeceras,Hombres,Cotiza a pensión,Ene - Mar,5341.168
+2026,Cabeceras,Hombres,Cotiza a pensión,Feb - Abr,5363.386
 2007,Cabeceras,Mujeres,Población ocupada,Ene - Mar,5267.134666666666
 2007,Cabeceras,Mujeres,Población ocupada,Feb - Abr,5427.316333333333
 2007,Cabeceras,Mujeres,Población ocupada,Mar - May,5502.122
@@ -7098,6 +7128,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Mujeres,Población ocupada,Nov - Ene,8503.46
 2025,Cabeceras,Mujeres,Población ocupada,Dic - Feb,8429.625
 2026,Cabeceras,Mujeres,Población ocupada,Ene - Mar,8432.604
+2026,Cabeceras,Mujeres,Población ocupada,Feb - Abr,8651.971
 2007,Cabeceras,Mujeres,Afiliada a salud,Ene - Mar,4589.587666666666
 2007,Cabeceras,Mujeres,Afiliada a salud,Feb - Abr,4745.374333333333
 2007,Cabeceras,Mujeres,Afiliada a salud,Mar - May,4817.557333333334
@@ -7327,6 +7358,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Mujeres,Afiliada a salud,Nov - Ene,8273.267
 2025,Cabeceras,Mujeres,Afiliada a salud,Dic - Feb,8204.768
 2026,Cabeceras,Mujeres,Afiliada a salud,Ene - Mar,8220.456
+2026,Cabeceras,Mujeres,Afiliada a salud,Feb - Abr,8425.953
 2007,Cabeceras,Mujeres,Régimen contributivo,Ene - Mar,3046.1389999999997
 2007,Cabeceras,Mujeres,Régimen contributivo,Feb - Abr,3161.0946666666664
 2007,Cabeceras,Mujeres,Régimen contributivo,Mar - May,3211.7973333333334
@@ -7556,6 +7588,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Mujeres,Régimen contributivo,Nov - Ene,5254.106
 2025,Cabeceras,Mujeres,Régimen contributivo,Dic - Feb,5218.538
 2026,Cabeceras,Mujeres,Régimen contributivo,Ene - Mar,5217.392
+2026,Cabeceras,Mujeres,Régimen contributivo,Feb - Abr,5374.029
 2007,Cabeceras,Mujeres,Régimen especial,Ene - Mar,91.25333333333333
 2007,Cabeceras,Mujeres,Régimen especial,Feb - Abr,91.30233333333332
 2007,Cabeceras,Mujeres,Régimen especial,Mar - May,89.76233333333334
@@ -7785,6 +7818,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Mujeres,Régimen especial,Nov - Ene,226.282
 2025,Cabeceras,Mujeres,Régimen especial,Dic - Feb,242.558
 2026,Cabeceras,Mujeres,Régimen especial,Ene - Mar,262.324
+2026,Cabeceras,Mujeres,Régimen especial,Feb - Abr,262.485
 2007,Cabeceras,Mujeres,Aportantes,Ene - Mar,2327.6346666666664
 2007,Cabeceras,Mujeres,Aportantes,Feb - Abr,2396.573
 2007,Cabeceras,Mujeres,Aportantes,Mar - May,2431.574666666667
@@ -8014,6 +8048,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Mujeres,Aportantes,Nov - Ene,4661.408
 2025,Cabeceras,Mujeres,Aportantes,Dic - Feb,4658.991
 2026,Cabeceras,Mujeres,Aportantes,Ene - Mar,4692.893
+2026,Cabeceras,Mujeres,Aportantes,Feb - Abr,4846.333
 2007,Cabeceras,Mujeres,Beneficiarios,Ene - Mar,807.9183333333332
 2007,Cabeceras,Mujeres,Beneficiarios,Feb - Abr,854.2166666666667
 2007,Cabeceras,Mujeres,Beneficiarios,Mar - May,868.3996666666667
@@ -8243,6 +8278,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Mujeres,Beneficiarios,Nov - Ene,802.492
 2025,Cabeceras,Mujeres,Beneficiarios,Dic - Feb,781.816
 2026,Cabeceras,Mujeres,Beneficiarios,Ene - Mar,766.319
+2026,Cabeceras,Mujeres,Beneficiarios,Feb - Abr,764.097
 2007,Cabeceras,Mujeres,Otro,Ene - Mar,1.8393333333333335
 2007,Cabeceras,Mujeres,Otro,Feb - Abr,1.6073333333333333
 2007,Cabeceras,Mujeres,Otro,Mar - May,1.5856666666666666
@@ -8472,6 +8508,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Mujeres,Otro,Nov - Ene,16.489
 2025,Cabeceras,Mujeres,Otro,Dic - Feb,20.289
 2026,Cabeceras,Mujeres,Otro,Ene - Mar,20.505
+2026,Cabeceras,Mujeres,Otro,Feb - Abr,26.084
 2007,Cabeceras,Mujeres,Régimen subsidiado,Ene - Mar,1451.2016666666666
 2007,Cabeceras,Mujeres,Régimen subsidiado,Feb - Abr,1491.4573333333335
 2007,Cabeceras,Mujeres,Régimen subsidiado,Mar - May,1514.9666666666665
@@ -8701,6 +8738,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Mujeres,Régimen subsidiado,Nov - Ene,2787.601
 2025,Cabeceras,Mujeres,Régimen subsidiado,Dic - Feb,2738.316
 2026,Cabeceras,Mujeres,Régimen subsidiado,Ene - Mar,2734.352
+2026,Cabeceras,Mujeres,Régimen subsidiado,Feb - Abr,2786.703
 2007,Cabeceras,Mujeres,No sabe,Ene - Mar,0.9936666666666666
 2007,Cabeceras,Mujeres,No sabe,Feb - Abr,1.5200000000000002
 2007,Cabeceras,Mujeres,No sabe,Mar - May,1.031
@@ -8930,6 +8968,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Mujeres,No sabe,Nov - Ene,5.277
 2025,Cabeceras,Mujeres,No sabe,Dic - Feb,5.356
 2026,Cabeceras,Mujeres,No sabe,Ene - Mar,6.387
+2026,Cabeceras,Mujeres,No sabe,Feb - Abr,2.737
 2007,Cabeceras,Mujeres,Cotiza a pensión,Ene - Mar,1916.3316666666667
 2007,Cabeceras,Mujeres,Cotiza a pensión,Feb - Abr,1948.4563333333335
 2007,Cabeceras,Mujeres,Cotiza a pensión,Mar - May,1969.8346666666666
@@ -9159,6 +9198,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Mujeres,Cotiza a pensión,Nov - Ene,4357.036
 2025,Cabeceras,Mujeres,Cotiza a pensión,Dic - Feb,4347.279
 2026,Cabeceras,Mujeres,Cotiza a pensión,Ene - Mar,4368.893
+2026,Cabeceras,Mujeres,Cotiza a pensión,Feb - Abr,4516.382
 2007,Centros poblados y rural disperso,Hombres,Población ocupada,Ene - Mar,2841.852666666667
 2007,Centros poblados y rural disperso,Hombres,Población ocupada,Feb - Abr,2900.2436666666667
 2007,Centros poblados y rural disperso,Hombres,Población ocupada,Mar - May,2890.777666666667
@@ -9388,6 +9428,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Hombres,Población ocupada,Nov - Ene,3397.152
 2025,Centros poblados y rural disperso,Hombres,Población ocupada,Dic - Feb,3365.312
 2026,Centros poblados y rural disperso,Hombres,Población ocupada,Ene - Mar,3393.815
+2026,Centros poblados y rural disperso,Hombres,Población ocupada,Feb - Abr,3405.56
 2007,Centros poblados y rural disperso,Hombres,Afiliada a salud,Ene - Mar,2207.621333333333
 2007,Centros poblados y rural disperso,Hombres,Afiliada a salud,Feb - Abr,2186.0866666666666
 2007,Centros poblados y rural disperso,Hombres,Afiliada a salud,Mar - May,2236.455
@@ -9617,6 +9658,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Hombres,Afiliada a salud,Nov - Ene,3238.93
 2025,Centros poblados y rural disperso,Hombres,Afiliada a salud,Dic - Feb,3200.073
 2026,Centros poblados y rural disperso,Hombres,Afiliada a salud,Ene - Mar,3232.232
+2026,Centros poblados y rural disperso,Hombres,Afiliada a salud,Feb - Abr,3223.699
 2007,Centros poblados y rural disperso,Hombres,Régimen contributivo,Ene - Mar,370.74800000000005
 2007,Centros poblados y rural disperso,Hombres,Régimen contributivo,Feb - Abr,385.1306666666667
 2007,Centros poblados y rural disperso,Hombres,Régimen contributivo,Mar - May,471.493
@@ -9846,6 +9888,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Hombres,Régimen contributivo,Nov - Ene,639.258
 2025,Centros poblados y rural disperso,Hombres,Régimen contributivo,Dic - Feb,617.545
 2026,Centros poblados y rural disperso,Hombres,Régimen contributivo,Ene - Mar,610.887
+2026,Centros poblados y rural disperso,Hombres,Régimen contributivo,Feb - Abr,602.879
 2007,Centros poblados y rural disperso,Hombres,Régimen especial,Ene - Mar,15.43
 2007,Centros poblados y rural disperso,Hombres,Régimen especial,Feb - Abr,11.828333333333333
 2007,Centros poblados y rural disperso,Hombres,Régimen especial,Mar - May,5.685333333333333
@@ -10075,6 +10118,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Hombres,Régimen especial,Nov - Ene,33.774
 2025,Centros poblados y rural disperso,Hombres,Régimen especial,Dic - Feb,31.569
 2026,Centros poblados y rural disperso,Hombres,Régimen especial,Ene - Mar,26.459
+2026,Centros poblados y rural disperso,Hombres,Régimen especial,Feb - Abr,26.842
 2007,Centros poblados y rural disperso,Hombres,Aportantes,Ene - Mar,323.34999999999997
 2007,Centros poblados y rural disperso,Hombres,Aportantes,Feb - Abr,330.73833333333334
 2007,Centros poblados y rural disperso,Hombres,Aportantes,Mar - May,399.38566666666674
@@ -10304,6 +10348,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Hombres,Aportantes,Nov - Ene,612.887
 2025,Centros poblados y rural disperso,Hombres,Aportantes,Dic - Feb,591.806
 2026,Centros poblados y rural disperso,Hombres,Aportantes,Ene - Mar,579.906
+2026,Centros poblados y rural disperso,Hombres,Aportantes,Feb - Abr,579.348
 2007,Centros poblados y rural disperso,Hombres,Beneficiarios,Ene - Mar,62.43033333333333
 2007,Centros poblados y rural disperso,Hombres,Beneficiarios,Feb - Abr,65.823
 2007,Centros poblados y rural disperso,Hombres,Beneficiarios,Mar - May,77.14833333333333
@@ -10533,6 +10578,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Hombres,Beneficiarios,Nov - Ene,59.401
 2025,Centros poblados y rural disperso,Hombres,Beneficiarios,Dic - Feb,57.308
 2026,Centros poblados y rural disperso,Hombres,Beneficiarios,Ene - Mar,57.44
+2026,Centros poblados y rural disperso,Hombres,Beneficiarios,Feb - Abr,50.372
 2007,Centros poblados y rural disperso,Hombres,Otro,Ene - Mar,0.3973333333333333
 2007,Centros poblados y rural disperso,Hombres,Otro,Feb - Abr,0.3973333333333333
 2007,Centros poblados y rural disperso,Hombres,Otro,Mar - May,0.6443333333333333
@@ -10762,6 +10808,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Hombres,Otro,Nov - Ene,0.746
 2025,Centros poblados y rural disperso,Hombres,Otro,Dic - Feb,0.0
 2026,Centros poblados y rural disperso,Hombres,Otro,Ene - Mar,0.0
+2026,Centros poblados y rural disperso,Hombres,Otro,Feb - Abr,0.0
 2007,Centros poblados y rural disperso,Hombres,Régimen subsidiado,Ene - Mar,1821.3033333333333
 2007,Centros poblados y rural disperso,Hombres,Régimen subsidiado,Feb - Abr,1788.9876666666667
 2007,Centros poblados y rural disperso,Hombres,Régimen subsidiado,Mar - May,1755.153
@@ -10991,6 +11038,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Hombres,Régimen subsidiado,Nov - Ene,2559.353
 2025,Centros poblados y rural disperso,Hombres,Régimen subsidiado,Dic - Feb,2544.367
 2026,Centros poblados y rural disperso,Hombres,Régimen subsidiado,Ene - Mar,2591.199
+2026,Centros poblados y rural disperso,Hombres,Régimen subsidiado,Feb - Abr,2587.113
 2007,Centros poblados y rural disperso,Hombres,No sabe,Ene - Mar,0.13999999999999999
 2007,Centros poblados y rural disperso,Hombres,No sabe,Feb - Abr,0.13999999999999999
 2007,Centros poblados y rural disperso,Hombres,No sabe,Mar - May,4.123666666666667
@@ -11220,6 +11268,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Hombres,No sabe,Nov - Ene,6.544
 2025,Centros poblados y rural disperso,Hombres,No sabe,Dic - Feb,6.592
 2026,Centros poblados y rural disperso,Hombres,No sabe,Ene - Mar,3.687
+2026,Centros poblados y rural disperso,Hombres,No sabe,Feb - Abr,6.865
 2007,Centros poblados y rural disperso,Hombres,Cotiza a pensión,Ene - Mar,226.34666666666666
 2007,Centros poblados y rural disperso,Hombres,Cotiza a pensión,Feb - Abr,229.33233333333337
 2007,Centros poblados y rural disperso,Hombres,Cotiza a pensión,Mar - May,279.9836666666667
@@ -11449,6 +11498,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Hombres,Cotiza a pensión,Nov - Ene,556.666
 2025,Centros poblados y rural disperso,Hombres,Cotiza a pensión,Dic - Feb,535.623
 2026,Centros poblados y rural disperso,Hombres,Cotiza a pensión,Ene - Mar,529.409
+2026,Centros poblados y rural disperso,Hombres,Cotiza a pensión,Feb - Abr,530.989
 2007,Centros poblados y rural disperso,Mujeres,Población ocupada,Ene - Mar,894.8766666666667
 2007,Centros poblados y rural disperso,Mujeres,Población ocupada,Feb - Abr,972.994
 2007,Centros poblados y rural disperso,Mujeres,Población ocupada,Mar - May,934.8916666666668
@@ -11678,6 +11728,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Mujeres,Población ocupada,Nov - Ene,1494.919
 2025,Centros poblados y rural disperso,Mujeres,Población ocupada,Dic - Feb,1505.947
 2026,Centros poblados y rural disperso,Mujeres,Población ocupada,Ene - Mar,1528.378
+2026,Centros poblados y rural disperso,Mujeres,Población ocupada,Feb - Abr,1544.692
 2007,Centros poblados y rural disperso,Mujeres,Afiliada a salud,Ene - Mar,752.5866666666667
 2007,Centros poblados y rural disperso,Mujeres,Afiliada a salud,Feb - Abr,796.4683333333332
 2007,Centros poblados y rural disperso,Mujeres,Afiliada a salud,Mar - May,758.4556666666666
@@ -11907,6 +11958,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Mujeres,Afiliada a salud,Nov - Ene,1460.074
 2025,Centros poblados y rural disperso,Mujeres,Afiliada a salud,Dic - Feb,1464.112
 2026,Centros poblados y rural disperso,Mujeres,Afiliada a salud,Ene - Mar,1486.548
+2026,Centros poblados y rural disperso,Mujeres,Afiliada a salud,Feb - Abr,1498.392
 2007,Centros poblados y rural disperso,Mujeres,Régimen contributivo,Ene - Mar,123.90766666666667
 2007,Centros poblados y rural disperso,Mujeres,Régimen contributivo,Feb - Abr,149.12566666666666
 2007,Centros poblados y rural disperso,Mujeres,Régimen contributivo,Mar - May,167.86266666666666
@@ -12136,6 +12188,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Mujeres,Régimen contributivo,Nov - Ene,291.693
 2025,Centros poblados y rural disperso,Mujeres,Régimen contributivo,Dic - Feb,303.813
 2026,Centros poblados y rural disperso,Mujeres,Régimen contributivo,Ene - Mar,329.137
+2026,Centros poblados y rural disperso,Mujeres,Régimen contributivo,Feb - Abr,356.883
 2007,Centros poblados y rural disperso,Mujeres,Régimen especial,Ene - Mar,11.720666666666666
 2007,Centros poblados y rural disperso,Mujeres,Régimen especial,Feb - Abr,12.051
 2007,Centros poblados y rural disperso,Mujeres,Régimen especial,Mar - May,5.390333333333333
@@ -12365,6 +12418,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Mujeres,Régimen especial,Nov - Ene,22.05
 2025,Centros poblados y rural disperso,Mujeres,Régimen especial,Dic - Feb,21.224
 2026,Centros poblados y rural disperso,Mujeres,Régimen especial,Ene - Mar,18.046
+2026,Centros poblados y rural disperso,Mujeres,Régimen especial,Feb - Abr,21.414
 2007,Centros poblados y rural disperso,Mujeres,Aportantes,Ene - Mar,75.52833333333334
 2007,Centros poblados y rural disperso,Mujeres,Aportantes,Feb - Abr,83.05633333333334
 2007,Centros poblados y rural disperso,Mujeres,Aportantes,Mar - May,91.134
@@ -12594,6 +12648,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Mujeres,Aportantes,Nov - Ene,242.547
 2025,Centros poblados y rural disperso,Mujeres,Aportantes,Dic - Feb,253.839
 2026,Centros poblados y rural disperso,Mujeres,Aportantes,Ene - Mar,270.521
+2026,Centros poblados y rural disperso,Mujeres,Aportantes,Feb - Abr,286.716
 2007,Centros poblados y rural disperso,Mujeres,Beneficiarios,Ene - Mar,60.017
 2007,Centros poblados y rural disperso,Mujeres,Beneficiarios,Feb - Abr,78.03699999999999
 2007,Centros poblados y rural disperso,Mujeres,Beneficiarios,Mar - May,82.11933333333333
@@ -12823,6 +12878,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Mujeres,Beneficiarios,Nov - Ene,70.337
 2025,Centros poblados y rural disperso,Mujeres,Beneficiarios,Dic - Feb,69.999
 2026,Centros poblados y rural disperso,Mujeres,Beneficiarios,Ene - Mar,75.462
+2026,Centros poblados y rural disperso,Mujeres,Beneficiarios,Feb - Abr,91.01
 2007,Centros poblados y rural disperso,Mujeres,Otro,Ene - Mar,0.08333333333333333
 2007,Centros poblados y rural disperso,Mujeres,Otro,Feb - Abr,0.08333333333333333
 2007,Centros poblados y rural disperso,Mujeres,Otro,Mar - May,0.0
@@ -13052,6 +13108,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Mujeres,Otro,Nov - Ene,0.86
 2025,Centros poblados y rural disperso,Mujeres,Otro,Dic - Feb,1.2
 2026,Centros poblados y rural disperso,Mujeres,Otro,Ene - Mar,1.2
+2026,Centros poblados y rural disperso,Mujeres,Otro,Feb - Abr,0.571
 2007,Centros poblados y rural disperso,Mujeres,Régimen subsidiado,Ene - Mar,616.2166666666667
 2007,Centros poblados y rural disperso,Mujeres,Régimen subsidiado,Feb - Abr,634.5500000000001
 2007,Centros poblados y rural disperso,Mujeres,Régimen subsidiado,Mar - May,585.2026666666667
@@ -13281,6 +13338,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Mujeres,Régimen subsidiado,Nov - Ene,1143.66
 2025,Centros poblados y rural disperso,Mujeres,Régimen subsidiado,Dic - Feb,1136.404
 2026,Centros poblados y rural disperso,Mujeres,Régimen subsidiado,Ene - Mar,1139.146
+2026,Centros poblados y rural disperso,Mujeres,Régimen subsidiado,Feb - Abr,1119.323
 2007,Centros poblados y rural disperso,Mujeres,No sabe,Ene - Mar,0.7416666666666667
 2007,Centros poblados y rural disperso,Mujeres,No sabe,Feb - Abr,0.7416666666666667
 2007,Centros poblados y rural disperso,Mujeres,No sabe,Mar - May,0.0
@@ -13510,6 +13568,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Mujeres,No sabe,Nov - Ene,2.671
 2025,Centros poblados y rural disperso,Mujeres,No sabe,Dic - Feb,2.671
 2026,Centros poblados y rural disperso,Mujeres,No sabe,Ene - Mar,0.219
+2026,Centros poblados y rural disperso,Mujeres,No sabe,Feb - Abr,0.772
 2007,Centros poblados y rural disperso,Mujeres,Cotiza a pensión,Ene - Mar,61.46333333333334
 2007,Centros poblados y rural disperso,Mujeres,Cotiza a pensión,Feb - Abr,69.61399999999999
 2007,Centros poblados y rural disperso,Mujeres,Cotiza a pensión,Mar - May,68.87966666666667
@@ -13739,6 +13798,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Mujeres,Cotiza a pensión,Nov - Ene,226.921
 2025,Centros poblados y rural disperso,Mujeres,Cotiza a pensión,Dic - Feb,234.064
 2026,Centros poblados y rural disperso,Mujeres,Cotiza a pensión,Ene - Mar,247.956
+2026,Centros poblados y rural disperso,Mujeres,Cotiza a pensión,Feb - Abr,263.24
 2007,Total nacional,Hombres,Afiliada a salud,Ene - Mar,82.11434961162173
 2007,Total nacional,Hombres,Afiliada a salud,Feb - Abr,81.19348762515911
 2007,Total nacional,Hombres,Afiliada a salud,Mar - May,81.93305383503461
@@ -13968,6 +14028,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total nacional,Hombres,Afiliada a salud,Nov - Ene,94.97930276051888
 2025,Total nacional,Hombres,Afiliada a salud,Dic - Feb,95.02991957237136
 2026,Total nacional,Hombres,Afiliada a salud,Ene - Mar,94.95309621546465
+2026,Total nacional,Hombres,Afiliada a salud,Feb - Abr,94.8360761783432
 2007,Total nacional,Hombres,Régimen contributivo,Ene - Mar,41.36702180995412
 2007,Total nacional,Hombres,Régimen contributivo,Feb - Abr,41.84195097281011
 2007,Total nacional,Hombres,Régimen contributivo,Mar - May,43.274911992353196
@@ -14197,6 +14258,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total nacional,Hombres,Régimen contributivo,Nov - Ene,48.08342499489765
 2025,Total nacional,Hombres,Régimen contributivo,Dic - Feb,48.397743863274755
 2026,Total nacional,Hombres,Régimen contributivo,Ene - Mar,48.28025199701996
+2026,Total nacional,Hombres,Régimen contributivo,Feb - Abr,47.7884750738713
 2007,Total nacional,Hombres,Régimen especial,Ene - Mar,1.858148638701944
 2007,Total nacional,Hombres,Régimen especial,Feb - Abr,1.6968666885152572
 2007,Total nacional,Hombres,Régimen especial,Mar - May,1.6289455704413294
@@ -14426,6 +14488,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total nacional,Hombres,Régimen especial,Nov - Ene,2.197373629561823
 2025,Total nacional,Hombres,Régimen especial,Dic - Feb,2.329286076135702
 2026,Total nacional,Hombres,Régimen especial,Ene - Mar,2.284306266630467
+2026,Total nacional,Hombres,Régimen especial,Feb - Abr,2.375131538577161
 2007,Total nacional,Hombres,Aportantes,Ene - Mar,36.51389739279205
 2007,Total nacional,Hombres,Aportantes,Feb - Abr,36.59516145364617
 2007,Total nacional,Hombres,Aportantes,Mar - May,37.5348862199274
@@ -14655,6 +14718,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total nacional,Hombres,Aportantes,Nov - Ene,45.659871595577506
 2025,Total nacional,Hombres,Aportantes,Dic - Feb,45.90756084111188
 2026,Total nacional,Hombres,Aportantes,Ene - Mar,45.80893217131422
+2026,Total nacional,Hombres,Aportantes,Feb - Abr,45.48287323045502
 2007,Total nacional,Hombres,Beneficiarios,Ene - Mar,6.660789039341042
 2007,Total nacional,Hombres,Beneficiarios,Feb - Abr,6.895387427689285
 2007,Total nacional,Hombres,Beneficiarios,Mar - May,7.310492806384768
@@ -14884,6 +14948,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total nacional,Hombres,Beneficiarios,Nov - Ene,4.501887672988539
 2025,Total nacional,Hombres,Beneficiarios,Dic - Feb,4.713651593745885
 2026,Total nacional,Hombres,Beneficiarios,Ene - Mar,4.643249974192401
+2026,Total nacional,Hombres,Beneficiarios,Feb - Abr,4.560065717488423
 2007,Total nacional,Hombres,Otro,Ene - Mar,0.050480634689059806
 2007,Total nacional,Hombres,Otro,Feb - Abr,0.048265463231862975
 2007,Total nacional,Hombres,Otro,Mar - May,0.05847853648237194
@@ -15113,6 +15178,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total nacional,Hombres,Otro,Nov - Ene,0.11903222223514207
 2025,Total nacional,Hombres,Otro,Dic - Feb,0.10581750455269714
 2026,Total nacional,Hombres,Otro,Ene - Mar,0.11237611814381128
+2026,Total nacional,Hombres,Otro,Feb - Abr,0.12066054420853242
 2007,Total nacional,Hombres,Régimen subsidiado,Ene - Mar,38.831904423962925
 2007,Total nacional,Hombres,Régimen subsidiado,Feb - Abr,37.6239169831379
 2007,Total nacional,Hombres,Régimen subsidiado,Mar - May,36.95114759904434
@@ -15342,6 +15408,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total nacional,Hombres,Régimen subsidiado,Nov - Ene,44.56270781684161
 2025,Total nacional,Hombres,Régimen subsidiado,Dic - Feb,44.222329750402366
 2026,Total nacional,Hombres,Régimen subsidiado,Ene - Mar,44.306750478068714
+2026,Total nacional,Hombres,Régimen subsidiado,Feb - Abr,44.56211921099425
 2007,Total nacional,Hombres,No sabe,Ene - Mar,0.05727473900274114
 2007,Total nacional,Hombres,No sabe,Feb - Abr,0.03075298069583793
 2007,Total nacional,Hombres,No sabe,Mar - May,0.07804867319574303
@@ -15571,6 +15638,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total nacional,Hombres,No sabe,Nov - Ene,0.13579631921779722
 2025,Total nacional,Hombres,No sabe,Dic - Feb,0.08055269484595008
 2026,Total nacional,Hombres,No sabe,Ene - Mar,0.08179465249332987
+2026,Total nacional,Hombres,No sabe,Feb - Abr,0.11035035490049776
 2007,Total nacional,Hombres,Cotiza a pensión,Ene - Mar,28.22725112196567
 2007,Total nacional,Hombres,Cotiza a pensión,Feb - Abr,28.155484841536744
 2007,Total nacional,Hombres,Cotiza a pensión,Mar - May,29.045862423263895
@@ -15800,6 +15868,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total nacional,Hombres,Cotiza a pensión,Nov - Ene,42.145952793872304
 2025,Total nacional,Hombres,Cotiza a pensión,Dic - Feb,42.31287077815327
 2026,Total nacional,Hombres,Cotiza a pensión,Ene - Mar,42.143391754461554
+2026,Total nacional,Hombres,Cotiza a pensión,Feb - Abr,41.96969758463167
 2007,Total Nacional,Mujeres,Afiliada a salud,Ene - Mar,86.69531820616581
 2007,Total Nacional,Mujeres,Afiliada a salud,Feb - Abr,86.58709830268126
 2007,Total Nacional,Mujeres,Afiliada a salud,Mar - May,86.62421668515954
@@ -16029,6 +16098,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total Nacional,Mujeres,Afiliada a salud,Nov - Ene,97.34919030374823
 2025,Total Nacional,Mujeres,Afiliada a salud,Dic - Feb,97.3157861469878
 2026,Total Nacional,Mujeres,Afiliada a salud,Ene - Mar,97.4502714692186
+2026,Total Nacional,Mujeres,Afiliada a salud,Feb - Abr,97.32934196216938
 2007,Total Nacional,Mujeres,Régimen contributivo,Ene - Mar,51.44500437465387
 2007,Total Nacional,Mujeres,Régimen contributivo,Feb - Abr,51.71969005044599
 2007,Total Nacional,Mujeres,Régimen contributivo,Mar - May,52.503544474893914
@@ -16258,6 +16328,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total Nacional,Mujeres,Régimen contributivo,Nov - Ene,55.466991199273394
 2025,Total Nacional,Mujeres,Régimen contributivo,Dic - Feb,55.58161120466944
 2026,Total Nacional,Mujeres,Régimen contributivo,Ene - Mar,55.68255218210414
+2026,Total Nacional,Mujeres,Régimen contributivo,Feb - Abr,56.20379922333414
 2007,Total Nacional,Mujeres,Régimen especial,Ene - Mar,1.6711156108443814
 2007,Total Nacional,Mujeres,Régimen especial,Feb - Abr,1.6148175315040714
 2007,Total Nacional,Mujeres,Régimen especial,Mar - May,1.478211350698287
@@ -16487,6 +16558,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total Nacional,Mujeres,Régimen especial,Nov - Ene,2.4837226114353137
 2025,Total Nacional,Mujeres,Régimen especial,Dic - Feb,2.6549251517678094
 2026,Total Nacional,Mujeres,Régimen especial,Ene - Mar,2.8146923666762977
+2026,Total Nacional,Mujeres,Régimen especial,Feb - Abr,2.784234410806751
 2007,Total Nacional,Mujeres,Aportantes,Ene - Mar,38.99965238622844
 2007,Total Nacional,Mujeres,Aportantes,Feb - Abr,38.74232973390717
 2007,Total Nacional,Mujeres,Aportantes,Mar - May,39.190662999472686
@@ -16716,6 +16788,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total Nacional,Mujeres,Aportantes,Nov - Ene,49.04750059984723
 2025,Total Nacional,Mujeres,Aportantes,Dic - Feb,49.44686627000438
 2026,Total Nacional,Mujeres,Aportantes,Ene - Mar,49.82856107962046
+2026,Total Nacional,Mujeres,Aportantes,Feb - Abr,50.34047903711243
 2007,Total Nacional,Mujeres,Beneficiarios,Ene - Mar,14.085265665961666
 2007,Total Nacional,Mujeres,Beneficiarios,Feb - Abr,14.565762462247273
 2007,Total Nacional,Mujeres,Beneficiarios,Mar - May,14.766454071533483
@@ -16945,6 +17018,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total Nacional,Mujeres,Beneficiarios,Nov - Ene,8.72970508519431
 2025,Total Nacional,Mujeres,Beneficiarios,Dic - Feb,8.573386615284958
 2026,Total Nacional,Mujeres,Beneficiarios,Ene - Mar,8.450783266147855
+2026,Total Nacional,Mujeres,Beneficiarios,Feb - Abr,8.386145545851617
 2007,Total Nacional,Mujeres,Otro,Ene - Mar,0.031201933308139543
 2007,Total Nacional,Mujeres,Otro,Feb - Abr,0.026415385795615847
 2007,Total Nacional,Mujeres,Otro,Mar - May,0.024633576201303697
@@ -17174,6 +17248,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total Nacional,Mujeres,Otro,Nov - Ene,0.17350812566717064
 2025,Total Nacional,Mujeres,Otro,Dic - Feb,0.21628347114791174
 2026,Total Nacional,Mujeres,Otro,Ene - Mar,0.21789016384127588
+2026,Total Nacional,Mujeres,Otro,Feb - Abr,0.2614090511768409
 2007,Total Nacional,Mujeres,Régimen subsidiado,Ene - Mar,33.55103101076196
 2007,Total Nacional,Mujeres,Régimen subsidiado,Feb - Abr,33.21724868445181
 2007,Total Nacional,Mujeres,Régimen subsidiado,Mar - May,32.62644411557098
@@ -17403,6 +17478,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total Nacional,Mujeres,Régimen subsidiado,Nov - Ene,39.31898360724273
 2025,Total Nacional,Mujeres,Régimen subsidiado,Dic - Feb,38.9984592734067
 2026,Total Nacional,Mujeres,Régimen subsidiado,Ene - Mar,38.88670815789046
+2026,Total Nacional,Mujeres,Régimen subsidiado,Feb - Abr,38.30690491585335
 2007,Total Nacional,Mujeres,No sabe,Ene - Mar,0.028167209905596846
 2007,Total Nacional,Mujeres,No sabe,Feb - Abr,0.03534203627938666
 2007,Total Nacional,Mujeres,No sabe,Mar - May,0.01601674399634903
@@ -17632,6 +17708,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total Nacional,Mujeres,No sabe,Nov - Ene,0.07949288579678765
 2025,Total Nacional,Mujeres,No sabe,Dic - Feb,0.08079051714385442
 2026,Total Nacional,Mujeres,No sabe,Ene - Mar,0.06631876254770865
+2026,Total Nacional,Mujeres,No sabe,Feb - Abr,0.034413219305178565
 2007,Total Nacional,Mujeres,Cotiza a pensión,Ene - Mar,32.09658707757435
 2007,Total Nacional,Mujeres,Cotiza a pensión,Feb - Abr,31.530825250088135
 2007,Total Nacional,Mujeres,Cotiza a pensión,Mar - May,31.671746748401603
@@ -17861,6 +17938,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Total Nacional,Mujeres,Cotiza a pensión,Nov - Ene,45.847011800612876
 2025,Total Nacional,Mujeres,Cotiza a pensión,Dic - Feb,46.11051079897564
 2026,Total Nacional,Mujeres,Cotiza a pensión,Ene - Mar,46.34933583857495
+2026,Total Nacional,Mujeres,Cotiza a pensión,Feb - Abr,46.87436468185719
 2007,Cabeceras,Hombres,Afiliada a salud,Ene - Mar,83.90982482771021
 2007,Cabeceras,Hombres,Afiliada a salud,Feb - Abr,83.55332918834426
 2007,Cabeceras,Hombres,Afiliada a salud,Mar - May,83.7741566120285
@@ -18090,6 +18168,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Hombres,Afiliada a salud,Nov - Ene,94.86311942837993
 2025,Cabeceras,Hombres,Afiliada a salud,Dic - Feb,95.01076102744584
 2026,Cabeceras,Hombres,Afiliada a salud,Ene - Mar,94.86103659282563
+2026,Cabeceras,Hombres,Afiliada a salud,Feb - Abr,94.89247799493157
 2007,Cabeceras,Hombres,Régimen contributivo,Ene - Mar,52.84061220490438
 2007,Cabeceras,Hombres,Régimen contributivo,Feb - Abr,53.42822703997429
 2007,Cabeceras,Hombres,Régimen contributivo,Mar - May,54.14313959027112
@@ -18319,6 +18398,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Hombres,Régimen contributivo,Nov - Ene,57.44428838946902
 2025,Cabeceras,Hombres,Régimen contributivo,Dic - Feb,57.984919391845516
 2026,Cabeceras,Hombres,Régimen contributivo,Ene - Mar,58.03383784519471
+2026,Cabeceras,Hombres,Régimen contributivo,Feb - Abr,57.41913161438617
 2007,Cabeceras,Hombres,Régimen especial,Ene - Mar,2.390972788886779
 2007,Cabeceras,Hombres,Régimen especial,Feb - Abr,2.219757275705304
 2007,Cabeceras,Hombres,Régimen especial,Mar - May,2.2062302730074252
@@ -18548,6 +18628,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Hombres,Régimen especial,Nov - Ene,2.582210304003399
 2025,Cabeceras,Hombres,Régimen especial,Dic - Feb,2.7731783998209973
 2026,Cabeceras,Hombres,Régimen especial,Ene - Mar,2.768970304353822
+2026,Cabeceras,Hombres,Régimen especial,Feb - Abr,2.8831355870150377
 2007,Cabeceras,Hombres,Aportantes,Ene - Mar,46.69706079529007
 2007,Cabeceras,Hombres,Aportantes,Feb - Abr,46.81387998205248
 2007,Cabeceras,Hombres,Aportantes,Mar - May,47.094955546019726
@@ -18777,6 +18858,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Hombres,Aportantes,Nov - Ene,54.49386073742708
 2025,Cabeceras,Hombres,Aportantes,Dic - Feb,54.94423227891067
 2026,Cabeceras,Hombres,Aportantes,Ene - Mar,55.06051475338668
+2026,Cabeceras,Hombres,Aportantes,Feb - Abr,54.596670169255
 2007,Cabeceras,Hombres,Beneficiarios,Ene - Mar,8.469261548409833
 2007,Cabeceras,Hombres,Beneficiarios,Feb - Abr,8.771822267244382
 2007,Cabeceras,Hombres,Beneficiarios,Mar - May,9.181354178958577
@@ -19006,6 +19088,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Hombres,Beneficiarios,Nov - Ene,5.382565942380971
 2025,Cabeceras,Hombres,Beneficiarios,Dic - Feb,5.67428503164785
 2026,Cabeceras,Hombres,Beneficiarios,Ene - Mar,5.593710288661244
+2026,Cabeceras,Hombres,Beneficiarios,Feb - Abr,5.546302735863323
 2007,Cabeceras,Hombres,Otro,Ene - Mar,0.06526265009126508
 2007,Cabeceras,Hombres,Otro,Feb - Abr,0.06228206638273368
 2007,Cabeceras,Hombres,Otro,Mar - May,0.07306013830023915
@@ -19235,6 +19318,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Hombres,Otro,Nov - Ene,0.15008142906143274
 2025,Cabeceras,Hombres,Otro,Dic - Feb,0.1395804811079971
 2026,Cabeceras,Hombres,Otro,Ene - Mar,0.14857361640463806
+2026,Cabeceras,Hombres,Otro,Feb - Abr,0.15928489672565485
 2007,Cabeceras,Hombres,Régimen subsidiado,Ene - Mar,28.59975738678731
 2007,Cabeceras,Hombres,Régimen subsidiado,Feb - Abr,27.86407525281139
 2007,Cabeceras,Hombres,Régimen subsidiado,Mar - May,27.372770904738736
@@ -19464,6 +19548,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Hombres,Régimen subsidiado,Nov - Ene,34.71900359489275
 2025,Cabeceras,Hombres,Régimen subsidiado,Dic - Feb,34.20890804488723
 2026,Cabeceras,Hombres,Régimen subsidiado,Ene - Mar,33.98509005768783
+2026,Cabeceras,Hombres,Régimen subsidiado,Feb - Abr,34.50907381556884
 2007,Cabeceras,Hombres,No sabe,Ene - Mar,0.07848244713174121
 2007,Cabeceras,Hombres,No sabe,Feb - Abr,0.04126961985327932
 2007,Cabeceras,Hombres,No sabe,Mar - May,0.05201584401121353
@@ -19693,6 +19778,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Hombres,No sabe,Nov - Ene,0.11761714001476901
 2025,Cabeceras,Hombres,No sabe,Dic - Feb,0.04375519089209392
 2026,Cabeceras,Hombres,No sabe,Ene - Mar,0.07313838558925137
+2026,Cabeceras,Hombres,No sabe,Feb - Abr,0.08113697796151613
 2007,Cabeceras,Hombres,Cotiza a pensión,Ene - Mar,36.436117587956325
 2007,Cabeceras,Hombres,Cotiza a pensión,Feb - Abr,36.36901100983198
 2007,Cabeceras,Hombres,Cotiza a pensión,Mar - May,36.84917742975271
@@ -19922,6 +20008,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Hombres,Cotiza a pensión,Nov - Ene,50.38532983218656
 2025,Cabeceras,Hombres,Cotiza a pensión,Dic - Feb,50.73527682861618
 2026,Cabeceras,Hombres,Cotiza a pensión,Ene - Mar,50.69353811068914
+2026,Cabeceras,Hombres,Cotiza a pensión,Feb - Abr,50.4134536238536
 2007,Cabeceras,Mujeres,Afiliada a salud,Ene - Mar,87.13632662009022
 2007,Cabeceras,Mujeres,Afiliada a salud,Feb - Abr,87.43500547753834
 2007,Cabeceras,Mujeres,Afiliada a salud,Mar - May,87.55816998120605
@@ -20151,6 +20238,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Mujeres,Afiliada a salud,Nov - Ene,97.29294898782379
 2025,Cabeceras,Mujeres,Afiliada a salud,Dic - Feb,97.33253851743109
 2026,Cabeceras,Mujeres,Afiliada a salud,Ene - Mar,97.48419349467852
+2026,Cabeceras,Mujeres,Afiliada a salud,Feb - Abr,97.3876703932549
 2007,Cabeceras,Mujeres,Régimen contributivo,Ene - Mar,57.83294319922457
 2007,Cabeceras,Mujeres,Régimen contributivo,Feb - Abr,58.24415737943903
 2007,Cabeceras,Mujeres,Régimen contributivo,Mar - May,58.373793480648615
@@ -20380,6 +20468,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Mujeres,Régimen contributivo,Nov - Ene,61.78786047091419
 2025,Cabeceras,Mujeres,Régimen contributivo,Dic - Feb,61.90711923721399
 2026,Cabeceras,Mujeres,Régimen contributivo,Ene - Mar,61.871659098423216
+2026,Cabeceras,Mujeres,Régimen contributivo,Feb - Abr,62.11334966333105
 2007,Cabeceras,Mujeres,Régimen especial,Ene - Mar,1.732504276202292
 2007,Cabeceras,Mujeres,Régimen especial,Feb - Abr,1.6822740324269532
 2007,Cabeceras,Mujeres,Régimen especial,Mar - May,1.6314129954467265
@@ -20609,6 +20698,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Mujeres,Régimen especial,Nov - Ene,2.6610579693442435
 2025,Cabeceras,Mujeres,Régimen especial,Dic - Feb,2.87744709877367
 2026,Cabeceras,Mujeres,Régimen especial,Ene - Mar,3.110830296311792
+2026,Cabeceras,Mujeres,Régimen especial,Feb - Abr,3.033817381033755
 2007,Cabeceras,Mujeres,Aportantes,Ene - Mar,44.19166803152429
 2007,Cabeceras,Mujeres,Aportantes,Feb - Abr,44.15760668455601
 2007,Cabeceras,Mujeres,Aportantes,Mar - May,44.193397868434516
@@ -20838,6 +20928,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Mujeres,Aportantes,Nov - Ene,54.81778005658874
 2025,Cabeceras,Mujeres,Aportantes,Dic - Feb,55.26925574981093
 2026,Cabeceras,Mujeres,Aportantes,Ene - Mar,55.65176545702846
+2026,Cabeceras,Mujeres,Aportantes,Feb - Abr,56.014207629683455
 2007,Cabeceras,Mujeres,Beneficiarios,Ene - Mar,15.338858496371587
 2007,Cabeceras,Mujeres,Beneficiarios,Feb - Abr,15.73920910819706
 2007,Cabeceras,Mujeres,Beneficiarios,Mar - May,15.78299548186439
@@ -21067,6 +21158,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Mujeres,Beneficiarios,Nov - Ene,9.437240840787164
 2025,Cabeceras,Mujeres,Beneficiarios,Dic - Feb,9.274623722882097
 2026,Cabeceras,Mujeres,Beneficiarios,Ene - Mar,9.087572474647216
+2026,Cabeceras,Mujeres,Beneficiarios,Feb - Abr,8.831478977449185
 2007,Cabeceras,Mujeres,Otro,Ene - Mar,0.03492094753099156
 2007,Cabeceras,Mujeres,Otro,Feb - Abr,0.029615619112920696
 2007,Cabeceras,Mujeres,Otro,Mar - May,0.028819184065105544
@@ -21296,6 +21388,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Mujeres,Otro,Nov - Ene,0.1939093028014479
 2025,Cabeceras,Mujeres,Otro,Dic - Feb,0.24068686329463054
 2026,Cabeceras,Mujeres,Otro,Ene - Mar,0.2431633217924143
+2026,Cabeceras,Mujeres,Otro,Feb - Abr,0.30148043723216367
 2007,Cabeceras,Mujeres,Régimen subsidiado,Ene - Mar,27.552013732450614
 2007,Cabeceras,Mujeres,Régimen subsidiado,Feb - Abr,27.48056759052617
 2007,Cabeceras,Mujeres,Régimen subsidiado,Mar - May,27.534225280113134
@@ -21525,6 +21618,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Mujeres,Régimen subsidiado,Nov - Ene,32.78196169559215
 2025,Cabeceras,Mujeres,Régimen subsidiado,Dic - Feb,32.48443436095911
 2026,Cabeceras,Mujeres,Régimen subsidiado,Ene - Mar,32.42595051303251
+2026,Cabeceras,Mujeres,Régimen subsidiado,Feb - Abr,32.20888049670994
 2007,Cabeceras,Mujeres,No sabe,Ene - Mar,0.01886541221273755
 2007,Cabeceras,Mujeres,No sabe,Feb - Abr,0.02800647514618797
 2007,Cabeceras,Mujeres,No sabe,Mar - May,0.018738224997555487
@@ -21754,6 +21848,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Mujeres,No sabe,Nov - Ene,0.0620570920542932
 2025,Cabeceras,Mujeres,No sabe,Dic - Feb,0.06353782048430387
 2026,Cabeceras,Mujeres,No sabe,Ene - Mar,0.07574172817791515
+2026,Cabeceras,Mujeres,No sabe,Feb - Abr,0.03163441024016378
 2007,Cabeceras,Mujeres,Cotiza a pensión,Ene - Mar,36.382811299552884
 2007,Cabeceras,Mujeres,Cotiza a pensión,Feb - Abr,35.900917021666146
 2007,Cabeceras,Mujeres,Cotiza a pensión,Mar - May,35.80136294081932
@@ -21983,6 +22078,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Cabeceras,Mujeres,Cotiza a pensión,Nov - Ene,51.23839002006243
 2025,Cabeceras,Mujeres,Cotiza a pensión,Dic - Feb,51.57144001067664
 2026,Cabeceras,Mujeres,Cotiza a pensión,Ene - Mar,51.80953593931365
+2026,Cabeceras,Mujeres,Cotiza a pensión,Feb - Abr,52.20061417219267
 2007,Centros poblados y rural disperso,Hombres,Afiliada a salud,Ene - Mar,77.68246958146315
 2007,Centros poblados y rural disperso,Hombres,Afiliada a salud,Feb - Abr,75.37596553668881
 2007,Centros poblados y rural disperso,Hombres,Afiliada a salud,Mar - May,77.365168058007
@@ -22212,6 +22308,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Hombres,Afiliada a salud,Nov - Ene,95.34251043226797
 2025,Centros poblados y rural disperso,Hombres,Afiliada a salud,Dic - Feb,95.08993519768747
 2026,Centros poblados y rural disperso,Hombres,Afiliada a salud,Ene - Mar,95.23889781853165
+2026,Centros poblados y rural disperso,Hombres,Afiliada a salud,Feb - Abr,94.65987972609497
 2007,Centros poblados y rural disperso,Hombres,Régimen contributivo,Ene - Mar,13.045996520110473
 2007,Centros poblados y rural disperso,Hombres,Régimen contributivo,Feb - Abr,13.279252053649286
 2007,Centros poblados y rural disperso,Hombres,Régimen contributivo,Mar - May,16.310247773004104
@@ -22441,6 +22538,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Hombres,Régimen contributivo,Nov - Ene,18.817468279311615
 2025,Centros poblados y rural disperso,Hombres,Régimen contributivo,Dic - Feb,18.35030451857064
 2026,Centros poblados y rural disperso,Hombres,Régimen contributivo,Ene - Mar,18.0000088396097
+2026,Centros poblados y rural disperso,Hombres,Régimen contributivo,Feb - Abr,17.70278603225314
 2007,Centros poblados y rural disperso,Hombres,Régimen especial,Ene - Mar,0.5429556634298891
 2007,Centros poblados y rural disperso,Hombres,Régimen especial,Feb - Abr,0.4078392953419661
 2007,Centros poblados y rural disperso,Hombres,Régimen especial,Mar - May,0.19667141471620148
@@ -22670,6 +22768,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Hombres,Régimen especial,Nov - Ene,0.9941857179190099
 2025,Centros poblados y rural disperso,Hombres,Régimen especial,Dic - Feb,0.9380705265960481
 2026,Centros poblados y rural disperso,Hombres,Régimen especial,Ene - Mar,0.7796241103301152
+2026,Centros poblados y rural disperso,Hombres,Régimen especial,Feb - Abr,0.788181679371381
 2007,Centros poblados y rural disperso,Hombres,Aportantes,Ene - Mar,11.378140879459147
 2007,Centros poblados y rural disperso,Hombres,Aportantes,Feb - Abr,11.403811932583597
 2007,Centros poblados y rural disperso,Hombres,Aportantes,Mar - May,13.815855548904777
@@ -22899,6 +22998,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Hombres,Aportantes,Nov - Ene,18.04120039374158
 2025,Centros poblados y rural disperso,Hombres,Aportantes,Dic - Feb,17.58547201567047
 2026,Centros poblados y rural disperso,Hombres,Aportantes,Ene - Mar,17.087142345708294
+2026,Centros poblados y rural disperso,Hombres,Aportantes,Feb - Abr,17.011827717027447
 2007,Centros poblados y rural disperso,Hombres,Beneficiarios,Ene - Mar,2.1968180851036374
 2007,Centros poblados y rural disperso,Hombres,Beneficiarios,Feb - Abr,2.2695679248099956
 2007,Centros poblados y rural disperso,Hombres,Beneficiarios,Mar - May,2.6687743655599934
@@ -23128,6 +23228,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Hombres,Beneficiarios,Nov - Ene,1.7485529054926008
 2025,Centros poblados y rural disperso,Hombres,Beneficiarios,Dic - Feb,1.702903029496225
 2026,Centros poblados y rural disperso,Hombres,Beneficiarios,Ene - Mar,1.692490604231521
+2026,Centros poblados y rural disperso,Hombres,Beneficiarios,Feb - Abr,1.4791106308507265
 2007,Centros poblados y rural disperso,Hombres,Otro,Ene - Mar,0.013981489540039487
 2007,Centros poblados y rural disperso,Hombres,Otro,Feb - Abr,0.013699998310486784
 2007,Centros poblados y rural disperso,Hombres,Otro,Mar - May,0.022289273255535733
@@ -23357,6 +23458,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Hombres,Otro,Nov - Ene,0.02195957084051582
 2025,Centros poblados y rural disperso,Hombres,Otro,Dic - Feb,0.0
 2026,Centros poblados y rural disperso,Hombres,Otro,Ene - Mar,0.0
+2026,Centros poblados y rural disperso,Hombres,Otro,Feb - Abr,0.0
 2007,Centros poblados y rural disperso,Hombres,Régimen subsidiado,Ene - Mar,64.0885910341587
 2007,Centros poblados y rural disperso,Hombres,Régimen subsidiado,Feb - Abr,61.68404700708481
 2007,Centros poblados y rural disperso,Hombres,Régimen subsidiado,Mar - May,60.71559982763577
@@ -23586,6 +23688,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Hombres,Régimen subsidiado,Nov - Ene,75.33819505279716
 2025,Centros poblados y rural disperso,Hombres,Régimen subsidiado,Dic - Feb,75.60567935454425
 2026,Centros poblados y rural disperso,Hombres,Régimen subsidiado,Ene - Mar,76.35062606535713
+2026,Centros poblados y rural disperso,Hombres,Régimen subsidiado,Feb - Abr,75.96732989581743
 2007,Centros poblados y rural disperso,Hombres,No sabe,Ene - Mar,0.004926363764107873
 2007,Centros poblados y rural disperso,Hombres,No sabe,Feb - Abr,0.004827180612755411
 2007,Centros poblados y rural disperso,Hombres,No sabe,Mar - May,0.14264904265092218
@@ -23815,6 +23918,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Hombres,No sabe,Nov - Ene,0.19263194581814413
 2025,Centros poblados y rural disperso,Hombres,No sabe,Dic - Feb,0.19588079797653235
 2026,Centros poblados y rural disperso,Hombres,No sabe,Ene - Mar,0.10863880323470783
+2026,Centros poblados y rural disperso,Hombres,No sabe,Feb - Abr,0.20158211865302622
 2007,Centros poblados y rural disperso,Hombres,Cotiza a pensión,Ene - Mar,7.964757262809072
 2007,Centros poblados y rural disperso,Hombres,Cotiza a pensión,Feb - Abr,7.907347095318773
 2007,Centros poblados y rural disperso,Hombres,Cotiza a pensión,Mar - May,9.685409912188565
@@ -24044,6 +24148,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Hombres,Cotiza a pensión,Nov - Ene,16.386255310330537
 2025,Centros poblados y rural disperso,Hombres,Cotiza a pensión,Dic - Feb,15.915998278911436
 2026,Centros poblados y rural disperso,Hombres,Cotiza a pensión,Ene - Mar,15.59922977534132
+2026,Centros poblados y rural disperso,Hombres,Cotiza a pensión,Feb - Abr,15.591826307567628
 2007,Centros poblados y rural disperso,Mujeres,Afiliada a salud,Ene - Mar,84.09948484521145
 2007,Centros poblados y rural disperso,Mujeres,Afiliada a salud,Feb - Abr,81.85747633935392
 2007,Centros poblados y rural disperso,Mujeres,Afiliada a salud,Mar - May,81.12765293661475
@@ -24273,6 +24378,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Mujeres,Afiliada a salud,Nov - Ene,97.66910447990827
 2025,Centros poblados y rural disperso,Mujeres,Afiliada a salud,Dic - Feb,97.22201378932992
 2026,Centros poblados y rural disperso,Mujeres,Afiliada a salud,Ene - Mar,97.26311161244143
+2026,Centros poblados y rural disperso,Mujeres,Afiliada a salud,Feb - Abr,97.00263871373711
 2007,Centros poblados y rural disperso,Mujeres,Régimen contributivo,Ene - Mar,13.84634009155824
 2007,Centros poblados y rural disperso,Mujeres,Régimen contributivo,Feb - Abr,15.326473407509877
 2007,Centros poblados y rural disperso,Mujeres,Régimen contributivo,Mar - May,17.95530676459839
@@ -24502,6 +24608,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Mujeres,Régimen contributivo,Nov - Ene,19.512294646064433
 2025,Centros poblados y rural disperso,Mujeres,Régimen contributivo,Dic - Feb,20.174215958463346
 2026,Centros poblados y rural disperso,Mujeres,Régimen contributivo,Ene - Mar,21.535052192585866
+2026,Centros poblados y rural disperso,Mujeres,Régimen contributivo,Feb - Abr,23.103829112858744
 2007,Centros poblados y rural disperso,Mujeres,Régimen especial,Ene - Mar,1.3097521818649125
 2007,Centros poblados y rural disperso,Mujeres,Régimen especial,Feb - Abr,1.2385482335965072
 2007,Centros poblados y rural disperso,Mujeres,Régimen especial,Mar - May,0.5765730432224767
@@ -24731,6 +24838,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Mujeres,Régimen especial,Nov - Ene,1.4749963041475826
 2025,Centros poblados y rural disperso,Mujeres,Régimen especial,Dic - Feb,1.4093457472274922
 2026,Centros poblados y rural disperso,Mujeres,Régimen especial,Ene - Mar,1.1807288511088228
+2026,Centros poblados y rural disperso,Mujeres,Régimen especial,Feb - Abr,1.3862957793527773
 2007,Centros poblados y rural disperso,Mujeres,Aportantes,Ene - Mar,8.440082990952199
 2007,Centros poblados y rural disperso,Mujeres,Aportantes,Feb - Abr,8.53616089444882
 2007,Centros poblados y rural disperso,Mujeres,Aportantes,Mar - May,9.74808132849617
@@ -24960,6 +25068,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Mujeres,Aportantes,Nov - Ene,16.224758665854136
 2025,Centros poblados y rural disperso,Mujeres,Aportantes,Dic - Feb,16.855772480704832
 2026,Centros poblados y rural disperso,Mujeres,Aportantes,Ene - Mar,17.69987529263049
+2026,Centros poblados y rural disperso,Mujeres,Aportantes,Feb - Abr,18.561370163113423
 2007,Centros poblados y rural disperso,Mujeres,Beneficiarios,Ene - Mar,6.706734261332102
 2007,Centros poblados y rural disperso,Mujeres,Beneficiarios,Feb - Abr,8.020296116933915
 2007,Centros poblados y rural disperso,Mujeres,Beneficiarios,Mar - May,8.783834134079704
@@ -25189,6 +25298,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Mujeres,Beneficiarios,Nov - Ene,4.705070977089728
 2025,Centros poblados y rural disperso,Mujeres,Beneficiarios,Dic - Feb,4.648171549197946
 2026,Centros poblados y rural disperso,Mujeres,Beneficiarios,Ene - Mar,4.937391142767038
+2026,Centros poblados y rural disperso,Mujeres,Beneficiarios,Feb - Abr,5.891789431161682
 2007,Centros poblados y rural disperso,Mujeres,Otro,Ene - Mar,0.009312270219732327
 2007,Centros poblados y rural disperso,Mujeres,Otro,Feb - Abr,0.00856462972365023
 2007,Centros poblados y rural disperso,Mujeres,Otro,Mar - May,0.0
@@ -25418,6 +25528,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Mujeres,Otro,Nov - Ene,0.05752820052457691
 2025,Centros poblados y rural disperso,Mujeres,Otro,Dic - Feb,0.07968407918738177
 2026,Centros poblados y rural disperso,Mujeres,Otro,Ene - Mar,0.07851460829716209
+2026,Centros poblados y rural disperso,Mujeres,Otro,Feb - Abr,0.0369652979364171
 2007,Centros poblados y rural disperso,Mujeres,Régimen subsidiado,Ene - Mar,68.86051336683268
 2007,Centros poblados y rural disperso,Mujeres,Régimen subsidiado,Feb - Abr,65.21622949370706
 2007,Centros poblados y rural disperso,Mujeres,Régimen subsidiado,Mar - May,62.59577312879389
@@ -25647,6 +25758,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Mujeres,Régimen subsidiado,Nov - Ene,76.50314164178795
 2025,Centros poblados y rural disperso,Mujeres,Régimen subsidiado,Dic - Feb,75.46108860404782
 2026,Centros poblados y rural disperso,Mujeres,Régimen subsidiado,Ene - Mar,74.5330016527325
+2026,Centros poblados y rural disperso,Mujeres,Régimen subsidiado,Feb - Abr,72.46253622081295
 2007,Centros poblados y rural disperso,Mujeres,No sabe,Ene - Mar,0.08287920495561772
 2007,Centros poblados y rural disperso,Mujeres,No sabe,Feb - Abr,0.07622520454048706
 2007,Centros poblados y rural disperso,Mujeres,No sabe,Mar - May,0.0
@@ -25876,6 +25988,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Mujeres,No sabe,Nov - Ene,0.17867188790830804
 2025,Centros poblados y rural disperso,Mujeres,No sabe,Dic - Feb,0.17736347959124724
 2026,Centros poblados y rural disperso,Mujeres,No sabe,Ene - Mar,0.014328916014232081
+2026,Centros poblados y rural disperso,Mujeres,No sabe,Feb - Abr,0.04997760071263397
 2007,Centros poblados y rural disperso,Mujeres,Cotiza a pensión,Ene - Mar,6.868358023265777
 2007,Centros poblados y rural disperso,Mujeres,Cotiza a pensión,Feb - Abr,7.154617602986245
 2007,Centros poblados y rural disperso,Mujeres,Cotiza a pensión,Mar - May,7.367662919946161
@@ -26105,3 +26218,4 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Mujeres,Cotiza a pensión,Nov - Ene,15.179484640973856
 2025,Centros poblados y rural disperso,Mujeres,Cotiza a pensión,Dic - Feb,15.542645259096105
 2026,Centros poblados y rural disperso,Mujeres,Cotiza a pensión,Ene - Mar,16.223473512442602
+2026,Centros poblados y rural disperso,Mujeres,Cotiza a pensión,Feb - Abr,17.041584989111097
