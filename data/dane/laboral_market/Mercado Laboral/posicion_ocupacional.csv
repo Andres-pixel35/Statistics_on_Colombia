@@ -228,6 +228,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,TOTAL NACIONAL,Población ocupada Total Nacional,Nov - Ene,24016.432111000002
 2025,TOTAL NACIONAL,Población ocupada Total Nacional,Dic - Feb,23848.204875666666
 2026,TOTAL NACIONAL,Población ocupada Total Nacional,Ene - Mar,23890.987974666667
+2026,TOTAL NACIONAL,Población ocupada Total Nacional,Feb - Abr,24241.02269
 2007,TOTAL NACIONAL,"Obrero, empleado particular",Ene - Mar,6061.579743266666
 2007,TOTAL NACIONAL,"Obrero, empleado particular",Feb - Abr,6200.163063433334
 2007,TOTAL NACIONAL,"Obrero, empleado particular",Mar - May,6343.4647675999995
@@ -457,6 +458,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,TOTAL NACIONAL,"Obrero, empleado particular",Nov - Ene,10698.757655666666
 2025,TOTAL NACIONAL,"Obrero, empleado particular",Dic - Feb,10640.274524666665
 2026,TOTAL NACIONAL,"Obrero, empleado particular",Ene - Mar,10442.597165
+2026,TOTAL NACIONAL,"Obrero, empleado particular",Feb - Abr,10655.775150333333
 2007,TOTAL NACIONAL,"Obrero, empleado del gobierno",Ene - Mar,961.6885493599999
 2007,TOTAL NACIONAL,"Obrero, empleado del gobierno",Feb - Abr,1004.17705171
 2007,TOTAL NACIONAL,"Obrero, empleado del gobierno",Mar - May,971.48756091
@@ -686,6 +688,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,TOTAL NACIONAL,"Obrero, empleado del gobierno",Nov - Ene,895.9691463066666
 2025,TOTAL NACIONAL,"Obrero, empleado del gobierno",Dic - Feb,906.4885801033333
 2026,TOTAL NACIONAL,"Obrero, empleado del gobierno",Ene - Mar,877.9042165699999
+2026,TOTAL NACIONAL,"Obrero, empleado del gobierno",Feb - Abr,894.3531414566665
 2007,TOTAL NACIONAL,Empleado doméstico,Ene - Mar,624.7163734366667
 2007,TOTAL NACIONAL,Empleado doméstico,Feb - Abr,589.3221103033333
 2007,TOTAL NACIONAL,Empleado doméstico,Mar - May,601.3610252233333
@@ -915,6 +918,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,TOTAL NACIONAL,Empleado doméstico,Nov - Ene,721.3363086366668
 2025,TOTAL NACIONAL,Empleado doméstico,Dic - Feb,715.6785443
 2026,TOTAL NACIONAL,Empleado doméstico,Ene - Mar,714.90819603
+2026,TOTAL NACIONAL,Empleado doméstico,Feb - Abr,743.4253648766668
 2007,TOTAL NACIONAL,Trabajador por cuenta propia,Ene - Mar,6044.479905666667
 2007,TOTAL NACIONAL,Trabajador por cuenta propia,Feb - Abr,6169.273791300001
 2007,TOTAL NACIONAL,Trabajador por cuenta propia,Mar - May,6139.892328633334
@@ -1144,6 +1148,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,TOTAL NACIONAL,Trabajador por cuenta propia,Nov - Ene,9819.190641366667
 2025,TOTAL NACIONAL,Trabajador por cuenta propia,Dic - Feb,9716.072882466666
 2026,TOTAL NACIONAL,Trabajador por cuenta propia,Ene - Mar,9950.191876733334
+2026,TOTAL NACIONAL,Trabajador por cuenta propia,Feb - Abr,10068.297628966666
 2007,TOTAL NACIONAL,Patrón o empleador,Ene - Mar,633.2226983966666
 2007,TOTAL NACIONAL,Patrón o empleador,Feb - Abr,712.01756085
 2007,TOTAL NACIONAL,Patrón o empleador,Mar - May,755.61712578
@@ -1373,6 +1378,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,TOTAL NACIONAL,Patrón o empleador,Nov - Ene,632.6596342566667
 2025,TOTAL NACIONAL,Patrón o empleador,Dic - Feb,641.9902724
 2026,TOTAL NACIONAL,Patrón o empleador,Ene - Mar,674.43774716
+2026,TOTAL NACIONAL,Patrón o empleador,Feb - Abr,662.1170772433333
 2007,TOTAL NACIONAL,Trabajador familiar sin remuneración,Ene - Mar,642.8257113566667
 2007,TOTAL NACIONAL,Trabajador familiar sin remuneración,Feb - Abr,627.7950979533333
 2007,TOTAL NACIONAL,Trabajador familiar sin remuneración,Mar - May,599.8068951033333
@@ -1602,6 +1608,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,TOTAL NACIONAL,Trabajador familiar sin remuneración,Nov - Ene,410.1039696766666
 2025,TOTAL NACIONAL,Trabajador familiar sin remuneración,Dic - Feb,456.16913632666666
 2026,TOTAL NACIONAL,Trabajador familiar sin remuneración,Ene - Mar,456.87698350333335
+2026,TOTAL NACIONAL,Trabajador familiar sin remuneración,Feb - Abr,445.0222844566667
 2007,TOTAL NACIONAL,Jornalero o peón,Ene - Mar,1003.7625023266668
 2007,TOTAL NACIONAL,Jornalero o peón,Feb - Abr,1101.8661872233333
 2007,TOTAL NACIONAL,Jornalero o peón,Mar - May,1051.4396911733331
@@ -1831,6 +1838,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,TOTAL NACIONAL,Jornalero o peón,Nov - Ene,831.9806732766668
 2025,TOTAL NACIONAL,Jornalero o peón,Dic - Feb,763.7645089133333
 2026,TOTAL NACIONAL,Jornalero o peón,Ene - Mar,767.7743024866668
+2026,TOTAL NACIONAL,Jornalero o peón,Feb - Abr,763.2173873633334
 2007,TOTAL NACIONAL,Otro,Ene - Mar,46.320713932
 2007,TOTAL NACIONAL,Otro,Feb - Abr,45.669811960666664
 2007,TOTAL NACIONAL,Otro,Mar - May,36.89549012333334
@@ -2060,6 +2068,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,TOTAL NACIONAL,Otro,Nov - Ene,6.434082407000001
 2025,TOTAL NACIONAL,Otro,Dic - Feb,7.7664270533333335
 2026,TOTAL NACIONAL,Otro,Ene - Mar,6.297487364999999
+2026,TOTAL NACIONAL,Otro,Feb - Abr,8.814655151666667
 2007,HOMBRES,Población ocupada,Ene - Mar,9856.584766366666
 2007,HOMBRES,Población ocupada,Feb - Abr,10049.974241
 2007,HOMBRES,Población ocupada,Mar - May,10062.951137333332
@@ -2289,6 +2298,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,HOMBRES,Población ocupada,Nov - Ene,14018.053028666667
 2025,HOMBRES,Población ocupada,Dic - Feb,13912.632489000001
 2026,HOMBRES,Población ocupada,Ene - Mar,13930.006362333334
+2026,HOMBRES,Población ocupada,Feb - Abr,14044.359245666667
 2007,HOMBRES,"Obrero, empleado particular",Ene - Mar,3784.6778639999998
 2007,HOMBRES,"Obrero, empleado particular",Feb - Abr,3832.4613823333334
 2007,HOMBRES,"Obrero, empleado particular",Mar - May,3917.7370803
@@ -2518,6 +2528,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,HOMBRES,"Obrero, empleado particular",Nov - Ene,6088.8496682333325
 2025,HOMBRES,"Obrero, empleado particular",Dic - Feb,6043.024574666667
 2026,HOMBRES,"Obrero, empleado particular",Ene - Mar,5920.666208466667
+2026,HOMBRES,"Obrero, empleado particular",Feb - Abr,6005.8681341
 2007,HOMBRES,"Obrero, empleado del gobierno",Ene - Mar,484.84942244666667
 2007,HOMBRES,"Obrero, empleado del gobierno",Feb - Abr,491.18668752
 2007,HOMBRES,"Obrero, empleado del gobierno",Mar - May,488.9319092933333
@@ -2747,6 +2758,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,HOMBRES,"Obrero, empleado del gobierno",Nov - Ene,456.66464262666665
 2025,HOMBRES,"Obrero, empleado del gobierno",Dic - Feb,460.52284176666666
 2026,HOMBRES,"Obrero, empleado del gobierno",Ene - Mar,435.0868818466667
+2026,HOMBRES,"Obrero, empleado del gobierno",Feb - Abr,437.61437398333334
 2007,HOMBRES,Empleado doméstico,Ene - Mar,32.220954513
 2007,HOMBRES,Empleado doméstico,Feb - Abr,21.178238818333334
 2007,HOMBRES,Empleado doméstico,Mar - May,22.864529630666667
@@ -2976,6 +2988,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,HOMBRES,Empleado doméstico,Nov - Ene,61.491735385
 2025,HOMBRES,Empleado doméstico,Dic - Feb,69.52932133200001
 2026,HOMBRES,Empleado doméstico,Ene - Mar,57.162786436
+2026,HOMBRES,Empleado doméstico,Feb - Abr,60.310948145666664
 2007,HOMBRES,Trabajador por cuenta propia,Ene - Mar,3828.0788653
 2007,HOMBRES,Trabajador por cuenta propia,Feb - Abr,3860.7276128333338
 2007,HOMBRES,Trabajador por cuenta propia,Mar - May,3822.588796266667
@@ -3205,6 +3218,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,HOMBRES,Trabajador por cuenta propia,Nov - Ene,6054.193452866667
 2025,HOMBRES,Trabajador por cuenta propia,Dic - Feb,5997.627283433333
 2026,HOMBRES,Trabajador por cuenta propia,Ene - Mar,6168.026697766666
+2026,HOMBRES,Trabajador por cuenta propia,Feb - Abr,6214.548184066666
 2007,HOMBRES,Patrón o empleador,Ene - Mar,486.19004859666666
 2007,HOMBRES,Patrón o empleador,Feb - Abr,538.1892754566667
 2007,HOMBRES,Patrón o empleador,Mar - May,570.4282197399999
@@ -3434,6 +3448,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,HOMBRES,Patrón o empleador,Nov - Ene,451.87779498000003
 2025,HOMBRES,Patrón o empleador,Dic - Feb,459.44788688
 2026,HOMBRES,Patrón o empleador,Ene - Mar,469.63868930333336
+2026,HOMBRES,Patrón o empleador,Feb - Abr,467.1967143
 2007,HOMBRES,Trabajador familiar sin remuneración,Ene - Mar,266.92560896333333
 2007,HOMBRES,Trabajador familiar sin remuneración,Feb - Abr,252.76175684
 2007,HOMBRES,Trabajador familiar sin remuneración,Mar - May,241.2582082066667
@@ -3663,6 +3678,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,HOMBRES,Trabajador familiar sin remuneración,Nov - Ene,147.62677217666666
 2025,HOMBRES,Trabajador familiar sin remuneración,Dic - Feb,182.55698587666666
 2026,HOMBRES,Trabajador familiar sin remuneración,Ene - Mar,179.73328378333335
+2026,HOMBRES,Trabajador familiar sin remuneración,Feb - Abr,160.06633836333336
 2007,HOMBRES,Jornalero o peón,Ene - Mar,942.8820486633334
 2007,HOMBRES,Jornalero o peón,Feb - Abr,1024.5575569733332
 2007,HOMBRES,Jornalero o peón,Mar - May,976.52433367
@@ -3892,6 +3908,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,HOMBRES,Jornalero o peón,Nov - Ene,753.3328204999999
 2025,HOMBRES,Jornalero o peón,Dic - Feb,695.2925861766668
 2026,HOMBRES,Jornalero o peón,Ene - Mar,696.5069856333333
+2026,HOMBRES,Jornalero o peón,Feb - Abr,693.9427504633335
 2007,HOMBRES,Otro,Ene - Mar,30.759953731666666
 2007,HOMBRES,Otro,Feb - Abr,28.911730050333336
 2007,HOMBRES,Otro,Mar - May,22.618060193
@@ -4121,6 +4138,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,HOMBRES,Otro,Nov - Ene,4.016141986666667
 2025,HOMBRES,Otro,Dic - Feb,4.631008897333333
 2026,HOMBRES,Otro,Ene - Mar,3.184829054
+2026,HOMBRES,Otro,Feb - Abr,4.8118021010000005
 2007,MUJERES,Población ocupada,Ene - Mar,6162.011431466667
 2007,MUJERES,Población ocupada,Feb - Abr,6400.310433833333
 2007,MUJERES,Población ocupada,Mar - May,6437.0137472
@@ -4350,6 +4368,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,MUJERES,Población ocupada,Nov - Ene,9998.3790824
 2025,MUJERES,Población ocupada,Dic - Feb,9935.572386733334
 2026,MUJERES,Población ocupada,Ene - Mar,9960.981612399999
+2026,MUJERES,Población ocupada,Feb - Abr,10196.663444333333
 2007,MUJERES,"Obrero, empleado particular",Ene - Mar,2276.9018792333336
 2007,MUJERES,"Obrero, empleado particular",Feb - Abr,2367.701681066667
 2007,MUJERES,"Obrero, empleado particular",Mar - May,2425.7276872666666
@@ -4579,6 +4598,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,MUJERES,"Obrero, empleado particular",Nov - Ene,4609.907987133333
 2025,MUJERES,"Obrero, empleado particular",Dic - Feb,4597.2499497
 2026,MUJERES,"Obrero, empleado particular",Ene - Mar,4521.930956233333
+2026,MUJERES,"Obrero, empleado particular",Feb - Abr,4649.9070162
 2007,MUJERES,"Obrero, empleado del gobierno",Ene - Mar,476.83912691
 2007,MUJERES,"Obrero, empleado del gobierno",Feb - Abr,512.9903641833333
 2007,MUJERES,"Obrero, empleado del gobierno",Mar - May,482.5556516066667
@@ -4808,6 +4828,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,MUJERES,"Obrero, empleado del gobierno",Nov - Ene,439.30450368
 2025,MUJERES,"Obrero, empleado del gobierno",Dic - Feb,445.9657383333333
 2026,MUJERES,"Obrero, empleado del gobierno",Ene - Mar,442.81733472
+2026,MUJERES,"Obrero, empleado del gobierno",Feb - Abr,456.73876747
 2007,MUJERES,Empleado doméstico,Ene - Mar,592.4954189266667
 2007,MUJERES,Empleado doméstico,Feb - Abr,568.1438714866667
 2007,MUJERES,Empleado doméstico,Mar - May,578.4964955933333
@@ -5037,6 +5058,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,MUJERES,Empleado doméstico,Nov - Ene,659.8445732499999
 2025,MUJERES,Empleado doméstico,Dic - Feb,646.1492229666666
 2026,MUJERES,Empleado doméstico,Ene - Mar,657.7454095933332
+2026,MUJERES,Empleado doméstico,Feb - Abr,683.1144167299999
 2007,MUJERES,Trabajador por cuenta propia,Ene - Mar,2216.4010403666666
 2007,MUJERES,Trabajador por cuenta propia,Feb - Abr,2308.5461784666663
 2007,MUJERES,Trabajador por cuenta propia,Mar - May,2317.3035323666663
@@ -5266,6 +5288,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,MUJERES,Trabajador por cuenta propia,Nov - Ene,3764.9971884666666
 2025,MUJERES,Trabajador por cuenta propia,Dic - Feb,3718.445599033333
 2026,MUJERES,Trabajador por cuenta propia,Ene - Mar,3782.165179066667
+2026,MUJERES,Trabajador por cuenta propia,Feb - Abr,3853.749445
 2007,MUJERES,Patrón o empleador,Ene - Mar,147.0326498
 2007,MUJERES,Patrón o empleador,Feb - Abr,173.82828539333332
 2007,MUJERES,Patrón o empleador,Mar - May,185.18890603666668
@@ -5495,6 +5518,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,MUJERES,Patrón o empleador,Nov - Ene,180.78183927666666
 2025,MUJERES,Patrón o empleador,Dic - Feb,182.54238552
 2026,MUJERES,Patrón o empleador,Ene - Mar,204.79905785666665
+2026,MUJERES,Patrón o empleador,Feb - Abr,194.92036294666664
 2007,MUJERES,Trabajador familiar sin remuneración,Ene - Mar,375.9001023966666
 2007,MUJERES,Trabajador familiar sin remuneración,Feb - Abr,375.03334111666663
 2007,MUJERES,Trabajador familiar sin remuneración,Mar - May,358.54868689999995
@@ -5724,6 +5748,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,MUJERES,Trabajador familiar sin remuneración,Nov - Ene,262.4771975
 2025,MUJERES,Trabajador familiar sin remuneración,Dic - Feb,273.61215045
 2026,MUJERES,Trabajador familiar sin remuneración,Ene - Mar,277.14369972000003
+2026,MUJERES,Trabajador familiar sin remuneración,Feb - Abr,284.9559460933333
 2007,MUJERES,Jornalero o peón,Ene - Mar,60.880453665333334
 2007,MUJERES,Jornalero o peón,Feb - Abr,77.308630261
 2007,MUJERES,Jornalero o peón,Mar - May,74.915357515
@@ -5953,6 +5978,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,MUJERES,Jornalero o peón,Nov - Ene,78.64785277866666
 2025,MUJERES,Jornalero o peón,Dic - Feb,68.47192273733334
 2026,MUJERES,Jornalero o peón,Ene - Mar,71.26731684933334
+2026,MUJERES,Jornalero o peón,Feb - Abr,69.274636895
 2007,MUJERES,Otro,Ene - Mar,15.560760200333334
 2007,MUJERES,Otro,Feb - Abr,16.758081910333335
 2007,MUJERES,Otro,Mar - May,14.277429930333334
@@ -6182,3 +6208,4 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,MUJERES,Otro,Nov - Ene,2.4179404203333332
 2025,MUJERES,Otro,Dic - Feb,3.135418156
 2026,MUJERES,Otro,Ene - Mar,3.112658311
+2026,MUJERES,Otro,Feb - Abr,4.002853050666666
