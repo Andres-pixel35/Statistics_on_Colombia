@@ -57,8 +57,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,Población ocupada,Ago - Oct,24035.76622
 2025,Total nacional,Población ocupada,Población ocupada,Sep - Nov,24298.367977
 2025,Total nacional,Población ocupada,Población ocupada,Oct - Dic,24397.302737
-2026,Total nacional,Población ocupada,Población ocupada,Nov - Ene,24016.432111
-2026,Total nacional,Población ocupada,Población ocupada,Dic - Feb,23848.204876
+2025,Total nacional,Población ocupada,Población ocupada,Nov - Ene,24016.432111
+2025,Total nacional,Población ocupada,Población ocupada,Dic - Feb,23848.204876
 2026,Total nacional,Población ocupada,Población ocupada,Ene - Mar,23890.987975
 2021,Total nacional,Población ocupada,Ninguno,Ene - Mar,2583.430430666667
 2021,Total nacional,Población ocupada,Ninguno,Feb - Abr,2651.725959
@@ -118,8 +118,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,Ninguno,Ago - Oct,2552.797057
 2025,Total nacional,Población ocupada,Ninguno,Sep - Nov,2649.808881
 2025,Total nacional,Población ocupada,Ninguno,Oct - Dic,2594.707648
-2026,Total nacional,Población ocupada,Ninguno,Nov - Ene,2535.152
-2026,Total nacional,Población ocupada,Ninguno,Dic - Feb,2480.230896
+2025,Total nacional,Población ocupada,Ninguno,Nov - Ene,2535.152
+2025,Total nacional,Población ocupada,Ninguno,Dic - Feb,2480.230896
 2026,Total nacional,Población ocupada,Ninguno,Ene - Mar,2497.991369
 2021,Total nacional,Población ocupada,Básica primaria,Ene - Mar,3824.392799333333
 2021,Total nacional,Población ocupada,Básica primaria,Feb - Abr,3874.5735340000006
@@ -179,8 +179,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,Básica primaria,Ago - Oct,4356.051466
 2025,Total nacional,Población ocupada,Básica primaria,Sep - Nov,4398.615138
 2025,Total nacional,Población ocupada,Básica primaria,Oct - Dic,4480.616834
-2026,Total nacional,Población ocupada,Básica primaria,Nov - Ene,4370.040488
-2026,Total nacional,Población ocupada,Básica primaria,Dic - Feb,4238.015033
+2025,Total nacional,Población ocupada,Básica primaria,Nov - Ene,4370.040488
+2025,Total nacional,Población ocupada,Básica primaria,Dic - Feb,4238.015033
 2026,Total nacional,Población ocupada,Básica primaria,Ene - Mar,4192.485338
 2021,Total nacional,Población ocupada,Básica secundaria^,Ene - Mar,1021.3292333333333
 2021,Total nacional,Población ocupada,Básica secundaria^,Feb - Abr,997.0034836666665
@@ -240,8 +240,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,Básica secundaria^,Ago - Oct,1121.363874
 2025,Total nacional,Población ocupada,Básica secundaria^,Sep - Nov,1120.291758
 2025,Total nacional,Población ocupada,Básica secundaria^,Oct - Dic,1156.683267
-2026,Total nacional,Población ocupada,Básica secundaria^,Nov - Ene,1074.70721
-2026,Total nacional,Población ocupada,Básica secundaria^,Dic - Feb,1048.004633
+2025,Total nacional,Población ocupada,Básica secundaria^,Nov - Ene,1074.70721
+2025,Total nacional,Población ocupada,Básica secundaria^,Dic - Feb,1048.004633
 2026,Total nacional,Población ocupada,Básica secundaria^,Ene - Mar,1040.797375
 2021,Total nacional,Población ocupada,Educación media*^,Ene - Mar,6732.299625
 2021,Total nacional,Población ocupada,Educación media*^,Feb - Abr,6821.7431793333335
@@ -301,8 +301,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,Educación media*^,Ago - Oct,8708.718704
 2025,Total nacional,Población ocupada,Educación media*^,Sep - Nov,8853.561955
 2025,Total nacional,Población ocupada,Educación media*^,Oct - Dic,8908.689995
-2026,Total nacional,Población ocupada,Educación media*^,Nov - Ene,8685.709264
-2026,Total nacional,Población ocupada,Educación media*^,Dic - Feb,8589.16954
+2025,Total nacional,Población ocupada,Educación media*^,Nov - Ene,8685.709264
+2025,Total nacional,Población ocupada,Educación media*^,Dic - Feb,8589.16954
 2026,Total nacional,Población ocupada,Educación media*^,Ene - Mar,8552.326746
 2021,Total nacional,Población ocupada,Técnica profesional y Tecnológica^^,Ene - Mar,2060.951482
 2021,Total nacional,Población ocupada,Técnica profesional y Tecnológica^^,Feb - Abr,2098.0548746666664
@@ -362,8 +362,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,Técnica profesional y Tecnológica^^,Ago - Oct,3092.069856
 2025,Total nacional,Población ocupada,Técnica profesional y Tecnológica^^,Sep - Nov,3056.836305
 2025,Total nacional,Población ocupada,Técnica profesional y Tecnológica^^,Oct - Dic,3053.683706
-2026,Total nacional,Población ocupada,Técnica profesional y Tecnológica^^,Nov - Ene,3084.001028
-2026,Total nacional,Población ocupada,Técnica profesional y Tecnológica^^,Dic - Feb,3097.122251
+2025,Total nacional,Población ocupada,Técnica profesional y Tecnológica^^,Nov - Ene,3084.001028
+2025,Total nacional,Población ocupada,Técnica profesional y Tecnológica^^,Dic - Feb,3097.122251
 2026,Total nacional,Población ocupada,Técnica profesional y Tecnológica^^,Ene - Mar,3112.029888
 2021,Total nacional,Población ocupada,Universitaria,Ene - Mar,2336.719807333333
 2021,Total nacional,Población ocupada,Universitaria,Feb - Abr,2440.696955
@@ -423,8 +423,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,Universitaria,Ago - Oct,2943.908128
 2025,Total nacional,Población ocupada,Universitaria,Sep - Nov,2929.795561
 2025,Total nacional,Población ocupada,Universitaria,Oct - Dic,2901.340507
-2026,Total nacional,Población ocupada,Universitaria,Nov - Ene,2916.7893
-2026,Total nacional,Población ocupada,Universitaria,Dic - Feb,2978.632948
+2025,Total nacional,Población ocupada,Universitaria,Nov - Ene,2916.7893
+2025,Total nacional,Población ocupada,Universitaria,Dic - Feb,2978.632948
 2026,Total nacional,Población ocupada,Universitaria,Ene - Mar,3007.479047
 2021,Total nacional,Población ocupada,Posgrado,Ene - Mar,813.9400263333333
 2021,Total nacional,Población ocupada,Posgrado,Feb - Abr,862.8679910000001
@@ -484,8 +484,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,Posgrado,Ago - Oct,1256.875066
 2025,Total nacional,Población ocupada,Posgrado,Sep - Nov,1288.052447
 2025,Total nacional,Población ocupada,Posgrado,Oct - Dic,1298.32843
-2026,Total nacional,Población ocupada,Posgrado,Nov - Ene,1346.958216
-2026,Total nacional,Población ocupada,Posgrado,Dic - Feb,1413.678218
+2025,Total nacional,Población ocupada,Posgrado,Nov - Ene,1346.958216
+2025,Total nacional,Población ocupada,Posgrado,Dic - Feb,1413.678218
 2026,Total nacional,Población ocupada,Posgrado,Ene - Mar,1486.060946
 2021,Total nacional,Formal,Formal,Ene - Mar,7785.653908666667
 2021,Total nacional,Formal,Formal,Feb - Abr,7909.355157000001
@@ -545,8 +545,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,Formal,Ago - Oct,10710.24066
 2025,Total nacional,Formal,Formal,Sep - Nov,10848.084908
 2025,Total nacional,Formal,Formal,Oct - Dic,10811.989069
-2026,Total nacional,Formal,Formal,Nov - Ene,10726.999686
-2026,Total nacional,Formal,Formal,Dic - Feb,10659.72814
+2025,Total nacional,Formal,Formal,Nov - Ene,10726.999686
+2025,Total nacional,Formal,Formal,Dic - Feb,10659.72814
 2026,Total nacional,Formal,Formal,Ene - Mar,10672.697775
 2021,Total nacional,Formal,Ninguno,Ene - Mar,230.70326766666668
 2021,Total nacional,Formal,Ninguno,Feb - Abr,224.20431366666665
@@ -606,8 +606,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,Ninguno,Ago - Oct,247.95061
 2025,Total nacional,Formal,Ninguno,Sep - Nov,251.756738
 2025,Total nacional,Formal,Ninguno,Oct - Dic,236.323826
-2026,Total nacional,Formal,Ninguno,Nov - Ene,209.805534
-2026,Total nacional,Formal,Ninguno,Dic - Feb,209.383914
+2025,Total nacional,Formal,Ninguno,Nov - Ene,209.805534
+2025,Total nacional,Formal,Ninguno,Dic - Feb,209.383914
 2026,Total nacional,Formal,Ninguno,Ene - Mar,217.034709
 2021,Total nacional,Formal,Básica primaria,Ene - Mar,708.380975
 2021,Total nacional,Formal,Básica primaria,Feb - Abr,711.7116609999999
@@ -667,8 +667,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,Básica primaria,Ago - Oct,867.110349
 2025,Total nacional,Formal,Básica primaria,Sep - Nov,849.994958
 2025,Total nacional,Formal,Básica primaria,Oct - Dic,869.390778
-2026,Total nacional,Formal,Básica primaria,Nov - Ene,812.183907
-2026,Total nacional,Formal,Básica primaria,Dic - Feb,747.261228
+2025,Total nacional,Formal,Básica primaria,Nov - Ene,812.183907
+2025,Total nacional,Formal,Básica primaria,Dic - Feb,747.261228
 2026,Total nacional,Formal,Básica primaria,Ene - Mar,771.857612
 2021,Total nacional,Formal,Básica secundaria^,Ene - Mar,210.98157066666667
 2021,Total nacional,Formal,Básica secundaria^,Feb - Abr,213.3936613333333
@@ -728,8 +728,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,Básica secundaria^,Ago - Oct,238.644596
 2025,Total nacional,Formal,Básica secundaria^,Sep - Nov,253.542382
 2025,Total nacional,Formal,Básica secundaria^,Oct - Dic,270.009075
-2026,Total nacional,Formal,Básica secundaria^,Nov - Ene,265.268808
-2026,Total nacional,Formal,Básica secundaria^,Dic - Feb,249.597688
+2025,Total nacional,Formal,Básica secundaria^,Nov - Ene,265.268808
+2025,Total nacional,Formal,Básica secundaria^,Dic - Feb,249.597688
 2026,Total nacional,Formal,Básica secundaria^,Ene - Mar,231.326389
 2021,Total nacional,Formal,Educación media*^,Ene - Mar,2706.9508226666667
 2021,Total nacional,Formal,Educación media*^,Feb - Abr,2776.736135333333
@@ -789,8 +789,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,Educación media*^,Ago - Oct,3826.599523
 2025,Total nacional,Formal,Educación media*^,Sep - Nov,3917.034673
 2025,Total nacional,Formal,Educación media*^,Oct - Dic,3903.437184
-2026,Total nacional,Formal,Educación media*^,Nov - Ene,3813.200999
-2026,Total nacional,Formal,Educación media*^,Dic - Feb,3737.299443
+2025,Total nacional,Formal,Educación media*^,Nov - Ene,3813.200999
+2025,Total nacional,Formal,Educación media*^,Dic - Feb,3737.299443
 2026,Total nacional,Formal,Educación media*^,Ene - Mar,3672.668346
 2021,Total nacional,Formal,Técnica profesional y Tecnológica^^,Ene - Mar,1297.1084326666667
 2021,Total nacional,Formal,Técnica profesional y Tecnológica^^,Feb - Abr,1340.6505153333335
@@ -850,8 +850,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,Técnica profesional y Tecnológica^^,Ago - Oct,2116.287125
 2025,Total nacional,Formal,Técnica profesional y Tecnológica^^,Sep - Nov,2099.052041
 2025,Total nacional,Formal,Técnica profesional y Tecnológica^^,Oct - Dic,2065.779987
-2026,Total nacional,Formal,Técnica profesional y Tecnológica^^,Nov - Ene,2094.104877
-2026,Total nacional,Formal,Técnica profesional y Tecnológica^^,Dic - Feb,2124.195338
+2025,Total nacional,Formal,Técnica profesional y Tecnológica^^,Nov - Ene,2094.104877
+2025,Total nacional,Formal,Técnica profesional y Tecnológica^^,Dic - Feb,2124.195338
 2026,Total nacional,Formal,Técnica profesional y Tecnológica^^,Ene - Mar,2136.08206
 2021,Total nacional,Formal,Universitaria,Ene - Mar,1670.252952
 2021,Total nacional,Formal,Universitaria,Feb - Abr,1740.7200003333335
@@ -911,8 +911,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,Universitaria,Ago - Oct,2293.928094
 2025,Total nacional,Formal,Universitaria,Sep - Nov,2318.913222
 2025,Total nacional,Formal,Universitaria,Oct - Dic,2287.295435
-2026,Total nacional,Formal,Universitaria,Nov - Ene,2324.09991
-2026,Total nacional,Formal,Universitaria,Dic - Feb,2332.161654
+2025,Total nacional,Formal,Universitaria,Nov - Ene,2324.09991
+2025,Total nacional,Formal,Universitaria,Dic - Feb,2332.161654
 2026,Total nacional,Formal,Universitaria,Ene - Mar,2333.386095
 2021,Total nacional,Formal,Posgrado,Ene - Mar,690.2968043333334
 2021,Total nacional,Formal,Posgrado,Feb - Abr,729.4092890000001
@@ -972,8 +972,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,Posgrado,Ago - Oct,1118.293822
 2025,Total nacional,Formal,Posgrado,Sep - Nov,1157.721613
 2025,Total nacional,Formal,Posgrado,Oct - Dic,1177.863591
-2026,Total nacional,Formal,Posgrado,Nov - Ene,1206.446459
-2026,Total nacional,Formal,Posgrado,Dic - Feb,1257.662932
+2025,Total nacional,Formal,Posgrado,Nov - Ene,1206.446459
+2025,Total nacional,Formal,Posgrado,Dic - Feb,1257.662932
 2026,Total nacional,Formal,Posgrado,Ene - Mar,1309.71297
 2021,Total nacional,Informal,Informal,Ene - Mar,12001.55655
 2021,Total nacional,Informal,Informal,Feb - Abr,12094.802355666665
@@ -1033,8 +1033,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,Informal,Ago - Oct,13325.525561
 2025,Total nacional,Informal,Informal,Sep - Nov,13450.283069
 2025,Total nacional,Informal,Informal,Oct - Dic,13585.313668
-2026,Total nacional,Informal,Informal,Nov - Ene,13289.432426
-2026,Total nacional,Informal,Informal,Dic - Feb,13188.476735
+2025,Total nacional,Informal,Informal,Nov - Ene,13289.432426
+2025,Total nacional,Informal,Informal,Dic - Feb,13188.476735
 2026,Total nacional,Informal,Informal,Ene - Mar,13218.2902
 2021,Total nacional,Informal,Ninguno,Ene - Mar,2352.7271633333335
 2021,Total nacional,Informal,Ninguno,Feb - Abr,2427.5216456666667
@@ -1094,8 +1094,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,Ninguno,Ago - Oct,2304.846447
 2025,Total nacional,Informal,Ninguno,Sep - Nov,2398.052143
 2025,Total nacional,Informal,Ninguno,Oct - Dic,2358.383821
-2026,Total nacional,Informal,Ninguno,Nov - Ene,2325.346467
-2026,Total nacional,Informal,Ninguno,Dic - Feb,2270.846982
+2025,Total nacional,Informal,Ninguno,Nov - Ene,2325.346467
+2025,Total nacional,Informal,Ninguno,Dic - Feb,2270.846982
 2026,Total nacional,Informal,Ninguno,Ene - Mar,2280.95666
 2021,Total nacional,Informal,Básica primaria,Ene - Mar,3116.0118246666666
 2021,Total nacional,Informal,Básica primaria,Feb - Abr,3162.861873
@@ -1155,8 +1155,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,Básica primaria,Ago - Oct,3488.941117
 2025,Total nacional,Informal,Básica primaria,Sep - Nov,3548.62018
 2025,Total nacional,Informal,Básica primaria,Oct - Dic,3611.226056
-2026,Total nacional,Informal,Básica primaria,Nov - Ene,3557.85658
-2026,Total nacional,Informal,Básica primaria,Dic - Feb,3490.753805
+2025,Total nacional,Informal,Básica primaria,Nov - Ene,3557.85658
+2025,Total nacional,Informal,Básica primaria,Dic - Feb,3490.753805
 2026,Total nacional,Informal,Básica primaria,Ene - Mar,3420.627726
 2021,Total nacional,Informal,Básica secundaria^,Ene - Mar,810.3476623333335
 2021,Total nacional,Informal,Básica secundaria^,Feb - Abr,783.609822
@@ -1216,8 +1216,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,Básica secundaria^,Ago - Oct,882.719278
 2025,Total nacional,Informal,Básica secundaria^,Sep - Nov,866.749376
 2025,Total nacional,Informal,Básica secundaria^,Oct - Dic,886.674192
-2026,Total nacional,Informal,Básica secundaria^,Nov - Ene,809.438402
-2026,Total nacional,Informal,Básica secundaria^,Dic - Feb,798.406945
+2025,Total nacional,Informal,Básica secundaria^,Nov - Ene,809.438402
+2025,Total nacional,Informal,Básica secundaria^,Dic - Feb,798.406945
 2026,Total nacional,Informal,Básica secundaria^,Ene - Mar,809.470986
 2021,Total nacional,Informal,Educación media*^,Ene - Mar,4025.3488023333334
 2021,Total nacional,Informal,Educación media*^,Feb - Abr,4045.007044
@@ -1277,8 +1277,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,Educación media*^,Ago - Oct,4882.11918
 2025,Total nacional,Informal,Educación media*^,Sep - Nov,4936.527282
 2025,Total nacional,Informal,Educación media*^,Oct - Dic,5005.252811
-2026,Total nacional,Informal,Educación media*^,Nov - Ene,4872.508265
-2026,Total nacional,Informal,Educación media*^,Dic - Feb,4851.870097
+2025,Total nacional,Informal,Educación media*^,Nov - Ene,4872.508265
+2025,Total nacional,Informal,Educación media*^,Dic - Feb,4851.870097
 2026,Total nacional,Informal,Educación media*^,Ene - Mar,4879.6584
 2021,Total nacional,Informal,Técnica profesional y Tecnológica^^,Ene - Mar,763.8430490000001
 2021,Total nacional,Informal,Técnica profesional y Tecnológica^^,Feb - Abr,757.4043593333332
@@ -1338,8 +1338,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,Técnica profesional y Tecnológica^^,Ago - Oct,975.782731
 2025,Total nacional,Informal,Técnica profesional y Tecnológica^^,Sep - Nov,957.784264
 2025,Total nacional,Informal,Técnica profesional y Tecnológica^^,Oct - Dic,987.903719
-2026,Total nacional,Informal,Técnica profesional y Tecnológica^^,Nov - Ene,989.896151
-2026,Total nacional,Informal,Técnica profesional y Tecnológica^^,Dic - Feb,972.926913
+2025,Total nacional,Informal,Técnica profesional y Tecnológica^^,Nov - Ene,989.896151
+2025,Total nacional,Informal,Técnica profesional y Tecnológica^^,Dic - Feb,972.926913
 2026,Total nacional,Informal,Técnica profesional y Tecnológica^^,Ene - Mar,975.947829
 2021,Total nacional,Informal,Universitaria,Ene - Mar,666.4668556666666
 2021,Total nacional,Informal,Universitaria,Feb - Abr,699.9769550000001
@@ -1399,8 +1399,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,Universitaria,Ago - Oct,649.980033
 2025,Total nacional,Informal,Universitaria,Sep - Nov,610.88234
 2025,Total nacional,Informal,Universitaria,Oct - Dic,614.045072
-2026,Total nacional,Informal,Universitaria,Nov - Ene,592.68939
-2026,Total nacional,Informal,Universitaria,Dic - Feb,646.471294
+2025,Total nacional,Informal,Universitaria,Nov - Ene,592.68939
+2025,Total nacional,Informal,Universitaria,Dic - Feb,646.471294
 2026,Total nacional,Informal,Universitaria,Ene - Mar,674.092952
 2021,Total nacional,Informal,Posgrado,Ene - Mar,123.64322166666666
 2021,Total nacional,Informal,Posgrado,Feb - Abr,133.45870166666666
@@ -1460,8 +1460,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,Posgrado,Ago - Oct,138.581244
 2025,Total nacional,Informal,Posgrado,Sep - Nov,130.330834
 2025,Total nacional,Informal,Posgrado,Oct - Dic,120.464839
-2026,Total nacional,Informal,Posgrado,Nov - Ene,140.511757
-2026,Total nacional,Informal,Posgrado,Dic - Feb,156.015286
+2025,Total nacional,Informal,Posgrado,Nov - Ene,140.511757
+2025,Total nacional,Informal,Posgrado,Dic - Feb,156.015286
 2026,Total nacional,Informal,Posgrado,Ene - Mar,176.347975
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Ene - Mar,9226.413326333335
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Feb - Abr,9320.446573000001
@@ -1521,8 +1521,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Ago - Oct,11497.298445
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Sep - Nov,11566.757859
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Oct - Dic,11613.486667
-2026,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Nov - Ene,11384.962974
-2026,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Dic - Feb,11260.998726
+2025,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Nov - Ene,11384.962974
+2025,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Dic - Feb,11260.998726
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Ene - Mar,11227.725964
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Ninguno,Ene - Mar,413.88655466666665
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Ninguno,Feb - Abr,435.41266033333335
@@ -1582,8 +1582,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Ninguno,Ago - Oct,493.963512
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Ninguno,Sep - Nov,513.84069
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Ninguno,Oct - Dic,503.308911
-2026,13 Ciudades y áreas metropolitanas,Población ocupada,Ninguno,Nov - Ene,473.46597
-2026,13 Ciudades y áreas metropolitanas,Población ocupada,Ninguno,Dic - Feb,458.772435
+2025,13 Ciudades y áreas metropolitanas,Población ocupada,Ninguno,Nov - Ene,473.46597
+2025,13 Ciudades y áreas metropolitanas,Población ocupada,Ninguno,Dic - Feb,458.772435
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Ninguno,Ene - Mar,459.536124
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Básica primaria,Ene - Mar,1196.2277430000001
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Básica primaria,Feb - Abr,1252.1857276666667
@@ -1643,8 +1643,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Básica primaria,Ago - Oct,1473.371121
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Básica primaria,Sep - Nov,1460.793358
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Básica primaria,Oct - Dic,1481.896256
-2026,13 Ciudades y áreas metropolitanas,Población ocupada,Básica primaria,Nov - Ene,1454.283229
-2026,13 Ciudades y áreas metropolitanas,Población ocupada,Básica primaria,Dic - Feb,1357.876309
+2025,13 Ciudades y áreas metropolitanas,Población ocupada,Básica primaria,Nov - Ene,1454.283229
+2025,13 Ciudades y áreas metropolitanas,Población ocupada,Básica primaria,Dic - Feb,1357.876309
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Básica primaria,Ene - Mar,1301.995663
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Básica secundaria^,Ene - Mar,361.7000586666666
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Básica secundaria^,Feb - Abr,366.885639
@@ -1704,8 +1704,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Básica secundaria^,Ago - Oct,431.086137
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Básica secundaria^,Sep - Nov,434.729272
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Básica secundaria^,Oct - Dic,458.502057
-2026,13 Ciudades y áreas metropolitanas,Población ocupada,Básica secundaria^,Nov - Ene,420.722024
-2026,13 Ciudades y áreas metropolitanas,Población ocupada,Básica secundaria^,Dic - Feb,388.178456
+2025,13 Ciudades y áreas metropolitanas,Población ocupada,Básica secundaria^,Nov - Ene,420.722024
+2025,13 Ciudades y áreas metropolitanas,Población ocupada,Básica secundaria^,Dic - Feb,388.178456
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Básica secundaria^,Ene - Mar,371.956931
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Educación media*^,Ene - Mar,3481.6053579999993
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Educación media*^,Feb - Abr,3499.226868333333
@@ -1765,8 +1765,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Educación media*^,Ago - Oct,4363.73711
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Educación media*^,Sep - Nov,4467.523259
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Educación media*^,Oct - Dic,4491.074063
-2026,13 Ciudades y áreas metropolitanas,Población ocupada,Educación media*^,Nov - Ene,4327.555308
-2026,13 Ciudades y áreas metropolitanas,Población ocupada,Educación media*^,Dic - Feb,4204.585885
+2025,13 Ciudades y áreas metropolitanas,Población ocupada,Educación media*^,Nov - Ene,4327.555308
+2025,13 Ciudades y áreas metropolitanas,Población ocupada,Educación media*^,Dic - Feb,4204.585885
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Educación media*^,Ene - Mar,4121.984
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Técnica profesional y Tecnológica^^,Ene - Mar,1234.5611903333333
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Técnica profesional y Tecnológica^^,Feb - Abr,1275.1890346666669
@@ -1826,8 +1826,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Técnica profesional y Tecnológica^^,Ago - Oct,1837.130771
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Técnica profesional y Tecnológica^^,Sep - Nov,1803.721504
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Técnica profesional y Tecnológica^^,Oct - Dic,1808.454057
-2026,13 Ciudades y áreas metropolitanas,Población ocupada,Técnica profesional y Tecnológica^^,Nov - Ene,1809.364218
-2026,13 Ciudades y áreas metropolitanas,Población ocupada,Técnica profesional y Tecnológica^^,Dic - Feb,1820.337085
+2025,13 Ciudades y áreas metropolitanas,Población ocupada,Técnica profesional y Tecnológica^^,Nov - Ene,1809.364218
+2025,13 Ciudades y áreas metropolitanas,Población ocupada,Técnica profesional y Tecnológica^^,Dic - Feb,1820.337085
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Técnica profesional y Tecnológica^^,Ene - Mar,1813.777661
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Universitaria,Ene - Mar,1646.2327526666668
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Universitaria,Feb - Abr,1669.2250430000001
@@ -1887,8 +1887,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Universitaria,Ago - Oct,1968.887764
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Universitaria,Sep - Nov,1926.838876
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Universitaria,Oct - Dic,1904.715818
-2026,13 Ciudades y áreas metropolitanas,Población ocupada,Universitaria,Nov - Ene,1914.510733
-2026,13 Ciudades y áreas metropolitanas,Población ocupada,Universitaria,Dic - Feb,1988.052518
+2025,13 Ciudades y áreas metropolitanas,Población ocupada,Universitaria,Nov - Ene,1914.510733
+2025,13 Ciudades y áreas metropolitanas,Población ocupada,Universitaria,Dic - Feb,1988.052518
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Universitaria,Ene - Mar,2034.941441
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Posgrado,Ene - Mar,627.4265806666666
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Posgrado,Feb - Abr,649.0521873333333
@@ -1948,8 +1948,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Posgrado,Ago - Oct,927.69549
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Posgrado,Sep - Nov,959.241619
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Posgrado,Oct - Dic,963.646313
-2026,13 Ciudades y áreas metropolitanas,Población ocupada,Posgrado,Nov - Ene,983.1723
-2026,13 Ciudades y áreas metropolitanas,Población ocupada,Posgrado,Dic - Feb,1041.252923
+2025,13 Ciudades y áreas metropolitanas,Población ocupada,Posgrado,Nov - Ene,983.1723
+2025,13 Ciudades y áreas metropolitanas,Población ocupada,Posgrado,Dic - Feb,1041.252923
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Posgrado,Ene - Mar,1123.127376
 2021,13 Ciudades y áreas metropolitanas,Formal,Formal,Ene - Mar,4990.366199666666
 2021,13 Ciudades y áreas metropolitanas,Formal,Formal,Feb - Abr,4999.7586716666665
@@ -2009,8 +2009,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,Formal,Ago - Oct,6616.207533
 2025,13 Ciudades y áreas metropolitanas,Formal,Formal,Sep - Nov,6677.690246
 2025,13 Ciudades y áreas metropolitanas,Formal,Formal,Oct - Dic,6701.28994
-2026,13 Ciudades y áreas metropolitanas,Formal,Formal,Nov - Ene,6713.179559
-2026,13 Ciudades y áreas metropolitanas,Formal,Formal,Dic - Feb,6634.691589
+2025,13 Ciudades y áreas metropolitanas,Formal,Formal,Nov - Ene,6713.179559
+2025,13 Ciudades y áreas metropolitanas,Formal,Formal,Dic - Feb,6634.691589
 2026,13 Ciudades y áreas metropolitanas,Formal,Formal,Ene - Mar,6625.45175
 2021,13 Ciudades y áreas metropolitanas,Formal,Ninguno,Ene - Mar,70.14648799999999
 2021,13 Ciudades y áreas metropolitanas,Formal,Ninguno,Feb - Abr,67.82632333333333
@@ -2070,8 +2070,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,Ninguno,Ago - Oct,100.105646
 2025,13 Ciudades y áreas metropolitanas,Formal,Ninguno,Sep - Nov,96.616618
 2025,13 Ciudades y áreas metropolitanas,Formal,Ninguno,Oct - Dic,94.108042
-2026,13 Ciudades y áreas metropolitanas,Formal,Ninguno,Nov - Ene,83.153947
-2026,13 Ciudades y áreas metropolitanas,Formal,Ninguno,Dic - Feb,76.308414
+2025,13 Ciudades y áreas metropolitanas,Formal,Ninguno,Nov - Ene,83.153947
+2025,13 Ciudades y áreas metropolitanas,Formal,Ninguno,Dic - Feb,76.308414
 2026,13 Ciudades y áreas metropolitanas,Formal,Ninguno,Ene - Mar,73.429899
 2021,13 Ciudades y áreas metropolitanas,Formal,Básica primaria,Ene - Mar,333.1363203333333
 2021,13 Ciudades y áreas metropolitanas,Formal,Básica primaria,Feb - Abr,334.68726833333335
@@ -2131,8 +2131,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,Básica primaria,Ago - Oct,391.238052
 2025,13 Ciudades y áreas metropolitanas,Formal,Básica primaria,Sep - Nov,390.387479
 2025,13 Ciudades y áreas metropolitanas,Formal,Básica primaria,Oct - Dic,407.680255
-2026,13 Ciudades y áreas metropolitanas,Formal,Básica primaria,Nov - Ene,408.653914
-2026,13 Ciudades y áreas metropolitanas,Formal,Básica primaria,Dic - Feb,362.474881
+2025,13 Ciudades y áreas metropolitanas,Formal,Básica primaria,Nov - Ene,408.653914
+2025,13 Ciudades y áreas metropolitanas,Formal,Básica primaria,Dic - Feb,362.474881
 2026,13 Ciudades y áreas metropolitanas,Formal,Básica primaria,Ene - Mar,363.290187
 2021,13 Ciudades y áreas metropolitanas,Formal,Básica secundaria^,Ene - Mar,110.94068533333332
 2021,13 Ciudades y áreas metropolitanas,Formal,Básica secundaria^,Feb - Abr,108.540723
@@ -2192,8 +2192,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,Básica secundaria^,Ago - Oct,126.136265
 2025,13 Ciudades y áreas metropolitanas,Formal,Básica secundaria^,Sep - Nov,138.736751
 2025,13 Ciudades y áreas metropolitanas,Formal,Básica secundaria^,Oct - Dic,144.828656
-2026,13 Ciudades y áreas metropolitanas,Formal,Básica secundaria^,Nov - Ene,151.092788
-2026,13 Ciudades y áreas metropolitanas,Formal,Básica secundaria^,Dic - Feb,135.534156
+2025,13 Ciudades y áreas metropolitanas,Formal,Básica secundaria^,Nov - Ene,151.092788
+2025,13 Ciudades y áreas metropolitanas,Formal,Básica secundaria^,Dic - Feb,135.534156
 2026,13 Ciudades y áreas metropolitanas,Formal,Básica secundaria^,Ene - Mar,120.84664
 2021,13 Ciudades y áreas metropolitanas,Formal,Educación media*^,Ene - Mar,1717.2726386666666
 2021,13 Ciudades y áreas metropolitanas,Formal,Educación media*^,Feb - Abr,1737.6568650000002
@@ -2253,8 +2253,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,Educación media*^,Ago - Oct,2259.73079
 2025,13 Ciudades y áreas metropolitanas,Formal,Educación media*^,Sep - Nov,2338.645489
 2025,13 Ciudades y áreas metropolitanas,Formal,Educación media*^,Oct - Dic,2365.017485
-2026,13 Ciudades y áreas metropolitanas,Formal,Educación media*^,Nov - Ene,2344.249415
-2026,13 Ciudades y áreas metropolitanas,Formal,Educación media*^,Dic - Feb,2247.02545
+2025,13 Ciudades y áreas metropolitanas,Formal,Educación media*^,Nov - Ene,2344.249415
+2025,13 Ciudades y áreas metropolitanas,Formal,Educación media*^,Dic - Feb,2247.02545
 2026,13 Ciudades y áreas metropolitanas,Formal,Educación media*^,Ene - Mar,2181.967779
 2021,13 Ciudades y áreas metropolitanas,Formal,Técnica profesional y Tecnológica^^,Ene - Mar,830.6186603333332
 2021,13 Ciudades y áreas metropolitanas,Formal,Técnica profesional y Tecnológica^^,Feb - Abr,864.0462166666666
@@ -2314,8 +2314,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,Técnica profesional y Tecnológica^^,Ago - Oct,1331.590453
 2025,13 Ciudades y áreas metropolitanas,Formal,Técnica profesional y Tecnológica^^,Sep - Nov,1310.557924
 2025,13 Ciudades y áreas metropolitanas,Formal,Técnica profesional y Tecnológica^^,Oct - Dic,1299.225857
-2026,13 Ciudades y áreas metropolitanas,Formal,Técnica profesional y Tecnológica^^,Nov - Ene,1305.481755
-2026,13 Ciudades y áreas metropolitanas,Formal,Técnica profesional y Tecnológica^^,Dic - Feb,1311.501826
+2025,13 Ciudades y áreas metropolitanas,Formal,Técnica profesional y Tecnológica^^,Nov - Ene,1305.481755
+2025,13 Ciudades y áreas metropolitanas,Formal,Técnica profesional y Tecnológica^^,Dic - Feb,1311.501826
 2026,13 Ciudades y áreas metropolitanas,Formal,Técnica profesional y Tecnológica^^,Ene - Mar,1310.126597
 2021,13 Ciudades y áreas metropolitanas,Formal,Universitaria,Ene - Mar,1204.9308686666666
 2021,13 Ciudades y áreas metropolitanas,Formal,Universitaria,Feb - Abr,1212.9873236666667
@@ -2375,8 +2375,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,Universitaria,Ago - Oct,1582.044866
 2025,13 Ciudades y áreas metropolitanas,Formal,Universitaria,Sep - Nov,1547.178646
 2025,13 Ciudades y áreas metropolitanas,Formal,Universitaria,Oct - Dic,1514.932443
-2026,13 Ciudades y áreas metropolitanas,Formal,Universitaria,Nov - Ene,1538.938367
-2026,13 Ciudades y áreas metropolitanas,Formal,Universitaria,Dic - Feb,1574.351016
+2025,13 Ciudades y áreas metropolitanas,Formal,Universitaria,Nov - Ene,1538.938367
+2025,13 Ciudades y áreas metropolitanas,Formal,Universitaria,Dic - Feb,1574.351016
 2026,13 Ciudades y áreas metropolitanas,Formal,Universitaria,Ene - Mar,1590.138625
 2021,13 Ciudades y áreas metropolitanas,Formal,Posgrado,Ene - Mar,533.2267356666666
 2021,13 Ciudades y áreas metropolitanas,Formal,Posgrado,Feb - Abr,548.923757
@@ -2436,8 +2436,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,Posgrado,Ago - Oct,823.93492
 2025,13 Ciudades y áreas metropolitanas,Formal,Posgrado,Sep - Nov,855.498057
 2025,13 Ciudades y áreas metropolitanas,Formal,Posgrado,Oct - Dic,873.60801
-2026,13 Ciudades y áreas metropolitanas,Formal,Posgrado,Nov - Ene,879.72018
-2026,13 Ciudades y áreas metropolitanas,Formal,Posgrado,Dic - Feb,925.552732
+2025,13 Ciudades y áreas metropolitanas,Formal,Posgrado,Nov - Ene,879.72018
+2025,13 Ciudades y áreas metropolitanas,Formal,Posgrado,Dic - Feb,925.552732
 2026,13 Ciudades y áreas metropolitanas,Formal,Posgrado,Ene - Mar,985.245256
 2021,13 Ciudades y áreas metropolitanas,Informal,Informal,Ene - Mar,4236.047126666667
 2021,13 Ciudades y áreas metropolitanas,Informal,Informal,Feb - Abr,4320.687901333334
@@ -2497,8 +2497,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,Informal,Ago - Oct,4881.090912
 2025,13 Ciudades y áreas metropolitanas,Informal,Informal,Sep - Nov,4889.067612
 2025,13 Ciudades y áreas metropolitanas,Informal,Informal,Oct - Dic,4912.196727
-2026,13 Ciudades y áreas metropolitanas,Informal,Informal,Nov - Ene,4671.783415
-2026,13 Ciudades y áreas metropolitanas,Informal,Informal,Dic - Feb,4626.307137
+2025,13 Ciudades y áreas metropolitanas,Informal,Informal,Nov - Ene,4671.783415
+2025,13 Ciudades y áreas metropolitanas,Informal,Informal,Dic - Feb,4626.307137
 2026,13 Ciudades y áreas metropolitanas,Informal,Informal,Ene - Mar,4602.274214
 2021,13 Ciudades y áreas metropolitanas,Informal,Ninguno,Ene - Mar,343.7400666666667
 2021,13 Ciudades y áreas metropolitanas,Informal,Ninguno,Feb - Abr,367.586337
@@ -2558,8 +2558,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,Ninguno,Ago - Oct,393.857866
 2025,13 Ciudades y áreas metropolitanas,Informal,Ninguno,Sep - Nov,417.224072
 2025,13 Ciudades y áreas metropolitanas,Informal,Ninguno,Oct - Dic,409.200868
-2026,13 Ciudades y áreas metropolitanas,Informal,Ninguno,Nov - Ene,390.312023
-2026,13 Ciudades y áreas metropolitanas,Informal,Ninguno,Dic - Feb,382.46402
+2025,13 Ciudades y áreas metropolitanas,Informal,Ninguno,Nov - Ene,390.312023
+2025,13 Ciudades y áreas metropolitanas,Informal,Ninguno,Dic - Feb,382.46402
 2026,13 Ciudades y áreas metropolitanas,Informal,Ninguno,Ene - Mar,386.106225
 2021,13 Ciudades y áreas metropolitanas,Informal,Básica primaria,Ene - Mar,863.0914226666667
 2021,13 Ciudades y áreas metropolitanas,Informal,Básica primaria,Feb - Abr,917.4984593333334
@@ -2619,8 +2619,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,Básica primaria,Ago - Oct,1082.133068
 2025,13 Ciudades y áreas metropolitanas,Informal,Básica primaria,Sep - Nov,1070.405879
 2025,13 Ciudades y áreas metropolitanas,Informal,Básica primaria,Oct - Dic,1074.216001
-2026,13 Ciudades y áreas metropolitanas,Informal,Básica primaria,Nov - Ene,1045.629315
-2026,13 Ciudades y áreas metropolitanas,Informal,Básica primaria,Dic - Feb,995.401429
+2025,13 Ciudades y áreas metropolitanas,Informal,Básica primaria,Nov - Ene,1045.629315
+2025,13 Ciudades y áreas metropolitanas,Informal,Básica primaria,Dic - Feb,995.401429
 2026,13 Ciudades y áreas metropolitanas,Informal,Básica primaria,Ene - Mar,938.705476
 2021,13 Ciudades y áreas metropolitanas,Informal,Básica secundaria^,Ene - Mar,250.759373
 2021,13 Ciudades y áreas metropolitanas,Informal,Básica secundaria^,Feb - Abr,258.3449156666666
@@ -2680,8 +2680,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,Básica secundaria^,Ago - Oct,304.949872
 2025,13 Ciudades y áreas metropolitanas,Informal,Básica secundaria^,Sep - Nov,295.992521
 2025,13 Ciudades y áreas metropolitanas,Informal,Básica secundaria^,Oct - Dic,313.673401
-2026,13 Ciudades y áreas metropolitanas,Informal,Básica secundaria^,Nov - Ene,269.629236
-2026,13 Ciudades y áreas metropolitanas,Informal,Básica secundaria^,Dic - Feb,252.6443
+2025,13 Ciudades y áreas metropolitanas,Informal,Básica secundaria^,Nov - Ene,269.629236
+2025,13 Ciudades y áreas metropolitanas,Informal,Básica secundaria^,Dic - Feb,252.6443
 2026,13 Ciudades y áreas metropolitanas,Informal,Básica secundaria^,Ene - Mar,251.110291
 2021,13 Ciudades y áreas metropolitanas,Informal,Educación media*^,Ene - Mar,1764.3327193333334
 2021,13 Ciudades y áreas metropolitanas,Informal,Educación media*^,Feb - Abr,1761.5700033333333
@@ -2741,8 +2741,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,Educación media*^,Ago - Oct,2104.00632
 2025,13 Ciudades y áreas metropolitanas,Informal,Educación media*^,Sep - Nov,2128.87777
 2025,13 Ciudades y áreas metropolitanas,Informal,Educación media*^,Oct - Dic,2126.056577
-2026,13 Ciudades y áreas metropolitanas,Informal,Educación media*^,Nov - Ene,1983.305893
-2026,13 Ciudades y áreas metropolitanas,Informal,Educación media*^,Dic - Feb,1957.560435
+2025,13 Ciudades y áreas metropolitanas,Informal,Educación media*^,Nov - Ene,1983.305893
+2025,13 Ciudades y áreas metropolitanas,Informal,Educación media*^,Dic - Feb,1957.560435
 2026,13 Ciudades y áreas metropolitanas,Informal,Educación media*^,Ene - Mar,1940.016221
 2021,13 Ciudades y áreas metropolitanas,Informal,Técnica profesional y Tecnológica^^,Ene - Mar,403.94252966666664
 2021,13 Ciudades y áreas metropolitanas,Informal,Técnica profesional y Tecnológica^^,Feb - Abr,411.14281733333337
@@ -2802,8 +2802,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,Técnica profesional y Tecnológica^^,Ago - Oct,505.540319
 2025,13 Ciudades y áreas metropolitanas,Informal,Técnica profesional y Tecnológica^^,Sep - Nov,493.163579
 2025,13 Ciudades y áreas metropolitanas,Informal,Técnica profesional y Tecnológica^^,Oct - Dic,509.2282
-2026,13 Ciudades y áreas metropolitanas,Informal,Técnica profesional y Tecnológica^^,Nov - Ene,503.882463
-2026,13 Ciudades y áreas metropolitanas,Informal,Técnica profesional y Tecnológica^^,Dic - Feb,508.835259
+2025,13 Ciudades y áreas metropolitanas,Informal,Técnica profesional y Tecnológica^^,Nov - Ene,503.882463
+2025,13 Ciudades y áreas metropolitanas,Informal,Técnica profesional y Tecnológica^^,Dic - Feb,508.835259
 2026,13 Ciudades y áreas metropolitanas,Informal,Técnica profesional y Tecnológica^^,Ene - Mar,503.651064
 2021,13 Ciudades y áreas metropolitanas,Informal,Universitaria,Ene - Mar,441.3018836666667
 2021,13 Ciudades y áreas metropolitanas,Informal,Universitaria,Feb - Abr,456.23771933333336
@@ -2863,8 +2863,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,Universitaria,Ago - Oct,386.842898
 2025,13 Ciudades y áreas metropolitanas,Informal,Universitaria,Sep - Nov,379.66023
 2025,13 Ciudades y áreas metropolitanas,Informal,Universitaria,Oct - Dic,389.783375
-2026,13 Ciudades y áreas metropolitanas,Informal,Universitaria,Nov - Ene,375.572365
-2026,13 Ciudades y áreas metropolitanas,Informal,Universitaria,Dic - Feb,413.701503
+2025,13 Ciudades y áreas metropolitanas,Informal,Universitaria,Nov - Ene,375.572365
+2025,13 Ciudades y áreas metropolitanas,Informal,Universitaria,Dic - Feb,413.701503
 2026,13 Ciudades y áreas metropolitanas,Informal,Universitaria,Ene - Mar,444.802815
 2021,13 Ciudades y áreas metropolitanas,Informal,Posgrado,Ene - Mar,94.19984433333333
 2021,13 Ciudades y áreas metropolitanas,Informal,Posgrado,Feb - Abr,100.12843
@@ -2924,8 +2924,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,Posgrado,Ago - Oct,103.76057
 2025,13 Ciudades y áreas metropolitanas,Informal,Posgrado,Sep - Nov,103.743562
 2025,13 Ciudades y áreas metropolitanas,Informal,Posgrado,Oct - Dic,90.038303
-2026,13 Ciudades y áreas metropolitanas,Informal,Posgrado,Nov - Ene,103.45212
-2026,13 Ciudades y áreas metropolitanas,Informal,Posgrado,Dic - Feb,115.70019
+2025,13 Ciudades y áreas metropolitanas,Informal,Posgrado,Nov - Ene,103.45212
+2025,13 Ciudades y áreas metropolitanas,Informal,Posgrado,Dic - Feb,115.70019
 2026,13 Ciudades y áreas metropolitanas,Informal,Posgrado,Ene - Mar,137.882121
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Ene - Mar,10207.340572
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Feb - Abr,10314.171929333332
@@ -2985,8 +2985,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Ago - Oct,12699.154455
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Sep - Nov,12774.461218
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Oct - Dic,12813.274178
-2026,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Nov - Ene,12564.239348
-2026,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Dic - Feb,12429.285203
+2025,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Nov - Ene,12564.239348
+2025,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Dic - Feb,12429.285203
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Ene - Mar,12402.357556
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Ninguno,Ene - Mar,485.593703
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Ninguno,Feb - Abr,508.32945033333334
@@ -3046,8 +3046,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Ninguno,Ago - Oct,574.502399
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Ninguno,Sep - Nov,593.871412
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Ninguno,Oct - Dic,579.7682
-2026,23 Ciudades y áreas metropolitanas,Población ocupada,Ninguno,Nov - Ene,547.093208
-2026,23 Ciudades y áreas metropolitanas,Población ocupada,Ninguno,Dic - Feb,530.889743
+2025,23 Ciudades y áreas metropolitanas,Población ocupada,Ninguno,Nov - Ene,547.093208
+2025,23 Ciudades y áreas metropolitanas,Población ocupada,Ninguno,Dic - Feb,530.889743
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Ninguno,Ene - Mar,531.650617
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Básica primaria,Ene - Mar,1351.936595
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Básica primaria,Feb - Abr,1412.7243863333333
@@ -3107,8 +3107,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Básica primaria,Ago - Oct,1655.116055
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Básica primaria,Sep - Nov,1648.715788
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Básica primaria,Oct - Dic,1663.89622
-2026,23 Ciudades y áreas metropolitanas,Población ocupada,Básica primaria,Nov - Ene,1631.206992
-2026,23 Ciudades y áreas metropolitanas,Población ocupada,Básica primaria,Dic - Feb,1526.668695
+2025,23 Ciudades y áreas metropolitanas,Población ocupada,Básica primaria,Nov - Ene,1631.206992
+2025,23 Ciudades y áreas metropolitanas,Población ocupada,Básica primaria,Dic - Feb,1526.668695
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Básica primaria,Ene - Mar,1466.763579
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Básica secundaria^,Ene - Mar,409.916997
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Básica secundaria^,Feb - Abr,414.0897313333333
@@ -3168,8 +3168,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Básica secundaria^,Ago - Oct,478.733732
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Básica secundaria^,Sep - Nov,482.942055
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Básica secundaria^,Oct - Dic,505.572683
-2026,23 Ciudades y áreas metropolitanas,Población ocupada,Básica secundaria^,Nov - Ene,464.527238
-2026,23 Ciudades y áreas metropolitanas,Población ocupada,Básica secundaria^,Dic - Feb,431.786057
+2025,23 Ciudades y áreas metropolitanas,Población ocupada,Básica secundaria^,Nov - Ene,464.527238
+2025,23 Ciudades y áreas metropolitanas,Población ocupada,Básica secundaria^,Dic - Feb,431.786057
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Básica secundaria^,Ene - Mar,415.564557
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Educación media*^,Ene - Mar,3833.1248103333332
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Educación media*^,Feb - Abr,3858.7893046666663
@@ -3229,8 +3229,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Educación media*^,Ago - Oct,4820.375335
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Educación media*^,Sep - Nov,4931.850523
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Educación media*^,Oct - Dic,4958.49108
-2026,23 Ciudades y áreas metropolitanas,Población ocupada,Educación media*^,Nov - Ene,4786.912576
-2026,23 Ciudades y áreas metropolitanas,Población ocupada,Educación media*^,Dic - Feb,4650.102288
+2025,23 Ciudades y áreas metropolitanas,Población ocupada,Educación media*^,Nov - Ene,4786.912576
+2025,23 Ciudades y áreas metropolitanas,Población ocupada,Educación media*^,Dic - Feb,4650.102288
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Educación media*^,Ene - Mar,4561.952721
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Técnica profesional y Tecnológica^^,Ene - Mar,1362.3425926666666
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Técnica profesional y Tecnológica^^,Feb - Abr,1401.8653886666664
@@ -3290,8 +3290,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Técnica profesional y Tecnológica^^,Ago - Oct,2012.598392
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Técnica profesional y Tecnológica^^,Sep - Nov,1975.765794
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Técnica profesional y Tecnológica^^,Oct - Dic,1980.071453
-2026,23 Ciudades y áreas metropolitanas,Población ocupada,Técnica profesional y Tecnológica^^,Nov - Ene,1973.239661
-2026,23 Ciudades y áreas metropolitanas,Población ocupada,Técnica profesional y Tecnológica^^,Dic - Feb,1982.720121
+2025,23 Ciudades y áreas metropolitanas,Población ocupada,Técnica profesional y Tecnológica^^,Nov - Ene,1973.239661
+2025,23 Ciudades y áreas metropolitanas,Población ocupada,Técnica profesional y Tecnológica^^,Dic - Feb,1982.720121
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Técnica profesional y Tecnológica^^,Ene - Mar,1975.449857
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Universitaria,Ene - Mar,1801.1851233333334
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Universitaria,Feb - Abr,1834.9116323333335
@@ -3351,8 +3351,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Universitaria,Ago - Oct,2159.119363
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Universitaria,Sep - Nov,2113.412798
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Universitaria,Oct - Dic,2091.072933
-2026,23 Ciudades y áreas metropolitanas,Población ocupada,Universitaria,Nov - Ene,2102.002174
-2026,23 Ciudades y áreas metropolitanas,Población ocupada,Universitaria,Dic - Feb,2181.290159
+2025,23 Ciudades y áreas metropolitanas,Población ocupada,Universitaria,Nov - Ene,2102.002174
+2025,23 Ciudades y áreas metropolitanas,Población ocupada,Universitaria,Dic - Feb,2181.290159
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Universitaria,Ene - Mar,2234.127973
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Posgrado,Ene - Mar,676.7338733333332
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Posgrado,Feb - Abr,697.6967619999999
@@ -3412,8 +3412,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Posgrado,Ago - Oct,997.282638
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Posgrado,Sep - Nov,1027.833566
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Posgrado,Oct - Dic,1032.48591
-2026,23 Ciudades y áreas metropolitanas,Población ocupada,Posgrado,Nov - Ene,1057.341798
-2026,23 Ciudades y áreas metropolitanas,Población ocupada,Posgrado,Dic - Feb,1123.792462
+2025,23 Ciudades y áreas metropolitanas,Población ocupada,Posgrado,Nov - Ene,1057.341798
+2025,23 Ciudades y áreas metropolitanas,Población ocupada,Posgrado,Dic - Feb,1123.792462
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Posgrado,Ene - Mar,1216.375431
 2021,23 Ciudades y áreas metropolitanas,Formal,Formal,Ene - Mar,5381.842067
 2021,23 Ciudades y áreas metropolitanas,Formal,Formal,Feb - Abr,5397.806292666667
@@ -3473,8 +3473,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,Formal,Ago - Oct,7144.69372
 2025,23 Ciudades y áreas metropolitanas,Formal,Formal,Sep - Nov,7207.580947
 2025,23 Ciudades y áreas metropolitanas,Formal,Formal,Oct - Dic,7225.806379
-2026,23 Ciudades y áreas metropolitanas,Formal,Formal,Nov - Ene,7233.551609
-2026,23 Ciudades y áreas metropolitanas,Formal,Formal,Dic - Feb,7158.345735
+2025,23 Ciudades y áreas metropolitanas,Formal,Formal,Nov - Ene,7233.551609
+2025,23 Ciudades y áreas metropolitanas,Formal,Formal,Dic - Feb,7158.345735
 2026,23 Ciudades y áreas metropolitanas,Formal,Formal,Ene - Mar,7162.025443
 2021,23 Ciudades y áreas metropolitanas,Formal,Ninguno,Ene - Mar,76.19468166666667
 2021,23 Ciudades y áreas metropolitanas,Formal,Ninguno,Feb - Abr,72.95008333333334
@@ -3534,8 +3534,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,Ninguno,Ago - Oct,105.379064
 2025,23 Ciudades y áreas metropolitanas,Formal,Ninguno,Sep - Nov,103.007694
 2025,23 Ciudades y áreas metropolitanas,Formal,Ninguno,Oct - Dic,101.235128
-2026,23 Ciudades y áreas metropolitanas,Formal,Ninguno,Nov - Ene,90.054329
-2026,23 Ciudades y áreas metropolitanas,Formal,Ninguno,Dic - Feb,82.310254
+2025,23 Ciudades y áreas metropolitanas,Formal,Ninguno,Nov - Ene,90.054329
+2025,23 Ciudades y áreas metropolitanas,Formal,Ninguno,Dic - Feb,82.310254
 2026,23 Ciudades y áreas metropolitanas,Formal,Ninguno,Ene - Mar,78.85621
 2021,23 Ciudades y áreas metropolitanas,Formal,Básica primaria,Ene - Mar,354.47184666666664
 2021,23 Ciudades y áreas metropolitanas,Formal,Básica primaria,Feb - Abr,355.8625796666667
@@ -3595,8 +3595,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,Básica primaria,Ago - Oct,417.37357
 2025,23 Ciudades y áreas metropolitanas,Formal,Básica primaria,Sep - Nov,419.019568
 2025,23 Ciudades y áreas metropolitanas,Formal,Básica primaria,Oct - Dic,434.92164
-2026,23 Ciudades y áreas metropolitanas,Formal,Básica primaria,Nov - Ene,433.974383
-2026,23 Ciudades y áreas metropolitanas,Formal,Básica primaria,Dic - Feb,385.082655
+2025,23 Ciudades y áreas metropolitanas,Formal,Básica primaria,Nov - Ene,433.974383
+2025,23 Ciudades y áreas metropolitanas,Formal,Básica primaria,Dic - Feb,385.082655
 2026,23 Ciudades y áreas metropolitanas,Formal,Básica primaria,Ene - Mar,386.347692
 2021,23 Ciudades y áreas metropolitanas,Formal,Básica secundaria^,Ene - Mar,119.61876933333333
 2021,23 Ciudades y áreas metropolitanas,Formal,Básica secundaria^,Feb - Abr,116.43504266666666
@@ -3656,8 +3656,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,Básica secundaria^,Ago - Oct,134.323345
 2025,23 Ciudades y áreas metropolitanas,Formal,Básica secundaria^,Sep - Nov,147.13524
 2025,23 Ciudades y áreas metropolitanas,Formal,Básica secundaria^,Oct - Dic,152.927671
-2026,23 Ciudades y áreas metropolitanas,Formal,Básica secundaria^,Nov - Ene,158.776263
-2026,23 Ciudades y áreas metropolitanas,Formal,Básica secundaria^,Dic - Feb,142.733144
+2025,23 Ciudades y áreas metropolitanas,Formal,Básica secundaria^,Nov - Ene,158.776263
+2025,23 Ciudades y áreas metropolitanas,Formal,Básica secundaria^,Dic - Feb,142.733144
 2026,23 Ciudades y áreas metropolitanas,Formal,Básica secundaria^,Ene - Mar,128.625956
 2021,23 Ciudades y áreas metropolitanas,Formal,Educación media*^,Ene - Mar,1838.6337813333332
 2021,23 Ciudades y áreas metropolitanas,Formal,Educación media*^,Feb - Abr,1862.7314139999999
@@ -3717,8 +3717,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,Educación media*^,Ago - Oct,2434.771262
 2025,23 Ciudades y áreas metropolitanas,Formal,Educación media*^,Sep - Nov,2516.614149
 2025,23 Ciudades y áreas metropolitanas,Formal,Educación media*^,Oct - Dic,2538.786241
-2026,23 Ciudades y áreas metropolitanas,Formal,Educación media*^,Nov - Ene,2512.157594
-2026,23 Ciudades y áreas metropolitanas,Formal,Educación media*^,Dic - Feb,2410.097916
+2025,23 Ciudades y áreas metropolitanas,Formal,Educación media*^,Nov - Ene,2512.157594
+2025,23 Ciudades y áreas metropolitanas,Formal,Educación media*^,Dic - Feb,2410.097916
 2026,23 Ciudades y áreas metropolitanas,Formal,Educación media*^,Ene - Mar,2343.682825
 2021,23 Ciudades y áreas metropolitanas,Formal,Técnica profesional y Tecnológica^^,Ene - Mar,904.6223839999999
 2021,23 Ciudades y áreas metropolitanas,Formal,Técnica profesional y Tecnológica^^,Feb - Abr,938.5951973333334
@@ -3778,8 +3778,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,Técnica profesional y Tecnológica^^,Ago - Oct,1440.798204
 2025,23 Ciudades y áreas metropolitanas,Formal,Técnica profesional y Tecnológica^^,Sep - Nov,1418.076805
 2025,23 Ciudades y áreas metropolitanas,Formal,Técnica profesional y Tecnológica^^,Oct - Dic,1406.520959
-2026,23 Ciudades y áreas metropolitanas,Formal,Técnica profesional y Tecnológica^^,Nov - Ene,1409.111349
-2026,23 Ciudades y áreas metropolitanas,Formal,Técnica profesional y Tecnológica^^,Dic - Feb,1414.954314
+2025,23 Ciudades y áreas metropolitanas,Formal,Técnica profesional y Tecnológica^^,Nov - Ene,1409.111349
+2025,23 Ciudades y áreas metropolitanas,Formal,Técnica profesional y Tecnológica^^,Dic - Feb,1414.954314
 2026,23 Ciudades y áreas metropolitanas,Formal,Técnica profesional y Tecnológica^^,Ene - Mar,1413.896361
 2021,23 Ciudades y áreas metropolitanas,Formal,Universitaria,Ene - Mar,1311.9087613333331
 2021,23 Ciudades y áreas metropolitanas,Formal,Universitaria,Feb - Abr,1329.8027046666666
@@ -3839,8 +3839,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,Universitaria,Ago - Oct,1725.503076
 2025,23 Ciudades y áreas metropolitanas,Formal,Universitaria,Sep - Nov,1686.481857
 2025,23 Ciudades y áreas metropolitanas,Formal,Universitaria,Oct - Dic,1654.264588
-2026,23 Ciudades y áreas metropolitanas,Formal,Universitaria,Nov - Ene,1680.768622
-2026,23 Ciudades y áreas metropolitanas,Formal,Universitaria,Dic - Feb,1721.044502
+2025,23 Ciudades y áreas metropolitanas,Formal,Universitaria,Nov - Ene,1680.768622
+2025,23 Ciudades y áreas metropolitanas,Formal,Universitaria,Dic - Feb,1721.044502
 2026,23 Ciudades y áreas metropolitanas,Formal,Universitaria,Ene - Mar,1740.995191
 2021,23 Ciudades y áreas metropolitanas,Formal,Posgrado,Ene - Mar,573.3416980000001
 2021,23 Ciudades y áreas metropolitanas,Formal,Posgrado,Feb - Abr,589.1402036666667
@@ -3900,8 +3900,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,Posgrado,Ago - Oct,885.11866
 2025,23 Ciudades y áreas metropolitanas,Formal,Posgrado,Sep - Nov,917.176352
 2025,23 Ciudades y áreas metropolitanas,Formal,Posgrado,Oct - Dic,935.26096
-2026,23 Ciudades y áreas metropolitanas,Formal,Posgrado,Nov - Ene,946.819877
-2026,23 Ciudades y áreas metropolitanas,Formal,Posgrado,Dic - Feb,1000.113781
+2025,23 Ciudades y áreas metropolitanas,Formal,Posgrado,Nov - Ene,946.819877
+2025,23 Ciudades y áreas metropolitanas,Formal,Posgrado,Dic - Feb,1000.113781
 2026,23 Ciudades y áreas metropolitanas,Formal,Posgrado,Ene - Mar,1069.148386
 2021,23 Ciudades y áreas metropolitanas,Informal,Informal,Ene - Mar,4825.498504666667
 2021,23 Ciudades y áreas metropolitanas,Informal,Informal,Feb - Abr,4916.365636333333
@@ -3961,8 +3961,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,Informal,Ago - Oct,5554.460735
 2025,23 Ciudades y áreas metropolitanas,Informal,Informal,Sep - Nov,5566.880271
 2025,23 Ciudades y áreas metropolitanas,Informal,Informal,Oct - Dic,5587.467798
-2026,23 Ciudades y áreas metropolitanas,Informal,Informal,Nov - Ene,5330.68774
-2026,23 Ciudades y áreas metropolitanas,Informal,Informal,Dic - Feb,5270.939468
+2025,23 Ciudades y áreas metropolitanas,Informal,Informal,Nov - Ene,5330.68774
+2025,23 Ciudades y áreas metropolitanas,Informal,Informal,Dic - Feb,5270.939468
 2026,23 Ciudades y áreas metropolitanas,Informal,Informal,Ene - Mar,5240.332113
 2021,23 Ciudades y áreas metropolitanas,Informal,Ninguno,Ene - Mar,409.399021
 2021,23 Ciudades y áreas metropolitanas,Informal,Ninguno,Feb - Abr,435.379367
@@ -4022,8 +4022,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,Ninguno,Ago - Oct,469.123335
 2025,23 Ciudades y áreas metropolitanas,Informal,Ninguno,Sep - Nov,490.863718
 2025,23 Ciudades y áreas metropolitanas,Informal,Ninguno,Oct - Dic,478.533072
-2026,23 Ciudades y áreas metropolitanas,Informal,Ninguno,Nov - Ene,457.038879
-2026,23 Ciudades y áreas metropolitanas,Informal,Ninguno,Dic - Feb,448.57949
+2025,23 Ciudades y áreas metropolitanas,Informal,Ninguno,Nov - Ene,457.038879
+2025,23 Ciudades y áreas metropolitanas,Informal,Ninguno,Dic - Feb,448.57949
 2026,23 Ciudades y áreas metropolitanas,Informal,Ninguno,Ene - Mar,452.794407
 2021,23 Ciudades y áreas metropolitanas,Informal,Básica primaria,Ene - Mar,997.4647483333333
 2021,23 Ciudades y áreas metropolitanas,Informal,Básica primaria,Feb - Abr,1056.8618066666666
@@ -4083,8 +4083,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,Básica primaria,Ago - Oct,1237.742485
 2025,23 Ciudades y áreas metropolitanas,Informal,Básica primaria,Sep - Nov,1229.69622
 2025,23 Ciudades y áreas metropolitanas,Informal,Básica primaria,Oct - Dic,1228.97458
-2026,23 Ciudades y áreas metropolitanas,Informal,Básica primaria,Nov - Ene,1197.232608
-2026,23 Ciudades y áreas metropolitanas,Informal,Básica primaria,Dic - Feb,1141.58604
+2025,23 Ciudades y áreas metropolitanas,Informal,Básica primaria,Nov - Ene,1197.232608
+2025,23 Ciudades y áreas metropolitanas,Informal,Básica primaria,Dic - Feb,1141.58604
 2026,23 Ciudades y áreas metropolitanas,Informal,Básica primaria,Ene - Mar,1080.415887
 2021,23 Ciudades y áreas metropolitanas,Informal,Básica secundaria^,Ene - Mar,290.2982273333334
 2021,23 Ciudades y áreas metropolitanas,Informal,Básica secundaria^,Feb - Abr,297.6546886666667
@@ -4144,8 +4144,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,Básica secundaria^,Ago - Oct,344.410387
 2025,23 Ciudades y áreas metropolitanas,Informal,Básica secundaria^,Sep - Nov,335.806815
 2025,23 Ciudades y áreas metropolitanas,Informal,Básica secundaria^,Oct - Dic,352.645011
-2026,23 Ciudades y áreas metropolitanas,Informal,Básica secundaria^,Nov - Ene,305.750975
-2026,23 Ciudades y áreas metropolitanas,Informal,Básica secundaria^,Dic - Feb,289.052913
+2025,23 Ciudades y áreas metropolitanas,Informal,Básica secundaria^,Nov - Ene,305.750975
+2025,23 Ciudades y áreas metropolitanas,Informal,Básica secundaria^,Dic - Feb,289.052913
 2026,23 Ciudades y áreas metropolitanas,Informal,Básica secundaria^,Ene - Mar,286.9386
 2021,23 Ciudades y áreas metropolitanas,Informal,Educación media*^,Ene - Mar,1994.4910296666667
 2021,23 Ciudades y áreas metropolitanas,Informal,Educación media*^,Feb - Abr,1996.0578913333336
@@ -4205,8 +4205,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,Educación media*^,Ago - Oct,2385.604073
 2025,23 Ciudades y áreas metropolitanas,Informal,Educación media*^,Sep - Nov,2415.236374
 2025,23 Ciudades y áreas metropolitanas,Informal,Educación media*^,Oct - Dic,2419.704839
-2026,23 Ciudades y áreas metropolitanas,Informal,Educación media*^,Nov - Ene,2274.754983
-2026,23 Ciudades y áreas metropolitanas,Informal,Educación media*^,Dic - Feb,2240.004372
+2025,23 Ciudades y áreas metropolitanas,Informal,Educación media*^,Nov - Ene,2274.754983
+2025,23 Ciudades y áreas metropolitanas,Informal,Educación media*^,Dic - Feb,2240.004372
 2026,23 Ciudades y áreas metropolitanas,Informal,Educación media*^,Ene - Mar,2218.269896
 2021,23 Ciudades y áreas metropolitanas,Informal,Técnica profesional y Tecnológica^^,Ene - Mar,457.7202086666667
 2021,23 Ciudades y áreas metropolitanas,Informal,Técnica profesional y Tecnológica^^,Feb - Abr,463.27019133333334
@@ -4266,8 +4266,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,Técnica profesional y Tecnológica^^,Ago - Oct,571.800189
 2025,23 Ciudades y áreas metropolitanas,Informal,Técnica profesional y Tecnológica^^,Sep - Nov,557.688989
 2025,23 Ciudades y áreas metropolitanas,Informal,Técnica profesional y Tecnológica^^,Oct - Dic,573.550494
-2026,23 Ciudades y áreas metropolitanas,Informal,Técnica profesional y Tecnológica^^,Nov - Ene,564.128312
-2026,23 Ciudades y áreas metropolitanas,Informal,Técnica profesional y Tecnológica^^,Dic - Feb,567.765807
+2025,23 Ciudades y áreas metropolitanas,Informal,Técnica profesional y Tecnológica^^,Nov - Ene,564.128312
+2025,23 Ciudades y áreas metropolitanas,Informal,Técnica profesional y Tecnológica^^,Dic - Feb,567.765807
 2026,23 Ciudades y áreas metropolitanas,Informal,Técnica profesional y Tecnológica^^,Ene - Mar,561.553496
 2021,23 Ciudades y áreas metropolitanas,Informal,Universitaria,Ene - Mar,489.276362
 2021,23 Ciudades y áreas metropolitanas,Informal,Universitaria,Feb - Abr,505.10892766666666
@@ -4327,8 +4327,8 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,Universitaria,Ago - Oct,433.616288
 2025,23 Ciudades y áreas metropolitanas,Informal,Universitaria,Sep - Nov,426.930942
 2025,23 Ciudades y áreas metropolitanas,Informal,Universitaria,Oct - Dic,436.808344
-2026,23 Ciudades y áreas metropolitanas,Informal,Universitaria,Nov - Ene,421.233552
-2026,23 Ciudades y áreas metropolitanas,Informal,Universitaria,Dic - Feb,460.245656
+2025,23 Ciudades y áreas metropolitanas,Informal,Universitaria,Nov - Ene,421.233552
+2025,23 Ciudades y áreas metropolitanas,Informal,Universitaria,Dic - Feb,460.245656
 2026,23 Ciudades y áreas metropolitanas,Informal,Universitaria,Ene - Mar,493.132781
 2021,23 Ciudades y áreas metropolitanas,Informal,Posgrado,Ene - Mar,103.39217500000001
 2021,23 Ciudades y áreas metropolitanas,Informal,Posgrado,Feb - Abr,108.55655833333334
@@ -4388,6 +4388,6 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,Posgrado,Ago - Oct,112.163978
 2025,23 Ciudades y áreas metropolitanas,Informal,Posgrado,Sep - Nov,110.657213
 2025,23 Ciudades y áreas metropolitanas,Informal,Posgrado,Oct - Dic,97.22495
-2026,23 Ciudades y áreas metropolitanas,Informal,Posgrado,Nov - Ene,110.521921
-2026,23 Ciudades y áreas metropolitanas,Informal,Posgrado,Dic - Feb,123.678681
+2025,23 Ciudades y áreas metropolitanas,Informal,Posgrado,Nov - Ene,110.521921
+2025,23 Ciudades y áreas metropolitanas,Informal,Posgrado,Dic - Feb,123.678681
 2026,23 Ciudades y áreas metropolitanas,Informal,Posgrado,Ene - Mar,147.227045
