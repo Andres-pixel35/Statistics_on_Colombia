@@ -9,8 +9,8 @@ from generalities.macro_generalities.dictionaries import presidents
 from generalities.function import get_valid_presidents, show_all_years, load_csv, BASE_DIR
 from generalities.demography_generalities.births import BIRTHS_PATHS
 from generalities.demography_generalities.deaths import DEATHS_PATHS
-from generalities.demography_generalities.population import PREV_YEAR
-from pages.tabs.demography._shared import _render_pyramid, PROJECTED_NOTE
+from generalities.demography_generalities.population import GENDER_AGG, AGE_SINGLE, PREV_YEAR, PROJECTED_NOTE
+from pages.tabs.demography._shared import _render_pyramid
 
 NET_MIGRATION_PATH = BASE_DIR / "data/world_bank/net_migration.csv"
 
@@ -18,22 +18,23 @@ NET_MIGRATION_PATH = BASE_DIR / "data/world_bank/net_migration.csv"
 def render_national(pop_df: pd.DataFrame) -> None:
     st.title("Population")
 
-    col1, col2 = st.columns(2)
+    with st.sidebar:
+        st.header("Filters")
+        chart_type = st.selectbox("Chart Type:", ["Line", "Bar", "Population pyramid"])
 
-    with col1:
-        method = st.selectbox("Method:", ["Total", "Growth", "Projection", "By Age"])
-
-    if method == "Projection":
-        _render_population_projection(pop_df)
-        return
-    if method == "By Age":
-        with st.sidebar:
-            st.header("Filters")
+    if chart_type == "Population pyramid":
         _render_pyramid(pop_df, "Colombia")
         return
 
+    col1, col2 = st.columns(2)
+
+    with col1:
+        method = st.selectbox("Method:", ["Total", "Growth"])
+
     national = pop.national_total_series(pop_df, cap=PREV_YEAR)
     metric = "Absolute"
+    show_projected = False
+    is_national = False
 
     if method == "Growth":
         with col2:
@@ -64,25 +65,27 @@ def render_national(pop_df: pd.DataFrame) -> None:
         elif perspective == "Deaths":
             series = dth.deaths_national_series(load_csv(DEATHS_PATHS["total"]))
             years = series.index
-        else:
-            series = national
+        else:  # National
+            is_national = True
             years = national.index
 
-        a = "Population" if perspective == "National" else f"{perspective}"
-
-        unit = {"Births": "Births", "Deaths": "Deaths"}.get(perspective, "People")
-        info = [a, "Year", unit]
-        column = f"{a}"
+        if perspective != "National":
+            a = f"{perspective}"
+            unit = {"Births": "Births", "Deaths": "Deaths"}.get(perspective, "People")
+            info = [a, "Year", unit]
+            column = f"{a}"
 
     source = "World Bank" if (method == "Total" and perspective == "Net Migration") else "DANE"
 
     show_all_applies = method == "Growth" or source != "DANE" or (method == "Total" and perspective == "National")
 
-    full_series = series
+    if not is_national:
+        full_series = series
 
     with st.sidebar:
-        st.header("Filters")
-        chart_type = st.selectbox("Chart Type:", ["Line", "Bar"])
+        if is_national:
+            gender = st.selectbox("Gender:", list(GENDER_AGG))
+            age = st.selectbox("Age:", AGE_SINGLE)
         valid_presidents = get_valid_presidents(years)
         president = st.selectbox("President:", ["All"] + valid_presidents)
         president = None if president == "All" else president
@@ -103,6 +106,19 @@ def render_national(pop_df: pd.DataFrame) -> None:
                 compare_deaths = st.checkbox("Compare with Deaths")
             elif perspective == "Deaths":
                 compare_births = st.checkbox("Compare with Births")
+
+        if is_national:
+            show_projected = st.checkbox("Show projected", value=False)
+
+    if is_national:
+        cap = None if show_projected else PREV_YEAR
+        series = pop.national_total_series(pop_df, gender, age, cap=cap)
+        noun = "Population" if gender == "Total" else gender
+        info = [noun, "Year", "People"]
+        column = noun
+        if age != "All ages":
+            info[0] = f"{noun} (age {age})"
+        full_series = series
 
     extras = []
     if compare_births:
@@ -158,10 +174,15 @@ def render_national(pop_df: pd.DataFrame) -> None:
     else:
         if extras:
             fig = mc.line_or_bar(chart_type, data, info, bar_if_single=True)
+        elif is_national and show_projected and chart_type == "Line":
+            fig = dc.projection_line(data, info, split_year=PREV_YEAR)
         else:
             fig = mc.line_or_bar(chart_type, data, info, bar_if_single=False)
 
     mc.render_chart(fig)
+
+    if is_national and show_projected and (data.index > PREV_YEAR).any():
+        st.caption(PROJECTED_NOTE)
 
     if source == "World Bank":
         st.caption("Net migration is the net total of migrants during the period, that is, the number of immigrants minus the number of emigrants, including both citizens and noncitizens.")
@@ -173,21 +194,3 @@ def render_national(pop_df: pd.DataFrame) -> None:
 
     if show_all_applies:
         st.info("If you want to choose a year prior to 2000, make sure you click 'Show all years'")
-
-
-def _render_population_projection(pop_df: pd.DataFrame) -> None:
-    series = pop.national_total_series(pop_df)
-
-    with st.sidebar:
-        st.header("Filters")
-        show_all = st.checkbox("Show all years", value=False)
-
-    if not show_all:
-        series = series[series.index >= 2020]
-
-    info = ["Population projection", "Year", "People"]
-    fig = dc.projection_line(series.to_frame(name="Population"), info, split_year=PREV_YEAR)
-    mc.render_chart(fig)
-    st.caption(f"Projected from {PREV_YEAR + 1} onward (dashed).")
-    st.caption(PROJECTED_NOTE)
-    st.caption("Source: DANE")
