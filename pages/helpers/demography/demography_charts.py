@@ -2,6 +2,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
 from generalities.function import cap_series
+from generalities.demography_generalities.population import MEN_COLOR, WOMEN_COLOR
 
 def indicator(data: pd.DataFrame, full_series: pd.Series, reference: float, info: list):
     title, valueformat, suffix, delta_suffix = info
@@ -143,33 +144,36 @@ def projection_line(data: pd.DataFrame, info: list, split_year: int, highlight: 
     return fig
 
 def population_pyramid(men: pd.Series, women: pd.Series, info: list, projected: bool = False):
-    """Diverging horizontal bars: men to the left (negative), women to the right."""
+    """Diverging horizontal bars: men to the left (negative), women to the right.
+
+    info = [title, value_label, valueformat]"""
+    title, value_label, valueformat = info
     groups = list(men.index)
-    title = info[0] + (" — projected" if projected else "")
+    title = title + (" — projected" if projected else "")
     maxv = max(men.max(), women.max()) or 1
     ticks = [(-maxv) + (2 * maxv) * k / 6 for k in range(7)]
 
     fig = go.Figure()
     fig.add_trace(go.Bar(
         y=groups, x=[-v for v in men.values], orientation="h", name="Men",
-        marker_color="#1f77b4", customdata=list(men.values),
-        hovertemplate="<b>Men</b><br>Age: %{y}<br>People: %{customdata:,.0f}<extra></extra>",
+        marker_color=MEN_COLOR, customdata=list(men.values),
+        hovertemplate=f"<b>Men</b><br>Age: %{{y}}<br>{value_label}: %{{customdata:{valueformat}}}<extra></extra>",
     ))
     fig.add_trace(go.Bar(
         y=groups, x=list(women.values), orientation="h", name="Women",
-        marker_color="#e377c2",
-        hovertemplate="<b>Women</b><br>Age: %{y}<br>People: %{x:,.0f}<extra></extra>",
+        marker_color=WOMEN_COLOR,
+        hovertemplate=f"<b>Women</b><br>Age: %{{y}}<br>{value_label}: %{{x:{valueformat}}}<extra></extra>",
     ))
     fig.update_layout(
         barmode="overlay", bargap=0.1, height=600,
         title={"text": title, "font": {"size": 25}, "x": 0, "xanchor": "left"},
         margin=dict(l=50, r=20, t=80, b=0),
-        xaxis_title="People", yaxis_title="Age group",
+        xaxis_title=value_label, yaxis_title="Age group",
         xaxis_title_font=dict(size=15), yaxis_title_font=dict(size=15),
         legend_title_text="",
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="center", x=0.5),
     )
-    fig.update_xaxes(tickvals=ticks, ticktext=[f"{abs(t):,.0f}" for t in ticks],
+    fig.update_xaxes(tickvals=ticks, ticktext=[f"{abs(t):{valueformat}}" for t in ticks],
                      showgrid=False, gridwidth=0.5, gridcolor="rgba(255, 255, 255, 0.1)",
                      tickfont=dict(size=14))
     fig.update_yaxes(showgrid=False, tickfont=dict(size=13), automargin=True)
