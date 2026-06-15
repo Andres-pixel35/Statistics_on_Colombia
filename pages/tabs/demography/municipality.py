@@ -1,8 +1,8 @@
 import streamlit as st
 from pages.helpers.demography import population_functions as pop
 from generalities.function import get_valid_presidents, show_all_years, load_csv
-from generalities.demography_generalities.population import POP_PATHS, GENDER_AGG, AGE_SINGLE, PREV_YEAR
-from pages.tabs.demography._shared import _render_pyramid, _render_pop_geo_chart, PROJECTED_NOTE
+from generalities.demography_generalities.population import POP_PATHS, GENDER_AGG, AGE_SINGLE, PREV_YEAR, PROJECTED_NOTE
+from pages.tabs.demography._shared import _render_pyramid, _render_pop_geo_chart
 
 
 def render_municipality() -> None:
@@ -21,10 +21,7 @@ def render_municipality() -> None:
     muni_names = sorted(scoped["Municipio"].dropna().unique())
 
     if chart_type == "Population pyramid":
-        c1, _ = st.columns(2)
-        with c1:
-            muni = st.selectbox("Municipality:", muni_names)
-        _render_pyramid(scoped[scoped["Municipio"] == muni], muni)
+        _render_pyramid(scoped, entity={"label": "Municipality", "options": muni_names, "column": "Municipio"})
         return
 
     all_years = sorted(scoped["AÑO"].unique().astype(int), reverse=True)

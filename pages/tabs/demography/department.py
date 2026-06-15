@@ -3,9 +3,9 @@ from pages.helpers.macro import macro_charts as mc
 from pages.helpers.demography import demography_charts as dc
 from pages.helpers.demography import population_functions as pop
 from generalities.function import get_valid_presidents, show_all_years, load_csv, load_geojson
-from generalities.demography_generalities.population import POP_PATHS, GENDER_AGG, AGE_SINGLE, PREV_YEAR
+from generalities.demography_generalities.population import POP_PATHS, GENDER_AGG, AGE_SINGLE, PREV_YEAR, PROJECTED_NOTE
 from generalities.demography_generalities.births import DEPT_GEOJSON_PATH, DEPT_FEATURE_KEY
-from pages.tabs.demography._shared import _render_pyramid, _render_pop_geo_chart, PROJECTED_NOTE
+from pages.tabs.demography._shared import _render_pyramid, _render_pop_geo_chart
 
 
 def render_department() -> None:
@@ -21,10 +21,7 @@ def render_department() -> None:
         chart_type = st.selectbox("Chart Type:", ["Map", "Line", "Bar", "Population pyramid"])
 
     if chart_type == "Population pyramid":
-        c1, _ = st.columns(2)
-        with c1:
-            dept = st.selectbox("Department:", dept_names)
-        _render_pyramid(df[df["Name"] == dept], dept)
+        _render_pyramid(df, entity={"label": "Department", "options": dept_names, "column": "Name"})
         return
 
     c1, c2, c3 = st.columns(3)

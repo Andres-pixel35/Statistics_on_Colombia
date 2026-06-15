@@ -16,3 +16,12 @@ AGE_SINGLE = ["All ages"] + [str(n) for n in range(101)]
 
 # 5-year buckets for the population pyramid: (label, low, high) inclusive
 PYRAMID_GROUPS = [(f"{lo}–{lo + 4}", lo, lo + 4) for lo in range(0, 100, 5)] + [("100+", 100, 100)]
+
+# pyramid / share-metric gender colors
+MEN_COLOR = "#1f77b4"
+WOMEN_COLOR = "#e377c2"
+
+PROJECTED_NOTE = ("Projected data is based on the 2018 National Population and Housing Census (CNPV), "
+                  "updated with information following the COVID-19 pandemic.")
+
+PYRAMID_MODES = ["Numbers", "% within age group", "% of total population"]
