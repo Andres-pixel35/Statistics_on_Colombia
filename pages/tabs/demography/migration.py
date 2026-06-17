@@ -14,7 +14,7 @@ def render_migration() -> None:
     migration_df = load_csv(MIGRATION_PATH)
     migration_df["Fecha"] = pd.to_datetime(migration_df["Fecha"])
 
-    st.title("Population")
+    st.title("Migration")
 
     with st.sidebar:
         st.header("Filters")
