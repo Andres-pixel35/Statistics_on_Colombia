@@ -9,7 +9,7 @@ path_population = BASE_DIR / "data/dane/population/nacional.csv"
 
 population_df = load_csv(path_population)
 
-st.title("Demography of Colombia")
+st.title("Statistics on Colombia")
 
 with st.sidebar:
     view = st.radio("View:", VIEW)
