@@ -59,9 +59,9 @@ def to_datatime(df: pd.DataFrame, dayfirst: bool) -> pd.DataFrame | pd.Series:
 
     return df_local
 
-def president_multiselect(valid_presidents: list) -> list:
+def president_multiselect(valid_presidents: list, disabled: bool = False, key=None) -> list:
     """Replacement for the single-president selectbox. 2+ selected = comparison mode."""
-    return st.multiselect("Presidents:", valid_presidents)
+    return st.multiselect("Presidents:", valid_presidents, disabled=disabled, key=key)
 
 def reshape_by_presidents(df: pd.DataFrame, selected_presidents: list, info: list, col_labels: dict | None = None) -> tuple:
     """
