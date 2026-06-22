@@ -4,8 +4,8 @@ import openpyxl
 import pandas as pd
 from generalities.function import norm
 
-src_dir = "./data/original/dane/laboral_market"
-out_dir = "./data/dane/laboral_market"
+src_dir = "./data/original/dane/job_market"
+out_dir = "./data/dane/job_market"
 
 # file -> dimension column name, output sub-folder, {sheet_index: csv_name}
 FILES = [
