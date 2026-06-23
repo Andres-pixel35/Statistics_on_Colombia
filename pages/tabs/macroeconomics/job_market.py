@@ -79,26 +79,25 @@ def render_job_market(unemployment_df: pd.DataFrame) -> None:
 
     data = load_csv(f"{LABOR_FORCE_BASE}{stem}.csv")
 
+    prev_compare = st.session_state.get("lf_gender_compare", False)
     with col3:
-        gender = st.selectbox("Gender:", list(jm.GENDER.keys()))
+        gender = st.selectbox("Gender:", list(jm.GENDER.keys()), disabled=prev_compare)
     gender_sp = jm.GENDER[gender]
 
-    # Period (window) / Year / President are mutually-exclusive axes; gate on last run's state.
+    # Period (window) / Year / President are mutually-exclusive axes; gate on session_state.
     # Concepts vs Years are symmetrically capped: picking 2+ of one locks the other to 1.
-    prev_concept_n = st.session_state.get("lf_concept_n", 0)
+    # Keyed widgets land in session_state before the rerun, so prev_* read here is current;
+    # Concepts (keyless, re-defaults per Table) is rendered first below so its count is live.
     prev_years = st.session_state.get("lf_years", [])
     prev_period = st.session_state.get("lf_period", "Annual average")
     prev_pres = st.session_state.get("lf_presidents", [])
 
-    multi_concept = prev_concept_n >= 2
     period_active = prev_period not in (None, "Annual average")
     windows_active = bool(prev_years) or bool(prev_pres)
 
     period_disabled = windows_active
     year_disabled = period_active
-    year_max = 1 if multi_concept else None
-    president_disabled = period_active or multi_concept
-    concept_max = 1 if (len(prev_years) >= 2 or prev_pres) else None
+    concept_max = 1 if (len(prev_years) >= 2 or prev_pres or prev_compare) else None
 
     with col4:
         period = st.selectbox(
@@ -106,20 +105,24 @@ def render_job_market(unemployment_df: pd.DataFrame) -> None:
             key="lf_period", disabled=period_disabled,
         )
 
-    year_options = sorted(data["Fecha"].unique())
-    cur_years = st.sidebar.multiselect(
-        "Year:", year_options, key="lf_years", disabled=year_disabled, max_selections=year_max
-    )
-
     concept_labels = st.sidebar.multiselect(
         "Concepts:", list(terms.values()), default=[next(iter(terms.values()))],
         max_selections=concept_max,
     )
     if not concept_labels:
         concept_labels = [next(iter(terms.values()))]
-    st.session_state["lf_concept_n"] = len(concept_labels)
     concepts_sp = [find_key_by_value(terms, lbl) for lbl in concept_labels]
     eng_map = {sp: terms[sp] for sp in concepts_sp}
+
+    # Concept count is live this run -> year/president gates settle in one rerun.
+    multi_concept = len(concept_labels) >= 2
+    year_max = 1 if (multi_concept or prev_compare) else None
+    president_disabled = period_active or multi_concept or prev_compare
+
+    year_options = sorted(data["Fecha"].unique())
+    cur_years = st.sidebar.multiselect(
+        "Year:", year_options, key="lf_years", disabled=year_disabled, max_selections=year_max
+    )
 
     selected_presidents, chart_type = mf.job_market_sidebar_filters(
         mf.labor_force_pivot(data, gender_sp, None, concepts_sp),
@@ -127,21 +130,49 @@ def render_job_market(unemployment_df: pd.DataFrame) -> None:
         president_disabled=president_disabled, president_key="lf_presidents",
     )
 
+    # Percentages only make sense for the Total table (only one with PET + rate rows).
+    percent = stem == "total" and st.sidebar.checkbox("Show percentages", value=False)
+    metric = "Share (%)" if percent else "People"
+
+    compare_gender = st.sidebar.checkbox(
+        "Compare men vs. women", value=False, key="lf_gender_compare"
+    )
+
     # Null out disabled controls so a stale lock can't leak into mode resolution.
     years_sel = [] if year_disabled else cur_years
     presidents_sel = [] if president_disabled else selected_presidents
     year_set = set(years_sel)
+    data_years = set(year_options)
     for name in presidents_sel:
-        year_set.update(presidents[name])
+        year_set.update(set(presidents[name]) & data_years)  # drop years the data lacks
+
+    if compare_gender:  # Men vs Women for a single concept
+        concept_sp = concepts_sp[0]
+        if year_set:  # single year -> x = rolling windows
+            year = sorted(year_set)[0]
+            series = mf.labor_force_gender_period_axis(data, year, concept_sp, percent=percent)
+            info = [f"{concept_labels[0]} — {file_label} (Men vs Women) · {year} by 3-month window",
+                    "Period", metric]
+        else:  # x = years (optional period filter)
+            period_sp = None if period == "Annual average" else find_key_by_value(jm.PERIOD_EN, period)
+            series = mf.labor_force_gender_pivot(data, period_sp, concept_sp, percent=percent)
+            info = [f"{concept_labels[0]} — {file_label} (Men vs Women) · {period}", "Year", metric]
+        highlight = highlight_selectbox(series)
+        fig = mc.line_or_bar(chart_type, series, info, highlight=highlight)
+        mc.render_chart(fig)
+        st.caption("Source: DANE (GEIH)")
+        return
 
     if year_set:  # WINDOWS mode -> x = rolling windows
         years_sorted = sorted(year_set)
         if len(concepts_sp) >= 2:  # concept priority -> single year (enforced by gating)
             years_sorted, labels = years_sorted[:1], eng_map
+            title_subject = str(years_sorted[0])
         else:
             labels = {}
-        series = mf.labor_force_period_axis(data, gender_sp, years_sorted, concepts_sp)
-        info = [f"Labor Force — {file_label} ({gender}) by 3-month window", "Period", "People"]
+            title_subject = concept_labels[0]
+        series = mf.labor_force_period_axis(data, gender_sp, years_sorted, concepts_sp, percent=percent)
+        info = [f"{title_subject} — {file_label} ({gender}) by 3-month window", "Period", metric]
         highlight = highlight_selectbox(
             series, display_names=list(eng_map.values()) if labels else None
         )
@@ -152,8 +183,8 @@ def render_job_market(unemployment_df: pd.DataFrame) -> None:
 
     # YEAR-axis mode (no years, no president)
     period_sp = None if period == "Annual average" else find_key_by_value(jm.PERIOD_EN, period)
-    series = mf.labor_force_pivot(data, gender_sp, period_sp, concepts_sp)
-    info = [f"Labor Force — {file_label} ({gender}) · {period}", "Year", "People"]
+    series = mf.labor_force_pivot(data, gender_sp, period_sp, concepts_sp, percent=percent)
+    info = [f"Labor Force — {file_label} ({gender}) · {period}", "Year", metric]
     highlight = highlight_selectbox(series, display_names=list(eng_map.values()))
     fig = mc.line_or_bar(chart_type, series, info, labels=eng_map, highlight=highlight)
     mc.render_chart(fig)
