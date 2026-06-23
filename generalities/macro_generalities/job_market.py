@@ -28,6 +28,19 @@ LABOR_FORCE_FILES = {
     "Out of Labor Force": "fuera_fuerza_trabajo",
 }
 
+PET_CONCEPT = "Población en edad de trabajar (PET)"
+
+# total concept -> existing CSV rate concept; None means compute (value / PET * 100)
+RATE_CONCEPTS = {
+    "Población en edad de trabajar (PET)": "% población en edad de trabajar",
+    "Fuerza de trabajo": "Tasa Global de Participación (TGP)",
+    "Población ocupada": "Tasa de Ocupación (TO)",
+    "Población desocupada": "Tasa de Desocupación (TD)",
+    "Población subocupada": "Tasa de Subocupación (TS)",
+    "Población fuera de la fuerza de trabajo": None,
+    "Fuerza de trabajo potencial": None,
+}
+
 # Total-gender-only concepts that mirror a Men/Women concept; collapsed to the plain name
 CONCEPT_ALIASES = {
     "Población ocupada Total Nacional": "Población ocupada",
