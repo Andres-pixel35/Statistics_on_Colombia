@@ -50,21 +50,43 @@ def unemployment_month_axis(df: pd.DataFrame, years: list) -> pd.DataFrame:
     return table
 
 
-def labor_force_pivot(df: pd.DataFrame, gender_sp: str, period_sp, concepts_sp: list) -> pd.DataFrame:
-    """Year x Concepto pivot (people, values x1000). period_sp None -> mean across the 12 windows."""
+def _to_percent(table: pd.DataFrame) -> pd.DataFrame:
+    """Per-concept %: reuse the CSV rate column if present, else value / PET * 100."""
+    pet = table[jm.PET_CONCEPT]
+    out = {}
+    for concept, rate in jm.RATE_CONCEPTS.items():
+        if rate and rate in table.columns:
+            out[concept] = table[rate]
+        elif concept in table.columns:
+            out[concept] = table[concept] / pet * 100
+    return pd.DataFrame(out)
+
+
+def labor_force_pivot(df: pd.DataFrame, gender_sp: str, period_sp, concepts_sp: list,
+                      *, percent: bool = False) -> pd.DataFrame:
+    """Year x Concepto pivot (people, values x1000). period_sp None -> mean across the 12 windows.
+    percent -> per-concept shares (no x1000) via _to_percent."""
     d = df[df["Perspectiva"] == gender_sp].replace({"Concepto": jm.CONCEPT_ALIASES})
     if period_sp is not None:
         d = d[d["Periodo"] == period_sp]
 
     table = d.pivot_table(index="Fecha", columns="Concepto", values="Valor", aggfunc="mean")
+    if percent:
+        return _to_percent(table).reindex(columns=concepts_sp)
     return table.reindex(columns=concepts_sp) * 1000
 
 
-def labor_force_period_axis(df: pd.DataFrame, gender_sp: str, years: list, concepts_sp: list) -> pd.DataFrame:
+def labor_force_period_axis(df: pd.DataFrame, gender_sp: str, years: list, concepts_sp: list,
+                            *, percent: bool = False) -> pd.DataFrame:
     """x = rolling 3-month windows. >=2 concepts -> single year, one col per concept;
     else one col per year for the single concept. Columns: Spanish concept (concept-priority)
-    or str(year) (year-priority)."""
+    or str(year) (year-priority). percent -> per-concept shares (no x1000) via _to_percent."""
     d = df[df["Perspectiva"] == gender_sp].replace({"Concepto": jm.CONCEPT_ALIASES})
+    scale = 1000
+    if percent:
+        wide = d.pivot_table(index=["Fecha", "Periodo"], columns="Concepto", values="Valor", aggfunc="mean")
+        d = _to_percent(wide).rename_axis(columns="Concepto").stack().rename("Valor").reset_index()
+        scale = 1
     cols = {}
     if len(concepts_sp) >= 2:                      # concept priority -> lock to 1 year
         dy = d[d["Fecha"] == years[0]]
@@ -74,6 +96,24 @@ def labor_force_period_axis(df: pd.DataFrame, gender_sp: str, years: list, conce
         dc = d[d["Concepto"] == concepts_sp[0]]
         for y in years:
             cols[str(y)] = dc[dc["Fecha"] == y].set_index("Periodo")["Valor"]
-    table = pd.DataFrame(cols).reindex(list(jm.PERIOD_EN)) * 1000
+    table = pd.DataFrame(cols).reindex(list(jm.PERIOD_EN)) * scale
     table.index = [jm.PERIOD_EN[p] for p in table.index]
     return table
+
+
+def labor_force_gender_pivot(df: pd.DataFrame, period_sp, concept_sp: str,
+                             *, percent: bool = False) -> pd.DataFrame:
+    """Men vs Women for one concept, x = years (period_sp filter). Columns Men/Women."""
+    cols = {}
+    for label, gsp in (("Men", jm.GENDER["Men"]), ("Women", jm.GENDER["Women"])):
+        cols[label] = labor_force_pivot(df, gsp, period_sp, [concept_sp], percent=percent).iloc[:, 0]
+    return pd.DataFrame(cols)
+
+
+def labor_force_gender_period_axis(df: pd.DataFrame, year: int, concept_sp: str,
+                                   *, percent: bool = False) -> pd.DataFrame:
+    """Men vs Women for one concept and one year, x = rolling 3-month windows. Columns Men/Women."""
+    cols = {}
+    for label, gsp in (("Men", jm.GENDER["Men"]), ("Women", jm.GENDER["Women"])):
+        cols[label] = labor_force_period_axis(df, gsp, [year], [concept_sp], percent=percent).iloc[:, 0]
+    return pd.DataFrame(cols)
