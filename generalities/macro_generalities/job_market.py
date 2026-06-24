@@ -28,6 +28,30 @@ LABOR_FORCE_FILES = {
     "Out of Labor Force": "fuera_fuerza_trabajo",
 }
 
+# Departments dataset (data/dane/job_market/Departamentos/): gender = separate file
+DEPT_GENDER_FILES = {"Total": "total", "Men": "hombres", "Women": "mujeres"}
+DEPT_DEFAULT_CONCEPT = "Población desocupada"  # default concept for the Total table
+
+# Activity-branch concepts (ramas_actividad.csv); strings must match the CSV verbatim
+dept_ramas_terms = {
+    "Total ocupados": "Total employed",
+    "Agricultura, ganadería, caza, silvicultura y pesca": "Agriculture, livestock, hunting, forestry & fishing",
+    "Explotación de minas y canteras": "Mining & quarrying",
+    "Industrias manufactureras": "Manufacturing",
+    "Suministro de electricidad, gas, agua y gestión de desechos": "Utilities (electricity, gas, water, waste)",
+    "Construcción": "Construction",
+    "Comercio y reparación de vehículos": "Commerce & vehicle repair",
+    "Alojamiento y servicios de comida": "Accommodation & food services",
+    "Transporte y almacenamiento": "Transport & storage",
+    "Información y comunicaciones": "Information & communications",
+    "Actividades financieras y de seguros": "Finance & insurance",
+    "Actividades inmobiliarias": "Real estate",
+    "Actividades profesionales, científicas, técnicas y de servicios administrativos": "Professional, scientific, technical & admin services",
+    "Administración pública y defensa, educación y atención de la salud humana": "Public administration, education & health",
+    "Actividades artísticas, entretenimiento, recreación y otras actividades de servicios": "Arts, entertainment & other services",
+    "No informa": "Not reported",
+}
+
 PET_CONCEPT = "Población en edad de trabajar (PET)"
 
 # total concept -> existing CSV rate concept; None means compute (value / PET * 100)

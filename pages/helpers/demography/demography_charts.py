@@ -74,7 +74,8 @@ def choropleth_map(data: pd.DataFrame, col: str, info: list):
     )
     return fig
 
-def colombia_choropleth(data: pd.DataFrame, geojson: dict, feature_key: str, col: str, info: list):
+def colombia_choropleth(data: pd.DataFrame, geojson: dict, feature_key: str, col: str, info: list,
+                        val_fmt: str = ",.0f"):
     fig = px.choropleth(
         data,
         geojson=geojson,
@@ -85,10 +86,18 @@ def colombia_choropleth(data: pd.DataFrame, geojson: dict, feature_key: str, col
         color_continuous_scale="Blues",
         labels={col: info[2]},
     )
-    fig.update_geos(fitbounds="locations", visible=False)
     fig.update_traces(
-        hovertemplate="<b>%{hovertext}</b><br>" + info[2] + ": %{z:,.0f}<extra></extra>"
+        hovertemplate="<b>%{hovertext}</b><br>" + info[2] + ": %{z:" + val_fmt + "}<extra></extra>"
     )
+    # Grey base layer so departments without data still show (Plotly skips NaN-z polygons).
+    prop = feature_key.split(".")[-1]
+    codes = [f["properties"][prop] for f in geojson["features"]]
+    base = go.Choropleth(geojson=geojson, featureidkey=feature_key, locations=codes,
+                         z=[0] * len(codes), showscale=False, hoverinfo="skip",
+                         colorscale=[[0, "#d9d9d9"], [1, "#d9d9d9"]], marker_line_color="white")
+    fig.add_trace(base)
+    fig.data = fig.data[::-1]
+    fig.update_geos(fitbounds="locations", visible=False)
     fig.update_layout(
         height=600,
         title={"text": info[0], "font": {"size": 25}, "x": 0, "xanchor": "left"},
