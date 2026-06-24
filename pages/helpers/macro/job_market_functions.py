@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-from generalities.function import get_valid_presidents, president_multiselect
+from generalities.function import get_valid_presidents, president_multiselect, norm
 from generalities.macro_generalities.dictionaries import months
 import generalities.macro_generalities.job_market as jm
 
@@ -72,8 +72,8 @@ def labor_force_pivot(df: pd.DataFrame, gender_sp: str, period_sp, concepts_sp: 
 
     table = d.pivot_table(index="Fecha", columns="Concepto", values="Valor", aggfunc="mean")
     if percent:
-        return _to_percent(table).reindex(columns=concepts_sp)
-    return table.reindex(columns=concepts_sp) * 1000
+        return _to_percent(table).reindex(columns=concepts_sp).dropna(how="all")
+    return (table.reindex(columns=concepts_sp) * 1000).dropna(how="all")
 
 
 def labor_force_period_axis(df: pd.DataFrame, gender_sp: str, years: list, concepts_sp: list,
@@ -99,6 +99,79 @@ def labor_force_period_axis(df: pd.DataFrame, gender_sp: str, years: list, conce
     table = pd.DataFrame(cols).reindex(list(jm.PERIOD_EN)) * scale
     table.index = [jm.PERIOD_EN[p] for p in table.index]
     return table
+
+
+def dept_code_lookup(geojson: dict) -> dict:
+    """{norm(department name): DANE 2-digit code} from the choropleth geojson."""
+    return {norm(f["properties"]["NOMBRE_DPT"]): f["properties"]["DPTO"]
+            for f in geojson["features"]}
+
+
+def dept_jm_map_data(df: pd.DataFrame, concept_sp: str, geojson: dict,
+                     *, denom_sp: str) -> pd.DataFrame:
+    """Per-department percentage of `concept_sp` (mean across `df`'s years), keyed to DANE code.
+    Total table reuses the matching rate row when present, else value / denom * 100;
+    branch table is branch / denom (`Total ocupados`) * 100. Returns one row per geojson
+    department (Code, Name, value) — departments without data carry value NaN (grey)."""
+    rate = jm.RATE_CONCEPTS.get(concept_sp)
+    if rate and rate in df["Concepto"].values:                      # ready-made rate row
+        pct = df[df["Concepto"] == rate].set_index(["Fecha", "Departamentos"])["Valor"]
+    else:                                                           # compute share vs denom
+        num = df[df["Concepto"] == concept_sp].set_index(["Fecha", "Departamentos"])["Valor"]
+        den = df[df["Concepto"] == denom_sp].set_index(["Fecha", "Departamentos"])["Valor"]
+        pct = num / den * 100
+    code_by_norm = dept_code_lookup(geojson)
+    grouped = pct.groupby("Departamentos").mean().reset_index(name="value")
+    grouped["Code"] = grouped["Departamentos"].map(lambda n: code_by_norm.get(norm(n)))
+
+    full = pd.DataFrame([(f["properties"]["DPTO"], f["properties"]["NOMBRE_DPT"].title())
+                         for f in geojson["features"]], columns=["Code", "Name"])
+    out = full.merge(grouped[["Code", "value", "Departamentos"]], on="Code", how="left")
+    out["Name"] = out["Departamentos"].fillna(out["Name"])          # prefer the data's spelling
+    return out[["Code", "Name", "value"]]
+
+
+def dept_jm_pivot(df: pd.DataFrame, concepts_sp: list, denom_sp: str,
+                  *, percent: bool = False) -> pd.DataFrame:
+    """Year x Concepto pivot for the departments in `df` (summed). percent -> per-concept
+    share concept / denom * 100; else people counts x1000. Caller pre-filters depts/years."""
+    table = df.pivot_table(index="Fecha", columns="Concepto", values="Valor", aggfunc="sum")
+    if percent:
+        out = {}
+        for c in concepts_sp:                       # reuse the CSV rate row when present
+            rate = jm.RATE_CONCEPTS.get(c)
+            if rate and rate in table.columns:
+                out[c] = table[rate]
+            elif c in table.columns:
+                out[c] = table[c] / table[denom_sp] * 100
+        pivot = pd.DataFrame(out)
+    else:
+        pivot = table.reindex(columns=concepts_sp) * 1000
+    pivot.index = pivot.index.astype(int)
+    pivot.index.name = "Year"
+    return pivot.dropna(how="all")
+
+
+def dept_jm_dept_pivot(df: pd.DataFrame, concept_sp: str, denom_sp: str,
+                       *, percent: bool = False) -> pd.DataFrame:
+    """Year x Department pivot of one concept. percent -> per-department concept / denom * 100;
+    else people counts x1000. Caller pre-filters depts/years."""
+    rate = jm.RATE_CONCEPTS.get(concept_sp)
+    if percent and rate and rate in df["Concepto"].values:   # reuse the CSV rate row
+        pivot = df[df["Concepto"] == rate].pivot_table(
+            index="Fecha", columns="Departamentos", values="Valor", aggfunc="mean")
+    else:
+        num = df[df["Concepto"] == concept_sp].pivot_table(
+            index="Fecha", columns="Departamentos", values="Valor", aggfunc="mean")
+        if percent:
+            den = df[df["Concepto"] == denom_sp].pivot_table(
+                index="Fecha", columns="Departamentos", values="Valor", aggfunc="mean")
+            pivot = num / den * 100
+        else:
+            pivot = num * 1000
+    pivot.index = pivot.index.astype(int)
+    pivot.index.name = "Year"
+    return pivot.dropna(how="all")
 
 
 def labor_force_gender_pivot(df: pd.DataFrame, period_sp, concept_sp: str,
