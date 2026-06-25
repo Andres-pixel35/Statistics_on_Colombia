@@ -126,3 +126,81 @@ LABOR_FORCE_TERMS = {
     "posicion_ocupacional": posicion_terms,
     "fuera_fuerza_trabajo": fuera_terms,
 }
+
+# Regions dataset (data/dane/job_market/regiones/): region in `Perspectiva`, gender in `Sexo`
+# (sexo.csv), `Periodo` = semesters I/II. "Total nacional" is excluded from the UI.
+# Region label (Perspectiva) -> departments that compose it (DANE methodology), matched to the
+# departments geojson via norm() to dissolve a regions geojson.
+REGION_DEPTS = {
+    "Total región Caribe": ["Atlántico", "Bolívar", "Cesar", "Córdoba", "Sucre",
+                            "Magdalena", "La Guajira"],
+    "Total región Oriental": ["Norte de Santander", "Santander", "Boyacá",
+                              "Cundinamarca", "Meta"],
+    "Total región Central": ["Caldas", "Risaralda", "Quindío", "Tolima", "Huila",
+                             "Caquetá", "Antioquia"],
+    "Total región Pacífica": ["Chocó", "Cauca", "Nariño", "Valle del Cauca"],
+    "Total regiones Orinoquía, Amazonía e Insular*": [
+        "Arauca", "Casanare", "Putumayo", "Amazonas", "Guainía", "Guaviare",
+        "Vaupés", "Vichada", "Archipiélago de San Andrés Providencia y Santa Catalina"],
+    "Bogotá D. C.": ["Santafé de Bogotá D.C"],
+}
+
+REGION_PET_CONCEPT = "Población en edad de trabajar"
+REGION_DEFAULT_CONCEPT = "Población desocupada"
+
+# Region label (Perspectiva, internal value) -> English display (filter, map hover, legend)
+REGION_EN = {
+    "Total región Caribe": "Caribbean",
+    "Total región Central": "Central",
+    "Total región Oriental": "Eastern",
+    "Total región Pacífica": "Pacific",
+    "Total regiones Orinoquía, Amazonía e Insular*": "Orinoquia, Amazonia & Insular",
+    "Bogotá D. C.": "Bogotá D.C.",
+}
+
+# Total -> total.csv (no gender column); Men/Women -> sexo.csv filtered by `Sexo`
+REGION_GENDER = {"Total": None, "Men": "Hombres", "Women": "Mujeres"}
+
+# Spanish semester -> English label (UI adds "Annual average" as default)
+REGION_PERIOD_EN = {"I": "First semester", "II": "Second semester"}
+
+# Spanish Concepto -> English label (people concepts only; rate rows excluded)
+region_terms = {
+    "Población en edad de trabajar": "Working-age population (WAP)",
+    "Fuerza de trabajo": "Labor force",
+    "Población ocupada": "Employed",
+    "Población desocupada": "Unemployed",
+    "Población subocupada": "Underemployed",
+    "Población fuera de la fuerza de trabajo": "Outside the labor force",
+    "Fuerza de trabajo potencial": "Potential labor force",
+}
+
+# concept -> existing CSV rate concept; None means compute (value / PET * 100)
+REGION_RATE_CONCEPTS = {
+    "Población en edad de trabajar": "% población en edad de trabajar",
+    "Fuerza de trabajo": "Tasa Global de Participación (TGP)",
+    "Población ocupada": "Tasa de Ocupación (TO)",
+    "Población desocupada": "Tasa de Desocupación (TD)",
+    "Población subocupada": "Tasa de Subocupación (TS)",
+    "Población fuera de la fuerza de trabajo": None,
+    "Fuerza de trabajo potencial": None,
+}
+
+# --- Informality dataset (data/dane/job_market/informalidad/) ---
+# Gender = Total -> total.csv (no Sexo col); Men/Women -> sexo.csv filtered by `Sexo`.
+# Only "Total" table for now; INFORMALITY_FILES keys serve as UI Table selector options.
+INFORMALITY_FILES = {
+    "Total": "total",
+}
+
+informality_total_terms = {
+    "Población ocupada": "Occupied Population",
+    "Formal": "Formal",
+    "Informal": "Informal",
+}
+
+INFORMALITY_TERMS = {
+    "total": informality_total_terms,
+}
+
+INFORMALITY_DEFAULT_CONCEPT = "Informal"
