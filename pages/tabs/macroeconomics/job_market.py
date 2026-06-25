@@ -9,10 +9,14 @@ from generalities.function import (to_datatime, load_csv, load_geojson, BASE_DIR
                                    highlight_selectbox, find_key_by_value,
                                    get_valid_presidents, president_multiselect)
 
+INFORMALITY_BASE = str(BASE_DIR / "data/dane/job_market/informalidad") + "/"
 LABOR_FORCE_BASE = str(BASE_DIR / "data/dane/job_market/Mercado Laboral") + "/"
 DEPT_BASE = str(BASE_DIR / "data/dane/job_market/Departamentos") + "/"
 DEPT_GEOJSON_PATH = BASE_DIR / "data/dane/geo/colombia_departments.geojson"
 DEPT_FEATURE_KEY = "properties.DPTO"
+REGION_BASE = str(BASE_DIR / "data/dane/job_market/regiones") + "/"
+REGION_GEOJSON_PATH = BASE_DIR / "data/dane/geo/colombia_regions.geojson"
+REGION_FEATURE_KEY = "properties.region"
 
 
 def _cap(this, others):
@@ -33,10 +37,19 @@ def _cap_one(keys):
 def render_job_market(unemployment_df: pd.DataFrame) -> None:
     st.title("Job Market")
 
-    dataset = st.sidebar.radio("Dataset:", ["Unemployment", "Labor Force", "Departments"])
+    dataset = st.sidebar.radio(
+        "Dataset:", ["Unemployment", "Labor Force", "Departments", "Regions", "Informality"])
 
     if dataset == "Departments":
         render_departments()
+        return
+
+    if dataset == "Regions":
+        render_regions()
+        return
+
+    if dataset == "Informality":
+        render_informality()
         return
 
     top_placeholder = st.sidebar.empty()
@@ -219,6 +232,129 @@ def render_job_market(unemployment_df: pd.DataFrame) -> None:
     st.caption("Source: DANE (GEIH)")
 
 
+def render_informality() -> None:
+    top_placeholder = st.sidebar.empty()
+    president_placeholder = st.sidebar.empty()
+
+    col2, col3, col4 = st.columns(3)
+    with col2:
+        file_label = st.selectbox("Table:", list(jm.INFORMALITY_FILES.keys()))
+    stem = jm.INFORMALITY_FILES[file_label]
+    terms = jm.INFORMALITY_TERMS[stem]
+
+    prev_compare = st.session_state.get("inf_gender_compare", False)
+    with col3:
+        gender = st.selectbox("Gender:", list(jm.GENDER.keys()), disabled=prev_compare)
+
+    prev_years = st.session_state.get("inf_years", [])
+    prev_period = st.session_state.get("inf_period", "Annual average")
+    prev_pres = st.session_state.get("inf_presidents", [])
+
+    period_active = prev_period not in (None, "Annual average")
+    windows_active = bool(prev_years) or bool(prev_pres)
+    period_disabled = windows_active
+    year_disabled = period_active
+
+    with col4:
+        period = st.selectbox(
+            "Period:", ["Annual average"] + list(jm.PERIOD_EN.values()),
+            key="inf_period", disabled=period_disabled,
+        )
+
+    # Gender = Total -> total.csv; Men/Women -> sexo.csv filtered by Sexo column
+    if gender == "Total":
+        data = load_csv(f"{INFORMALITY_BASE}total.csv")
+        data = data[data["Perspectiva"] == "Total nacional"].copy()
+    else:
+        sexo_sp = "Hombres" if gender == "Men" else "Mujeres"
+        raw = load_csv(f"{INFORMALITY_BASE}sexo.csv")
+        data = raw[(raw["Perspectiva"] == "Total nacional") & (raw["Sexo"] == sexo_sp)].copy()
+
+    # sexo.csv (Total nacional) always needed for Compare men vs. women
+    sexo_data = load_csv(f"{INFORMALITY_BASE}sexo.csv")
+    sexo_data = sexo_data[sexo_data["Perspectiva"] == "Total nacional"].copy()
+
+    concept_key = f"inf_concepts_{stem}"
+    if prev_compare:
+        _cap_one([concept_key])
+    default_concept = terms[jm.INFORMALITY_DEFAULT_CONCEPT]
+    concept_labels = st.sidebar.multiselect(
+        "Concepts:", list(terms.values()), default=[default_concept],
+        key=concept_key, on_change=_cap, args=(concept_key, ["inf_years"]),
+    )
+    if not concept_labels:
+        concept_labels = [default_concept]
+    concepts_sp = [find_key_by_value(terms, lbl) for lbl in concept_labels]
+    eng_map = {sp: terms[sp] for sp in concepts_sp}
+
+    president_disabled = period_active or prev_compare
+    year_options = sorted(data["Fecha"].unique())
+    cur_years = st.sidebar.multiselect(
+        "Year:", year_options, key="inf_years", disabled=year_disabled,
+        on_change=_cap, args=("inf_years", [concept_key]),
+    )
+
+    selected_presidents, chart_type = mf.job_market_sidebar_filters(
+        mf.informality_pivot(data, None, concepts_sp),
+        top_placeholder, president_placeholder,
+        president_disabled=president_disabled, president_key="inf_presidents",
+    )
+
+    compare_gender = st.sidebar.checkbox(
+        "Compare men vs. women", value=False, key="inf_gender_compare"
+    )
+
+    years_sel = [] if year_disabled else cur_years
+    presidents_sel = [] if president_disabled else selected_presidents
+    year_set = set(years_sel)
+    data_years = set(year_options)
+    for name in presidents_sel:
+        year_set.update(set(presidents[name]) & data_years)
+
+    if compare_gender:
+        concept_sp = concepts_sp[0]
+        if year_set:
+            year = sorted(year_set)[0]
+            series = mf.informality_gender_period_axis(sexo_data, year, concept_sp)
+            info = [f"{concept_labels[0]} — {file_label} (Men vs Women) · {year} by 3-month window",
+                    "Period", "People"]
+        else:
+            period_sp = None if period == "Annual average" else find_key_by_value(jm.PERIOD_EN, period)
+            series = mf.informality_gender_pivot(sexo_data, period_sp, concept_sp)
+            info = [f"{concept_labels[0]} — {file_label} (Men vs Women) · {period}", "Year", "People"]
+        highlight = highlight_selectbox(series)
+        fig = mc.line_or_bar(chart_type, series, info, highlight=highlight)
+        mc.render_chart(fig)
+        st.caption("Source: DANE (GEIH)")
+        return
+
+    if year_set:
+        years_sorted = sorted(year_set)
+        if len(concepts_sp) >= 2:
+            years_sorted, labels = years_sorted[:1], eng_map
+            title_subject = str(years_sorted[0])
+        else:
+            labels = {}
+            title_subject = concept_labels[0]
+        series = mf.informality_period_axis(data, years_sorted, concepts_sp)
+        info = [f"{title_subject} — {file_label} ({gender}) by 3-month window", "Period", "People"]
+        highlight = highlight_selectbox(
+            series, display_names=list(eng_map.values()) if labels else None
+        )
+        fig = mc.line_or_bar(chart_type, series, info, labels=labels, highlight=highlight)
+        mc.render_chart(fig)
+        st.caption("Source: DANE (GEIH)")
+        return
+
+    period_sp = None if period == "Annual average" else find_key_by_value(jm.PERIOD_EN, period)
+    series = mf.informality_pivot(data, period_sp, concepts_sp)
+    info = [f"Informality — {file_label} ({gender}) · {period}", "Year", "People"]
+    highlight = highlight_selectbox(series, display_names=list(eng_map.values()))
+    fig = mc.line_or_bar(chart_type, series, info, labels=eng_map, highlight=highlight)
+    mc.render_chart(fig)
+    st.caption("Source: DANE (GEIH)")
+
+
 def render_departments() -> None:
     chart_type = st.sidebar.selectbox("Chart Type:", ["Map", "Line", "Bar"])
 
@@ -328,6 +464,155 @@ def render_departments() -> None:
 
     highlight = highlight_selectbox(
         series, display_names=list(eng_map.values()) if labels_arg else None)
+    fig = mc.line_or_bar(chart_type, series, info, labels=labels_arg or {}, highlight=highlight)
+    mc.render_chart(fig)
+    if compare and percent:
+        st.caption("Each percentage is relative to that gender's own working-age population (PET), not the total.")
+    st.caption("Source: DANE (GEIH)")
+
+
+def render_regions() -> None:
+    chart_type = st.sidebar.selectbox("Chart Type:", ["Map", "Line", "Bar"])
+
+    terms = jm.region_terms
+    denom_sp = jm.REGION_PET_CONCEPT
+    labels = list(terms.values())
+    default = terms[jm.REGION_DEFAULT_CONCEPT]
+
+    # Period (semester) / Year / President are mutually-exclusive axes (mirror Labor Force);
+    # Concepts / Regions / Years peer-cap via _cap (only one multi); Compare caps concept + region.
+    prev_years = st.session_state.get("region_years", [])
+    prev_pres = st.session_state.get("region_presidents", [])
+    prev_period = st.session_state.get("region_period", "Annual average")
+    prev_compare = st.session_state.get("region_compare", False)
+
+    period_active = prev_period not in (None, "Annual average")
+    windows_active = bool(prev_years) or bool(prev_pres)
+
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        period = st.selectbox(
+            "Period:", ["Annual average"] + list(jm.REGION_PERIOD_EN.values()),
+            key="region_period", disabled=(chart_type != "Map") and windows_active,
+        )
+    period_sp = None if period == "Annual average" else find_key_by_value(jm.REGION_PERIOD_EN, period)
+
+    ckey = "region_concepts"
+    if prev_compare:                       # Compare charts one concept, one region -> cap both
+        _cap_one([ckey, "region_regions"])
+    if chart_type == "Map":
+        with col2:
+            concept_label = st.selectbox("Concept:", labels, index=labels.index(default))
+        concept_labels = [concept_label]
+    else:
+        with col2:
+            concept_labels = st.multiselect(
+                "Concepts:", labels, default=[default], key=ckey,
+                on_change=_cap, args=(ckey, ["region_regions", "region_years"]),
+            )
+        if not concept_labels:
+            concept_labels = [default]
+        concept_label = concept_labels[0]
+    concept_sp = find_key_by_value(terms, concept_label)
+
+    with col3:
+        gender = st.selectbox("Gender:", list(jm.REGION_GENDER.keys()), disabled=prev_compare)
+    gender_sx = jm.REGION_GENDER[gender]
+
+    compare = chart_type != "Map" and prev_compare  # widget rendered at the bottom of the sidebar
+
+    # Total -> total.csv (no Sexo column); Men / Women / Compare -> sexo.csv.
+    df = mf.region_norm(load_csv(f"{REGION_BASE}{'sexo' if gender_sx or compare else 'total'}.csv"))
+    if gender_sx and not compare:
+        df = df[df["Sexo"] == gender_sx]
+    years = sorted(df["Fecha"].unique())
+
+    if chart_type == "Map":
+        year = st.sidebar.selectbox("Year:", years, index=len(years) - 1)
+        geojson = load_geojson(REGION_GEOJSON_PATH)
+        mdf = df[df["Fecha"] == year]
+        if period_sp:
+            mdf = mdf[mdf["Periodo"] == period_sp]
+        grouped = mf.region_jm_map_data(mdf, concept_sp, denom_sp=denom_sp)
+        suffix = f" · {period}" if period_sp else ""
+        info = [f"{concept_label} by region — {year}{suffix}", "Region", "Rate (%)"]
+        fig = dc.colombia_choropleth(grouped, geojson, REGION_FEATURE_KEY, "value", info, val_fmt=",.1f")
+        mc.render_chart(fig)
+        st.caption("Source: DANE (GEIH)")
+        return
+
+    # Line / Bar: only one of {concepts, regions, years} may be multi (peer cap via _cap).
+    region_names = sorted(df["Perspectiva"].unique())
+    sel_regions = st.sidebar.multiselect("Regions:", region_names, key="region_regions",
+                                         format_func=lambda r: jm.REGION_EN.get(r, r),
+                                         on_change=_cap, args=("region_regions", [ckey, "region_years"]))
+    sel_years = st.sidebar.multiselect("Year:", years, key="region_years", disabled=period_active,
+                                       on_change=_cap, args=("region_years", [ckey, "region_regions"]))
+    with st.sidebar:
+        selected_presidents = president_multiselect(
+            get_valid_presidents(years), disabled=period_active, key="region_presidents")
+    percent = st.sidebar.checkbox("Show percentages", value=False)
+    st.sidebar.checkbox("Compare men vs. women", value=False, key="region_compare")
+    metric = "Share (%)" if percent else "People"
+
+    if not sel_regions:
+        st.info("Select one or more regions.")
+        return
+
+    concepts_sp = [find_key_by_value(terms, lbl) for lbl in concept_labels]
+    eng_map = {sp: terms[sp] for sp in concepts_sp}
+    rmap = {r: jm.REGION_EN[r] for r in sel_regions}
+
+    # Null out period-locked controls so a stale lock can't leak into mode resolution.
+    years_sel = [] if period_active else sel_years
+    presidents_sel = [] if period_active else selected_presidents
+    data_years = set(years)
+    year_set = set(years_sel)
+    for name in presidents_sel:
+        year_set.update(set(presidents[name]) & data_years)  # drop years the data lacks
+
+    scope = ", ".join(presidents_sel) if presidents_sel else (
+        ", ".join(map(str, sorted(year_set))) if year_set else "all years")
+    region_series = len(sel_regions) >= 2
+
+    def _filter(frame):
+        f = frame[frame["Perspectiva"].isin(sel_regions)]
+        return f[f["Fecha"].isin(year_set)] if year_set else f
+
+    if compare:  # Men vs Women for one concept, one region
+        region = sel_regions[0]
+        cdf = df[df["Perspectiva"] == region]
+        if len(year_set) == 1:  # single year -> x = semesters
+            year = sorted(year_set)[0]
+            series = mf.region_jm_gender_period_axis(cdf, year, concept_sp, region, percent=percent)
+            info = [f"{concept_label} · {rmap[region]} (Men vs Women) — {year} by semester", "Period", metric]
+        else:  # x = years
+            cdf = cdf[cdf["Fecha"].isin(year_set)] if year_set else cdf
+            series = mf.region_jm_gender_pivot(cdf, period_sp, concept_sp, percent=percent)
+            info = [f"{concept_label} · {rmap[region]} (Men vs Women) — {scope}", "Year", metric]
+        labels_arg = None
+    elif year_set:  # year(s) selected -> x = semesters, one line per multi dim (mirror Labor Force)
+        series = mf.region_jm_period_axis(_filter(df), sorted(year_set), concepts_sp, sel_regions, percent=percent)
+        if region_series:                       # one line per region
+            info = [f"{concept_label} by region — {scope} by semester", "Period", metric]
+            labels_arg = rmap
+        elif len(concepts_sp) >= 2:             # one line per concept
+            info = [f"{rmap[sel_regions[0]]} — {scope} by semester", "Period", metric]
+            labels_arg = eng_map
+        else:                                   # one line per year (columns are year strings)
+            info = [f"{concept_label} · {rmap[sel_regions[0]]} — {scope} by semester", "Period", metric]
+            labels_arg = None
+    elif region_series:  # no years -> year axis, series = regions
+        series = mf.region_jm_region_pivot(_filter(df), concept_sp, period_sp, percent=percent)
+        info = [f"{concept_label} by region — {scope}", "Year", metric]
+        labels_arg = rmap
+    else:  # no years -> year axis, series = concepts (one region)
+        series = mf.region_jm_pivot(_filter(df), concepts_sp, period_sp, percent=percent)
+        info = [f"{rmap[sel_regions[0]]} ({gender}) — {scope}", "Year", metric]
+        labels_arg = eng_map
+
+    highlight = highlight_selectbox(
+        series, display_names=list(labels_arg.values()) if labels_arg else None)
     fig = mc.line_or_bar(chart_type, series, info, labels=labels_arg or {}, highlight=highlight)
     mc.render_chart(fig)
     if compare and percent:
