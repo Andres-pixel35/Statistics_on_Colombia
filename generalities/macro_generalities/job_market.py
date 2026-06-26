@@ -187,10 +187,17 @@ REGION_RATE_CONCEPTS = {
 }
 
 # --- Informality dataset (data/dane/job_market/informalidad/) ---
-# Gender = Total -> total.csv (no Sexo col); Men/Women -> sexo.csv filtered by `Sexo`.
-# Only "Total" table for now; INFORMALITY_FILES keys serve as UI Table selector options.
+# "Total" table: Gender = Total -> total.csv (no Sexo col); Men/Women -> sexo.csv by `Sexo`.
+# The other two tables have a `Grupo` column (Población ocupada/Formal/Informal) and no
+# gender; their breakdown is in `Concepto`. INFORMALITY_FILES keys are the UI Table options.
 INFORMALITY_FILES = {
     "Total": "total",
+    "Social Security": "seguridad_social",
+    "By Occupational Position": "posicion_ocupacional",
+    "By Activity Branch": "ramas_actividad",
+    "By Workplace": "lugar_trabajo",
+    "By Company Size": "tamano_empresa",
+    "By Education": "educacion",
 }
 
 informality_total_terms = {
@@ -199,8 +206,73 @@ informality_total_terms = {
     "Informal": "Informal",
 }
 
-INFORMALITY_TERMS = {
-    "total": informality_total_terms,
+seguridad_social_terms = {
+    "Población ocupada": "Occupied Population",
+    "Afiliada a salud": "Affiliated to health",
+    "Régimen contributivo": "Contributory regime",
+    "Régimen especial": "Special regime",
+    "Régimen subsidiado": "Subsidized regime",
+    "Aportantes": "Contributors",
+    "Beneficiarios": "Beneficiaries",
+    "Cotiza a pensión": "Contributing to pension",
+    "Otro": "Other",
+    "No sabe": "Unknown",
 }
 
-INFORMALITY_DEFAULT_CONCEPT = "Informal"
+# Grouped tables reuse existing concept dicts (keys match the informality CSV spelling);
+# the render filters out rollups + concepts absent from the selected Grupo. ramas reuses the
+# Departments dict (dept_ramas_terms) — the Labor Force ramas_terms has divergent DANE spelling.
+lugar_trabajo_terms = {
+    "En esta vivienda": "In this dwelling",
+    "En otras viviendas": "In other dwellings",
+    "En kiosco - caseta": "In a kiosk / stall",
+    "En un vehículo": "In a vehicle",
+    "De puerta en puerta": "Door to door",
+    "Sitio al descubierto en la calle": "Open-air spot on the street",
+    "Local fijo, oficina, fábrica, etc": "Fixed premises (office, factory, etc.)",
+    "En el campo o área rural": "In the field or rural area",
+    "En una obra en construcción": "At a construction site",
+    "En una mina o cantera": "In a mine or quarry",
+    "Otro": "Other",
+}
+
+tamano_empresa_terms = {
+    "Microempresa": "Microenterprise",
+    "Empresa pequeña": "Small business",
+    "Empresa mediana": "Medium business",
+    "Empresa grande": "Large business",
+}
+
+educacion_terms = {
+    "Ninguno": "None",
+    "Básica primaria": "Primary",
+    "Básica secundaria": "Lower secondary",
+    "Educación media": "Upper secondary",
+    "Técnica profesional y Tecnológica": "Technical & technological",
+    "Universitaria": "University",
+    "Posgrado": "Postgraduate",
+}
+
+INFORMALITY_TERMS = {
+    "total": informality_total_terms,
+    "seguridad_social": seguridad_social_terms,
+    "posicion_ocupacional": posicion_terms,
+    "ramas_actividad": dept_ramas_terms,
+    "lugar_trabajo": lugar_trabajo_terms,
+    "tamano_empresa": tamano_empresa_terms,
+    "educacion": educacion_terms,
+}
+
+# Total-like tables: Gender split (own file + a *_sexo file), denom Población ocupada.
+# `sexo` = gender filename stem; `default` = default concept (Spanish key); `miles` = filter
+# to the absolute "(en miles)" Grupo (seguridad_social has a 2nd Distribución porcentual Grupo).
+INFORMALITY_TOTAL_LIKE = {
+    "total":            {"sexo": "sexo",                  "default": "Informal",         "miles": False},
+    "seguridad_social": {"sexo": "seguridad_social_sexo", "default": "Afiliada a salud", "miles": True},
+}
+
+# UI label -> `Grupo` value (also the percentage denominator concept for that group)
+INFORMALITY_GROUP = {"Total": "Población ocupada", "Formal": "Formal", "Informal": "Informal"}
+
+# DANE relabels seen across year ranges; collapse to one Concepto so series stay whole
+INFORMALITY_CONCEPT_FIXES = {"Empleado del gobierno": "Obrero, empleado del gobierno"}

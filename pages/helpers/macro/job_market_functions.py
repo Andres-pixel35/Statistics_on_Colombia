@@ -200,48 +200,93 @@ def _inf_clean(df: pd.DataFrame) -> pd.DataFrame:
     return df[df["Valor"].notna() & (df["Valor"] != 0)]
 
 
-def informality_pivot(df: pd.DataFrame, period_sp, concepts_sp: list) -> pd.DataFrame:
-    """Year x Concepto pivot (people x1000). period_sp None -> mean across 12 windows."""
+def informality_pivot(df: pd.DataFrame, period_sp, concepts_sp: list,
+                      *, percent: bool = False, denom_sp=None) -> pd.DataFrame:
+    """Year x Concepto pivot. percent -> concept / denom_sp * 100 (denom_sp is a Concepto
+    row in df); else people x1000. period_sp None -> mean across 12 windows."""
     d = _inf_clean(df)
     if period_sp is not None:
         d = d[d["Periodo"] == period_sp]
     table = d.pivot_table(index="Fecha", columns="Concepto", values="Valor", aggfunc="mean")
-    return (table.reindex(columns=concepts_sp) * 1000).dropna(how="all")
+    if percent:
+        out = {c: table[c] / table[denom_sp] * 100
+               for c in concepts_sp if c in table.columns and denom_sp in table.columns}
+        pivot = pd.DataFrame(out).reindex(columns=concepts_sp)
+    else:
+        pivot = table.reindex(columns=concepts_sp) * 1000
+    return pivot.dropna(how="all")
 
 
-def informality_period_axis(df: pd.DataFrame, years: list, concepts_sp: list) -> pd.DataFrame:
+def informality_period_axis(df: pd.DataFrame, years: list, concepts_sp: list,
+                            *, percent: bool = False, denom_sp=None) -> pd.DataFrame:
     """x = rolling 3-month windows. >=2 concepts -> single year, one col per concept;
-    else one col per year for the single concept."""
+    else one col per year for the single concept. percent -> share of denom_sp per window."""
     d = _inf_clean(df)
     cols = {}
     if len(concepts_sp) >= 2:
         dy = d[d["Fecha"] == years[0]]
+        den = dy[dy["Concepto"] == denom_sp].set_index("Periodo")["Valor"] if percent else None
         for c in concepts_sp:
-            cols[c] = dy[dy["Concepto"] == c].set_index("Periodo")["Valor"]
+            s = dy[dy["Concepto"] == c].set_index("Periodo")["Valor"]
+            cols[c] = s / den * 100 if percent else s * 1000
     else:
         d_concept = d[d["Concepto"] == concepts_sp[0]]
+        d_den = d[d["Concepto"] == denom_sp] if percent else None
         for y in years:
-            cols[str(y)] = d_concept[d_concept["Fecha"] == y].set_index("Periodo")["Valor"]
-    table = pd.DataFrame(cols).reindex(list(jm.PERIOD_EN)) * 1000
+            s = d_concept[d_concept["Fecha"] == y].set_index("Periodo")["Valor"]
+            if percent:
+                den = d_den[d_den["Fecha"] == y].set_index("Periodo")["Valor"]
+                cols[str(y)] = s / den * 100
+            else:
+                cols[str(y)] = s * 1000
+    table = pd.DataFrame(cols).reindex(list(jm.PERIOD_EN))
     table.index = [jm.PERIOD_EN[p] for p in table.index]
     return table
 
 
-def informality_gender_pivot(sexo_df: pd.DataFrame, period_sp, concept_sp: str) -> pd.DataFrame:
-    """Men vs Women for one concept, x = years. sexo_df filtered to Total nacional."""
+def informality_gender_pivot(sexo_df: pd.DataFrame, period_sp, concept_sp: str,
+                             *, percent: bool = False) -> pd.DataFrame:
+    """Men vs Women for one concept, x = years. sexo_df filtered to Total nacional.
+    percent -> share of each gender's own Población ocupada."""
     cols = {}
     for label, sexo in (("Men", "Hombres"), ("Women", "Mujeres")):
         gdf = sexo_df[sexo_df["Sexo"] == sexo]
-        cols[label] = informality_pivot(gdf, period_sp, [concept_sp]).iloc[:, 0]
+        cols[label] = informality_pivot(
+            gdf, period_sp, [concept_sp], percent=percent, denom_sp="Población ocupada").iloc[:, 0]
     return pd.DataFrame(cols)
 
 
-def informality_gender_period_axis(sexo_df: pd.DataFrame, year: int, concept_sp: str) -> pd.DataFrame:
+def informality_gender_period_axis(sexo_df: pd.DataFrame, year: int, concept_sp: str,
+                                   *, percent: bool = False) -> pd.DataFrame:
     """Men vs Women for one concept and one year, x = rolling 3-month windows."""
     cols = {}
     for label, sexo in (("Men", "Hombres"), ("Women", "Mujeres")):
         gdf = sexo_df[sexo_df["Sexo"] == sexo]
-        cols[label] = informality_period_axis(gdf, [year], [concept_sp]).iloc[:, 0]
+        cols[label] = informality_period_axis(
+            gdf, [year], [concept_sp], percent=percent, denom_sp="Población ocupada").iloc[:, 0]
+    return pd.DataFrame(cols)
+
+
+def informality_group_pivot(df: pd.DataFrame, period_sp, concept_sp: str,
+                            *, percent: bool = False) -> pd.DataFrame:
+    """Formal vs Informal for one concept, x = years. df has the `Grupo` column.
+    percent -> share of each group's own total."""
+    cols = {}
+    for grupo in ("Formal", "Informal"):
+        gdf = df[df["Grupo"] == grupo]
+        cols[grupo] = informality_pivot(
+            gdf, period_sp, [concept_sp], percent=percent, denom_sp=grupo).iloc[:, 0]
+    return pd.DataFrame(cols)
+
+
+def informality_group_period_axis(df: pd.DataFrame, year: int, concept_sp: str,
+                                  *, percent: bool = False) -> pd.DataFrame:
+    """Formal vs Informal for one concept and one year, x = rolling 3-month windows."""
+    cols = {}
+    for grupo in ("Formal", "Informal"):
+        gdf = df[df["Grupo"] == grupo]
+        cols[grupo] = informality_period_axis(
+            gdf, [year], [concept_sp], percent=percent, denom_sp=grupo).iloc[:, 0]
     return pd.DataFrame(cols)
 
 

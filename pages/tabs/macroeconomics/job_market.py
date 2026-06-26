@@ -38,7 +38,7 @@ def render_job_market(unemployment_df: pd.DataFrame) -> None:
     st.title("Job Market")
 
     dataset = st.sidebar.radio(
-        "Dataset:", ["Unemployment", "Labor Force", "Departments", "Regions", "Informality"])
+        "Dataset:", ["Unemployment", "Labor Force", "Departments", "Regions", "Employment Formality"])
 
     if dataset == "Departments":
         render_departments()
@@ -48,7 +48,7 @@ def render_job_market(unemployment_df: pd.DataFrame) -> None:
         render_regions()
         return
 
-    if dataset == "Informality":
+    if dataset == "Employment Formality":
         render_informality()
         return
 
@@ -144,8 +144,8 @@ def render_job_market(unemployment_df: pd.DataFrame) -> None:
     # Concepts <-> Year peer cap via _cap (editable, remembers the other). Period/president stay
     # axis-exclusive via `disabled` above. Per-table concept key re-defaults on Table switch.
     concept_key = f"lf_concepts_{stem}"
-    if prev_compare:                      # Compare charts one concept -> cap to one
-        _cap_one([concept_key])
+    if prev_compare:                      # Compare charts one concept, one year -> cap both
+        _cap_one([concept_key, "lf_years"])
     concept_labels = st.sidebar.multiselect(
         "Concepts:", list(terms.values()), default=[next(iter(terms.values()))],
         key=concept_key, on_change=_cap, args=(concept_key, ["lf_years"]),
@@ -155,7 +155,7 @@ def render_job_market(unemployment_df: pd.DataFrame) -> None:
     concepts_sp = [find_key_by_value(terms, lbl) for lbl in concept_labels]
     eng_map = {sp: terms[sp] for sp in concepts_sp}
 
-    president_disabled = period_active or prev_compare
+    president_disabled = period_active or prev_compare or len(concepts_sp) >= 2
 
     year_options = sorted(data["Fecha"].unique())
     cur_years = st.sidebar.multiselect(
@@ -232,6 +232,25 @@ def render_job_market(unemployment_df: pd.DataFrame) -> None:
     st.caption("Source: DANE (GEIH)")
 
 
+def _inf_prep(df: pd.DataFrame) -> pd.DataFrame:
+    """Total-nacional rows with footnote markers (^/*) stripped and DANE relabels collapsed
+    so each concept's series stays whole."""
+    df = df[df["Perspectiva"] == "Total nacional"].copy()
+    df["Concepto"] = (df["Concepto"].str.replace(r"[\^*]+$", "", regex=True)
+                      .str.strip().replace(jm.INFORMALITY_CONCEPT_FIXES))
+    return df
+
+
+def _inf_total_load(stem: str, cfg: dict, sexo_sp: str = None) -> pd.DataFrame:
+    """Load a total-like informality file, keep Total-nacional rows (case-insensitive) and,
+    when `cfg["miles"]`, the absolute "(en miles)" Grupo. `sexo_sp` filters the Sexo column."""
+    df = load_csv(f"{INFORMALITY_BASE}{stem}.csv")
+    df = df[df["Perspectiva"].str.lower() == "total nacional"].copy()
+    if cfg["miles"]:
+        df = df[df["Grupo"].str.contains("en miles")]
+    return df if sexo_sp is None else df[df["Sexo"] == sexo_sp]
+
+
 def render_informality() -> None:
     top_placeholder = st.sidebar.empty()
     president_placeholder = st.sidebar.empty()
@@ -241,10 +260,17 @@ def render_informality() -> None:
         file_label = st.selectbox("Table:", list(jm.INFORMALITY_FILES.keys()))
     stem = jm.INFORMALITY_FILES[file_label]
     terms = jm.INFORMALITY_TERMS[stem]
+    is_total_like = stem in jm.INFORMALITY_TOTAL_LIKE
 
-    prev_compare = st.session_state.get("inf_gender_compare", False)
+    # Per-table swap: total-like tables -> Gender + Compare men vs. women (<stem>.csv/<sexo>.csv);
+    # the grouped tables -> Group (Grupo) + Compare formal vs. informal (no gender data).
+    compare_key = "inf_gender_compare" if is_total_like else "inf_group_compare"
+    prev_compare = st.session_state.get(compare_key, False)
     with col3:
-        gender = st.selectbox("Gender:", list(jm.GENDER.keys()), disabled=prev_compare)
+        if is_total_like:
+            scope = st.selectbox("Gender:", list(jm.GENDER.keys()), disabled=prev_compare)
+        else:
+            scope = st.selectbox("Group:", list(jm.INFORMALITY_GROUP.keys()), disabled=prev_compare)
 
     prev_years = st.session_state.get("inf_years", [])
     prev_period = st.session_state.get("inf_period", "Annual average")
@@ -261,23 +287,31 @@ def render_informality() -> None:
             key="inf_period", disabled=period_disabled,
         )
 
-    # Gender = Total -> total.csv; Men/Women -> sexo.csv filtered by Sexo column
-    if gender == "Total":
-        data = load_csv(f"{INFORMALITY_BASE}total.csv")
-        data = data[data["Perspectiva"] == "Total nacional"].copy()
+    if is_total_like:
+        cfg = jm.INFORMALITY_TOTAL_LIKE[stem]
+        # Gender = Total -> <stem>.csv; Men/Women -> <sexo>.csv filtered by Sexo column
+        if scope == "Total":
+            data = _inf_total_load(stem, cfg)
+        else:
+            data = _inf_total_load(cfg["sexo"], cfg, "Hombres" if scope == "Men" else "Mujeres")
+        # <sexo>.csv (all genders) always needed for Compare men vs. women
+        compare_df = _inf_total_load(cfg["sexo"], cfg)
+        denom_sp = "Población ocupada"
     else:
-        sexo_sp = "Hombres" if gender == "Men" else "Mujeres"
-        raw = load_csv(f"{INFORMALITY_BASE}sexo.csv")
-        data = raw[(raw["Perspectiva"] == "Total nacional") & (raw["Sexo"] == sexo_sp)].copy()
-
-    # sexo.csv (Total nacional) always needed for Compare men vs. women
-    sexo_data = load_csv(f"{INFORMALITY_BASE}sexo.csv")
-    sexo_data = sexo_data[sexo_data["Perspectiva"] == "Total nacional"].copy()
+        grouped = _inf_prep(load_csv(f"{INFORMALITY_BASE}{stem}.csv"))
+        group_sp = jm.INFORMALITY_GROUP[scope]
+        data = grouped[grouped["Grupo"] == group_sp]
+        compare_df = grouped              # group-compare helper filters per Grupo
+        denom_sp = group_sp
+        # Reused dicts carry rollups + concepts from other groups; keep only this group's breakdown.
+        rollups = set(jm.INFORMALITY_GROUP.values())
+        present = set(data["Concepto"])
+        terms = {k: v for k, v in terms.items() if k in present and k not in rollups}
 
     concept_key = f"inf_concepts_{stem}"
-    if prev_compare:
-        _cap_one([concept_key])
-    default_concept = terms[jm.INFORMALITY_DEFAULT_CONCEPT]
+    if prev_compare:                      # Compare charts one concept, one year -> cap both
+        _cap_one([concept_key, "inf_years"])
+    default_concept = terms[cfg["default"]] if is_total_like else next(iter(terms.values()))
     concept_labels = st.sidebar.multiselect(
         "Concepts:", list(terms.values()), default=[default_concept],
         key=concept_key, on_change=_cap, args=(concept_key, ["inf_years"]),
@@ -287,7 +321,7 @@ def render_informality() -> None:
     concepts_sp = [find_key_by_value(terms, lbl) for lbl in concept_labels]
     eng_map = {sp: terms[sp] for sp in concepts_sp}
 
-    president_disabled = period_active or prev_compare
+    president_disabled = period_active or prev_compare or len(concepts_sp) >= 2
     year_options = sorted(data["Fecha"].unique())
     cur_years = st.sidebar.multiselect(
         "Year:", year_options, key="inf_years", disabled=year_disabled,
@@ -300,9 +334,11 @@ def render_informality() -> None:
         president_disabled=president_disabled, president_key="inf_presidents",
     )
 
-    compare_gender = st.sidebar.checkbox(
-        "Compare men vs. women", value=False, key="inf_gender_compare"
-    )
+    percent = st.sidebar.checkbox("Show percentages", value=False)
+    metric = "Share (%)" if percent else "People"
+
+    compare_label = "Compare men vs. women" if is_total_like else "Compare formal vs. informal"
+    compare = st.sidebar.checkbox(compare_label, value=False, key=compare_key)
 
     years_sel = [] if year_disabled else cur_years
     presidents_sel = [] if president_disabled else selected_presidents
@@ -311,20 +347,28 @@ def render_informality() -> None:
     for name in presidents_sel:
         year_set.update(set(presidents[name]) & data_years)
 
-    if compare_gender:
+    pct_note = ("Each value is a share of the occupied population." if is_total_like
+                else "Each value is a share of that group's total.")
+
+    if compare:
         concept_sp = concepts_sp[0]
+        comp_pivot = mf.informality_gender_pivot if is_total_like else mf.informality_group_pivot
+        comp_axis = mf.informality_gender_period_axis if is_total_like else mf.informality_group_period_axis
+        comp_subtitle = "Men vs Women" if is_total_like else "Formal vs Informal"
         if year_set:
             year = sorted(year_set)[0]
-            series = mf.informality_gender_period_axis(sexo_data, year, concept_sp)
-            info = [f"{concept_labels[0]} — {file_label} (Men vs Women) · {year} by 3-month window",
-                    "Period", "People"]
+            series = comp_axis(compare_df, year, concept_sp, percent=percent)
+            info = [f"{concept_labels[0]} — {file_label} ({comp_subtitle}) · {year} by 3-month window",
+                    "Period", metric]
         else:
             period_sp = None if period == "Annual average" else find_key_by_value(jm.PERIOD_EN, period)
-            series = mf.informality_gender_pivot(sexo_data, period_sp, concept_sp)
-            info = [f"{concept_labels[0]} — {file_label} (Men vs Women) · {period}", "Year", "People"]
+            series = comp_pivot(compare_df, period_sp, concept_sp, percent=percent)
+            info = [f"{concept_labels[0]} — {file_label} ({comp_subtitle}) · {period}", "Year", metric]
         highlight = highlight_selectbox(series)
         fig = mc.line_or_bar(chart_type, series, info, highlight=highlight)
         mc.render_chart(fig)
+        if percent:
+            st.caption(pct_note)
         st.caption("Source: DANE (GEIH)")
         return
 
@@ -336,22 +380,27 @@ def render_informality() -> None:
         else:
             labels = {}
             title_subject = concept_labels[0]
-        series = mf.informality_period_axis(data, years_sorted, concepts_sp)
-        info = [f"{title_subject} — {file_label} ({gender}) by 3-month window", "Period", "People"]
+        series = mf.informality_period_axis(data, years_sorted, concepts_sp,
+                                            percent=percent, denom_sp=denom_sp)
+        info = [f"{title_subject} — {file_label} ({scope}) by 3-month window", "Period", metric]
         highlight = highlight_selectbox(
             series, display_names=list(eng_map.values()) if labels else None
         )
         fig = mc.line_or_bar(chart_type, series, info, labels=labels, highlight=highlight)
         mc.render_chart(fig)
+        if percent:
+            st.caption(pct_note)
         st.caption("Source: DANE (GEIH)")
         return
 
     period_sp = None if period == "Annual average" else find_key_by_value(jm.PERIOD_EN, period)
-    series = mf.informality_pivot(data, period_sp, concepts_sp)
-    info = [f"Informality — {file_label} ({gender}) · {period}", "Year", "People"]
+    series = mf.informality_pivot(data, period_sp, concepts_sp, percent=percent, denom_sp=denom_sp)
+    info = [f"Employment Formality — {file_label} ({scope}) · {period}", "Year", metric]
     highlight = highlight_selectbox(series, display_names=list(eng_map.values()))
     fig = mc.line_or_bar(chart_type, series, info, labels=eng_map, highlight=highlight)
     mc.render_chart(fig)
+    if percent:
+        st.caption(pct_note)
     st.caption("Source: DANE (GEIH)")
 
 
@@ -550,7 +599,8 @@ def render_regions() -> None:
                                        on_change=_cap, args=("region_years", [ckey, "region_regions"]))
     with st.sidebar:
         selected_presidents = president_multiselect(
-            get_valid_presidents(years), disabled=period_active, key="region_presidents")
+            get_valid_presidents(years), disabled=period_active or len(concept_labels) >= 2,
+            key="region_presidents")
     percent = st.sidebar.checkbox("Show percentages", value=False)
     st.sidebar.checkbox("Compare men vs. women", value=False, key="region_compare")
     metric = "Share (%)" if percent else "People"
@@ -565,7 +615,7 @@ def render_regions() -> None:
 
     # Null out period-locked controls so a stale lock can't leak into mode resolution.
     years_sel = [] if period_active else sel_years
-    presidents_sel = [] if period_active else selected_presidents
+    presidents_sel = [] if (period_active or len(concept_labels) >= 2) else selected_presidents
     data_years = set(years)
     year_set = set(years_sel)
     for name in presidents_sel:
