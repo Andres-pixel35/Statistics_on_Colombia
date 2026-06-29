@@ -276,3 +276,66 @@ INFORMALITY_GROUP = {"Total": "Población ocupada", "Formal": "Formal", "Informa
 
 # DANE relabels seen across year ranges; collapse to one Concepto so series stay whole
 INFORMALITY_CONCEPT_FIXES = {"Empleado del gobierno": "Obrero, empleado del gobierno"}
+
+# --- Child Labor dataset (data/dane/job_market/infantil/) — Total nacional only ---
+CHILD_LABOR_FILES = {"Total": "total", "By Age Group": "edad", "By Hours Worked": "horas"}
+CHILD_LABOR_ALL_MINORS = "Población de 5 a 17 años"   # gender-share denom (both sexes, from total.csv)
+CHILD_TOTAL_POP = "Población total"   # whole-population denom for the edad age-group totals (total.csv)
+
+# edad.csv: child-labor concepts by age band (`Grupo`). count concept = f"Población de {band} {suffix}",
+# paired with the band-wide official rate row (% mode); band-pop denom = f"Población de {band}" (fallback).
+CHILD_AGE_GROUPS = {"5–14": "5 a 14 años", "15–17": "15 a 17 años"}
+CHILD_AGE_CONCEPTS = {
+    "Working minors": {
+        "suffix": "que trabaja",
+        "rate": "Tasa de Trabajo Infantil (TTI)"},
+    "Unpaid domestic work (15h+)": {
+        "suffix": "que no trabaja y realiza trabajo doméstico no remunerado en su hogar por 15 horas o más",
+        "rate": "Tasa de Trabajo Infantil Ampliada por Trabajo Doméstico no remunerado (TTIAD)"},
+    "Unpaid domestic & care work (15h+)": {
+        "suffix": "que no trabaja y realiza trabajo doméstico y de cuidado no remunerado en su hogar por 15 horas o más",
+        "rate": "Tasa de Trabajo Infantil Ampliada por Trabajo Doméstico y de Cuidado no remunerado (TTIADC)"},
+    # Age-group total: count = the band's own population row; % = band / CHILD_TOTAL_POP (whole pop).
+    "Population in age group": {
+        "suffix": "",
+        "rate": None},
+}
+
+# horas.csv: working children (5–17) by weekly hours; % = bucket / CHILD_HOURS_DENOM (working pop, in horas.csv).
+CHILD_HOURS_DENOM = "Población de 5 a 17 años que trabaja"
+CHILD_HOURS_CONCEPTS = {
+    "Less than 15h": "Menos de 15 horas",
+    "15 to 29h":     "De 15 a 29 horas",
+    "30h or more":   "30 horas y más",
+    "Not reported":  "No informa",
+}
+
+# English label -> per-gender count Concepto + the CSV rate Concepto (already a %).
+# In Men/Women views the headcount's rate string is absent from sexo.csv, so percent falls back
+# to count / CHILD_LABOR_ALL_MINORS * 100 (the requested gender share). "Población total" omitted.
+CHILD_LABOR_CONCEPTS = {
+    "Population aged 5–17": {
+        "Total": "Población de 5 a 17 años",
+        "Men":   "Hombres de 5 a 17 años",
+        "Women": "Mujeres de 5 a 17 años",
+        "rate":  "% población de 5 a 17 años",
+    },
+    "Working minors": {
+        "Total": "Población de 5 a 17 años que trabaja",
+        "Men":   "Hombres de 5 a 17 años que trabajan",
+        "Women": "Mujeres de 5 a 17 años que trabajan",
+        "rate":  "Tasa de Trabajo Infantil (TTI)",
+    },
+    "Unpaid domestic work (15h+)": {
+        "Total": "Población de 5 a 17 años que no trabaja y realiza trabajo doméstico no remunerado en su hogar por 15 horas o más",
+        "Men":   "Hombres de 5 a 17 años que no trabajan y realizan trabajo doméstico no remunerado en su hogar por 15 horas o más",
+        "Women": "Mujeres de 5 a 17 años que no trabajan y realizan trabajo doméstico no remunerado en su hogar por 15 horas o más",
+        "rate":  "Tasa de Trabajo Infantil Ampliada por Trabajo Doméstico no remunerado (TTIAD)",
+    },
+    "Unpaid domestic & care work (15h+)": {
+        "Total": "Población de 5 a 17 años que no trabaja y realiza trabajo doméstico y de cuidado no remunerado en su hogar por 15 horas o más",
+        "Men":   "Hombres de 5 a 17 años que no trabajan y realizan trabajo doméstico y de cuidado no remunerado en su hogar por 15 horas o más",
+        "Women": "Mujeres de 5 a 17 años que no trabajan y realizan trabajo doméstico y de cuidado no remunerado en su hogar por 15 horas o más",
+        "rate":  "Tasa de Trabajo Infantil Ampliada por Trabajo Doméstico y de Cuidado no remunerado (TTIADC)",
+    },
+}

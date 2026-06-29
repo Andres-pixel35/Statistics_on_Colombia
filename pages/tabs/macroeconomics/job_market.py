@@ -15,8 +15,12 @@ DEPT_BASE = str(BASE_DIR / "data/dane/job_market/Departamentos") + "/"
 DEPT_GEOJSON_PATH = BASE_DIR / "data/dane/geo/colombia_departments.geojson"
 DEPT_FEATURE_KEY = "properties.DPTO"
 REGION_BASE = str(BASE_DIR / "data/dane/job_market/regiones") + "/"
+CHILD_LABOR_BASE = str(BASE_DIR / "data/dane/job_market/infantil") + "/"
 REGION_GEOJSON_PATH = BASE_DIR / "data/dane/geo/colombia_regions.geojson"
 REGION_FEATURE_KEY = "properties.region"
+
+PET_PCT_NOTE = ("Each percentage is relative to that gender's own working-age population (PET), "
+                "not the total.")
 
 
 def _cap(this, others):
@@ -34,11 +38,34 @@ def _cap_one(keys):
             st.session_state[k] = st.session_state[k][-1:]
 
 
+def _year_set(years_sel, presidents_sel, data_years):
+    """Union explicit years with each president's years, dropping years the data lacks."""
+    ys = set(years_sel)
+    for name in presidents_sel:
+        ys.update(set(presidents[name]) & set(data_years))
+    return ys
+
+
+def _draw(chart_type, series, info, *, labels=None, display_names=None):
+    """Highlight picker + line/bar chart + render (the dataset-specific captions stay at the
+    call site)."""
+    highlight = highlight_selectbox(series, display_names=display_names)
+    fig = mc.line_or_bar(chart_type, series, info, labels=labels or {}, highlight=highlight)
+    mc.render_chart(fig)
+
+
+def _age_count(band_sp: str, suffix: str) -> str:
+    """edad.csv count Concepto: the band's population row, optionally narrowed by `suffix`
+    (empty suffix -> the age-group total itself)."""
+    return f"Población de {band_sp}" + (f" {suffix}" if suffix else "")
+
+
 def render_job_market(unemployment_df: pd.DataFrame) -> None:
     st.title("Job Market")
 
     dataset = st.sidebar.radio(
-        "Dataset:", ["Unemployment", "Labor Force", "Departments", "Regions", "Employment Formality"])
+        "Dataset:", ["Unemployment", "Labor Force", "Departments", "Regions",
+                     "Employment Formality", "Child Labor"])
 
     if dataset == "Departments":
         render_departments()
@@ -50,6 +77,10 @@ def render_job_market(unemployment_df: pd.DataFrame) -> None:
 
     if dataset == "Employment Formality":
         render_informality()
+        return
+
+    if dataset == "Child Labor":
+        render_child_labor()
         return
 
     top_placeholder = st.sidebar.empty()
@@ -98,9 +129,7 @@ def render_job_market(unemployment_df: pd.DataFrame) -> None:
             series = mf.unemployment_year_axis(unemp_local, month_nums)
             info = ["Unemployment rate", "Year", "Rate (%)"]
 
-        highlight = highlight_selectbox(series)
-        fig = mc.line_or_bar(chart_type, series, info, highlight=highlight)
-        mc.render_chart(fig)
+        _draw(chart_type, series, info)
         if not (years or presidents_sel or month_nums):
             st.caption("Showing the annual average across all months. "
                        "Pick month(s) to compare them across years, or year(s)/a president to see months.")
@@ -180,10 +209,7 @@ def render_job_market(unemployment_df: pd.DataFrame) -> None:
     # Null out disabled controls so a stale lock can't leak into mode resolution.
     years_sel = [] if year_disabled else cur_years
     presidents_sel = [] if president_disabled else selected_presidents
-    year_set = set(years_sel)
-    data_years = set(year_options)
-    for name in presidents_sel:
-        year_set.update(set(presidents[name]) & data_years)  # drop years the data lacks
+    year_set = _year_set(years_sel, presidents_sel, year_options)
 
     if compare_gender:  # Men vs Women for a single concept
         concept_sp = concepts_sp[0]
@@ -196,11 +222,9 @@ def render_job_market(unemployment_df: pd.DataFrame) -> None:
             period_sp = None if period == "Annual average" else find_key_by_value(jm.PERIOD_EN, period)
             series = mf.labor_force_gender_pivot(data, period_sp, concept_sp, percent=percent)
             info = [f"{concept_labels[0]} — {file_label} (Men vs Women) · {period}", "Year", metric]
-        highlight = highlight_selectbox(series)
-        fig = mc.line_or_bar(chart_type, series, info, highlight=highlight)
-        mc.render_chart(fig)
+        _draw(chart_type, series, info)
         if percent:
-            st.caption("Each percentage is relative to that gender's own working-age population (PET), not the total.")
+            st.caption(PET_PCT_NOTE)
         st.caption("Source: DANE (GEIH)")
         return
 
@@ -214,11 +238,8 @@ def render_job_market(unemployment_df: pd.DataFrame) -> None:
             title_subject = concept_labels[0]
         series = mf.labor_force_period_axis(data, gender_sp, years_sorted, concepts_sp, percent=percent)
         info = [f"{title_subject} — {file_label} ({gender}) by 3-month window", "Period", metric]
-        highlight = highlight_selectbox(
-            series, display_names=list(eng_map.values()) if labels else None
-        )
-        fig = mc.line_or_bar(chart_type, series, info, labels=labels, highlight=highlight)
-        mc.render_chart(fig)
+        _draw(chart_type, series, info, labels=labels,
+              display_names=list(eng_map.values()) if labels else None)
         st.caption("Source: DANE (GEIH)")
         return
 
@@ -226,9 +247,8 @@ def render_job_market(unemployment_df: pd.DataFrame) -> None:
     period_sp = None if period == "Annual average" else find_key_by_value(jm.PERIOD_EN, period)
     series = mf.labor_force_pivot(data, gender_sp, period_sp, concepts_sp, percent=percent)
     info = [f"Labor Force — {file_label} ({gender}) · {period}", "Year", metric]
-    highlight = highlight_selectbox(series, display_names=list(eng_map.values()))
-    fig = mc.line_or_bar(chart_type, series, info, labels=eng_map, highlight=highlight)
-    mc.render_chart(fig)
+    _draw(chart_type, series, info, labels=eng_map,
+          display_names=list(eng_map.values()))
     st.caption("Source: DANE (GEIH)")
 
 
@@ -342,10 +362,7 @@ def render_informality() -> None:
 
     years_sel = [] if year_disabled else cur_years
     presidents_sel = [] if president_disabled else selected_presidents
-    year_set = set(years_sel)
-    data_years = set(year_options)
-    for name in presidents_sel:
-        year_set.update(set(presidents[name]) & data_years)
+    year_set = _year_set(years_sel, presidents_sel, year_options)
 
     pct_note = ("Each value is a share of the occupied population." if is_total_like
                 else "Each value is a share of that group's total.")
@@ -364,9 +381,7 @@ def render_informality() -> None:
             period_sp = None if period == "Annual average" else find_key_by_value(jm.PERIOD_EN, period)
             series = comp_pivot(compare_df, period_sp, concept_sp, percent=percent)
             info = [f"{concept_labels[0]} — {file_label} ({comp_subtitle}) · {period}", "Year", metric]
-        highlight = highlight_selectbox(series)
-        fig = mc.line_or_bar(chart_type, series, info, highlight=highlight)
-        mc.render_chart(fig)
+        _draw(chart_type, series, info)
         if percent:
             st.caption(pct_note)
         st.caption("Source: DANE (GEIH)")
@@ -383,11 +398,8 @@ def render_informality() -> None:
         series = mf.informality_period_axis(data, years_sorted, concepts_sp,
                                             percent=percent, denom_sp=denom_sp)
         info = [f"{title_subject} — {file_label} ({scope}) by 3-month window", "Period", metric]
-        highlight = highlight_selectbox(
-            series, display_names=list(eng_map.values()) if labels else None
-        )
-        fig = mc.line_or_bar(chart_type, series, info, labels=labels, highlight=highlight)
-        mc.render_chart(fig)
+        _draw(chart_type, series, info, labels=labels,
+              display_names=list(eng_map.values()) if labels else None)
         if percent:
             st.caption(pct_note)
         st.caption("Source: DANE (GEIH)")
@@ -396,9 +408,8 @@ def render_informality() -> None:
     period_sp = None if period == "Annual average" else find_key_by_value(jm.PERIOD_EN, period)
     series = mf.informality_pivot(data, period_sp, concepts_sp, percent=percent, denom_sp=denom_sp)
     info = [f"Employment Formality — {file_label} ({scope}) · {period}", "Year", metric]
-    highlight = highlight_selectbox(series, display_names=list(eng_map.values()))
-    fig = mc.line_or_bar(chart_type, series, info, labels=eng_map, highlight=highlight)
-    mc.render_chart(fig)
+    _draw(chart_type, series, info, labels=eng_map,
+          display_names=list(eng_map.values()))
     if percent:
         st.caption(pct_note)
     st.caption("Source: DANE (GEIH)")
@@ -482,10 +493,7 @@ def render_departments() -> None:
     eng_map = {sp: terms[sp] for sp in concepts_sp}
 
     presidents_sel = selected_presidents
-    data_years = set(years)
-    year_set = set(sel_years)
-    for name in presidents_sel:
-        year_set.update(set(presidents[name]) & data_years)  # drop years the data lacks
+    year_set = _year_set(sel_years, presidents_sel, years)
 
     scope = ", ".join(presidents_sel) if presidents_sel else (
         ", ".join(map(str, sorted(year_set))) if year_set else "all years")
@@ -511,12 +519,10 @@ def render_departments() -> None:
         info = [f"{table} ({gender}) · {depts[0]} — {scope}", "Year", metric]
         labels_arg = eng_map
 
-    highlight = highlight_selectbox(
-        series, display_names=list(eng_map.values()) if labels_arg else None)
-    fig = mc.line_or_bar(chart_type, series, info, labels=labels_arg or {}, highlight=highlight)
-    mc.render_chart(fig)
+    _draw(chart_type, series, info, labels=labels_arg,
+          display_names=list(eng_map.values()) if labels_arg else None)
     if compare and percent:
-        st.caption("Each percentage is relative to that gender's own working-age population (PET), not the total.")
+        st.caption(PET_PCT_NOTE)
     st.caption("Source: DANE (GEIH)")
 
 
@@ -616,10 +622,7 @@ def render_regions() -> None:
     # Null out period-locked controls so a stale lock can't leak into mode resolution.
     years_sel = [] if period_active else sel_years
     presidents_sel = [] if (period_active or len(concept_labels) >= 2) else selected_presidents
-    data_years = set(years)
-    year_set = set(years_sel)
-    for name in presidents_sel:
-        year_set.update(set(presidents[name]) & data_years)  # drop years the data lacks
+    year_set = _year_set(years_sel, presidents_sel, years)
 
     scope = ", ".join(presidents_sel) if presidents_sel else (
         ", ".join(map(str, sorted(year_set))) if year_set else "all years")
@@ -661,10 +664,138 @@ def render_regions() -> None:
         info = [f"{rmap[sel_regions[0]]} ({gender}) — {scope}", "Year", metric]
         labels_arg = eng_map
 
-    highlight = highlight_selectbox(
-        series, display_names=list(labels_arg.values()) if labels_arg else None)
-    fig = mc.line_or_bar(chart_type, series, info, labels=labels_arg or {}, highlight=highlight)
-    mc.render_chart(fig)
+    _draw(chart_type, series, info, labels=labels_arg,
+          display_names=list(labels_arg.values()) if labels_arg else None)
     if compare and percent:
-        st.caption("Each percentage is relative to that gender's own working-age population (PET), not the total.")
+        st.caption(PET_PCT_NOTE)
+    st.caption("Source: DANE (GEIH)")
+
+
+def render_child_labor() -> None:
+    top_placeholder = st.sidebar.empty()
+    president_placeholder = st.sidebar.empty()
+
+    col2, col3 = st.columns(2)
+    with col2:
+        file_label = st.selectbox("Table:", list(jm.CHILD_LABOR_FILES.keys()))
+    stem = jm.CHILD_LABOR_FILES[file_label]
+
+    # Both-sexes 5–17 minor count from total.csv: gender-share denom (Total) AND horas denom.
+    tot = load_csv(f"{CHILD_LABOR_BASE}total.csv")
+    all_minors = tot[(tot["Perspectiva"] == "Total nacional")
+                     & (tot["Concepto"] == jm.CHILD_LABOR_ALL_MINORS)].set_index("Fecha")["Valor"]
+    total_pop = tot[(tot["Perspectiva"] == "Total nacional")
+                    & (tot["Concepto"] == jm.CHILD_TOTAL_POP)].set_index("Fecha")["Valor"]
+
+    # Per-table scope selector + data load + concept options. edad/horas have no Sexo column.
+    scope = None
+    if stem == "total":
+        compare_key = "cl_gender_compare"
+        prev_compare = st.session_state.get(compare_key, False)
+        with col3:
+            gender = st.selectbox("Gender:", list(jm.REGION_GENDER.keys()), disabled=prev_compare)
+        gender_sx = jm.REGION_GENDER[gender]
+        scope = gender
+        # Total -> total.csv; Men/Women/Compare -> sexo.csv (gender-prefixed concepts).
+        use_sexo = bool(gender_sx) or prev_compare
+        df = load_csv(f"{CHILD_LABOR_BASE}{'sexo' if use_sexo else 'total'}.csv")
+        df = df[df["Perspectiva"] == "Total nacional"]
+        if gender_sx and not prev_compare:
+            df = df[df["Sexo"] == gender_sx]
+        concept_options = list(jm.CHILD_LABOR_CONCEPTS)
+    elif stem == "edad":
+        compare_key = "cl_age_compare"
+        prev_compare = st.session_state.get(compare_key, False)
+        with col3:
+            group = st.selectbox("Group:", list(jm.CHILD_AGE_GROUPS.keys()), disabled=prev_compare)
+        band_sp = jm.CHILD_AGE_GROUPS[group]
+        scope = group
+        df = load_csv(f"{CHILD_LABOR_BASE}edad.csv")
+        df = df[df["Perspectiva"] == "Total nacional"]
+        concept_options = list(jm.CHILD_AGE_CONCEPTS)
+    else:  # horas
+        compare_key = None
+        df = load_csv(f"{CHILD_LABOR_BASE}horas.csv")
+        df = df[df["Perspectiva"] == "Total nacional"]
+        concept_options = list(jm.CHILD_HOURS_CONCEPTS)
+
+    years = sorted(df["Fecha"].unique())
+
+    # Concepts (per-stem key so sets don't collide across tables); Compare caps to one concept.
+    concept_key = f"cl_concepts_{stem}"
+    if compare_key and st.session_state.get(compare_key, False):
+        _cap_one([concept_key])
+    concept_labels = st.sidebar.multiselect(
+        "Concepts:", concept_options, default=[concept_options[0]], key=concept_key)
+    if not concept_labels:
+        concept_labels = [concept_options[0]]
+
+    cur_years = st.sidebar.multiselect("Year:", years, key="cl_years")
+
+    # (label, count_sp, rate_sp) specs + the % denominator series per table.
+    if stem == "total":
+        specs = [(lbl, jm.CHILD_LABOR_CONCEPTS[lbl][gender], jm.CHILD_LABOR_CONCEPTS[lbl]["rate"])
+                 for lbl in concept_labels]
+        pivot_df, denom = df, all_minors
+    elif stem == "edad":
+        pivot_df = df[df["Grupo"] == band_sp]
+        denom = total_pop  # breakdowns use CSV rates; only the age-group total uses this denom
+        specs = [(lbl, _age_count(band_sp, jm.CHILD_AGE_CONCEPTS[lbl]["suffix"]),
+                  jm.CHILD_AGE_CONCEPTS[lbl]["rate"]) for lbl in concept_labels]
+    else:  # horas: buckets have no CSV rate -> share of working 5–17 (in horas.csv)
+        specs = [(lbl, jm.CHILD_HOURS_CONCEPTS[lbl], None) for lbl in concept_labels]
+        pivot_df = df
+        denom = df[df["Concepto"] == jm.CHILD_HOURS_DENOM].set_index("Fecha")["Valor"]
+
+    _cap_one(["cl_presidents"])               # one president at a time (no year accumulation)
+    selected_presidents, chart_type = mf.job_market_sidebar_filters(
+        mf.child_labor_pivot(pivot_df, specs, denom),
+        top_placeholder, president_placeholder, president_key="cl_presidents")
+
+    percent = st.sidebar.checkbox("Show percentages", value=False)
+    metric = "Share (%)" if percent else "People"
+    if compare_key == "cl_gender_compare":
+        compare = st.sidebar.checkbox("Compare men vs. women", value=False, key=compare_key)
+    elif compare_key == "cl_age_compare":
+        compare = st.sidebar.checkbox("Compare 5–14 vs 15–17", value=False, key=compare_key)
+    else:
+        compare = False
+
+    year_set = _year_set(cur_years, selected_presidents, years)
+
+    def _filter(frame):
+        return frame[frame["Fecha"].isin(year_set)] if year_set else frame
+
+    if compare and stem == "total":
+        lbl = concept_labels[0]
+        cfg = jm.CHILD_LABOR_CONCEPTS[lbl]
+        spec = ({"Men": cfg["Men"], "Women": cfg["Women"]}, cfg["rate"])
+        series = mf.child_labor_gender_pivot(_filter(df), spec, all_minors, percent=percent)
+        info = [f"{lbl} — Child Labor (Men vs Women)", "Year", metric]
+    elif compare and stem == "edad":  # one concept, series = the two age bands
+        lbl = concept_labels[0]
+        suffix = jm.CHILD_AGE_CONCEPTS[lbl]["suffix"]
+        rate_sp = jm.CHILD_AGE_CONCEPTS[lbl]["rate"]
+        cols = {}
+        for g_label, g_sp in jm.CHILD_AGE_GROUPS.items():
+            bdf = _filter(df[df["Grupo"] == g_sp])
+            s = mf.child_labor_pivot(bdf, [(g_label, _age_count(g_sp, suffix), rate_sp)],
+                                     total_pop, percent=percent)
+            cols[g_label] = s.iloc[:, 0] if not s.empty else pd.Series(dtype=float)
+        series = pd.DataFrame(cols)
+        info = [f"{lbl} — Child Labor (5–14 vs 15–17)", "Year", metric]
+    else:
+        series = mf.child_labor_pivot(_filter(pivot_df), specs, denom, percent=percent)
+        info = [f"Child Labor — {file_label}" + (f" ({scope})" if scope else ""), "Year", metric]
+
+    if len(year_set) == 1:
+        info[0] = f"{info[0]} · {sorted(year_set)[0]}"
+
+    _draw(chart_type, series, info)
+    if percent and stem == "total" and compare:
+        st.caption("Each percentage is relative to that gender's own total population, not the total.")
+    elif percent and stem == "edad":
+        st.caption("Breakdowns use the official DANE rates (TTI / TTIAD / TTIADC); the age-group total is its share of the whole population.")
+    elif percent and stem == "horas":
+        st.caption("Each percentage is a share of all working children aged 5–17.")
     st.caption("Source: DANE (GEIH)")

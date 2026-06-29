@@ -50,11 +50,11 @@ def unemployment_month_axis(df: pd.DataFrame, years: list) -> pd.DataFrame:
     return table
 
 
-def _to_percent(table: pd.DataFrame) -> pd.DataFrame:
+def _to_percent(table: pd.DataFrame, pet_concept: str, rate_concepts: dict) -> pd.DataFrame:
     """Per-concept %: reuse the CSV rate column if present, else value / PET * 100."""
-    pet = table[jm.PET_CONCEPT]
+    pet = table[pet_concept]
     out = {}
-    for concept, rate in jm.RATE_CONCEPTS.items():
+    for concept, rate in rate_concepts.items():
         if rate and rate in table.columns:
             out[concept] = table[rate]
         elif concept in table.columns:
@@ -72,7 +72,7 @@ def labor_force_pivot(df: pd.DataFrame, gender_sp: str, period_sp, concepts_sp: 
 
     table = d.pivot_table(index="Fecha", columns="Concepto", values="Valor", aggfunc="mean")
     if percent:
-        return _to_percent(table).reindex(columns=concepts_sp).dropna(how="all")
+        return _to_percent(table, jm.PET_CONCEPT, jm.RATE_CONCEPTS).reindex(columns=concepts_sp).dropna(how="all")
     return (table.reindex(columns=concepts_sp) * 1000).dropna(how="all")
 
 
@@ -85,7 +85,7 @@ def labor_force_period_axis(df: pd.DataFrame, gender_sp: str, years: list, conce
     scale = 1000
     if percent:
         wide = d.pivot_table(index=["Fecha", "Periodo"], columns="Concepto", values="Valor", aggfunc="mean")
-        d = _to_percent(wide).rename_axis(columns="Concepto").stack().rename("Valor").reset_index()
+        d = _to_percent(wide, jm.PET_CONCEPT, jm.RATE_CONCEPTS).rename_axis(columns="Concepto").stack().rename("Valor").reset_index()
         scale = 1
     cols = {}
     if len(concepts_sp) >= 2:                      # concept priority -> lock to 1 year
@@ -301,18 +301,6 @@ def region_norm(df: pd.DataFrame) -> pd.DataFrame:
     return df[df["Perspectiva"] != "Total nacional"]
 
 
-def _region_to_percent(table: pd.DataFrame) -> pd.DataFrame:
-    """Per-concept %: reuse the CSV rate column if present, else value / PET * 100."""
-    pet = table[jm.REGION_PET_CONCEPT]
-    out = {}
-    for concept, rate in jm.REGION_RATE_CONCEPTS.items():
-        if rate and rate in table.columns:
-            out[concept] = table[rate]
-        elif concept in table.columns:
-            out[concept] = table[concept] / pet * 100
-    return pd.DataFrame(out)
-
-
 def region_jm_map_data(df: pd.DataFrame, concept_sp: str, *, denom_sp: str) -> pd.DataFrame:
     """Per-region mean share of `concept_sp` (reuse the matching rate row when present, else
     value / denom * 100), keyed on the region label. Returns Code (region label, matches the
@@ -336,7 +324,7 @@ def region_jm_pivot(df: pd.DataFrame, concepts_sp: list, period_sp,
     d = df if period_sp is None else df[df["Periodo"] == period_sp]
     table = d.pivot_table(index="Fecha", columns="Concepto", values="Valor", aggfunc="mean")
     if percent:
-        out = _region_to_percent(table).reindex(columns=concepts_sp)
+        out = _to_percent(table, jm.REGION_PET_CONCEPT, jm.REGION_RATE_CONCEPTS).reindex(columns=concepts_sp)
     else:
         out = table.reindex(columns=concepts_sp) * 1000
     out.index = out.index.astype(int)
@@ -378,7 +366,7 @@ def region_jm_period_axis(df: pd.DataFrame, years: list, concepts_sp: list, regi
     if percent:
         wide = d.pivot_table(index=["Fecha", "Perspectiva", "Periodo"], columns="Concepto",
                              values="Valor", aggfunc="mean")
-        d = _region_to_percent(wide).rename_axis(columns="Concepto").stack().rename("Valor").reset_index()
+        d = _to_percent(wide, jm.REGION_PET_CONCEPT, jm.REGION_RATE_CONCEPTS).rename_axis(columns="Concepto").stack().rename("Valor").reset_index()
         scale = 1
     cols = {}
     if len(concepts_sp) >= 2:                       # concept priority -> single year + region
@@ -414,4 +402,40 @@ def region_jm_gender_period_axis(df: pd.DataFrame, year: int, concept_sp: str, r
     for label, sx in (("Men", jm.REGION_GENDER["Men"]), ("Women", jm.REGION_GENDER["Women"])):
         cols[label] = region_jm_period_axis(
             df[df["Sexo"] == sx], [year], [concept_sp], [region], percent=percent).iloc[:, 0]
+    return pd.DataFrame(cols)
+
+
+# --- Child Labor dataset (data/dane/job_market/infantil/): annual, Total nacional only ---
+def child_labor_pivot(df: pd.DataFrame, specs: list, all_minors: pd.Series,
+                      *, percent: bool = False) -> pd.DataFrame:
+    """Year x concept. specs: list of (label, count_sp, rate_sp). df pre-filtered to
+    Perspectiva=='Total nacional' and the chosen gender. percent -> the CSV rate row if present,
+    else count / all_minors * 100; otherwise count * 1000 (thousands -> people).
+    all_minors: year-indexed Series of the both-sexes minor count (thousands)."""
+    table = df.pivot_table(index="Fecha", columns="Concepto", values="Valor", aggfunc="mean")
+    cols = {}
+    for label, count_sp, rate_sp in specs:
+        if percent:
+            if rate_sp in table.columns:
+                cols[label] = table[rate_sp]
+            elif count_sp in table.columns:
+                cols[label] = table[count_sp] / all_minors * 100
+        elif count_sp in table.columns:
+            cols[label] = table[count_sp] * 1000
+    out = pd.DataFrame(cols)
+    out.index = out.index.astype(int)
+    out.index.name = "Year"
+    return out.dropna(how="all")
+
+
+def child_labor_gender_pivot(sexo_df: pd.DataFrame, spec: tuple, all_minors: pd.Series,
+                             *, percent: bool = False) -> pd.DataFrame:
+    """Men vs Women for one concept, x = years. spec: ({"Men": sp, "Women": sp}, rate_sp).
+    Columns Men/Women."""
+    count_by_gender, rate_sp = spec
+    cols = {}
+    for label, sexo in (("Men", "Hombres"), ("Women", "Mujeres")):
+        gdf = sexo_df[sexo_df["Sexo"] == sexo]
+        s = child_labor_pivot(gdf, [(label, count_by_gender[label], rate_sp)], all_minors, percent=percent)
+        cols[label] = s.iloc[:, 0] if not s.empty else pd.Series(dtype=float)
     return pd.DataFrame(cols)
