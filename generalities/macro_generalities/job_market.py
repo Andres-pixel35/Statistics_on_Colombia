@@ -278,7 +278,10 @@ INFORMALITY_GROUP = {"Total": "Población ocupada", "Formal": "Formal", "Informa
 INFORMALITY_CONCEPT_FIXES = {"Empleado del gobierno": "Obrero, empleado del gobierno"}
 
 # --- Child Labor dataset (data/dane/job_market/infantil/) — Total nacional only ---
-CHILD_LABOR_FILES = {"Total": "total", "By Age Group": "edad", "By Hours Worked": "horas"}
+CHILD_LABOR_FILES = {"Total": "total", "By Age Group": "edad", "By Hours Worked": "horas",
+                     "By School Attendance": "asistencia_escolar", "By Income": "ingreso",
+                     "By Work Reason": "razon", "By Employment Type": "posicion",
+                     "By Work Branch": "rama_actividad", "By Domestic Activity": "actividades_sexo"}
 CHILD_LABOR_ALL_MINORS = "Población de 5 a 17 años"   # gender-share denom (both sexes, from total.csv)
 CHILD_TOTAL_POP = "Población total"   # whole-population denom for the edad age-group totals (total.csv)
 
@@ -310,6 +313,38 @@ CHILD_HOURS_CONCEPTS = {
     "Not reported":  "No informa",
 }
 
+# asistencia_escolar.csv: working minors (Grupo) by school attendance; % = concept / CHILD_HOURS_DENOM.
+CHILD_ASISTENCIA_GROUP = "Población de 5 a 17 años que trabaja"   # Grupo filter
+CHILD_ASISTENCIA_CONCEPTS = {
+    "Attends school":   "Asiste",
+    "Does not attend":  "No asiste",
+}
+
+# ingreso.csv: working minors by income bracket; % = bracket / CHILD_HOURS_DENOM.
+CHILD_INGRESO_CONCEPTS = {
+    "No pay/profit":  "Sin remuneración o ganancia",
+    "Up to 1/4 MW":   "Hasta 1/4 SMMLV",
+    "1/4 to 1/2 MW":  "Entre 1/4 y 1/2 SMMLV",
+    "Over 1/2 MW":    "Más de 1/2 SMMLV",
+    "Not reported":   "No informa",
+}
+
+# razon.csv: working minors by reason for working; % = reason / CHILD_HOURS_DENOM.
+CHILD_RAZON_CONCEPTS = {
+    "Help with household/study costs": "Debe ayudar con los gastos de la casa, ayudar a costearse el estudio",
+    "Participate in family economy":   "Debe participar en la actividad económica de la familia",
+    "Likes earning own money":         "Le gusta trabajar para tener su propio dinero",
+    "Work builds character":           "Porque el trabajo lo forma, lo hace honrado y lo aleja de los vicios",
+    "Other reason":                    "Otra razón",
+}
+
+# posicion.csv: working minors by job position; % = position / CHILD_HOURS_DENOM.
+CHILD_POSICION_CONCEPTS = {
+    "Employees":            "Asalariados",
+    "Self-employed":        "Independientes",
+    "Unpaid family worker": "Trabajador familiar sin remuneración",
+}
+
 # English label -> per-gender count Concepto + the CSV rate Concepto (already a %).
 # In Men/Women views the headcount's rate string is absent from sexo.csv, so percent falls back
 # to count / CHILD_LABOR_ALL_MINORS * 100 (the requested gender share). "Población total" omitted.
@@ -339,3 +374,26 @@ CHILD_LABOR_CONCEPTS = {
         "rate":  "Tasa de Trabajo Infantil Ampliada por Trabajo Doméstico y de Cuidado no remunerado (TTIADC)",
     },
 }
+
+# rama_actividad.csv: working minors by economic activity branch; % = branch / CHILD_HOURS_DENOM.
+CHILD_RAMA_CONCEPTS = {
+    "Agriculture, livestock, hunting, forestry & fishing": "Agricultura, ganadería, caza, silvicultura y pesca",
+    "Manufacturing": "Industrias manufactureras",
+    "Construction": "Construcción",
+    "Commerce & vehicle repair": "Comercio y reparación de vehículos",
+    "Transport & storage": "Transporte y almacenamiento",
+    "Accommodation & food services": "Alojamiento y servicios de comida",
+    "Other branches": "Otras ramas*",
+    "Not reported": "No informa",
+}
+
+# actividades_sexo.csv: minors by unpaid domestic/care task; % = task / CHILD_ACT_DENOM (within gender).
+CHILD_ACT_CONCEPTS = {
+    "Cooking, dishes, setting table": "Cocinar, lavar los platos, poner la mesa",
+    "Cleaning & tidying the house": "Limpiar o arreglar la casa, tender las camas, barrer trapear, sacar la basura",
+    "Washing & ironing clothes": "Lavar, colgar, planchar la ropa, reparar ropa",
+    "Caring for children under 5": "Cuidar niños o niñas menores de 5 años que no estén enfermos ni en condición de discapacidad",
+    "Caring for sick/disabled/elderly": "Cuidar personas enfermas, en condición de discapacidad o adultos mayores",
+    "Helping with schoolwork": "Ayudar a personas con tareas o trabajos escolares",
+}
+CHILD_ACT_DENOM = "Población de 5 a 17 años que realiza trabajo doméstico y de cuidado no remunerado"
