@@ -713,11 +713,49 @@ def render_child_labor() -> None:
         df = load_csv(f"{CHILD_LABOR_BASE}edad.csv")
         df = df[df["Perspectiva"] == "Total nacional"]
         concept_options = list(jm.CHILD_AGE_CONCEPTS)
-    else:  # horas
+    elif stem == "horas":
         compare_key = None
         df = load_csv(f"{CHILD_LABOR_BASE}horas.csv")
         df = df[df["Perspectiva"] == "Total nacional"]
         concept_options = list(jm.CHILD_HOURS_CONCEPTS)
+    elif stem == "asistencia_escolar":
+        compare_key = None
+        df = load_csv(f"{CHILD_LABOR_BASE}asistencia_escolar.csv")
+        df = df[(df["Perspectiva"] == "Total nacional")
+                & (df["Grupo"] == jm.CHILD_ASISTENCIA_GROUP)]
+        concept_options = list(jm.CHILD_ASISTENCIA_CONCEPTS)
+    elif stem == "ingreso":
+        compare_key = None
+        df = load_csv(f"{CHILD_LABOR_BASE}ingreso.csv")
+        df = df[df["Perspectiva"] == "Total nacional"]
+        concept_options = list(jm.CHILD_INGRESO_CONCEPTS)
+    elif stem == "razon":
+        compare_key = None
+        df = load_csv(f"{CHILD_LABOR_BASE}razon.csv")
+        df = df[df["Perspectiva"] == "Total nacional"]
+        concept_options = list(jm.CHILD_RAZON_CONCEPTS)
+    elif stem == "rama_actividad":
+        compare_key = None
+        df = load_csv(f"{CHILD_LABOR_BASE}rama_actividad.csv")
+        df = df[df["Perspectiva"] == "Total nacional"]
+        concept_options = list(jm.CHILD_RAMA_CONCEPTS)
+    elif stem == "actividades_sexo":  # gender via Sexo column (mirror total)
+        compare_key = "cl_act_compare"
+        prev_compare = st.session_state.get(compare_key, False)
+        with col3:
+            gender = st.selectbox("Gender:", list(jm.REGION_GENDER.keys()), disabled=prev_compare)
+        gender_sx = jm.REGION_GENDER[gender]   # None / Hombres / Mujeres
+        scope = gender
+        df = load_csv(f"{CHILD_LABOR_BASE}actividades_sexo.csv")
+        df = df[df["Perspectiva"] == "Total nacional"]
+        if not prev_compare:                   # compare needs all sexes
+            df = df[df["Sexo"] == (gender_sx or "Total")]
+        concept_options = list(jm.CHILD_ACT_CONCEPTS)
+    else:  # posicion
+        compare_key = None
+        df = load_csv(f"{CHILD_LABOR_BASE}posicion.csv")
+        df = df[df["Perspectiva"] == "Total nacional"]
+        concept_options = list(jm.CHILD_POSICION_CONCEPTS)
 
     years = sorted(df["Fecha"].unique())
 
@@ -742,8 +780,32 @@ def render_child_labor() -> None:
         denom = total_pop  # breakdowns use CSV rates; only the age-group total uses this denom
         specs = [(lbl, _age_count(band_sp, jm.CHILD_AGE_CONCEPTS[lbl]["suffix"]),
                   jm.CHILD_AGE_CONCEPTS[lbl]["rate"]) for lbl in concept_labels]
-    else:  # horas: buckets have no CSV rate -> share of working 5–17 (in horas.csv)
+    elif stem == "horas":  # horas: buckets have no CSV rate -> share of working 5–17 (in horas.csv)
         specs = [(lbl, jm.CHILD_HOURS_CONCEPTS[lbl], None) for lbl in concept_labels]
+        pivot_df = df
+        denom = df[df["Concepto"] == jm.CHILD_HOURS_DENOM].set_index("Fecha")["Valor"]
+    elif stem == "asistencia_escolar":  # % = concept / working total (in asistencia_escolar.csv)
+        specs = [(lbl, jm.CHILD_ASISTENCIA_CONCEPTS[lbl], None) for lbl in concept_labels]
+        pivot_df = df
+        denom = df[df["Concepto"] == jm.CHILD_HOURS_DENOM].set_index("Fecha")["Valor"]
+    elif stem == "ingreso":  # ingreso: % = bracket / working total (in ingreso.csv)
+        specs = [(lbl, jm.CHILD_INGRESO_CONCEPTS[lbl], None) for lbl in concept_labels]
+        pivot_df = df
+        denom = df[df["Concepto"] == jm.CHILD_HOURS_DENOM].set_index("Fecha")["Valor"]
+    elif stem == "razon":  # razon: % = reason / working total (in razon.csv)
+        specs = [(lbl, jm.CHILD_RAZON_CONCEPTS[lbl], None) for lbl in concept_labels]
+        pivot_df = df
+        denom = df[df["Concepto"] == jm.CHILD_HOURS_DENOM].set_index("Fecha")["Valor"]
+    elif stem == "rama_actividad":  # % = branch / working total (in rama_actividad.csv)
+        specs = [(lbl, jm.CHILD_RAMA_CONCEPTS[lbl], None) for lbl in concept_labels]
+        pivot_df = df
+        denom = df[df["Concepto"] == jm.CHILD_HOURS_DENOM].set_index("Fecha")["Valor"]
+    elif stem == "actividades_sexo":  # % = task / domestic-care total of the selected gender
+        specs = [(lbl, jm.CHILD_ACT_CONCEPTS[lbl], None) for lbl in concept_labels]
+        pivot_df = df
+        denom = df[df["Concepto"] == jm.CHILD_ACT_DENOM].set_index("Fecha")["Valor"]
+    else:  # posicion: % = position / working total (in posicion.csv)
+        specs = [(lbl, jm.CHILD_POSICION_CONCEPTS[lbl], None) for lbl in concept_labels]
         pivot_df = df
         denom = df[df["Concepto"] == jm.CHILD_HOURS_DENOM].set_index("Fecha")["Valor"]
 
@@ -758,6 +820,8 @@ def render_child_labor() -> None:
         compare = st.sidebar.checkbox("Compare men vs. women", value=False, key=compare_key)
     elif compare_key == "cl_age_compare":
         compare = st.sidebar.checkbox("Compare 5–14 vs 15–17", value=False, key=compare_key)
+    elif compare_key == "cl_act_compare":
+        compare = st.sidebar.checkbox("Compare men vs. women", value=False, key=compare_key)
     else:
         compare = False
 
@@ -784,6 +848,17 @@ def render_child_labor() -> None:
             cols[g_label] = s.iloc[:, 0] if not s.empty else pd.Series(dtype=float)
         series = pd.DataFrame(cols)
         info = [f"{lbl} — Child Labor (5–14 vs 15–17)", "Year", metric]
+    elif compare and stem == "actividades_sexo":  # one task, series = Men vs Women, within-gender %
+        lbl = concept_labels[0]
+        concept_sp = jm.CHILD_ACT_CONCEPTS[lbl]
+        cols = {}
+        for g_label, g_sp in (("Men", "Hombres"), ("Women", "Mujeres")):
+            gdf = _filter(df[df["Sexo"] == g_sp])
+            gden = gdf[gdf["Concepto"] == jm.CHILD_ACT_DENOM].set_index("Fecha")["Valor"]
+            s = mf.child_labor_pivot(gdf, [(g_label, concept_sp, None)], gden, percent=percent)
+            cols[g_label] = s.iloc[:, 0] if not s.empty else pd.Series(dtype=float)
+        series = pd.DataFrame(cols)
+        info = [f"{lbl} — Child Labor (Men vs Women)", "Year", metric]
     else:
         series = mf.child_labor_pivot(_filter(pivot_df), specs, denom, percent=percent)
         info = [f"Child Labor — {file_label}" + (f" ({scope})" if scope else ""), "Year", metric]
@@ -796,6 +871,10 @@ def render_child_labor() -> None:
         st.caption("Each percentage is relative to that gender's own total population, not the total.")
     elif percent and stem == "edad":
         st.caption("Breakdowns use the official DANE rates (TTI / TTIAD / TTIADC); the age-group total is its share of the whole population.")
-    elif percent and stem == "horas":
+    elif percent and stem in ("horas", "asistencia_escolar", "ingreso", "razon", "posicion",
+                              "rama_actividad"):
         st.caption("Each percentage is a share of all working children aged 5–17.")
+    elif percent and stem == "actividades_sexo":
+        st.caption("Each percentage is a share of children aged 5–17 doing unpaid domestic & "
+                   "care work, within the selected gender.")
     st.caption("Source: DANE (GEIH)")
