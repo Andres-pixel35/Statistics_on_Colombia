@@ -120,9 +120,7 @@ def render_job_market(unemployment_df: pd.DataFrame) -> None:
         presidents_sel = [] if yearpres_disabled else selected_presidents
 
         if years or presidents_sel:  # YEAR mode -> x = months
-            year_set = set(years)
-            for name in presidents_sel:
-                year_set.update(presidents[name])
+            year_set = _year_set(years, presidents_sel, year_options)
             series = mf.unemployment_month_axis(unemp_local, sorted(year_set))
             info = ["Unemployment rate by month", "Month", "Rate (%)"]
         else:  # MONTH mode (months selected) or DEFAULT -> x = years
