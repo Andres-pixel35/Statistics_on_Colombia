@@ -5,7 +5,7 @@ from pages.helpers.demography import births_functions as bir
 from pages.helpers.demography import deaths_functions as dth
 from generalities.macro_generalities.dictionaries import presidents
 from generalities.function import get_valid_presidents, president_multiselect, reshape_by_presidents, load_csv, load_geojson, highlight_selectbox
-from generalities.demography_generalities.deaths import DEATHS_PATHS, DEATHS_COMPARE, AREA_EN, AGE_EN as DEATHS_AGE_EN
+from generalities.demography_generalities.deaths import DEATHS_PATHS, DEATHS_COMPARE, AREA_EN, AGE_EN as DEATHS_AGE_EN, AGE_MUNI_EN, MUNI_CAPTION 
 from generalities.demography_generalities.births import DEPT_GEOJSON_PATH, DEPT_FEATURE_KEY
 from pages.tabs.demography._shared import _render_geo_bar_line
 
@@ -20,6 +20,8 @@ def render_deaths() -> None:
 
     if compare_by == "Department":
         _render_deaths_department()
+    elif compare_by == "Municipality":
+        _render_deaths_municipality()
     elif compare_by == "Cause (Top 5)":
         _render_deaths_top_causes()
     elif compare_by == "Cause (Compare)":
@@ -209,6 +211,89 @@ def _render_deaths_department() -> None:
         return
 
     _render_geo_bar_line(pivot, chart_type, "department", scope, noun=noun)
+
+
+def _render_deaths_municipality() -> None:
+    dept_df = dth.deaths_muni_prepared(DEATHS_PATHS["muni_residence"]).rename(columns={"Fecha": "year"})
+
+    all_years = sorted(dept_df["year"].unique().astype(int).tolist(), reverse=True)
+    dept_names = sorted(dept_df["Name"].dropna().unique())
+    age_labels = list(dict.fromkeys(AGE_MUNI_EN.values()))
+    valid_presidents = get_valid_presidents(all_years)
+
+    with st.sidebar:
+        chart_type = st.selectbox("Chart Type:", ["Line", "Bar"])
+        selected_presidents = president_multiselect(valid_presidents)
+
+    comparing = len(selected_presidents) >= 2
+    president = selected_presidents[0] if len(selected_presidents) == 1 else None
+    year_opts = [y for y in all_years if y in presidents[president]] if president else all_years
+
+    with st.sidebar:
+        selected_years = [] if comparing else st.multiselect("Year:", year_opts)
+
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        dept = st.selectbox("Department:", dept_names)
+    with col2:
+        gender = st.selectbox("Gender:", ["Total", "Men", "Women"])
+    with col3:
+        age_label = st.selectbox("Age:", ["All ages"] + age_labels)
+
+    scoped = dept_df[dept_df["Name"] == dept].copy()
+    muni_names = sorted(scoped["municipio"].str.split(n=1).str[1].dropna().unique())
+    abroad = dept == "Abroad"
+
+    with st.sidebar:
+        selected_munis = st.multiselect("Countries:" if abroad else "Municipalities:", muni_names)
+
+    cause_scope = scoped
+    if selected_munis:
+        cause_scope = scoped[scoped["municipio"].str.split(n=1).str[1].isin(selected_munis)]
+    cause_names = dth.deaths_cause_names(cause_scope)
+
+    with st.sidebar:
+        cause = st.selectbox("Cause:", ["All causes"] + cause_names)
+
+    if cause != "All causes":
+        scoped = scoped[scoped["cause"] == cause]
+
+    scoped["_val"] = dth.deaths_age_gender_value(scoped, gender, age_label, AGE_MUNI_EN)
+    col = "_val"
+    noun = "Deaths" if gender == "Total" else gender
+    entity = "country" if abroad else ("municipality" if selected_munis else "department")
+    scope = "all years" if not selected_years else ", ".join(map(str, sorted(selected_years)))
+    if president and not selected_years:
+        scope = president
+    if age_label != "All ages":
+        scope = f"{scope}, age {age_label}"
+    if cause != "All causes":
+        scope = f"{scope} — {cause}"
+
+    if selected_munis:
+        pivot = bir.births_geo_trend(scoped, "municipio", selected_munis, selected_years, value_col=col)
+    else:
+        pivot = bir.births_geo_trend(scoped, "departamento", [], selected_years, value_col=col)
+
+    if president:
+        pivot = pivot[pivot.index.isin(presidents[president])]
+
+    if comparing:
+        info = [f"{noun} trend by {entity}", "Year", noun]
+        if not pivot.empty:
+            pivot, info = reshape_by_presidents(pivot, selected_presidents, info)
+        if pivot.empty:
+            st.warning("No data for selected filters.")
+            return
+        highlight = highlight_selectbox(pivot)
+        fig = mc.line_or_bar(chart_type, pivot, info, highlight=highlight, bar_if_single=False)
+        mc.render_chart(fig)
+        st.caption(MUNI_CAPTION)
+        return
+
+    _render_geo_bar_line(pivot, chart_type, entity, scope, noun=noun)
+    if not pivot.empty:
+        st.caption(MUNI_CAPTION)
 
 
 def _render_deaths_top_causes() -> None:

@@ -26,6 +26,11 @@ AGE_GROUPS = [
     "De 75 a 79 años", "De 80 a 84 años", "De 85 a 89 años", "De 90 a 94 años",
     "De 95 a 99 años", "De 100 años y más", "Edad desconocida",
 ]
+AGE_GROUPS_MUN = [
+    "Total", "Menor 1 año", "De 1-4 años", "De 5-14 años", "De 15-44 años",
+    "De 45-64 años", "De 65-84 años", "De 85-99 años", "De 100 y más",
+    "Edad desconocida",
+]
 SUB = ["Hombres", "Mujeres", "Indeterminado"]
 
 
@@ -142,11 +147,47 @@ def cuadro_dept(year, path, sheet):
     return out
 
 
+def cuadro5_dept_mun(year, path):
+    """Return department x municipio x cause df from Cuadro5 (residence, 67-cause list).
+
+    36 cols: col0 dept code, col1 extended DIVIPOLA, col2 departamento (ffill),
+    col3 municipio (ffill, "Total Dpto" for the dept-aggregate block), col4 cause,
+    col5 grand total, then 10 age groups x 3 genders.
+
+    Cuadro5 uses a different, coarser cause classification (67-list) than Cuadro11/12's
+    105-list — the codes are not comparable, so this is a separate output, not a
+    replacement. The dept-aggregate block ("Total Dpto") is dropped since it's
+    redundant with grouping the municipio rows by departamento.
+    """
+    df = read_book(path).parse("Cuadro5", header=None).dropna(how="all")
+
+    nat_index = df[is_national(df.iloc[:, 2])].index[0]
+    check_groups(df, nat_index, 6, AGE_GROUPS_MUN, year, "Cuadro5")
+
+    departamento = df.iloc[:, 2].astype("object").ffill().astype(str).str.strip()
+    municipio = df.iloc[:, 3].astype("object").ffill().astype(str).str.strip()
+    causa = df.iloc[:, 4].astype(str).str.strip()
+    is_cause = causa.str.match(CAUSE_RE) & (municipio != "Total Dpto")
+    rows = df[is_cause]
+
+    cols = gender_columns(AGE_GROUPS_MUN)  # 30 names, map to df cols 6..35
+    out = pd.DataFrame({
+        "Fecha": year,
+        "departamento": departamento[is_cause].values,
+        "municipio": municipio[is_cause].values,
+        "causa": rows.iloc[:, 4].astype(str).str.strip().values,
+        "total": to_int(rows.iloc[:, 5]).values,
+    })
+    for i, name in enumerate(cols):
+        out[name] = to_int(rows.iloc[:, 6 + i]).values
+    return out
+
+
 def main():
     os.makedirs(out_dir, exist_ok=True)
     years = files_by_year()
 
-    totals, areas, occ, res = [], [], [], []
+    totals, areas, occ, res, mun = [], [], [], [], []
     for year, path in years.items():
         national, area_df = cuadro1(year, path)
         totals.append(national)
@@ -155,20 +196,24 @@ def main():
         if year >= 2019:
             o = cuadro_dept(year, path, "Cuadro11")
             r = cuadro_dept(year, path, "Cuadro12")
+            m = cuadro5_dept_mun(year, path)
             occ.append(o)
             res.append(r)
-            line += f", occ_rows={len(o)}, res_rows={len(r)}"
+            mun.append(m)
+            line += f", occ_rows={len(o)}, res_rows={len(r)}, mun_rows={len(m)}"
         print(line)
 
     pd.DataFrame(totals).set_index("Fecha").to_csv(os.path.join(out_dir, "total.csv"))
     pd.concat(areas, ignore_index=True).to_csv(
         os.path.join(out_dir, "area_grupo_edad.csv"), index=False)
+    pd.concat(mun, ignore_index=True).to_csv(
+        os.path.join(out_dir, "departamento_municipio_residencia.csv"), index=False)
     pd.concat(occ, ignore_index=True).to_csv(
         os.path.join(out_dir, "departamento_muerte.csv"), index=False)
     pd.concat(res, ignore_index=True).to_csv(
         os.path.join(out_dir, "departamento_residencia.csv"), index=False)
 
-    print(f"Saved 4 CSVs to {out_dir} ({len(years)} years; dept CSVs cover 2019+)")
+    print(f"Saved 5 CSVs to {out_dir} ({len(years)} years; dept CSVs cover 2019+)")
 
 
 if __name__ == "__main__":
