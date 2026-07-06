@@ -7,7 +7,7 @@ from generalities.macro_generalities.dictionaries import presidents
 from generalities.function import (load_csv, BASE_DIR, highlight_selectbox,
                                    get_valid_presidents, president_multiselect)
 
-PRODUCTIVITY_LABORAL_BASE = str(BASE_DIR / "data/dane/productivity/laboral") + "/"
+PRODUCTIVITY_BASE_DIR = str(BASE_DIR / "data/dane/productivity") + "/"
 DEFAULT_STEM = "por_persona_empleada"
 
 
@@ -19,7 +19,8 @@ def render_productivity(prod_df: pd.DataFrame) -> None:
     stem = pr.PRODUCTIVITY_FILES[file_label]
     terms = pr.PRODUCTIVITY_TERMS[stem]
 
-    df = prod_df if stem == DEFAULT_STEM else load_csv(f"{PRODUCTIVITY_LABORAL_BASE}{stem}.csv")
+    df = prod_df if stem == DEFAULT_STEM else load_csv(
+        f"{PRODUCTIVITY_BASE_DIR}{pr.PRODUCTIVITY_BASE[stem]}/{stem}.csv")
     years = sorted(df["año"].unique())
 
     concept_labels = st.sidebar.multiselect(
@@ -44,11 +45,26 @@ def render_productivity(prod_df: pd.DataFrame) -> None:
     concept_cols = {label: terms[label] for label in concept_labels}
     series = pf.productivity_pivot(df, concept_cols, year_set)
 
-    info = [f"Labor Productivity — {file_label}", "Year", "Value (pp / %)"]
+    main_label = list(terms.keys())[0]
+    units = {"%" if terms[label].rstrip().endswith("(%)") else "pp" for label in concept_labels}
+    if units == {"%"}:
+        value_label, unit_caption = "Value (%)", None
+    elif units == {"pp"}:
+        value_label = "Value (pp)"
+        unit_caption = (f"Values in pp represent percentage-point contributions to {main_label}, "
+                         "which is measured in %.")
+    else:
+        value_label = "Value (pp / %)"
+        unit_caption = (f"{main_label} is in % (headline measure); "
+                         "other concepts are in pp — their contribution to it.")
+
+    info = [f"Labor Productivity — {file_label}", "Year", value_label]
     if len(year_set) == 1:
         info[0] = f"{info[0]} · {sorted(year_set)[0]}"
 
     highlight = highlight_selectbox(series)
     fig = mc.line_or_bar(chart_type, series, info, highlight=highlight)
     mc.render_chart(fig)
+    if unit_caption:
+        st.caption(unit_caption)
     st.caption("Source: DANE")

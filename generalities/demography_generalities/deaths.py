@@ -5,9 +5,10 @@ DEATHS_PATHS = {
     "area_age":      BASE_DIR / "data/dane/deaths/area_grupo_edad.csv",
     "dept_death":    BASE_DIR / "data/dane/deaths/departamento_muerte.csv",
     "dept_residence": BASE_DIR / "data/dane/deaths/departamento_residencia.csv",
+    "muni_residence": BASE_DIR / "data/dane/deaths/departamento_municipio_residencia.csv",
 }
 
-DEATHS_COMPARE = ["Gender", "Age Group", "Area", "Department", "Cause (Top 5)", "Cause (Compare)"]
+DEATHS_COMPARE = ["Gender", "Age Group", "Area", "Department", "Municipality", "Cause (Top 5)", "Cause (Compare)"]
 
 GENDER_EN = {"Hombres": "Men", "Mujeres": "Women", "Indeterminado": "Undetermined"}
 
@@ -162,3 +163,119 @@ CAUSE_EN = {
     "tumores: in situ, benignos y de comportamiento incierto o desconocido y los no especificados": "Tumors: in situ, benign and of uncertain or unknown behavior and unspecified",
     "ulcera": "Ulcer",
 }
+
+# Coarser age buckets used by the department x municipality residence file (data/dane/deaths/departamento_municipio_residencia.csv).
+AGE_MUNI_EN = {
+    "Menor 1 año":      "Under 1 year",
+    "De 1-4 años":      "1–4",
+    "De 5-14 años":     "5–14",
+    "De 15-44 años":    "15–44",
+    "De 45-64 años":    "45–64",
+    "De 65-84 años":    "65–84",
+    "De 85-99 años":    "85–99",
+    "De 100 y más":     "100+",
+    "Edad desconocida": "Unknown",
+}
+
+# Coarser "grandes causas" classification used by the department x municipality residence file
+# (different codes/wording than CAUSE_EN's ~112-code classification). Keyed on norm(stripped Spanish cause);
+# accent/typo variants collapse to one entry.
+CAUSE_MUNI_EN = {
+    "signos, sintomas y afecciones mal definidas": "Signs, symptoms and ill-defined conditions",
+    "enfermedades infecciosas intestinales": "Intestinal infectious diseases",
+    "tuberculosis": "Tuberculosis",
+    "ciertas enfermedades transmisibles por vectores y rabia": "Certain vector-borne diseases and rabies",
+    "ciertas enfermedades inmunoprevenibles": "Certain vaccine-preventable diseases",
+    "meningitis": "Meningitis",
+    "septicemia, excepto neonatal": "Septicemia, except neonatal",
+    "enfermedad por el vih (sida)": "HIV disease (AIDS)",
+    "infecciones respiratorias agudas": "Acute respiratory infections",
+    "resto de ciertas enfermedades infecciosas y parasitarias": "Remaining certain infectious and parasitic diseases",
+    "tumor maligno del estomago": "Malignant tumor of the stomach",
+    "tumor maligno del colon y de la union rectosigmoidea": "Malignant tumor of the colon and rectosigmoid junction",
+    "tumo maligno de los organos digestivos y del peritoneo excepto estomago y colon": "Malignant tumor of the digestive organs and peritoneum, except stomach and colon",
+    "tumor maligno de los organos digestivos y del peritoneo excepto estomago y colon": "Malignant tumor of the digestive organs and peritoneum, except stomach and colon",
+    "tumor maligno de la traquea, los bronquios y el pulmon": "Malignant tumor of the trachea, bronchi and lung",
+    "tumor maligno de los organos respiratorios e intratoracicos, excepto traquea, bronquios y pulmon": "Malignant tumor of the respiratory and intrathoracic organs, except trachea, bronchi and lung",
+    "tumor maligno de la mama de la mujer": "Malignant tumor of the female breast",
+    "tumor maligno del cuello del utero": "Malignant tumor of the cervix",
+    "tumor maligno del cuerpo del utero": "Malignant tumor of the body of the uterus",
+    "tumor maligno del utero, parte no especificada": "Malignant tumor of the uterus, part unspecified",
+    "tumor maligno de la prostata": "Malignant tumor of the prostate",
+    "tumor maligno de otros organos genitourinarios": "Malignant tumor of other genitourinary organs",
+    "leucemia": "Leukemia",
+    "tumo maligno del tejido linfatico, de otros organos hematopoyeticos y de tejidos afines": "Malignant tumor of lymphatic tissue, other hematopoietic organs and related tissues",
+    "tumor maligno del tejido linfatico, de otros organos hematopoyeticos y de tejidos afines": "Malignant tumor of lymphatic tissue, other hematopoietic organs and related tissues",
+    "tumores malignos de otras localizaciones y de las no especificadas": "Malignant tumors of other and unspecified sites",
+    "tumores in situ, benignos y los de comportamiento incierto o desconocido": "Tumors in situ, benign and of uncertain or unknown behavior",
+    "tumores in situ, beningnos y los de comportamiento incierto o desconocido": "Tumors in situ, benign and of uncertain or unknown behavior",
+    "fiebre reumatica aguda y enfermedades reumaticas cronicas": "Acute rheumatic fever and chronic rheumatic diseases",
+    "enfermedades hipertensivas": "Hypertensive diseases",
+    "enfermedades isquemicas del corazon": "Ischemic heart diseases",
+    "enfermedad cardiopulmonar, enfermedades de la circulacion pulmonar y otras formas de enfermedad del corazon": "Cardiopulmonary disease, pulmonary circulation diseases and other forms of heart disease",
+    "paro cardiaco": "Cardiac arrest",
+    "insuficiencia cardiaca": "Heart failure",
+    "enfermedades cerebrovasculares": "Cerebrovascular diseases",
+    "aterosclerosis": "Atherosclerosis",
+    "las demas enfermedades del sistema circulatorio": "All other diseases of the circulatory system",
+    "feto y recien nacido afectados por ciertas afecciones maternas": "Fetus and newborn affected by certain maternal conditions",
+    "feto y recien nacido afectados por complicaciones obstetricas y traumatismo del nacimiento": "Fetus and newborn affected by obstetric complications and birth trauma",
+    "retardo del crecimiento fetal, desnutricion fetal, gestacion corta y bajo peso al nacer": "Slow fetal growth, fetal malnutrition, short gestation and low birth weight",
+    "trastornos respiratorios especificos del periodo perinatal": "Respiratory disorders specific to the perinatal period",
+    "sepsis bacteriana del recien nacido": "Bacterial sepsis of the newborn",
+    "resto de ciertas afecciones originadas en el periodo perinatal": "Remaining certain conditions originating in the perinatal period",
+    "accidentes de transporte terrestre": "Land transport accidents",
+    "los demas accidentes de transporte y los no especificados": "Other and unspecified transport accidents",
+    "caidas": "Falls",
+    "accidentes por disparo de arma de fuego": "Firearm discharge accidents",
+    "ahogamiento y sumersion accidentales": "Accidental drowning and submersion",
+    "accidentes que obstruyen la respiracion": "Accidents obstructing breathing",
+    "exposicion a la corriente electrica": "Exposure to electric current",
+    "exposicion al humo, fuego y llamas": "Exposure to smoke, fire and flames",
+    "envenenamiento accidental por exposicion a sustancias nocivas": "Accidental poisoning by exposure to noxious substances",
+    "otros accidentes, inclusive secuelas": "Other accidents, including sequelae",
+    "lesiones autoinfligidas intencionalmente (suicidios)": "Intentional self-harm (suicide)",
+    "agresiones (homicidios)": "Assault (homicide)",
+    "eventos de intencion no determinada": "Events of undetermined intent",
+    "las demas causas externas": "All other external causes",
+    "diabetes mellitus": "Diabetes mellitus",
+    "deficiencias nutricionales y anemias nutricionales": "Nutritional deficiencies and nutritional anemias",
+    "trastornos mentales y del comportamiento": "Mental and behavioral disorders",
+    "enfermedades del sistema nervioso, excepto meningitis": "Diseases of the nervous system, except meningitis",
+    "enfermedades cronicas de las vias respiratorias inferiores": "Chronic lower respiratory diseases",
+    "resto de enfermedades del sistema respiratorio": "Remaining diseases of the respiratory system",
+    "apendicitis, hernia de la cavidad abdominal y obstruccion intestinal": "Appendicitis, abdominal cavity hernia and intestinal obstruction",
+    "cirrosis y ciertas otras enfermedades croncas del higado": "Cirrhosis and certain other chronic liver diseases",
+    "cirrosis y ciertas otras enfermedades cronicas del higado": "Cirrhosis and certain other chronic liver diseases",
+    "resto de enfermedades del sistema digestivo": "Remaining diseases of the digestive system",
+    "enfermedades del sistema urinario": "Diseases of the urinary system",
+    "hiperplasia de la prostata": "Hyperplasia of the prostate",
+    "embarazo, parto y puerperio": "Pregnancy, childbirth and puerperium",
+    "malformaciones congenitas, deformidades y anomalias cromosomicas": "Congenital malformations, deformities and chromosomal abnormalities",
+    "resto de las enfermedades": "All other diseases",
+}
+
+# Gap-filler for the muni_residence file's abroad-country spellings that don't norm-match
+# migration.py's COUNTRY_EN (typos, DANE's 40-char field truncation, alternate phrasings).
+# Keyed on norm(country text); the other ~82 countries already match COUNTRY_EN directly.
+COUNTRY_MUNI_EN = {
+    "antillas neerlandesas": "Netherlands Antilles",
+    "bolivia": "Bolivia",
+    "estado de la ciudad del vaticano (san": "Vatican City",
+    "estado de la ciudad del vaticano (santa": "Vatican City",
+    "holanda (paises bajos)": "Netherlands",
+    "paises bajos (reino de los)": "Netherlands",
+    "reino unido de gran bretana e irlanda": "United Kingdom",
+    "republica popular del congo": "Republic of the Congo",
+    "suriname": "Suriname",
+    "territorios australes franceses": "French Southern Territories",
+    "trinidad y tabago": "Trinidad and Tobago",
+    "turkiye": "Turkey",
+    "union de las comoras": "Comoros",
+    "venezuela": "Venezuela",
+}
+
+MUNI_CAPTION = (
+    "Uses a coarser cause/age classification than the other Deaths views, and shows the deceased's "
+    "place of residence — not where the death occurred."
+)

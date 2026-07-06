@@ -2,13 +2,22 @@ import pandas as pd
 import streamlit as st
 from generalities.macro_generalities.dictionaries import presidents
 from generalities.function import find_key_by_value, load_csv, norm
-from generalities.demography_generalities.deaths import GENDER_EN as DEATHS_GENDER_EN, AREA_EN, AGE_EN as DEATHS_AGE_EN, CAUSE_EN
+from generalities.demography_generalities.deaths import GENDER_EN as DEATHS_GENDER_EN, AREA_EN, AGE_EN as DEATHS_AGE_EN, CAUSE_EN, CAUSE_MUNI_EN, COUNTRY_MUNI_EN
+from generalities.demography_generalities.migration import COUNTRY_EN
+
+# norm(Spanish country name) -> English; COUNTRY_EN covers most, COUNTRY_MUNI_EN fills the rest.
+_COUNTRY_LOOKUP = {**{norm(k): v for k, v in COUNTRY_EN.items()}, **COUNTRY_MUNI_EN}
 
 
-def _cause_label(causa: pd.Series) -> pd.Series:
+def _cause_label(causa: pd.Series, cause_dict: dict = CAUSE_EN) -> pd.Series:
     """Strip the leading NNN code, then map to English (accent-variants collapse to one)."""
     stripped = causa.astype(str).str.replace(r"^\d+\s+", "", regex=True).str.replace(r"\s+", " ", regex=True).str.strip()
-    return stripped.map(lambda s: CAUSE_EN.get(norm(s), s))
+    return stripped.map(lambda s: cause_dict.get(norm(s), s))
+
+def _country_label(municipio: pd.Series) -> pd.Series:
+    """Municipio for abroad rows is '<code> <Spanish country>'; translate the name, keep the code prefix."""
+    parts = municipio.str.split(n=1, expand=True)
+    return parts[0] + " " + parts[1].map(lambda s: _COUNTRY_LOOKUP.get(norm(s), s))
 
 @st.cache_data
 def deaths_dept_prepared(path) -> pd.DataFrame:
@@ -16,6 +25,22 @@ def deaths_dept_prepared(path) -> pd.DataFrame:
     df = df[~df["departamento"].str.strip().str.lower().eq("total nacional")].copy()
     df["Name"] = df["departamento"].str.split(n=1).str[1]
     df["cause"] = _cause_label(df["causa"])
+    return df
+
+@st.cache_data
+def deaths_muni_prepared(path) -> pd.DataFrame:
+    """Like deaths_dept_prepared, but for the department x municipality residence file: collapses the
+    Extranjero/Extranjeros foreign-death labels into one "00 Abroad" pseudo-department (dropping the
+    redundant Extranjero "Total" aggregate row, which double-counts the per-country breakdown rows) and
+    uses the file's own coarser cause classification (CAUSE_MUNI_EN, not CAUSE_EN)."""
+    df = load_csv(path)
+    df = df[~df["departamento"].str.strip().str.lower().eq("total nacional")].copy()
+    is_abroad = df["departamento"].isin(["Extranjero", "Extranjeros"])
+    df = df[~(is_abroad & (df["municipio"] == "Total"))]
+    df.loc[is_abroad, "departamento"] = "00 Abroad"
+    df.loc[is_abroad, "municipio"] = _country_label(df.loc[is_abroad, "municipio"])
+    df["Name"] = df["departamento"].str.split(n=1).str[1]
+    df["cause"] = _cause_label(df["causa"], CAUSE_MUNI_EN)
     return df
 
 def _dept_filter(dept_df: pd.DataFrame, years: list, president: str, dept_name: str = None) -> pd.DataFrame:
@@ -112,12 +137,12 @@ def deaths_age_cause_pivot(dept_df: pd.DataFrame, gender: str = "Total", cause: 
         title += f" ({cause})"
     return out, [title, "Year", "Deaths"]
 
-def deaths_age_gender_value(df: pd.DataFrame, gender: str, age_label: str) -> pd.Series:
+def deaths_age_gender_value(df: pd.DataFrame, gender: str, age_label: str, age_dict: dict = DEATHS_AGE_EN) -> pd.Series:
     """Series of deaths for a (gender, age) combo from dept×cause frames (cols: total, Total_<gender>, <age>_<gender>)."""
     genders = list(DEATHS_GENDER_EN) if gender == "Total" else [find_key_by_value(DEATHS_GENDER_EN, gender)]
     if not age_label or age_label == "All ages":
         return df["total"] if gender == "Total" else df[f"Total_{genders[0]}"]
-    age_keys = [k for k, v in DEATHS_AGE_EN.items() if v == age_label]
+    age_keys = [k for k, v in age_dict.items() if v == age_label]
     cols = [f"{a}_{g}" for a in age_keys for g in genders if f"{a}_{g}" in df.columns]
     return df[cols].sum(axis=1)
 
