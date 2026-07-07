@@ -1,4 +1,5 @@
 import pandas as pd
+import streamlit as st
 from generalities.demography_generalities.population import GENDER_AGG, GENDER_PREFIX, PYRAMID_GROUPS
 
 
@@ -22,6 +23,7 @@ def national_total_series(pop_df: pd.DataFrame, gender: str = "Total", age: str 
     return s
 
 
+@st.cache_data
 def dept_normalize(df: pd.DataFrame) -> pd.DataFrame:
     """Zero-pad the DANE code (old-era rows store it unpadded) and pick one canonical
     name per code (collapses accent/spelling variants like Quindio/Quindío)."""

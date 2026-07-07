@@ -1,9 +1,0 @@
-name: colombia
-channels:
-  - defaults
-dependencies:
-  - pandas
-  - pip
-  - plotly
-  - openpyxl
-  - streamlit

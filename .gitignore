@@ -3,5 +3,5 @@ __pycache__/
 *ju.py 
 *.ipynb
 .ipynb_checkpoints/
-info_data/
 .~lock*
+.claude/
