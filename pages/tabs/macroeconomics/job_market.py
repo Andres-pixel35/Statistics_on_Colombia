@@ -7,7 +7,8 @@ import generalities.macro_generalities.job_market as jm
 from generalities.macro_generalities.dictionaries import presidents, months
 from generalities.function import (to_datatime, load_csv, load_geojson, BASE_DIR,
                                    highlight_selectbox, find_key_by_value,
-                                   get_valid_presidents, president_multiselect)
+                                   get_valid_presidents, president_multiselect,
+                                   cap as _cap, cap_one as _cap_one)
 
 INFORMALITY_BASE = str(BASE_DIR / "data/dane/job_market/informalidad") + "/"
 LABOR_FORCE_BASE = str(BASE_DIR / "data/dane/job_market/Mercado Laboral") + "/"
@@ -21,21 +22,6 @@ REGION_FEATURE_KEY = "properties.region"
 
 PET_PCT_NOTE = ("Each percentage is relative to that gender's own working-age population (PET), "
                 "not the total.")
-
-
-def _cap(this, others):
-    """Restrict peer multiselects to 1: if `this` dim grows to >=2 while another peer is already
-    multi, keep only its newest pick. Editable + remembers the other dims (no reset, no lock)."""
-    if len(st.session_state[this]) >= 2 and any(
-            len(st.session_state.get(o, [])) >= 2 for o in others):
-        st.session_state[this] = st.session_state[this][-1:]
-
-
-def _cap_one(keys):
-    """Trim each named multiselect in session_state to its newest pick (cap to 1)."""
-    for k in keys:
-        if len(st.session_state.get(k, [])) >= 2:
-            st.session_state[k] = st.session_state[k][-1:]
 
 
 def _year_set(years_sel, presidents_sel, data_years):
