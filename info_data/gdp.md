@@ -4,17 +4,17 @@
 
 **production**: Go to this [page](https://www.dane.gov.co/index.php/estadisticas-por-tema/cuentas-nacionales/cuentas-nacionales-trimestrales/historicos-producto-interno-bruto-pib) and under the column "Documentos y anexos producción" download "PIB a precios constantes". Finally, store it at 
 ```bash
-~/Documents/coding/genius/colombia/data/original/dane/GDP/
+/path/to/the/repo/colombia/data/original/dane/GDP/
 ```
 
 **spend**: Go to this [page](https://www.dane.gov.co/index.php/estadisticas-por-tema/cuentas-nacionales/cuentas-nacionales-trimestrales/historicos-producto-interno-bruto-pib) and under the column "Documentos y anexos gasto" download "PIB a precios constantes". Finally, store it at 
 ```bash
-~/Documents/coding/genius/colombia/data/original/dane/GDP/
+/path/to/the/repo/colombia/data/original/dane/GDP/
 ```
 
 **Quarter growth** go to this [page](https://suameca.banrep.gov.co/descarga-multiple-de-datos/), go to "Actividad economica, mercado laboral y cuentas financieras", then "producto interno bruto", then "crecimiento PIB real, trimestral base 2015" and download it at:
 ```bash
-/home/riosandres/Documents/coding/genius/colombia/data/original/banco_republica/GDP/quarter_growth.xlsx
+/path/to/the/repo/colombia/data/original/banco_republica/GDP/quarter_growth.xlsx
 ```
 
 ## processing
@@ -54,34 +54,34 @@ create another row above, copy all the content from the row bellow and copy it w
 
 finally, download it as csv and store it at:
 ```bash
-~/Documents/coding/genius/colombia/data/dane/GDP/production/summarize.csv
+/path/to/the/repo/colombia/data/dane/GDP/production/summarize.csv
 ```
 
 ### Spend
 
 **summarize**: Go to google sheets and open the send file. There, go to "Cuadro 1", select all the info from the first box, copy it and paste it at "PIB_spend" in the sheet "summarize". Then, do the same steps as in production, except the one where it deletes duplicates. Store it as a csv at
 ```bash
-/home/riosandres/Documents/coding/genius/colombia/data/dane/GDP/spend/summarize.csv
+/path/to/the/repo/colombia/data/dane/GDP/spend/summarize.csv
 ```
 
 **goal home's spend**: Go to google sheets and open the send file. There, go to "Cuadro 3", select all the info from the first box, copy it and paste it at "PIB_spend" in the sheet "goal home's spend". Then, do the same steps as in production, except the one where it deletes duplicates. Store it as a csv at 
 ```bash
-/home/riosandres/Documents/coding/genius/colombia/data/dane/GDP/spend/goal_homes_spend.csv
+/path/to/the/repo/colombia/data/dane/GDP/spend/goal_homes_spend.csv
 ```
 
 **durability home's spend**: Go to google sheets and open the send file. There, go to "Cuadro 3", select all the info from the second box, copy it and paste it at "PIB_spend" in the sheet "durability home's spend". Then, do the same steps as in production, except the one where it deletes duplicates. Store it as a csv at 
 ```bash
-/home/riosandres/Documents/coding/genius/colombia/data/dane/GDP/spend/durability_homes_spend.csv
+/path/to/the/repo/colombia/data/dane/GDP/spend/durability_homes_spend.csv
 ```
 
 **capital formation**: Go to google sheets and open the send file. There, go to "Cuadro 5", select all the info from the first box, copy it and paste it at "PIB_spend" in the sheet "capital formation". Then, do the same steps as in production, except the one where it deletes duplicates. Store it as a csv at 
 ```bash
-/home/riosandres/Documents/coding/genius/colombia/data/dane/GDP/spend/capital_formation.csv
+/path/to/the/repo/colombia/data/dane/GDP/spend/capital_formation.csv
 ```
 
 **exports and imports**: Go to google sheets and open the send file. There, go to "Cuadro 7", select all the info from the first box, copy it and paste it at "PIB_spend" in the sheet "exports and imports". Then, do the same steps as in production, except the one where it deletes duplicates. Also, change the name of "bienes" and "servicios" under both "exportaciones" and "importaciones" to "E.Bienes", "E.Servicios", "I.Bienes", "I.Servicios" Store it as a csv at 
 ```bash
-/home/riosandres/Documents/coding/genius/colombia/data/dane/GDP/spend/exports_and_imports.csv
+/path/to/the/repo/colombia/data/dane/GDP/spend/exports_and_imports.csv
 ```
 
 **quarter growth**: execute

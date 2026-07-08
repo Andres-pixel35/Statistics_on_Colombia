@@ -20,6 +20,19 @@ def get_valid_presidents(tmp_years: dict) -> list:
 def find_key_by_value(d: dict, value: str):
     return next((k for k, v in d.items() if v == value), None)
 
+def cap(this, others):
+    """Restrict peer multiselects to 1: if `this` dim grows to >=2 while another peer is already
+    multi, keep only its newest pick. Editable + remembers the other dims (no reset, no lock)."""
+    if len(st.session_state[this]) >= 2 and any(
+            len(st.session_state.get(o, [])) >= 2 for o in others):
+        st.session_state[this] = st.session_state[this][-1:]
+
+def cap_one(keys):
+    """Trim each named multiselect in session_state to its newest pick (cap to 1)."""
+    for k in keys:
+        if len(st.session_state.get(k, [])) >= 2:
+            st.session_state[k] = st.session_state[k][-1:]
+
 def highlight_selectbox(df, display_names=None, label="Highlight variable:"):
     if not isinstance(df, pd.DataFrame) or df.empty or len(df.columns) <= 1:
         return None
