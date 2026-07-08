@@ -36,60 +36,33 @@ def valor_agregado_total_factores(wb):
 
 
 def nacional_cuadro3(wb):
-    """National annual PTF, Enfoque Producción, split into (sex-segregated, general) frames.
-
-    Cuadro 3 breaks 'Servicios laborales' down by sex; the other concepts (Servicios de
-    capital, Consumos intermedios, Contribución de los factores, PTF) have no sex split,
-    so they're returned as a separate frame sharing 'año'/'producción (%)'.
-    """
+    """National annual PTF, Enfoque Producción (Cuadro 3)."""
     ws = wb["Cuadro 3"]
-    sexo_rows, gen_rows = [], []
-    for r in read_rows(ws, 15, 1):
-        year = year_int(cell(ws, r, 1))
-        produccion = cell(ws, r, 2)
-        sexo_rows.append([year, produccion, cell(ws, r, 3), cell(ws, r, 4), cell(ws, r, 5)])
-        gen_rows.append([year, produccion, cell(ws, r, 6), cell(ws, r, 7),
-                          cell(ws, r, 8), cell(ws, r, 9)])
-    sexo_cols = ["año", "producción (%)", "servicios laborales mujeres (pp)",
-                 "servicios laborales hombres (pp)", "servicios laborales total (pp)"]
-    gen_cols = ["año", "producción (%)", "servicios de capital (pp)",
-                "consumos intermedios (pp)", "contribución de los factores (pp)",
-                "productividad total de los factores (pp)"]
-    return pd.DataFrame(sexo_rows, columns=sexo_cols), pd.DataFrame(gen_rows, columns=gen_cols)
+    rows = [[year_int(cell(ws, r, 1))] + [cell(ws, r, c) for c in range(2, 10)]
+            for r in read_rows(ws, 15, 1)]
+    cols = ["año", "producción (%)", "servicios laborales mujeres (pp)",
+            "servicios laborales hombres (pp)", "servicios laborales total (pp)",
+            "servicios de capital (pp)", "consumos intermedios (pp)",
+            "contribución de los factores (pp)", "productividad total de los factores (pp)"]
+    return pd.DataFrame(rows, columns=cols)
 
 
 def actividad_economica_families(wb):
-    """Per-actividad-económica PTF breakdown across all years (Cuadros 4-23, one per year).
-
-    Each family (servicios laborales/capital, consumos intermedios) gets its own frame
-    with all years combined; contribución de los factores + PTF get their own frame
-    since they aren't sub-broken like the families.
-    """
-    laborales, capital, consumos, contrib = [], [], [], []
+    """Per-actividad-económica PTF breakdown across all years (Cuadros 4-23, one per year)."""
+    rows = []
     for idx in range(4, 24):
         ws = wb[f"Cuadro {idx}"]
         year = year_int(cell(ws, 10, 0))
         for r in read_rows(ws, 15, 1):
             actividad = cell(ws, r, 1)
-            produccion = cell(ws, r, 2)
-            laborales.append([year, actividad, produccion, cell(ws, r, 3),
-                               cell(ws, r, 4), cell(ws, r, 5)])
-            capital.append([year, actividad, produccion, cell(ws, r, 6),
-                             cell(ws, r, 7), cell(ws, r, 8)])
-            consumos.append([year, actividad, produccion, cell(ws, r, 9),
-                              cell(ws, r, 10), cell(ws, r, 11), cell(ws, r, 12)])
-            contrib.append([year, actividad, produccion, cell(ws, r, 13), cell(ws, r, 14)])
+            rows.append([year, actividad] + [cell(ws, r, c) for c in range(2, 15)])
 
-    base = ["año", "actividad económica", "producción (%)"]
-    laborales_df = pd.DataFrame(laborales, columns=base + [
-        "composición del trabajo (pp)", "horas trabajadas (pp)", "laboral total (pp)"])
-    capital_df = pd.DataFrame(capital, columns=base + [
-        "capital tic (pp)", "capital no tic (pp)", "capital total (pp)"])
-    consumos_df = pd.DataFrame(consumos, columns=base + [
-        "energía (pp)", "materiales (pp)", "servicios (pp)", "consumo intermedio total (pp)"])
-    contrib_df = pd.DataFrame(contrib, columns=base + [
-        "contribución de los factores (pp)", "productividad total de los factores (pp)"])
-    return laborales_df, capital_df, consumos_df, contrib_df
+    cols = ["año", "Actividad Económica", "Tasas de crecimiento (%)",
+            "Composición del trabajo (pp)", "Horas trabajadas (pp)", "Laboral Total (pp)",
+            "Capital TIC (pp)", "Capital No TIC (pp)", "Capital Total (pp)",
+            "Energía (pp)", "Materiales (pp)", "Servicios (pp)", "Consumo intermedio Total (pp)",
+            "Contribución de los factores (pp)", "Productividad Total de los Factores (pp)"]
+    return pd.DataFrame(rows, columns=cols)
 
 
 def laboral_cuadro(ws, value_cols, extra_cols):
@@ -112,16 +85,10 @@ def main():
         valor_agregado_total_factores(wb)
 
     nacional_dir = os.path.join(out_dir, "produccion", "nacional")
-    nacional_sexo_df, nacional_df = nacional_cuadro3(wb)
-    outputs[(nacional_dir, "nacional_sexo.csv")] = nacional_sexo_df
-    outputs[(nacional_dir, "nacional.csv")] = nacional_df
+    outputs[(nacional_dir, "nacional.csv")] = nacional_cuadro3(wb)
 
     actividad_dir = os.path.join(out_dir, "produccion", "actividad_economica")
-    laborales_df, capital_df, consumos_df, contrib_df = actividad_economica_families(wb)
-    outputs[(actividad_dir, "servicios_laborales.csv")] = laborales_df
-    outputs[(actividad_dir, "servicios_capital.csv")] = capital_df
-    outputs[(actividad_dir, "consumos_intermedios.csv")] = consumos_df
-    outputs[(actividad_dir, "contribucion_ptf.csv")] = contrib_df
+    outputs[(actividad_dir, "actividad_economica.csv")] = actividad_economica_families(wb)
 
     laboral_dir = os.path.join(out_dir, "laboral")
     outputs[(laboral_dir, "por_hora_trabajada.csv")] = laboral_cuadro(
