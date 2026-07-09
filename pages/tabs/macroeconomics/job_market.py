@@ -1,8 +1,8 @@
 import streamlit as st
 import pandas as pd
-from pages.helpers.macro import macro_charts as mc
+from pages.helpers import charts as mc
 from pages.helpers.macro import job_market_functions as mf
-from pages.helpers.demography import demography_charts as dc
+from pages.helpers import charts as dc
 import generalities.macro_generalities.job_market as jm
 from generalities.macro_generalities.dictionaries import presidents, months
 from generalities.function import (to_datatime, load_csv, load_geojson, BASE_DIR,
