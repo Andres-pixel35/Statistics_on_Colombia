@@ -1,12 +1,15 @@
 import calendar
 import streamlit as st
 import pandas as pd
-from pages.helpers.macro import macro_charts as mc
-from pages.helpers.miscellaneous import trm_functions as mf
+from pages.helpers import charts as mc
+from pages.helpers.miscellaneous import rates_functions as rf
 from generalities.macro_generalities.dictionaries import presidents, months
 from generalities.function import (to_datatime, highlight_selectbox, find_key_by_value,
                                    get_valid_presidents, president_multiselect,
                                    reshape_by_presidents, show_all_years)
+
+SPEC = rf.SeriesSpec("Tasa (%)", "Monetary Policy Rate")
+UNIT = "%"
 
 
 def _year_set(years_sel, presidents_sel, data_years):
@@ -17,16 +20,16 @@ def _year_set(years_sel, presidents_sel, data_years):
     return ys
 
 
-def render_trm(df: pd.DataFrame) -> None:
+def render_monetary_policy_rate(df: pd.DataFrame) -> None:
     st.title("Miscellaneous")
-    trm_local = to_datatime(df, False)
+    local = rf.forward_fill_through(to_datatime(df, True), pd.Timestamp.now().normalize())
 
     chart_type = st.sidebar.selectbox("Chart Type:", ["Line", "Bar"])
 
-    in_month_view = st.session_state.get("trm_in_month", False)
-    day_compare = st.session_state.get("trm_day_compare", False)
+    in_month_view = st.session_state.get("policy_rate_in_month", False)
+    day_compare = st.session_state.get("policy_rate_day_compare", False)
 
-    year_options = sorted(trm_local.index.year.unique())
+    year_options = sorted(local.index.year.unique())
     month_labels = list(months.values())
     extra_caption = None
 
@@ -41,8 +44,8 @@ def render_trm(df: pd.DataFrame) -> None:
             month_label = st.selectbox("Month:", month_labels)
         month_num = find_key_by_value(months, month_label)
 
-        series = mf.trm_day_axis(trm_local, year, month_num)
-        info = [f"TRM in {month_label} {year}", "Day", "COP per USD"]
+        series = rf.rate_day_axis(local, SPEC, year, month_num)
+        info = [f"{SPEC.label} in {month_label} {year}", "Day", UNIT]
 
     elif day_compare:
         col1, col2 = st.columns(2)
@@ -53,28 +56,37 @@ def render_trm(df: pd.DataFrame) -> None:
         with col2:
             day = st.selectbox("Day:", list(range(1, days_in_month + 1)))
 
-        series = mf.trm_day_compare(trm_local, day, month_num)
+        today = pd.Timestamp.now()
+        year_end = pd.Timestamp(year=today.year, month=12, day=31)
+        extended = rf.forward_fill_through(local, year_end)
+
+        series = rf.rate_day_compare(extended, SPEC, day, month_num)
         series = show_all_years(series, president=False)
-        info = [f"TRM on {month_label} {day} across years", "Year", "COP per USD"]
+        info = [f"{SPEC.label} on {month_label} {day} across years", "Year", UNIT]
+
+        if today.year in series.index and (month_num, day) > (today.month, today.day):
+            extra_caption = (f"{today.year} is projected using the most recent Policy Rate "
+                              f"({today.strftime('%B %d, %Y')}) and is subject to change.")
 
     else:
         # Year/Month/President, mutually exclusive (same gating as Job Market -> Unemployment)
-        prev_months = st.session_state.get("trm_months", [])
-        prev_years = st.session_state.get("trm_years", [])
-        prev_pres = st.session_state.get("trm_presidents", [])
+        prev_months = st.session_state.get("policy_rate_months", [])
+        prev_years = st.session_state.get("policy_rate_years", [])
+        prev_pres = st.session_state.get("policy_rate_presidents", [])
         month_disabled = bool(prev_years or prev_pres)
         yearpres_disabled = bool(prev_months)
 
         col1, col2 = st.columns(2)
         with col1:
-            cur_years = st.multiselect("Year:", year_options, key="trm_years", disabled=yearpres_disabled)
+            cur_years = st.multiselect("Year:", year_options, key="policy_rate_years", disabled=yearpres_disabled)
         with col2:
-            cur_month_labels = st.multiselect("Month:", month_labels, key="trm_months", disabled=month_disabled)
+            cur_month_labels = st.multiselect("Month:", month_labels, key="policy_rate_months",
+                                               disabled=month_disabled)
 
         valid_presidents = get_valid_presidents(year_options)
         with st.sidebar:
             selected_presidents = president_multiselect(
-                valid_presidents, disabled=yearpres_disabled, key="trm_presidents"
+                valid_presidents, disabled=yearpres_disabled, key="policy_rate_presidents"
             )
 
         month_nums = [] if month_disabled else [find_key_by_value(months, m) for m in cur_month_labels]
@@ -82,17 +94,17 @@ def render_trm(df: pd.DataFrame) -> None:
         presidents_sel = [] if yearpres_disabled else selected_presidents
 
         if len(presidents_sel) >= 2:
-            series = mf.trm_year_axis(trm_local, [])
-            info = ["TRM", "Year", "COP per USD"]
+            series = rf.rate_year_axis(local, SPEC, [])
+            info = [SPEC.label, "Year", UNIT]
             series, info = reshape_by_presidents(series, presidents_sel, info)
         elif years or presidents_sel:  # single president or explicit years -> x = months
             year_set = _year_set(years, presidents_sel, year_options)
-            series = mf.trm_month_axis(trm_local, sorted(year_set))
-            info = ["TRM by month", "Month", "COP per USD"]
+            series = rf.rate_month_axis(local, SPEC, sorted(year_set))
+            info = [f"{SPEC.label} by month", "Month", UNIT]
         else:  # months selected, or default -> x = years
-            series = mf.trm_year_axis(trm_local, month_nums)
+            series = rf.rate_year_axis(local, SPEC, month_nums)
             series = show_all_years(series, president=False)
-            info = ["TRM", "Year", "COP per USD"]
+            info = [SPEC.label, "Year", UNIT]
             if not (years or presidents_sel or month_nums):
                 extra_caption = ("Showing the annual average. Pick month(s) to compare them across years, "
                                  "or year(s)/a president to see months.")
@@ -101,11 +113,11 @@ def render_trm(df: pd.DataFrame) -> None:
         st.warning("No data for selected filters.")
     else:
         highlight = highlight_selectbox(series)
-        fig = mc.line_or_bar(chart_type, series, info, highlight=highlight)
+        fig = mc.line_or_bar(chart_type, series, info, highlight=highlight, force_bar=in_month_view)
         mc.render_chart(fig)
         if extra_caption:
             st.caption(extra_caption)
 
-    st.sidebar.checkbox("In-month view", key="trm_in_month", disabled=day_compare)
-    st.sidebar.checkbox("Day comparison", key="trm_day_compare", disabled=in_month_view)
+    st.sidebar.checkbox("In-month view", key="policy_rate_in_month", disabled=day_compare)
+    st.sidebar.checkbox("Day comparison", key="policy_rate_day_compare", disabled=in_month_view)
     st.caption("Source: Banco de la República")
