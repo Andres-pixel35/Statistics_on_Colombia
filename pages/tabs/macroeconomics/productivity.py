@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from pages.helpers.macro import macro_charts as mc
+from pages.helpers import charts as mc
 from pages.helpers.macro import productivity_functions as pf
 import generalities.macro_generalities.productivity as pr
 from generalities.macro_generalities.dictionaries import presidents

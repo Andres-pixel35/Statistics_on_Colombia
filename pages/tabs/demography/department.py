@@ -1,6 +1,6 @@
 import streamlit as st
-from pages.helpers.macro import macro_charts as mc
-from pages.helpers.demography import demography_charts as dc
+from pages.helpers import charts as mc
+from pages.helpers import charts as dc
 from pages.helpers.demography import population_functions as pop
 from generalities.function import get_valid_presidents, show_all_years, load_csv, load_geojson
 from generalities.demography_generalities.population import POP_PATHS, GENDER_AGG, AGE_SINGLE, PREV_YEAR, PROJECTED_NOTE
