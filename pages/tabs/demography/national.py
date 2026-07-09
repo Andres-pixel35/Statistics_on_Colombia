@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
-from pages.helpers.macro import macro_charts as mc
-from pages.helpers.demography import demography_charts as dc
+from pages.helpers import charts as mc
+from pages.helpers import charts as dc
 from pages.helpers.demography import births_functions as bir
 from pages.helpers.demography import deaths_functions as dth
 from pages.helpers.demography import population_functions as pop

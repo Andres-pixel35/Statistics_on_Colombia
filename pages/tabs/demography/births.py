@@ -1,6 +1,6 @@
 import streamlit as st
-from pages.helpers.macro import macro_charts as mc
-from pages.helpers.demography import demography_charts as dc
+from pages.helpers import charts as mc
+from pages.helpers import charts as dc
 from pages.helpers.demography import births_functions as bir
 from generalities.macro_generalities.dictionaries import presidents
 from generalities.function import get_valid_presidents, find_key_by_value, president_multiselect, reshape_by_presidents, load_csv, load_geojson, highlight_selectbox

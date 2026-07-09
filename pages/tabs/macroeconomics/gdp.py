@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from pages.helpers.macro import gdp_functions as mf
-from pages.helpers.macro import macro_charts as mc
+from pages.helpers import charts as mc
 import generalities.macro_generalities.gdp_spend as t
 from generalities.macro_generalities.gdp_production import production_summarize_terms as p
 from generalities.macro_generalities.gdp_income import income_summarize_terms as income

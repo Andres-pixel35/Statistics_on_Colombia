@@ -24,6 +24,8 @@
 /path/to/the/repo/colombia/data/banco_republica/miscellaneous//salario_minimo.csv
 ```
 
-Note: unlike everything else in this guide, only tmr has any page/tab in the app yet.
-
+**tasa_monetaria**: open the file in excel, then remove the first four rows, change the columns names from "Fecha (dd/mm/aaaa), Tasa de política monetaria (%)" to "Fecha, Tasa (%)". Afterwards, remove the auto generated row at the end of the file and store it at:
+```bash
+/path/to/the/repo/colombia/data/banco_republica/miscellaneous/tasa_monetaria.csv
+```
 
