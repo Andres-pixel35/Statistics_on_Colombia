@@ -23,4 +23,4 @@ if view == "Exchange Rate":
 elif view == "Monetary Policy Rate":
     monetary_policy_rate.render_monetary_policy_rate(policy_rate_df)
 elif view == "Minimum Wage":
-    minimum_wage.render_minimum_wage(minimum_wage_df)
+    minimum_wage.render_minimum_wage(minimum_wage_df, exchange_rate_df)

@@ -224,8 +224,13 @@ def gdp_growth(df: pd.DataFrame, year: list, president: str, index: int, quarter
             max_growth = df[column].max()
             avg_growth = df[column].median()
         except Exception:
-            st.warning("Remember to press 'Show all years' if you want to select a year prior to 2000")
+            st.warning("There is no data for the selected filters")
             st.stop()
+
+        if quarter is None:
+            quarter = ""
+        else:
+            quarter = f"-{quarter}" 
 
         fig = go.Figure(go.Indicator(
             mode = "gauge+number+delta",
@@ -237,7 +242,7 @@ def gdp_growth(df: pd.DataFrame, year: list, president: str, index: int, quarter
                 "valueformat": ".2f",
                 "suffix": " vs Median"
             },
-            title = {"text": f"<b>{year[0]}-{quarter} {title}</b>", "font": {"size": 24}},
+            title = {"text": f"<b>{year[0]}{quarter} {title}</b>", "font": {"size": 24}},
             gauge = {
                 "axis": {
                     "range": [min_growth, max_growth],
