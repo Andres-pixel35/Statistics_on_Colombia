@@ -61,6 +61,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,Población ocupada,Dic - Feb,23848.204876
 2026,Total nacional,Población ocupada,Población ocupada,Ene - Mar,23890.987975
 2026,Total nacional,Población ocupada,Población ocupada,Feb - Abr,24241.02269
+2026,Total nacional,Población ocupada,Población ocupada,Mar - May,24404.076258
 2021,Total nacional,Población ocupada,No informa,Ene - Mar,48.02636566666666
 2021,Total nacional,Población ocupada,No informa,Feb - Abr,35.538152
 2021,Total nacional,Población ocupada,No informa,Mar - May,24.916646333333333
@@ -123,6 +124,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,No informa,Dic - Feb,0.0
 2026,Total nacional,Población ocupada,No informa,Ene - Mar,0.072949
 2026,Total nacional,Población ocupada,No informa,Feb - Abr,0.174989
+2026,Total nacional,Población ocupada,No informa,Mar - May,0.174989
 2021,Total nacional,Población ocupada,"Agricultura, ganadería, caza, silvicultura y pesca",Ene - Mar,3094.3434103333334
 2021,Total nacional,Población ocupada,"Agricultura, ganadería, caza, silvicultura y pesca",Feb - Abr,3044.6065433333333
 2021,Total nacional,Población ocupada,"Agricultura, ganadería, caza, silvicultura y pesca",Mar - May,3116.492306
@@ -185,6 +187,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,"Agricultura, ganadería, caza, silvicultura y pesca",Dic - Feb,3107.75655
 2026,Total nacional,Población ocupada,"Agricultura, ganadería, caza, silvicultura y pesca",Ene - Mar,3219.391393
 2026,Total nacional,Población ocupada,"Agricultura, ganadería, caza, silvicultura y pesca",Feb - Abr,3215.288264
+2026,Total nacional,Población ocupada,"Agricultura, ganadería, caza, silvicultura y pesca",Mar - May,3371.316337
 2021,Total nacional,Población ocupada,"Suministro de electricidad, gas, agua y gestión de desechos^",Ene - Mar,430.89967500000006
 2021,Total nacional,Población ocupada,"Suministro de electricidad, gas, agua y gestión de desechos^",Feb - Abr,480.789196
 2021,Total nacional,Población ocupada,"Suministro de electricidad, gas, agua y gestión de desechos^",Mar - May,486.8532493333334
@@ -247,6 +250,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,"Suministro de electricidad, gas, agua y gestión de desechos^",Dic - Feb,628.612154
 2026,Total nacional,Población ocupada,"Suministro de electricidad, gas, agua y gestión de desechos^",Ene - Mar,661.635658
 2026,Total nacional,Población ocupada,"Suministro de electricidad, gas, agua y gestión de desechos^",Feb - Abr,668.410097
+2026,Total nacional,Población ocupada,"Suministro de electricidad, gas, agua y gestión de desechos^",Mar - May,633.027254
 2021,Total nacional,Población ocupada,Industrias manufactureras,Ene - Mar,1976.8792890000002
 2021,Total nacional,Población ocupada,Industrias manufactureras,Feb - Abr,2046.9914496666668
 2021,Total nacional,Población ocupada,Industrias manufactureras,Mar - May,2039.012866
@@ -309,6 +313,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,Industrias manufactureras,Dic - Feb,2717.323742
 2026,Total nacional,Población ocupada,Industrias manufactureras,Ene - Mar,2574.723683
 2026,Total nacional,Población ocupada,Industrias manufactureras,Feb - Abr,2582.87888
+2026,Total nacional,Población ocupada,Industrias manufactureras,Mar - May,2543.283913
 2021,Total nacional,Población ocupada,Construcción,Ene - Mar,1477.884661
 2021,Total nacional,Población ocupada,Construcción,Feb - Abr,1507.4950033333334
 2021,Total nacional,Población ocupada,Construcción,Mar - May,1519.0542693333334
@@ -371,6 +376,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,Construcción,Dic - Feb,1623.729758
 2026,Total nacional,Población ocupada,Construcción,Ene - Mar,1661.654927
 2026,Total nacional,Población ocupada,Construcción,Feb - Abr,1699.841399
+2026,Total nacional,Población ocupada,Construcción,Mar - May,1677.432036
 2021,Total nacional,Población ocupada,Comercio y reparación de vehículos,Ene - Mar,3685.232109
 2021,Total nacional,Población ocupada,Comercio y reparación de vehículos,Feb - Abr,3713.999472333333
 2021,Total nacional,Población ocupada,Comercio y reparación de vehículos,Mar - May,3652.508582
@@ -433,6 +439,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,Comercio y reparación de vehículos,Dic - Feb,4117.88084
 2026,Total nacional,Población ocupada,Comercio y reparación de vehículos,Ene - Mar,4125.369172
 2026,Total nacional,Población ocupada,Comercio y reparación de vehículos,Feb - Abr,4141.259958
+2026,Total nacional,Población ocupada,Comercio y reparación de vehículos,Mar - May,4171.762219
 2021,Total nacional,Población ocupada,Alojamiento y servicios de comida,Ene - Mar,1249.0292763333334
 2021,Total nacional,Población ocupada,Alojamiento y servicios de comida,Feb - Abr,1278.7390746666667
 2021,Total nacional,Población ocupada,Alojamiento y servicios de comida,Mar - May,1243.7273423333334
@@ -495,6 +502,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,Alojamiento y servicios de comida,Dic - Feb,1766.586549
 2026,Total nacional,Población ocupada,Alojamiento y servicios de comida,Ene - Mar,1719.052385
 2026,Total nacional,Población ocupada,Alojamiento y servicios de comida,Feb - Abr,1802.050124
+2026,Total nacional,Población ocupada,Alojamiento y servicios de comida,Mar - May,1841.487071
 2021,Total nacional,Población ocupada,Transporte y almacenamiento,Ene - Mar,1336.679375
 2021,Total nacional,Población ocupada,Transporte y almacenamiento,Feb - Abr,1355.1227926666668
 2021,Total nacional,Población ocupada,Transporte y almacenamiento,Mar - May,1355.601378
@@ -557,6 +565,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,Transporte y almacenamiento,Dic - Feb,1784.700526
 2026,Total nacional,Población ocupada,Transporte y almacenamiento,Ene - Mar,1796.531309
 2026,Total nacional,Población ocupada,Transporte y almacenamiento,Feb - Abr,1803.464866
+2026,Total nacional,Población ocupada,Transporte y almacenamiento,Mar - May,1804.316702
 2021,Total nacional,Población ocupada,Información y comunicaciones,Ene - Mar,370.199296
 2021,Total nacional,Población ocupada,Información y comunicaciones,Feb - Abr,354.971076
 2021,Total nacional,Población ocupada,Información y comunicaciones,Mar - May,338.55634733333335
@@ -619,6 +628,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,Información y comunicaciones,Dic - Feb,433.408289
 2026,Total nacional,Población ocupada,Información y comunicaciones,Ene - Mar,437.163837
 2026,Total nacional,Población ocupada,Información y comunicaciones,Feb - Abr,430.795531
+2026,Total nacional,Población ocupada,Información y comunicaciones,Mar - May,412.220296
 2021,Total nacional,Población ocupada,Actividades financieras y de seguros,Ene - Mar,353.05192566666665
 2021,Total nacional,Población ocupada,Actividades financieras y de seguros,Feb - Abr,339.92899666666665
 2021,Total nacional,Población ocupada,Actividades financieras y de seguros,Mar - May,347.6153683333334
@@ -681,6 +691,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,Actividades financieras y de seguros,Dic - Feb,460.766711
 2026,Total nacional,Población ocupada,Actividades financieras y de seguros,Ene - Mar,507.413615
 2026,Total nacional,Población ocupada,Actividades financieras y de seguros,Feb - Abr,474.798676
+2026,Total nacional,Población ocupada,Actividades financieras y de seguros,Mar - May,455.994428
 2021,Total nacional,Población ocupada,Actividades inmobiliarias,Ene - Mar,145.61390566666668
 2021,Total nacional,Población ocupada,Actividades inmobiliarias,Feb - Abr,150.13184666666666
 2021,Total nacional,Población ocupada,Actividades inmobiliarias,Mar - May,166.23972166666667
@@ -743,6 +754,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,Actividades inmobiliarias,Dic - Feb,318.613834
 2026,Total nacional,Población ocupada,Actividades inmobiliarias,Ene - Mar,310.824345
 2026,Total nacional,Población ocupada,Actividades inmobiliarias,Feb - Abr,311.462831
+2026,Total nacional,Población ocupada,Actividades inmobiliarias,Mar - May,325.595839
 2021,Total nacional,Población ocupada,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Ene - Mar,1578.0552166666666
 2021,Total nacional,Población ocupada,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Feb - Abr,1616.336891
 2021,Total nacional,Población ocupada,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Mar - May,1588.98312
@@ -805,6 +817,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Dic - Feb,1934.185944
 2026,Total nacional,Población ocupada,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Ene - Mar,1910.621974
 2026,Total nacional,Población ocupada,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Feb - Abr,1914.802422
+2026,Total nacional,Población ocupada,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Mar - May,1921.109996
 2021,Total nacional,Población ocupada,"Administración pública y defensa, educación y atención de la salud humana",Ene - Mar,2474.885410666667
 2021,Total nacional,Población ocupada,"Administración pública y defensa, educación y atención de la salud humana",Feb - Abr,2543.8270113333333
 2021,Total nacional,Población ocupada,"Administración pública y defensa, educación y atención de la salud humana",Mar - May,2546.7258473333336
@@ -867,6 +880,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,"Administración pública y defensa, educación y atención de la salud humana",Dic - Feb,2907.609824
 2026,Total nacional,Población ocupada,"Administración pública y defensa, educación y atención de la salud humana",Ene - Mar,2950.380142
 2026,Total nacional,Población ocupada,"Administración pública y defensa, educación y atención de la salud humana",Feb - Abr,3146.943348
+2026,Total nacional,Población ocupada,"Administración pública y defensa, educación y atención de la salud humana",Mar - May,3208.244124
 2021,Total nacional,Población ocupada,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Ene - Mar,1566.4305436666666
 2021,Total nacional,Población ocupada,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Feb - Abr,1535.6800073333334
 2021,Total nacional,Población ocupada,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Mar - May,1520.1511019999998
@@ -929,6 +943,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Dic - Feb,2047.030155
 2026,Total nacional,Población ocupada,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Ene - Mar,2016.152584
 2026,Total nacional,Población ocupada,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Feb - Abr,2048.851306
+2026,Total nacional,Población ocupada,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Mar - May,2038.111055
 2021,Total nacional,Formal,Formal,Ene - Mar,7785.653908666667
 2021,Total nacional,Formal,Formal,Feb - Abr,7909.355157000001
 2021,Total nacional,Formal,Formal,Mar - May,8072.084484
@@ -991,6 +1006,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,Formal,Dic - Feb,10659.72814
 2026,Total nacional,Formal,Formal,Ene - Mar,10672.697775
 2026,Total nacional,Formal,Formal,Feb - Abr,10896.187587
+2026,Total nacional,Formal,Formal,Mar - May,11055.548043
 2021,Total nacional,Formal,No informa,Ene - Mar,22.122216999999996
 2021,Total nacional,Formal,No informa,Feb - Abr,17.512881333333333
 2021,Total nacional,Formal,No informa,Mar - May,13.296984666666665
@@ -1053,6 +1069,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,No informa,Dic - Feb,0.0
 2026,Total nacional,Formal,No informa,Ene - Mar,0.0
 2026,Total nacional,Formal,No informa,Feb - Abr,0.058288
+2026,Total nacional,Formal,No informa,Mar - May,0.058288
 2021,Total nacional,Formal,"Agricultura, ganadería, caza, silvicultura y pesca",Ene - Mar,364.0412063333333
 2021,Total nacional,Formal,"Agricultura, ganadería, caza, silvicultura y pesca",Feb - Abr,329.9586826666666
 2021,Total nacional,Formal,"Agricultura, ganadería, caza, silvicultura y pesca",Mar - May,396.451246
@@ -1115,6 +1132,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,"Agricultura, ganadería, caza, silvicultura y pesca",Dic - Feb,443.233546
 2026,Total nacional,Formal,"Agricultura, ganadería, caza, silvicultura y pesca",Ene - Mar,501.666345
 2026,Total nacional,Formal,"Agricultura, ganadería, caza, silvicultura y pesca",Feb - Abr,487.346825
+2026,Total nacional,Formal,"Agricultura, ganadería, caza, silvicultura y pesca",Mar - May,525.683987
 2021,Total nacional,Formal,"Suministro de electricidad, gas, agua y gestión de desechos^",Ene - Mar,219.158675
 2021,Total nacional,Formal,"Suministro de electricidad, gas, agua y gestión de desechos^",Feb - Abr,252.16142399999998
 2021,Total nacional,Formal,"Suministro de electricidad, gas, agua y gestión de desechos^",Mar - May,265.5900023333333
@@ -1177,6 +1195,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,"Suministro de electricidad, gas, agua y gestión de desechos^",Dic - Feb,296.97818
 2026,Total nacional,Formal,"Suministro de electricidad, gas, agua y gestión de desechos^",Ene - Mar,323.765393
 2026,Total nacional,Formal,"Suministro de electricidad, gas, agua y gestión de desechos^",Feb - Abr,354.69579
+2026,Total nacional,Formal,"Suministro de electricidad, gas, agua y gestión de desechos^",Mar - May,357.110611
 2021,Total nacional,Formal,Industrias manufactureras,Ene - Mar,892.962829
 2021,Total nacional,Formal,Industrias manufactureras,Feb - Abr,929.969997
 2021,Total nacional,Formal,Industrias manufactureras,Mar - May,963.8185753333333
@@ -1239,6 +1258,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,Industrias manufactureras,Dic - Feb,1525.502275
 2026,Total nacional,Formal,Industrias manufactureras,Ene - Mar,1415.096616
 2026,Total nacional,Formal,Industrias manufactureras,Feb - Abr,1422.682791
+2026,Total nacional,Formal,Industrias manufactureras,Mar - May,1405.590162
 2021,Total nacional,Formal,Construcción,Ene - Mar,411.98230366666667
 2021,Total nacional,Formal,Construcción,Feb - Abr,424.386633
 2021,Total nacional,Formal,Construcción,Mar - May,421.444277
@@ -1301,6 +1321,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,Construcción,Dic - Feb,484.287628
 2026,Total nacional,Formal,Construcción,Ene - Mar,500.841536
 2026,Total nacional,Formal,Construcción,Feb - Abr,516.735939
+2026,Total nacional,Formal,Construcción,Mar - May,520.129015
 2021,Total nacional,Formal,Comercio y reparación de vehículos,Ene - Mar,1294.636806
 2021,Total nacional,Formal,Comercio y reparación de vehículos,Feb - Abr,1333.6376993333336
 2021,Total nacional,Formal,Comercio y reparación de vehículos,Mar - May,1366.6565116666668
@@ -1363,6 +1384,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,Comercio y reparación de vehículos,Dic - Feb,1812.0633
 2026,Total nacional,Formal,Comercio y reparación de vehículos,Ene - Mar,1777.028379
 2026,Total nacional,Formal,Comercio y reparación de vehículos,Feb - Abr,1798.866367
+2026,Total nacional,Formal,Comercio y reparación de vehículos,Mar - May,1831.0743
 2021,Total nacional,Formal,Alojamiento y servicios de comida,Ene - Mar,243.5320836666667
 2021,Total nacional,Formal,Alojamiento y servicios de comida,Feb - Abr,237.045176
 2021,Total nacional,Formal,Alojamiento y servicios de comida,Mar - May,254.46818599999997
@@ -1425,6 +1447,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,Alojamiento y servicios de comida,Dic - Feb,391.325071
 2026,Total nacional,Formal,Alojamiento y servicios de comida,Ene - Mar,384.557841
 2026,Total nacional,Formal,Alojamiento y servicios de comida,Feb - Abr,402.064566
+2026,Total nacional,Formal,Alojamiento y servicios de comida,Mar - May,458.56026
 2021,Total nacional,Formal,Transporte y almacenamiento,Ene - Mar,405.11558233333335
 2021,Total nacional,Formal,Transporte y almacenamiento,Feb - Abr,408.7253896666667
 2021,Total nacional,Formal,Transporte y almacenamiento,Mar - May,402.1889006666667
@@ -1487,6 +1510,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,Transporte y almacenamiento,Dic - Feb,546.031857
 2026,Total nacional,Formal,Transporte y almacenamiento,Ene - Mar,558.323424
 2026,Total nacional,Formal,Transporte y almacenamiento,Feb - Abr,560.410102
+2026,Total nacional,Formal,Transporte y almacenamiento,Mar - May,564.480546
 2021,Total nacional,Formal,Información y comunicaciones,Ene - Mar,269.3318796666667
 2021,Total nacional,Formal,Información y comunicaciones,Feb - Abr,249.061645
 2021,Total nacional,Formal,Información y comunicaciones,Mar - May,240.53440933333331
@@ -1549,6 +1573,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,Información y comunicaciones,Dic - Feb,360.300932
 2026,Total nacional,Formal,Información y comunicaciones,Ene - Mar,356.969658
 2026,Total nacional,Formal,Información y comunicaciones,Feb - Abr,362.847315
+2026,Total nacional,Formal,Información y comunicaciones,Mar - May,346.8984
 2021,Total nacional,Formal,Actividades financieras y de seguros,Ene - Mar,291.576441
 2021,Total nacional,Formal,Actividades financieras y de seguros,Feb - Abr,284.4338393333333
 2021,Total nacional,Formal,Actividades financieras y de seguros,Mar - May,292.04455733333333
@@ -1611,6 +1636,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,Actividades financieras y de seguros,Dic - Feb,410.634989
 2026,Total nacional,Formal,Actividades financieras y de seguros,Ene - Mar,456.100211
 2026,Total nacional,Formal,Actividades financieras y de seguros,Feb - Abr,423.539488
+2026,Total nacional,Formal,Actividades financieras y de seguros,Mar - May,401.021726
 2021,Total nacional,Formal,Actividades inmobiliarias,Ene - Mar,95.97792066666666
 2021,Total nacional,Formal,Actividades inmobiliarias,Feb - Abr,98.33524166666666
 2021,Total nacional,Formal,Actividades inmobiliarias,Mar - May,115.94349
@@ -1673,6 +1699,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,Actividades inmobiliarias,Dic - Feb,262.037751
 2026,Total nacional,Formal,Actividades inmobiliarias,Ene - Mar,258.772969
 2026,Total nacional,Formal,Actividades inmobiliarias,Feb - Abr,256.986491
+2026,Total nacional,Formal,Actividades inmobiliarias,Mar - May,274.835358
 2021,Total nacional,Formal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Ene - Mar,914.583491
 2021,Total nacional,Formal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Feb - Abr,934.8304899999999
 2021,Total nacional,Formal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Mar - May,903.9759346666666
@@ -1735,6 +1762,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Dic - Feb,990.305658
 2026,Total nacional,Formal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Ene - Mar,975.927537
 2026,Total nacional,Formal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Feb - Abr,975.893235
+2026,Total nacional,Formal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Mar - May,985.912031
 2021,Total nacional,Formal,"Administración pública y defensa, educación y atención de la salud humana",Ene - Mar,2047.3673186666667
 2021,Total nacional,Formal,"Administración pública y defensa, educación y atención de la salud humana",Feb - Abr,2105.1965656666666
 2021,Total nacional,Formal,"Administración pública y defensa, educación y atención de la salud humana",Mar - May,2112.739823666667
@@ -1797,6 +1825,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,"Administración pública y defensa, educación y atención de la salud humana",Dic - Feb,2589.55975
 2026,Total nacional,Formal,"Administración pública y defensa, educación y atención de la salud humana",Ene - Mar,2625.169711
 2026,Total nacional,Formal,"Administración pública y defensa, educación y atención de la salud humana",Feb - Abr,2782.786314
+2026,Total nacional,Formal,"Administración pública y defensa, educación y atención de la salud humana",Mar - May,2823.848861
 2021,Total nacional,Formal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Ene - Mar,313.2651536666667
 2021,Total nacional,Formal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Feb - Abr,304.09949166666667
 2021,Total nacional,Formal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Mar - May,322.93158466666665
@@ -1859,6 +1888,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Dic - Feb,547.467203
 2026,Total nacional,Formal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Ene - Mar,538.478155
 2026,Total nacional,Formal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Feb - Abr,551.274076
+2026,Total nacional,Formal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Mar - May,560.344499
 2021,Total nacional,Informal,Informal,Ene - Mar,12001.55655
 2021,Total nacional,Informal,Informal,Feb - Abr,12094.802355666665
 2021,Total nacional,Informal,Informal,Mar - May,11874.353662333333
@@ -1921,6 +1951,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,Informal,Dic - Feb,13188.476735
 2026,Total nacional,Informal,Informal,Ene - Mar,13218.2902
 2026,Total nacional,Informal,Informal,Feb - Abr,13344.835103
+2026,Total nacional,Informal,Informal,Mar - May,13348.528215
 2021,Total nacional,Informal,No informa,Ene - Mar,25.904148666666668
 2021,Total nacional,Informal,No informa,Feb - Abr,18.02527033333333
 2021,Total nacional,Informal,No informa,Mar - May,11.619661333333333
@@ -1983,6 +2014,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,No informa,Dic - Feb,0.0
 2026,Total nacional,Informal,No informa,Ene - Mar,0.072949
 2026,Total nacional,Informal,No informa,Feb - Abr,0.116701
+2026,Total nacional,Informal,No informa,Mar - May,0.116701
 2021,Total nacional,Informal,"Agricultura, ganadería, caza, silvicultura y pesca",Ene - Mar,2730.3022036666666
 2021,Total nacional,Informal,"Agricultura, ganadería, caza, silvicultura y pesca",Feb - Abr,2714.6478606666665
 2021,Total nacional,Informal,"Agricultura, ganadería, caza, silvicultura y pesca",Mar - May,2720.0410596666666
@@ -2045,6 +2077,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,"Agricultura, ganadería, caza, silvicultura y pesca",Dic - Feb,2664.523004
 2026,Total nacional,Informal,"Agricultura, ganadería, caza, silvicultura y pesca",Ene - Mar,2717.725048
 2026,Total nacional,Informal,"Agricultura, ganadería, caza, silvicultura y pesca",Feb - Abr,2727.941439
+2026,Total nacional,Informal,"Agricultura, ganadería, caza, silvicultura y pesca",Mar - May,2845.63235
 2021,Total nacional,Informal,"Suministro de electricidad, gas, agua y gestión de desechos^",Ene - Mar,211.74099999999999
 2021,Total nacional,Informal,"Suministro de electricidad, gas, agua y gestión de desechos^",Feb - Abr,228.62777200000002
 2021,Total nacional,Informal,"Suministro de electricidad, gas, agua y gestión de desechos^",Mar - May,221.263247
@@ -2107,6 +2140,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,"Suministro de electricidad, gas, agua y gestión de desechos^",Dic - Feb,331.633974
 2026,Total nacional,Informal,"Suministro de electricidad, gas, agua y gestión de desechos^",Ene - Mar,337.870265
 2026,Total nacional,Informal,"Suministro de electricidad, gas, agua y gestión de desechos^",Feb - Abr,313.714307
+2026,Total nacional,Informal,"Suministro de electricidad, gas, agua y gestión de desechos^",Mar - May,275.916643
 2021,Total nacional,Informal,Industrias manufactureras,Ene - Mar,1083.9164596666667
 2021,Total nacional,Informal,Industrias manufactureras,Feb - Abr,1117.0214526666666
 2021,Total nacional,Informal,Industrias manufactureras,Mar - May,1075.194291
@@ -2169,6 +2203,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,Industrias manufactureras,Dic - Feb,1191.821467
 2026,Total nacional,Informal,Industrias manufactureras,Ene - Mar,1159.627067
 2026,Total nacional,Informal,Industrias manufactureras,Feb - Abr,1160.196089
+2026,Total nacional,Informal,Industrias manufactureras,Mar - May,1137.693752
 2021,Total nacional,Informal,Construcción,Ene - Mar,1065.9023573333334
 2021,Total nacional,Informal,Construcción,Feb - Abr,1083.108371
 2021,Total nacional,Informal,Construcción,Mar - May,1097.609993
@@ -2231,6 +2266,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,Construcción,Dic - Feb,1139.44213
 2026,Total nacional,Informal,Construcción,Ene - Mar,1160.813391
 2026,Total nacional,Informal,Construcción,Feb - Abr,1183.105459
+2026,Total nacional,Informal,Construcción,Mar - May,1157.303021
 2021,Total nacional,Informal,Comercio y reparación de vehículos,Ene - Mar,2390.595303
 2021,Total nacional,Informal,Comercio y reparación de vehículos,Feb - Abr,2380.361773
 2021,Total nacional,Informal,Comercio y reparación de vehículos,Mar - May,2285.852070333333
@@ -2293,6 +2329,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,Comercio y reparación de vehículos,Dic - Feb,2305.81754
 2026,Total nacional,Informal,Comercio y reparación de vehículos,Ene - Mar,2348.340794
 2026,Total nacional,Informal,Comercio y reparación de vehículos,Feb - Abr,2342.393591
+2026,Total nacional,Informal,Comercio y reparación de vehículos,Mar - May,2340.68792
 2021,Total nacional,Informal,Alojamiento y servicios de comida,Ene - Mar,1005.4971923333333
 2021,Total nacional,Informal,Alojamiento y servicios de comida,Feb - Abr,1041.6938983333332
 2021,Total nacional,Informal,Alojamiento y servicios de comida,Mar - May,989.2591556666666
@@ -2355,6 +2392,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,Alojamiento y servicios de comida,Dic - Feb,1375.261478
 2026,Total nacional,Informal,Alojamiento y servicios de comida,Ene - Mar,1334.494544
 2026,Total nacional,Informal,Alojamiento y servicios de comida,Feb - Abr,1399.985558
+2026,Total nacional,Informal,Alojamiento y servicios de comida,Mar - May,1382.926811
 2021,Total nacional,Informal,Transporte y almacenamiento,Ene - Mar,931.5637923333334
 2021,Total nacional,Informal,Transporte y almacenamiento,Feb - Abr,946.3974026666666
 2021,Total nacional,Informal,Transporte y almacenamiento,Mar - May,953.4124773333333
@@ -2417,6 +2455,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,Transporte y almacenamiento,Dic - Feb,1238.66867
 2026,Total nacional,Informal,Transporte y almacenamiento,Ene - Mar,1238.207885
 2026,Total nacional,Informal,Transporte y almacenamiento,Feb - Abr,1243.054764
+2026,Total nacional,Informal,Transporte y almacenamiento,Mar - May,1239.836156
 2021,Total nacional,Informal,Información y comunicaciones,Ene - Mar,100.86741633333334
 2021,Total nacional,Informal,Información y comunicaciones,Feb - Abr,105.909431
 2021,Total nacional,Informal,Información y comunicaciones,Mar - May,98.02193799999999
@@ -2479,6 +2518,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,Información y comunicaciones,Dic - Feb,73.107357
 2026,Total nacional,Informal,Información y comunicaciones,Ene - Mar,80.194179
 2026,Total nacional,Informal,Información y comunicaciones,Feb - Abr,67.948216
+2026,Total nacional,Informal,Información y comunicaciones,Mar - May,65.321896
 2021,Total nacional,Informal,Actividades financieras y de seguros,Ene - Mar,61.475484333333334
 2021,Total nacional,Informal,Actividades financieras y de seguros,Feb - Abr,55.495157
 2021,Total nacional,Informal,Actividades financieras y de seguros,Mar - May,55.57081133333333
@@ -2541,6 +2581,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,Actividades financieras y de seguros,Dic - Feb,50.131721
 2026,Total nacional,Informal,Actividades financieras y de seguros,Ene - Mar,51.313404
 2026,Total nacional,Informal,Actividades financieras y de seguros,Feb - Abr,51.259188
+2026,Total nacional,Informal,Actividades financieras y de seguros,Mar - May,54.972701
 2021,Total nacional,Informal,Actividades inmobiliarias,Ene - Mar,49.635985000000005
 2021,Total nacional,Informal,Actividades inmobiliarias,Feb - Abr,51.79660466666667
 2021,Total nacional,Informal,Actividades inmobiliarias,Mar - May,50.29623133333334
@@ -2603,6 +2644,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,Actividades inmobiliarias,Dic - Feb,56.576083
 2026,Total nacional,Informal,Actividades inmobiliarias,Ene - Mar,52.051376
 2026,Total nacional,Informal,Actividades inmobiliarias,Feb - Abr,54.47634
+2026,Total nacional,Informal,Actividades inmobiliarias,Mar - May,50.760481
 2021,Total nacional,Informal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Ene - Mar,663.4717256666667
 2021,Total nacional,Informal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Feb - Abr,681.506401
 2021,Total nacional,Informal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Mar - May,685.007185
@@ -2665,6 +2707,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Dic - Feb,943.880286
 2026,Total nacional,Informal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Ene - Mar,934.694437
 2026,Total nacional,Informal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Feb - Abr,938.909187
+2026,Total nacional,Informal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Mar - May,935.197965
 2021,Total nacional,Informal,"Administración pública y defensa, educación y atención de la salud humana",Ene - Mar,427.5180923333333
 2021,Total nacional,Informal,"Administración pública y defensa, educación y atención de la salud humana",Feb - Abr,438.63044599999995
 2021,Total nacional,Informal,"Administración pública y defensa, educación y atención de la salud humana",Mar - May,433.986024
@@ -2727,6 +2770,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,"Administración pública y defensa, educación y atención de la salud humana",Dic - Feb,318.050074
 2026,Total nacional,Informal,"Administración pública y defensa, educación y atención de la salud humana",Ene - Mar,325.210431
 2026,Total nacional,Informal,"Administración pública y defensa, educación y atención de la salud humana",Feb - Abr,364.157034
+2026,Total nacional,Informal,"Administración pública y defensa, educación y atención de la salud humana",Mar - May,384.395262
 2021,Total nacional,Informal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Ene - Mar,1253.16539
 2021,Total nacional,Informal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Feb - Abr,1231.5805156666668
 2021,Total nacional,Informal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Mar - May,1197.2195173333332
@@ -2789,6 +2833,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Dic - Feb,1499.562953
 2026,Total nacional,Informal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Ene - Mar,1477.67443
 2026,Total nacional,Informal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Feb - Abr,1497.57723
+2026,Total nacional,Informal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Mar - May,1477.766556
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Ene - Mar,9226.413326333335
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Feb - Abr,9320.446573000001
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Mar - May,9341.646440999999
@@ -2851,6 +2896,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Dic - Feb,11260.998726
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Ene - Mar,11227.725964
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Feb - Abr,11386.328947
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Mar - May,11420.206475
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,No informa,Ene - Mar,38.698622666666665
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,No informa,Feb - Abr,28.83518433333333
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,No informa,Mar - May,21.226693666666666
@@ -2913,6 +2959,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,No informa,Dic - Feb,0.0
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,No informa,Ene - Mar,0.072949
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,No informa,Feb - Abr,0.131237
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,No informa,Mar - May,0.131237
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Otras ramas*,Ene - Mar,228.15924333333336
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Otras ramas*,Feb - Abr,233.61107833333335
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Otras ramas*,Mar - May,255.18824966666668
@@ -2975,6 +3022,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Otras ramas*,Dic - Feb,271.435022
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Otras ramas*,Ene - Mar,296.57168
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Otras ramas*,Feb - Abr,303.752502
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,Otras ramas*,Mar - May,308.933191
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Industrias manufactureras,Ene - Mar,1099.9955120000002
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Industrias manufactureras,Feb - Abr,1066.7212929999998
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Industrias manufactureras,Mar - May,1081.56649
@@ -3037,6 +3085,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Industrias manufactureras,Dic - Feb,1504.09549
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Industrias manufactureras,Ene - Mar,1390.287999
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Industrias manufactureras,Feb - Abr,1438.209054
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,Industrias manufactureras,Mar - May,1473.629785
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Construcción,Ene - Mar,673.4520663333333
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Construcción,Feb - Abr,691.3225900000001
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Construcción,Mar - May,711.3933996666666
@@ -3099,6 +3148,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Construcción,Dic - Feb,718.706778
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Construcción,Ene - Mar,741.222761
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Construcción,Feb - Abr,757.813912
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,Construcción,Mar - May,741.929926
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Comercio y reparación de vehículos,Ene - Mar,1896.812603
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Comercio y reparación de vehículos,Feb - Abr,1976.7216173333334
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Comercio y reparación de vehículos,Mar - May,1983.457922333333
@@ -3161,6 +3211,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Comercio y reparación de vehículos,Dic - Feb,2189.902331
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Comercio y reparación de vehículos,Ene - Mar,2156.816833
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Comercio y reparación de vehículos,Feb - Abr,2170.102417
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,Comercio y reparación de vehículos,Mar - May,2185.114103
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Alojamiento y servicios de comida,Ene - Mar,595.2457053333334
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Alojamiento y servicios de comida,Feb - Abr,624.9279353333333
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Alojamiento y servicios de comida,Mar - May,610.166666
@@ -3223,6 +3274,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Alojamiento y servicios de comida,Dic - Feb,798.513486
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Alojamiento y servicios de comida,Ene - Mar,769.982987
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Alojamiento y servicios de comida,Feb - Abr,785.035582
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,Alojamiento y servicios de comida,Mar - May,808.04913
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Transporte y almacenamiento,Ene - Mar,685.434431
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Transporte y almacenamiento,Feb - Abr,683.2986673333334
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Transporte y almacenamiento,Mar - May,677.608033
@@ -3285,6 +3337,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Transporte y almacenamiento,Dic - Feb,955.68547
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Transporte y almacenamiento,Ene - Mar,976.311738
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Transporte y almacenamiento,Feb - Abr,956.972923
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,Transporte y almacenamiento,Mar - May,926.417622
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Información y comunicaciones,Ene - Mar,284.56457099999994
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Información y comunicaciones,Feb - Abr,268.5080046666667
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Información y comunicaciones,Mar - May,262.071178
@@ -3347,6 +3400,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Información y comunicaciones,Dic - Feb,309.019746
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Información y comunicaciones,Ene - Mar,323.123867
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Información y comunicaciones,Feb - Abr,333.455509
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,Información y comunicaciones,Mar - May,328.532605
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Actividades financieras y de seguros,Ene - Mar,274.58994800000005
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Actividades financieras y de seguros,Feb - Abr,257.97754499999996
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Actividades financieras y de seguros,Mar - May,268.97679266666665
@@ -3409,6 +3463,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Actividades financieras y de seguros,Dic - Feb,326.356474
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Actividades financieras y de seguros,Ene - Mar,362.998674
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Actividades financieras y de seguros,Feb - Abr,350.795129
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,Actividades financieras y de seguros,Mar - May,323.001937
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Actividades inmobiliarias,Ene - Mar,101.40402866666666
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Actividades inmobiliarias,Feb - Abr,108.00963266666668
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Actividades inmobiliarias,Mar - May,114.981583
@@ -3471,6 +3526,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Actividades inmobiliarias,Dic - Feb,225.858254
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Actividades inmobiliarias,Ene - Mar,235.092027
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Actividades inmobiliarias,Feb - Abr,227.424532
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,Actividades inmobiliarias,Mar - May,237.598231
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Ene - Mar,1142.870765
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Feb - Abr,1167.9876036666667
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Mar - May,1128.6689003333333
@@ -3533,6 +3589,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Dic - Feb,1256.408417
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Ene - Mar,1270.299372
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Feb - Abr,1276.582803
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Mar - May,1276.30382
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,"Administración pública y defensa, educación y atención de la salud humana",Ene - Mar,1446.7581013333331
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,"Administración pública y defensa, educación y atención de la salud humana",Feb - Abr,1464.1181933333335
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,"Administración pública y defensa, educación y atención de la salud humana",Mar - May,1471.1214536666666
@@ -3595,6 +3652,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,"Administración pública y defensa, educación y atención de la salud humana",Dic - Feb,1689.527451
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,"Administración pública y defensa, educación y atención de la salud humana",Ene - Mar,1720.650723
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,"Administración pública y defensa, educación y atención de la salud humana",Feb - Abr,1782.123568
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,"Administración pública y defensa, educación y atención de la salud humana",Mar - May,1808.503728
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Ene - Mar,758.427728
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Feb - Abr,748.4072276666667
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Mar - May,755.219079
@@ -3657,6 +3715,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Dic - Feb,1015.489804
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Ene - Mar,984.294353
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Feb - Abr,1003.929778
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Mar - May,1002.061159
 2021,13 Ciudades y áreas metropolitanas,Formal,Formal,Ene - Mar,4990.366199666666
 2021,13 Ciudades y áreas metropolitanas,Formal,Formal,Feb - Abr,4999.7586716666665
 2021,13 Ciudades y áreas metropolitanas,Formal,Formal,Mar - May,5089.547187333334
@@ -3719,6 +3778,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,Formal,Dic - Feb,6634.691589
 2026,13 Ciudades y áreas metropolitanas,Formal,Formal,Ene - Mar,6625.45175
 2026,13 Ciudades y áreas metropolitanas,Formal,Formal,Feb - Abr,6698.7158
+2026,13 Ciudades y áreas metropolitanas,Formal,Formal,Mar - May,6771.720593
 2021,13 Ciudades y áreas metropolitanas,Formal,No informa,Ene - Mar,19.711936666666666
 2021,13 Ciudades y áreas metropolitanas,Formal,No informa,Feb - Abr,15.165641
 2021,13 Ciudades y áreas metropolitanas,Formal,No informa,Mar - May,11.443108666666667
@@ -3781,6 +3841,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,No informa,Dic - Feb,0.0
 2026,13 Ciudades y áreas metropolitanas,Formal,No informa,Ene - Mar,0.0
 2026,13 Ciudades y áreas metropolitanas,Formal,No informa,Feb - Abr,0.058288
+2026,13 Ciudades y áreas metropolitanas,Formal,No informa,Mar - May,0.058288
 2021,13 Ciudades y áreas metropolitanas,Formal,Otras ramas*,Ene - Mar,132.98492833333333
 2021,13 Ciudades y áreas metropolitanas,Formal,Otras ramas*,Feb - Abr,133.48018166666668
 2021,13 Ciudades y áreas metropolitanas,Formal,Otras ramas*,Mar - May,149.65559366666665
@@ -3843,6 +3904,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,Otras ramas*,Dic - Feb,170.995871
 2026,13 Ciudades y áreas metropolitanas,Formal,Otras ramas*,Ene - Mar,191.659796
 2026,13 Ciudades y áreas metropolitanas,Formal,Otras ramas*,Feb - Abr,210.986959
+2026,13 Ciudades y áreas metropolitanas,Formal,Otras ramas*,Mar - May,211.667101
 2021,13 Ciudades y áreas metropolitanas,Formal,Industrias manufactureras,Ene - Mar,628.5612536666667
 2021,13 Ciudades y áreas metropolitanas,Formal,Industrias manufactureras,Feb - Abr,616.497417
 2021,13 Ciudades y áreas metropolitanas,Formal,Industrias manufactureras,Mar - May,639.674209
@@ -3905,6 +3967,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,Industrias manufactureras,Dic - Feb,1004.167537
 2026,13 Ciudades y áreas metropolitanas,Formal,Industrias manufactureras,Ene - Mar,929.010787
 2026,13 Ciudades y áreas metropolitanas,Formal,Industrias manufactureras,Feb - Abr,943.685748
+2026,13 Ciudades y áreas metropolitanas,Formal,Industrias manufactureras,Mar - May,975.562735
 2021,13 Ciudades y áreas metropolitanas,Formal,Construcción,Ene - Mar,267.707934
 2021,13 Ciudades y áreas metropolitanas,Formal,Construcción,Feb - Abr,281.943612
 2021,13 Ciudades y áreas metropolitanas,Formal,Construcción,Mar - May,283.965131
@@ -3967,6 +4030,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,Construcción,Dic - Feb,313.508299
 2026,13 Ciudades y áreas metropolitanas,Formal,Construcción,Ene - Mar,313.870726
 2026,13 Ciudades y áreas metropolitanas,Formal,Construcción,Feb - Abr,324.928151
+2026,13 Ciudades y áreas metropolitanas,Formal,Construcción,Mar - May,313.443897
 2021,13 Ciudades y áreas metropolitanas,Formal,Comercio y reparación de vehículos,Ene - Mar,830.057284
 2021,13 Ciudades y áreas metropolitanas,Formal,Comercio y reparación de vehículos,Feb - Abr,869.949897
 2021,13 Ciudades y áreas metropolitanas,Formal,Comercio y reparación de vehículos,Mar - May,930.3869343333334
@@ -4029,6 +4093,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,Comercio y reparación de vehículos,Dic - Feb,1169.911287
 2026,13 Ciudades y áreas metropolitanas,Formal,Comercio y reparación de vehículos,Ene - Mar,1123.707249
 2026,13 Ciudades y áreas metropolitanas,Formal,Comercio y reparación de vehículos,Feb - Abr,1120.105442
+2026,13 Ciudades y áreas metropolitanas,Formal,Comercio y reparación de vehículos,Mar - May,1141.219236
 2021,13 Ciudades y áreas metropolitanas,Formal,Alojamiento y servicios de comida,Ene - Mar,151.0422563333333
 2021,13 Ciudades y áreas metropolitanas,Formal,Alojamiento y servicios de comida,Feb - Abr,152.042086
 2021,13 Ciudades y áreas metropolitanas,Formal,Alojamiento y servicios de comida,Mar - May,171.50882366666667
@@ -4091,6 +4156,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,Alojamiento y servicios de comida,Dic - Feb,251.108446
 2026,13 Ciudades y áreas metropolitanas,Formal,Alojamiento y servicios de comida,Ene - Mar,248.043215
 2026,13 Ciudades y áreas metropolitanas,Formal,Alojamiento y servicios de comida,Feb - Abr,258.473627
+2026,13 Ciudades y áreas metropolitanas,Formal,Alojamiento y servicios de comida,Mar - May,285.712691
 2021,13 Ciudades y áreas metropolitanas,Formal,Transporte y almacenamiento,Ene - Mar,276.13653400000004
 2021,13 Ciudades y áreas metropolitanas,Formal,Transporte y almacenamiento,Feb - Abr,263.849833
 2021,13 Ciudades y áreas metropolitanas,Formal,Transporte y almacenamiento,Mar - May,252.62707533333332
@@ -4153,6 +4219,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,Transporte y almacenamiento,Dic - Feb,359.095626
 2026,13 Ciudades y áreas metropolitanas,Formal,Transporte y almacenamiento,Ene - Mar,362.509275
 2026,13 Ciudades y áreas metropolitanas,Formal,Transporte y almacenamiento,Feb - Abr,358.82163
+2026,13 Ciudades y áreas metropolitanas,Formal,Transporte y almacenamiento,Mar - May,345.892771
 2021,13 Ciudades y áreas metropolitanas,Formal,Información y comunicaciones,Ene - Mar,223.49286933333335
 2021,13 Ciudades y áreas metropolitanas,Formal,Información y comunicaciones,Feb - Abr,204.65333866666666
 2021,13 Ciudades y áreas metropolitanas,Formal,Información y comunicaciones,Mar - May,197.93178899999998
@@ -4215,6 +4282,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,Información y comunicaciones,Dic - Feb,260.11802
 2026,13 Ciudades y áreas metropolitanas,Formal,Información y comunicaciones,Ene - Mar,268.818346
 2026,13 Ciudades y áreas metropolitanas,Formal,Información y comunicaciones,Feb - Abr,285.836062
+2026,13 Ciudades y áreas metropolitanas,Formal,Información y comunicaciones,Mar - May,285.002916
 2021,13 Ciudades y áreas metropolitanas,Formal,Actividades financieras y de seguros,Ene - Mar,234.31029966666668
 2021,13 Ciudades y áreas metropolitanas,Formal,Actividades financieras y de seguros,Feb - Abr,222.457851
 2021,13 Ciudades y áreas metropolitanas,Formal,Actividades financieras y de seguros,Mar - May,233.41617766666664
@@ -4277,6 +4345,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,Actividades financieras y de seguros,Dic - Feb,303.347413
 2026,13 Ciudades y áreas metropolitanas,Formal,Actividades financieras y de seguros,Ene - Mar,336.955592
 2026,13 Ciudades y áreas metropolitanas,Formal,Actividades financieras y de seguros,Feb - Abr,324.997328
+2026,13 Ciudades y áreas metropolitanas,Formal,Actividades financieras y de seguros,Mar - May,297.511989
 2021,13 Ciudades y áreas metropolitanas,Formal,Actividades inmobiliarias,Ene - Mar,70.19846733333333
 2021,13 Ciudades y áreas metropolitanas,Formal,Actividades inmobiliarias,Feb - Abr,73.49396766666666
 2021,13 Ciudades y áreas metropolitanas,Formal,Actividades inmobiliarias,Mar - May,82.244288
@@ -4339,6 +4408,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,Actividades inmobiliarias,Dic - Feb,192.322009
 2026,13 Ciudades y áreas metropolitanas,Formal,Actividades inmobiliarias,Ene - Mar,198.356422
 2026,13 Ciudades y áreas metropolitanas,Formal,Actividades inmobiliarias,Feb - Abr,189.800887
+2026,13 Ciudades y áreas metropolitanas,Formal,Actividades inmobiliarias,Mar - May,202.08107
 2021,13 Ciudades y áreas metropolitanas,Formal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Ene - Mar,743.6904223333335
 2021,13 Ciudades y áreas metropolitanas,Formal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Feb - Abr,753.9388906666667
 2021,13 Ciudades y áreas metropolitanas,Formal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Mar - May,713.436797
@@ -4401,6 +4471,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Dic - Feb,759.310921
 2026,13 Ciudades y áreas metropolitanas,Formal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Ene - Mar,765.323077
 2026,13 Ciudades y áreas metropolitanas,Formal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Feb - Abr,760.281958
+2026,13 Ciudades y áreas metropolitanas,Formal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Mar - May,756.776652
 2021,13 Ciudades y áreas metropolitanas,Formal,"Administración pública y defensa, educación y atención de la salud humana",Ene - Mar,1209.4335503333334
 2021,13 Ciudades y áreas metropolitanas,Formal,"Administración pública y defensa, educación y atención de la salud humana",Feb - Abr,1218.9587276666666
 2021,13 Ciudades y áreas metropolitanas,Formal,"Administración pública y defensa, educación y atención de la salud humana",Mar - May,1213.4022676666666
@@ -4463,6 +4534,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,"Administración pública y defensa, educación y atención de la salud humana",Dic - Feb,1509.573237
 2026,13 Ciudades y áreas metropolitanas,Formal,"Administración pública y defensa, educación y atención de la salud humana",Ene - Mar,1536.132032
 2026,13 Ciudades y áreas metropolitanas,Formal,"Administración pública y defensa, educación y atención de la salud humana",Feb - Abr,1576.685454
+2026,13 Ciudades y áreas metropolitanas,Formal,"Administración pública y defensa, educación y atención de la salud humana",Mar - May,1604.681742
 2021,13 Ciudades y áreas metropolitanas,Formal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Ene - Mar,203.03846433333334
 2021,13 Ciudades y áreas metropolitanas,Formal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Feb - Abr,193.32722833333332
 2021,13 Ciudades y áreas metropolitanas,Formal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Mar - May,209.854993
@@ -4525,6 +4597,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Dic - Feb,341.232923
 2026,13 Ciudades y áreas metropolitanas,Formal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Ene - Mar,351.065232
 2026,13 Ciudades y áreas metropolitanas,Formal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Feb - Abr,344.054267
+2026,13 Ciudades y áreas metropolitanas,Formal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Mar - May,352.109503
 2021,13 Ciudades y áreas metropolitanas,Informal,Informal,Ene - Mar,4236.047126666667
 2021,13 Ciudades y áreas metropolitanas,Informal,Informal,Feb - Abr,4320.687901333334
 2021,13 Ciudades y áreas metropolitanas,Informal,Informal,Mar - May,4252.099253666666
@@ -4587,6 +4660,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,Informal,Dic - Feb,4626.307137
 2026,13 Ciudades y áreas metropolitanas,Informal,Informal,Ene - Mar,4602.274214
 2026,13 Ciudades y áreas metropolitanas,Informal,Informal,Feb - Abr,4687.613147
+2026,13 Ciudades y áreas metropolitanas,Informal,Informal,Mar - May,4648.485882
 2021,13 Ciudades y áreas metropolitanas,Informal,No informa,Ene - Mar,18.986686333333335
 2021,13 Ciudades y áreas metropolitanas,Informal,No informa,Feb - Abr,13.669542999999999
 2021,13 Ciudades y áreas metropolitanas,Informal,No informa,Mar - May,9.783584666666666
@@ -4649,6 +4723,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,No informa,Dic - Feb,0.0
 2026,13 Ciudades y áreas metropolitanas,Informal,No informa,Ene - Mar,0.072949
 2026,13 Ciudades y áreas metropolitanas,Informal,No informa,Feb - Abr,0.072949
+2026,13 Ciudades y áreas metropolitanas,Informal,No informa,Mar - May,0.072949
 2021,13 Ciudades y áreas metropolitanas,Informal,Otras ramas*,Ene - Mar,95.17431466666666
 2021,13 Ciudades y áreas metropolitanas,Informal,Otras ramas*,Feb - Abr,100.130896
 2021,13 Ciudades y áreas metropolitanas,Informal,Otras ramas*,Mar - May,105.53265533333332
@@ -4711,6 +4786,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,Otras ramas*,Dic - Feb,100.439152
 2026,13 Ciudades y áreas metropolitanas,Informal,Otras ramas*,Ene - Mar,104.911884
 2026,13 Ciudades y áreas metropolitanas,Informal,Otras ramas*,Feb - Abr,92.765543
+2026,13 Ciudades y áreas metropolitanas,Informal,Otras ramas*,Mar - May,97.26609
 2021,13 Ciudades y áreas metropolitanas,Informal,Industrias manufactureras,Ene - Mar,471.43425866666666
 2021,13 Ciudades y áreas metropolitanas,Informal,Industrias manufactureras,Feb - Abr,450.2238763333333
 2021,13 Ciudades y áreas metropolitanas,Informal,Industrias manufactureras,Mar - May,441.89228099999997
@@ -4773,6 +4849,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,Industrias manufactureras,Dic - Feb,499.927953
 2026,13 Ciudades y áreas metropolitanas,Informal,Industrias manufactureras,Ene - Mar,461.277212
 2026,13 Ciudades y áreas metropolitanas,Informal,Industrias manufactureras,Feb - Abr,494.523306
+2026,13 Ciudades y áreas metropolitanas,Informal,Industrias manufactureras,Mar - May,498.06705
 2021,13 Ciudades y áreas metropolitanas,Informal,Construcción,Ene - Mar,405.74413266666664
 2021,13 Ciudades y áreas metropolitanas,Informal,Construcción,Feb - Abr,409.37897833333335
 2021,13 Ciudades y áreas metropolitanas,Informal,Construcción,Mar - May,427.4282686666666
@@ -4835,6 +4912,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,Construcción,Dic - Feb,405.198479
 2026,13 Ciudades y áreas metropolitanas,Informal,Construcción,Ene - Mar,427.352035
 2026,13 Ciudades y áreas metropolitanas,Informal,Construcción,Feb - Abr,432.885761
+2026,13 Ciudades y áreas metropolitanas,Informal,Construcción,Mar - May,428.486029
 2021,13 Ciudades y áreas metropolitanas,Informal,Comercio y reparación de vehículos,Ene - Mar,1066.7553193333333
 2021,13 Ciudades y áreas metropolitanas,Informal,Comercio y reparación de vehículos,Feb - Abr,1106.7717206666666
 2021,13 Ciudades y áreas metropolitanas,Informal,Comercio y reparación de vehículos,Mar - May,1053.0709883333332
@@ -4897,6 +4975,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,Comercio y reparación de vehículos,Dic - Feb,1019.991044
 2026,13 Ciudades y áreas metropolitanas,Informal,Comercio y reparación de vehículos,Ene - Mar,1033.109584
 2026,13 Ciudades y áreas metropolitanas,Informal,Comercio y reparación de vehículos,Feb - Abr,1049.996976
+2026,13 Ciudades y áreas metropolitanas,Informal,Comercio y reparación de vehículos,Mar - May,1043.894867
 2021,13 Ciudades y áreas metropolitanas,Informal,Alojamiento y servicios de comida,Ene - Mar,444.20344900000003
 2021,13 Ciudades y áreas metropolitanas,Informal,Alojamiento y servicios de comida,Feb - Abr,472.885849
 2021,13 Ciudades y áreas metropolitanas,Informal,Alojamiento y servicios de comida,Mar - May,438.65784233333335
@@ -4959,6 +5038,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,Alojamiento y servicios de comida,Dic - Feb,547.405041
 2026,13 Ciudades y áreas metropolitanas,Informal,Alojamiento y servicios de comida,Ene - Mar,521.939772
 2026,13 Ciudades y áreas metropolitanas,Informal,Alojamiento y servicios de comida,Feb - Abr,526.561955
+2026,13 Ciudades y áreas metropolitanas,Informal,Alojamiento y servicios de comida,Mar - May,522.336439
 2021,13 Ciudades y áreas metropolitanas,Informal,Transporte y almacenamiento,Ene - Mar,409.2978966666667
 2021,13 Ciudades y áreas metropolitanas,Informal,Transporte y almacenamiento,Feb - Abr,419.44883400000003
 2021,13 Ciudades y áreas metropolitanas,Informal,Transporte y almacenamiento,Mar - May,424.9809573333334
@@ -5021,6 +5101,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,Transporte y almacenamiento,Dic - Feb,596.589844
 2026,13 Ciudades y áreas metropolitanas,Informal,Transporte y almacenamiento,Ene - Mar,613.802463
 2026,13 Ciudades y áreas metropolitanas,Informal,Transporte y almacenamiento,Feb - Abr,598.151294
+2026,13 Ciudades y áreas metropolitanas,Informal,Transporte y almacenamiento,Mar - May,580.524851
 2021,13 Ciudades y áreas metropolitanas,Informal,Información y comunicaciones,Ene - Mar,61.071701999999995
 2021,13 Ciudades y áreas metropolitanas,Informal,Información y comunicaciones,Feb - Abr,63.854666
 2021,13 Ciudades y áreas metropolitanas,Informal,Información y comunicaciones,Mar - May,64.139389
@@ -5083,6 +5164,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,Información y comunicaciones,Dic - Feb,48.901726
 2026,13 Ciudades y áreas metropolitanas,Informal,Información y comunicaciones,Ene - Mar,54.305521
 2026,13 Ciudades y áreas metropolitanas,Informal,Información y comunicaciones,Feb - Abr,47.619447
+2026,13 Ciudades y áreas metropolitanas,Informal,Información y comunicaciones,Mar - May,43.529689
 2021,13 Ciudades y áreas metropolitanas,Informal,Actividades financieras y de seguros,Ene - Mar,40.27964866666667
 2021,13 Ciudades y áreas metropolitanas,Informal,Actividades financieras y de seguros,Feb - Abr,35.519694333333334
 2021,13 Ciudades y áreas metropolitanas,Informal,Actividades financieras y de seguros,Mar - May,35.56061533333334
@@ -5145,6 +5227,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,Actividades financieras y de seguros,Dic - Feb,23.009061
 2026,13 Ciudades y áreas metropolitanas,Informal,Actividades financieras y de seguros,Ene - Mar,26.043082
 2026,13 Ciudades y áreas metropolitanas,Informal,Actividades financieras y de seguros,Feb - Abr,25.797801
+2026,13 Ciudades y áreas metropolitanas,Informal,Actividades financieras y de seguros,Mar - May,25.489948
 2021,13 Ciudades y áreas metropolitanas,Informal,Actividades inmobiliarias,Ene - Mar,31.205561666666668
 2021,13 Ciudades y áreas metropolitanas,Informal,Actividades inmobiliarias,Feb - Abr,34.51566533333334
 2021,13 Ciudades y áreas metropolitanas,Informal,Actividades inmobiliarias,Mar - May,32.737295333333336
@@ -5207,6 +5290,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,Actividades inmobiliarias,Dic - Feb,33.536245
 2026,13 Ciudades y áreas metropolitanas,Informal,Actividades inmobiliarias,Ene - Mar,36.735605
 2026,13 Ciudades y áreas metropolitanas,Informal,Actividades inmobiliarias,Feb - Abr,37.623645
+2026,13 Ciudades y áreas metropolitanas,Informal,Actividades inmobiliarias,Mar - May,35.517161
 2021,13 Ciudades y áreas metropolitanas,Informal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Ene - Mar,399.1803426666667
 2021,13 Ciudades y áreas metropolitanas,Informal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Feb - Abr,414.04871299999996
 2021,13 Ciudades y áreas metropolitanas,Informal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Mar - May,415.2321036666667
@@ -5269,6 +5353,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Dic - Feb,497.097496
 2026,13 Ciudades y áreas metropolitanas,Informal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Ene - Mar,504.976294
 2026,13 Ciudades y áreas metropolitanas,Informal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Feb - Abr,516.300845
+2026,13 Ciudades y áreas metropolitanas,Informal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Mar - May,519.527168
 2021,13 Ciudades y áreas metropolitanas,Informal,"Administración pública y defensa, educación y atención de la salud humana",Ene - Mar,237.324551
 2021,13 Ciudades y áreas metropolitanas,Informal,"Administración pública y defensa, educación y atención de la salud humana",Feb - Abr,245.1594656666667
 2021,13 Ciudades y áreas metropolitanas,Informal,"Administración pública y defensa, educación y atención de la salud humana",Mar - May,257.7191863333333
@@ -5331,6 +5416,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,"Administración pública y defensa, educación y atención de la salud humana",Dic - Feb,179.954215
 2026,13 Ciudades y áreas metropolitanas,Informal,"Administración pública y defensa, educación y atención de la salud humana",Ene - Mar,184.518691
 2026,13 Ciudades y áreas metropolitanas,Informal,"Administración pública y defensa, educación y atención de la salud humana",Feb - Abr,205.438114
+2026,13 Ciudades y áreas metropolitanas,Informal,"Administración pública y defensa, educación y atención de la salud humana",Mar - May,203.821987
 2021,13 Ciudades y áreas metropolitanas,Informal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Ene - Mar,555.3892636666666
 2021,13 Ciudades y áreas metropolitanas,Informal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Feb - Abr,555.0799993333334
 2021,13 Ciudades y áreas metropolitanas,Informal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Mar - May,545.3640859999999
@@ -5393,6 +5479,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Dic - Feb,674.256881
 2026,13 Ciudades y áreas metropolitanas,Informal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Ene - Mar,633.229121
 2026,13 Ciudades y áreas metropolitanas,Informal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Feb - Abr,659.875511
+2026,13 Ciudades y áreas metropolitanas,Informal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Mar - May,649.951655
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Ene - Mar,10207.340572
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Feb - Abr,10314.171929333332
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Mar - May,10331.821430333332
@@ -5455,6 +5542,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Dic - Feb,12429.285203
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Ene - Mar,12402.357556
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Feb - Abr,12582.268196
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Mar - May,12619.478694
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,No informa,Ene - Mar,41.043386999999996
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,No informa,Feb - Abr,30.730439666666665
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,No informa,Mar - May,22.529017999999997
@@ -5517,6 +5605,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,No informa,Dic - Feb,0.0
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,No informa,Ene - Mar,0.072949
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,No informa,Feb - Abr,0.174989
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,No informa,Mar - May,0.174989
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Otras ramas*,Ene - Mar,271.99395400000003
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Otras ramas*,Feb - Abr,275.24420233333336
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Otras ramas*,Mar - May,298.48993
@@ -5579,6 +5668,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Otras ramas*,Dic - Feb,316.006498
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Otras ramas*,Ene - Mar,344.343219
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Otras ramas*,Feb - Abr,353.189197
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,Otras ramas*,Mar - May,356.102284
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Industrias manufactureras,Ene - Mar,1167.0505533333333
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Industrias manufactureras,Feb - Abr,1131.832269
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Industrias manufactureras,Mar - May,1145.683876
@@ -5641,6 +5731,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Industrias manufactureras,Dic - Feb,1587.959614
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Industrias manufactureras,Ene - Mar,1469.926408
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Industrias manufactureras,Feb - Abr,1516.516391
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,Industrias manufactureras,Mar - May,1553.287137
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Construcción,Ene - Mar,756.5541313333333
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Construcción,Feb - Abr,781.7365739999999
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Construcción,Mar - May,800.6272560000001
@@ -5703,6 +5794,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Construcción,Dic - Feb,809.325712
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Construcción,Ene - Mar,833.290087
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Construcción,Feb - Abr,849.09032
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,Construcción,Mar - May,836.017463
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Comercio y reparación de vehículos,Ene - Mar,2121.5063116666665
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Comercio y reparación de vehículos,Feb - Abr,2204.5812276666666
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Comercio y reparación de vehículos,Mar - May,2202.9482976666663
@@ -5765,6 +5857,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Comercio y reparación de vehículos,Dic - Feb,2436.090354
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Comercio y reparación de vehículos,Ene - Mar,2399.783893
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Comercio y reparación de vehículos,Feb - Abr,2422.332419
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,Comercio y reparación de vehículos,Mar - May,2434.747054
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Alojamiento y servicios de comida,Ene - Mar,677.4423333333334
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Alojamiento y servicios de comida,Feb - Abr,703.6928996666667
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Alojamiento y servicios de comida,Mar - May,684.7807313333333
@@ -5827,6 +5920,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Alojamiento y servicios de comida,Dic - Feb,903.357476
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Alojamiento y servicios de comida,Ene - Mar,872.440645
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Alojamiento y servicios de comida,Feb - Abr,890.461266
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,Alojamiento y servicios de comida,Mar - May,914.913953
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Transporte y almacenamiento,Ene - Mar,780.2096973333333
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Transporte y almacenamiento,Feb - Abr,775.2726973333333
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Transporte y almacenamiento,Mar - May,772.4575176666667
@@ -5889,6 +5983,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Transporte y almacenamiento,Dic - Feb,1067.206827
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Transporte y almacenamiento,Ene - Mar,1089.972038
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Transporte y almacenamiento,Feb - Abr,1073.212254
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,Transporte y almacenamiento,Mar - May,1047.277172
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Información y comunicaciones,Ene - Mar,296.8734293333334
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Información y comunicaciones,Feb - Abr,281.60652833333336
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Información y comunicaciones,Mar - May,276.46750733333334
@@ -5951,6 +6046,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Información y comunicaciones,Dic - Feb,328.197913
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Información y comunicaciones,Ene - Mar,340.553323
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Información y comunicaciones,Feb - Abr,349.080474
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,Información y comunicaciones,Mar - May,344.355466
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Actividades financieras y de seguros,Ene - Mar,291.9210053333333
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Actividades financieras y de seguros,Feb - Abr,275.4185133333333
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Actividades financieras y de seguros,Mar - May,284.46560266666665
@@ -6013,6 +6109,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Actividades financieras y de seguros,Dic - Feb,347.668148
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Actividades financieras y de seguros,Ene - Mar,385.632021
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Actividades financieras y de seguros,Feb - Abr,373.705302
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,Actividades financieras y de seguros,Mar - May,346.920529
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Actividades inmobiliarias,Ene - Mar,109.369478
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Actividades inmobiliarias,Feb - Abr,115.07393566666667
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Actividades inmobiliarias,Mar - May,120.84135133333332
@@ -6075,6 +6172,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Actividades inmobiliarias,Dic - Feb,237.73654
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Actividades inmobiliarias,Ene - Mar,247.028356
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Actividades inmobiliarias,Feb - Abr,238.620658
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,Actividades inmobiliarias,Mar - May,250.434581
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Ene - Mar,1216.1331673333334
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Feb - Abr,1244.8823430000002
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Mar - May,1210.5417126666669
@@ -6137,6 +6235,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Dic - Feb,1352.497701
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Ene - Mar,1367.490774
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Feb - Abr,1369.923394
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Mar - May,1368.917799
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,"Administración pública y defensa, educación y atención de la salud humana",Ene - Mar,1624.134053
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,"Administración pública y defensa, educación y atención de la salud humana",Feb - Abr,1649.865734
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,"Administración pública y defensa, educación y atención de la salud humana",Mar - May,1659.1700043333333
@@ -6199,6 +6298,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,"Administración pública y defensa, educación y atención de la salud humana",Dic - Feb,1910.125714
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,"Administración pública y defensa, educación y atención de la salud humana",Ene - Mar,1950.094265
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,"Administración pública y defensa, educación y atención de la salud humana",Feb - Abr,2020.727847
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,"Administración pública y defensa, educación y atención de la salud humana",Mar - May,2044.119321
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Ene - Mar,853.109071
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Feb - Abr,844.2345653333333
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Mar - May,852.8186253333333
@@ -6261,6 +6361,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Dic - Feb,1133.112706
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Ene - Mar,1101.729576
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Feb - Abr,1125.233686
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Mar - May,1122.210945
 2021,23 Ciudades y áreas metropolitanas,Formal,Formal,Ene - Mar,5381.842067
 2021,23 Ciudades y áreas metropolitanas,Formal,Formal,Feb - Abr,5397.806292666667
 2021,23 Ciudades y áreas metropolitanas,Formal,Formal,Mar - May,5488.904758333333
@@ -6323,6 +6424,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,Formal,Dic - Feb,7158.345735
 2026,23 Ciudades y áreas metropolitanas,Formal,Formal,Ene - Mar,7162.025443
 2026,23 Ciudades y áreas metropolitanas,Formal,Formal,Feb - Abr,7252.805243
+2026,23 Ciudades y áreas metropolitanas,Formal,Formal,Mar - May,7326.40866
 2021,23 Ciudades y áreas metropolitanas,Formal,No informa,Ene - Mar,20.163431
 2021,23 Ciudades y áreas metropolitanas,Formal,No informa,Feb - Abr,15.554095333333334
 2021,23 Ciudades y áreas metropolitanas,Formal,No informa,Mar - May,11.724247
@@ -6385,6 +6487,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,No informa,Dic - Feb,0.0
 2026,23 Ciudades y áreas metropolitanas,Formal,No informa,Ene - Mar,0.0
 2026,23 Ciudades y áreas metropolitanas,Formal,No informa,Feb - Abr,0.058288
+2026,23 Ciudades y áreas metropolitanas,Formal,No informa,Mar - May,0.058288
 2021,23 Ciudades y áreas metropolitanas,Formal,Otras ramas*,Ene - Mar,153.03959033333334
 2021,23 Ciudades y áreas metropolitanas,Formal,Otras ramas*,Feb - Abr,152.70682266666665
 2021,23 Ciudades y áreas metropolitanas,Formal,Otras ramas*,Mar - May,169.61693533333334
@@ -6447,6 +6550,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,Otras ramas*,Dic - Feb,194.488138
 2026,23 Ciudades y áreas metropolitanas,Formal,Otras ramas*,Ene - Mar,217.906334
 2026,23 Ciudades y áreas metropolitanas,Formal,Otras ramas*,Feb - Abr,237.990028
+2026,23 Ciudades y áreas metropolitanas,Formal,Otras ramas*,Mar - May,238.384294
 2021,23 Ciudades y áreas metropolitanas,Formal,Industrias manufactureras,Ene - Mar,648.851133
 2021,23 Ciudades y áreas metropolitanas,Formal,Industrias manufactureras,Feb - Abr,636.609827
 2021,23 Ciudades y áreas metropolitanas,Formal,Industrias manufactureras,Mar - May,660.9641153333333
@@ -6509,6 +6613,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,Industrias manufactureras,Dic - Feb,1036.299988
 2026,23 Ciudades y áreas metropolitanas,Formal,Industrias manufactureras,Ene - Mar,959.645166
 2026,23 Ciudades y áreas metropolitanas,Formal,Industrias manufactureras,Feb - Abr,974.717971
+2026,23 Ciudades y áreas metropolitanas,Formal,Industrias manufactureras,Mar - May,1007.443566
 2021,23 Ciudades y áreas metropolitanas,Formal,Construcción,Ene - Mar,283.1007486666667
 2021,23 Ciudades y áreas metropolitanas,Formal,Construcción,Feb - Abr,299.171865
 2021,23 Ciudades y áreas metropolitanas,Formal,Construcción,Mar - May,300.345699
@@ -6571,6 +6676,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,Construcción,Dic - Feb,334.592162
 2026,23 Ciudades y áreas metropolitanas,Formal,Construcción,Ene - Mar,336.41369
 2026,23 Ciudades y áreas metropolitanas,Formal,Construcción,Feb - Abr,348.012845
+2026,23 Ciudades y áreas metropolitanas,Formal,Construcción,Mar - May,337.217207
 2021,23 Ciudades y áreas metropolitanas,Formal,Comercio y reparación de vehículos,Ene - Mar,910.4750469999999
 2021,23 Ciudades y áreas metropolitanas,Formal,Comercio y reparación de vehículos,Feb - Abr,948.1528886666666
 2021,23 Ciudades y áreas metropolitanas,Formal,Comercio y reparación de vehículos,Mar - May,1005.8170143333333
@@ -6633,6 +6739,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,Comercio y reparación de vehículos,Dic - Feb,1267.372271
 2026,23 Ciudades y áreas metropolitanas,Formal,Comercio y reparación de vehículos,Ene - Mar,1222.531439
 2026,23 Ciudades y áreas metropolitanas,Formal,Comercio y reparación de vehículos,Feb - Abr,1225.47661
+2026,23 Ciudades y áreas metropolitanas,Formal,Comercio y reparación de vehículos,Mar - May,1247.127065
 2021,23 Ciudades y áreas metropolitanas,Formal,Alojamiento y servicios de comida,Ene - Mar,167.84290233333334
 2021,23 Ciudades y áreas metropolitanas,Formal,Alojamiento y servicios de comida,Feb - Abr,168.2105756666667
 2021,23 Ciudades y áreas metropolitanas,Formal,Alojamiento y servicios de comida,Mar - May,186.43587466666668
@@ -6695,6 +6802,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,Alojamiento y servicios de comida,Dic - Feb,276.267294
 2026,23 Ciudades y áreas metropolitanas,Formal,Alojamiento y servicios de comida,Ene - Mar,272.013412
 2026,23 Ciudades y áreas metropolitanas,Formal,Alojamiento y servicios de comida,Feb - Abr,282.60181
+2026,23 Ciudades y áreas metropolitanas,Formal,Alojamiento y servicios de comida,Mar - May,310.831373
 2021,23 Ciudades y áreas metropolitanas,Formal,Transporte y almacenamiento,Ene - Mar,295.00980000000004
 2021,23 Ciudades y áreas metropolitanas,Formal,Transporte y almacenamiento,Feb - Abr,282.09865400000007
 2021,23 Ciudades y áreas metropolitanas,Formal,Transporte y almacenamiento,Mar - May,270.7257696666666
@@ -6757,6 +6865,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,Transporte y almacenamiento,Dic - Feb,382.961002
 2026,23 Ciudades y áreas metropolitanas,Formal,Transporte y almacenamiento,Ene - Mar,387.090251
 2026,23 Ciudades y áreas metropolitanas,Formal,Transporte y almacenamiento,Feb - Abr,383.949797
+2026,23 Ciudades y áreas metropolitanas,Formal,Transporte y almacenamiento,Mar - May,371.463389
 2021,23 Ciudades y áreas metropolitanas,Formal,Información y comunicaciones,Ene - Mar,230.58177233333333
 2021,23 Ciudades y áreas metropolitanas,Formal,Información y comunicaciones,Feb - Abr,212.355158
 2021,23 Ciudades y áreas metropolitanas,Formal,Información y comunicaciones,Mar - May,206.70952666666668
@@ -6819,6 +6928,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,Información y comunicaciones,Dic - Feb,277.204431
 2026,23 Ciudades y áreas metropolitanas,Formal,Información y comunicaciones,Ene - Mar,284.074459
 2026,23 Ciudades y áreas metropolitanas,Formal,Información y comunicaciones,Feb - Abr,299.373508
+2026,23 Ciudades y áreas metropolitanas,Formal,Información y comunicaciones,Mar - May,298.218357
 2021,23 Ciudades y áreas metropolitanas,Formal,Actividades financieras y de seguros,Ene - Mar,247.08905566666667
 2021,23 Ciudades y áreas metropolitanas,Formal,Actividades financieras y de seguros,Feb - Abr,235.61702366666668
 2021,23 Ciudades y áreas metropolitanas,Formal,Actividades financieras y de seguros,Mar - May,245.28266233333332
@@ -6881,6 +6991,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,Actividades financieras y de seguros,Dic - Feb,320.607819
 2026,23 Ciudades y áreas metropolitanas,Formal,Actividades financieras y de seguros,Ene - Mar,355.449433
 2026,23 Ciudades y áreas metropolitanas,Formal,Actividades financieras y de seguros,Feb - Abr,343.982151
+2026,23 Ciudades y áreas metropolitanas,Formal,Actividades financieras y de seguros,Mar - May,316.260829
 2021,23 Ciudades y áreas metropolitanas,Formal,Actividades inmobiliarias,Ene - Mar,74.357702
 2021,23 Ciudades y áreas metropolitanas,Formal,Actividades inmobiliarias,Feb - Abr,77.05979166666667
 2021,23 Ciudades y áreas metropolitanas,Formal,Actividades inmobiliarias,Mar - May,85.03983
@@ -6943,6 +7054,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,Actividades inmobiliarias,Dic - Feb,200.997991
 2026,23 Ciudades y áreas metropolitanas,Formal,Actividades inmobiliarias,Ene - Mar,206.380374
 2026,23 Ciudades y áreas metropolitanas,Formal,Actividades inmobiliarias,Feb - Abr,197.471631
+2026,23 Ciudades y áreas metropolitanas,Formal,Actividades inmobiliarias,Mar - May,211.075676
 2021,23 Ciudades y áreas metropolitanas,Formal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Ene - Mar,775.0490266666666
 2021,23 Ciudades y áreas metropolitanas,Formal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Feb - Abr,786.7753813333334
 2021,23 Ciudades y áreas metropolitanas,Formal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Mar - May,747.7373306666667
@@ -7005,6 +7117,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Dic - Feb,791.431966
 2026,23 Ciudades y áreas metropolitanas,Formal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Ene - Mar,799.059196
 2026,23 Ciudades y áreas metropolitanas,Formal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Feb - Abr,794.322208
+2026,23 Ciudades y áreas metropolitanas,Formal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Mar - May,791.223893
 2021,23 Ciudades y áreas metropolitanas,Formal,"Administración pública y defensa, educación y atención de la salud humana",Ene - Mar,1358.8428253333334
 2021,23 Ciudades y áreas metropolitanas,Formal,"Administración pública y defensa, educación y atención de la salud humana",Feb - Abr,1375.2787419999997
 2021,23 Ciudades y áreas metropolitanas,Formal,"Administración pública y defensa, educación y atención de la salud humana",Mar - May,1374.3023276666665
@@ -7067,6 +7180,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,"Administración pública y defensa, educación y atención de la salud humana",Dic - Feb,1711.357654
 2026,23 Ciudades y áreas metropolitanas,Formal,"Administración pública y defensa, educación y atención de la salud humana",Ene - Mar,1746.141815
 2026,23 Ciudades y áreas metropolitanas,Formal,"Administración pública y defensa, educación y atención de la salud humana",Feb - Abr,1794.334045
+2026,23 Ciudades y áreas metropolitanas,Formal,"Administración pública y defensa, educación y atención de la salud humana",Mar - May,1818.476841
 2021,23 Ciudades y áreas metropolitanas,Formal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Ene - Mar,217.43903366666666
 2021,23 Ciudades y áreas metropolitanas,Formal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Feb - Abr,208.21546833333332
 2021,23 Ciudades y áreas metropolitanas,Formal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Mar - May,224.20342633333334
@@ -7129,6 +7243,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Dic - Feb,364.76502
 2026,23 Ciudades y áreas metropolitanas,Formal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Ene - Mar,375.319874
 2026,23 Ciudades y áreas metropolitanas,Formal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Feb - Abr,370.51435
+2026,23 Ciudades y áreas metropolitanas,Formal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Mar - May,378.627884
 2021,23 Ciudades y áreas metropolitanas,Informal,Informal,Ene - Mar,4825.498504666667
 2021,23 Ciudades y áreas metropolitanas,Informal,Informal,Feb - Abr,4916.365636333333
 2021,23 Ciudades y áreas metropolitanas,Informal,Informal,Mar - May,4842.916671666667
@@ -7191,6 +7306,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,Informal,Dic - Feb,5270.939468
 2026,23 Ciudades y áreas metropolitanas,Informal,Informal,Ene - Mar,5240.332113
 2026,23 Ciudades y áreas metropolitanas,Informal,Informal,Feb - Abr,5329.462953
+2026,23 Ciudades y áreas metropolitanas,Informal,Informal,Mar - May,5293.070033
 2021,23 Ciudades y áreas metropolitanas,Informal,No informa,Ene - Mar,20.879956000000004
 2021,23 Ciudades y áreas metropolitanas,Informal,No informa,Feb - Abr,15.176343999999999
 2021,23 Ciudades y áreas metropolitanas,Informal,No informa,Mar - May,10.804770666666665
@@ -7253,6 +7369,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,No informa,Dic - Feb,0.0
 2026,23 Ciudades y áreas metropolitanas,Informal,No informa,Ene - Mar,0.072949
 2026,23 Ciudades y áreas metropolitanas,Informal,No informa,Feb - Abr,0.116701
+2026,23 Ciudades y áreas metropolitanas,Informal,No informa,Mar - May,0.116701
 2021,23 Ciudades y áreas metropolitanas,Informal,Otras ramas*,Ene - Mar,118.95436333333333
 2021,23 Ciudades y áreas metropolitanas,Informal,Otras ramas*,Feb - Abr,122.53737933333332
 2021,23 Ciudades y áreas metropolitanas,Informal,Otras ramas*,Mar - May,128.8729943333333
@@ -7315,6 +7432,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,Otras ramas*,Dic - Feb,121.51836
 2026,23 Ciudades y áreas metropolitanas,Informal,Otras ramas*,Ene - Mar,126.436885
 2026,23 Ciudades y áreas metropolitanas,Informal,Otras ramas*,Feb - Abr,115.199168
+2026,23 Ciudades y áreas metropolitanas,Informal,Otras ramas*,Mar - May,117.71799
 2021,23 Ciudades y áreas metropolitanas,Informal,Industrias manufactureras,Ene - Mar,518.1994206666667
 2021,23 Ciudades y áreas metropolitanas,Informal,Industrias manufactureras,Feb - Abr,495.222442
 2021,23 Ciudades y áreas metropolitanas,Informal,Industrias manufactureras,Mar - May,484.7197606666667
@@ -7377,6 +7495,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,Industrias manufactureras,Dic - Feb,551.659626
 2026,23 Ciudades y áreas metropolitanas,Informal,Industrias manufactureras,Ene - Mar,510.281242
 2026,23 Ciudades y áreas metropolitanas,Informal,Industrias manufactureras,Feb - Abr,541.79842
+2026,23 Ciudades y áreas metropolitanas,Informal,Industrias manufactureras,Mar - May,545.843572
 2021,23 Ciudades y áreas metropolitanas,Informal,Construcción,Ene - Mar,473.45338266666664
 2021,23 Ciudades y áreas metropolitanas,Informal,Construcción,Feb - Abr,482.564709
 2021,23 Ciudades y áreas metropolitanas,Informal,Construcción,Mar - May,500.281557
@@ -7439,6 +7558,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,Construcción,Dic - Feb,474.73355
 2026,23 Ciudades y áreas metropolitanas,Informal,Construcción,Ene - Mar,496.876397
 2026,23 Ciudades y áreas metropolitanas,Informal,Construcción,Feb - Abr,501.077474
+2026,23 Ciudades y áreas metropolitanas,Informal,Construcción,Mar - May,498.800256
 2021,23 Ciudades y áreas metropolitanas,Informal,Comercio y reparación de vehículos,Ene - Mar,1211.0312649999998
 2021,23 Ciudades y áreas metropolitanas,Informal,Comercio y reparación de vehículos,Feb - Abr,1256.4283389999998
 2021,23 Ciudades y áreas metropolitanas,Informal,Comercio y reparación de vehículos,Mar - May,1197.1312833333334
@@ -7501,6 +7621,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,Comercio y reparación de vehículos,Dic - Feb,1168.718083
 2026,23 Ciudades y áreas metropolitanas,Informal,Comercio y reparación de vehículos,Ene - Mar,1177.252454
 2026,23 Ciudades y áreas metropolitanas,Informal,Comercio y reparación de vehículos,Feb - Abr,1196.855809
+2026,23 Ciudades y áreas metropolitanas,Informal,Comercio y reparación de vehículos,Mar - May,1187.61999
 2021,23 Ciudades y áreas metropolitanas,Informal,Alojamiento y servicios de comida,Ene - Mar,509.59943100000004
 2021,23 Ciudades y áreas metropolitanas,Informal,Alojamiento y servicios de comida,Feb - Abr,535.482324
 2021,23 Ciudades y áreas metropolitanas,Informal,Alojamiento y servicios de comida,Mar - May,498.34485666666666
@@ -7563,6 +7684,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,Alojamiento y servicios de comida,Dic - Feb,627.090182
 2026,23 Ciudades y áreas metropolitanas,Informal,Alojamiento y servicios de comida,Ene - Mar,600.427233
 2026,23 Ciudades y áreas metropolitanas,Informal,Alojamiento y servicios de comida,Feb - Abr,607.859455
+2026,23 Ciudades y áreas metropolitanas,Informal,Alojamiento y servicios de comida,Mar - May,604.082581
 2021,23 Ciudades y áreas metropolitanas,Informal,Transporte y almacenamiento,Ene - Mar,485.199898
 2021,23 Ciudades y áreas metropolitanas,Informal,Transporte y almacenamiento,Feb - Abr,493.17404366666665
 2021,23 Ciudades y áreas metropolitanas,Informal,Transporte y almacenamiento,Mar - May,501.73174833333337
@@ -7625,6 +7747,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,Transporte y almacenamiento,Dic - Feb,684.245825
 2026,23 Ciudades y áreas metropolitanas,Informal,Transporte y almacenamiento,Ene - Mar,702.881787
 2026,23 Ciudades y áreas metropolitanas,Informal,Transporte y almacenamiento,Feb - Abr,689.262457
+2026,23 Ciudades y áreas metropolitanas,Informal,Transporte y almacenamiento,Mar - May,675.813783
 2021,23 Ciudades y áreas metropolitanas,Informal,Información y comunicaciones,Ene - Mar,66.291657
 2021,23 Ciudades y áreas metropolitanas,Informal,Información y comunicaciones,Feb - Abr,69.25137066666667
 2021,23 Ciudades y áreas metropolitanas,Informal,Información y comunicaciones,Mar - May,69.75798099999999
@@ -7687,6 +7810,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,Información y comunicaciones,Dic - Feb,50.993482
 2026,23 Ciudades y áreas metropolitanas,Informal,Información y comunicaciones,Ene - Mar,56.478864
 2026,23 Ciudades y áreas metropolitanas,Informal,Información y comunicaciones,Feb - Abr,49.706966
+2026,23 Ciudades y áreas metropolitanas,Informal,Información y comunicaciones,Mar - May,46.137109
 2021,23 Ciudades y áreas metropolitanas,Informal,Actividades financieras y de seguros,Ene - Mar,44.83194966666667
 2021,23 Ciudades y áreas metropolitanas,Informal,Actividades financieras y de seguros,Feb - Abr,39.801489333333336
 2021,23 Ciudades y áreas metropolitanas,Informal,Actividades financieras y de seguros,Mar - May,39.18294
@@ -7749,6 +7873,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,Actividades financieras y de seguros,Dic - Feb,27.060329
 2026,23 Ciudades y áreas metropolitanas,Informal,Actividades financieras y de seguros,Ene - Mar,30.182588
 2026,23 Ciudades y áreas metropolitanas,Informal,Actividades financieras y de seguros,Feb - Abr,29.72315
+2026,23 Ciudades y áreas metropolitanas,Informal,Actividades financieras y de seguros,Mar - May,30.6597
 2021,23 Ciudades y áreas metropolitanas,Informal,Actividades inmobiliarias,Ene - Mar,35.011775666666665
 2021,23 Ciudades y áreas metropolitanas,Informal,Actividades inmobiliarias,Feb - Abr,38.014143999999995
 2021,23 Ciudades y áreas metropolitanas,Informal,Actividades inmobiliarias,Mar - May,35.80152133333333
@@ -7811,6 +7936,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,Actividades inmobiliarias,Dic - Feb,36.73855
 2026,23 Ciudades y áreas metropolitanas,Informal,Actividades inmobiliarias,Ene - Mar,40.647982
 2026,23 Ciudades y áreas metropolitanas,Informal,Actividades inmobiliarias,Feb - Abr,41.149028
+2026,23 Ciudades y áreas metropolitanas,Informal,Actividades inmobiliarias,Mar - May,39.358905
 2021,23 Ciudades y áreas metropolitanas,Informal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Ene - Mar,441.08414066666666
 2021,23 Ciudades y áreas metropolitanas,Informal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Feb - Abr,458.1069616666667
 2021,23 Ciudades y áreas metropolitanas,Informal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Mar - May,462.8043823333333
@@ -7873,6 +7999,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Dic - Feb,561.065735
 2026,23 Ciudades y áreas metropolitanas,Informal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Ene - Mar,568.431577
 2026,23 Ciudades y áreas metropolitanas,Informal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Feb - Abr,575.601186
+2026,23 Ciudades y áreas metropolitanas,Informal,"Actividades profesionales, científicas, técnicas y de servicios administrativos",Mar - May,577.693906
 2021,23 Ciudades y áreas metropolitanas,Informal,"Administración pública y defensa, educación y atención de la salud humana",Ene - Mar,265.29122766666666
 2021,23 Ciudades y áreas metropolitanas,Informal,"Administración pública y defensa, educación y atención de la salud humana",Feb - Abr,274.586992
 2021,23 Ciudades y áreas metropolitanas,Informal,"Administración pública y defensa, educación y atención de la salud humana",Mar - May,284.86767633333335
@@ -7935,6 +8062,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,"Administración pública y defensa, educación y atención de la salud humana",Dic - Feb,198.76806
 2026,23 Ciudades y áreas metropolitanas,Informal,"Administración pública y defensa, educación y atención de la salud humana",Ene - Mar,203.95245
 2026,23 Ciudades y áreas metropolitanas,Informal,"Administración pública y defensa, educación y atención de la salud humana",Feb - Abr,226.393802
+2026,23 Ciudades y áreas metropolitanas,Informal,"Administración pública y defensa, educación y atención de la salud humana",Mar - May,225.64248
 2021,23 Ciudades y áreas metropolitanas,Informal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Ene - Mar,635.6700366666668
 2021,23 Ciudades y áreas metropolitanas,Informal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Feb - Abr,636.0190966666668
 2021,23 Ciudades y áreas metropolitanas,Informal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Mar - May,628.615199
@@ -7997,3 +8125,4 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Dic - Feb,768.347685
 2026,23 Ciudades y áreas metropolitanas,Informal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Ene - Mar,726.409703
 2026,23 Ciudades y áreas metropolitanas,Informal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Feb - Abr,754.719336
+2026,23 Ciudades y áreas metropolitanas,Informal,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Mar - May,743.583062

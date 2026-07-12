@@ -60,6 +60,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,Dic - Feb,23848.204876
 2026,Total nacional,Población ocupada,Ene - Mar,23890.987975
 2026,Total nacional,Población ocupada,Feb - Abr,24241.02269
+2026,Total nacional,Población ocupada,Mar - May,24404.076258
 2021,Total nacional,Formal,Ene - Mar,7785.653908666667
 2021,Total nacional,Formal,Feb - Abr,7909.355157000001
 2021,Total nacional,Formal,Mar - May,8072.084484
@@ -121,6 +122,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Total nacional,Formal,Dic - Feb,10659.72814
 2026,Total nacional,Formal,Ene - Mar,10672.697775
 2026,Total nacional,Formal,Feb - Abr,10896.187587
+2026,Total nacional,Formal,Mar - May,11055.548043
 2021,Total nacional,Informal,Ene - Mar,12001.55655
 2021,Total nacional,Informal,Feb - Abr,12094.802355666665
 2021,Total nacional,Informal,Mar - May,11874.353662333333
@@ -182,6 +184,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Total nacional,Informal,Dic - Feb,13188.476735
 2026,Total nacional,Informal,Ene - Mar,13218.2902
 2026,Total nacional,Informal,Feb - Abr,13344.835103
+2026,Total nacional,Informal,Mar - May,13348.528215
 2021,Cabeceras,Población ocupada,Ene - Mar,15452.876498
 2021,Cabeceras,Población ocupada,Feb - Abr,15584.526474666665
 2021,Cabeceras,Población ocupada,Mar - May,15572.257071
@@ -244,6 +247,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Cabeceras,Población ocupada,Dic - Feb,18976.945036
 2026,Cabeceras,Población ocupada,Ene - Mar,18968.795098
 2026,Cabeceras,Población ocupada,Feb - Abr,19290.770539
+2026,Cabeceras,Población ocupada,Mar - May,19362.817575
 2021,Cabeceras,Formal,Ene - Mar,7190.645035999999
 2021,Cabeceras,Formal,Feb - Abr,7273.075634
 2021,Cabeceras,Formal,Mar - May,7437.176897666667
@@ -306,6 +310,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Cabeceras,Formal,Dic - Feb,9841.500636
 2026,Cabeceras,Formal,Ene - Mar,9848.106099
 2026,Cabeceras,Formal,Feb - Abr,10053.172696
+2026,Cabeceras,Formal,Mar - May,10195.221176
 2021,Cabeceras,Informal,Ene - Mar,8262.231461666668
 2021,Cabeceras,Informal,Feb - Abr,8311.45084
 2021,Cabeceras,Informal,Mar - May,8135.080172999999
@@ -368,6 +373,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Cabeceras,Informal,Dic - Feb,9135.4444
 2026,Cabeceras,Informal,Ene - Mar,9120.688999
 2026,Cabeceras,Informal,Feb - Abr,9237.597843
+2026,Cabeceras,Informal,Mar - May,9167.596399
 2021,Centros poblados y rural disperso,Población ocupada,Ene - Mar,4334.333960666667
 2021,Centros poblados y rural disperso,Población ocupada,Feb - Abr,4419.631038333333
 2021,Centros poblados y rural disperso,Población ocupada,Mar - May,4374.181075666667
@@ -430,6 +436,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Población ocupada,Dic - Feb,4871.25984
 2026,Centros poblados y rural disperso,Población ocupada,Ene - Mar,4922.192877
 2026,Centros poblados y rural disperso,Población ocupada,Feb - Abr,4950.252151
+2026,Centros poblados y rural disperso,Población ocupada,Mar - May,5041.258684
 2021,Centros poblados y rural disperso,Formal,Ene - Mar,595.0088723333333
 2021,Centros poblados y rural disperso,Formal,Feb - Abr,636.2795226666667
 2021,Centros poblados y rural disperso,Formal,Mar - May,634.9075863333334
@@ -492,6 +499,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Formal,Dic - Feb,818.227504
 2026,Centros poblados y rural disperso,Formal,Ene - Mar,824.591676
 2026,Centros poblados y rural disperso,Formal,Feb - Abr,843.01489
+2026,Centros poblados y rural disperso,Formal,Mar - May,860.326868
 2021,Centros poblados y rural disperso,Informal,Ene - Mar,3739.3250883333335
 2021,Centros poblados y rural disperso,Informal,Feb - Abr,3783.3515156666667
 2021,Centros poblados y rural disperso,Informal,Mar - May,3739.273489333333
@@ -554,3 +562,4 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2025,Centros poblados y rural disperso,Informal,Dic - Feb,4053.032336
 2026,Centros poblados y rural disperso,Informal,Ene - Mar,4097.601201
 2026,Centros poblados y rural disperso,Informal,Feb - Abr,4107.237261
+2026,Centros poblados y rural disperso,Informal,Mar - May,4180.931816
