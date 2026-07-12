@@ -61,6 +61,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,Población ocupada,Dic - Feb,23848.204876
 2026,Total nacional,Población ocupada,Población ocupada,Ene - Mar,23890.987975
 2026,Total nacional,Población ocupada,Población ocupada,Feb - Abr,24241.02269
+2026,Total nacional,Población ocupada,Población ocupada,Mar - May,24404.076258
 2021,Total nacional,Población ocupada,"Obrero, empleado particular",Ene - Mar,7889.542350666667
 2021,Total nacional,Población ocupada,"Obrero, empleado particular",Feb - Abr,7962.016708333334
 2021,Total nacional,Población ocupada,"Obrero, empleado particular",Mar - May,8052.181068000001
@@ -123,6 +124,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,"Obrero, empleado particular",Dic - Feb,10640.274524
 2026,Total nacional,Población ocupada,"Obrero, empleado particular",Ene - Mar,10442.597165
 2026,Total nacional,Población ocupada,"Obrero, empleado particular",Feb - Abr,10655.77515
+2026,Total nacional,Población ocupada,"Obrero, empleado particular",Mar - May,10714.757103
 2021,Total nacional,Población ocupada,"Obrero, empleado del gobierno",Ene - Mar,1031.0667190000001
 2021,Total nacional,Población ocupada,"Obrero, empleado del gobierno",Feb - Abr,1073.8323033333334
 2021,Total nacional,Población ocupada,"Obrero, empleado del gobierno",Mar - May,1083.9664483333333
@@ -185,6 +187,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,"Obrero, empleado del gobierno",Dic - Feb,906.48858
 2026,Total nacional,Población ocupada,"Obrero, empleado del gobierno",Ene - Mar,877.904217
 2026,Total nacional,Población ocupada,"Obrero, empleado del gobierno",Feb - Abr,894.353141
+2026,Total nacional,Población ocupada,"Obrero, empleado del gobierno",Mar - May,907.79674
 2021,Total nacional,Población ocupada,Empleado doméstico,Ene - Mar,435.04854099999994
 2021,Total nacional,Población ocupada,Empleado doméstico,Feb - Abr,435.3476826666667
 2021,Total nacional,Población ocupada,Empleado doméstico,Mar - May,441.2917413333333
@@ -247,6 +250,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,Empleado doméstico,Dic - Feb,715.678544
 2026,Total nacional,Población ocupada,Empleado doméstico,Ene - Mar,714.908196
 2026,Total nacional,Población ocupada,Empleado doméstico,Feb - Abr,743.425365
+2026,Total nacional,Población ocupada,Empleado doméstico,Mar - May,733.625109
 2021,Total nacional,Población ocupada,Trabajador por cuenta propia,Ene - Mar,8420.3698
 2021,Total nacional,Población ocupada,Trabajador por cuenta propia,Feb - Abr,8734.565385
 2021,Total nacional,Población ocupada,Trabajador por cuenta propia,Mar - May,8706.813254666667
@@ -309,6 +313,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,Trabajador por cuenta propia,Dic - Feb,9716.072882
 2026,Total nacional,Población ocupada,Trabajador por cuenta propia,Ene - Mar,9950.191877
 2026,Total nacional,Población ocupada,Trabajador por cuenta propia,Feb - Abr,10068.297629
+2026,Total nacional,Población ocupada,Trabajador por cuenta propia,Mar - May,10121.578269
 2021,Total nacional,Población ocupada,Patrón o empleador,Ene - Mar,460.0804836666666
 2021,Total nacional,Población ocupada,Patrón o empleador,Feb - Abr,441.65264933333333
 2021,Total nacional,Población ocupada,Patrón o empleador,Mar - May,442.08643
@@ -371,6 +376,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,Patrón o empleador,Dic - Feb,641.990272
 2026,Total nacional,Población ocupada,Patrón o empleador,Ene - Mar,674.437747
 2026,Total nacional,Población ocupada,Patrón o empleador,Feb - Abr,662.117077
+2026,Total nacional,Población ocupada,Patrón o empleador,Mar - May,660.834537
 2021,Total nacional,Población ocupada,Trabajador familiar sin remuneración,Ene - Mar,453.86243800000005
 2021,Total nacional,Población ocupada,Trabajador familiar sin remuneración,Feb - Abr,420.25088
 2021,Total nacional,Población ocupada,Trabajador familiar sin remuneración,Mar - May,395.9650433333333
@@ -433,6 +439,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,Trabajador familiar sin remuneración,Dic - Feb,456.169136
 2026,Total nacional,Población ocupada,Trabajador familiar sin remuneración,Ene - Mar,456.876984
 2026,Total nacional,Población ocupada,Trabajador familiar sin remuneración,Feb - Abr,445.022284
+2026,Total nacional,Población ocupada,Trabajador familiar sin remuneración,Mar - May,416.980815
 2021,Total nacional,Población ocupada,Jornalero o peón,Ene - Mar,798.5504500000001
 2021,Total nacional,Población ocupada,Jornalero o peón,Feb - Abr,751.2350139999999
 2021,Total nacional,Población ocupada,Jornalero o peón,Mar - May,719.5647716666666
@@ -495,6 +502,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,Jornalero o peón,Dic - Feb,763.764509
 2026,Total nacional,Población ocupada,Jornalero o peón,Ene - Mar,767.774302
 2026,Total nacional,Población ocupada,Jornalero o peón,Feb - Abr,763.217387
+2026,Total nacional,Población ocupada,Jornalero o peón,Mar - May,837.218859
 2021,Total nacional,Población ocupada,Otro,Ene - Mar,298.68967733333335
 2021,Total nacional,Población ocupada,Otro,Feb - Abr,185.25689000000003
 2021,Total nacional,Población ocupada,Otro,Mar - May,104.56938833333334
@@ -557,6 +565,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Población ocupada,Otro,Dic - Feb,7.766427
 2026,Total nacional,Población ocupada,Otro,Ene - Mar,6.297487
 2026,Total nacional,Población ocupada,Otro,Feb - Abr,8.814655
+2026,Total nacional,Población ocupada,Otro,Mar - May,11.284826
 2021,Total nacional,Formal,Formal,Ene - Mar,7785.653908666667
 2021,Total nacional,Formal,Formal,Feb - Abr,7909.355157000001
 2021,Total nacional,Formal,Formal,Mar - May,8072.084484
@@ -619,6 +628,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,Formal,Dic - Feb,10659.72814
 2026,Total nacional,Formal,Formal,Ene - Mar,10672.697775
 2026,Total nacional,Formal,Formal,Feb - Abr,10896.187587
+2026,Total nacional,Formal,Formal,Mar - May,11055.548043
 2021,Total nacional,Formal,"Obrero, empleado particular",Ene - Mar,5399.803774666667
 2021,Total nacional,Formal,"Obrero, empleado particular",Feb - Abr,5502.6770603333325
 2021,Total nacional,Formal,"Obrero, empleado particular",Mar - May,5641.908987333333
@@ -681,6 +691,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,"Obrero, empleado particular",Dic - Feb,7582.164116
 2026,Total nacional,Formal,"Obrero, empleado particular",Ene - Mar,7523.972822
 2026,Total nacional,Formal,"Obrero, empleado particular",Feb - Abr,7622.713105
+2026,Total nacional,Formal,"Obrero, empleado particular",Mar - May,7727.043672
 2021,Total nacional,Formal,"Obrero, empleado del gobierno",Ene - Mar,1031.0667190000001
 2021,Total nacional,Formal,"Obrero, empleado del gobierno",Feb - Abr,1073.8323033333334
 2021,Total nacional,Formal,"Obrero, empleado del gobierno",Mar - May,1083.9664483333333
@@ -743,6 +754,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,"Obrero, empleado del gobierno",Dic - Feb,906.48858
 2026,Total nacional,Formal,"Obrero, empleado del gobierno",Ene - Mar,877.904217
 2026,Total nacional,Formal,"Obrero, empleado del gobierno",Feb - Abr,894.353141
+2026,Total nacional,Formal,"Obrero, empleado del gobierno",Mar - May,907.79674
 2021,Total nacional,Formal,Empleado doméstico,Ene - Mar,68.58251833333334
 2021,Total nacional,Formal,Empleado doméstico,Feb - Abr,66.97252633333333
 2021,Total nacional,Formal,Empleado doméstico,Mar - May,79.53356733333334
@@ -805,6 +817,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,Empleado doméstico,Dic - Feb,157.161863
 2026,Total nacional,Formal,Empleado doméstico,Ene - Mar,158.012004
 2026,Total nacional,Formal,Empleado doméstico,Feb - Abr,172.000611
+2026,Total nacional,Formal,Empleado doméstico,Mar - May,169.944932
 2021,Total nacional,Formal,Trabajador por cuenta propia,Ene - Mar,1001.8333886666666
 2021,Total nacional,Formal,Trabajador por cuenta propia,Feb - Abr,1001.060415
 2021,Total nacional,Formal,Trabajador por cuenta propia,Mar - May,997.3796366666667
@@ -867,6 +880,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,Trabajador por cuenta propia,Dic - Feb,1504.286474
 2026,Total nacional,Formal,Trabajador por cuenta propia,Ene - Mar,1589.219397
 2026,Total nacional,Formal,Trabajador por cuenta propia,Feb - Abr,1720.003669
+2026,Total nacional,Formal,Trabajador por cuenta propia,Mar - May,1751.456034
 2021,Total nacional,Formal,Patrón o empleador,Ene - Mar,227.03461866666666
 2021,Total nacional,Formal,Patrón o empleador,Feb - Abr,226.900069
 2021,Total nacional,Formal,Patrón o empleador,Mar - May,230.98118666666667
@@ -929,6 +943,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,Patrón o empleador,Dic - Feb,349.661605
 2026,Total nacional,Formal,Patrón o empleador,Ene - Mar,361.045771
 2026,Total nacional,Formal,Patrón o empleador,Feb - Abr,341.77243
+2026,Total nacional,Formal,Patrón o empleador,Mar - May,342.863804
 2021,Total nacional,Formal,Jornalero o peón,Ene - Mar,57.33288933333333
 2021,Total nacional,Formal,Jornalero o peón,Feb - Abr,37.912782666666665
 2021,Total nacional,Formal,Jornalero o peón,Mar - May,38.31465733333334
@@ -991,6 +1006,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Formal,Jornalero o peón,Dic - Feb,159.965502
 2026,Total nacional,Formal,Jornalero o peón,Ene - Mar,162.543565
 2026,Total nacional,Formal,Jornalero o peón,Feb - Abr,145.34463
+2026,Total nacional,Formal,Jornalero o peón,Mar - May,156.442862
 2021,Total nacional,Informal,Informal,Ene - Mar,12001.55655
 2021,Total nacional,Informal,Informal,Feb - Abr,12094.802355666665
 2021,Total nacional,Informal,Informal,Mar - May,11874.353662333333
@@ -1053,6 +1069,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,Informal,Dic - Feb,13188.476735
 2026,Total nacional,Informal,Informal,Ene - Mar,13218.2902
 2026,Total nacional,Informal,Informal,Feb - Abr,13344.835103
+2026,Total nacional,Informal,Informal,Mar - May,13348.528215
 2021,Total nacional,Informal,"Obrero, empleado particular",Ene - Mar,2489.7385756666667
 2021,Total nacional,Informal,"Obrero, empleado particular",Feb - Abr,2459.3396476666667
 2021,Total nacional,Informal,"Obrero, empleado particular",Mar - May,2410.2720803333336
@@ -1115,6 +1132,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,"Obrero, empleado particular",Dic - Feb,3058.110409
 2026,Total nacional,Informal,"Obrero, empleado particular",Ene - Mar,2918.624342
 2026,Total nacional,Informal,"Obrero, empleado particular",Feb - Abr,3033.062045
+2026,Total nacional,Informal,"Obrero, empleado particular",Mar - May,2987.713431
 2021,Total nacional,Informal,Empleado doméstico,Ene - Mar,366.4660226666667
 2021,Total nacional,Informal,Empleado doméstico,Feb - Abr,368.37515633333334
 2021,Total nacional,Informal,Empleado doméstico,Mar - May,361.75817400000005
@@ -1177,6 +1195,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,Empleado doméstico,Dic - Feb,558.516681
 2026,Total nacional,Informal,Empleado doméstico,Ene - Mar,556.896192
 2026,Total nacional,Informal,Empleado doméstico,Feb - Abr,571.424753
+2026,Total nacional,Informal,Empleado doméstico,Mar - May,563.680178
 2021,Total nacional,Informal,Trabajador por cuenta propia,Ene - Mar,7418.5364113333335
 2021,Total nacional,Informal,Trabajador por cuenta propia,Feb - Abr,7733.504970000001
 2021,Total nacional,Informal,Trabajador por cuenta propia,Mar - May,7709.433618
@@ -1239,6 +1258,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,Trabajador por cuenta propia,Dic - Feb,8211.786408
 2026,Total nacional,Informal,Trabajador por cuenta propia,Ene - Mar,8360.97248
 2026,Total nacional,Informal,Trabajador por cuenta propia,Feb - Abr,8348.29396
+2026,Total nacional,Informal,Trabajador por cuenta propia,Mar - May,8370.122236
 2021,Total nacional,Informal,Patrón o empleador,Ene - Mar,233.04586499999996
 2021,Total nacional,Informal,Patrón o empleador,Feb - Abr,214.75258033333333
 2021,Total nacional,Informal,Patrón o empleador,Mar - May,211.10524333333333
@@ -1301,6 +1321,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,Patrón o empleador,Dic - Feb,292.328667
 2026,Total nacional,Informal,Patrón o empleador,Ene - Mar,313.391976
 2026,Total nacional,Informal,Patrón o empleador,Feb - Abr,320.344647
+2026,Total nacional,Informal,Patrón o empleador,Mar - May,317.970733
 2021,Total nacional,Informal,Trabajador familiar sin remuneración,Ene - Mar,453.86243800000005
 2021,Total nacional,Informal,Trabajador familiar sin remuneración,Feb - Abr,420.25088
 2021,Total nacional,Informal,Trabajador familiar sin remuneración,Mar - May,395.9650433333333
@@ -1363,6 +1384,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,Trabajador familiar sin remuneración,Dic - Feb,456.169136
 2026,Total nacional,Informal,Trabajador familiar sin remuneración,Ene - Mar,456.876984
 2026,Total nacional,Informal,Trabajador familiar sin remuneración,Feb - Abr,445.022284
+2026,Total nacional,Informal,Trabajador familiar sin remuneración,Mar - May,416.980815
 2021,Total nacional,Informal,Jornalero o peón,Ene - Mar,741.2175606666666
 2021,Total nacional,Informal,Jornalero o peón,Feb - Abr,713.3222316666667
 2021,Total nacional,Informal,Jornalero o peón,Mar - May,681.2501146666667
@@ -1425,6 +1447,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,Jornalero o peón,Dic - Feb,603.799007
 2026,Total nacional,Informal,Jornalero o peón,Ene - Mar,605.230737
 2026,Total nacional,Informal,Jornalero o peón,Feb - Abr,617.872758
+2026,Total nacional,Informal,Jornalero o peón,Mar - May,680.775997
 2021,Total nacional,Informal,Otro,Ene - Mar,298.68967733333335
 2021,Total nacional,Informal,Otro,Feb - Abr,185.25689000000003
 2021,Total nacional,Informal,Otro,Mar - May,104.56938833333334
@@ -1487,6 +1510,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,Total nacional,Informal,Otro,Dic - Feb,7.766427
 2026,Total nacional,Informal,Otro,Ene - Mar,6.297487
 2026,Total nacional,Informal,Otro,Feb - Abr,8.814655
+2026,Total nacional,Informal,Otro,Mar - May,11.284826
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Ene - Mar,9226.413326333335
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Feb - Abr,9320.446573000001
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Mar - May,9341.646440999999
@@ -1549,6 +1573,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Dic - Feb,11260.998726
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Ene - Mar,11227.725964
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Feb - Abr,11386.328947
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Mar - May,11420.206475
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,"Obrero, empleado particular^",Ene - Mar,4830.901942333333
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,"Obrero, empleado particular^",Feb - Abr,4829.080927999999
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,"Obrero, empleado particular^",Mar - May,4837.299843333334
@@ -1611,6 +1636,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,"Obrero, empleado particular^",Dic - Feb,6271.720414
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,"Obrero, empleado particular^",Ene - Mar,6121.339641
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,"Obrero, empleado particular^",Feb - Abr,6230.486578
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,"Obrero, empleado particular^",Mar - May,6254.772961
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,"Obrero, empleado del gobierno",Ene - Mar,538.4215343333334
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,"Obrero, empleado del gobierno",Feb - Abr,557.151691
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,"Obrero, empleado del gobierno",Mar - May,565.5560506666667
@@ -1673,6 +1699,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,"Obrero, empleado del gobierno",Dic - Feb,468.669487
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,"Obrero, empleado del gobierno",Ene - Mar,462.110478
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,"Obrero, empleado del gobierno",Feb - Abr,460.168672
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,"Obrero, empleado del gobierno",Mar - May,451.090332
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Empleado doméstico,Ene - Mar,178.45705233333334
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Empleado doméstico,Feb - Abr,191.87968233333334
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Empleado doméstico,Mar - May,203.05022133333333
@@ -1735,6 +1762,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Empleado doméstico,Dic - Feb,299.858838
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Empleado doméstico,Ene - Mar,318.599176
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Empleado doméstico,Feb - Abr,346.480755
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,Empleado doméstico,Mar - May,345.404346
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Trabajador por cuenta propia,Ene - Mar,3226.9857356666666
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Trabajador por cuenta propia,Feb - Abr,3337.0878436666667
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Trabajador por cuenta propia,Mar - May,3367.2855086666664
@@ -1797,6 +1825,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Trabajador por cuenta propia,Dic - Feb,3793.340191
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Trabajador por cuenta propia,Ene - Mar,3846.339625
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Trabajador por cuenta propia,Feb - Abr,3902.995714
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,Trabajador por cuenta propia,Mar - May,3918.655807
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Patrón o empleador,Ene - Mar,182.83603200000002
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Patrón o empleador,Feb - Abr,208.197194
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Patrón o empleador,Mar - May,222.27661866666668
@@ -1859,6 +1888,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Patrón o empleador,Dic - Feb,326.163869
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Patrón o empleador,Ene - Mar,366.742974
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Patrón o empleador,Feb - Abr,336.410152
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,Patrón o empleador,Mar - May,329.738665
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Trabajador familiar sin remuneración,Ene - Mar,93.55938466666667
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Trabajador familiar sin remuneración,Feb - Abr,93.99654133333333
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Trabajador familiar sin remuneración,Mar - May,87.02816966666667
@@ -1921,6 +1951,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Trabajador familiar sin remuneración,Dic - Feb,98.944754
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Trabajador familiar sin remuneración,Ene - Mar,110.301355
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Trabajador familiar sin remuneración,Feb - Abr,106.529064
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,Trabajador familiar sin remuneración,Mar - May,118.820956
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Otro,Ene - Mar,175.2516443333333
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Otro,Feb - Abr,103.05269233333333
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Otro,Mar - May,59.15002833333333
@@ -1983,6 +2014,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Población ocupada,Otro,Dic - Feb,2.301173
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Otro,Ene - Mar,2.292715
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Otro,Feb - Abr,3.258012
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,Otro,Mar - May,1.723407
 2021,13 Ciudades y áreas metropolitanas,Formal,Formal,Ene - Mar,4990.366199666666
 2021,13 Ciudades y áreas metropolitanas,Formal,Formal,Feb - Abr,4999.7586716666665
 2021,13 Ciudades y áreas metropolitanas,Formal,Formal,Mar - May,5089.547187333334
@@ -2045,6 +2077,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,Formal,Dic - Feb,6634.691589
 2026,13 Ciudades y áreas metropolitanas,Formal,Formal,Ene - Mar,6625.45175
 2026,13 Ciudades y áreas metropolitanas,Formal,Formal,Feb - Abr,6698.7158
+2026,13 Ciudades y áreas metropolitanas,Formal,Formal,Mar - May,6771.720593
 2021,13 Ciudades y áreas metropolitanas,Formal,"Obrero, empleado particular^",Ene - Mar,3672.3584050000004
 2021,13 Ciudades y áreas metropolitanas,Formal,"Obrero, empleado particular^",Feb - Abr,3675.7992573333336
 2021,13 Ciudades y áreas metropolitanas,Formal,"Obrero, empleado particular^",Mar - May,3739.0883596666663
@@ -2107,6 +2140,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,"Obrero, empleado particular^",Dic - Feb,4987.144734
 2026,13 Ciudades y áreas metropolitanas,Formal,"Obrero, empleado particular^",Ene - Mar,4914.606417
 2026,13 Ciudades y áreas metropolitanas,Formal,"Obrero, empleado particular^",Feb - Abr,4962.980161
+2026,13 Ciudades y áreas metropolitanas,Formal,"Obrero, empleado particular^",Mar - May,5008.18647
 2021,13 Ciudades y áreas metropolitanas,Formal,"Obrero, empleado del gobierno",Ene - Mar,538.4215343333334
 2021,13 Ciudades y áreas metropolitanas,Formal,"Obrero, empleado del gobierno",Feb - Abr,557.151691
 2021,13 Ciudades y áreas metropolitanas,Formal,"Obrero, empleado del gobierno",Mar - May,565.5560506666667
@@ -2169,6 +2203,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,"Obrero, empleado del gobierno",Dic - Feb,468.669487
 2026,13 Ciudades y áreas metropolitanas,Formal,"Obrero, empleado del gobierno",Ene - Mar,462.110478
 2026,13 Ciudades y áreas metropolitanas,Formal,"Obrero, empleado del gobierno",Feb - Abr,460.168672
+2026,13 Ciudades y áreas metropolitanas,Formal,"Obrero, empleado del gobierno",Mar - May,451.090332
 2021,13 Ciudades y áreas metropolitanas,Formal,Empleado doméstico,Ene - Mar,50.286112
 2021,13 Ciudades y áreas metropolitanas,Formal,Empleado doméstico,Feb - Abr,50.521663999999994
 2021,13 Ciudades y áreas metropolitanas,Formal,Empleado doméstico,Mar - May,59.86193333333333
@@ -2231,6 +2266,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,Empleado doméstico,Dic - Feb,97.89205
 2026,13 Ciudades y áreas metropolitanas,Formal,Empleado doméstico,Ene - Mar,111.945679
 2026,13 Ciudades y áreas metropolitanas,Formal,Empleado doméstico,Feb - Abr,113.593611
+2026,13 Ciudades y áreas metropolitanas,Formal,Empleado doméstico,Mar - May,111.014301
 2021,13 Ciudades y áreas metropolitanas,Formal,Trabajador por cuenta propia,Ene - Mar,598.4181253333333
 2021,13 Ciudades y áreas metropolitanas,Formal,Trabajador por cuenta propia,Feb - Abr,569.0800853333334
 2021,13 Ciudades y áreas metropolitanas,Formal,Trabajador por cuenta propia,Mar - May,570.7524223333334
@@ -2293,6 +2329,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,Trabajador por cuenta propia,Dic - Feb,862.243897
 2026,13 Ciudades y áreas metropolitanas,Formal,Trabajador por cuenta propia,Ene - Mar,903.739318
 2026,13 Ciudades y áreas metropolitanas,Formal,Trabajador por cuenta propia,Feb - Abr,952.779945
+2026,13 Ciudades y áreas metropolitanas,Formal,Trabajador por cuenta propia,Mar - May,987.558058
 2021,13 Ciudades y áreas metropolitanas,Formal,Patrón o empleador,Ene - Mar,130.88202266666667
 2021,13 Ciudades y áreas metropolitanas,Formal,Patrón o empleador,Feb - Abr,147.205974
 2021,13 Ciudades y áreas metropolitanas,Formal,Patrón o empleador,Mar - May,154.28842166666666
@@ -2355,6 +2392,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Formal,Patrón o empleador,Dic - Feb,218.741421
 2026,13 Ciudades y áreas metropolitanas,Formal,Patrón o empleador,Ene - Mar,233.049859
 2026,13 Ciudades y áreas metropolitanas,Formal,Patrón o empleador,Feb - Abr,209.193412
+2026,13 Ciudades y áreas metropolitanas,Formal,Patrón o empleador,Mar - May,213.871432
 2021,13 Ciudades y áreas metropolitanas,Informal,Informal,Ene - Mar,4236.047126666667
 2021,13 Ciudades y áreas metropolitanas,Informal,Informal,Feb - Abr,4320.687901333334
 2021,13 Ciudades y áreas metropolitanas,Informal,Informal,Mar - May,4252.099253666666
@@ -2417,6 +2455,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,Informal,Dic - Feb,4626.307137
 2026,13 Ciudades y áreas metropolitanas,Informal,Informal,Ene - Mar,4602.274214
 2026,13 Ciudades y áreas metropolitanas,Informal,Informal,Feb - Abr,4687.613147
+2026,13 Ciudades y áreas metropolitanas,Informal,Informal,Mar - May,4648.485882
 2021,13 Ciudades y áreas metropolitanas,Informal,"Obrero, empleado particular^",Ene - Mar,1158.5435373333332
 2021,13 Ciudades y áreas metropolitanas,Informal,"Obrero, empleado particular^",Feb - Abr,1153.281670333333
 2021,13 Ciudades y áreas metropolitanas,Informal,"Obrero, empleado particular^",Mar - May,1098.2114833333333
@@ -2479,6 +2518,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,"Obrero, empleado particular^",Dic - Feb,1284.57568
 2026,13 Ciudades y áreas metropolitanas,Informal,"Obrero, empleado particular^",Ene - Mar,1206.733224
 2026,13 Ciudades y áreas metropolitanas,Informal,"Obrero, empleado particular^",Feb - Abr,1267.506418
+2026,13 Ciudades y áreas metropolitanas,Informal,"Obrero, empleado particular^",Mar - May,1246.586491
 2021,13 Ciudades y áreas metropolitanas,Informal,Empleado doméstico,Ene - Mar,128.170941
 2021,13 Ciudades y áreas metropolitanas,Informal,Empleado doméstico,Feb - Abr,141.358019
 2021,13 Ciudades y áreas metropolitanas,Informal,Empleado doméstico,Mar - May,143.18828833333336
@@ -2541,6 +2581,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,Empleado doméstico,Dic - Feb,201.966788
 2026,13 Ciudades y áreas metropolitanas,Informal,Empleado doméstico,Ene - Mar,206.653497
 2026,13 Ciudades y áreas metropolitanas,Informal,Empleado doméstico,Feb - Abr,232.887144
+2026,13 Ciudades y áreas metropolitanas,Informal,Empleado doméstico,Mar - May,234.390046
 2021,13 Ciudades y áreas metropolitanas,Informal,Trabajador por cuenta propia,Ene - Mar,2628.5676106666665
 2021,13 Ciudades y áreas metropolitanas,Informal,Trabajador por cuenta propia,Feb - Abr,2768.0077586666666
 2021,13 Ciudades y áreas metropolitanas,Informal,Trabajador por cuenta propia,Mar - May,2796.533086333333
@@ -2603,6 +2644,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,Trabajador por cuenta propia,Dic - Feb,2931.096294
 2026,13 Ciudades y áreas metropolitanas,Informal,Trabajador por cuenta propia,Ene - Mar,2942.600307
 2026,13 Ciudades y áreas metropolitanas,Informal,Trabajador por cuenta propia,Feb - Abr,2950.215769
+2026,13 Ciudades y áreas metropolitanas,Informal,Trabajador por cuenta propia,Mar - May,2931.097749
 2021,13 Ciudades y áreas metropolitanas,Informal,Patrón o empleador,Ene - Mar,51.954009000000006
 2021,13 Ciudades y áreas metropolitanas,Informal,Patrón o empleador,Feb - Abr,60.99122
 2021,13 Ciudades y áreas metropolitanas,Informal,Patrón o empleador,Mar - May,67.98819733333333
@@ -2665,6 +2707,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,Patrón o empleador,Dic - Feb,107.422448
 2026,13 Ciudades y áreas metropolitanas,Informal,Patrón o empleador,Ene - Mar,133.693115
 2026,13 Ciudades y áreas metropolitanas,Informal,Patrón o empleador,Feb - Abr,127.21674
+2026,13 Ciudades y áreas metropolitanas,Informal,Patrón o empleador,Mar - May,115.867233
 2021,13 Ciudades y áreas metropolitanas,Informal,Trabajador familiar sin remuneración,Ene - Mar,93.55938466666667
 2021,13 Ciudades y áreas metropolitanas,Informal,Trabajador familiar sin remuneración,Feb - Abr,93.99654133333333
 2021,13 Ciudades y áreas metropolitanas,Informal,Trabajador familiar sin remuneración,Mar - May,87.02816966666667
@@ -2727,6 +2770,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,Trabajador familiar sin remuneración,Dic - Feb,98.944754
 2026,13 Ciudades y áreas metropolitanas,Informal,Trabajador familiar sin remuneración,Ene - Mar,110.301355
 2026,13 Ciudades y áreas metropolitanas,Informal,Trabajador familiar sin remuneración,Feb - Abr,106.529064
+2026,13 Ciudades y áreas metropolitanas,Informal,Trabajador familiar sin remuneración,Mar - May,118.820956
 2021,13 Ciudades y áreas metropolitanas,Informal,Otro,Ene - Mar,175.2516443333333
 2021,13 Ciudades y áreas metropolitanas,Informal,Otro,Feb - Abr,103.05269233333333
 2021,13 Ciudades y áreas metropolitanas,Informal,Otro,Mar - May,59.15002833333333
@@ -2789,6 +2833,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,13 Ciudades y áreas metropolitanas,Informal,Otro,Dic - Feb,2.301173
 2026,13 Ciudades y áreas metropolitanas,Informal,Otro,Ene - Mar,2.292715
 2026,13 Ciudades y áreas metropolitanas,Informal,Otro,Feb - Abr,3.258012
+2026,13 Ciudades y áreas metropolitanas,Informal,Otro,Mar - May,1.723407
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Ene - Mar,10207.340572
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Feb - Abr,10314.171929333332
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Mar - May,10331.821430333332
@@ -2851,6 +2896,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Dic - Feb,12429.285203
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Ene - Mar,12402.357556
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Feb - Abr,12582.268196
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Mar - May,12619.478694
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,"Obrero, empleado particular^",Ene - Mar,5209.268812666666
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,"Obrero, empleado particular^",Feb - Abr,5209.329253
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,"Obrero, empleado particular^",Mar - May,5208.169551333333
@@ -2913,6 +2959,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,"Obrero, empleado particular^",Dic - Feb,6777.960478
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,"Obrero, empleado particular^",Ene - Mar,6628.591653
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,"Obrero, empleado particular^",Feb - Abr,6758.381061
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,"Obrero, empleado particular^",Mar - May,6791.423416
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,"Obrero, empleado del gobierno",Ene - Mar,624.852896
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,"Obrero, empleado del gobierno",Feb - Abr,646.1977316666666
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,"Obrero, empleado del gobierno",Mar - May,657.728993
@@ -2975,6 +3022,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,"Obrero, empleado del gobierno",Dic - Feb,557.711873
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,"Obrero, empleado del gobierno",Ene - Mar,552.364997
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,"Obrero, empleado del gobierno",Feb - Abr,549.545253
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,"Obrero, empleado del gobierno",Mar - May,538.066369
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Empleado doméstico,Ene - Mar,207.19200633333332
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Empleado doméstico,Feb - Abr,222.686542
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Empleado doméstico,Mar - May,238.224845
@@ -3037,6 +3085,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Empleado doméstico,Dic - Feb,338.950937
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Empleado doméstico,Ene - Mar,360.238921
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Empleado doméstico,Feb - Abr,388.568629
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,Empleado doméstico,Mar - May,388.130304
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Trabajador por cuenta propia,Ene - Mar,3672.2040409999995
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Trabajador por cuenta propia,Feb - Abr,3793.4835430000003
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Trabajador por cuenta propia,Mar - May,3825.411947666667
@@ -3099,6 +3148,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Trabajador por cuenta propia,Dic - Feb,4295.558965
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Trabajador por cuenta propia,Ene - Mar,4346.962224
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Trabajador por cuenta propia,Feb - Abr,4403.243951
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,Trabajador por cuenta propia,Mar - May,4415.539875
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Patrón o empleador,Ene - Mar,202.34231133333333
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Patrón o empleador,Feb - Abr,226.66689266666666
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Patrón o empleador,Mar - May,239.172188
@@ -3161,6 +3211,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Patrón o empleador,Dic - Feb,345.447757
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Patrón o empleador,Ene - Mar,388.052017
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Patrón o empleador,Feb - Abr,359.16996
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,Patrón o empleador,Mar - May,352.644493
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Trabajador familiar sin remuneración,Ene - Mar,106.906836
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Trabajador familiar sin remuneración,Feb - Abr,106.93698033333334
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Trabajador familiar sin remuneración,Mar - May,99.26229033333334
@@ -3223,6 +3274,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Trabajador familiar sin remuneración,Dic - Feb,111.186545
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Trabajador familiar sin remuneración,Ene - Mar,123.719904
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Trabajador familiar sin remuneración,Feb - Abr,119.869577
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,Trabajador familiar sin remuneración,Mar - May,131.474157
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Otro,Ene - Mar,184.573668
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Otro,Feb - Abr,108.87098633333335
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Otro,Mar - May,63.851615
@@ -3285,6 +3337,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Población ocupada,Otro,Dic - Feb,2.468648
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Otro,Ene - Mar,2.42784
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Otro,Feb - Abr,3.489766
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,Otro,Mar - May,2.20008
 2021,23 Ciudades y áreas metropolitanas,Formal,Formal,Ene - Mar,5381.842067
 2021,23 Ciudades y áreas metropolitanas,Formal,Formal,Feb - Abr,5397.806292666667
 2021,23 Ciudades y áreas metropolitanas,Formal,Formal,Mar - May,5488.904758333333
@@ -3347,6 +3400,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,Formal,Dic - Feb,7158.345735
 2026,23 Ciudades y áreas metropolitanas,Formal,Formal,Ene - Mar,7162.025443
 2026,23 Ciudades y áreas metropolitanas,Formal,Formal,Feb - Abr,7252.805243
+2026,23 Ciudades y áreas metropolitanas,Formal,Formal,Mar - May,7326.40866
 2021,23 Ciudades y áreas metropolitanas,Formal,"Obrero, empleado particular^",Ene - Mar,3911.005298
 2021,23 Ciudades y áreas metropolitanas,Formal,"Obrero, empleado particular^",Feb - Abr,3917.658847
 2021,23 Ciudades y áreas metropolitanas,Formal,"Obrero, empleado particular^",Mar - May,3979.7201396666665
@@ -3409,6 +3463,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,"Obrero, empleado particular^",Dic - Feb,5313.11579
 2026,23 Ciudades y áreas metropolitanas,Formal,"Obrero, empleado particular^",Ene - Mar,5244.472054
 2026,23 Ciudades y áreas metropolitanas,Formal,"Obrero, empleado particular^",Feb - Abr,5302.535906
+2026,23 Ciudades y áreas metropolitanas,Formal,"Obrero, empleado particular^",Mar - May,5352.291944
 2021,23 Ciudades y áreas metropolitanas,Formal,Empleado del gobierno,Ene - Mar,624.852896
 2021,23 Ciudades y áreas metropolitanas,Formal,Empleado del gobierno,Feb - Abr,646.1977316666666
 2021,23 Ciudades y áreas metropolitanas,Formal,Empleado del gobierno,Mar - May,657.728993
@@ -3471,6 +3526,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,Empleado del gobierno,Dic - Feb,557.711873
 2026,23 Ciudades y áreas metropolitanas,Formal,Empleado del gobierno,Ene - Mar,552.364997
 2026,23 Ciudades y áreas metropolitanas,Formal,Empleado del gobierno,Feb - Abr,549.545253
+2026,23 Ciudades y áreas metropolitanas,Formal,Empleado del gobierno,Mar - May,538.066369
 2021,23 Ciudades y áreas metropolitanas,Formal,Empleado doméstico,Ene - Mar,51.90168033333333
 2021,23 Ciudades y áreas metropolitanas,Formal,Empleado doméstico,Feb - Abr,52.289637666666664
 2021,23 Ciudades y áreas metropolitanas,Formal,Empleado doméstico,Mar - May,61.91126633333334
@@ -3533,6 +3589,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,Empleado doméstico,Dic - Feb,101.590286
 2026,23 Ciudades y áreas metropolitanas,Formal,Empleado doméstico,Ene - Mar,115.658226
 2026,23 Ciudades y áreas metropolitanas,Formal,Empleado doméstico,Feb - Abr,117.232953
+2026,23 Ciudades y áreas metropolitanas,Formal,Empleado doméstico,Mar - May,115.0394
 2021,23 Ciudades y áreas metropolitanas,Formal,Trabajador por cuenta propia,Ene - Mar,652.0429583333333
 2021,23 Ciudades y áreas metropolitanas,Formal,Trabajador por cuenta propia,Feb - Abr,623.2838263333333
 2021,23 Ciudades y áreas metropolitanas,Formal,Trabajador por cuenta propia,Mar - May,624.180823
@@ -3595,6 +3652,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,Trabajador por cuenta propia,Dic - Feb,955.437724
 2026,23 Ciudades y áreas metropolitanas,Formal,Trabajador por cuenta propia,Ene - Mar,1003.446938
 2026,23 Ciudades y áreas metropolitanas,Formal,Trabajador por cuenta propia,Feb - Abr,1058.730543
+2026,23 Ciudades y áreas metropolitanas,Formal,Trabajador por cuenta propia,Mar - May,1091.645492
 2021,23 Ciudades y áreas metropolitanas,Formal,Patrón o empleador,Ene - Mar,142.03923433333333
 2021,23 Ciudades y áreas metropolitanas,Formal,Patrón o empleador,Feb - Abr,158.37625
 2021,23 Ciudades y áreas metropolitanas,Formal,Patrón o empleador,Mar - May,165.363536
@@ -3657,6 +3715,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Formal,Patrón o empleador,Dic - Feb,230.490062
 2026,23 Ciudades y áreas metropolitanas,Formal,Patrón o empleador,Ene - Mar,246.083227
 2026,23 Ciudades y áreas metropolitanas,Formal,Patrón o empleador,Feb - Abr,224.760588
+2026,23 Ciudades y áreas metropolitanas,Formal,Patrón o empleador,Mar - May,229.365456
 2021,23 Ciudades y áreas metropolitanas,Informal,Informal,Ene - Mar,4825.498504666667
 2021,23 Ciudades y áreas metropolitanas,Informal,Informal,Feb - Abr,4916.365636333333
 2021,23 Ciudades y áreas metropolitanas,Informal,Informal,Mar - May,4842.916671666667
@@ -3719,6 +3778,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,Informal,Dic - Feb,5270.939468
 2026,23 Ciudades y áreas metropolitanas,Informal,Informal,Ene - Mar,5240.332113
 2026,23 Ciudades y áreas metropolitanas,Informal,Informal,Feb - Abr,5329.462953
+2026,23 Ciudades y áreas metropolitanas,Informal,Informal,Mar - May,5293.070033
 2021,23 Ciudades y áreas metropolitanas,Informal,"Obrero, empleado particular^",Ene - Mar,1298.2635143333334
 2021,23 Ciudades y áreas metropolitanas,Informal,"Obrero, empleado particular^",Feb - Abr,1291.6704056666667
 2021,23 Ciudades y áreas metropolitanas,Informal,"Obrero, empleado particular^",Mar - May,1228.4494113333333
@@ -3781,6 +3841,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,"Obrero, empleado particular^",Dic - Feb,1464.844689
 2026,23 Ciudades y áreas metropolitanas,Informal,"Obrero, empleado particular^",Ene - Mar,1384.119599
 2026,23 Ciudades y áreas metropolitanas,Informal,"Obrero, empleado particular^",Feb - Abr,1455.845156
+2026,23 Ciudades y áreas metropolitanas,Informal,"Obrero, empleado particular^",Mar - May,1439.131472
 2021,23 Ciudades y áreas metropolitanas,Informal,Empleado doméstico,Ene - Mar,155.29032633333333
 2021,23 Ciudades y áreas metropolitanas,Informal,Empleado doméstico,Feb - Abr,170.39690466666664
 2021,23 Ciudades y áreas metropolitanas,Informal,Empleado doméstico,Mar - May,176.31357866666667
@@ -3843,6 +3904,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,Empleado doméstico,Dic - Feb,237.36065
 2026,23 Ciudades y áreas metropolitanas,Informal,Empleado doméstico,Ene - Mar,244.580695
 2026,23 Ciudades y áreas metropolitanas,Informal,Empleado doméstico,Feb - Abr,271.335675
+2026,23 Ciudades y áreas metropolitanas,Informal,Empleado doméstico,Mar - May,273.090904
 2021,23 Ciudades y áreas metropolitanas,Informal,Trabajador por cuenta propia,Ene - Mar,3020.1610823333335
 2021,23 Ciudades y áreas metropolitanas,Informal,Trabajador por cuenta propia,Feb - Abr,3170.199716333333
 2021,23 Ciudades y áreas metropolitanas,Informal,Trabajador por cuenta propia,Mar - May,3201.231124666667
@@ -3905,6 +3967,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,Trabajador por cuenta propia,Dic - Feb,3340.121241
 2026,23 Ciudades y áreas metropolitanas,Informal,Trabajador por cuenta propia,Ene - Mar,3343.515286
 2026,23 Ciudades y áreas metropolitanas,Informal,Trabajador por cuenta propia,Feb - Abr,3344.513408
+2026,23 Ciudades y áreas metropolitanas,Informal,Trabajador por cuenta propia,Mar - May,3323.894383
 2021,23 Ciudades y áreas metropolitanas,Informal,Patrón o empleador,Ene - Mar,60.30307733333333
 2021,23 Ciudades y áreas metropolitanas,Informal,Patrón o empleador,Feb - Abr,68.290643
 2021,23 Ciudades y áreas metropolitanas,Informal,Patrón o empleador,Mar - May,73.808652
@@ -3967,6 +4030,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,Patrón o empleador,Dic - Feb,114.957695
 2026,23 Ciudades y áreas metropolitanas,Informal,Patrón o empleador,Ene - Mar,141.96879
 2026,23 Ciudades y áreas metropolitanas,Informal,Patrón o empleador,Feb - Abr,134.409372
+2026,23 Ciudades y áreas metropolitanas,Informal,Patrón o empleador,Mar - May,123.279037
 2021,23 Ciudades y áreas metropolitanas,Informal,Trabajador familiar sin remuneración,Ene - Mar,106.906836
 2021,23 Ciudades y áreas metropolitanas,Informal,Trabajador familiar sin remuneración,Feb - Abr,106.93698033333334
 2021,23 Ciudades y áreas metropolitanas,Informal,Trabajador familiar sin remuneración,Mar - May,99.26229033333334
@@ -4029,6 +4093,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,Trabajador familiar sin remuneración,Dic - Feb,111.186545
 2026,23 Ciudades y áreas metropolitanas,Informal,Trabajador familiar sin remuneración,Ene - Mar,123.719904
 2026,23 Ciudades y áreas metropolitanas,Informal,Trabajador familiar sin remuneración,Feb - Abr,119.869577
+2026,23 Ciudades y áreas metropolitanas,Informal,Trabajador familiar sin remuneración,Mar - May,131.474157
 2021,23 Ciudades y áreas metropolitanas,Informal,Otro,Ene - Mar,184.573668
 2021,23 Ciudades y áreas metropolitanas,Informal,Otro,Feb - Abr,108.87098633333335
 2021,23 Ciudades y áreas metropolitanas,Informal,Otro,Mar - May,63.851615
@@ -4091,3 +4156,4 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2025,23 Ciudades y áreas metropolitanas,Informal,Otro,Dic - Feb,2.468648
 2026,23 Ciudades y áreas metropolitanas,Informal,Otro,Ene - Mar,2.42784
 2026,23 Ciudades y áreas metropolitanas,Informal,Otro,Feb - Abr,3.489766
+2026,23 Ciudades y áreas metropolitanas,Informal,Otro,Mar - May,2.20008
