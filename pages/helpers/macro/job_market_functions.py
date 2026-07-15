@@ -1,8 +1,9 @@
 import pandas as pd
 import streamlit as st
-from generalities.function import get_valid_presidents, president_multiselect, norm
-from generalities.macro_generalities.dictionaries import months
+from generalities.function import get_valid_presidents, president_multiselect, norm, SeriesSpec
 import generalities.macro_generalities.job_market as jm
+
+UNEMPLOYMENT_SPEC = SeriesSpec("Tasa de desempleo", "Unemployment rate")
 
 
 def job_market_sidebar_filters(df: pd.DataFrame, placeholder, president_placeholder,
@@ -21,33 +22,6 @@ def job_market_sidebar_filters(df: pd.DataFrame, placeholder, president_placehol
         )
 
     return selected_presidents, chart_type
-
-
-def unemployment_year_axis(df: pd.DataFrame, month_nums: list) -> pd.DataFrame:
-    """x = years. Empty month_nums -> annual-average single column; else one column per month."""
-    s = df["Tasa de desempleo"].dropna()
-    if not month_nums:
-        return s.groupby(s.index.year).mean().to_frame(name="Unemployment rate")
-
-    cols = {}
-    for m in month_nums:
-        sm = s[s.index.month == m]
-        sm.index = sm.index.year
-        cols[months[m]] = sm
-    return pd.DataFrame(cols)
-
-
-def unemployment_month_axis(df: pd.DataFrame, years: list) -> pd.DataFrame:
-    """x = months (Jan-Dec). One column per year, values that year's monthly rate."""
-    s = df["Tasa de desempleo"].dropna()
-    cols = {}
-    for y in years:
-        sy = s[s.index.year == y]
-        sy.index = sy.index.month
-        cols[str(y)] = sy
-    table = pd.DataFrame(cols).reindex(range(1, 13))
-    table.index = [months[m] for m in table.index]
-    return table
 
 
 def _to_percent(table: pd.DataFrame, pet_concept: str, rate_concepts: dict) -> pd.DataFrame:

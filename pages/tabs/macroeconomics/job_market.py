@@ -4,11 +4,12 @@ from pages.helpers import charts as mc
 from pages.helpers.macro import job_market_functions as mf
 from pages.helpers import charts as dc
 import generalities.macro_generalities.job_market as jm
-from generalities.macro_generalities.dictionaries import presidents, months
+from generalities.dictionaries import presidents, months
 from generalities.function import (to_datatime, load_csv, load_geojson, BASE_DIR,
                                    highlight_selectbox, find_key_by_value,
                                    get_valid_presidents, president_multiselect,
-                                   cap as _cap, cap_one as _cap_one)
+                                   cap as _cap, cap_one as _cap_one,
+                                   series_year_axis, series_month_axis)
 
 INFORMALITY_BASE = str(BASE_DIR / "data/dane/job_market/informalidad") + "/"
 LABOR_FORCE_BASE = str(BASE_DIR / "data/dane/job_market/Mercado Laboral") + "/"
@@ -95,7 +96,7 @@ def render_job_market(unemployment_df: pd.DataFrame) -> None:
             )
 
         selected_presidents, chart_type = mf.job_market_sidebar_filters(
-            mf.unemployment_year_axis(unemp_local, []), top_placeholder, president_placeholder,
+            series_year_axis(unemp_local, mf.UNEMPLOYMENT_SPEC, []), top_placeholder, president_placeholder,
             president_disabled=yearpres_disabled, president_key="unemp_presidents",
         )
 
@@ -107,10 +108,10 @@ def render_job_market(unemployment_df: pd.DataFrame) -> None:
 
         if years or presidents_sel:  # YEAR mode -> x = months
             year_set = _year_set(years, presidents_sel, year_options)
-            series = mf.unemployment_month_axis(unemp_local, sorted(year_set))
+            series = series_month_axis(unemp_local, mf.UNEMPLOYMENT_SPEC, sorted(year_set))
             info = ["Unemployment rate by month", "Month", "Rate (%)"]
         else:  # MONTH mode (months selected) or DEFAULT -> x = years
-            series = mf.unemployment_year_axis(unemp_local, month_nums)
+            series = series_year_axis(unemp_local, mf.UNEMPLOYMENT_SPEC, month_nums)
             info = ["Unemployment rate", "Year", "Rate (%)"]
 
         _draw(chart_type, series, info)
