@@ -3,7 +3,7 @@ from pages.helpers import charts as mc
 from pages.helpers import charts as dc
 from pages.helpers.demography import births_functions as bir
 from pages.helpers.demography import deaths_functions as dth
-from generalities.macro_generalities.dictionaries import presidents
+from generalities.dictionaries import presidents
 from generalities.function import get_valid_presidents, president_multiselect, reshape_by_presidents, load_csv, load_geojson, highlight_selectbox
 from generalities.demography_generalities.deaths import DEATHS_PATHS, DEATHS_COMPARE, AREA_EN, AGE_EN as DEATHS_AGE_EN, AGE_MUNI_EN, MUNI_CAPTION 
 from generalities.demography_generalities.births import DEPT_GEOJSON_PATH, DEPT_FEATURE_KEY

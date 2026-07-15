@@ -2,11 +2,11 @@ import streamlit as st
 import pandas as pd
 from pages.helpers import charts as mc
 from pages.helpers.macro import productivity_functions as pf
-from pages.helpers.miscellaneous import rates_functions as rf
-from generalities.macro_generalities.dictionaries import presidents
+from generalities.dictionaries import presidents
 from generalities.function import (highlight_selectbox, get_valid_presidents,
                                    president_multiselect, reshape_by_presidents,
-                                   show_all_years, to_datatime, BASE_DIR, load_csv)
+                                   show_all_years, to_datatime, BASE_DIR, load_csv,
+                                   SeriesSpec, series_year_axis)
 
 CONCEPTS = {"Wage": "Salario", "Transportation Allowance": "Auxilio"}
 SUM_LABEL = "Wage + Transportation Allowance"
@@ -52,7 +52,7 @@ def render_minimum_wage(df: pd.DataFrame, trm_df: pd.DataFrame) -> None:
         label = concept_label
 
     if show_real:
-        cpi_annual = rf.rate_year_axis(to_datatime(load_csv(CPI_PATH), False), rf.SeriesSpec("Índice ", "CPI"), [])["CPI"]
+        cpi_annual = series_year_axis(to_datatime(load_csv(CPI_PATH), False), SeriesSpec("Índice ", "CPI"), [])["CPI"]
         full = full * (cpi_annual.loc[BASE_YEAR] / cpi_annual.reindex(full.index))
         label = f"{label} (Real)"
 
@@ -61,7 +61,7 @@ def render_minimum_wage(df: pd.DataFrame, trm_df: pd.DataFrame) -> None:
         label = f"{label} Growth"
         unit = "%"
     elif method == "USD":
-        trm_year = rf.rate_year_axis(to_datatime(trm_df, False), rf.SeriesSpec("trm", "Exchange Rate"), [])["Exchange Rate"]
+        trm_year = series_year_axis(to_datatime(trm_df, False), SeriesSpec("trm", "Exchange Rate"), [])["Exchange Rate"]
         full = (full / trm_year).dropna()
         unit = "USD"
     else:

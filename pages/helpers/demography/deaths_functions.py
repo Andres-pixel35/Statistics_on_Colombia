@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-from generalities.macro_generalities.dictionaries import presidents
+from generalities.dictionaries import presidents
 from generalities.function import find_key_by_value, load_csv, norm
 from generalities.demography_generalities.deaths import GENDER_EN as DEATHS_GENDER_EN, AREA_EN, AGE_EN as DEATHS_AGE_EN, CAUSE_EN, CAUSE_MUNI_EN, COUNTRY_MUNI_EN
 from generalities.demography_generalities.migration import COUNTRY_EN

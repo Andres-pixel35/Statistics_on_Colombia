@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-from generalities.macro_generalities.dictionaries import presidents, months
+from generalities.dictionaries import presidents, months
 from generalities.function import get_valid_presidents, find_key_by_value, show_all_years, to_datatime, president_multiselect, load_csv, BASE_DIR
 from generalities.macro_generalities.inflation import perspective_names
 

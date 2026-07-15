@@ -1,11 +1,12 @@
 import json
 from pathlib import Path
 from datetime import datetime
+from typing import NamedTuple
 import pandas as pd
 import streamlit as st
 import re
 import unicodedata
-from generalities.macro_generalities.dictionaries import presidents
+from generalities.dictionaries import presidents, months
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -118,3 +119,30 @@ def norm(label: str) -> str:
     """Accent/case/space-insensitive key so 'Úlcera' and 'Ulcera' collapse to one cause."""
     text = unicodedata.normalize("NFKD", str(label)).encode("ascii", "ignore").decode()
     return re.sub(r"\s+", " ", text).strip().lower()
+
+class SeriesSpec(NamedTuple):
+    value_col: str  # e.g. "trm" or "Tasa (%)"
+    label: str       # e.g. "Exchange Rate" or "Monetary Policy Rate"
+
+def series_year_axis(df: pd.DataFrame, spec: SeriesSpec, month_nums: list) -> pd.DataFrame:
+    """x = years. Empty month_nums -> annual-average single column; else one column per month."""
+    s = df[spec.value_col].dropna()
+    if not month_nums:
+        return s.groupby(s.index.year).mean().to_frame(name=spec.label)
+
+    cols = {}
+    for m in month_nums:
+        sm = s[s.index.month == m]
+        cols[months[m]] = sm.groupby(sm.index.year).mean()
+    return pd.DataFrame(cols)
+
+def series_month_axis(df: pd.DataFrame, spec: SeriesSpec, years: list) -> pd.DataFrame:
+    """x = months (Jan-Dec). One column per year, values = that year's monthly average."""
+    s = df[spec.value_col].dropna()
+    cols = {}
+    for y in years:
+        sy = s[s.index.year == y]
+        cols[str(y)] = sy.groupby(sy.index.month).mean()
+    table = pd.DataFrame(cols)
+    table.index = [months[m] for m in table.index]
+    return table

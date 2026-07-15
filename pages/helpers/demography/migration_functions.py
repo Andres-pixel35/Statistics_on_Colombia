@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-from generalities.macro_generalities.dictionaries import months
+from generalities.dictionaries import months
 from generalities.function import find_key_by_value
 from generalities.demography_generalities.migration import COUNTRY_EN, COL_MAP
 
