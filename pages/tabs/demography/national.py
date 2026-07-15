@@ -5,7 +5,7 @@ from pages.helpers import charts as dc
 from pages.helpers.demography import births_functions as bir
 from pages.helpers.demography import deaths_functions as dth
 from pages.helpers.demography import population_functions as pop
-from generalities.macro_generalities.dictionaries import presidents
+from generalities.dictionaries import presidents
 from generalities.function import get_valid_presidents, show_all_years, load_csv, BASE_DIR
 from generalities.demography_generalities.births import BIRTHS_PATHS
 from generalities.demography_generalities.deaths import DEATHS_PATHS

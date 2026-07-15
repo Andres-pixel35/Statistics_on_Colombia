@@ -3,12 +3,13 @@ import streamlit as st
 import pandas as pd
 from pages.helpers import charts as mc
 from pages.helpers.miscellaneous import rates_functions as rf
-from generalities.macro_generalities.dictionaries import presidents, months
+from generalities.dictionaries import presidents, months
 from generalities.function import (to_datatime, highlight_selectbox, find_key_by_value,
                                    get_valid_presidents, president_multiselect,
-                                   reshape_by_presidents, show_all_years)
+                                   reshape_by_presidents, show_all_years,
+                                   SeriesSpec, series_year_axis, series_month_axis)
 
-SPEC = rf.SeriesSpec("trm", "Exchange Rate")
+SPEC = SeriesSpec("trm", "Exchange Rate")
 UNIT = "COP per USD"
 
 
@@ -85,15 +86,15 @@ def render_exchange_rate(df: pd.DataFrame) -> None:
         presidents_sel = [] if yearpres_disabled else selected_presidents
 
         if len(presidents_sel) >= 2:
-            series = rf.rate_year_axis(local, SPEC, [])
+            series = series_year_axis(local, SPEC, [])
             info = [SPEC.label, "Year", UNIT]
             series, info = reshape_by_presidents(series, presidents_sel, info)
         elif years or presidents_sel:  # single president or explicit years -> x = months
             year_set = _year_set(years, presidents_sel, year_options)
-            series = rf.rate_month_axis(local, SPEC, sorted(year_set))
+            series = series_month_axis(local, SPEC, sorted(year_set))
             info = [f"{SPEC.label} by month", "Month", UNIT]
         else:  # months selected, or default -> x = years
-            series = rf.rate_year_axis(local, SPEC, month_nums)
+            series = series_year_axis(local, SPEC, month_nums)
             series = show_all_years(series, president=False)
             info = [SPEC.label, "Year", UNIT]
             if not (years or presidents_sel or month_nums):

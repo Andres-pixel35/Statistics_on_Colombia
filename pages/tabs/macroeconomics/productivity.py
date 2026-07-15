@@ -3,7 +3,7 @@ import pandas as pd
 from pages.helpers import charts as mc
 from pages.helpers.macro import productivity_functions as pf
 import generalities.macro_generalities.productivity as pr
-from generalities.macro_generalities.dictionaries import presidents
+from generalities.dictionaries import presidents
 from generalities.function import (load_csv, BASE_DIR, highlight_selectbox,
                                    get_valid_presidents, president_multiselect,
                                    reshape_by_presidents, find_key_by_value,
