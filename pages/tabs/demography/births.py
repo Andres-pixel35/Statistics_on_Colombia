@@ -2,7 +2,7 @@ import streamlit as st
 from pages.helpers import charts as mc
 from pages.helpers import charts as dc
 from pages.helpers.demography import births_functions as bir
-from generalities.macro_generalities.dictionaries import presidents
+from generalities.dictionaries import presidents
 from generalities.function import get_valid_presidents, find_key_by_value, president_multiselect, reshape_by_presidents, load_csv, load_geojson, highlight_selectbox
 from generalities.demography_generalities.births import BIRTHS_PATHS, BIRTHS_COMPARE, AGE_EN, GENDER_EN, DEPT_GEOJSON_PATH, DEPT_FEATURE_KEY
 from pages.tabs.demography._shared import _render_geo_bar_line

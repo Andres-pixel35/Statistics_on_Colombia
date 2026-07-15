@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from pages.helpers import charts as mc
 from pages.helpers.macro import cpi_functions as mf
-from generalities.macro_generalities.dictionaries import presidents, months
+from generalities.dictionaries import presidents, months
 from generalities.function import find_key_by_value, to_datatime, reshape_by_presidents, load_csv, BASE_DIR, highlight_selectbox
 import generalities.macro_generalities.inflation as gi
 

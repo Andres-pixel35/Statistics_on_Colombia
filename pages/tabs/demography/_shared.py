@@ -2,7 +2,7 @@ import streamlit as st
 from pages.helpers import charts as mc
 from pages.helpers import charts as dc
 from pages.helpers.demography import population_functions as pop
-from generalities.macro_generalities.dictionaries import presidents
+from generalities.dictionaries import presidents
 from generalities.function import highlight_selectbox
 from generalities.demography_generalities.population import PREV_YEAR, MEN_COLOR, WOMEN_COLOR, PROJECTED_NOTE, PYRAMID_MODES
 

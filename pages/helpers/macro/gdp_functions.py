@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 from pages.helpers import charts as mc
-from generalities.macro_generalities.dictionaries import presidents
+from generalities.dictionaries import presidents
 from generalities.function import get_valid_presidents, president_multiselect, reshape_by_presidents, load_csv, BASE_DIR, highlight_selectbox, PREV_YEAR
 
 POPULATION_PATH = BASE_DIR / "data/dane/population/nacional.csv"

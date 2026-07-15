@@ -5,7 +5,7 @@ from pages.helpers import charts as mc
 import generalities.macro_generalities.gdp_spend as t
 from generalities.macro_generalities.gdp_production import production_summarize_terms as p
 from generalities.macro_generalities.gdp_income import income_summarize_terms as income
-from generalities.macro_generalities.dictionaries import presidents
+from generalities.dictionaries import presidents
 from generalities.function import get_valid_presidents, find_key_by_value, show_all_years, president_multiselect, reshape_by_presidents, load_csv, BASE_DIR
 
 ANNUAL_GROWTH_PATH  = BASE_DIR / "data/banco_republica/GDP/annual_growth.csv"
