@@ -21,16 +21,93 @@ def clean_gdp(df: pd.DataFrame, rows):
     gdp_series = gdp_series.astype(float)
 
     if len(gdp_series) > 5:
-        gdp_series.index = gdp_series.index.str.split("-").str[0]
+        years = gdp_series.index.str.split("-").str[0]
+        counts = years.value_counts()
+        complete = counts[counts == counts.max()].index
+        mask = years.isin(complete)
+        gdp_series = gdp_series[mask]
+        gdp_series.index = years[mask]
         gdp_series = gdp_series.groupby(gdp_series.index).sum()
 
     return gdp_series
 
-def generalities_spend_product(df: pd.DataFrame, terms: dict, variable: int|list, info: list) -> None:
+def load_banco_annual(path) -> pd.DataFrame:
+    df = load_csv(path, dtype=str)
+    df["Fecha"] = pd.to_datetime(df["Fecha"], format="%d/%m/%Y").dt.year.astype(str)
+    df["Crecimiento"] = df["Crecimiento"].replace("-", "0")
+    return df
+
+def _population_by_year() -> pd.Series:
+    pop_raw = load_csv(POPULATION_PATH)
+    pop = pop_raw.set_index("AÑO")["Total"].astype(int)
+    return pop[pop.index <= PREV_YEAR]  # exclude projected years
+
+def year_quarter_pivot(df: pd.DataFrame, rows, year: str) -> pd.Series | pd.DataFrame:
+    gdp_local = df.set_index("Concepto")
+    year_cols = gdp_local.columns[gdp_local.columns.str.startswith(f"{year}-")]
+    gdp_local = gdp_local[year_cols]
+
+    if isinstance(rows, int):
+        gdp_series = gdp_local.iloc[rows, :]
+    else:
+        gdp_series = gdp_local.loc[rows, :]
+
+    gdp_series = gdp_series.T.astype(float)
+    gdp_series.index = gdp_series.index.str.split("-").str[1]
+    gdp_series.index.name = "Quarter"
+    return gdp_series
+
+def generalities_spend_product(df: pd.DataFrame, terms: dict, levels_cfg: dict, info: list) -> None:
     """
     General utilities used in several parts of this section.
     filters in the sidebar and the logic to plot the chart
     """
+    variable = levels_cfg["variable"]
+    banco_path = levels_cfg["banco_path"]
+
+    in_year_view = st.session_state.get("gdp_in_year", False)
+
+    if in_year_view:
+        with st.sidebar:
+            st.header("Filters:")
+            chart_type = st.selectbox("Chart Type:", ["Line", "Bar"])
+
+            dane_years = sorted(df.columns[1:].str.split("-").str[0].unique(), reverse=True)
+            year = st.selectbox("Year:", dane_years)
+
+            tmp = st.multiselect("Variable:", terms.values())
+            if tmp:
+                variable = [k for k, v in terms.items() if v in tmp]
+
+            per_capita = st.checkbox("GDP per Capita")
+
+            st.checkbox("In Year view", key="gdp_in_year")
+
+        gdp_series = year_quarter_pivot(df, variable, year)
+
+        if per_capita:
+            pop = _population_by_year()
+            year_num = int("".join(c for c in year if c.isdigit()))
+            pop_value = pop.get(year_num)
+            if pop_value:
+                original_name = gdp_series.name if isinstance(gdp_series, pd.Series) else None
+                gdp_series = gdp_series / pop_value * 1_000_000_000_000
+                if original_name is not None:
+                    gdp_series.name = original_name
+                info[2] = "COP per capita"
+            else:
+                st.info(f"No population data for {year} yet — showing absolute values.")
+
+        year_info = [f"{info[0]} · {year}", "Quarter", info[2], info[3]]
+        labels_arg = terms
+        highlight = highlight_selectbox(gdp_series, [terms.get(c, c) for c in gdp_series.columns] if isinstance(gdp_series, pd.DataFrame) else None)
+        fig = mc.line_or_bar(chart_type, gdp_series, year_info, labels=labels_arg, highlight=highlight)
+        mc.render_chart(fig)
+        st.caption(f"{info[3]}, base year 2015")
+        st.caption("Source: DANE")
+        st.info("\'p\' is provisional and \'pr\' is preliminary data.")
+        return
+
     with st.sidebar:
         st.header("Filters:")
 
@@ -38,10 +115,25 @@ def generalities_spend_product(df: pd.DataFrame, terms: dict, variable: int|list
 
         quarter = st.selectbox("Quarter:", ["All", "I", "II", "III", "IV"])
 
-        years = df.columns[1:].str.split("-").str[0].unique()
+        tmp = st.multiselect("Variable:", terms.values())
+        if tmp:
+            variable = [k for k, v in terms.items() if v in tmp]
 
-        tmp_years = years.str.replace("p|r", "", regex=True)
-        tmp_years = tmp_years.astype(int)
+        use_banco = banco_path is not None and quarter == "All" and not tmp
+
+        if use_banco:
+            years = pd.Index(sorted(load_banco_annual(banco_path)["Fecha"].unique()))
+        else:
+            all_years = df.columns[1:].str.split("-").str[0]
+            if quarter == "All":
+                counts = all_years.value_counts()
+                years = counts[counts == counts.max()].index
+            else:
+                cols = df.columns[1:]
+                qcols = cols[cols.str.contains(rf"-{quarter}$", regex=True)]
+                years = qcols.str.split("-").str[0].unique()
+
+        tmp_years = pd.Index(years).str.replace("p|r", "", regex=True).astype(int)
 
         valid_presidents = get_valid_presidents(tmp_years)
 
@@ -57,11 +149,9 @@ def generalities_spend_product(df: pd.DataFrame, terms: dict, variable: int|list
         else:
             choice_year = st.multiselect("Year:", sorted(years, reverse=True))
 
-        tmp = st.multiselect("Variable:", terms.values())
-        if tmp:
-            variable = [k for k, v in terms.items() if v in tmp]
-
         per_capita = st.checkbox("GDP per Capita")
+
+        st.checkbox("In Year view", key="gdp_in_year")
 
     if comparing:
         pattern = None
@@ -84,12 +174,17 @@ def generalities_spend_product(df: pd.DataFrame, terms: dict, variable: int|list
         info[0] = f"{info[0]} — Q{quarter}"
 
     # plot the chart
-    gdp_series = clean_gdp(df, variable)
+    if use_banco:
+        banco = load_banco_annual(banco_path)
+        gdp_series = banco.set_index("Fecha")["PIB"].astype(float) / 1000
+        gdp_series.name = "Producto Interno Bruto"
+        if pattern:
+            gdp_series = gdp_series[gdp_series.index.str.contains(pattern)]
+    else:
+        gdp_series = clean_gdp(df, variable)
 
     if per_capita:
-        pop_raw = load_csv(POPULATION_PATH)
-        pop = pop_raw.set_index("AÑO")["Total"].astype(int)
-        pop = pop[pop.index <= PREV_YEAR]            # exclude projected years
+        pop = _population_by_year()
         clean_years = gdp_series.index.str.replace(r'\D+', '', regex=True).astype(int)
         pop_aligned = pd.Series(pop.reindex(clean_years).values, index=gdp_series.index)
         original_name = gdp_series.name if isinstance(gdp_series, pd.Series) else None
@@ -98,6 +193,8 @@ def generalities_spend_product(df: pd.DataFrame, terms: dict, variable: int|list
         if original_name is not None:
             gdp_series.name = original_name
         info[2] = "COP per capita"
+
+    force_bar = use_banco and len(gdp_series) == 1
 
     if comparing:
         if isinstance(gdp_series, pd.Series):
@@ -109,7 +206,7 @@ def generalities_spend_product(df: pd.DataFrame, terms: dict, variable: int|list
 
     highlight = highlight_selectbox(gdp_series, [terms.get(c, c) for c in gdp_series.columns] if isinstance(gdp_series, pd.DataFrame) else None)
 
-    fig = mc.line_or_bar(chart_type, gdp_series, info, labels=labels_arg, highlight=highlight)
+    fig = mc.line_or_bar(chart_type, gdp_series, info, labels=labels_arg, highlight=highlight, force_bar=force_bar)
 
     mc.render_chart(fig)
     st.caption(f"{info[3]}, base year 2015")

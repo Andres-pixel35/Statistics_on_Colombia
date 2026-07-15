@@ -8,7 +8,8 @@ from generalities.macro_generalities.gdp_income import income_summarize_terms as
 from generalities.dictionaries import presidents
 from generalities.function import get_valid_presidents, find_key_by_value, show_all_years, president_multiselect, reshape_by_presidents, load_csv, BASE_DIR
 
-ANNUAL_GROWTH_PATH  = BASE_DIR / "data/banco_republica/GDP/annual_growth.csv"
+REAL_ANNUAL_PATH    = BASE_DIR / "data/banco_republica/GDP/real_annual.csv"
+NOMINAL_ANNUAL_PATH = BASE_DIR / "data/banco_republica/GDP/nominal_annual.csv"
 POPULATION_PATH     = BASE_DIR / "data/dane/population/nacional.csv"
 QUARTER_GROWTH_PATH = BASE_DIR / "data/banco_republica/GDP/quarter_growth.csv"
 PRODUCTION_PATH     = BASE_DIR / "data/dane/GDP/production/summarize.csv"
@@ -41,11 +42,13 @@ def render_gdp(gdp_df: pd.DataFrame) -> None:
                 path = f"{SPEND_BASE_PATH}{filename}.csv"
                 gdp_local = load_csv(path, dtype=str).copy()
                 variable = 0
+                banco_path = None
             else:
                 variable = -1
+                banco_path = REAL_ANNUAL_PATH
 
             gdp_info = ["Real GDP per Year", "Year", "Trillion (COP)", "Chained volume series"]
-            mf.generalities_spend_product(gdp_local, selected_terms, variable, gdp_info)
+            mf.generalities_spend_product(gdp_local, selected_terms, {"variable": variable, "banco_path": banco_path}, gdp_info)
         elif perspective == "Production":
             gdp_local = load_csv(PRODUCTION_PATH, dtype=str)
 
@@ -55,7 +58,7 @@ def render_gdp(gdp_df: pd.DataFrame) -> None:
             variable = -1
 
             gdp_info = ["Real GDP per Year", "Year", "Trillion (COP)", "Chained volume series"]
-            mf.generalities_spend_product(gdp_local, p, variable, gdp_info)
+            mf.generalities_spend_product(gdp_local, p, {"variable": variable, "banco_path": REAL_ANNUAL_PATH}, gdp_info)
         else:
             gdp_local = load_csv(INCOME_PATH, dtype=str)
 
@@ -65,7 +68,7 @@ def render_gdp(gdp_df: pd.DataFrame) -> None:
             variable = -1
 
             gdp_info = ["GDP per Year", "Year", "Trillion (COP)", "Current Prices"]
-            mf.generalities_spend_product(gdp_local, income, variable, gdp_info)
+            mf.generalities_spend_product(gdp_local, income, {"variable": variable, "banco_path": NOMINAL_ANNUAL_PATH}, gdp_info)
     else:
         with col2:
             source = st.selectbox("Source:", ["Spend", "Production", "Income"])
@@ -99,7 +102,7 @@ def render_gdp(gdp_df: pd.DataFrame) -> None:
         concepto = find_key_by_value(terms, var_label)
 
         is_total  = concepto == "Producto Interno Bruto"
-        use_banco = is_total and source in ("Spend", "Production")
+        use_banco = is_total and (source in ("Spend", "Production") or (source == "Income" and growth_type == "Annual"))
         nominal   = source == "Income"
         title     = f"{'' if nominal else 'Real '}{var_label} Growth"
 
@@ -126,8 +129,11 @@ def render_gdp(gdp_df: pd.DataFrame) -> None:
 
         if growth_type == "Annual":
             quarter = None
-            gdp_local = load_csv(ANNUAL_GROWTH_PATH, dtype=str).copy() if use_banco \
-                        else mf.variable_growth(level_df, concepto, "annual")
+            if use_banco:
+                path = NOMINAL_ANNUAL_PATH if nominal else REAL_ANNUAL_PATH
+                gdp_local = mf.load_banco_annual(path)[["Fecha", "Crecimiento"]].copy()
+            else:
+                gdp_local = mf.variable_growth(level_df, concepto, "annual")
         else:
             quarter = "I"
             gdp_local = load_csv(QUARTER_GROWTH_PATH, dtype=str).copy() if use_banco \
@@ -167,7 +173,7 @@ def render_gdp(gdp_df: pd.DataFrame) -> None:
             if quarter is None and not comparing:
                 gdp_local.index = tmp_years
 
-                if is_total and not nominal:
+                if use_banco:
                     gdp_local = show_all_years(gdp_local, president)
 
                 gdp_local = gdp_local.reset_index(drop=True)

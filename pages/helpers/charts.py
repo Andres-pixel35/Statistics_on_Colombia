@@ -131,8 +131,10 @@ def bar_chart(data: pd.DataFrame, labels: dict, info: list, highlight: str = Non
 def line_or_bar(chart_type, data, info, labels=None, highlight=None,
                 force_bar=False, bar_if_single=True):
 
-    if chart_type == "Bar" or force_bar or (bar_if_single and len(data) == 1):
-        if len(data) == 1:
+    single_row = isinstance(data, pd.DataFrame) and len(data) == 1
+
+    if chart_type == "Bar" or force_bar or (bar_if_single and single_row):
+        if single_row:
             series = data.iloc[0]
             if labels:
                 series.index = [labels.get(c, c) for c in series.index]
