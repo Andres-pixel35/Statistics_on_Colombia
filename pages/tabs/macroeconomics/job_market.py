@@ -21,9 +21,6 @@ CHILD_LABOR_BASE = str(BASE_DIR / "data/dane/job_market/infantil") + "/"
 REGION_GEOJSON_PATH = BASE_DIR / "data/dane/geo/colombia_regions.geojson"
 REGION_FEATURE_KEY = "properties.region"
 
-PET_PCT_NOTE = ("Each percentage is relative to that gender's own working-age population (PET), "
-                "not the total.")
-
 
 def _year_set(years_sel, presidents_sel, data_years):
     """Union explicit years with each president's years, dropping years the data lacks."""
@@ -209,7 +206,7 @@ def render_job_market(unemployment_df: pd.DataFrame) -> None:
             info = [f"{concept_labels[0]} — {file_label} (Men vs Women) · {period}", "Year", metric]
         _draw(chart_type, series, info)
         if percent:
-            st.caption(PET_PCT_NOTE)
+            st.caption(jm.PET_PCT_NOTE)
         st.caption("Source: DANE (GEIH)")
         return
 
@@ -507,7 +504,7 @@ def render_departments() -> None:
     _draw(chart_type, series, info, labels=labels_arg,
           display_names=list(eng_map.values()) if labels_arg else None)
     if compare and percent:
-        st.caption(PET_PCT_NOTE)
+        st.caption(jm.PET_PCT_NOTE)
     st.caption("Source: DANE (GEIH)")
 
 
@@ -652,7 +649,7 @@ def render_regions() -> None:
     _draw(chart_type, series, info, labels=labels_arg,
           display_names=list(labels_arg.values()) if labels_arg else None)
     if compare and percent:
-        st.caption(PET_PCT_NOTE)
+        st.caption(jm.PET_PCT_NOTE)
     st.caption("Source: DANE (GEIH)")
 
 

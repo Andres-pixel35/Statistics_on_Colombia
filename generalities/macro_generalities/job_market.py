@@ -1,3 +1,6 @@
+PET_PCT_NOTE = ("Each percentage is relative to that gender's own working-age population (PET), "
+                "not the total.")
+
 GENDER = {
     "Total": "TOTAL NACIONAL",
     "Men": "HOMBRES",

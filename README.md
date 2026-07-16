@@ -3,8 +3,9 @@
 > 🚧 **Work in progress.** This project is under active development — features, data, and structure may change.
 
 **Statistics on Colombia** is an open-source project that presents Colombian
-statistics in a simple, interactive way — GDP, CPI (inflation), and population
-(births, deaths, and migration), with labor-market and unemployment indicators in progress. (Thus far)
+statistics in a simple, interactive way — GDP, CPI (inflation), labor market,
+productivity, public debt, and population (births, deaths, and migration).
+(Thus far)
 
 ## Live demo
 

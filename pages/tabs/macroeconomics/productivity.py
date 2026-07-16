@@ -10,12 +10,11 @@ from generalities.function import (load_csv, BASE_DIR, highlight_selectbox,
                                    cap as _cap, cap_one as _cap_one)
 
 PRODUCTIVITY_BASE_DIR = str(BASE_DIR / "data/dane/productivity") + "/"
-DEFAULT_STEM = "por_persona_empleada"
-ACTIVITY_STEM = "actividad_economica"
-ACTIVITY_COL = "Actividad Económica"
 
 
 def render_productivity(prod_df: pd.DataFrame) -> None:
+    st.title("Productivity")
+
     top_placeholder = st.sidebar.empty()
     president_placeholder = st.sidebar.empty()
 
@@ -23,13 +22,13 @@ def render_productivity(prod_df: pd.DataFrame) -> None:
     stem = pr.PRODUCTIVITY_FILES[file_label]
     terms = pr.PRODUCTIVITY_TERMS[stem]
 
-    df = prod_df if stem == DEFAULT_STEM else load_csv(
+    df = prod_df if stem == pr.DEFAULT_STEM else load_csv(
         f"{PRODUCTIVITY_BASE_DIR}{pr.PRODUCTIVITY_BASE[stem]}/{stem}.csv")
-    if stem == ACTIVITY_STEM:
-        df[ACTIVITY_COL] = df[ACTIVITY_COL].str.strip()
+    if stem == pr.ACTIVITY_STEM:
+        df[pr.ACTIVITY_COL] = df[pr.ACTIVITY_COL].str.strip()
     years = sorted(df["año"].unique())
 
-    if stem == ACTIVITY_STEM:
+    if stem == pr.ACTIVITY_STEM:
         concept_key, activity_key = "prod_concepts_activity", "prod_activities"
         concept_labels = st.sidebar.multiselect(
             "Concepts:", list(terms.keys()), default=[list(terms.keys())[0]], key=concept_key,
@@ -55,7 +54,7 @@ def render_productivity(prod_df: pd.DataFrame) -> None:
 
     valid_presidents = get_valid_presidents(years)
     president_restricted = len(concept_labels) >= 2 or (
-        stem == ACTIVITY_STEM and len(activity_labels) >= 2)
+        stem == pr.ACTIVITY_STEM and len(activity_labels) >= 2)
     if president_restricted:
         _cap_one(["prod_presidents"])
     with president_placeholder.container():
@@ -67,10 +66,10 @@ def render_productivity(prod_df: pd.DataFrame) -> None:
         year_set.update(set(presidents[name]) & set(years))
 
     concept_cols = {label: terms[label] for label in concept_labels}
-    if stem == ACTIVITY_STEM:
+    if stem == pr.ACTIVITY_STEM:
         activities_sp = [find_key_by_value(pr.ACTIVITY_EN, lbl) for lbl in activity_labels]
         series = pf.productivity_activity_pivot(
-            df, activities_sp, concept_cols, year_set, activity_col=ACTIVITY_COL)
+            df, activities_sp, concept_cols, year_set, activity_col=pr.ACTIVITY_COL)
         if len(activities_sp) >= 2:
             series = series.rename(columns=pr.ACTIVITY_EN)
     else:
@@ -89,9 +88,9 @@ def render_productivity(prod_df: pd.DataFrame) -> None:
         unit_caption = (f"{main_label} is in % (headline measure); "
                          "other concepts are in pp — their contribution to it.")
 
-    if stem == ACTIVITY_STEM and len(activities_sp) >= 2:
+    if stem == pr.ACTIVITY_STEM and len(activities_sp) >= 2:
         info = [f"{concept_labels[0]} by Economic Activity", "Year", value_label]
-    elif stem == ACTIVITY_STEM:
+    elif stem == pr.ACTIVITY_STEM:
         info = [f"Labor Productivity — {file_label} · {activity_labels[0]}", "Year", value_label]
     else:
         info = [f"Labor Productivity — {file_label}", "Year", value_label]
