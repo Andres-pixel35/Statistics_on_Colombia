@@ -1,3 +1,7 @@
+DEFAULT_STEM = "por_persona_empleada"
+ACTIVITY_STEM = "actividad_economica"
+ACTIVITY_COL = "Actividad Económica"
+
 PRODUCTIVITY_FILES = {
     "By Employed Person": "por_persona_empleada",
     "By Hour Worked": "por_hora_trabajada",
