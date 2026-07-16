@@ -164,3 +164,13 @@ def deaths_cause_pivot(dept_df: pd.DataFrame, selected_causes: list, years: list
 
 def deaths_cause_names(dept_df: pd.DataFrame) -> list:
     return sorted(dept_df["cause"].unique())
+
+# Sub-5-year age-at-death buckets, collapsed into one "0–5" pyramid bucket.
+PYRAMID_INFANT_BUCKETS = ["Under 1 hour", "1–23 hours", "1–6 days", "7–27 days", "28–29 days",
+                          "1–5 months", "6–11 months", "1 year", "2–4"]
+
+def deaths_pyramid_row(age_row: pd.Series) -> pd.Series:
+    """Collapse sub-5-year infant/toddler age-at-death buckets into one '0–5' bucket, drop Unknown."""
+    infant_total = age_row.reindex(PYRAMID_INFANT_BUCKETS).fillna(0).sum()
+    rest = age_row.drop(PYRAMID_INFANT_BUCKETS + ["Unknown"], errors="ignore")
+    return pd.concat([pd.Series({"0–5": infant_total}), rest])

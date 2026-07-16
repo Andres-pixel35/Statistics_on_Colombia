@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 from pages.helpers import charts as mc
 from generalities.dictionaries import presidents
-from generalities.function import get_valid_presidents, president_multiselect, reshape_by_presidents, load_csv, BASE_DIR, highlight_selectbox, PREV_YEAR
+from generalities.function import get_valid_presidents, president_multiselect, reshape_by_presidents, load_csv, BASE_DIR, highlight_selectbox, PREV_YEAR, show_all_years
 
 POPULATION_PATH = BASE_DIR / "data/dane/population/nacional.csv"
 
@@ -40,7 +40,7 @@ def load_banco_annual(path) -> pd.DataFrame:
 def _population_by_year() -> pd.Series:
     pop_raw = load_csv(POPULATION_PATH)
     pop = pop_raw.set_index("AÑO")["Total"].astype(int)
-    return pop[pop.index <= PREV_YEAR]  # exclude projected years
+    return pop[pop.index <= PREV_YEAR + 1]  # exclude projected years beyond the current year
 
 def year_quarter_pivot(df: pd.DataFrame, rows, year: str) -> pd.Series | pd.DataFrame:
     gdp_local = df.set_index("Concepto")
@@ -178,6 +178,10 @@ def generalities_spend_product(df: pd.DataFrame, terms: dict, levels_cfg: dict, 
         banco = load_banco_annual(banco_path)
         gdp_series = banco.set_index("Fecha")["PIB"].astype(float) / 1000
         gdp_series.name = "Producto Interno Bruto"
+        if not comparing:
+            gdp_series.index = gdp_series.index.astype(int)
+            gdp_series = show_all_years(gdp_series, president)
+            gdp_series.index = gdp_series.index.astype(str)
         if pattern:
             gdp_series = gdp_series[gdp_series.index.str.contains(pattern)]
     else:
