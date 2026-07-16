@@ -11,7 +11,6 @@ from generalities.function import get_valid_presidents, find_key_by_value, show_
 REAL_ANNUAL_PATH    = BASE_DIR / "data/banco_republica/GDP/real_annual.csv"
 NOMINAL_ANNUAL_PATH = BASE_DIR / "data/banco_republica/GDP/nominal_annual.csv"
 POPULATION_PATH     = BASE_DIR / "data/dane/population/nacional.csv"
-QUARTER_GROWTH_PATH = BASE_DIR / "data/banco_republica/GDP/quarter_growth.csv"
 PRODUCTION_PATH     = BASE_DIR / "data/dane/GDP/production/summarize.csv"
 INCOME_PATH         = BASE_DIR / "data/dane/GDP/income/summarize.csv"
 SPEND_BASE_PATH     = str(BASE_DIR / "data/dane/GDP/spend") + "/"
@@ -136,8 +135,7 @@ def render_gdp(gdp_df: pd.DataFrame) -> None:
                 gdp_local = mf.variable_growth(level_df, concepto, "annual")
         else:
             quarter = "I"
-            gdp_local = load_csv(QUARTER_GROWTH_PATH, dtype=str).copy() if use_banco \
-                        else mf.variable_growth(level_df, concepto, "quarter")
+            gdp_local = mf.variable_growth(level_df, concepto, "quarter")
 
         years = gdp_local[gdp_local.columns[0]].str.split("-").str[0].unique()
 
@@ -196,7 +194,7 @@ def render_gdp(gdp_df: pd.DataFrame) -> None:
             fig = mc.gdp_growth(gdp_local, choice_year, president, 1, quarter, title, chart_type)
 
         mc.render_chart(fig)
-        if use_banco:
+        if use_banco and quarter is None:
             st.caption("Spliced series, base 2015")
         st.caption("Source: DANE")
         if nominal:

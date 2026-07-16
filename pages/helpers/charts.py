@@ -421,26 +421,25 @@ def projection_line(data: pd.DataFrame, info: list, split_year: int, highlight: 
     fig.update_xaxes(type="category", dtick=1, tickangle=45, showgrid=False, tickfont=dict(size=15))
     return fig
 
-def population_pyramid(men: pd.Series, women: pd.Series, info: list, projected: bool = False):
+def population_pyramid(men: pd.Series, women: pd.Series, info: list):
     """Diverging horizontal bars: men to the left (negative), women to the right.
 
     info = [title, value_label, valueformat]"""
     title, value_label, valueformat = info
     groups = list(men.index)
-    title = title + (" — projected" if projected else "")
     maxv = max(men.max(), women.max()) or 1
     ticks = [(-maxv) + (2 * maxv) * k / 6 for k in range(7)]
 
     fig = go.Figure()
     fig.add_trace(go.Bar(
-        y=groups, x=[-v for v in men.values], orientation="h", name="Men",
+        y=groups, x=[-v for v in men.values], orientation="h", name=men.name,
         marker_color=MEN_COLOR, customdata=list(men.values),
-        hovertemplate=f"<b>Men</b><br>Age: %{{y}}<br>{value_label}: %{{customdata:{valueformat}}}<extra></extra>",
+        hovertemplate=f"<b>{men.name}</b><br>Age: %{{y}}<br>{value_label}: %{{customdata:{valueformat}}}<extra></extra>",
     ))
     fig.add_trace(go.Bar(
-        y=groups, x=list(women.values), orientation="h", name="Women",
+        y=groups, x=list(women.values), orientation="h", name=women.name,
         marker_color=WOMEN_COLOR,
-        hovertemplate=f"<b>Women</b><br>Age: %{{y}}<br>{value_label}: %{{x:{valueformat}}}<extra></extra>",
+        hovertemplate=f"<b>{women.name}</b><br>Age: %{{y}}<br>{value_label}: %{{x:{valueformat}}}<extra></extra>",
     ))
     fig.update_layout(
         barmode="overlay", bargap=0.1, height=600,
