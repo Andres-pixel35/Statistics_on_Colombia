@@ -51,7 +51,7 @@ def render_national(pop_df: pd.DataFrame) -> None:
         years = national.index[1:]
     else:
         with col2:
-            perspective = st.selectbox("Perspective:", ["National", "Net Migration", "Births", "Deaths"])
+            perspective = st.selectbox("Perspective:", ["National", "Net Migration", "Births", "Deaths", "Rates"])
 
         if perspective == "Net Migration":
             net_migration = load_csv(NET_MIGRATION_PATH)
@@ -65,11 +65,22 @@ def render_national(pop_df: pd.DataFrame) -> None:
         elif perspective == "Deaths":
             series = dth.deaths_national_series(load_csv(DEATHS_PATHS["total"]))
             years = series.index
+        elif perspective == "Rates":
+            b = bir.births_national_series(load_csv(BIRTHS_PATHS["total"]))
+            d = dth.deaths_national_series(load_csv(DEATHS_PATHS["total"]))
+            common = national.index.intersection(b.index).intersection(d.index)
+            series = pd.DataFrame({
+                "Birth rate": b[common] / national[common] * 1000,
+                "Death rate": d[common] / national[common] * 1000,
+            })
+            years = series.index
         else:  # National
             is_national = True
             years = national.index
 
-        if perspective != "National":
+        if perspective == "Rates":
+            info = ["National Birth & Death Rate", "Year", "Rate per 1,000 (%)"]
+        elif perspective != "National":
             a = f"{perspective}"
             unit = {"Births": "Births", "Deaths": "Deaths"}.get(perspective, "People")
             info = [a, "Year", unit]

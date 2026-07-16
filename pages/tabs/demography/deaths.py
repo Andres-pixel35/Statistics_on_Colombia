@@ -5,9 +5,10 @@ from pages.helpers.demography import births_functions as bir
 from pages.helpers.demography import deaths_functions as dth
 from generalities.dictionaries import presidents
 from generalities.function import get_valid_presidents, president_multiselect, reshape_by_presidents, load_csv, load_geojson, highlight_selectbox
-from generalities.demography_generalities.deaths import DEATHS_PATHS, DEATHS_COMPARE, AREA_EN, AGE_EN as DEATHS_AGE_EN, AGE_MUNI_EN, MUNI_CAPTION 
+from generalities.demography_generalities.deaths import DEATHS_PATHS, DEATHS_COMPARE, AREA_EN, AGE_EN as DEATHS_AGE_EN, AGE_MUNI_EN, MUNI_CAPTION
 from generalities.demography_generalities.births import DEPT_GEOJSON_PATH, DEPT_FEATURE_KEY
-from pages.tabs.demography._shared import _render_geo_bar_line
+from generalities.demography_generalities.population import PYRAMID_MODES
+from pages.tabs.demography._shared import _render_geo_bar_line, _render_pyramid_result
 
 
 def render_deaths() -> None:
@@ -36,8 +37,13 @@ def render_deaths() -> None:
 
 
 def _render_deaths_breakdown(compare_by: str) -> None:
+    chart_options = ["Line", "Bar"] + (["Population pyramid"] if compare_by == "Age Group" else [])
     with st.sidebar:
-        chart_type = st.selectbox("Chart Type:", ["Line", "Bar"])
+        chart_type = st.selectbox("Chart Type:", chart_options)
+
+    if chart_type == "Population pyramid":
+        _render_deaths_pyramid()
+        return
 
     gender_cause = None
     dept_df = None
@@ -123,6 +129,38 @@ def _render_deaths_breakdown(compare_by: str) -> None:
     fig = mc.line_or_bar(chart_type, pivot, info, highlight=highlight)
 
     mc.render_chart(fig)
+
+
+def _render_deaths_pyramid() -> None:
+    cause_names = dth.deaths_cause_names(dth.deaths_dept_prepared(DEATHS_PATHS["dept_death"]))
+
+    c0, c1 = st.columns(2)
+    with c0:
+        cause = st.selectbox("Cause:", ["All causes"] + cause_names)
+    with c1:
+        mode = st.selectbox("Display:", PYRAMID_MODES)
+
+    if cause == "All causes":
+        df = load_csv(DEATHS_PATHS["area_age"])
+        with st.sidebar:
+            area = st.selectbox("Area:", ["Total"] + list(AREA_EN.values()))
+        men_pivot, _ = dth.deaths_age_pivot(df, "Men", area)
+        women_pivot, _ = dth.deaths_age_pivot(df, "Women", area)
+    else:
+        dept_df = dth.deaths_dept_prepared(DEATHS_PATHS["dept_death"])
+        men_pivot, _ = dth.deaths_age_cause_pivot(dept_df, "Men", cause)
+        women_pivot, _ = dth.deaths_age_cause_pivot(dept_df, "Women", cause)
+
+    years = sorted(men_pivot.index.tolist(), reverse=True)
+    with st.sidebar:
+        year = st.selectbox("Year:", years)
+
+    men = dth.deaths_pyramid_row(men_pivot.loc[year])
+    women = dth.deaths_pyramid_row(women_pivot.loc[year])
+    men.name, women.name = "Men", "Women"
+
+    title = f"Deaths pyramid — {year}" if cause == "All causes" else f"Deaths pyramid — {cause}, {year}"
+    _render_pyramid_result(men, women, mode, title)
 
 
 def _deaths_dept_source():
