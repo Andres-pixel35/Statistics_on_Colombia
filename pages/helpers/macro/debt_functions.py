@@ -1,5 +1,13 @@
 import pandas as pd
 from pages.helpers.macro.gdp_functions import load_banco_annual
+from generalities.function import load_csv
+
+
+def load_fuente(path) -> pd.DataFrame:
+    """Fuente CSV with whitespace-padded Excel headers stripped."""
+    df = load_csv(path)
+    df.columns = df.columns.str.strip()
+    return df
 
 
 def gdp_millions(nominal_annual_path) -> pd.Series:
@@ -39,3 +47,16 @@ def to_total_pct(data, total):
     if isinstance(total, pd.Series):
         return data.div(total, axis=0) * 100
     return data.div(total) * 100
+
+
+def perfil_series(df: pd.DataFrame, fecha: str, periodo: str) -> pd.Series:
+    """Maturity-year-indexed COP-millones amount for one report date + Período de servicio,
+    dropping years beyond the forecast horizon (NaN) and zero-value years that are part of a
+    run of consecutive zeros (an isolated zero between two nonzero years is kept)."""
+    row = df.loc[(df["Fecha"] == fecha) & (df["Período de servicio"] == periodo)].iloc[0]
+    series = row.drop(["Fecha", "Período de servicio"]).astype(float)
+    series.index = series.index.astype(int)
+    series = series.dropna()
+    is_zero = series == 0
+    zero_run = is_zero & (is_zero.shift(fill_value=False) | is_zero.shift(-1, fill_value=False))
+    return series[~zero_run]
