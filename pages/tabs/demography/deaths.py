@@ -58,16 +58,24 @@ def _render_deaths_breakdown(compare_by: str) -> None:
             dept_df = dth.deaths_dept_prepared(DEATHS_PATHS["dept_death"])
             df = dept_df
     elif compare_by == "Age Group":
-        cause_names = dth.deaths_cause_names(dth.deaths_dept_prepared(DEATHS_PATHS["dept_death"]))
-        col1, col2, col3 = st.columns(3)
+        base_dept_df = dth.deaths_dept_prepared(DEATHS_PATHS["dept_death"])
+        cause_names = dth.deaths_cause_names(base_dept_df)
+        dept_names = sorted(base_dept_df["Name"].dropna().unique())
+        col1, col2, col3, col4 = st.columns(4)
         with col1:
             age_gender = st.selectbox("Gender:", ["Total", "Men", "Women"])
         with col2:
             age_cause = st.selectbox("Cause:", ["All causes"] + cause_names)
-        if age_cause == "All causes":
+        with col3:
+            age_dept = st.selectbox("Department:", ["All"] + dept_names)
+        use_dept_source = age_cause != "All causes" or age_dept != "All"
+        if not use_dept_source:
             df = load_csv(DEATHS_PATHS["area_age"])
+        elif age_dept != "All":
+            df = _deaths_dept_source()
+            df = df[df["Name"] == age_dept]
         else:
-            df = dth.deaths_dept_prepared(DEATHS_PATHS["dept_death"])
+            df = base_dept_df
     else:
         df = load_csv(DEATHS_PATHS["area_age"])
 
@@ -101,13 +109,15 @@ def _render_deaths_breakdown(compare_by: str) -> None:
             area_sel = st.selectbox("Area:", ["All areas"] + list(AREA_EN.values()))
         pivot, info = dth.deaths_area_pivot(df, age_label, area_gender, area_sel)
     else:  # Age Group
-        if age_cause == "All causes":
+        if not use_dept_source:
             with st.sidebar:
                 area = st.selectbox("Area:", ["Total"] + list(AREA_EN.values()))
             pivot, info = dth.deaths_age_pivot(df, age_gender, area)
         else:
             pivot, info = dth.deaths_age_cause_pivot(df, age_gender, age_cause)
-        with col3:
+            if age_dept != "All":
+                info = [f"{info[0]} — {age_dept}", info[1], info[2]]
+        with col4:
             chosen = st.multiselect("Age groups:", list(pivot.columns))
         if chosen:
             pivot = pivot[chosen]
@@ -132,22 +142,32 @@ def _render_deaths_breakdown(compare_by: str) -> None:
 
 
 def _render_deaths_pyramid() -> None:
-    cause_names = dth.deaths_cause_names(dth.deaths_dept_prepared(DEATHS_PATHS["dept_death"]))
+    base_dept_df = dth.deaths_dept_prepared(DEATHS_PATHS["dept_death"])
+    cause_names = dth.deaths_cause_names(base_dept_df)
+    dept_names = sorted(base_dept_df["Name"].dropna().unique())
 
-    c0, c1 = st.columns(2)
+    c0, c1, c2 = st.columns(3)
     with c0:
         cause = st.selectbox("Cause:", ["All causes"] + cause_names)
     with c1:
+        dept = st.selectbox("Department:", ["All"] + dept_names)
+    with c2:
         mode = st.selectbox("Display:", PYRAMID_MODES)
 
-    if cause == "All causes":
+    use_dept_source = cause != "All causes" or dept != "All"
+
+    if not use_dept_source:
         df = load_csv(DEATHS_PATHS["area_age"])
         with st.sidebar:
             area = st.selectbox("Area:", ["Total"] + list(AREA_EN.values()))
         men_pivot, _ = dth.deaths_age_pivot(df, "Men", area)
         women_pivot, _ = dth.deaths_age_pivot(df, "Women", area)
     else:
-        dept_df = dth.deaths_dept_prepared(DEATHS_PATHS["dept_death"])
+        if dept != "All":
+            dept_df = _deaths_dept_source()
+            dept_df = dept_df[dept_df["Name"] == dept]
+        else:
+            dept_df = base_dept_df
         men_pivot, _ = dth.deaths_age_cause_pivot(dept_df, "Men", cause)
         women_pivot, _ = dth.deaths_age_cause_pivot(dept_df, "Women", cause)
 
@@ -159,7 +179,11 @@ def _render_deaths_pyramid() -> None:
     women = dth.deaths_pyramid_row(women_pivot.loc[year])
     men.name, women.name = "Men", "Women"
 
-    title = f"Deaths pyramid — {year}" if cause == "All causes" else f"Deaths pyramid — {cause}, {year}"
+    title = f"Deaths pyramid — {year}"
+    if cause != "All causes":
+        title += f" — {cause}"
+    if dept != "All":
+        title += f" — {dept}"
     _render_pyramid_result(men, women, mode, title)
 
 
