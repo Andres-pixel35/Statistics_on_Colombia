@@ -272,7 +272,7 @@ def render_perfil() -> None:
     with col2:
         fecha = st.selectbox("Report Date:", year_dates, index=len(year_dates) - 1)
     with col3:
-        periodo_label = st.selectbox("Período de servicio:", list(dg.PERIODO_EN.values()))
+        periodo_label = st.selectbox("Service period:", list(dg.PERIODO_EN.values()))
     periodo = {v: k for k, v in dg.PERIODO_EN.items()}[periodo_label]
 
     series = dbf.perfil_series(df, fecha, periodo) / 1_000_000  # COP millions -> Trillion (COP)
