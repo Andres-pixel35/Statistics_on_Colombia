@@ -9,4 +9,8 @@
 
 ## Processing 
 
-Yet to implement
+**ise**: 
+```bash
+# run from inside clean_data/ (relative paths)
+python clean_ise.py
+```
