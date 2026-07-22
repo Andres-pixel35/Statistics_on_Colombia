@@ -5,7 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Running the App
 
 ```bash
-streamlit run app.py
+streamlit run Homepage.py
 ```
 
 The app can be run from anywhere — data paths are absolute, anchored on `BASE_DIR` (`generalities/function.py`, resolves to the repo root). Exception: the `clean_data/*` scripts use relative data paths, so where you run them matters and splits into two groups:
@@ -15,7 +15,9 @@ The app can be run from anywhere — data paths are absolute, anchored on `BASE_
 
 ## Architecture
 
-Multi-page Streamlit app displaying Colombian statistics. Entry point is `app.py` (homepage); pages live in `pages/`. Three domain pages: **Macroeconomics** (GDP/CPI/Job Market/Productivity/Debt), **Demography** (population, migration, births, deaths), and **Miscellaneous** (Exchange Rate, Monetary Policy Rate, Minimum Wage). Each page mirrors the same layout: a page-entry script in `pages/`, tab modules under `pages/tabs/<domain>/`, data helpers under `pages/helpers/<domain>/`, and config dicts under `generalities/<domain>_generalities/`. All four entry points (`app.py` + the three `pages/*.py`) call `st.logo(BASE_DIR / "logo/logo.png", size="large")` for the sidebar logo and `st.image(BASE_DIR / "logo/logo_text.png", width=300)` in place of the old `st.title("Statistics on Colombia")` header.
+Multi-page Streamlit app displaying Colombian statistics. Entry point is `Homepage.py` (homepage); pages live in `pages/`. Three domain pages: **Macroeconomics** (GDP/CPI/Job Market/Productivity/Debt), **Demography** (population, migration, births, deaths), and **Miscellaneous** (Exchange Rate, Monetary Policy Rate, Minimum Wage). Each page mirrors the same layout: a page-entry script in `pages/`, tab modules under `pages/tabs/<domain>/`, data helpers under `pages/helpers/<domain>/`, and config dicts under `generalities/<domain>_generalities/`. All four entry points (`Homepage.py` + the three `pages/*.py`) call `st.logo(BASE_DIR / "logo/logo.png", size="large")` for the sidebar logo and `st.image(BASE_DIR / "logo/logo_text.png", width=300)` in place of the old `st.title("Statistics on Colombia")` header. `.streamlit/config.toml` holds the light/dark theme palettes (primary/background/text/border colors).
+
+`Homepage.py` builds a KPI-card dashboard: it loads the latest value (+ prior-period delta + a 12-point sparkline trend) for each headline series directly from the same data helpers the domain pages use (GDP, CPI, Unemployment, ISE, Exchange Rate, Monetary Policy Rate, Debt-as-%-of-GDP, Debt Indicators, Productivity, Minimum Wage, Population, Births, Deaths, Net Migration), packs each into a `cfg` dict (`title, value, delta_text, delta_good, metadata, accent, spark`), and renders them via `pages/helpers/kpi_cards.py` — `render_kpi_card` (one card: title, big value, colored delta pill, caption, sparkline), `render_kpi_grid` (cards in rows of `per_row`), and `render_section` (a `st.expander` grouping cards under a title/description, with an optional `st.page_link` to the full domain page) — grouped into four sections: Headline Indicators (expanded by default), Economic Indicators, Public Finance, and Demographics.
 
 **Data flow:**
 1. CSVs in `data/` → read by page/tab files → cleaned/pivoted by the per-domain helpers (`pages/helpers/macro/` for `gdp_functions.py`/`cpi_functions.py`/`job_market_functions.py`; `pages/helpers/demography/` for `births_functions.py`/`deaths_functions.py`/`migration_functions.py`/`population_functions.py`) → charted by `pages/helpers/charts.py` (all Plotly builders, generic + population-only, shared by all three pages)
