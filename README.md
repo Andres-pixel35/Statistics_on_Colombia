@@ -9,7 +9,7 @@ productivity, public debt, and population (births, deaths, and migration).
 
 ## Live demo
 
-- **App:** https://statoncolombia.streamlit.app/
+- **App:** https://statisticsoncolombia.streamlit.app/
 - **Instagram:** https://www.instagram.com/statisticscolombia/
 
 ## Status
