@@ -15,7 +15,7 @@ from generalities.demography_generalities.births import BIRTHS_PATHS
 from generalities.demography_generalities.deaths import DEATHS_PATHS
 from pages.helpers import kpi_cards as kc
 
-st.set_page_config(layout="wide", page_title="Homepage", initial_sidebar_state="expanded")
+st.set_page_config(layout="wide", page_title="Homepage", initial_sidebar_state="collapsed")
 st.logo(str(BASE_DIR / "logo/logo.png"), size="large")
 
 st.markdown(
