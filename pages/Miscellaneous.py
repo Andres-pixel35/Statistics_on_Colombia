@@ -4,7 +4,7 @@ from generalities.function import load_csv, BASE_DIR
 from generalities.miscellaneous_generalities.rates import VIEW
 
 st.set_page_config(layout="wide", page_title="Miscellaneous")
-st.logo(str(BASE_DIR / "logo/logo.png"), size="large")
+st.logo(str(BASE_DIR / "logo/logo.svg"), size="medium")
 
 path_exchange_rate = BASE_DIR / "data/banco_republica/miscellaneous/trm.csv"
 path_policy_rate = BASE_DIR / "data/banco_republica/miscellaneous/tasa_monetaria.csv"
@@ -14,7 +14,7 @@ exchange_rate_df = load_csv(path_exchange_rate).rename(columns={"﻿Fecha": "Fec
 policy_rate_df = load_csv(path_policy_rate)
 minimum_wage_df = load_csv(path_minimum_wage)
 
-st.image(str(BASE_DIR / "logo/logo_text.png"), width=300)
+st.image(str(BASE_DIR / "logo/logo_text.svg"), width=300)
 
 with st.sidebar:
     view = st.radio("View:", VIEW)

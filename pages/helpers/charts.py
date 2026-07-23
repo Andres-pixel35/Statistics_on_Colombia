@@ -5,6 +5,16 @@ import streamlit as st
 from pages.helpers.macro import gdp_functions as mf
 from generalities.function import cap_series
 from generalities.demography_generalities.population import MEN_COLOR, WOMEN_COLOR
+from pages.helpers.mobile import (
+    _title, _top_margin, _gauge_title, _map_layout,
+    _legend, _bottom_margin, _chart_height, _category_ticks,
+)
+
+# Mainland Colombia's lon/lat extent. The San Andrés y Providencia archipelago
+# sits ~700km off in the Caribbean; fitbounds("locations") stretches the view to
+# include it, shrinking the mainland shape everyone actually looks at.
+MAINLAND_LON_RANGE = [-79.5, -66.5]
+MAINLAND_LAT_RANGE = [-4.6, 12.8]
 
 def line_chart(data: pd.DataFrame, labels: dict, info: list, highlight: str = None):
     data = cap_series(data)
@@ -13,14 +23,9 @@ def line_chart(data: pd.DataFrame, labels: dict, info: list, highlight: str = No
 
         height=600,
 
-        title={
-            "text": info[0],
-            "font": {"size": 25},
-            "x": 0,
-            "xanchor": "left"
-        },
+        title=_title(info[0]),
 
-        margin=dict(l=50, r=20, t=80, b=0),
+        margin=dict(l=50, r=20, t=_top_margin(), b=0),
     )
 
     fig.update_yaxes(
@@ -33,10 +38,8 @@ def line_chart(data: pd.DataFrame, labels: dict, info: list, highlight: str = No
 
     fig.update_xaxes(
         type="category",
-        dtick=1,
-        tickangle=45,
         showgrid=False,
-        tickfont=dict(size=15)
+        **_category_ticks(len(data)),
     )
 
     fig.update_layout(
@@ -55,16 +58,9 @@ def line_chart(data: pd.DataFrame, labels: dict, info: list, highlight: str = No
     fig.update_layout(legend_title_text="")
 
     fig.update_layout(
-        legend=dict(
-            orientation="h",
-            yanchor="bottom",
-            y=1.02,
-            xanchor="center",
-            x=0.5,
-            entrywidth=0,
-            entrywidthmode="pixels"
-        ),
-        margin=dict(t=80)
+        height=_chart_height(len(fig.data)),
+        legend=_legend(len(fig.data)),
+        margin=dict(t=_top_margin(), b=_bottom_margin(len(fig.data)))
     )
     return fig
 
@@ -73,13 +69,8 @@ def bar_chart(data: pd.DataFrame, labels: dict, info: list, highlight: str = Non
     fig = px.bar(data, barmode="group", labels={data.index.name or "index": info[1], "value": info[2]})
     fig.update_layout(
         height=600,
-        title={
-            "text": info[0],
-            "font": {"size": 25},
-            "x": 0,
-            "xanchor": "left"
-        },
-        margin=dict(l=50, r=20, t=80, b=0),
+        title=_title(info[0]),
+        margin=dict(l=50, r=20, t=_top_margin(), b=0),
     )
 
     fig.update_yaxes(
@@ -92,10 +83,8 @@ def bar_chart(data: pd.DataFrame, labels: dict, info: list, highlight: str = Non
 
     fig.update_xaxes(
         type="category",
-        dtick=1,
-        tickangle=45,
         showgrid=False,
-        tickfont=dict(size=15)
+        **_category_ticks(len(data)),
     )
 
     fig.update_layout(
@@ -114,16 +103,9 @@ def bar_chart(data: pd.DataFrame, labels: dict, info: list, highlight: str = Non
     fig.update_layout(legend_title_text="")
 
     fig.update_layout(
-        legend=dict(
-            orientation="h",
-            yanchor="bottom",
-            y=1.02,
-            xanchor="center",
-            x=0.5,
-            entrywidth=0,
-            entrywidthmode="pixels"
-        ),
-        margin=dict(t=80)
+        height=_chart_height(len(fig.data)),
+        legend=_legend(len(fig.data)),
+        margin=dict(t=_top_margin(), b=_bottom_margin(len(fig.data)))
     )
     return fig
 
@@ -155,8 +137,8 @@ def ranked_bar_chart(series: pd.Series, info: list):
     )
     fig.update_layout(
         height=max(450, 42 * len(data)),
-        title={"text": info[0], "font": {"size": 25}, "x": 0, "xanchor": "left"},
-        margin=dict(l=50, r=20, t=80, b=0),
+        title=_title(info[0]),
+        margin=dict(l=50, r=20, t=_top_margin(), b=0),
         showlegend=False,
         xaxis_title_font=dict(size=15),
         yaxis_title_font=dict(size=15),
@@ -182,15 +164,10 @@ def gdp_growth(df: pd.DataFrame, year: list, president: str, index: int, quarter
 
             height=600,
 
-            title={
-                "text": title,
-                "font": {"size": 25},
-                "x": 0,
-                "xanchor": "left"
-            },
+            title=_title(title),
 
             showlegend=False,
-            margin=dict(l=50, r=20, t=80, b=0),
+            margin=dict(l=50, r=20, t=_top_margin(), b=0),
         )
 
         fig.update_yaxes(
@@ -203,10 +180,8 @@ def gdp_growth(df: pd.DataFrame, year: list, president: str, index: int, quarter
 
         fig.update_xaxes(
             type="category",
-            dtick=1,
-            tickangle=45,
             showgrid=False,
-            tickfont=dict(size=15)
+            **_category_ticks(len(df_local)),
         )
 
         fig.update_layout(
@@ -244,7 +219,7 @@ def gdp_growth(df: pd.DataFrame, year: list, president: str, index: int, quarter
                 "valueformat": ".2f",
                 "suffix": " vs Median"
             },
-            title = {"text": f"<b>{year[0]}{quarter} {title}</b>", "font": {"size": 24}},
+            title = _gauge_title(f"{year[0]}{quarter} {title}"),
             gauge = {
                 "axis": {
                     "range": [min_growth, max_growth],
@@ -263,7 +238,7 @@ def gdp_growth(df: pd.DataFrame, year: list, president: str, index: int, quarter
             }
         ))
 
-        fig.update_layout(margin=dict(t=80, b=20, l=30, r=30), height=400)
+        fig.update_layout(margin=dict(t=_top_margin(), b=20, l=30, r=30), height=400)
     return fig
 
 
@@ -290,7 +265,7 @@ def indicator(data: pd.DataFrame, full_series: pd.Series, reference: float, info
             "valueformat": valueformat,
             "suffix": delta_suffix
         },
-        title = {"text": f"<b>{title}</b>", "font": {"size": 24}},
+        title = _gauge_title(title),
         gauge = {
             "axis": {
                 "range": [vmin, vmax],
@@ -309,7 +284,7 @@ def indicator(data: pd.DataFrame, full_series: pd.Series, reference: float, info
         }
     ))
 
-    fig.update_layout(margin=dict(t=80, b=20, l=30, r=30), height=400)
+    fig.update_layout(margin=dict(t=_top_margin(), b=20, l=30, r=30), height=400)
     return fig
 
 def choropleth_map(data: pd.DataFrame, col: str, info: list):
@@ -335,11 +310,9 @@ def choropleth_map(data: pd.DataFrame, col: str, info: list):
         coastlinecolor="rgb(80, 80, 80)",
     )
     fig.update_layout(
-        height=600,
-        title={"text": info[0], "font": {"size": 25}, "x": 0, "xanchor": "left"},
-        margin=dict(l=50, r=20, t=80, b=0),
-        coloraxis_colorbar=dict(title=info[2]),
+        title=_title(info[0]),
         paper_bgcolor="rgba(0,0,0,0)",
+        **_map_layout(info[2]),
     )
     return fig
 
@@ -366,14 +339,12 @@ def colombia_choropleth(data: pd.DataFrame, geojson: dict, feature_key: str, col
                          colorscale=[[0, "#d9d9d9"], [1, "#d9d9d9"]], marker_line_color="white")
     fig.add_trace(base)
     fig.data = fig.data[::-1]
-    fig.update_geos(fitbounds="locations", visible=False)
+    fig.update_geos(visible=False, lonaxis_range=MAINLAND_LON_RANGE, lataxis_range=MAINLAND_LAT_RANGE)
     fig.update_layout(
-        height=600,
-        title={"text": info[0], "font": {"size": 25}, "x": 0, "xanchor": "left"},
-        margin=dict(l=50, r=20, t=80, b=0),
-        coloraxis_colorbar=dict(title=info[2]),
+        title=_title(info[0]),
         paper_bgcolor="rgba(0,0,0,0)",
         geo=dict(bgcolor="rgba(0,0,0,0)"),
+        **_map_layout(info[2]),
     )
     return fig
 
@@ -408,17 +379,17 @@ def projection_line(data: pd.DataFrame, info: list, split_year: int, highlight: 
             ))
 
     fig.update_layout(
-        height=600,
-        title={"text": info[0], "font": {"size": 25}, "x": 0, "xanchor": "left"},
-        margin=dict(l=50, r=20, t=80, b=0),
+        height=_chart_height(len(data.columns)),
+        title=_title(info[0]),
+        margin=dict(l=50, r=20, t=_top_margin(), b=_bottom_margin(len(data.columns))),
         xaxis_title=info[1], yaxis_title=info[2],
         xaxis_title_font=dict(size=15), yaxis_title_font=dict(size=15),
         legend_title_text="",
-        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="center", x=0.5),
+        legend=_legend(len(data.columns)),
     )
     fig.update_yaxes(showgrid=True, gridwidth=0.5, gridcolor="rgba(255, 255, 255, 0.1)",
                      tickfont=dict(size=15), tickformat=",.0f")
-    fig.update_xaxes(type="category", dtick=1, tickangle=45, showgrid=False, tickfont=dict(size=15))
+    fig.update_xaxes(type="category", showgrid=False, **_category_ticks(len(data)))
     return fig
 
 def population_pyramid(men: pd.Series, women: pd.Series, info: list):
@@ -443,8 +414,8 @@ def population_pyramid(men: pd.Series, women: pd.Series, info: list):
     ))
     fig.update_layout(
         barmode="overlay", bargap=0.1, height=600,
-        title={"text": title, "font": {"size": 25}, "x": 0, "xanchor": "left"},
-        margin=dict(l=50, r=20, t=80, b=0),
+        title=_title(title),
+        margin=dict(l=50, r=20, t=_top_margin(), b=0),
         xaxis_title=value_label, yaxis_title="Age group",
         xaxis_title_font=dict(size=15), yaxis_title_font=dict(size=15),
         legend_title_text="",
