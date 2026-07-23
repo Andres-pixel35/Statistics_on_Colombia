@@ -3,7 +3,7 @@ from pages.tabs.macroeconomics import gdp, cpi, job_market, productivity, debt, 
 from generalities.function import load_csv, BASE_DIR
 
 st.set_page_config(layout="wide", page_title="Macroeconomic")
-st.logo(str(BASE_DIR / "logo/logo.png"), size="large")
+st.logo(str(BASE_DIR / "logo/logo.svg"), size="medium")
 
 path_gdp = BASE_DIR / "data/dane/GDP/spend/summarize.csv"
 path_cpi = BASE_DIR / "data/banco_republica/CPI/city/Total_Nacional.csv"
@@ -19,7 +19,7 @@ prod_df = load_csv(path_prod)
 debt_df = load_csv(path_debt)
 ise_df = load_csv(path_ise)
 
-st.image(str(BASE_DIR / "logo/logo_text.png"), width=300)
+st.image(str(BASE_DIR / "logo/logo_text.svg"), width=300)
 
 with st.sidebar:
     section = st.radio("Section:", ["GDP", "CPI", "Job Market", "Productivity", "Debt", "ISE"])
