@@ -16,7 +16,7 @@ from generalities.demography_generalities.deaths import DEATHS_PATHS
 from pages.helpers import kpi_cards as kc
 
 st.set_page_config(layout="wide", page_title="Homepage", initial_sidebar_state="collapsed")
-st.logo(str(BASE_DIR / "logo/logo.png"), size="large")
+st.logo(str(BASE_DIR / "logo/logo.svg"), size="medium")
 
 st.markdown(
     """<style>
@@ -28,7 +28,7 @@ st.markdown(
 
 header_left, header_right = st.columns([3, 1])
 with header_left:
-    st.image(str(BASE_DIR / "logo/logo_text.png"), width=300)
+    st.image(str(BASE_DIR / "logo/logo_text.svg"), width=300)
 
 last_updated_dates = []
 
@@ -52,7 +52,7 @@ gdp_cfg = {
     "delta_text": f"Q{gdp_quarter} {gdp_year}: {quarter_growth['Growth']:.2f}%",
     "delta_good": quarter_growth["Growth"] >= 0,
     "metadata": f"{latest_year} · Annual, vs prior quarter",
-    "accent": "#2563eb",
+    "accent": "#4B7EC0",
     "spark": quarter_growth_series["Growth"].tail(12),
 }
 
