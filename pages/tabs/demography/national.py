@@ -79,7 +79,7 @@ def render_national(pop_df: pd.DataFrame) -> None:
             years = national.index
 
         if perspective == "Rates":
-            info = ["National Birth & Death Rate", "Year", "Rate per 1,000 (%)"]
+            info = ["National Birth & Death Rate", "Year", "Rate per 1,000"]
         elif perspective != "National":
             a = f"{perspective}"
             unit = {"Births": "Births", "Deaths": "Deaths"}.get(perspective, "People")
