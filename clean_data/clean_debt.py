@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 
-src_path = "../data/original/hacienda/debt/Histórico Total Mayo2026.xls"
+src_path = "../data/original/hacienda/debt/Histórico Total Junio2026.xls"
 out_dir = "../data/hacienda/debt"
 
 HEADER_LABELS = {"Corte a", "Fecha corte", "Fecha"}
