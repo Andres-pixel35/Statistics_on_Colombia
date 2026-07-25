@@ -69,7 +69,7 @@ if year_ago_date in cpi.index:
 last_updated_dates.append(cpi_date)
 
 cpi_cfg = {
-    "title": "CPI Annual Inflation",
+    "title": "Annual Inflation",
     "value": f"{cpi_value:.2f}%",
     "delta_text": cpi_delta,
     "delta_good": cpi_delta_good,
