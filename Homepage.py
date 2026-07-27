@@ -13,6 +13,7 @@ from generalities.macro_generalities import debt as dg
 from generalities.demography_generalities.population import POP_PATHS, PREV_YEAR
 from generalities.demography_generalities.births import BIRTHS_PATHS
 from generalities.demography_generalities.deaths import DEATHS_PATHS
+from generalities.poverty_generalities import poverty as pv
 from pages.helpers import kpi_cards as kc
 
 st.set_page_config(layout="wide", page_title="Homepage", initial_sidebar_state="collapsed")
@@ -262,6 +263,38 @@ debt_duration_cfg = _indicator_cfg("Debt Duration", "Duración - Deuda total", "
 debt_avg_life_cfg = _indicator_cfg("Debt Average Life", "Vida media - Deuda total", "#dc2626", "{:.2f} yrs")
 debt_avg_coupon_cfg = _indicator_cfg("Debt Average Coupon", "Cupón promedio (%) - Deuda Total", "#dc2626", "{:.2f}%")
 
+# --- Poverty & Inequality ---
+def _poverty_cfg(cfg):
+    """cfg: title, relpath, accent, value_fmt, delta_fmt. All three poverty/inequality
+    measures are rates where lower is better, reported as an absolute delta."""
+    series = load_csv(pv.POVERTY_BASE / cfg["relpath"]).set_index("Fecha")["Nacional"].sort_index()
+    value = series.iloc[-1]
+    delta_text, delta_good = None, None
+    if len(series) > 1:
+        delta = value - series.iloc[-2]
+        delta_text = cfg["delta_fmt"].format(delta) + f" vs {series.index[-2]}"
+        delta_good = delta <= 0
+    return {
+        "title": cfg["title"],
+        "value": cfg["value_fmt"].format(value),
+        "delta_text": delta_text,
+        "delta_good": delta_good,
+        "metadata": f"{series.index[-1]} · Annual",
+        "accent": cfg["accent"],
+        "spark": series.tail(12),
+    }
+
+
+poverty_cfg = _poverty_cfg({"title": "Monetary Poverty", "accent": "#7c3aed",
+                            "relpath": "pobreza_monetaria/incidencia.csv",
+                            "value_fmt": "{:.1f}%", "delta_fmt": "{:+.1f}pp"})
+extreme_poverty_cfg = _poverty_cfg({"title": "Extreme Poverty", "accent": "#7c3aed",
+                                    "relpath": "pobreza_extrema/incidencia.csv",
+                                    "value_fmt": "{:.1f}%", "delta_fmt": "{:+.1f}pp"})
+gini_cfg = _poverty_cfg({"title": "Gini Coefficient", "accent": "#7c3aed",
+                         "relpath": "gini/gini.csv",
+                         "value_fmt": "{:.3f}", "delta_fmt": "{:+.3f}"})
+
 # --- Population ---
 national_pop_df = load_csv(POP_PATHS["national"])
 population_series = pop.national_total_series(national_pop_df, gender="Total", age="All ages", cap=PREV_YEAR)
@@ -353,7 +386,7 @@ with header_right:
 kc.render_section({
     "title": "Headline Indicators",
     "description": "The country's most important national indicators.",
-    "cfgs": [gdp_cfg, cpi_cfg, unemployment_cfg, exchange_rate_cfg],
+    "cfgs": [gdp_cfg, cpi_cfg, unemployment_cfg, exchange_rate_cfg, poverty_cfg],
     "expanded": True,
 })
 
@@ -369,6 +402,13 @@ kc.render_section({
     "description": "Government debt levels and profile.",
     "cfgs": [debt_gdp_cfg, debt_duration_cfg, debt_avg_life_cfg, debt_avg_coupon_cfg],
     "page": "pages/Macroeconomics.py",
+})
+
+kc.render_section({
+    "title": "Poverty & Inequality",
+    "description": "Monetary poverty, extreme poverty and income distribution.",
+    "cfgs": [poverty_cfg, extreme_poverty_cfg, gini_cfg],
+    "page": "pages/Poverty.py",
 })
 
 kc.render_section({
