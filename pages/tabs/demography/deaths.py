@@ -3,11 +3,12 @@ from pages.helpers import charts as mc
 from pages.helpers import charts as dc
 from pages.helpers.demography import births_functions as bir
 from pages.helpers.demography import deaths_functions as dth
+from pages.helpers.demography import population_functions as pop
 from generalities.dictionaries import presidents
 from generalities.function import get_valid_presidents, president_multiselect, reshape_by_presidents, load_csv, load_geojson, highlight_selectbox
 from generalities.demography_generalities.deaths import DEATHS_PATHS, DEATHS_COMPARE, AREA_EN, AGE_EN as DEATHS_AGE_EN, AGE_MUNI_EN, MUNI_CAPTION
 from generalities.demography_generalities.births import DEPT_GEOJSON_PATH, DEPT_FEATURE_KEY
-from generalities.demography_generalities.population import PYRAMID_MODES
+from generalities.demography_generalities.population import PYRAMID_MODES, POP_PATHS
 from pages.tabs.demography._shared import _render_geo_bar_line, _render_pyramid_result
 
 
@@ -37,11 +38,11 @@ def render_deaths() -> None:
 
 
 def _render_deaths_breakdown(compare_by: str) -> None:
-    chart_options = ["Line", "Bar"] + (["Population pyramid"] if compare_by == "Age Group" else [])
+    chart_options = ["Line", "Bar"] + (["Deaths pyramid"] if compare_by == "Age Group" else [])
     with st.sidebar:
         chart_type = st.selectbox("Chart Type:", chart_options)
 
-    if chart_type == "Population pyramid":
+    if chart_type == "Deaths pyramid":
         _render_deaths_pyramid()
         return
 
@@ -179,7 +180,7 @@ def _render_deaths_pyramid() -> None:
     women = dth.deaths_pyramid_row(women_pivot.loc[year])
     men.name, women.name = "Men", "Women"
 
-    title = f"Deaths pyramid — {year}"
+    title = f"{year}"
     if cause != "All causes":
         title += f" — {cause}"
     if dept != "All":
@@ -192,6 +193,12 @@ def _deaths_dept_source():
         place = st.selectbox("Place:", ["Occurrence", "Residence"])
     path = DEATHS_PATHS["dept_death"] if place == "Occurrence" else DEATHS_PATHS["dept_residence"]
     return dth.deaths_dept_prepared(path)
+
+
+def _dept_population_pivot(codes: list):
+    """Year x Code population pivot (Total gender/age), for department death-rate denominators."""
+    pop_df = pop.dept_normalize(load_csv(POP_PATHS["departmental"]))
+    return pop.geo_trend(pop_df, "Code", codes, "Total", "All ages")
 
 
 def _render_deaths_department() -> None:
@@ -214,6 +221,7 @@ def _render_deaths_department() -> None:
 
     with st.sidebar:
         selected_years = [] if comparing else st.multiselect("Year:", year_opts)
+        rate = st.checkbox("Show as rate per 1,000 population")
 
     col1, col2, col3 = st.columns(3)
     selected_depts = []
@@ -231,6 +239,8 @@ def _render_deaths_department() -> None:
     dept_df["_val"] = dth.deaths_age_gender_value(dept_df, gender, age_label)
     col = "_val"
     noun = "Deaths" if gender == "Total" else gender
+    if rate:
+        noun = "Death rate" if gender == "Total" else f"{gender} death rate"
     scope = "all years" if not selected_years else ", ".join(map(str, sorted(selected_years)))
     if president and not selected_years:
         scope = president
@@ -245,10 +255,18 @@ def _render_deaths_department() -> None:
             return
         map_years = selected_years or ([y for y in all_years if y in presidents[president]] if president else [])
         grouped = bir.births_department_data(dept_df, map_years, col)
+        val_fmt = ",.0f"
+        if rate:
+            pop_pivot = _dept_population_pivot(grouped["Code"].tolist())
+            pop_sum = pop_pivot.loc[pop_pivot.index.isin(map_years or all_years)].sum()
+            grouped[col] = grouped[col] / grouped["Code"].map(pop_sum) * 1000
+            val_fmt = ",.2f"
         info = [f"{noun} by department — {scope}", "Department", noun]
         geojson = load_geojson(DEPT_GEOJSON_PATH)
-        fig = dc.colombia_choropleth(grouped, geojson, DEPT_FEATURE_KEY, col, info)
+        fig = dc.colombia_choropleth(grouped, geojson, DEPT_FEATURE_KEY, col, info, val_fmt=val_fmt)
         mc.render_chart(fig)
+        if rate and not map_years:
+            st.caption("No year selected: rate is deaths and population summed over all available years, not an annual rate.")
         return
 
     if not selected_depts:
@@ -256,6 +274,16 @@ def _render_deaths_department() -> None:
         return
 
     pivot = bir.births_geo_trend(dept_df, "departamento", selected_depts, selected_years, value_col=col)
+
+    if rate:
+        scoped = dept_df[dept_df["Name"].isin(selected_depts)]
+        name_by_code = (
+            scoped.assign(Code=scoped["departamento"].str.split(n=1).str[0])
+            .drop_duplicates("Name")
+            .set_index("Code")["Name"]
+        )
+        pop_pivot = _dept_population_pivot(list(name_by_code.index)).rename(columns=name_by_code)
+        pivot = pivot.divide(pop_pivot.reindex(pivot.index)) * 1000
 
     if president:
         pivot = pivot[pivot.index.isin(presidents[president])]
@@ -424,7 +452,7 @@ def _render_deaths_cause_compare() -> None:
 
     with st.sidebar:
         chart_type = st.selectbox("Chart Type:", ["Line", "Bar"])
-        selected_causes = st.multiselect("Causes (max 5):", cause_names)
+        selected_causes = st.multiselect("Causes (max 5):", ["All causes"] + cause_names)
         selected_presidents = president_multiselect(valid_presidents)
 
     if not selected_causes:
@@ -440,14 +468,29 @@ def _render_deaths_cause_compare() -> None:
 
     with st.sidebar:
         selected_years = [] if comparing else st.multiselect("Year:", year_opts)
+        rate = st.checkbox("Show as rate per 1,000 population")
 
     dept_df["_val"] = dth.deaths_age_gender_value(dept_df, gender, age_label)
-    pivot = dth.deaths_cause_pivot(dept_df, selected_causes, selected_years, president, value_col="_val", dept_name=dept)
+    real_causes = [c for c in selected_causes if c != "All causes"]
+    full_pivot = dth.deaths_cause_pivot(dept_df, cause_names, selected_years, president, value_col="_val", dept_name=dept)
+    pivot = full_pivot[real_causes] if real_causes else full_pivot.iloc[:, 0:0]
+    if "All causes" in selected_causes:
+        pivot = pivot.assign(**{"All causes": full_pivot.sum(axis=1)})
+
+    if rate and not pivot.empty:
+        if dept == "All":
+            denom = pop.national_total_series(load_csv(POP_PATHS["national"]))
+        else:
+            code = dept_df.loc[dept_df["Name"] == dept, "departamento"].iloc[0].split(" ", 1)[0]
+            denom = _dept_population_pivot([code]).iloc[:, 0]
+        pivot = pivot.divide(denom.reindex(pivot.index), axis=0) * 1000
+
     place = dept if dept != "All" else "Colombia"
-    title = f"Deaths by cause — {place}" if gender == "Total" else f"Deaths by cause ({gender}) — {place}"
+    label = "Death rate" if rate else "Deaths"
+    title = f"{label} by cause — {place}" if gender == "Total" else f"{label} by cause ({gender}) — {place}"
     if age_label != "All ages":
         title = f"{title} (age {age_label})"
-    info = [title, "Year", "Deaths"]
+    info = [title, "Year", "Rate per 1,000" if rate else "Deaths"]
 
     if comparing and not pivot.empty:
         pivot, info = reshape_by_presidents(pivot, selected_presidents, info)

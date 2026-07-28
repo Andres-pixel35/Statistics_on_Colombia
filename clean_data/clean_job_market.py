@@ -24,6 +24,8 @@ FILES = [
      "sheets": {2: "total", 3: "sexo", 4: "edad", 6: "asistencia_escolar",
                 7: "razon", 8: "horas", 9: "rama_actividad", 10: "posicion",
                 11: "ingreso", 13: "actividades_sexo"}},
+    {"file": "desestacionalizado.xlsx", "dim": "Perspectiva", "folder": "desestacionalizado",
+     "sheets": {2: "total"}},
 ]
 
 GENDER = {"hombres": "Hombres", "mujeres": "Mujeres",
@@ -335,19 +337,19 @@ def titles_index(anchors, titles, i, df):
     return len(df)
 
 
-def drop_dead_columns(out):
+def drop_dead_columns(out, dim):
     """Drop Grupo unless it disambiguates, then drop any single-value column.
 
     Grupo is kept only when some Concepto repeats under >=2 distinct groups
-    (the real ambiguity it solves); flat sheets lose it. Sexo/Periodo (and a
-    surviving constant Grupo) are dropped when they carry a single value.
+    (the real ambiguity it solves); flat sheets lose it. Sexo/dim/Periodo (and
+    a surviving constant Grupo) are dropped when they carry a single value.
     """
     distinct_groups = out.groupby("Concepto")["Grupo"].nunique(dropna=True)
     if (distinct_groups >= 2).any():
         out["Grupo"] = out["Grupo"].fillna("")
     else:
         out = out.drop(columns="Grupo")
-    dead = [c for c in ("Sexo", "Grupo", "Periodo")
+    dead = [c for c in ("Sexo", "Grupo", "Periodo", dim)
             if c in out.columns and out[c].nunique(dropna=False) <= 1]
     return out.drop(columns=dead)
 
@@ -362,7 +364,7 @@ def main():
             df = read_sheet(path, idx)
             default_sexo = FILE_SEXO.get((cfg["file"], idx), "Total")
             out = parse_sheet(df, cfg["dim"], default_sexo, read_bold(path, idx))
-            out = drop_dead_columns(out)
+            out = drop_dead_columns(out, cfg["dim"])
             out.to_csv(os.path.join(folder, name + ".csv"), index=False)
             total_csv += 1
             print(f"{cfg['folder']}/{name}.csv: {len(out)} rows")
