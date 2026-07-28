@@ -18,6 +18,7 @@ DEPT_GEOJSON_PATH = BASE_DIR / "data/dane/geo/colombia_departments.geojson"
 DEPT_FEATURE_KEY = "properties.DPTO"
 REGION_BASE = str(BASE_DIR / "data/dane/job_market/regiones") + "/"
 CHILD_LABOR_BASE = str(BASE_DIR / "data/dane/job_market/infantil") + "/"
+DESEST_UNEMPLOYMENT_PATH = str(BASE_DIR / "data/dane/job_market/desestacionalizado/total.csv")
 REGION_GEOJSON_PATH = BASE_DIR / "data/dane/geo/colombia_regions.geojson"
 REGION_FEATURE_KEY = "properties.region"
 
@@ -72,29 +73,41 @@ def render_job_market(unemployment_df: pd.DataFrame) -> None:
 
     if dataset == "Unemployment":
         unemp_local = to_datatime(unemployment_df, True)
+        desest_local = mf.load_desestacionalizado_unemployment(DESEST_UNEMPLOYMENT_PATH)
 
         # Mutually-exclusive controls: read prior selections to gate them (Streamlit reruns
         # top-to-bottom, so the lock comes from last run's session_state).
         prev_months = st.session_state.get("unemp_months", [])
         prev_years = st.session_state.get("unemp_years", [])
         prev_pres = st.session_state.get("unemp_presidents", [])
+        prev_compare = st.session_state.get("unemp_compare", False)
         month_disabled = bool(prev_years or prev_pres)
         yearpres_disabled = bool(prev_months)
 
         year_options = sorted(unemp_local.index.year.unique())
-        col1, col2 = st.columns(2)
-        with col1:
+        col1, col2, col3 = st.columns(3)
+        with col2:
             cur_years = st.multiselect(
                 "Year:", year_options, key="unemp_years", disabled=yearpres_disabled
             )
-        with col2:
+        with col3:
             cur_month_labels = st.multiselect(
                 "Month:", list(months.values()), key="unemp_months", disabled=month_disabled
             )
+        with col1:
+            series_choice = st.selectbox(
+                "Series:", ["Original", "Seasonally Adjusted"],
+                key="unemp_series", disabled=prev_compare,
+            )
+        active_df = desest_local if series_choice == "Seasonally Adjusted" else unemp_local
 
         selected_presidents, chart_type = mf.job_market_sidebar_filters(
-            series_year_axis(unemp_local, mf.UNEMPLOYMENT_SPEC, []), top_placeholder, president_placeholder,
+            series_year_axis(active_df, mf.UNEMPLOYMENT_SPEC, []), top_placeholder, president_placeholder,
             president_disabled=yearpres_disabled, president_key="unemp_presidents",
+        )
+
+        compare = st.sidebar.checkbox(
+            "Compare seasonally adjusted vs. original", value=False, key="unemp_compare"
         )
 
         # Null out disabled controls so a stale lock can't leak into mode resolution.
@@ -103,19 +116,42 @@ def render_job_market(unemployment_df: pd.DataFrame) -> None:
         years = [] if yearpres_disabled else cur_years
         presidents_sel = [] if yearpres_disabled else selected_presidents
 
+        if compare:  # Original vs Seasonally Adjusted
+            if years or presidents_sel:  # YEAR mode -> x = months, single year
+                year_set = _year_set(years, presidents_sel, year_options)
+                year = sorted(year_set)[0]
+                cols = {}
+                for label, df in (("Original", unemp_local), ("Seasonally Adjusted", desest_local)):
+                    cols[label] = series_month_axis(df, mf.UNEMPLOYMENT_SPEC, [year]).iloc[:, 0]
+                series = pd.DataFrame(cols)
+                info = [f"Unemployment rate — Original vs Seasonally Adjusted · {year}",
+                        "Month", "Rate (%)"]
+            else:  # MONTH mode (months selected) or DEFAULT -> x = years, single month (or annual avg)
+                month = month_nums[:1]
+                cols = {}
+                for label, df in (("Original", unemp_local), ("Seasonally Adjusted", desest_local)):
+                    cols[label] = series_year_axis(df, mf.UNEMPLOYMENT_SPEC, month).iloc[:, 0]
+                series = pd.DataFrame(cols)
+                suffix = f" · {months[month[0]]}" if month else " (annual average)"
+                info = [f"Unemployment rate — Original vs Seasonally Adjusted{suffix}", "Year", "Rate (%)"]
+            _draw(chart_type, series, info)
+            st.caption("Source: Banco de la República (Original) and DANE (GEIH, Seasonally Adjusted)")
+            return
+
         if years or presidents_sel:  # YEAR mode -> x = months
             year_set = _year_set(years, presidents_sel, year_options)
-            series = series_month_axis(unemp_local, mf.UNEMPLOYMENT_SPEC, sorted(year_set))
+            series = series_month_axis(active_df, mf.UNEMPLOYMENT_SPEC, sorted(year_set))
             info = ["Unemployment rate by month", "Month", "Rate (%)"]
         else:  # MONTH mode (months selected) or DEFAULT -> x = years
-            series = series_year_axis(unemp_local, mf.UNEMPLOYMENT_SPEC, month_nums)
+            series = series_year_axis(active_df, mf.UNEMPLOYMENT_SPEC, month_nums)
             info = ["Unemployment rate", "Year", "Rate (%)"]
 
         _draw(chart_type, series, info)
         if not (years or presidents_sel or month_nums):
             st.caption("Showing the annual average across all months. "
                        "Pick month(s) to compare them across years, or year(s)/a president to see months.")
-        st.caption("Source: Banco de la República")
+        st.caption("Source: DANE (GEIH)" if series_choice == "Seasonally Adjusted"
+                   else "Source: Banco de la República")
         return
 
     # Labor Force

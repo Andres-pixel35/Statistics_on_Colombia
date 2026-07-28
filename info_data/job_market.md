@@ -17,6 +17,11 @@
 /path/to/the/repo/colombia/data/original/dane/job_market/infantil
 ```
 
+**desestacionalizado**: Go to this [page](https://www.dane.gov.co/index.php/estadisticas-por-tema/mercado-laboral/empleo-y-desempleo), then scroll down to the table beneath the chart and download "Anexo desestacionalizado" at:
+```bash
+/path/to/the/repo/colombia/data/original/dane/job_market/desestacionalizado.xlsx
+```
+
 **informalidad** Go to this [page](https://www.dane.gov.co/index.php/estadisticas-por-tema/mercado-laboral/empleo-informal-y-seguridad-social) and click anexo, then store it at
 ```bash
 /path/to/the/repo/colombia/data/original/dane/job_market/informalidad
@@ -39,13 +44,14 @@
 /path/to/the/repo/colombia/data/banco_republica/unemployment/unemployment.csv
 ```
 
-**departamentos.xls  infantil.xlsx  informalidad.xlsx  mercado_laboral.xlsx  regiones.xls**:
+**departamentos.xls  infantil.xlsx  informalidad.xlsx  mercado_laboral.xlsx  regiones.xls  desestacionalizado.xlsx**:
 Cleaned output mapping (download name → cleaned dir → app tab):
 - departamentos → `data/dane/job_market/Departamentos/` → Job Market **Departments** tab
 - mercado_laboral → `data/dane/job_market/Mercado Laboral/` → **Labor Force** tab
 - regiones → `data/dane/job_market/regiones/` → **Regions** tab
 - informalidad → `data/dane/job_market/informalidad/` → **Employment Formality** tab
 - infantil → `data/dane/job_market/infantil/` → **Child Labor** tab
+- desestacionalizado → `data/dane/job_market/desestacionalizado/` (`total.csv`, "Total nacional" sheet: monthly seasonally-adjusted TGP/TO/TD + Población ocupada/desocupada/fuera de la fuerza de trabajo) — data/cleaning only, no UI tab yet
 ```bash
 # run from repo root (module, not a plain script path)
 python -m clean_data.clean_job_market
