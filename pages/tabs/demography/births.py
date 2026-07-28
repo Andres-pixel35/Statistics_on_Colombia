@@ -44,11 +44,11 @@ def _render_births_breakdown(compare_by: str) -> None:
 
     years = sorted(df["year"].unique().astype(int).tolist(), reverse=True)
 
-    chart_options = ["Line", "Bar"] + (["Population pyramid"] if compare_by == "Mother Age" else [])
+    chart_options = ["Line", "Bar"] + (["Births pyramid"] if compare_by == "Mother Age" else [])
     with st.sidebar:
         chart_type = st.selectbox("Chart Type:", chart_options)
 
-    if chart_type == "Population pyramid":
+    if chart_type == "Births pyramid":
         _render_births_pyramid(df, years)
         return
 
@@ -126,7 +126,7 @@ def _render_births_pyramid(age_df, years: list) -> None:
     girls = girls_pivot.loc[year].drop("Unknown", errors="ignore")
     boys.name, girls.name = "Boys", "Girls"
 
-    title = f"Births pyramid by mother's age — {year}"
+    title = f"By mother's age — {year}"
     _render_pyramid_result(boys, girls, mode, title)
 
 

@@ -6,6 +6,7 @@ def domain_pivot(df: pd.DataFrame, domains: list, year_set=None) -> pd.DataFrame
     out = df.set_index("Fecha")[list(domains)]
     if year_set:
         out = out[out.index.isin(year_set)]
+    out = out.dropna(how="all")
     out.index = out.index.astype(int)
     out.index.name = "Year"
     return out.sort_index()
