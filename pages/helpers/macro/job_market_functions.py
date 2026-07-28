@@ -1,9 +1,22 @@
 import pandas as pd
 import streamlit as st
-from generalities.function import get_valid_presidents, president_multiselect, norm, SeriesSpec
+from generalities.function import get_valid_presidents, president_multiselect, norm, SeriesSpec, load_csv
 import generalities.macro_generalities.job_market as jm
 
 UNEMPLOYMENT_SPEC = SeriesSpec("Tasa de desempleo", "Unemployment rate")
+MONTH_ABBR_ES = {"Ene": 1, "Feb": 2, "Mar": 3, "Abr": 4, "May": 5, "Jun": 6,
+                 "Jul": 7, "Ago": 8, "Sep": 9, "Oct": 10, "Nov": 11, "Dic": 12}
+
+
+def load_desestacionalizado_unemployment(path: str) -> pd.DataFrame:
+    """Seasonally-adjusted unemployment rate (DANE), reshaped to match UNEMPLOYMENT_SPEC's
+    date-indexed shape so it's a drop-in for series_year_axis/series_month_axis."""
+    df = load_csv(path)
+    df = df[df["Concepto"] == "Tasa de Desocupación (TD)"].copy()
+    df["Fecha"] = pd.to_datetime(dict(
+        year=df["Fecha"], month=df["Periodo"].map(MONTH_ABBR_ES), day=1))
+    return (df.set_index("Fecha").sort_index()
+            .rename(columns={"Valor": UNEMPLOYMENT_SPEC.value_col}))
 
 
 def job_market_sidebar_filters(df: pd.DataFrame, placeholder, president_placeholder,
