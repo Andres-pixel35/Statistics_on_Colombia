@@ -42,6 +42,14 @@ def _population_by_year() -> pd.Series:
     pop = pop_raw.set_index("AÑO")["Total"].astype(int)
     return pop[pop.index <= PREV_YEAR + 1]  # exclude projected years beyond the current year
 
+def gdp_per_capita_growth(path) -> pd.Series:
+    """Year(int)-indexed % growth of real GDP per capita."""
+    annual = load_banco_annual(path).set_index("Fecha")
+    pib = annual["PIB"].astype(float)
+    pib.index = pib.index.astype(int)
+    per_capita = pib / _population_by_year().reindex(pib.index)
+    return (per_capita.pct_change() * 100).dropna()
+
 def year_quarter_pivot(df: pd.DataFrame, rows, year: str) -> pd.Series | pd.DataFrame:
     gdp_local = df.set_index("Concepto")
     year_cols = gdp_local.columns[gdp_local.columns.str.startswith(f"{year}-")]
