@@ -126,11 +126,20 @@ def render_gdp(gdp_df: pd.DataFrame) -> None:
                 st.caption("Current prices (nominal)")
             return
 
+        show_per_capita = growth_type == "Annual" and use_banco
+        per_capita = show_per_capita and st.session_state.get("gdp_per_capita", False)
+
         if growth_type == "Annual":
             quarter = None
             if use_banco:
                 path = NOMINAL_ANNUAL_PATH if nominal else REAL_ANNUAL_PATH
-                gdp_local = mf.load_banco_annual(path)[["Fecha", "Crecimiento"]].copy()
+                if per_capita:
+                    series = mf.gdp_per_capita_growth(path)
+                    gdp_local = series.rename("Crecimiento").rename_axis("Fecha").reset_index()
+                    gdp_local["Fecha"] = gdp_local["Fecha"].astype(str)
+                    title += " per Capita"
+                else:
+                    gdp_local = mf.load_banco_annual(path)[["Fecha", "Crecimiento"]].copy()
             else:
                 gdp_local = mf.variable_growth(level_df, concepto, "annual")
         else:
@@ -175,6 +184,9 @@ def render_gdp(gdp_df: pd.DataFrame) -> None:
                     gdp_local = show_all_years(gdp_local, president)
 
                 gdp_local = gdp_local.reset_index(drop=True)
+
+                if show_per_capita:
+                    per_capita = st.checkbox("Per Capita", key="gdp_per_capita")
 
                 st.info("If you want to choose a year prior to 2000, make sure you click \'Show all years\'")
 

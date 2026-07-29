@@ -23,3 +23,17 @@ def forward_fill_through(df: pd.DataFrame, end: pd.Timestamp) -> pd.DataFrame:
     full_index = pd.date_range(df.index.min(), max(df.index.max(), end), freq="D")
     full_index.name = df.index.name
     return df.reindex(full_index).ffill()
+
+
+def misery_index_annual(unemployment: pd.Series, inflation: pd.Series, lending: pd.Series,
+                         gdp_growth_by_year: pd.Series) -> pd.DataFrame:
+    """Hanke Misery Index = 2 * unemployment + inflation + lending rate - real GDP per-capita growth.
+    Annual grain; each rate uses its year's latest (typically December) reading, per Hanke's convention.
+    Unemployment is double-weighted per Hanke's loss-aversion rationale."""
+    annual = pd.DataFrame({
+        "u": unemployment.groupby(unemployment.index.year).last(),
+        "i": inflation.groupby(inflation.index.year).last(),
+        "l": lending.groupby(lending.index.year).last(),
+    }).dropna()
+    misery = (2 * annual["u"] + annual["i"] + annual["l"] - gdp_growth_by_year).dropna()
+    return misery.to_frame("Misery Index")
