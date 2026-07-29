@@ -2,7 +2,8 @@ import pandas as pd
 import streamlit as st
 from generalities.dictionaries import months
 from generalities.function import BASE_DIR, load_csv, to_datatime
-from pages.helpers.macro.gdp_functions import load_banco_annual, variable_growth
+from pages.helpers.macro.gdp_functions import load_banco_annual, variable_growth, gdp_per_capita_growth
+from pages.helpers.macro.job_market_functions import load_desestacionalizado_unemployment
 from pages.helpers.macro.ise_functions import ise_long
 from pages.helpers.macro import debt_functions as dbf
 from pages.helpers.macro import productivity_functions as pf
@@ -15,6 +16,7 @@ from generalities.demography_generalities.births import BIRTHS_PATHS
 from generalities.demography_generalities.deaths import DEATHS_PATHS
 from generalities.poverty_generalities import poverty as pv
 from pages.helpers import kpi_cards as kc
+from pages.helpers.miscellaneous import rates_functions as rf
 
 st.set_page_config(layout="wide", page_title="Homepage", initial_sidebar_state="collapsed")
 st.logo(str(BASE_DIR / "logo/logo.svg"), size="medium")
@@ -158,6 +160,33 @@ policy_rate_cfg = {
     "metadata": f"{policy_date:%d %b %Y} · Rate changes",
     "accent": "#9333ea",
     "spark": changes.tail(12),
+}
+
+# --- Misery Index ---
+lending_df = to_datatime(load_csv(BASE_DIR / "data/banco_republica/miscellaneous/tasa_colocacion.csv"), dayfirst=True)
+misery_gdp_growth_by_year = gdp_per_capita_growth(BASE_DIR / "data/banco_republica/GDP/real_annual.csv")
+misery_unemployment = load_desestacionalizado_unemployment(
+    str(BASE_DIR / "data/dane/job_market/desestacionalizado/total.csv")
+)["Tasa de desempleo"]
+misery_series = rf.misery_index_annual(
+    misery_unemployment, cpi["Variación anual (%)"], lending_df["Tasa (%)"], misery_gdp_growth_by_year,
+)["Misery Index"]
+misery_year = misery_series.index[-1]
+misery_value = misery_series.iloc[-1]
+misery_delta, misery_delta_good = None, None
+if len(misery_series) > 1:
+    delta = misery_value - misery_series.iloc[-2]
+    misery_delta = f"{delta:+.2f} pts vs {misery_series.index[-2]}"
+    misery_delta_good = delta < 0
+
+misery_cfg = {
+    "title": "Misery Index",
+    "value": f"{misery_value:.2f}",
+    "delta_text": misery_delta,
+    "delta_good": misery_delta_good,
+    "metadata": f"{misery_year} · Annual, 2× Seasonally Adj. Unemployment + Inflation + Lending Rate − GDP per-capita growth",
+    "accent": "#ea580c",
+    "spark": misery_series.tail(12),
 }
 
 # --- Public Debt (% of GDP) ---
@@ -386,7 +415,7 @@ with header_right:
 kc.render_section({
     "title": "Headline Indicators",
     "description": "The country's most important national indicators.",
-    "cfgs": [gdp_cfg, cpi_cfg, unemployment_cfg, exchange_rate_cfg, poverty_cfg],
+    "cfgs": [gdp_cfg, cpi_cfg, unemployment_cfg, exchange_rate_cfg, poverty_cfg, misery_cfg],
     "expanded": True,
 })
 
