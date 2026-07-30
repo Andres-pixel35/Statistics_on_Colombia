@@ -64,9 +64,9 @@ def line_chart(data: pd.DataFrame, labels: dict, info: list, highlight: str = No
     )
     return fig
 
-def bar_chart(data: pd.DataFrame, labels: dict, info: list, highlight: str = None):
+def bar_chart(data: pd.DataFrame, labels: dict, info: list, highlight: str = None, barmode: str = "group"):
     data = cap_series(data)
-    fig = px.bar(data, barmode="group", labels={data.index.name or "index": info[1], "value": info[2]})
+    fig = px.bar(data, barmode=barmode, labels={data.index.name or "index": info[1], "value": info[2]})
     fig.update_layout(
         height=600,
         title=_title(info[0]),
@@ -111,7 +111,7 @@ def bar_chart(data: pd.DataFrame, labels: dict, info: list, highlight: str = Non
 
 
 def line_or_bar(chart_type, data, info, labels=None, highlight=None,
-                force_bar=False, bar_if_single=True):
+                force_bar=False, bar_if_single=True, barmode="group"):
 
     single_row = isinstance(data, pd.DataFrame) and len(data) == 1
 
@@ -121,7 +121,7 @@ def line_or_bar(chart_type, data, info, labels=None, highlight=None,
             if labels:
                 series.index = [labels.get(c, c) for c in series.index]
             return ranked_bar_chart(series, [info[0], info[2], ""])
-        return bar_chart(data, labels or {}, info, highlight=highlight)
+        return bar_chart(data, labels or {}, info, highlight=highlight, barmode=barmode)
 
     return line_chart(data, labels or {}, info, highlight=highlight)
 
