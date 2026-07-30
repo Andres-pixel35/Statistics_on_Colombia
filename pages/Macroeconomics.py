@@ -1,5 +1,5 @@
 import streamlit as st
-from pages.tabs.macroeconomics import gdp, cpi, job_market, productivity, debt, ise
+from pages.tabs.macroeconomics import gdp, cpi, job_market, productivity, debt, deficit, ise
 from generalities.function import load_csv, BASE_DIR
 
 st.set_page_config(layout="wide", page_title="Macroeconomic")
@@ -22,7 +22,7 @@ ise_df = load_csv(path_ise)
 st.image(str(BASE_DIR / "logo/logo_text.svg"), width=300)
 
 with st.sidebar:
-    section = st.radio("Section:", ["GDP", "CPI", "Job Market", "Productivity", "Debt", "ISE"])
+    section = st.radio("Section:", ["GDP", "CPI", "Job Market", "Productivity", "Debt", "Deficit", "ISE"])
 
 if section == "GDP":
     gdp.render_gdp(gdp_df)
@@ -34,5 +34,7 @@ elif section == "Productivity":
     productivity.render_productivity(prod_df)
 elif section == "Debt":
     debt.render_debt(debt_df)
+elif section == "Deficit":
+    deficit.render_deficit()
 else:
     ise.render_ise(ise_df)
