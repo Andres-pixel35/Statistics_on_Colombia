@@ -6,11 +6,13 @@ from pages.helpers.macro.gdp_functions import load_banco_annual, variable_growth
 from pages.helpers.macro.job_market_functions import load_desestacionalizado_unemployment
 from pages.helpers.macro.ise_functions import ise_long
 from pages.helpers.macro import debt_functions as dbf
+from pages.helpers.macro import deficit_functions as dff
 from pages.helpers.macro import productivity_functions as pf
 from pages.helpers.demography import population_functions as pop
 from pages.helpers.demography import births_functions as bir
 from pages.helpers.demography import deaths_functions as dth
 from generalities.macro_generalities import debt as dg
+from generalities.macro_generalities import deficit as dg_def
 from generalities.demography_generalities.population import POP_PATHS, PREV_YEAR
 from generalities.demography_generalities.births import BIRTHS_PATHS
 from generalities.demography_generalities.deaths import DEATHS_PATHS
@@ -292,6 +294,23 @@ debt_duration_cfg = _indicator_cfg("Debt Duration", "Duración - Deuda total", "
 debt_avg_life_cfg = _indicator_cfg("Debt Average Life", "Vida media - Deuda total", "#dc2626", "{:.2f} yrs")
 debt_avg_coupon_cfg = _indicator_cfg("Debt Average Coupon", "Cupón promedio (%) - Deuda Total", "#dc2626", "{:.2f}%")
 
+# --- Fiscal Deficit (% of GDP) ---
+deficit_values, _ = dff.load_deficit(dg_def.DEFICIT_BASE / "anual" / "balance_pib.csv", dated=False)
+deficit_series = deficit_values["4. deficit o superavit total"].dropna()
+deficit_value = deficit_series.iloc[-1]
+# Series is negative for a deficit (§1.9 of the deficit guide), so a rising value
+# means the deficit is shrinking — delta_good is the inverse of the debt cards.
+deficit_delta = deficit_value - deficit_series.iloc[-2]
+fiscal_deficit_cfg = {
+    "title": "Fiscal Deficit",
+    "value": f"{deficit_value:.2f}%",
+    "delta_text": f"{deficit_delta:+.2f} pp vs {deficit_series.index[-2]}",
+    "delta_good": deficit_delta > 0,
+    "metadata": f"{deficit_series.index[-1]} · Annual, GNC (preliminary)",
+    "accent": "#dc2626",
+    "spark": deficit_series.tail(12),
+}
+
 # --- Poverty & Inequality ---
 def _poverty_cfg(cfg):
     """cfg: title, relpath, accent, value_fmt, delta_fmt. All three poverty/inequality
@@ -429,7 +448,7 @@ kc.render_section({
 kc.render_section({
     "title": "Public Finance",
     "description": "Government debt levels and profile.",
-    "cfgs": [debt_gdp_cfg, debt_duration_cfg, debt_avg_life_cfg, debt_avg_coupon_cfg],
+    "cfgs": [fiscal_deficit_cfg, debt_gdp_cfg, debt_duration_cfg, debt_avg_life_cfg, debt_avg_coupon_cfg],
     "page": "pages/Macroeconomics.py",
 })
 

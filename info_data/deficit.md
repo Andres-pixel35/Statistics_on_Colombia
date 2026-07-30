@@ -12,6 +12,10 @@
 /home/riosandres/Documents/coding/genius/colombia/data/original/hacienda/deficit/balance_anual.xlsx
 ```
 
-## Processing 
+## Processing
 
-Yet to implement
+**deficit**:
+```bash
+# run from inside clean_data/ (relative paths)
+python clean_deficit.py
+```
