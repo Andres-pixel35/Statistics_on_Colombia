@@ -1,4 +1,4 @@
-# This is a guide file on where to download the inflation data and how to process it, in order to be use in the app.
+# This is a guide file on where to download the ISE data and how to process it, in order to be use in the app.
 
 ## Download
 
