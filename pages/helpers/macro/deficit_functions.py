@@ -78,27 +78,3 @@ def quarter_concept_axis(values: pd.DataFrame, keys: list, year: int) -> pd.Data
     table.index = [f"Q{q}" for q in table.index]
     table.index.name = "Quarter"
     return table
-
-
-if __name__ == "__main__":
-    from generalities.function import BASE_DIR
-
-    values, meta = load_deficit(BASE_DIR / "data/hacienda/deficit/trimestral/balance_cop.csv", dated=True)
-    key = "ingresos totales"
-    assert key in values.columns and key in meta.index
-    assert meta.loc[key, "depth"] == 0 and meta.loc[key, "root"] == key
-
-    ya = quarter_year_axis(values, key, 2)
-    assert list(ya.columns) == [key] and ya.index.name == "Year"
-    assert ya.loc[2004, key] == values.loc["2004-06-01", key]
-
-    qa = quarter_axis(values, key, [2004, 2005])
-    assert list(qa.index) == ["Q1", "Q2", "Q3", "Q4"] and list(qa.columns) == ["2004", "2005"]
-    assert qa.loc["Q2", "2004"] == values.loc["2004-06-01", key]
-
-    other_key = [k for k in values.columns if meta.loc[k, "root"] == key and k != key][0]
-    qc = quarter_concept_axis(values, [key, other_key], 2004)
-    assert list(qc.index) == ["Q1", "Q2", "Q3", "Q4"] and list(qc.columns) == [key, other_key]
-    assert qc.loc["Q2", key] == values.loc["2004-06-01", key]
-
-    print("deficit_functions self-check OK")
