@@ -1,5 +1,6 @@
 import plotly.express as px
 import plotly.graph_objects as go
+import numpy as np
 import pandas as pd
 import streamlit as st
 from app_pages.helpers.macro import gdp_functions as mf
@@ -303,31 +304,47 @@ def indicator(data: pd.DataFrame, full_series: pd.Series, reference: float, info
 
 def choropleth_map(data: pd.DataFrame, col: str, info: list):
     info = [t(info[0]), t(info[1]), t(info[2]), *info[3:]]
+    # Traveler counts are hugely skewed (median ~1e3, max ~1e7): color on a log
+    # scale so mid-size countries stay distinguishable, hover shows the raw value.
+    data = data.assign(_log=np.log10(data[col].clip(lower=1)))
     fig = px.choropleth(
         data,
         locations="Location",
         locationmode="country names",
-        color=col,
+        color="_log",
         hover_name=data["Location"].map(t),
+        custom_data=[col],
         color_continuous_scale="Blues",
-        labels={col: info[2]},
+        labels={"_log": info[2]},
     )
     fig.update_traces(
-        hovertemplate="<b>%{hovertext}</b><br>" + info[2] + ": %{z:,.0f}<extra></extra>"
+        hovertemplate="<b>%{hovertext}</b><br>" + info[2] + ": %{customdata[0]:,.0f}<extra></extra>"
     )
+    if st.context.theme.type == "dark":
+        geo_colors = dict(oceancolor="rgb(15, 30, 50)", landcolor="rgb(45, 45, 45)",
+                          coastlinecolor="rgb(80, 80, 80)")
+    else:
+        geo_colors = dict(oceancolor="#C9D8E4", landcolor="#DDD8C9",
+                          coastlinecolor="#B5AE9A")
     fig.update_geos(
         showocean=True,
-        oceancolor="rgb(15, 30, 50)",
         showland=True,
-        landcolor="rgb(45, 45, 45)",
         showframe=False,
         showcoastlines=True,
-        coastlinecolor="rgb(80, 80, 80)",
+        projection_type="natural earth",
+        lataxis_range=[-58, 88],
+        **geo_colors,
     )
+    layout = _map_layout(info[2])
+    max_exp = int(data["_log"].max())
+    ticks = list(range(0, max_exp + 1))
+    labels_1k = ["1", "10", "100", "1K", "10K", "100K", "1M", "10M", "100M"]
+    layout["coloraxis_colorbar"].update(tickvals=ticks, ticktext=labels_1k[:len(ticks)])
     fig.update_layout(
         title=_title(info[0]),
         paper_bgcolor="rgba(0,0,0,0)",
-        **_map_layout(info[2]),
+        geo=dict(bgcolor="rgba(0,0,0,0)"),
+        **layout,
     )
     return fig
 
