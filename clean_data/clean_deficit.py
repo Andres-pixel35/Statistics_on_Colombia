@@ -49,6 +49,7 @@ def read_balance(xl, wb, sheet, year_cols=False):
     df = df.drop(columns="_row")
 
     date_cols = [c for c in df.columns if c not in ("Concepto", "Grupo")]
+    date_cols_raw = date_cols
     if year_cols:
         relabel = {c: (str(int(c)) if isinstance(c, (int, float)) else c.rstrip("*")) for c in date_cols}
     else:
@@ -57,25 +58,37 @@ def read_balance(xl, wb, sheet, year_cols=False):
     date_cols = list(relabel.values())
 
     df[date_cols] = df[date_cols].replace("-", pd.NA).apply(pd.to_numeric)
-    return df[["Concepto", "Grupo"] + date_cols]
+    df = df[["Concepto", "Grupo"] + date_cols]
+    if year_cols:
+        # source marks not-yet-final years with a trailing "*" on the column header
+        df.attrs["preliminary_years"] = sorted(
+            int(c.rstrip("*")) for c in date_cols_raw if isinstance(c, str) and c.endswith("*")
+        )
+    return df
 
 
-README = {
-    "anual": """# Anual
+def _anual_readme(preliminary_years):
+    years = ", ".join(str(y) for y in preliminary_years)
+    return f"""# Anual
 
 - `balance_cop.csv` — annual fiscal balance (Gobierno Nacional Central), **miles de millones
   (COP)** — same unit as `data/banco_republica/GDP/nominal_annual.csv`'s `PIB`.
 - `balance_pib.csv` — same rows, **% of GDP** (DANE GDP denominator), already in
   percentage-point units (not a 0-1 fraction).
+- `preliminary_years.csv` — the year(s) the source marks as not-yet-final (see below).
 
 `Grupo` — the row's ancestor `Concepto` chain (e.g. `Renta`'s Grupo is
 `1. INGRESOS TOTALES ... > INGRESOS CORRIENTES DE LA NACION > DIAN`), taken from the
 source workbook's own outline indent levels. Empty for top-level rows
 (`1. INGRESOS TOTALES`, `2. PAGOS TOTALES`, ...).
 
-Both cover 1994-2025; **2025 figures are preliminary** per the source's `*Cifras
-preliminares` footnote (the `*` marker was stripped from the column name).
-""",
+Both cover 1994-2025; **{years} figures are preliminary** per the source's `*Cifras
+preliminares` footnote (the `*` marker was stripped from the column name and recorded in
+`preliminary_years.csv` instead).
+"""
+
+
+README = {
     "mensual": """# Mensual
 
 - `balance_cop.csv` — monthly fiscal balance (Gobierno Nacional Central), **miles de millones
@@ -128,15 +141,22 @@ def main():
         # row 41), so exact label equality isn't a reliable invariant
         assert len(cop) == len(pib), f"{grain}: balance_cop.csv/balance_pib.csv row count mismatch"
 
+    preliminary_years = outputs[("anual", "balance_cop.csv")].attrs["preliminary_years"]
+    readme = {**README, "anual": _anual_readme(preliminary_years)}
+
     for folder in {folder for folder, _ in outputs}:
         os.makedirs(os.path.join(out_dir, folder), exist_ok=True)
         with open(os.path.join(out_dir, folder, "README.md"), "w") as f:
-            f.write(README[folder])
+            f.write(readme[folder])
 
     for (folder, name), df in outputs.items():
         path = os.path.join(out_dir, folder, name)
         df.to_csv(path, index=False)
         print(f"{os.path.join(folder, name)}: {len(df)} rows")
+
+    pd.DataFrame({"year": preliminary_years}).to_csv(
+        os.path.join(out_dir, "anual", "preliminary_years.csv"), index=False
+    )
 
     print(f"\nSaved {len(outputs)} CSVs to {out_dir}")
 

@@ -35,22 +35,26 @@ def cap_one(keys):
             st.session_state[k] = st.session_state[k][-1:]
 
 def highlight_selectbox(df, display_names=None, label="Highlight variable:"):
+    from generalities.i18n import t  # local: module-level import would be circular
     if not isinstance(df, pd.DataFrame) or df.empty or len(df.columns) <= 1:
         return None
     names = display_names if display_names is not None else [str(c) for c in df.columns]
     with st.sidebar:
-        choice = st.selectbox(label, ["—"] + names)
+        choice = st.selectbox(t(label), ["—"] + names, format_func=t)
     return None if choice == "—" else choice
 
 def cap_series(data: pd.DataFrame, limit: int = 10) -> pd.DataFrame:
     if isinstance(data, pd.DataFrame) and data.shape[1] > limit:
-        st.session_state["chart_warning"] = f"Showing first {limit} of {data.shape[1]} series."
+        # stored as (template, kwargs); render_chart translates + formats
+        st.session_state["chart_warning"] = (
+            "Showing first {limit} of {n} series.", {"limit": limit, "n": data.shape[1]})
         return data.iloc[:, :limit]
     return data
 
 def show_all_years(df: pd.DataFrame|pd.Series, president, return_flag=False) -> pd.DataFrame | pd.Series:
+    from generalities.i18n import t  # local: module-level import would be circular
     with st.sidebar:
-        show_all = st.checkbox("Show all years", value=False)
+        show_all = st.checkbox(t("Show all years"), value=False)
 
     if not show_all and not president:
         df = df[df.index >= 2000]
@@ -75,7 +79,8 @@ def to_datatime(df: pd.DataFrame, dayfirst: bool) -> pd.DataFrame | pd.Series:
 
 def president_multiselect(valid_presidents: list, disabled: bool = False, key=None) -> list:
     """Replacement for the single-president selectbox. 2+ selected = comparison mode."""
-    return st.multiselect("Presidents:", valid_presidents, disabled=disabled, key=key)
+    from generalities.i18n import t  # local: module-level import would be circular
+    return st.multiselect(t("Presidents:"), valid_presidents, disabled=disabled, key=key)
 
 def reshape_by_presidents(df: pd.DataFrame, selected_presidents: list, info: list, col_labels: dict | None = None) -> tuple:
     """
@@ -94,6 +99,8 @@ def reshape_by_presidents(df: pd.DataFrame, selected_presidents: list, info: lis
     )
     data = data[~data.index.duplicated(keep="first")]
 
+    from generalities.i18n import t  # local: module-level import would be circular
+
     ordered = sorted(selected_presidents, key=lambda name: min(presidents[name]))
     max_len = max(len(presidents[name]) for name in ordered)
 
@@ -107,12 +114,12 @@ def reshape_by_presidents(df: pd.DataFrame, selected_presidents: list, info: lis
                 for year in term_years
             ]
             values += [float("nan")] * (max_len - len(values))
-            columns[f"{var} ({name})"] = values
+            columns[f"{t(var)} ({name})"] = values
 
     result = pd.DataFrame(columns, index=[f"Year {i}" for i in range(1, max_len + 1)])
     result.index.name = "Term Year"
 
-    new_info = [f"{info[0]} — {' vs '.join(ordered)}", "Term Year", info[2], *info[3:]]
+    new_info = [f"{t(info[0])} — {' vs '.join(ordered)}", "Term Year", info[2], *info[3:]]
     return result, new_info
 
 def norm(label: str) -> str:
