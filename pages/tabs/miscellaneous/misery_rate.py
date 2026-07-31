@@ -5,7 +5,7 @@ from pages.helpers.macro import job_market_functions as mf
 from pages.helpers.miscellaneous import rates_functions as rf
 from generalities.dictionaries import presidents
 from generalities.function import (to_datatime, highlight_selectbox, get_valid_presidents,
-                                   president_multiselect, reshape_by_presidents, show_all_years, BASE_DIR)
+                                   president_multiselect, reshape_by_presidents, BASE_DIR)
 
 UNIT = "pts"
 DESEST_UNEMPLOYMENT_PATH = str(BASE_DIR / "data/dane/job_market/desestacionalizado/total.csv")
@@ -33,8 +33,7 @@ def render_misery_rate(cpi_df: pd.DataFrame, lending_df: pd.DataFrame, gdp_growt
         year_set.update(set(presidents[name]) & set(years))
 
     if not year_set and not comparing:
-        capped = show_all_years(pd.DataFrame(index=years), president=False)
-        year_set = set(capped.index)
+        year_set = set(years)
 
     series = full.to_frame(name="Misery Index")
     if not comparing:
