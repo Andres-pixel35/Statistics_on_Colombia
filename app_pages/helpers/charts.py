@@ -73,7 +73,11 @@ def bar_chart(data: pd.DataFrame, labels: dict, info: list, highlight: str = Non
     highlight = t(highlight)
     data = cap_series(data)
     data = data.rename(index=lambda i: t(i) if isinstance(i, str) else i)
-    fig = px.bar(data, barmode=barmode, labels={data.index.name or "index": info[1], "value": info[2]})
+    # "relative" stacks positives above zero and negatives below it independently; plain "stack"
+    # piles traces in order regardless of sign, which can visually bury a bar under a bigger one
+    # of the opposite sign. Same rendering as "stack" when every value shares a sign.
+    px_barmode = "relative" if barmode == "stack" else barmode
+    fig = px.bar(data, barmode=px_barmode, labels={data.index.name or "index": info[1], "value": info[2]})
     fig.update_layout(
         height=600,
         title=_title(info[0]),
