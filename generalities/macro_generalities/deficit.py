@@ -1,6 +1,11 @@
+import pandas as pd
+
 from generalities.function import BASE_DIR
 
 DEFICIT_BASE = BASE_DIR / "data/hacienda/deficit"
+
+# Years the source marks as not-yet-final (Annual view's "preliminary" caption).
+PRELIMINARY_YEARS = pd.read_csv(DEFICIT_BASE / "anual" / "preliminary_years.csv")["year"].tolist()
 
 # Frequency -> subfolder; also the Frequency selectbox's options, in display order.
 FREQUENCIES = {"Annual": "anual", "Quarterly": "trimestral", "Monthly": "mensual"}

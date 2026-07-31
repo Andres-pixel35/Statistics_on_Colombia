@@ -343,7 +343,7 @@ UI_ES = {
         "Muestra el balance fiscal del Gobierno Nacional Central (GNC). Un valor negativo es un déficit.",
     "% of GDP is computed by the source against DANE nominal GDP.":
         "El % del PIB lo calcula la fuente contra el PIB nominal del DANE.",
-    "2025 figures are preliminary.": "Las cifras de 2025 son preliminares.",
+    "{years} figures are preliminary.": "Las cifras de {years} son preliminares.",
     "Stacking is only meaningful within one group — mixing a total with its own "
     "components double-counts.":
         "Apilar solo tiene sentido dentro de un mismo grupo — mezclar un total con sus propios "

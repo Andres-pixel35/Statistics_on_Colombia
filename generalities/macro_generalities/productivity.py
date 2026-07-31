@@ -53,34 +53,63 @@ PRODUCTIVITY_TERMS = {
     },
     "productividad_total_factores": {
         "Gross Value Added Growth": "valor agregado bruto (%)",
+        "Contribution of Factors": "contribución de los factores (pp)",
         "Labor Services": "servicios laborales (pp)",
         "Capital Services": "servicios de capital (pp)",
-        "Contribution of Factors": "contribución de los factores (pp)",
         "Total Factor Productivity": "productividad total de los factores (pp)",
     },
     "nacional": {
         "Gross Production Growth": "producción (%)",
+        "Contribution of Factors": "contribución de los factores (pp)",
         "Labor Services (Total)": "servicios laborales total (pp)",
         "Labor Services (Women)": "servicios laborales mujeres (pp)",
         "Labor Services (Men)": "servicios laborales hombres (pp)",
         "Capital Services": "servicios de capital (pp)",
         "Intermediate Consumption": "consumos intermedios (pp)",
-        "Contribution of Factors": "contribución de los factores (pp)",
         "Total Factor Productivity": "productividad total de los factores (pp)",
     },
     "actividad_economica": {
         "Production Growth Rate": "Tasas de crecimiento (%)",
+        "Contribution of Factors": "Contribución de los factores (pp)",
+        "Labor Total": "Laboral Total (pp)",
         "Labor Composition": "Composición del trabajo (pp)",
         "Hours Worked": "Horas trabajadas (pp)",
-        "Labor Total": "Laboral Total (pp)",
+        "Capital Total": "Capital Total (pp)",
         "ICT Capital": "Capital TIC (pp)",
         "Non-ICT Capital": "Capital No TIC (pp)",
-        "Capital Total": "Capital Total (pp)",
+        "Intermediate Consumption Total": "Consumo intermedio Total (pp)",
         "Energy": "Energía (pp)",
         "Materials": "Materiales (pp)",
         "Services": "Servicios (pp)",
-        "Intermediate Consumption Total": "Consumo intermedio Total (pp)",
-        "Contribution of Factors": "Contribución de los factores (pp)",
         "Total Factor Productivity": "Productividad Total de los Factores (pp)",
+    },
+}
+
+# Concept -> parent concept, for tables with real subtotals (values verified
+# against data/dane/productivity/**/*.csv). Concepts absent here are direct
+# children of the table's headline measure (depth 1).
+PRODUCTIVITY_PARENTS = {
+    "productividad_total_factores": {
+        "Labor Services": "Contribution of Factors",
+        "Capital Services": "Contribution of Factors",
+    },
+    "nacional": {
+        "Labor Services (Women)": "Labor Services (Total)",
+        "Labor Services (Men)": "Labor Services (Total)",
+        "Labor Services (Total)": "Contribution of Factors",
+        "Capital Services": "Contribution of Factors",
+        "Intermediate Consumption": "Contribution of Factors",
+    },
+    "actividad_economica": {
+        "Labor Composition": "Labor Total",
+        "Hours Worked": "Labor Total",
+        "Labor Total": "Contribution of Factors",
+        "ICT Capital": "Capital Total",
+        "Non-ICT Capital": "Capital Total",
+        "Capital Total": "Contribution of Factors",
+        "Energy": "Intermediate Consumption Total",
+        "Materials": "Intermediate Consumption Total",
+        "Services": "Intermediate Consumption Total",
+        "Intermediate Consumption Total": "Contribution of Factors",
     },
 }

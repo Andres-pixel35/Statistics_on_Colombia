@@ -208,8 +208,11 @@ def render_deficit() -> None:
     st.caption(t("Shows the Central National Government (GNC) fiscal balance. A negative value is a deficit."))
     if unit == "% of GDP":
         st.caption(t("% of GDP is computed by the source against DANE nominal GDP."))
-    if frequency == "Annual" and 2025 in years_sorted:
-        st.caption(t("2025 figures are preliminary."))
+    preliminary = sorted(set(years_sorted) & set(dg.PRELIMINARY_YEARS))
+    if frequency == "Annual" and preliminary:
+        st.caption(t("{years} figures are preliminary.").format(
+            years=", ".join(str(y) for y in preliminary)
+        ))
     if chart_type == "Stacked bar":
         st.caption(t("Stacking is only meaningful within one group — mixing a total with its own "
                   "components double-counts."))

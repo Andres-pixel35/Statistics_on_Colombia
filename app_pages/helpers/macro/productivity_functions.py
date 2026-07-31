@@ -1,4 +1,17 @@
 import pandas as pd
+import generalities.macro_generalities.productivity as pr
+
+
+def concept_depth(stem: str, label: str, headline: str) -> int:
+    """0 for the headline itself; otherwise hop count up PRODUCTIVITY_PARENTS to it."""
+    if label == headline:
+        return 0
+    parents = pr.PRODUCTIVITY_PARENTS.get(stem, {})
+    depth, cur = 1, label
+    while cur in parents:
+        cur = parents[cur]
+        depth += 1
+    return depth
 
 
 def productivity_pivot(df: pd.DataFrame, concept_cols: dict, year_set: set | None = None) -> pd.DataFrame:

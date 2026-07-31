@@ -29,13 +29,16 @@ def render_productivity(prod_df: pd.DataFrame) -> None:
         df[pr.ACTIVITY_COL] = df[pr.ACTIVITY_COL].str.strip()
     years = sorted(df["año"].unique())
 
+    main_label = list(terms.keys())[0]
+    concept_format = lambda lbl: t(lbl) if lbl == main_label else ("· " * pf.concept_depth(stem, lbl, main_label)) + t(lbl)
+
     if stem == pr.ACTIVITY_STEM:
         concept_key, activity_key = "prod_concepts_activity", "prod_activities"
         concept_labels = st.sidebar.multiselect(
-            t("Concepts:"), list(terms.keys()), default=[list(terms.keys())[0]], key=concept_key,
-            on_change=_cap, args=(concept_key, [activity_key]), format_func=t)
+            t("Concepts:"), list(terms.keys()), default=[main_label], key=concept_key,
+            on_change=_cap, args=(concept_key, [activity_key]), format_func=concept_format)
         if not concept_labels:
-            concept_labels = [list(terms.keys())[0]]
+            concept_labels = [main_label]
         activity_labels = st.sidebar.multiselect(
             t("Economic Activity:"), list(pr.ACTIVITY_EN.values()), default=["Total Economy"],
             key=activity_key, on_change=_cap, args=(activity_key, [concept_key]), format_func=t)
@@ -43,15 +46,15 @@ def render_productivity(prod_df: pd.DataFrame) -> None:
             activity_labels = ["Total Economy"]
     else:
         concept_labels = st.sidebar.multiselect(
-            t("Concepts:"), list(terms.keys()), default=[list(terms.keys())[0]], format_func=t)
+            t("Concepts:"), list(terms.keys()), default=[main_label], format_func=concept_format)
         if not concept_labels:
-            concept_labels = [list(terms.keys())[0]]
+            concept_labels = [main_label]
 
     cur_years = st.sidebar.multiselect(t("Year:"), years, key="prod_years")
 
     with top_placeholder.container():
         st.header(t("Filters"))
-        chart_type = st.selectbox(t("Chart Type:"), ["Line", "Bar"], format_func=t)
+        chart_type = st.selectbox(t("Chart Type:"), ["Line", "Bar", "Stacked bar"], format_func=t)
 
     valid_presidents = get_valid_presidents(years)
     president_restricted = len(concept_labels) >= 2 or (
@@ -76,7 +79,6 @@ def render_productivity(prod_df: pd.DataFrame) -> None:
     else:
         series = pf.productivity_pivot(df, concept_cols, year_set)
 
-    main_label = list(terms.keys())[0]
     units = {"%" if terms[label].rstrip().endswith("(%)") else "pp" for label in concept_labels}
     if units == {"%"}:
         value_label, unit_caption = "Value (%)", None
@@ -101,7 +103,9 @@ def render_productivity(prod_df: pd.DataFrame) -> None:
         info[0] = f"{info[0]} · {sorted(year_set)[0]}"
 
     highlight = highlight_selectbox(series)
-    fig = mc.line_or_bar(chart_type, series, info, highlight=highlight)
+    is_stacked = chart_type == "Stacked bar"
+    fig = mc.line_or_bar("Bar" if is_stacked else chart_type, series, info, highlight=highlight,
+                         barmode="stack" if is_stacked else "group")
     mc.render_chart(fig)
     if unit_caption:
         st.caption(unit_caption)
