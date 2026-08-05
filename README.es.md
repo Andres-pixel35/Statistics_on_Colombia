@@ -41,10 +41,9 @@ demografía (población, nacimientos, defunciones y migración), entre otras.
 
 ## Estado
 
-El desarrollo de funcionalidades está **completo** desde julio de 2026. Los
-datos se mantienen actualizados con las últimas publicaciones de cada
-fuente, y con el tiempo pueden añadirse correcciones puntuales, nuevos datos
-o nuevas funcionalidades.
+Los datos se mantienen actualizados con las últimas publicaciones de cada
+fuente, errores encontrados serán arreglados y nuevos datos
+o nuevas funcionalidades pueden ser añadidos con el tiempo.
 
 La interfaz de la aplicación está completamente disponible en **español**.
 

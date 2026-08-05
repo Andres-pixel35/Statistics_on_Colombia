@@ -41,9 +41,7 @@ market, productivity, public debt and deficit, poverty, and demographics
 
 ## Status
 
-Feature development is **complete** as of July 2026. The data is kept up to
-date with the latest releases from each source, and occasional fixes, new
-datasets, or new features may still be added over time.
+The data is kept up to date with the latest releases from each source. New errors found will be fixed and new datasets, or new features may still be added over time.
 
 The app's interface is fully available in **Spanish**.
 

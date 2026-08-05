@@ -483,6 +483,7 @@ UI_ES = {
     "New People": "Personas nuevas",
     "National Birth & Death Rate": "Tasa nacional de natalidad y mortalidad",
     "Rate per 1,000": "Tasa por 1.000",
+    "Rate per 100,000": "Tasa por 100.000",
     "Birth rate": "Tasa de natalidad",
     "Death rate": "Tasa de mortalidad",
     "President:": "Presidente:",
@@ -560,6 +561,7 @@ UI_ES = {
     "Occurrence": "Ocurrencia",
     "Residence": "Residencia",
     "Show as rate per 1,000 population": "Mostrar como tasa por 1.000 habitantes",
+    "Show as rate per 100,000 population": "Mostrar como tasa por 100.000 habitantes",
     "{gender} death rate": "Tasa de mortalidad ({gender})",
     "{scope}, age {age}": "{scope}, edad {age}",
     "Map can't compare presidents — pick a single president or switch to Line/Bar.":
