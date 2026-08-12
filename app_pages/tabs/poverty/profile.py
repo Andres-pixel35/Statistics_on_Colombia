@@ -24,7 +24,7 @@ def render_profile() -> None:
     st.sidebar.header(t("Filters"))
     grupo = st.sidebar.selectbox(t("Characteristic:"), [pv.GRUPO_EN.get(g, g) for g in grupos], format_func=t)
     grupo_sp = find_key_by_value({g: pv.GRUPO_EN.get(g, g) for g in grupos}, grupo)
-    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Bar", "Line"], format_func=t)
+    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Bar", "Line", "Table"], format_func=t)
     years = sorted(df["Fecha"].unique())
     # Default to the two most recent years; the picker still offers every year in the file,
     # so added years show up without defaulting into an ever-wider chart.

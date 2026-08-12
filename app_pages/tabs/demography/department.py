@@ -19,7 +19,7 @@ def render_department() -> None:
 
     with st.sidebar:
         st.header(t("Filters"))
-        chart_type = st.selectbox(t("Chart Type:"), ["Map", "Line", "Bar", "Population pyramid"], format_func=t)
+        chart_type = st.selectbox(t("Chart Type:"), ["Map", "Line", "Bar", "Table", "Population pyramid"], format_func=t)
 
     if chart_type == "Population pyramid":
         _render_pyramid(df, entity={"label": "Department", "options": dept_names, "column": "Name"})

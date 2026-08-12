@@ -43,7 +43,7 @@ def render_deaths() -> None:
 
 
 def _render_deaths_breakdown(compare_by: str) -> None:
-    chart_options = ["Line", "Bar"] + (["Deaths pyramid"] if compare_by == "Age Group" else [])
+    chart_options = ["Line", "Bar", "Table"] + (["Deaths pyramid"] if compare_by == "Age Group" else [])
     with st.sidebar:
         chart_type = st.selectbox(t("Chart Type:"), chart_options, format_func=t)
 
@@ -216,7 +216,7 @@ def _render_deaths_department() -> None:
     valid_presidents = get_valid_presidents(all_years)
 
     with st.sidebar:
-        chart_type = st.selectbox(t("Chart Type:"), ["Map", "Line", "Bar"], format_func=t)
+        chart_type = st.selectbox(t("Chart Type:"), ["Map", "Line", "Bar", "Table"], format_func=t)
         cause = st.selectbox(t("Cause:"), ["All causes"] + cause_names, format_func=t)
         selected_presidents = president_multiselect(valid_presidents)
 
@@ -322,7 +322,7 @@ def _render_deaths_municipality() -> None:
     valid_presidents = get_valid_presidents(all_years)
 
     with st.sidebar:
-        chart_type = st.selectbox(t("Chart Type:"), ["Line", "Bar"], format_func=t)
+        chart_type = st.selectbox(t("Chart Type:"), ["Line", "Bar", "Table"], format_func=t)
         selected_presidents = president_multiselect(valid_presidents)
 
     comparing = len(selected_presidents) >= 2
@@ -461,7 +461,7 @@ def _render_deaths_cause_compare() -> None:
         age_label = st.selectbox(t("Age:"), ["All ages"] + age_labels, format_func=t)
 
     with st.sidebar:
-        chart_type = st.selectbox(t("Chart Type:"), ["Line", "Bar"], format_func=t)
+        chart_type = st.selectbox(t("Chart Type:"), ["Line", "Bar", "Table"], format_func=t)
         selected_causes = st.multiselect(t("Causes (max 5):"), ["All causes"] + cause_names, format_func=t)
         selected_presidents = president_multiselect(valid_presidents)
 

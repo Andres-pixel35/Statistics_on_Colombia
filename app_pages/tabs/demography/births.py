@@ -45,7 +45,7 @@ def _render_births_breakdown(compare_by: str) -> None:
 
     years = sorted(df["year"].unique().astype(int).tolist(), reverse=True)
 
-    chart_options = ["Line", "Bar"] + (["Births pyramid"] if compare_by == "Mother Age" else [])
+    chart_options = ["Line", "Bar", "Table"] + (["Births pyramid"] if compare_by == "Mother Age" else [])
     with st.sidebar:
         chart_type = st.selectbox(t("Chart Type:"), chart_options, format_func=t)
 
@@ -137,7 +137,7 @@ def _render_births_department() -> None:
     dept_names = sorted(dept_df["departamento"].str.split(n=1).str[1].unique())
 
     with st.sidebar:
-        chart_type = st.selectbox(t("Chart Type:"), ["Map", "Line", "Bar"], format_func=t)
+        chart_type = st.selectbox(t("Chart Type:"), ["Map", "Line", "Bar", "Table"], format_func=t)
 
         if chart_type != "Map":
             selected_depts = st.multiselect(t("Departments:"), dept_names)
@@ -171,7 +171,7 @@ def _render_births_municipality() -> None:
     dept_names = sorted(muni_df["departamento"].str.split(n=1).str[1].dropna().unique())
 
     with st.sidebar:
-        chart_type = st.selectbox(t("Chart Type:"), ["Line", "Bar"], format_func=t)
+        chart_type = st.selectbox(t("Chart Type:"), ["Line", "Bar", "Table"], format_func=t)
         dept = st.selectbox(t("Department:"), dept_names)
         scoped = muni_df[muni_df["departamento"].str.split(n=1).str[1] == dept]
         muni_names = sorted(scoped["municipio"].str.split(n=1).str[1].unique())

@@ -41,7 +41,7 @@ def render_deficit() -> None:
     if prev_compare and frequency != "Annual":
         _cap_one(["deficit_years"])
 
-    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Line", "Bar", "Stacked bar"],
+    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Line", "Bar", "Table", "Stacked bar"],
                                       key="deficit_chart_type", format_func=t)
 
     roots = [k for k in meta.index if meta.at[k, "depth"] == 0]

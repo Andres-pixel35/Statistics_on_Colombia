@@ -435,7 +435,7 @@ def render_informality() -> None:
 
 
 def render_departments() -> None:
-    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Map", "Line", "Bar"], format_func=t)
+    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Map", "Line", "Bar", "Table"], format_func=t)
 
     col1, col2, col3 = st.columns(3)
     with col1:
@@ -546,7 +546,7 @@ def render_departments() -> None:
 
 
 def render_regions() -> None:
-    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Map", "Line", "Bar"], format_func=t)
+    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Map", "Line", "Bar", "Table"], format_func=t)
 
     terms = jm.region_terms
     denom_sp = jm.REGION_PET_CONCEPT

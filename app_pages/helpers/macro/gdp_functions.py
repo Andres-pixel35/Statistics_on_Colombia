@@ -79,7 +79,7 @@ def generalities_spend_product(df: pd.DataFrame, terms: dict, levels_cfg: dict, 
     if in_year_view:
         with st.sidebar:
             st.header(t("Filters:"))
-            chart_type = st.selectbox(t("Chart Type:"), ["Line", "Bar"], format_func=t)
+            chart_type = st.selectbox(t("Chart Type:"), ["Line", "Bar", "Table"], format_func=t)
 
             dane_years = sorted(df.columns[1:].str.split("-").str[0].unique(), reverse=True)
             year = st.selectbox(t("Year:"), dane_years)
@@ -120,7 +120,7 @@ def generalities_spend_product(df: pd.DataFrame, terms: dict, levels_cfg: dict, 
     with st.sidebar:
         st.header(t("Filters:"))
 
-        chart_type = st.selectbox(t("Chart Type:"), ["Line", "Bar"], format_func=t)
+        chart_type = st.selectbox(t("Chart Type:"), ["Line", "Bar", "Table"], format_func=t)
 
         quarter = st.selectbox(t("Quarter:"), ["All", "I", "II", "III", "IV"], format_func=t)
 
