@@ -20,7 +20,7 @@ def render_minimum_wage(df: pd.DataFrame, trm_df: pd.DataFrame) -> None:
     local = df.rename(columns={"Fecha": "año"})
     years = sorted(local["año"].unique())
 
-    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Line", "Bar"], format_func=t)
+    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Line", "Bar", "Table"], format_func=t)
     cur_years = st.sidebar.multiselect(t("Year:"), years, key="wage_years")
 
     valid_presidents = get_valid_presidents(years)
@@ -80,7 +80,7 @@ def render_minimum_wage(df: pd.DataFrame, trm_df: pd.DataFrame) -> None:
 
     if series.empty:
         st.warning(t("No data for selected filters."))
-    elif method == "Growth" and not comparing and len(year_set) == 1:
+    elif method == "Growth" and not comparing and len(year_set) == 1 and chart_type != "Table":
         reference = full.median()
         fig = mc.indicator(series, full, reference, [info[0], ".2f", "%", " vs Median"])
         mc.render_chart(fig)

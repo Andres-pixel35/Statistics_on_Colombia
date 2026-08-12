@@ -26,7 +26,7 @@ def render_monetary_policy_rate(df: pd.DataFrame) -> None:
     st.title(t("Miscellaneous"))
     local = rf.forward_fill_through(to_datatime(df, True), pd.Timestamp.now().normalize())
 
-    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Line", "Bar"], format_func=t)
+    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Line", "Bar", "Table"], format_func=t)
 
     in_month_view = st.session_state.get("policy_rate_in_month", False)
     day_compare = st.session_state.get("policy_rate_day_compare", False)

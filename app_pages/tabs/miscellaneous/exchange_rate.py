@@ -26,7 +26,7 @@ def render_exchange_rate(df: pd.DataFrame) -> None:
     st.title(t("Miscellaneous"))
     local = to_datatime(df, False)
 
-    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Line", "Bar"], format_func=t)
+    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Line", "Bar", "Table"], format_func=t)
 
     in_month_view = st.session_state.get("trm_in_month", False)
     day_compare = st.session_state.get("trm_day_compare", False)

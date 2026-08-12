@@ -53,8 +53,12 @@ def cap_series(data: pd.DataFrame, limit: int = 10) -> pd.DataFrame:
 
 def show_all_years(df: pd.DataFrame|pd.Series, president, return_flag=False) -> pd.DataFrame | pd.Series:
     from generalities.i18n import t  # local: module-level import would be circular
-    with st.sidebar:
-        show_all = st.checkbox(t("Show all years"), value=False)
+    has_pre_2000 = len(df.index) > 0 and df.index.min() < 2000
+    if has_pre_2000:
+        with st.sidebar:
+            show_all = st.checkbox(t("Show all years"), value=False)
+    else:
+        show_all = False
 
     if not show_all and not president:
         df = df[df.index >= 2000]

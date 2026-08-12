@@ -19,7 +19,7 @@ def render_migration() -> None:
 
     with st.sidebar:
         st.header(t("Filters"))
-        chart_type = st.selectbox(t("Chart Type:"), ["Map", "Line", "Bar"], format_func=t)
+        chart_type = st.selectbox(t("Chart Type:"), ["Map", "Line", "Bar", "Table"], format_func=t)
 
     all_years = sorted(migration_df["Fecha"].dt.year.unique().tolist(), reverse=True)
     valid_pres = get_valid_presidents(all_years)
