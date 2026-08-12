@@ -57,7 +57,7 @@ def render_balances(df: pd.DataFrame) -> None:
     if prev_compare:
         _cap_one(["debt_years"])
 
-    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Line", "Bar"], format_func=t)
+    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Line", "Bar", "Table"], format_func=t)
     cur_years = st.sidebar.multiselect(t("Year:"), years, key="debt_years")
 
     valid_presidents = get_valid_presidents(years)
@@ -170,7 +170,7 @@ def _render_debt_breakdown(config: dict) -> None:
     local = to_datatime(dbf.load_fuente(paths[view]), False)
     years = sorted(local.index.year.unique())
 
-    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Line", "Bar"], key=f"{key_prefix}_chart_type", format_func=t)
+    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Line", "Bar", "Table"], key=f"{key_prefix}_chart_type", format_func=t)
 
     instr_key = f"{key_prefix}_instruments_{view}"
     years_key = f"{key_prefix}_years"
@@ -264,7 +264,7 @@ def render_perfil() -> None:
     df = load_csv(dg.PERFIL_PATH)
     dates = sorted(df["Fecha"].unique())
 
-    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Line", "Bar"], key="perfil_chart_type", format_func=t)
+    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Line", "Bar", "Table"], key="perfil_chart_type", format_func=t)
     report_years = sorted({d[:4] for d in dates})
     col1, col2, col3 = st.columns(3)
     with col1:
@@ -299,7 +299,7 @@ def render_indicators() -> None:
     terms = dg.INDICADORES_TERMS[metric]
     unit = dg.INDICADORES_UNITS[metric]
 
-    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Line", "Bar"], key="indicadores_chart_type", format_func=t)
+    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Line", "Bar", "Table"], key="indicadores_chart_type", format_func=t)
 
     splits_key = "indicadores_splits"
     years_key = "indicadores_years"

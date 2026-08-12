@@ -21,7 +21,7 @@ def render_national(pop_df: pd.DataFrame) -> None:
 
     with st.sidebar:
         st.header(t("Filters"))
-        chart_type = st.selectbox(t("Chart Type:"), ["Line", "Bar", "Population pyramid"], format_func=t)
+        chart_type = st.selectbox(t("Chart Type:"), ["Line", "Bar", "Table", "Population pyramid"], format_func=t)
 
     if chart_type == "Population pyramid":
         _render_pyramid(pop_df, "Colombia")
@@ -167,7 +167,7 @@ def render_national(pop_df: pd.DataFrame) -> None:
 
     data = series if isinstance(series, pd.DataFrame) else series.to_frame(name=column)
 
-    if len(data) == 1 and data.shape[1] == 1:
+    if len(data) == 1 and data.shape[1] == 1 and chart_type != "Table":
         year = data.index[0]
         if method == "Growth":
             reference = full_series.median()

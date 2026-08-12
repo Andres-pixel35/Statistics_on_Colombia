@@ -54,7 +54,7 @@ def render_productivity(prod_df: pd.DataFrame) -> None:
 
     with top_placeholder.container():
         st.header(t("Filters"))
-        chart_type = st.selectbox(t("Chart Type:"), ["Line", "Bar", "Stacked bar"], format_func=t)
+        chart_type = st.selectbox(t("Chart Type:"), ["Line", "Bar", "Table", "Stacked bar"], format_func=t)
 
     valid_presidents = get_valid_presidents(years)
     president_restricted = len(concept_labels) >= 2 or (

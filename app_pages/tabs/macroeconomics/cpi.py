@@ -83,7 +83,10 @@ def render_cpi(cpi_df: pd.DataFrame) -> None:
                     if not selected_items:
                         selected_items = [cfg["default"]]
 
-                sidebar_df = cpi_local
+                sidebar_df = pd.concat([
+                    to_datatime(load_csv(f"{cfg['base_path']}{find_key_by_value(cfg['items_dict'], name)}.csv"), False)
+                    for name in selected_items
+                ])
             else:
                 with city_cat_placeholder.container():
                     selected_item = st.selectbox(t(cfg["label"] + ":"), display, index=display.index(cfg["default"]), format_func=t)
@@ -95,8 +98,15 @@ def render_cpi(cpi_df: pd.DataFrame) -> None:
             data_df = cpi_local
             sidebar_df = cpi_local
 
+        if perspective != "Annual" and cfg is not None and comparing:
+            pres_mode = "hidden"
+        elif perspective != "Annual":
+            pres_mode = "single"
+        else:
+            pres_mode = "multi"
+
         selected_presidents, chart_type = mf.cpi_sidebar_filters(
-            sidebar_df, top_placeholder, president_placeholder
+            sidebar_df, top_placeholder, president_placeholder, pres_mode
         )
         president = selected_presidents[0] if len(selected_presidents) == 1 else None
         multi_pres = len(selected_presidents) >= 2
@@ -114,14 +124,14 @@ def render_cpi(cpi_df: pd.DataFrame) -> None:
                 if compare_pres:
                     show_all = True
                 else:
-                    with st.sidebar:
-                        show_all = st.checkbox(t("Show all years"), value=False)
+                    has_pre_2000 = sidebar_df[perspective_column].dropna().index.year.min() < 2000
+                    if has_pre_2000:
+                        with st.sidebar:
+                            show_all = st.checkbox(t("Show all years"), value=False)
+                    else:
+                        show_all = False
             else:
-                year_set = set()
-                for name in selected_items:
-                    key = find_key_by_value(cfg["items_dict"], name)
-                    idf = to_datatime(load_csv(f"{cfg['base_path']}{key}.csv"), False)
-                    year_set |= set(idf[perspective_column].dropna().index.year.astype(int))
+                year_set = set(sidebar_df[perspective_column].dropna().index.year.astype(int))
                 years = sorted(year_set, reverse=True)
                 with col4:
                     fixed_value = st.selectbox(t("Year:"), years)

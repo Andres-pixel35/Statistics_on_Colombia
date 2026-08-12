@@ -57,7 +57,7 @@ def render_ise(df: pd.DataFrame) -> None:
         _cap_one(["ise_years"])
     activities_sp = [find_key_by_value(activity_dict, label) for label in activity_labels]
 
-    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Line", "Bar"], format_func=t)
+    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Line", "Bar", "Table"], format_func=t)
 
     years = sorted(long_df["Fecha"].unique())
     cur_years = st.sidebar.multiselect(t("Year:"), years, key="ise_years")

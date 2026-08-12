@@ -27,7 +27,7 @@ def job_market_sidebar_filters(df: pd.DataFrame, placeholder, president_placehol
 
     with placeholder.container():
         st.header(t("Filters"))
-        chart_type = st.selectbox(t("Chart Type:"), ["Line", "Bar"], format_func=t)
+        chart_type = st.selectbox(t("Chart Type:"), ["Line", "Bar", "Table"], format_func=t)
 
     valid_presidents = get_valid_presidents(years)
     with president_placeholder.container():

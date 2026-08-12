@@ -24,7 +24,7 @@ def render_lending_rate(df: pd.DataFrame) -> None:
     st.title(t("Miscellaneous"))
     local = to_datatime(df, True)
 
-    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Line", "Bar"], format_func=t)
+    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Line", "Bar", "Table"], format_func=t)
 
     year_options = sorted(local.index.year.unique())
     month_labels = list(months.values())

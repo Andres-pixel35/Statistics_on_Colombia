@@ -15,7 +15,7 @@ def render_indicators() -> None:
     st.title(t("Poverty Indicators"))
 
     st.sidebar.header(t("Filters"))
-    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Line", "Bar", "Map"], format_func=t)
+    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Line", "Bar", "Table", "Map"], format_func=t)
     is_map = chart_type == "Map"
 
     col1, col2 = st.columns(2)

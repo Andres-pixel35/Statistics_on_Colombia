@@ -24,17 +24,23 @@ def build_yearly_table(df: pd.DataFrame, selected_year: list, column: str, metho
 
     return cpi_series, cpi_info
 
-def cpi_sidebar_filters(df: pd.DataFrame, placeholder, president_placeholder) -> tuple:
+def cpi_sidebar_filters(df: pd.DataFrame, placeholder, president_placeholder, pres_mode: str = "multi") -> tuple:
     df = df.dropna()
     years = df.index.year.unique().astype(int)
 
     with placeholder.container():
         st.header(t("Filters"))
-        chart_type = st.selectbox(t("Chart Type:"), ["Line", "Bar"], format_func=t)
+        chart_type = st.selectbox(t("Chart Type:"), ["Line", "Bar", "Table"], format_func=t)
 
     valid_presidents = get_valid_presidents(years)
     with president_placeholder.container():
-        selected_presidents = president_multiselect(valid_presidents)
+        if pres_mode == "hidden":
+            selected_presidents = []
+        elif pres_mode == "single":
+            choice = st.selectbox(t("Presidents:"), ["—"] + valid_presidents, format_func=t)
+            selected_presidents = [] if choice == "—" else [choice]
+        else:
+            selected_presidents = president_multiselect(valid_presidents)
 
     return selected_presidents, chart_type
 
