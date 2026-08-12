@@ -87,7 +87,7 @@ def _render_pop_geo_chart(pivot, chart_type, entity, noun, president) -> None:
 
     info = [t("{noun} by {entity}").format(noun=t(noun), entity=t(entity)), "Year", noun]
     highlight = highlight_selectbox(pivot)
-    if len(pivot) == 1:
+    if len(pivot) == 1 or chart_type == "Table":
         fig = mc.line_or_bar(chart_type, pivot, info, highlight=highlight)
     elif chart_type == "Bar":
         fig = mc.bar_chart(pivot, {}, info, highlight=highlight)
@@ -101,7 +101,9 @@ def _render_geo_bar_line(pivot, chart_type: str, entity: str, scope: str, noun: 
         st.warning(t("No data for selected filters."))
         return
 
-    if chart_type == "Bar" or len(pivot) == 1:
+    if chart_type == "Table":
+        fig = mc.translate_table(pivot)
+    elif chart_type == "Bar" or len(pivot) == 1:
         info = [t("Total {noun} by {entity} — {scope}").format(noun=t(noun).lower(), entity=t(entity), scope=scope),
                 noun, t(entity).capitalize()]
         fig = mc.ranked_bar_chart(pivot.sum(axis=0), info)

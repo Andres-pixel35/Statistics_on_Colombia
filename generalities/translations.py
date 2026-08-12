@@ -9,6 +9,7 @@ UI_ES = {
     # Common atoms
     "Year": "Año", "Month": "Mes", "Quarter": "Trimestre", "Day": "Día",
     "Line": "Línea", "Bar": "Barras", "Map": "Mapa", "Stacked bar": "Barras apiladas",
+    "Table": "Tabla",
     "All": "Todos", "All ages": "Todas las edades", "All causes": "Todas las causas",
     "Total": "Total", "Men": "Hombres", "Women": "Mujeres",
     "Boys": "Niños", "Girls": "Niñas",

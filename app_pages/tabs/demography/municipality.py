@@ -15,7 +15,7 @@ def render_municipality() -> None:
 
     with st.sidebar:
         st.header(t("Filters"))
-        chart_type = st.selectbox(t("Chart Type:"), ["Line", "Bar", "Population pyramid"], format_func=t)
+        chart_type = st.selectbox(t("Chart Type:"), ["Line", "Bar", "Table", "Population pyramid"], format_func=t)
         dept = st.selectbox(t("Department:"), dept_names)
 
     scoped = df[df["Name"] == dept]

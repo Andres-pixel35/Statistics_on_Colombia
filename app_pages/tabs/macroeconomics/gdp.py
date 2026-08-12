@@ -90,7 +90,7 @@ def render_gdp(gdp_df: pd.DataFrame) -> None:
             var_labels = list(terms.values())
             default = var_labels.index("Gross Domestic Product") if "Gross Domestic Product" in var_labels else 0
             var_label = st.selectbox(t("Variable:"), var_labels, index=default, format_func=t)
-            chart_type = st.selectbox(t("Chart:"), ["Line", "Bar"], format_func=t)
+            chart_type = st.selectbox(t("Chart:"), ["Line", "Bar", "Table"], format_func=t)
 
         if source == "Spend":
             level_df = gdp_df if filename == "summarize" else load_csv(f"{SPEND_BASE_PATH}{filename}.csv", dtype=str)

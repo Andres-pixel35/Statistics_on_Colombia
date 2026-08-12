@@ -19,7 +19,7 @@ def render_by_sex() -> None:
     defaults = [pv.domain_label(d) for d in pv.AGGREGATE_DOMAINS]
 
     st.sidebar.header(t("Filters"))
-    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Bar", "Line"], format_func=t)
+    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Bar", "Line", "Table"], format_func=t)
     selected = st.sidebar.multiselect(t("Domain:"), list(labels.keys()), default=defaults,
                                       key="pov_sex_domains", format_func=t)
     if not selected:

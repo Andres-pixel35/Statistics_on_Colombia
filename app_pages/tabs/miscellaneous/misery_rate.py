@@ -20,7 +20,7 @@ def render_misery_rate(cpi_df: pd.DataFrame, lending_df: pd.DataFrame, gdp_growt
     lending = to_datatime(lending_df, True)["Tasa (%)"]
     full = rf.misery_index_annual(unemployment, cpi, lending, gdp_growth_by_year)["Misery Index"]
 
-    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Line", "Bar"], format_func=t)
+    chart_type = st.sidebar.selectbox(t("Chart Type:"), ["Line", "Bar", "Table"], format_func=t)
     years = sorted(full.index)
     cur_years = st.sidebar.multiselect(t("Year:"), years, key="misery_years")
 
