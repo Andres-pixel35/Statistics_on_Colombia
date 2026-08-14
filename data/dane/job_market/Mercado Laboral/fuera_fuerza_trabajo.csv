@@ -230,6 +230,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,Fuera de la fuerza de trabajo - Total Nacional,Ene - Mar,14583.730168
 2026,TOTAL NACIONAL,Fuera de la fuerza de trabajo - Total Nacional,Feb - Abr,14443.270274
 2026,TOTAL NACIONAL,Fuera de la fuerza de trabajo - Total Nacional,Mar - May,14427.899503666667
+2026,TOTAL NACIONAL,Fuera de la fuerza de trabajo - Total Nacional,Abr - Jun,14510.417521333335
 2007,TOTAL NACIONAL,Estudiando,Ene - Mar,2451.2067208666667
 2007,TOTAL NACIONAL,Estudiando,Feb - Abr,2726.0846027666666
 2007,TOTAL NACIONAL,Estudiando,Mar - May,2786.0254751666666
@@ -461,6 +462,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,Estudiando,Ene - Mar,3174.548405566666
 2026,TOTAL NACIONAL,Estudiando,Feb - Abr,3398.0985255
 2026,TOTAL NACIONAL,Estudiando,Mar - May,3417.9756314666665
+2026,TOTAL NACIONAL,Estudiando,Abr - Jun,3446.9299511333334
 2007,TOTAL NACIONAL,Oficios del Hogar,Ene - Mar,6223.038420666667
 2007,TOTAL NACIONAL,Oficios del Hogar,Feb - Abr,5948.101200733333
 2007,TOTAL NACIONAL,Oficios del Hogar,Mar - May,5956.835226266667
@@ -692,6 +694,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,Oficios del Hogar,Ene - Mar,7998.1678225000005
 2026,TOTAL NACIONAL,Oficios del Hogar,Feb - Abr,7823.810219999999
 2026,TOTAL NACIONAL,Oficios del Hogar,Mar - May,7792.346813266667
+2026,TOTAL NACIONAL,Oficios del Hogar,Abr - Jun,7767.0176095666675
 2007,TOTAL NACIONAL,Otros,Ene - Mar,2191.8123180333337
 2007,TOTAL NACIONAL,Otros,Feb - Abr,1986.5166256666664
 2007,TOTAL NACIONAL,Otros,Mar - May,1985.7765343666667
@@ -923,6 +926,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,Otros,Ene - Mar,3411.0139398333336
 2026,TOTAL NACIONAL,Otros,Feb - Abr,3221.3615283333334
 2026,TOTAL NACIONAL,Otros,Mar - May,3217.5770589
+2026,TOTAL NACIONAL,Otros,Abr - Jun,3296.469960666667
 2007,HOMBRES,Fuera de la fuerza de trabajo,Ene - Mar,3140.3328113000002
 2007,HOMBRES,Fuera de la fuerza de trabajo,Feb - Abr,3072.1517783666663
 2007,HOMBRES,Fuera de la fuerza de trabajo,Mar - May,3115.2455458333334
@@ -1154,6 +1158,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,Fuera de la fuerza de trabajo,Ene - Mar,4573.147320033334
 2026,HOMBRES,Fuera de la fuerza de trabajo,Feb - Abr,4552.838751133334
 2026,HOMBRES,Fuera de la fuerza de trabajo,Mar - May,4508.759830166667
+2026,HOMBRES,Fuera de la fuerza de trabajo,Abr - Jun,4605.376058500001
 2007,HOMBRES,Estudiando,Ene - Mar,1224.0397907033332
 2007,HOMBRES,Estudiando,Feb - Abr,1360.4437414666666
 2007,HOMBRES,Estudiando,Mar - May,1414.4052474666667
@@ -1385,6 +1390,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,Estudiando,Ene - Mar,1604.4867537666667
 2026,HOMBRES,Estudiando,Feb - Abr,1709.4184672666663
 2026,HOMBRES,Estudiando,Mar - May,1686.651338
+2026,HOMBRES,Estudiando,Abr - Jun,1709.9287474333335
 2007,HOMBRES,Oficios del Hogar,Ene - Mar,484.63550274666665
 2007,HOMBRES,Oficios del Hogar,Feb - Abr,422.3687617433333
 2007,HOMBRES,Oficios del Hogar,Mar - May,403.5882884366667
@@ -1616,6 +1622,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,Oficios del Hogar,Ene - Mar,924.9981187433333
 2026,HOMBRES,Oficios del Hogar,Feb - Abr,924.7270644833334
 2026,HOMBRES,Oficios del Hogar,Mar - May,940.4039591699999
+2026,HOMBRES,Oficios del Hogar,Abr - Jun,950.16280504
 2007,HOMBRES,Otros,Ene - Mar,1431.657517866667
 2007,HOMBRES,Otros,Feb - Abr,1289.3392751666668
 2007,HOMBRES,Otros,Mar - May,1297.2520099333335
@@ -1847,6 +1854,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,Otros,Ene - Mar,2043.662447533333
 2026,HOMBRES,Otros,Feb - Abr,1918.6932194333333
 2026,HOMBRES,Otros,Mar - May,1881.7045330333333
+2026,HOMBRES,Otros,Abr - Jun,1945.2845060333336
 2007,MUJERES,Fuera de la fuerza de trabajo,Ene - Mar,7725.724648266667
 2007,MUJERES,Fuera de la fuerza de trabajo,Feb - Abr,7588.550650733334
 2007,MUJERES,Fuera de la fuerza de trabajo,Mar - May,7613.3916899333335
@@ -2078,6 +2086,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,Fuera de la fuerza de trabajo,Ene - Mar,10010.582847933334
 2026,MUJERES,Fuera de la fuerza de trabajo,Feb - Abr,9890.4315227
 2026,MUJERES,Fuera de la fuerza de trabajo,Mar - May,9919.139673333333
+2026,MUJERES,Fuera de la fuerza de trabajo,Abr - Jun,9905.041462766667
 2007,MUJERES,Estudiando,Ene - Mar,1227.1669301666668
 2007,MUJERES,Estudiando,Feb - Abr,1365.6408612666667
 2007,MUJERES,Estudiando,Mar - May,1371.6202277
@@ -2309,6 +2318,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,Estudiando,Ene - Mar,1570.0616517666665
 2026,MUJERES,Estudiando,Feb - Abr,1688.6800582333333
 2026,MUJERES,Estudiando,Mar - May,1731.3242934666666
+2026,MUJERES,Estudiando,Abr - Jun,1737.0012037
 2007,MUJERES,Oficios del Hogar,Ene - Mar,5738.4029179
 2007,MUJERES,Oficios del Hogar,Feb - Abr,5525.7324389333335
 2007,MUJERES,Oficios del Hogar,Mar - May,5553.2469378
@@ -2540,6 +2550,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,Oficios del Hogar,Ene - Mar,7073.169703766666
 2026,MUJERES,Oficios del Hogar,Feb - Abr,6899.083155533334
 2026,MUJERES,Oficios del Hogar,Mar - May,6851.942854133333
+2026,MUJERES,Oficios del Hogar,Abr - Jun,6816.854804533333
 2007,MUJERES,Otros,Ene - Mar,760.15480018
 2007,MUJERES,Otros,Feb - Abr,697.1773505133333
 2007,MUJERES,Otros,Mar - May,688.5245244500001
@@ -2771,3 +2782,4 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,Otros,Ene - Mar,1367.3514923333332
 2026,MUJERES,Otros,Feb - Abr,1302.668308933333
 2026,MUJERES,Otros,Mar - May,1335.8725258666666
+2026,MUJERES,Otros,Abr - Jun,1351.1854546666666

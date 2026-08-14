@@ -140,11 +140,13 @@ def build_comparison_series(
                 s = s[s.index.isin(presidents[president])]
         else:
             s = s[s.index.year == fixed_value].dropna()
-            s.index = s.index.month.map(months)
+            s.index = s.index.month
         s.name = name
         series_list.append(s)
 
-    cpi_series = pd.concat(series_list, axis=1)
+    cpi_series = pd.concat(series_list, axis=1).sort_index()
+    if not by_year:
+        cpi_series.index = cpi_series.index.map(months)
     fixed_label = months[fixed_value] if by_year else fixed_value
     x_label = "Year" if by_year else "Month"
     cpi_info = [f"{t(method)} — {t(fixed_label)}", x_label, "%"]
