@@ -122,25 +122,28 @@ def bar_chart(data: pd.DataFrame, labels: dict, info: list, highlight: str = Non
     return fig
 
 
-def _es_number_format(col: pd.Series) -> pd.Series:
+def _format_number(col: pd.Series) -> pd.Series:
     if not pd.api.types.is_numeric_dtype(col):
         return col
     decimals = 0 if (col.dropna() == col.dropna().round()).all() else 2
+    es = get_lang() == "es"
     return col.map(lambda x: x if pd.isna(x) else
-                    f"{x:,.{decimals}f}".translate(str.maketrans(",.", ".,")))
+                    (f"{x:,.{decimals}f}".translate(str.maketrans(",.", ".,"))
+                     if es else f"{x:,.{decimals}f}"))
 
 
-def translate_table(data, labels=None):
+def translate_table(data, info=None, labels=None):
     labels = labels or {}
     data = data.rename(index=lambda i: t(i) if isinstance(i, str) else i)
-    if data.index.name:
+    if info:
+        data.index.name = t(info[1])
+    elif data.index.name:
         data.index.name = t(data.index.name)
     if isinstance(data, pd.DataFrame):
         data = data.rename(columns=lambda c: t(labels.get(c, c)) if isinstance(c, str) else c)
     elif data.name:
         data = data.rename(t(labels.get(data.name, data.name)))
-    if get_lang() == "es":
-        data = data.apply(_es_number_format) if isinstance(data, pd.DataFrame) else _es_number_format(data)
+    data = data.apply(_format_number) if isinstance(data, pd.DataFrame) else _format_number(data)
     return data
 
 
@@ -148,7 +151,7 @@ def line_or_bar(chart_type, data, info, labels=None, highlight=None,
                 force_bar=False, bar_if_single=True, barmode="group"):
 
     if chart_type == "Table":
-        return translate_table(data, labels)
+        return translate_table(data, info, labels)
 
     single_row = isinstance(data, pd.DataFrame) and len(data) == 1
 
@@ -195,7 +198,7 @@ def gdp_growth(df: pd.DataFrame, year: list, president: str, index: int, quarter
     title = t(title)
     df, df_local = mf.clean_annual_growth(df, year, president, index, quarter)
     if chart_type == "Table":
-        return translate_table(df_local)
+        return translate_table(df_local, [title, "Year", "Growth (%)"])
     if len(df_local) > 1:
         plot = px.bar if chart_type == "Bar" else px.line
         fig = plot(df_local, labels={"value": t("Growth (%)"), "Fecha": t("Year")})
