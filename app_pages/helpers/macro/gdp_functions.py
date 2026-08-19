@@ -92,7 +92,7 @@ def generalities_spend_product(df: pd.DataFrame, terms: dict, levels_cfg: dict, 
 
             st.checkbox(t("In Year view"), key="gdp_in_year")
 
-        gdp_series = year_quarter_pivot(df, variable, year)
+        gdp_series = year_quarter_pivot(df, variable, year) / 1000
 
         if per_capita:
             pop = _population_by_year()
@@ -194,7 +194,7 @@ def generalities_spend_product(df: pd.DataFrame, terms: dict, levels_cfg: dict, 
         if pattern:
             gdp_series = gdp_series[gdp_series.index.str.contains(pattern)]
     else:
-        gdp_series = clean_gdp(df, variable)
+        gdp_series = clean_gdp(df, variable) / 1000
 
     if per_capita:
         pop = _population_by_year()
