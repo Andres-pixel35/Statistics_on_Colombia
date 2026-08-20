@@ -132,6 +132,10 @@ PERIOD_TERMS = {
 
 TERMS = {"anual": ANNUAL_TERMS, "mensual": PERIOD_TERMS, "trimestral": PERIOD_TERMS}
 
+# Annual-only root key for the Total Deficit/Surplus group (its Concepts cascade needs a
+# caption clarifying it isn't self-contained — see deficit.py tab).
+TOTAL_DEFICIT_ROOT = "4. deficit o superavit total"
+
 # frequency folder -> (revenue root key, spending root key) for "Compare revenue vs. spending"
 COMPARE_ROOTS = {
     "anual":      ("1. ingresos totales (sin causados)", "2. pagos totales"),
