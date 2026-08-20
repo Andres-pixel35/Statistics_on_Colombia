@@ -56,6 +56,7 @@ dept_ramas_terms = {
 }
 
 PET_CONCEPT = "Población en edad de trabajar (PET)"
+TGP_CONCEPT = "Tasa Global de Participación (TGP)"
 
 # total concept -> existing CSV rate concept; None means compute (value / PET * 100)
 RATE_CONCEPTS = {
@@ -66,6 +67,7 @@ RATE_CONCEPTS = {
     "Población subocupada": "Tasa de Subocupación (TS)",
     "Población fuera de la fuerza de trabajo": None,
     "Fuerza de trabajo potencial": None,
+    "Tasa Global de Participación (TGP)": "Tasa Global de Participación (TGP)",  # rate-only, self-mapped so _to_percent passes it through
 }
 
 # Total-gender-only concepts that mirror a Men/Women concept; collapsed to the plain name
@@ -74,7 +76,8 @@ CONCEPT_ALIASES = {
     "Fuera de la fuerza de trabajo - Total Nacional": "Fuera de la fuerza de trabajo",
 }
 
-# Spanish Concepto -> English label. Rate concepts (%/Tasa) excluded from total_terms.
+# Spanish Concepto -> English label. Rate concepts (%/Tasa) excluded from total_terms,
+# except TGP (no count equivalent) - the Labor Force tab only shows it when percentages are on.
 total_terms = {
     "Población en edad de trabajar (PET)": "Working-age population (WAP)",
     "Fuerza de trabajo": "Labor force",
@@ -83,6 +86,7 @@ total_terms = {
     "Población subocupada": "Underemployed",
     "Población fuera de la fuerza de trabajo": "Outside the labor force",
     "Fuerza de trabajo potencial": "Potential labor force",
+    "Tasa Global de Participación (TGP)": "Labor force participation rate (TGP)",
 }
 
 ramas_terms = {

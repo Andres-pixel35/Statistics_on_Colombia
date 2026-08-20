@@ -46,6 +46,16 @@ def read_balance(xl, wb, sheet, year_cols=False):
     levels = [2 if c.strip().rstrip("*") == "Funcionamiento" else lv
               for c, lv in zip(df["Concepto"], levels)]
     df["Grupo"] = concepto_groups(df["Concepto"], levels)
+    # The Anual sheet indents these four rows under "3. DEFICIT O SUPERAVIT EFECTIVO", but per
+    # GNC balance methodology they're added to Déficit Efectivo to reach Déficit Total, not
+    # children of Efectivo (which is itself just Ingresos Totales − Pagos Totales). They can't be
+    # fixed via a level override like Funcionamiento* since "4. DEFICIT O SUPERAVIT TOTAL" appears
+    # after them in the sheet, so the stack walk can't parent them there directly.
+    BRIDGE_TO_TOTAL = {"PRESTAMO NETO", "INGRESOS CAUSADOS", "GASTOS CAUSADOS", "DEUDA FLOTANTE"}
+    df["Grupo"] = [
+        "4. DEFICIT O SUPERAVIT TOTAL" if c.strip() in BRIDGE_TO_TOTAL else g
+        for c, g in zip(df["Concepto"], df["Grupo"])
+    ]
     df = df.drop(columns="_row")
 
     date_cols = [c for c in df.columns if c not in ("Concepto", "Grupo")]
