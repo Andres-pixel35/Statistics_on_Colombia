@@ -4,7 +4,7 @@
 
 **ise**: Go to this [link](https://www.dane.gov.co/index.php/estadisticas-por-tema/cuentas-nacionales/indicador-de-seguimiento-a-la-economia-ise), then scroll down and download "Anexo (9 actividades)" and store it at:
 ```bash
-"/path/to/the/repo/colombia/data/original/dane/ISE/anex-ISE-9actividades-{current_month}{current_year}.xlsx"
+/path/to/the/repo/colombia/data/original/dane/ISE/ise.xlsx
 ```
 
 ## Processing 
