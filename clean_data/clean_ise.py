@@ -2,7 +2,7 @@ import os
 import openpyxl
 import pandas as pd
 
-src = "../data/original/dane/ISE/anex-ISE-9actividades-abr2026.xlsx"
+src = "../data/original/dane/ISE/ise.xlsx"
 out_dir = "../data/dane/ISE"
 
 MONTHS = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio",
