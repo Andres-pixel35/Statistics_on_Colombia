@@ -216,4 +216,7 @@ def render_deficit() -> None:
     if chart_type == "Stacked bar":
         st.caption(t("Stacking is only meaningful within one group — mixing a total with its own "
                   "components double-counts."))
+    if frequency == "Annual" and not compare and group_key == dg.TOTAL_DEFICIT_ROOT:
+        st.caption(t("Total Deficit / Surplus = Cash Deficit / Surplus (Total Revenue − Total "
+                  "Payments) plus these four adjustment items."))
     st.caption(t("Source: Ministerio de Hacienda"))

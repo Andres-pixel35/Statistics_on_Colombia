@@ -161,6 +161,8 @@ def render_job_market(unemployment_df: pd.DataFrame) -> None:
         file_label = st.selectbox(t("Table:"), list(jm.LABOR_FORCE_FILES.keys()), format_func=t)
     stem = jm.LABOR_FORCE_FILES[file_label]
     terms = jm.LABOR_FORCE_TERMS[stem]
+    if stem == "total" and not st.session_state.get("lf_percent", False):
+        terms = {k: v for k, v in terms.items() if k != jm.TGP_CONCEPT}
 
     data = load_csv(f"{LABOR_FORCE_BASE}{stem}.csv")
 
@@ -194,6 +196,8 @@ def render_job_market(unemployment_df: pd.DataFrame) -> None:
     concept_key = f"lf_concepts_{stem}"
     if prev_compare:                      # Compare charts one concept, one year -> cap both
         _cap_one([concept_key, "lf_years"])
+    if concept_key in st.session_state:   # drop TGP if percentages just got toggled off
+        st.session_state[concept_key] = [v for v in st.session_state[concept_key] if v in terms.values()]
     concept_labels = st.sidebar.multiselect(
         t("Concepts:"), list(terms.values()), default=[next(iter(terms.values()))],
         key=concept_key, on_change=_cap, args=(concept_key, ["lf_years"]), format_func=t,
@@ -218,7 +222,7 @@ def render_job_market(unemployment_df: pd.DataFrame) -> None:
     )
 
     # Percentages only make sense for the Total table (only one with PET + rate rows).
-    percent = stem == "total" and st.sidebar.checkbox(t("Show percentages"), value=False)
+    percent = stem == "total" and st.sidebar.checkbox(t("Show percentages"), value=False, key="lf_percent")
     metric = "Share (%)" if percent else "People"
 
     compare_gender = st.sidebar.checkbox(

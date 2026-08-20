@@ -349,6 +349,10 @@ UI_ES = {
     "components double-counts.":
         "Apilar solo tiene sentido dentro de un mismo grupo — mezclar un total con sus propios "
         "componentes duplica los valores.",
+    "Total Deficit / Surplus = Cash Deficit / Surplus (Total Revenue − Total "
+    "Payments) plus these four adjustment items.":
+        "Déficit / Superávit Total = Déficit / Superávit de Caja (Ingresos Totales − Pagos "
+        "Totales) más estos cuatro ajustes.",
     # Phase 3b — Deficit concepts (norm()-destroyed keys; accents/case restored from the CSVs)
     "Total Revenue (excl. accrued)": "Ingresos totales (sin causados)",
     "Current Revenue": "Ingresos corrientes de la Nación",
