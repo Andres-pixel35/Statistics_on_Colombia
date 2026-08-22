@@ -31,6 +31,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total nacional,Hombres,% población en edad de trabajar,II,76.844046
 2025,Total nacional,Hombres,% población en edad de trabajar,I,76.994782
 2025,Total nacional,Hombres,% población en edad de trabajar,II,77.141588
+2026,Total nacional,Hombres,% población en edad de trabajar,I,77.296768
 2010,Total nacional,Hombres,Tasa Global de Participación (TGP),I,80.686325
 2010,Total nacional,Hombres,Tasa Global de Participación (TGP),II,81.041419
 2011,Total nacional,Hombres,Tasa Global de Participación (TGP),I,80.90045
@@ -63,6 +64,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total nacional,Hombres,Tasa Global de Participación (TGP),II,76.333683
 2025,Total nacional,Hombres,Tasa Global de Participación (TGP),I,76.699
 2025,Total nacional,Hombres,Tasa Global de Participación (TGP),II,76.90074
+2026,Total nacional,Hombres,Tasa Global de Participación (TGP),I,76.703888
 2010,Total nacional,Hombres,Tasa de Ocupación (TO),I,72.649387
 2010,Total nacional,Hombres,Tasa de Ocupación (TO),II,74.229192
 2011,Total nacional,Hombres,Tasa de Ocupación (TO),I,73.514786
@@ -95,6 +97,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total nacional,Hombres,Tasa de Ocupación (TO),II,70.714521
 2025,Total nacional,Hombres,Tasa de Ocupación (TO),I,70.955411
 2025,Total nacional,Hombres,Tasa de Ocupación (TO),II,71.899764
+2026,Total nacional,Hombres,Tasa de Ocupación (TO),I,71.14347
 2010,Total nacional,Hombres,Tasa de Desocupación (TD),I,9.960718
 2010,Total nacional,Hombres,Tasa de Desocupación (TD),II,8.405858
 2011,Total nacional,Hombres,Tasa de Desocupación (TD),I,9.129324
@@ -127,6 +130,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total nacional,Hombres,Tasa de Desocupación (TD),II,7.361314
 2025,Total nacional,Hombres,Tasa de Desocupación (TD),I,7.48848
 2025,Total nacional,Hombres,Tasa de Desocupación (TD),II,6.503157
+2026,Total nacional,Hombres,Tasa de Desocupación (TD),I,7.249199
 2010,Total nacional,Hombres,Tasa de Subocupación (TS),I,12.349904
 2010,Total nacional,Hombres,Tasa de Subocupación (TS),II,12.833462
 2011,Total nacional,Hombres,Tasa de Subocupación (TS),I,11.808175
@@ -159,6 +163,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total nacional,Hombres,Tasa de Subocupación (TS),II,7.25643
 2025,Total nacional,Hombres,Tasa de Subocupación (TS),I,7.28791
 2025,Total nacional,Hombres,Tasa de Subocupación (TS),II,6.825278
+2026,Total nacional,Hombres,Tasa de Subocupación (TS),I,6.689751
 2010,Total nacional,Hombres,Población total,I,20922.081167
 2010,Total nacional,Hombres,Población total,II,21031.159
 2011,Total nacional,Hombres,Población total,I,21139.993667
@@ -191,6 +196,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total nacional,Hombres,Población total,II,25137.399333
 2025,Total nacional,Hombres,Población total,I,25255.111
 2025,Total nacional,Hombres,Población total,II,25370.4275
+2026,Total nacional,Hombres,Población total,I,25485.7865
 2010,Total nacional,Hombres,Población en edad de trabajar,I,14932.227
 2010,Total nacional,Hombres,Población en edad de trabajar,II,15065.0105
 2011,Total nacional,Hombres,Población en edad de trabajar,I,15198.363167
@@ -223,6 +229,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total nacional,Hombres,Población en edad de trabajar,II,19316.594667
 2025,Total nacional,Hombres,Población en edad de trabajar,I,19445.117667
 2025,Total nacional,Hombres,Población en edad de trabajar,II,19571.150667
+2026,Total nacional,Hombres,Población en edad de trabajar,I,19699.689167
 2010,Total nacional,Hombres,Fuerza de trabajo,I,12048.265146
 2010,Total nacional,Hombres,Fuerza de trabajo,II,12208.898216
 2011,Total nacional,Hombres,Fuerza de trabajo,I,12295.544249
@@ -255,6 +262,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total nacional,Hombres,Fuerza de trabajo,II,14745.068152
 2025,Total nacional,Hombres,Fuerza de trabajo,I,14914.210722
 2025,Total nacional,Hombres,Fuerza de trabajo,II,15050.359768
+2026,Total nacional,Hombres,Fuerza de trabajo,I,15110.427477
 2010,Total nacional,Hombres,Población ocupada,I,10848.171431
 2010,Total nacional,Hombres,Población ocupada,II,11182.635604
 2011,Total nacional,Hombres,Población ocupada,I,11173.044146
@@ -287,6 +295,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total nacional,Hombres,Población ocupada,II,13659.637383
 2025,Total nacional,Hombres,Población ocupada,I,13797.363081
 2025,Total nacional,Hombres,Población ocupada,II,14071.611224
+2026,Total nacional,Hombres,Población ocupada,I,14015.042461
 2010,Total nacional,Hombres,Población desocupada,I,1200.093715
 2010,Total nacional,Hombres,Población desocupada,II,1026.262612
 2011,Total nacional,Hombres,Población desocupada,I,1122.500103
@@ -319,6 +328,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total nacional,Hombres,Población desocupada,II,1085.43077
 2025,Total nacional,Hombres,Población desocupada,I,1116.847641
 2025,Total nacional,Hombres,Población desocupada,II,978.748544
+2026,Total nacional,Hombres,Población desocupada,I,1095.385017
 2010,Total nacional,Hombres,Población fuera de la fuerza de trabajo,I,2883.961854
 2010,Total nacional,Hombres,Población fuera de la fuerza de trabajo,II,2856.112284
 2011,Total nacional,Hombres,Población fuera de la fuerza de trabajo,I,2902.818918
@@ -351,6 +361,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total nacional,Hombres,Población fuera de la fuerza de trabajo,II,4571.526514
 2025,Total nacional,Hombres,Población fuera de la fuerza de trabajo,I,4530.906944
 2025,Total nacional,Hombres,Población fuera de la fuerza de trabajo,II,4520.790899
+2026,Total nacional,Hombres,Población fuera de la fuerza de trabajo,I,4589.261689
 2010,Total nacional,Hombres,Población subocupada,I,1487.949133
 2010,Total nacional,Hombres,Población subocupada,II,1566.824316
 2011,Total nacional,Hombres,Población subocupada,I,1451.879394
@@ -383,6 +394,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total nacional,Hombres,Población subocupada,II,1069.965529
 2025,Total nacional,Hombres,Población subocupada,I,1086.934225
 2025,Total nacional,Hombres,Población subocupada,II,1027.228952
+2026,Total nacional,Hombres,Población subocupada,I,1010.850001
 2010,Total nacional,Hombres,Fuerza de trabajo potencial,I,0.0
 2010,Total nacional,Hombres,Fuerza de trabajo potencial,II,0.0
 2011,Total nacional,Hombres,Fuerza de trabajo potencial,I,0.0
@@ -415,6 +427,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total nacional,Hombres,Fuerza de trabajo potencial,II,420.442865
 2025,Total nacional,Hombres,Fuerza de trabajo potencial,I,413.741545
 2025,Total nacional,Hombres,Fuerza de trabajo potencial,II,428.933358
+2026,Total nacional,Hombres,Fuerza de trabajo potencial,I,400.389781
 2010,Total región Caribe,Hombres,% población en edad de trabajar,I,68.03686
 2010,Total región Caribe,Hombres,% población en edad de trabajar,II,68.195762
 2011,Total región Caribe,Hombres,% población en edad de trabajar,I,68.356607
@@ -447,6 +460,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Caribe,Hombres,% población en edad de trabajar,II,73.105666
 2025,Total región Caribe,Hombres,% población en edad de trabajar,I,73.296819
 2025,Total región Caribe,Hombres,% población en edad de trabajar,II,73.484971
+2026,Total región Caribe,Hombres,% población en edad de trabajar,I,73.685875
 2010,Total región Caribe,Hombres,Tasa Global de Participación (TGP),I,79.689824
 2010,Total región Caribe,Hombres,Tasa Global de Participación (TGP),II,80.321479
 2011,Total región Caribe,Hombres,Tasa Global de Participación (TGP),I,80.441865
@@ -479,6 +493,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Caribe,Hombres,Tasa Global de Participación (TGP),II,75.652693
 2025,Total región Caribe,Hombres,Tasa Global de Participación (TGP),I,76.059075
 2025,Total región Caribe,Hombres,Tasa Global de Participación (TGP),II,76.676045
+2026,Total región Caribe,Hombres,Tasa Global de Participación (TGP),I,76.124371
 2010,Total región Caribe,Hombres,Tasa de Ocupación (TO),I,73.312026
 2010,Total región Caribe,Hombres,Tasa de Ocupación (TO),II,74.784846
 2011,Total región Caribe,Hombres,Tasa de Ocupación (TO),I,74.62049
@@ -511,6 +526,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Caribe,Hombres,Tasa de Ocupación (TO),II,70.556144
 2025,Total región Caribe,Hombres,Tasa de Ocupación (TO),I,70.700361
 2025,Total región Caribe,Hombres,Tasa de Ocupación (TO),II,71.855083
+2026,Total región Caribe,Hombres,Tasa de Ocupación (TO),I,70.930372
 2010,Total región Caribe,Hombres,Tasa de Desocupación (TD),I,8.003279
 2010,Total región Caribe,Hombres,Tasa de Desocupación (TD),II,6.893091
 2011,Total región Caribe,Hombres,Tasa de Desocupación (TD),I,7.236747
@@ -543,6 +559,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Caribe,Hombres,Tasa de Desocupación (TD),II,6.736772
 2025,Total región Caribe,Hombres,Tasa de Desocupación (TD),I,7.045462
 2025,Total región Caribe,Hombres,Tasa de Desocupación (TD),II,6.287442
+2026,Total región Caribe,Hombres,Tasa de Desocupación (TD),I,6.823043
 2010,Total región Caribe,Hombres,Tasa de Subocupación (TS),I,11.231525
 2010,Total región Caribe,Hombres,Tasa de Subocupación (TS),II,12.294619
 2011,Total región Caribe,Hombres,Tasa de Subocupación (TS),I,11.939739
@@ -575,6 +592,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Caribe,Hombres,Tasa de Subocupación (TS),II,9.323598
 2025,Total región Caribe,Hombres,Tasa de Subocupación (TS),I,9.694386
 2025,Total región Caribe,Hombres,Tasa de Subocupación (TS),II,9.069509
+2026,Total región Caribe,Hombres,Tasa de Subocupación (TS),I,8.519944
 2010,Total región Caribe,Hombres,Población total,I,4718.2635
 2010,Total región Caribe,Hombres,Población total,II,4750.132667
 2011,Total región Caribe,Hombres,Población total,I,4781.721667
@@ -607,6 +625,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Caribe,Hombres,Población total,II,5898.215667
 2025,Total región Caribe,Hombres,Población total,I,5926.010667
 2025,Total región Caribe,Hombres,Población total,II,5953.245167
+2026,Total región Caribe,Hombres,Población total,I,5980.644667
 2010,Total región Caribe,Hombres,Población en edad de trabajar,I,3210.158333
 2010,Total región Caribe,Hombres,Población en edad de trabajar,II,3239.389167
 2011,Total región Caribe,Hombres,Población en edad de trabajar,I,3268.622667
@@ -639,6 +658,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Caribe,Hombres,Población en edad de trabajar,II,4311.929833
 2025,Total región Caribe,Hombres,Población en edad de trabajar,I,4343.577333
 2025,Total región Caribe,Hombres,Población en edad de trabajar,II,4374.7405
+2026,Total región Caribe,Hombres,Población en edad de trabajar,I,4406.890333
 2010,Total región Caribe,Hombres,Fuerza de trabajo,I,2558.169539
 2010,Total región Caribe,Hombres,Fuerza de trabajo,II,2601.925299
 2011,Total región Caribe,Hombres,Fuerza de trabajo,I,2629.341029
@@ -671,6 +691,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Caribe,Hombres,Fuerza de trabajo,II,3262.091042
 2025,Total región Caribe,Hombres,Fuerza de trabajo,I,3303.68473
 2025,Total región Caribe,Hombres,Fuerza de trabajo,II,3354.377981
+2026,Total región Caribe,Hombres,Fuerza de trabajo,I,3354.71754
 2010,Total región Caribe,Hombres,Población ocupada,I,2353.4321
 2010,Total región Caribe,Hombres,Población ocupada,II,2422.572207
 2011,Total región Caribe,Hombres,Población ocupada,I,2439.06226
@@ -703,6 +724,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Caribe,Hombres,Población ocupada,II,3042.331415
 2025,Total región Caribe,Hombres,Población ocupada,I,3070.924875
 2025,Total región Caribe,Hombres,Población ocupada,II,3143.473403
+2026,Total región Caribe,Hombres,Población ocupada,I,3125.823718
 2010,Total región Caribe,Hombres,Población desocupada,I,204.737439
 2010,Total región Caribe,Hombres,Población desocupada,II,179.353091
 2011,Total región Caribe,Hombres,Población desocupada,I,190.278769
@@ -735,6 +757,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Caribe,Hombres,Población desocupada,II,219.759627
 2025,Total región Caribe,Hombres,Población desocupada,I,232.759855
 2025,Total región Caribe,Hombres,Población desocupada,II,210.904578
+2026,Total región Caribe,Hombres,Población desocupada,I,228.893822
 2010,Total región Caribe,Hombres,Población fuera de la fuerza de trabajo,I,651.988794
 2010,Total región Caribe,Hombres,Población fuera de la fuerza de trabajo,II,637.463868
 2011,Total región Caribe,Hombres,Población fuera de la fuerza de trabajo,I,639.281637
@@ -767,6 +790,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Caribe,Hombres,Población fuera de la fuerza de trabajo,II,1049.838792
 2025,Total región Caribe,Hombres,Población fuera de la fuerza de trabajo,I,1039.892603
 2025,Total región Caribe,Hombres,Población fuera de la fuerza de trabajo,II,1020.362519
+2026,Total región Caribe,Hombres,Población fuera de la fuerza de trabajo,I,1052.172794
 2010,Total región Caribe,Hombres,Población subocupada,I,287.321447
 2010,Total región Caribe,Hombres,Población subocupada,II,319.896795
 2011,Total región Caribe,Hombres,Población subocupada,I,313.936452
@@ -799,6 +823,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Caribe,Hombres,Población subocupada,II,304.144244
 2025,Total región Caribe,Hombres,Población subocupada,I,320.271955
 2025,Total región Caribe,Hombres,Población subocupada,II,304.225611
+2026,Total región Caribe,Hombres,Población subocupada,I,285.820047
 2010,Total región Caribe,Hombres,Fuerza de trabajo potencial,I,0.0
 2010,Total región Caribe,Hombres,Fuerza de trabajo potencial,II,0.0
 2011,Total región Caribe,Hombres,Fuerza de trabajo potencial,I,0.0
@@ -831,6 +856,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Caribe,Hombres,Fuerza de trabajo potencial,II,101.664591
 2025,Total región Caribe,Hombres,Fuerza de trabajo potencial,I,101.491609
 2025,Total región Caribe,Hombres,Fuerza de trabajo potencial,II,100.666555
+2026,Total región Caribe,Hombres,Fuerza de trabajo potencial,I,101.552683
 2010,Total región Oriental,Hombres,% población en edad de trabajar,I,71.820178
 2010,Total región Oriental,Hombres,% población en edad de trabajar,II,72.082208
 2011,Total región Oriental,Hombres,% población en edad de trabajar,I,72.349206
@@ -863,6 +889,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Oriental,Hombres,% población en edad de trabajar,II,76.871223
 2025,Total región Oriental,Hombres,% población en edad de trabajar,I,77.010139
 2025,Total región Oriental,Hombres,% población en edad de trabajar,II,77.14502
+2026,Total región Oriental,Hombres,% población en edad de trabajar,I,77.294422
 2010,Total región Oriental,Hombres,Tasa Global de Participación (TGP),I,82.176704
 2010,Total región Oriental,Hombres,Tasa Global de Participación (TGP),II,82.533095
 2011,Total región Oriental,Hombres,Tasa Global de Participación (TGP),I,82.165366
@@ -895,6 +922,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Oriental,Hombres,Tasa Global de Participación (TGP),II,75.593616
 2025,Total región Oriental,Hombres,Tasa Global de Participación (TGP),I,75.997468
 2025,Total región Oriental,Hombres,Tasa Global de Participación (TGP),II,76.342364
+2026,Total región Oriental,Hombres,Tasa Global de Participación (TGP),I,76.371046
 2010,Total región Oriental,Hombres,Tasa de Ocupación (TO),I,74.777889
 2010,Total región Oriental,Hombres,Tasa de Ocupación (TO),II,76.246682
 2011,Total región Oriental,Hombres,Tasa de Ocupación (TO),I,75.51476
@@ -927,6 +955,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Oriental,Hombres,Tasa de Ocupación (TO),II,69.253987
 2025,Total región Oriental,Hombres,Tasa de Ocupación (TO),I,69.322021
 2025,Total región Oriental,Hombres,Tasa de Ocupación (TO),II,70.448745
+2026,Total región Oriental,Hombres,Tasa de Ocupación (TO),I,70.097337
 2010,Total región Oriental,Hombres,Tasa de Desocupación (TD),I,9.003543
 2010,Total región Oriental,Hombres,Tasa de Desocupación (TD),II,7.61684
 2011,Total región Oriental,Hombres,Tasa de Desocupación (TD),I,8.094172
@@ -959,6 +988,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Oriental,Hombres,Tasa de Desocupación (TD),II,8.386461
 2025,Total región Oriental,Hombres,Tasa de Desocupación (TD),I,8.783775
 2025,Total región Oriental,Hombres,Tasa de Desocupación (TD),II,7.719985
+2026,Total región Oriental,Hombres,Tasa de Desocupación (TD),I,8.214774
 2010,Total región Oriental,Hombres,Tasa de Subocupación (TS),I,11.159755
 2010,Total región Oriental,Hombres,Tasa de Subocupación (TS),II,11.675635
 2011,Total región Oriental,Hombres,Tasa de Subocupación (TS),I,9.888402
@@ -991,6 +1021,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Oriental,Hombres,Tasa de Subocupación (TS),II,6.363877
 2025,Total región Oriental,Hombres,Tasa de Subocupación (TS),I,6.076809
 2025,Total región Oriental,Hombres,Tasa de Subocupación (TS),II,6.885964
+2026,Total región Oriental,Hombres,Tasa de Subocupación (TS),I,6.352081
 2010,Total región Oriental,Hombres,Población total,I,3731.563667
 2010,Total región Oriental,Hombres,Población total,II,3762.2645
 2011,Total región Oriental,Hombres,Población total,I,3793.766333
@@ -1023,6 +1054,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Oriental,Hombres,Población total,II,4998.099
 2025,Total región Oriental,Hombres,Población total,I,5029.8485
 2025,Total región Oriental,Hombres,Población total,II,5060.394667
+2026,Total región Oriental,Hombres,Población total,I,5090.887167
 2010,Total región Oriental,Hombres,Población en edad de trabajar,I,2680.015667
 2010,Total región Oriental,Hombres,Población en edad de trabajar,II,2711.923333
 2011,Total región Oriental,Hombres,Población en edad de trabajar,I,2744.759833
@@ -1055,6 +1087,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Oriental,Hombres,Población en edad de trabajar,II,3842.099833
 2025,Total región Oriental,Hombres,Población en edad de trabajar,I,3873.493333
 2025,Total región Oriental,Hombres,Población en edad de trabajar,II,3903.8425
+2026,Total región Oriental,Hombres,Población en edad de trabajar,I,3934.971833
 2010,Total región Oriental,Hombres,Fuerza de trabajo,I,2202.348546
 2010,Total región Oriental,Hombres,Fuerza de trabajo,II,2238.234265
 2011,Total región Oriental,Hombres,Fuerza de trabajo,I,2255.241969
@@ -1087,6 +1120,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Oriental,Hombres,Fuerza de trabajo,II,2904.3822
 2025,Total región Oriental,Hombres,Fuerza de trabajo,I,2943.756839
 2025,Total región Oriental,Hombres,Fuerza de trabajo,II,2980.285652
+2026,Total región Oriental,Hombres,Fuerza de trabajo,I,3005.179151
 2010,Total región Oriental,Hombres,Población ocupada,I,2004.059137
 2010,Total región Oriental,Hombres,Población ocupada,II,2067.751549
 2011,Total región Oriental,Hombres,Población ocupada,I,2072.698794
@@ -1119,6 +1153,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Oriental,Hombres,Población ocupada,II,2660.807329
 2025,Total región Oriental,Hombres,Población ocupada,I,2685.183854
 2025,Total región Oriental,Hombres,Población ocupada,II,2750.208048
+2026,Total región Oriental,Hombres,Población ocupada,I,2758.310474
 2010,Total región Oriental,Hombres,Población desocupada,I,198.289409
 2010,Total región Oriental,Hombres,Población desocupada,II,170.482716
 2011,Total región Oriental,Hombres,Población desocupada,I,182.543174
@@ -1151,6 +1186,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Oriental,Hombres,Población desocupada,II,243.574872
 2025,Total región Oriental,Hombres,Población desocupada,I,258.572984
 2025,Total región Oriental,Hombres,Población desocupada,II,230.077605
+2026,Total región Oriental,Hombres,Población desocupada,I,246.868677
 2010,Total región Oriental,Hombres,Población fuera de la fuerza de trabajo,I,477.667121
 2010,Total región Oriental,Hombres,Población fuera de la fuerza de trabajo,II,473.689069
 2011,Total región Oriental,Hombres,Población fuera de la fuerza de trabajo,I,489.517865
@@ -1183,6 +1219,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Oriental,Hombres,Población fuera de la fuerza de trabajo,II,937.717633
 2025,Total región Oriental,Hombres,Población fuera de la fuerza de trabajo,I,929.736495
 2025,Total región Oriental,Hombres,Población fuera de la fuerza de trabajo,II,923.556848
+2026,Total región Oriental,Hombres,Población fuera de la fuerza de trabajo,I,929.792683
 2010,Total región Oriental,Hombres,Población subocupada,I,245.776693
 2010,Total región Oriental,Hombres,Población subocupada,II,261.328072
 2011,Total región Oriental,Hombres,Población subocupada,I,223.007384
@@ -1215,6 +1252,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Oriental,Hombres,Población subocupada,II,184.831315
 2025,Total región Oriental,Hombres,Población subocupada,I,178.886476
 2025,Total región Oriental,Hombres,Población subocupada,II,205.221407
+2026,Total región Oriental,Hombres,Población subocupada,I,190.891414
 2010,Total región Oriental,Hombres,Fuerza de trabajo potencial,I,0.0
 2010,Total región Oriental,Hombres,Fuerza de trabajo potencial,II,0.0
 2011,Total región Oriental,Hombres,Fuerza de trabajo potencial,I,0.0
@@ -1247,6 +1285,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Oriental,Hombres,Fuerza de trabajo potencial,II,54.715067
 2025,Total región Oriental,Hombres,Fuerza de trabajo potencial,I,76.159482
 2025,Total región Oriental,Hombres,Fuerza de trabajo potencial,II,71.162576
+2026,Total región Oriental,Hombres,Fuerza de trabajo potencial,I,71.40353
 2010,Total región Central,Hombres,% población en edad de trabajar,I,72.681008
 2010,Total región Central,Hombres,% población en edad de trabajar,II,72.964279
 2011,Total región Central,Hombres,% población en edad de trabajar,I,73.246411
@@ -1279,6 +1318,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Central,Hombres,% población en edad de trabajar,II,78.369255
 2025,Total región Central,Hombres,% población en edad de trabajar,I,78.508033
 2025,Total región Central,Hombres,% población en edad de trabajar,II,78.642139
+2026,Total región Central,Hombres,% población en edad de trabajar,I,78.782159
 2010,Total región Central,Hombres,Tasa Global de Participación (TGP),I,79.918523
 2010,Total región Central,Hombres,Tasa Global de Participación (TGP),II,80.460705
 2011,Total región Central,Hombres,Tasa Global de Participación (TGP),I,80.348834
@@ -1311,6 +1351,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Central,Hombres,Tasa Global de Participación (TGP),II,75.853812
 2025,Total región Central,Hombres,Tasa Global de Participación (TGP),I,76.671045
 2025,Total región Central,Hombres,Tasa Global de Participación (TGP),II,76.76582
+2026,Total región Central,Hombres,Tasa Global de Participación (TGP),I,76.585291
 2010,Total región Central,Hombres,Tasa de Ocupación (TO),I,70.722615
 2010,Total región Central,Hombres,Tasa de Ocupación (TO),II,72.686274
 2011,Total región Central,Hombres,Tasa de Ocupación (TO),I,71.811949
@@ -1343,6 +1384,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Central,Hombres,Tasa de Ocupación (TO),II,70.61604
 2025,Total región Central,Hombres,Tasa de Ocupación (TO),I,71.417343
 2025,Total región Central,Hombres,Tasa de Ocupación (TO),II,71.993935
+2026,Total región Central,Hombres,Tasa de Ocupación (TO),I,71.391565
 2010,Total región Central,Hombres,Tasa de Desocupación (TD),I,11.506604
 2010,Total región Central,Hombres,Tasa de Desocupación (TD),II,9.662395
 2011,Total región Central,Hombres,Tasa de Desocupación (TD),I,10.624778
@@ -1375,6 +1417,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Central,Hombres,Tasa de Desocupación (TD),II,6.905087
 2025,Total región Central,Hombres,Tasa de Desocupación (TD),I,6.852262
 2025,Total región Central,Hombres,Tasa de Desocupación (TD),II,6.216159
+2026,Total región Central,Hombres,Tasa de Desocupación (TD),I,6.781622
 2010,Total región Central,Hombres,Tasa de Subocupación (TS),I,12.90061
 2010,Total región Central,Hombres,Tasa de Subocupación (TS),II,12.398093
 2011,Total región Central,Hombres,Tasa de Subocupación (TS),I,11.503909
@@ -1405,6 +1448,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Central,Hombres,Tasa de Subocupación (TS),II,4.396371
 2025,Total región Central,Hombres,Tasa de Subocupación (TS),I,5.709721
 2025,Total región Central,Hombres,Tasa de Subocupación (TS),II,5.577985
+2026,Total región Central,Hombres,Tasa de Subocupación (TS),I,5.364733
 2010,Total región Central,Hombres,Población total,I,5310.4565
 2010,Total región Central,Hombres,Población total,II,5332.2035
 2011,Total región Central,Hombres,Población total,I,5354.168833
@@ -1437,6 +1481,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Central,Hombres,Población total,II,6175.487
 2025,Total región Central,Hombres,Población total,I,6209.832667
 2025,Total región Central,Hombres,Población total,II,6243.35
+2026,Total región Central,Hombres,Población total,I,6276.545667
 2010,Total región Central,Hombres,Población en edad de trabajar,I,3859.693333
 2010,Total región Central,Hombres,Población en edad de trabajar,II,3890.603833
 2011,Total región Central,Hombres,Población en edad de trabajar,I,3921.7365
@@ -1469,6 +1514,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Central,Hombres,Población en edad de trabajar,II,4839.683167
 2025,Total región Central,Hombres,Población en edad de trabajar,I,4875.2175
 2025,Total región Central,Hombres,Población en edad de trabajar,II,4909.904
+2026,Total región Central,Hombres,Población en edad de trabajar,I,4944.798167
 2010,Total región Central,Hombres,Fuerza de trabajo,I,3084.609901
 2010,Total región Central,Hombres,Fuerza de trabajo,II,3130.407272
 2011,Total región Central,Hombres,Fuerza de trabajo,I,3151.069551
@@ -1501,6 +1547,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Central,Hombres,Fuerza de trabajo,II,3671.084169
 2025,Total región Central,Hombres,Fuerza de trabajo,I,3737.880179
 2025,Total región Central,Hombres,Fuerza de trabajo,II,3769.128082
+2026,Total región Central,Hombres,Fuerza de trabajo,I,3786.988041
 2010,Total región Central,Hombres,Población ocupada,I,2729.676046
 2010,Total región Central,Hombres,Población ocupada,II,2827.934949
 2011,Total región Central,Hombres,Población ocupada,I,2816.275398
@@ -1533,6 +1580,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Central,Hombres,Población ocupada,II,3417.592615
 2025,Total región Central,Hombres,Población ocupada,I,3481.750819
 2025,Total región Central,Hombres,Población ocupada,II,3534.833103
+2026,Total región Central,Hombres,Población ocupada,I,3530.168819
 2010,Total región Central,Hombres,Población desocupada,I,354.933854
 2010,Total región Central,Hombres,Población desocupada,II,302.472322
 2011,Total región Central,Hombres,Población desocupada,I,334.794153
@@ -1565,6 +1613,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Central,Hombres,Población desocupada,II,253.491554
 2025,Total región Central,Hombres,Población desocupada,I,256.129361
 2025,Total región Central,Hombres,Población desocupada,II,234.294979
+2026,Total región Central,Hombres,Población desocupada,I,256.819222
 2010,Total región Central,Hombres,Población fuera de la fuerza de trabajo,I,775.083433
 2010,Total región Central,Hombres,Población fuera de la fuerza de trabajo,II,760.196562
 2011,Total región Central,Hombres,Población fuera de la fuerza de trabajo,I,770.666949
@@ -1597,6 +1646,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Central,Hombres,Población fuera de la fuerza de trabajo,II,1168.598998
 2025,Total región Central,Hombres,Población fuera de la fuerza de trabajo,I,1137.337321
 2025,Total región Central,Hombres,Población fuera de la fuerza de trabajo,II,1140.775918
+2026,Total región Central,Hombres,Población fuera de la fuerza de trabajo,I,1157.810126
 2010,Total región Central,Hombres,Población subocupada,I,397.933493
 2010,Total región Central,Hombres,Población subocupada,II,388.11079
 2011,Total región Central,Hombres,Población subocupada,I,362.496172
@@ -1629,6 +1679,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Central,Hombres,Población subocupada,II,161.394473
 2025,Total región Central,Hombres,Población subocupada,I,213.422539
 2025,Total región Central,Hombres,Población subocupada,II,210.241393
+2026,Total región Central,Hombres,Población subocupada,I,203.161795
 2010,Total región Central,Hombres,Fuerza de trabajo potencial,I,0.0
 2010,Total región Central,Hombres,Fuerza de trabajo potencial,II,0.0
 2011,Total región Central,Hombres,Fuerza de trabajo potencial,I,0.0
@@ -1661,6 +1712,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Central,Hombres,Fuerza de trabajo potencial,II,82.176354
 2025,Total región Central,Hombres,Fuerza de trabajo potencial,I,75.426004
 2025,Total región Central,Hombres,Fuerza de trabajo potencial,II,78.517256
+2026,Total región Central,Hombres,Fuerza de trabajo potencial,I,70.97038
 2010,Total región Pacífica,Hombres,% población en edad de trabajar,I,71.314875
 2010,Total región Pacífica,Hombres,% población en edad de trabajar,II,71.50883
 2011,Total región Pacífica,Hombres,% población en edad de trabajar,I,71.70292
@@ -1693,6 +1745,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Pacífica,Hombres,% población en edad de trabajar,II,75.910159
 2025,Total región Pacífica,Hombres,% población en edad de trabajar,I,76.054589
 2025,Total región Pacífica,Hombres,% población en edad de trabajar,II,76.19589
+2026,Total región Pacífica,Hombres,% población en edad de trabajar,I,76.341722
 2010,Total región Pacífica,Hombres,Tasa Global de Participación (TGP),I,81.77691
 2010,Total región Pacífica,Hombres,Tasa Global de Participación (TGP),II,80.996271
 2011,Total región Pacífica,Hombres,Tasa Global de Participación (TGP),I,80.800533
@@ -1725,6 +1778,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Pacífica,Hombres,Tasa Global de Participación (TGP),II,76.702659
 2025,Total región Pacífica,Hombres,Tasa Global de Participación (TGP),I,76.713342
 2025,Total región Pacífica,Hombres,Tasa Global de Participación (TGP),II,77.037939
+2026,Total región Pacífica,Hombres,Tasa Global de Participación (TGP),I,77.621602
 2010,Total región Pacífica,Hombres,Tasa de Ocupación (TO),I,73.632395
 2010,Total región Pacífica,Hombres,Tasa de Ocupación (TO),II,72.975314
 2011,Total región Pacífica,Hombres,Tasa de Ocupación (TO),I,72.236442
@@ -1757,6 +1811,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Pacífica,Hombres,Tasa de Ocupación (TO),II,71.597798
 2025,Total región Pacífica,Hombres,Tasa de Ocupación (TO),I,71.726315
 2025,Total región Pacífica,Hombres,Tasa de Ocupación (TO),II,72.750221
+2026,Total región Pacífica,Hombres,Tasa de Ocupación (TO),I,72.765754
 2010,Total región Pacífica,Hombres,Tasa de Desocupación (TD),I,9.959431
 2010,Total región Pacífica,Hombres,Tasa de Desocupación (TD),II,9.902872
 2011,Total región Pacífica,Hombres,Tasa de Desocupación (TD),I,10.599052
@@ -1789,6 +1844,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Pacífica,Hombres,Tasa de Desocupación (TD),II,6.65539
 2025,Total región Pacífica,Hombres,Tasa de Desocupación (TD),I,6.50086
 2025,Total región Pacífica,Hombres,Tasa de Desocupación (TD),II,5.565723
+2026,Total región Pacífica,Hombres,Tasa de Desocupación (TD),I,6.255795
 2010,Total región Pacífica,Hombres,Tasa de Subocupación (TS),I,14.007361
 2010,Total región Pacífica,Hombres,Tasa de Subocupación (TS),II,14.369482
 2011,Total región Pacífica,Hombres,Tasa de Subocupación (TS),I,13.219656
@@ -1821,6 +1877,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Pacífica,Hombres,Tasa de Subocupación (TS),II,8.771409
 2025,Total región Pacífica,Hombres,Tasa de Subocupación (TS),I,8.010178
 2025,Total región Pacífica,Hombres,Tasa de Subocupación (TS),II,6.163634
+2026,Total región Pacífica,Hombres,Tasa de Subocupación (TS),I,7.227682
 2010,Total región Pacífica,Hombres,Población total,I,3752.071833
 2010,Total región Pacífica,Hombres,Población total,II,3763.1525
 2011,Total región Pacífica,Hombres,Población total,I,3774.33
@@ -1853,6 +1910,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Pacífica,Hombres,Población total,II,3997.970167
 2025,Total región Pacífica,Hombres,Población total,I,4004.576
 2025,Total región Pacífica,Hombres,Población total,II,4011.308667
+2026,Total región Pacífica,Hombres,Población total,I,4018.298167
 2010,Total región Pacífica,Hombres,Población en edad de trabajar,I,2675.785333
 2010,Total región Pacífica,Hombres,Población en edad de trabajar,II,2690.986333
 2011,Total región Pacífica,Hombres,Población en edad de trabajar,I,2706.304833
@@ -1885,6 +1943,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Pacífica,Hombres,Población en edad de trabajar,II,3034.8655
 2025,Total región Pacífica,Hombres,Población en edad de trabajar,I,3045.663833
 2025,Total región Pacífica,Hombres,Población en edad de trabajar,II,3056.452333
+2026,Total región Pacífica,Hombres,Población en edad de trabajar,I,3067.638
 2010,Total región Pacífica,Hombres,Fuerza de trabajo,I,2188.174556
 2010,Total región Pacífica,Hombres,Fuerza de trabajo,II,2179.598583
 2011,Total región Pacífica,Hombres,Fuerza de trabajo,I,2186.708718
@@ -1917,6 +1976,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Pacífica,Hombres,Fuerza de trabajo,II,2327.822543
 2025,Total región Pacífica,Hombres,Fuerza de trabajo,I,2336.430506
 2025,Total región Pacífica,Hombres,Fuerza de trabajo,II,2354.627893
+2026,Total región Pacífica,Hombres,Fuerza de trabajo,I,2381.149757
 2010,Total región Pacífica,Hombres,Población ocupada,I,1970.244829
 2010,Total región Pacífica,Hombres,Población ocupada,II,1963.755724
 2011,Total región Pacífica,Hombres,Población ocupada,I,1954.938317
@@ -1949,6 +2009,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Pacífica,Hombres,Población ocupada,II,2172.896876
 2025,Total región Pacífica,Hombres,Población ocupada,I,2184.542435
 2025,Total región Pacífica,Hombres,Población ocupada,II,2223.575822
+2026,Total región Pacífica,Hombres,Población ocupada,I,2232.18992
 2010,Total región Pacífica,Hombres,Población desocupada,I,217.929726
 2010,Total región Pacífica,Hombres,Población desocupada,II,215.842858
 2011,Total región Pacífica,Hombres,Población desocupada,I,231.770401
@@ -1981,6 +2042,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Pacífica,Hombres,Población desocupada,II,154.925667
 2025,Total región Pacífica,Hombres,Población desocupada,I,151.888071
 2025,Total región Pacífica,Hombres,Población desocupada,II,131.052072
+2026,Total región Pacífica,Hombres,Población desocupada,I,148.959838
 2010,Total región Pacífica,Hombres,Población fuera de la fuerza de trabajo,I,487.610778
 2010,Total región Pacífica,Hombres,Población fuera de la fuerza de trabajo,II,511.387751
 2011,Total región Pacífica,Hombres,Población fuera de la fuerza de trabajo,I,519.596115
@@ -2013,6 +2075,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Pacífica,Hombres,Población fuera de la fuerza de trabajo,II,707.042957
 2025,Total región Pacífica,Hombres,Población fuera de la fuerza de trabajo,I,709.233327
 2025,Total región Pacífica,Hombres,Población fuera de la fuerza de trabajo,II,701.82444
+2026,Total región Pacífica,Hombres,Población fuera de la fuerza de trabajo,I,686.488243
 2010,Total región Pacífica,Hombres,Población subocupada,I,306.505513
 2010,Total región Pacífica,Hombres,Población subocupada,II,313.197037
 2011,Total región Pacífica,Hombres,Población subocupada,I,289.075372
@@ -2045,6 +2108,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Pacífica,Hombres,Población subocupada,II,204.182837
 2025,Total región Pacífica,Hombres,Población subocupada,I,187.152246
 2025,Total región Pacífica,Hombres,Población subocupada,II,145.130639
+2026,Total región Pacífica,Hombres,Población subocupada,I,172.101932
 2010,Total región Pacífica,Hombres,Fuerza de trabajo potencial,I,0.0
 2010,Total región Pacífica,Hombres,Fuerza de trabajo potencial,II,0.0
 2011,Total región Pacífica,Hombres,Fuerza de trabajo potencial,I,0.0
@@ -2077,6 +2141,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Pacífica,Hombres,Fuerza de trabajo potencial,II,97.789466
 2025,Total región Pacífica,Hombres,Fuerza de trabajo potencial,I,84.623587
 2025,Total región Pacífica,Hombres,Fuerza de trabajo potencial,II,103.627548
+2026,Total región Pacífica,Hombres,Fuerza de trabajo potencial,I,97.181337
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,% población en edad de trabajar,I,0.0
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,% población en edad de trabajar,II,0.0
 2011,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,% población en edad de trabajar,I,0.0
@@ -2109,6 +2174,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,% población en edad de trabajar,II,74.942085
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,% población en edad de trabajar,I,75.129134
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,% población en edad de trabajar,II,75.308911
+2026,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,% población en edad de trabajar,I,75.503329
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Tasa Global de Participación (TGP),I,0.0
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Tasa Global de Participación (TGP),II,0.0
 2011,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Tasa Global de Participación (TGP),I,0.0
@@ -2141,6 +2207,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Tasa Global de Participación (TGP),II,78.87691
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Tasa Global de Participación (TGP),I,78.189518
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Tasa Global de Participación (TGP),II,78.60263
+2026,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Tasa Global de Participación (TGP),I,77.259583
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Tasa de Ocupación (TO),I,0.0
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Tasa de Ocupación (TO),II,0.0
 2011,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Tasa de Ocupación (TO),I,0.0
@@ -2173,6 +2240,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Tasa de Ocupación (TO),II,68.899978
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Tasa de Ocupación (TO),I,68.599837
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Tasa de Ocupación (TO),II,71.781491
+2026,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Tasa de Ocupación (TO),I,69.448467
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Tasa de Desocupación (TD),I,0.0
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Tasa de Desocupación (TD),II,0.0
 2011,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Tasa de Desocupación (TD),I,0.0
@@ -2205,6 +2273,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Tasa de Desocupación (TD),II,12.648736
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Tasa de Desocupación (TD),I,12.264662
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Tasa de Desocupación (TD),II,8.678003
+2026,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Tasa de Desocupación (TD),I,10.110223
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Tasa de Subocupación (TS),I,0.0
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Tasa de Subocupación (TS),II,0.0
 2011,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Tasa de Subocupación (TS),I,0.0
@@ -2237,6 +2306,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Tasa de Subocupación (TS),II,5.533461
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Tasa de Subocupación (TS),I,4.759964
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Tasa de Subocupación (TS),II,4.088859
+2026,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Tasa de Subocupación (TS),I,3.158589
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población total,I,0.0
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población total,II,0.0
 2011,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población total,I,0.0
@@ -2269,6 +2339,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población total,II,228.5685
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población total,I,229.9605
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población total,II,231.323
+2026,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población total,I,232.667667
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población en edad de trabajar,I,0.0
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población en edad de trabajar,II,0.0
 2011,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población en edad de trabajar,I,0.0
@@ -2301,6 +2372,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población en edad de trabajar,II,171.294
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población en edad de trabajar,I,172.767333
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población en edad de trabajar,II,174.206833
+2026,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población en edad de trabajar,I,175.671833
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Fuerza de trabajo,I,0.0
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Fuerza de trabajo,II,0.0
 2011,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Fuerza de trabajo,I,0.0
@@ -2333,6 +2405,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Fuerza de trabajo,II,135.111415
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Fuerza de trabajo,I,135.085944
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Fuerza de trabajo,II,136.931153
+2026,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Fuerza de trabajo,I,135.723326
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población ocupada,I,0.0
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población ocupada,II,0.0
 2011,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población ocupada,I,0.0
@@ -2365,6 +2438,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población ocupada,II,118.021528
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población ocupada,I,118.518109
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población ocupada,II,125.048263
+2026,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población ocupada,I,122.001395
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población desocupada,I,0.0
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población desocupada,II,0.0
 2011,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población desocupada,I,0.0
@@ -2397,6 +2471,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población desocupada,II,17.089887
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población desocupada,I,16.567835
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población desocupada,II,11.88289
+2026,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población desocupada,I,13.721931
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población fuera de la fuerza de trabajo,I,0.0
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población fuera de la fuerza de trabajo,II,0.0
 2011,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población fuera de la fuerza de trabajo,I,0.0
@@ -2429,6 +2504,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población fuera de la fuerza de trabajo,II,36.182585
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población fuera de la fuerza de trabajo,I,37.681389
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población fuera de la fuerza de trabajo,II,37.27568
+2026,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población fuera de la fuerza de trabajo,I,39.948507
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población subocupada,I,0.0
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población subocupada,II,0.0
 2011,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población subocupada,I,0.0
@@ -2461,6 +2537,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población subocupada,II,7.476337
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población subocupada,I,6.430042
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población subocupada,II,5.598922
+2026,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Población subocupada,I,4.286942
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Fuerza de trabajo potencial,I,0.0
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Fuerza de trabajo potencial,II,0.0
 2011,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Fuerza de trabajo potencial,I,0.0
@@ -2493,6 +2570,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Fuerza de trabajo potencial,II,3.592
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Fuerza de trabajo potencial,I,2.19842
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Fuerza de trabajo potencial,II,2.7469
+2026,"Total regiones Orinoquía, Amazonía e Insular*",Hombres,Fuerza de trabajo potencial,I,1.952596
 2010,Bogotá D. C.,Hombres,% población en edad de trabajar,I,73.508627
 2010,Bogotá D. C.,Hombres,% población en edad de trabajar,II,73.96204
 2011,Bogotá D. C.,Hombres,% población en edad de trabajar,I,74.414758
@@ -2525,6 +2603,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Bogotá D. C.,Hombres,% población en edad de trabajar,II,81.184539
 2025,Bogotá D. C.,Hombres,% población en edad de trabajar,I,81.309825
 2025,Bogotá D. C.,Hombres,% población en edad de trabajar,II,81.430185
+2026,Bogotá D. C.,Hombres,% población en edad de trabajar,I,81.552057
 2010,Bogotá D. C.,Hombres,Tasa Global de Participación (TGP),I,80.394222
 2010,Bogotá D. C.,Hombres,Tasa Global de Participación (TGP),II,81.323212
 2011,Bogotá D. C.,Hombres,Tasa Global de Participación (TGP),I,81.096242
@@ -2557,6 +2636,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Bogotá D. C.,Hombres,Tasa Global de Participación (TGP),II,78.434218
 2025,Bogotá D. C.,Hombres,Tasa Global de Participación (TGP),I,78.400135
 2025,Bogotá D. C.,Hombres,Tasa Global de Participación (TGP),II,77.88723
+2026,Bogotá D. C.,Hombres,Tasa Global de Participación (TGP),I,77.188851
 2010,Bogotá D. C.,Hombres,Tasa de Ocupación (TO),I,71.430659
 2010,Bogotá D. C.,Hombres,Tasa de Ocupación (TO),II,75.06777
 2011,Bogotá D. C.,Hombres,Tasa de Ocupación (TO),I,73.920454
@@ -2589,6 +2669,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Bogotá D. C.,Hombres,Tasa de Ocupación (TO),II,72.126657
 2025,Bogotá D. C.,Hombres,Tasa de Ocupación (TO),I,71.989669
 2025,Bogotá D. C.,Hombres,Tasa de Ocupación (TO),II,72.794077
+2026,Bogotá D. C.,Hombres,Tasa de Ocupación (TO),I,70.875309
 2010,Bogotá D. C.,Hombres,Tasa de Desocupación (TD),I,11.149511
 2010,Bogotá D. C.,Hombres,Tasa de Desocupación (TD),II,7.692075
 2011,Bogotá D. C.,Hombres,Tasa de Desocupación (TD),I,8.848484
@@ -2621,6 +2702,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Bogotá D. C.,Hombres,Tasa de Desocupación (TD),II,8.041849
 2025,Bogotá D. C.,Hombres,Tasa de Desocupación (TD),I,8.176601
 2025,Bogotá D. C.,Hombres,Tasa de Desocupación (TD),II,6.539138
+2026,Bogotá D. C.,Hombres,Tasa de Desocupación (TD),I,8.179344
 2010,Bogotá D. C.,Hombres,Tasa de Subocupación (TS),I,12.480776
 2010,Bogotá D. C.,Hombres,Tasa de Subocupación (TS),II,13.86948
 2011,Bogotá D. C.,Hombres,Tasa de Subocupación (TS),I,12.768016
@@ -2653,6 +2735,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Bogotá D. C.,Hombres,Tasa de Subocupación (TS),II,8.506025
 2025,Bogotá D. C.,Hombres,Tasa de Subocupación (TS),I,7.35627
 2025,Bogotá D. C.,Hombres,Tasa de Subocupación (TS),II,6.387389
+2026,Bogotá D. C.,Hombres,Tasa de Subocupación (TS),I,6.318298
 2010,Bogotá D. C.,Hombres,Población total,I,3389.616667
 2010,Bogotá D. C.,Hombres,Población total,II,3403.313167
 2011,Bogotá D. C.,Hombres,Población total,I,3415.932167
@@ -2685,6 +2768,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Bogotá D. C.,Hombres,Población total,II,3839.059
 2025,Bogotá D. C.,Hombres,Población total,I,3854.882667
 2025,Bogotá D. C.,Hombres,Población total,II,3870.806
+2026,Bogotá D. C.,Hombres,Población total,I,3886.743167
 2010,Bogotá D. C.,Hombres,Población en edad de trabajar,I,2491.660667
 2010,Bogotá D. C.,Hombres,Población en edad de trabajar,II,2517.159833
 2011,Bogotá D. C.,Hombres,Población en edad de trabajar,I,2541.957667
@@ -2717,6 +2801,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Bogotá D. C.,Hombres,Población en edad de trabajar,II,3116.722333
 2025,Bogotá D. C.,Hombres,Población en edad de trabajar,I,3134.398333
 2025,Bogotá D. C.,Hombres,Población en edad de trabajar,II,3152.0045
+2026,Bogotá D. C.,Hombres,Población en edad de trabajar,I,3169.719
 2010,Bogotá D. C.,Hombres,Fuerza de trabajo,I,2003.15121
 2010,Bogotá D. C.,Hombres,Fuerza de trabajo,II,2047.035239
 2011,Bogotá D. C.,Hombres,Fuerza de trabajo,I,2061.432129
@@ -2749,6 +2834,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Bogotá D. C.,Hombres,Fuerza de trabajo,II,2444.576784
 2025,Bogotá D. C.,Hombres,Fuerza de trabajo,I,2457.372524
 2025,Bogotá D. C.,Hombres,Fuerza de trabajo,II,2455.009006
+2026,Bogotá D. C.,Hombres,Fuerza de trabajo,I,2446.669662
 2010,Bogotá D. C.,Hombres,Población ocupada,I,1779.809638
 2010,Bogotá D. C.,Hombres,Población ocupada,II,1889.57575
 2011,Bogotá D. C.,Hombres,Población ocupada,I,1879.026641
@@ -2781,6 +2867,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Bogotá D. C.,Hombres,Población ocupada,II,2247.987621
 2025,Bogotá D. C.,Hombres,Población ocupada,I,2256.442988
 2025,Bogotá D. C.,Hombres,Población ocupada,II,2294.472586
+2026,Bogotá D. C.,Hombres,Población ocupada,I,2246.548135
 2010,Bogotá D. C.,Hombres,Población desocupada,I,223.341572
 2010,Bogotá D. C.,Hombres,Población desocupada,II,157.459489
 2011,Bogotá D. C.,Hombres,Población desocupada,I,182.405488
@@ -2813,6 +2900,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Bogotá D. C.,Hombres,Población desocupada,II,196.589163
 2025,Bogotá D. C.,Hombres,Población desocupada,I,200.929535
 2025,Bogotá D. C.,Hombres,Población desocupada,II,160.536421
+2026,Bogotá D. C.,Hombres,Población desocupada,I,200.121527
 2010,Bogotá D. C.,Hombres,Población fuera de la fuerza de trabajo,I,488.509456
 2010,Bogotá D. C.,Hombres,Población fuera de la fuerza de trabajo,II,470.124595
 2011,Bogotá D. C.,Hombres,Población fuera de la fuerza de trabajo,I,480.525538
@@ -2845,6 +2933,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Bogotá D. C.,Hombres,Población fuera de la fuerza de trabajo,II,672.14555
 2025,Bogotá D. C.,Hombres,Población fuera de la fuerza de trabajo,I,677.02581
 2025,Bogotá D. C.,Hombres,Población fuera de la fuerza de trabajo,II,696.995494
+2026,Bogotá D. C.,Hombres,Población fuera de la fuerza de trabajo,I,723.049338
 2010,Bogotá D. C.,Hombres,Población subocupada,I,250.008811
 2010,Bogotá D. C.,Hombres,Población subocupada,II,283.913152
 2011,Bogotá D. C.,Hombres,Población subocupada,I,263.20399
@@ -2877,6 +2966,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Bogotá D. C.,Hombres,Población subocupada,II,207.936324
 2025,Bogotá D. C.,Hombres,Población subocupada,I,180.770966
 2025,Bogotá D. C.,Hombres,Población subocupada,II,156.810978
+2026,Bogotá D. C.,Hombres,Población subocupada,I,154.587872
 2010,Bogotá D. C.,Hombres,Fuerza de trabajo potencial,I,0.0
 2010,Bogotá D. C.,Hombres,Fuerza de trabajo potencial,II,0.0
 2011,Bogotá D. C.,Hombres,Fuerza de trabajo potencial,I,0.0
@@ -2909,6 +2999,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Bogotá D. C.,Hombres,Fuerza de trabajo potencial,II,80.505388
 2025,Bogotá D. C.,Hombres,Fuerza de trabajo potencial,I,73.842442
 2025,Bogotá D. C.,Hombres,Fuerza de trabajo potencial,II,72.212523
+2026,Bogotá D. C.,Hombres,Fuerza de trabajo potencial,I,57.329255
 2010,Total nacional,Mujeres,% población en edad de trabajar,I,73.68222
 2010,Total nacional,Mujeres,% población en edad de trabajar,II,73.943724
 2011,Total nacional,Mujeres,% población en edad de trabajar,I,74.204117
@@ -2941,6 +3032,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total nacional,Mujeres,% población en edad de trabajar,II,78.911496
 2025,Total nacional,Mujeres,% población en edad de trabajar,I,79.052636
 2025,Total nacional,Mujeres,% población en edad de trabajar,II,79.191564
+2026,Total nacional,Mujeres,% población en edad de trabajar,I,79.335319
 2010,Total nacional,Mujeres,Tasa Global de Participación (TGP),I,55.132721
 2010,Total nacional,Mujeres,Tasa Global de Participación (TGP),II,55.88994
 2011,Total nacional,Mujeres,Tasa Global de Participación (TGP),I,55.200482
@@ -2973,6 +3065,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total nacional,Mujeres,Tasa Global de Participación (TGP),II,52.677197
 2025,Total nacional,Mujeres,Tasa Global de Participación (TGP),I,52.644429
 2025,Total nacional,Mujeres,Tasa Global de Participación (TGP),II,52.91124
+2026,Total nacional,Mujeres,Tasa Global de Participación (TGP),I,53.439372
 2010,Total nacional,Mujeres,Tasa de Ocupación (TO),I,46.079644
 2010,Total nacional,Mujeres,Tasa de Ocupación (TO),II,47.423434
 2011,Total nacional,Mujeres,Tasa de Ocupación (TO),I,46.45705
@@ -3005,6 +3098,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total nacional,Mujeres,Tasa de Ocupación (TO),II,46.547117
 2025,Total nacional,Mujeres,Tasa de Ocupación (TO),I,46.023436
 2025,Total nacional,Mujeres,Tasa de Ocupación (TO),II,47.450906
+2026,Total nacional,Mujeres,Tasa de Ocupación (TO),I,47.460608
 2010,Total nacional,Mujeres,Tasa de Desocupación (TD),I,16.420516
 2010,Total nacional,Mujeres,Tasa de Desocupación (TD),II,15.148533
 2011,Total nacional,Mujeres,Tasa de Desocupación (TD),I,15.839413
@@ -3037,6 +3131,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total nacional,Mujeres,Tasa de Desocupación (TD),II,11.637066
 2025,Total nacional,Mujeres,Tasa de Desocupación (TD),I,12.576816
 2025,Total nacional,Mujeres,Tasa de Desocupación (TD),II,10.319799
+2026,Total nacional,Mujeres,Tasa de Desocupación (TD),I,11.187938
 2010,Total nacional,Mujeres,Tasa de Subocupación (TS),I,12.134196
 2010,Total nacional,Mujeres,Tasa de Subocupación (TS),II,12.877217
 2011,Total nacional,Mujeres,Tasa de Subocupación (TS),I,12.042871
@@ -3069,6 +3164,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total nacional,Mujeres,Tasa de Subocupación (TS),II,8.052103
 2025,Total nacional,Mujeres,Tasa de Subocupación (TS),I,7.629804
 2025,Total nacional,Mujeres,Tasa de Subocupación (TS),II,7.496954
+2026,Total nacional,Mujeres,Tasa de Subocupación (TS),I,7.346958
 2010,Total nacional,Mujeres,Población total,I,21846.115167
 2010,Total nacional,Mujeres,Población total,II,21962.294333
 2011,Total nacional,Mujeres,Población total,I,22077.019167
@@ -3101,6 +3197,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total nacional,Mujeres,Población total,II,26542.227167
 2025,Total nacional,Mujeres,Población total,I,26682.244833
 2025,Total nacional,Mujeres,Población total,II,26819.945682
+2026,Total nacional,Mujeres,Población total,I,26957.432667
 2010,Total nacional,Mujeres,Población en edad de trabajar,I,16096.702667
 2010,Total nacional,Mujeres,Población en edad de trabajar,II,16239.738333
 2011,Total nacional,Mujeres,Población en edad de trabajar,I,16382.057167
@@ -3133,6 +3230,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total nacional,Mujeres,Población en edad de trabajar,II,20944.8685
 2025,Total nacional,Mujeres,Población en edad de trabajar,I,21093.018
 2025,Total nacional,Mujeres,Población en edad de trabajar,II,21239.134516
+2026,Total nacional,Mujeres,Población en edad de trabajar,I,21386.765167
 2010,Total nacional,Mujeres,Fuerza de trabajo,I,8874.550227
 2010,Total nacional,Mujeres,Fuerza de trabajo,II,9076.37996
 2011,Total nacional,Mujeres,Fuerza de trabajo,I,9042.974591
@@ -3165,6 +3263,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total nacional,Mujeres,Fuerza de trabajo,II,11033.169721
 2025,Total nacional,Mujeres,Fuerza de trabajo,I,11104.298913
 2025,Total nacional,Mujeres,Fuerza de trabajo,II,11237.889379
+2026,Total nacional,Mujeres,Fuerza de trabajo,I,11428.953011
 2010,Total nacional,Mujeres,Población ocupada,I,7417.303293
 2010,Total nacional,Mujeres,Población ocupada,II,7701.441556
 2011,Total nacional,Mujeres,Población ocupada,I,7610.620481
@@ -3197,6 +3296,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total nacional,Mujeres,Población ocupada,II,9749.23245
 2025,Total nacional,Mujeres,Población ocupada,I,9707.731645
 2025,Total nacional,Mujeres,Población ocupada,II,10078.16177
+2026,Total nacional,Mujeres,Población ocupada,I,10150.288826
 2010,Total nacional,Mujeres,Población desocupada,I,1457.246933
 2010,Total nacional,Mujeres,Población desocupada,II,1374.938404
 2011,Total nacional,Mujeres,Población desocupada,I,1432.35411
@@ -3229,6 +3329,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total nacional,Mujeres,Población desocupada,II,1283.937271
 2025,Total nacional,Mujeres,Población desocupada,I,1396.567268
 2025,Total nacional,Mujeres,Población desocupada,II,1159.727609
+2026,Total nacional,Mujeres,Población desocupada,I,1278.664185
 2010,Total nacional,Mujeres,Población fuera de la fuerza de trabajo,I,7222.15244
 2010,Total nacional,Mujeres,Población fuera de la fuerza de trabajo,II,7163.358373
 2011,Total nacional,Mujeres,Población fuera de la fuerza de trabajo,I,7339.082575
@@ -3261,6 +3362,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total nacional,Mujeres,Población fuera de la fuerza de trabajo,II,9911.698779
 2025,Total nacional,Mujeres,Población fuera de la fuerza de trabajo,I,9988.719087
 2025,Total nacional,Mujeres,Población fuera de la fuerza de trabajo,II,10001.245137
+2026,Total nacional,Mujeres,Población fuera de la fuerza de trabajo,I,9957.812155
 2010,Total nacional,Mujeres,Población subocupada,I,1076.855347
 2010,Total nacional,Mujeres,Población subocupada,II,1168.785182
 2011,Total nacional,Mujeres,Población subocupada,I,1089.033779
@@ -3293,6 +3395,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total nacional,Mujeres,Población subocupada,II,888.402148
 2025,Total nacional,Mujeres,Población subocupada,I,847.236242
 2025,Total nacional,Mujeres,Población subocupada,II,842.499421
+2026,Total nacional,Mujeres,Población subocupada,I,839.68033
 2010,Total nacional,Mujeres,Fuerza de trabajo potencial,I,0.0
 2010,Total nacional,Mujeres,Fuerza de trabajo potencial,II,0.0
 2011,Total nacional,Mujeres,Fuerza de trabajo potencial,I,0.0
@@ -3325,6 +3428,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total nacional,Mujeres,Fuerza de trabajo potencial,II,1065.07953
 2025,Total nacional,Mujeres,Fuerza de trabajo potencial,I,1103.284017
 2025,Total nacional,Mujeres,Fuerza de trabajo potencial,II,1123.092616
+2026,Total nacional,Mujeres,Fuerza de trabajo potencial,I,1068.955537
 2010,Total región Caribe,Mujeres,% población en edad de trabajar,I,69.802292
 2010,Total región Caribe,Mujeres,% población en edad de trabajar,II,69.975939
 2011,Total región Caribe,Mujeres,% población en edad de trabajar,I,70.149932
@@ -3357,6 +3461,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Caribe,Mujeres,% población en edad de trabajar,II,74.805951
 2025,Total región Caribe,Mujeres,% población en edad de trabajar,I,74.985413
 2025,Total región Caribe,Mujeres,% población en edad de trabajar,II,75.163871
+2026,Total región Caribe,Mujeres,% población en edad de trabajar,I,75.351056
 2010,Total región Caribe,Mujeres,Tasa Global de Participación (TGP),I,46.908796
 2010,Total región Caribe,Mujeres,Tasa Global de Participación (TGP),II,48.956895
 2011,Total región Caribe,Mujeres,Tasa Global de Participación (TGP),I,48.415035
@@ -3389,6 +3494,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Caribe,Mujeres,Tasa Global de Participación (TGP),II,48.065438
 2025,Total región Caribe,Mujeres,Tasa Global de Participación (TGP),I,47.768165
 2025,Total región Caribe,Mujeres,Tasa Global de Participación (TGP),II,47.945378
+2026,Total región Caribe,Mujeres,Tasa Global de Participación (TGP),I,48.391615
 2010,Total región Caribe,Mujeres,Tasa de Ocupación (TO),I,39.577758
 2010,Total región Caribe,Mujeres,Tasa de Ocupación (TO),II,41.785576
 2011,Total región Caribe,Mujeres,Tasa de Ocupación (TO),I,40.801883
@@ -3421,6 +3527,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Caribe,Mujeres,Tasa de Ocupación (TO),II,41.354451
 2025,Total región Caribe,Mujeres,Tasa de Ocupación (TO),I,40.258682
 2025,Total región Caribe,Mujeres,Tasa de Ocupación (TO),II,41.434266
+2026,Total región Caribe,Mujeres,Tasa de Ocupación (TO),I,41.743589
 2010,Total región Caribe,Mujeres,Tasa de Desocupación (TD),I,15.628281
 2010,Total región Caribe,Mujeres,Tasa de Desocupación (TD),II,14.64823
 2011,Total región Caribe,Mujeres,Tasa de Desocupación (TD),I,15.724768
@@ -3453,6 +3560,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Caribe,Mujeres,Tasa de Desocupación (TD),II,13.962188
 2025,Total región Caribe,Mujeres,Tasa de Desocupación (TD),I,15.720686
 2025,Total región Caribe,Mujeres,Tasa de Desocupación (TD),II,13.58027
+2026,Total región Caribe,Mujeres,Tasa de Desocupación (TD),I,13.737973
 2010,Total región Caribe,Mujeres,Tasa de Subocupación (TS),I,8.805821
 2010,Total región Caribe,Mujeres,Tasa de Subocupación (TS),II,9.694309
 2011,Total región Caribe,Mujeres,Tasa de Subocupación (TS),I,9.02092
@@ -3485,6 +3593,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Caribe,Mujeres,Tasa de Subocupación (TS),II,9.535681
 2025,Total región Caribe,Mujeres,Tasa de Subocupación (TS),I,9.034281
 2025,Total región Caribe,Mujeres,Tasa de Subocupación (TS),II,8.727943
+2026,Total región Caribe,Mujeres,Tasa de Subocupación (TS),I,8.11319
 2010,Total región Caribe,Mujeres,Población total,I,4822.1745
 2010,Total región Caribe,Mujeres,Población total,II,4852.105167
 2011,Total región Caribe,Mujeres,Población total,I,4881.814167
@@ -3517,6 +3626,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Caribe,Mujeres,Población total,II,6042.313167
 2025,Total región Caribe,Mujeres,Población total,I,6071.452
 2025,Total región Caribe,Mujeres,Población total,II,6100.054333
+2026,Total región Caribe,Mujeres,Población total,I,6128.781167
 2010,Total región Caribe,Mujeres,Población en edad de trabajar,I,3365.988333
 2010,Total región Caribe,Mujeres,Población en edad de trabajar,II,3395.306167
 2011,Total región Caribe,Mujeres,Población en edad de trabajar,I,3424.589333
@@ -3549,6 +3659,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Caribe,Mujeres,Población en edad de trabajar,II,4520.009833
 2025,Total región Caribe,Mujeres,Población en edad de trabajar,I,4552.703333
 2025,Total región Caribe,Mujeres,Población en edad de trabajar,II,4585.037
+2026,Total región Caribe,Mujeres,Población en edad de trabajar,I,4618.101333
 2010,Total región Caribe,Mujeres,Fuerza de trabajo,I,1578.944601
 2010,Total región Caribe,Mujeres,Fuerza de trabajo,II,1662.236459
 2011,Total región Caribe,Mujeres,Fuerza de trabajo,I,1658.016126
@@ -3581,6 +3692,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Caribe,Mujeres,Fuerza de trabajo,II,2172.562526
 2025,Total región Caribe,Mujeres,Fuerza de trabajo,I,2174.742824
 2025,Total región Caribe,Mujeres,Fuerza de trabajo,II,2198.313314
+2026,Total región Caribe,Mujeres,Fuerza de trabajo,I,2234.773839
 2010,Total región Caribe,Mujeres,Población ocupada,I,1332.182705
 2010,Total región Caribe,Mujeres,Población ocupada,II,1418.748235
 2011,Total región Caribe,Mujeres,Población ocupada,I,1397.296941
@@ -3613,6 +3725,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Caribe,Mujeres,Población ocupada,II,1869.22526
 2025,Total región Caribe,Mujeres,Población ocupada,I,1832.858338
 2025,Total región Caribe,Mujeres,Población ocupada,II,1899.776435
+2026,Total región Caribe,Mujeres,Población ocupada,I,1927.761222
 2010,Total región Caribe,Mujeres,Población desocupada,I,246.761896
 2010,Total región Caribe,Mujeres,Población desocupada,II,243.488224
 2011,Total región Caribe,Mujeres,Población desocupada,I,260.719185
@@ -3645,6 +3758,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Caribe,Mujeres,Población desocupada,II,303.337266
 2025,Total región Caribe,Mujeres,Población desocupada,I,341.884486
 2025,Total región Caribe,Mujeres,Población desocupada,II,298.536879
+2026,Total región Caribe,Mujeres,Población desocupada,I,307.012618
 2010,Total región Caribe,Mujeres,Población fuera de la fuerza de trabajo,I,1787.043732
 2010,Total región Caribe,Mujeres,Población fuera de la fuerza de trabajo,II,1733.069707
 2011,Total región Caribe,Mujeres,Población fuera de la fuerza de trabajo,I,1766.573207
@@ -3677,6 +3791,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Caribe,Mujeres,Población fuera de la fuerza de trabajo,II,2347.447307
 2025,Total región Caribe,Mujeres,Población fuera de la fuerza de trabajo,I,2377.96051
 2025,Total región Caribe,Mujeres,Población fuera de la fuerza de trabajo,II,2386.723686
+2026,Total región Caribe,Mujeres,Población fuera de la fuerza de trabajo,I,2383.327494
 2010,Total región Caribe,Mujeres,Población subocupada,I,139.039042
 2010,Total región Caribe,Mujeres,Población subocupada,II,161.142339
 2011,Total región Caribe,Mujeres,Población subocupada,I,149.568303
@@ -3709,6 +3824,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Caribe,Mujeres,Población subocupada,II,207.168622
 2025,Total región Caribe,Mujeres,Población subocupada,I,196.472368
 2025,Total región Caribe,Mujeres,Población subocupada,II,191.867542
+2026,Total región Caribe,Mujeres,Población subocupada,I,181.311456
 2010,Total región Caribe,Mujeres,Fuerza de trabajo potencial,I,0.0
 2010,Total región Caribe,Mujeres,Fuerza de trabajo potencial,II,0.0
 2011,Total región Caribe,Mujeres,Fuerza de trabajo potencial,I,0.0
@@ -3741,6 +3857,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Caribe,Mujeres,Fuerza de trabajo potencial,II,316.131556
 2025,Total región Caribe,Mujeres,Fuerza de trabajo potencial,I,335.455862
 2025,Total región Caribe,Mujeres,Fuerza de trabajo potencial,II,335.25777
+2026,Total región Caribe,Mujeres,Fuerza de trabajo potencial,I,338.060271
 2010,Total región Oriental,Mujeres,% población en edad de trabajar,I,73.836429
 2010,Total región Oriental,Mujeres,% población en edad de trabajar,II,74.097735
 2011,Total región Oriental,Mujeres,% población en edad de trabajar,I,74.361048
@@ -3773,6 +3890,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Oriental,Mujeres,% población en edad de trabajar,II,78.517319
 2025,Total región Oriental,Mujeres,% población en edad de trabajar,I,78.645647
 2025,Total región Oriental,Mujeres,% población en edad de trabajar,II,78.771478
+2026,Total región Oriental,Mujeres,% población en edad de trabajar,I,78.909556
 2010,Total región Oriental,Mujeres,Tasa Global de Participación (TGP),I,58.285469
 2010,Total región Oriental,Mujeres,Tasa Global de Participación (TGP),II,56.757587
 2011,Total región Oriental,Mujeres,Tasa Global de Participación (TGP),I,57.088887
@@ -3805,6 +3923,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Oriental,Mujeres,Tasa Global de Participación (TGP),II,50.982977
 2025,Total región Oriental,Mujeres,Tasa Global de Participación (TGP),I,52.217892
 2025,Total región Oriental,Mujeres,Tasa Global de Participación (TGP),II,52.957575
+2026,Total región Oriental,Mujeres,Tasa Global de Participación (TGP),I,53.735311
 2010,Total región Oriental,Mujeres,Tasa de Ocupación (TO),I,50.700846
 2010,Total región Oriental,Mujeres,Tasa de Ocupación (TO),II,49.686659
 2011,Total región Oriental,Mujeres,Tasa de Ocupación (TO),I,49.851468
@@ -3837,6 +3956,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Oriental,Mujeres,Tasa de Ocupación (TO),II,45.54618
 2025,Total región Oriental,Mujeres,Tasa de Ocupación (TO),I,45.527048
 2025,Total región Oriental,Mujeres,Tasa de Ocupación (TO),II,47.33664
+2026,Total región Oriental,Mujeres,Tasa de Ocupación (TO),I,47.767881
 2010,Total región Oriental,Mujeres,Tasa de Desocupación (TD),I,13.012887
 2010,Total región Oriental,Mujeres,Tasa de Desocupación (TD),II,12.458119
 2011,Total región Oriental,Mujeres,Tasa de Desocupación (TD),I,12.677458
@@ -3869,6 +3989,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Oriental,Mujeres,Tasa de Desocupación (TD),II,10.663945
 2025,Total región Oriental,Mujeres,Tasa de Desocupación (TD),I,12.813317
 2025,Total región Oriental,Mujeres,Tasa de Desocupación (TD),II,10.614034
+2026,Total región Oriental,Mujeres,Tasa de Desocupación (TD),I,11.105231
 2010,Total región Oriental,Mujeres,Tasa de Subocupación (TS),I,11.288613
 2010,Total región Oriental,Mujeres,Tasa de Subocupación (TS),II,12.932941
 2011,Total región Oriental,Mujeres,Tasa de Subocupación (TS),I,11.53096
@@ -3901,6 +4022,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Oriental,Mujeres,Tasa de Subocupación (TS),II,6.439465
 2025,Total región Oriental,Mujeres,Tasa de Subocupación (TS),I,7.144074
 2025,Total región Oriental,Mujeres,Tasa de Subocupación (TS),II,7.308138
+2026,Total región Oriental,Mujeres,Tasa de Subocupación (TS),I,7.288252
 2010,Total región Oriental,Mujeres,Población total,I,3813.718667
 2010,Total región Oriental,Mujeres,Población total,II,3843.846
 2011,Total región Oriental,Mujeres,Población total,I,3874.843167
@@ -3933,6 +4055,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Oriental,Mujeres,Población total,II,5132.990667
 2025,Total región Oriental,Mujeres,Población total,I,5166.446333
 2025,Total región Oriental,Mujeres,Población total,II,5198.7745
+2026,Total región Oriental,Mujeres,Población total,I,5230.998667
 2010,Total región Oriental,Mujeres,Población en edad de trabajar,I,2815.913667
 2010,Total región Oriental,Mujeres,Población en edad de trabajar,II,2848.202833
 2011,Total región Oriental,Mujeres,Población en edad de trabajar,I,2881.374
@@ -3965,6 +4088,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Oriental,Mujeres,Población en edad de trabajar,II,4030.286667
 2025,Total región Oriental,Mujeres,Población en edad de trabajar,I,4063.185167
 2025,Total región Oriental,Mujeres,Población en edad de trabajar,II,4095.1515
+2026,Total región Oriental,Mujeres,Población en edad de trabajar,I,4127.757833
 2010,Total región Oriental,Mujeres,Fuerza de trabajo,I,1641.268479
 2010,Total región Oriental,Mujeres,Fuerza de trabajo,II,1616.571204
 2011,Total región Oriental,Mujeres,Fuerza de trabajo,I,1644.944354
@@ -3997,6 +4121,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Oriental,Mujeres,Fuerza de trabajo,II,2054.760124
 2025,Total región Oriental,Mujeres,Fuerza de trabajo,I,2121.709639
 2025,Total región Oriental,Mujeres,Fuerza de trabajo,II,2168.692932
+2026,Total región Oriental,Mujeres,Fuerza de trabajo,I,2218.06351
 2010,Total región Oriental,Mujeres,Población ocupada,I,1427.692065
 2010,Total región Oriental,Mujeres,Población ocupada,II,1415.176838
 2011,Total región Oriental,Mujeres,Población ocupada,I,1436.407232
@@ -4029,6 +4154,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Oriental,Mujeres,Población ocupada,II,1835.641632
 2025,Total región Oriental,Mujeres,Población ocupada,I,1849.84825
 2025,Total región Oriental,Mujeres,Población ocupada,II,1938.507129
+2026,Total región Oriental,Mujeres,Población ocupada,I,1971.742429
 2010,Total región Oriental,Mujeres,Población desocupada,I,213.576414
 2010,Total región Oriental,Mujeres,Población desocupada,II,201.394367
 2011,Total región Oriental,Mujeres,Población desocupada,I,208.537122
@@ -4061,6 +4187,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Oriental,Mujeres,Población desocupada,II,219.118492
 2025,Total región Oriental,Mujeres,Población desocupada,I,271.861389
 2025,Total región Oriental,Mujeres,Población desocupada,II,230.185803
+2026,Total región Oriental,Mujeres,Población desocupada,I,246.32108
 2010,Total región Oriental,Mujeres,Población fuera de la fuerza de trabajo,I,1174.645188
 2010,Total región Oriental,Mujeres,Población fuera de la fuerza de trabajo,II,1231.631629
 2011,Total región Oriental,Mujeres,Población fuera de la fuerza de trabajo,I,1236.429646
@@ -4093,6 +4220,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Oriental,Mujeres,Población fuera de la fuerza de trabajo,II,1975.526542
 2025,Total región Oriental,Mujeres,Población fuera de la fuerza de trabajo,I,1941.475528
 2025,Total región Oriental,Mujeres,Población fuera de la fuerza de trabajo,II,1926.458568
+2026,Total región Oriental,Mujeres,Población fuera de la fuerza de trabajo,I,1909.694324
 2010,Total región Oriental,Mujeres,Población subocupada,I,185.276444
 2010,Total región Oriental,Mujeres,Población subocupada,II,209.070201
 2011,Total región Oriental,Mujeres,Población subocupada,I,189.677875
@@ -4125,6 +4253,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Oriental,Mujeres,Población subocupada,II,132.315553
 2025,Total región Oriental,Mujeres,Población subocupada,I,151.576504
 2025,Total región Oriental,Mujeres,Población subocupada,II,158.491071
+2026,Total región Oriental,Mujeres,Población subocupada,I,161.658056
 2010,Total región Oriental,Mujeres,Fuerza de trabajo potencial,I,0.0
 2010,Total región Oriental,Mujeres,Fuerza de trabajo potencial,II,0.0
 2011,Total región Oriental,Mujeres,Fuerza de trabajo potencial,I,0.0
@@ -4157,6 +4286,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Oriental,Mujeres,Fuerza de trabajo potencial,II,140.09428
 2025,Total región Oriental,Mujeres,Fuerza de trabajo potencial,I,168.772473
 2025,Total región Oriental,Mujeres,Fuerza de trabajo potencial,II,183.616871
+2026,Total región Oriental,Mujeres,Fuerza de trabajo potencial,I,178.339491
 2010,Total región Central,Mujeres,% población en edad de trabajar,I,75.049848
 2010,Total región Central,Mujeres,% población en edad de trabajar,II,75.336234
 2011,Total región Central,Mujeres,% población en edad de trabajar,I,75.619868
@@ -4189,6 +4319,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Central,Mujeres,% población en edad de trabajar,II,80.534188
 2025,Total región Central,Mujeres,% población en edad de trabajar,I,80.663487
 2025,Total región Central,Mujeres,% población en edad de trabajar,II,80.787977
+2026,Total región Central,Mujeres,% población en edad de trabajar,I,80.917559
 2010,Total región Central,Mujeres,Tasa Global de Participación (TGP),I,52.329746
 2010,Total región Central,Mujeres,Tasa Global de Participación (TGP),II,52.103805
 2011,Total región Central,Mujeres,Tasa Global de Participación (TGP),I,50.811157
@@ -4221,6 +4352,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Central,Mujeres,Tasa Global de Participación (TGP),II,48.855592
 2025,Total región Central,Mujeres,Tasa Global de Participación (TGP),I,48.912622
 2025,Total región Central,Mujeres,Tasa Global de Participación (TGP),II,48.85325
+2026,Total región Central,Mujeres,Tasa Global de Participación (TGP),I,49.382807
 2010,Total región Central,Mujeres,Tasa de Ocupación (TO),I,42.629529
 2010,Total región Central,Mujeres,Tasa de Ocupación (TO),II,43.364332
 2011,Total región Central,Mujeres,Tasa de Ocupación (TO),I,41.842098
@@ -4253,6 +4385,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Central,Mujeres,Tasa de Ocupación (TO),II,43.398912
 2025,Total región Central,Mujeres,Tasa de Ocupación (TO),I,43.017396
 2025,Total región Central,Mujeres,Tasa de Ocupación (TO),II,44.444379
+2026,Total región Central,Mujeres,Tasa de Ocupación (TO),I,43.794946
 2010,Total región Central,Mujeres,Tasa de Desocupación (TD),I,18.536719
 2010,Total región Central,Mujeres,Tasa de Desocupación (TD),II,16.773196
 2011,Total región Central,Mujeres,Tasa de Desocupación (TD),I,17.651751
@@ -4285,6 +4418,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Central,Mujeres,Tasa de Desocupación (TD),II,11.168996
 2025,Total región Central,Mujeres,Tasa de Desocupación (TD),I,12.052566
 2025,Total región Central,Mujeres,Tasa de Desocupación (TD),II,9.024724
+2026,Total región Central,Mujeres,Tasa de Desocupación (TD),I,11.315399
 2010,Total región Central,Mujeres,Tasa de Subocupación (TS),I,12.57789
 2010,Total región Central,Mujeres,Tasa de Subocupación (TS),II,11.838578
 2011,Total región Central,Mujeres,Tasa de Subocupación (TS),I,12.249366
@@ -4315,6 +4449,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Central,Mujeres,Tasa de Subocupación (TS),II,6.448083
 2025,Total región Central,Mujeres,Tasa de Subocupación (TS),I,6.330697
 2025,Total región Central,Mujeres,Tasa de Subocupación (TS),II,6.426859
+2026,Total región Central,Mujeres,Tasa de Subocupación (TS),I,6.430994
 2010,Total región Central,Mujeres,Población total,I,5576.559167
 2010,Total región Central,Mujeres,Población total,II,5600.216
 2011,Total región Central,Mujeres,Población total,I,5623.762167
@@ -4347,6 +4482,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Central,Mujeres,Población total,II,6538.991833
 2025,Total región Central,Mujeres,Población total,I,6576.562333
 2025,Total región Central,Mujeres,Población total,II,6613.366667
+2026,Total región Central,Mujeres,Población total,I,6649.663667
 2010,Total región Central,Mujeres,Población en edad de trabajar,I,4185.199167
 2010,Total región Central,Mujeres,Población en edad de trabajar,II,4218.991833
 2011,Total región Central,Mujeres,Población en edad de trabajar,I,4252.6815
@@ -4379,6 +4515,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Central,Mujeres,Población en edad de trabajar,II,5266.124
 2025,Total región Central,Mujeres,Población en edad de trabajar,I,5304.8845
 2025,Total región Central,Mujeres,Población en edad de trabajar,II,5342.805167
+2026,Total región Central,Mujeres,Población en edad de trabajar,I,5380.7455
 2010,Total región Central,Mujeres,Fuerza de trabajo,I,2190.104113
 2010,Total región Central,Mujeres,Fuerza de trabajo,II,2198.25529
 2011,Total región Central,Mujeres,Fuerza de trabajo,I,2160.836657
@@ -4411,6 +4548,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Central,Mujeres,Fuerza de trabajo,II,2572.796037
 2025,Total región Central,Mujeres,Fuerza de trabajo,I,2594.758085
 2025,Total región Central,Mujeres,Fuerza de trabajo,II,2610.133962
+2026,Total región Central,Mujeres,Fuerza de trabajo,I,2657.163191
 2010,Total región Central,Mujeres,Población ocupada,I,1784.130672
 2010,Total región Central,Mujeres,Población ocupada,II,1829.537627
 2011,Total región Central,Mujeres,Población ocupada,I,1779.411144
@@ -4443,6 +4581,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Central,Mujeres,Población ocupada,II,2285.440547
 2025,Total región Central,Mujeres,Población ocupada,I,2282.02316
 2025,Total región Central,Mujeres,Población ocupada,II,2374.576575
+2026,Total región Central,Mujeres,Población ocupada,I,2356.494575
 2010,Total región Central,Mujeres,Población desocupada,I,405.973441
 2010,Total región Central,Mujeres,Población desocupada,II,368.717663
 2011,Total región Central,Mujeres,Población desocupada,I,381.425513
@@ -4475,6 +4614,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Central,Mujeres,Población desocupada,II,287.355491
 2025,Total región Central,Mujeres,Población desocupada,I,312.734925
 2025,Total región Central,Mujeres,Población desocupada,II,235.557387
+2026,Total región Central,Mujeres,Población desocupada,I,300.668616
 2010,Total región Central,Mujeres,Población fuera de la fuerza de trabajo,I,1995.095053
 2010,Total región Central,Mujeres,Población fuera de la fuerza de trabajo,II,2020.736544
 2011,Total región Central,Mujeres,Población fuera de la fuerza de trabajo,I,2091.844843
@@ -4507,6 +4647,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Central,Mujeres,Población fuera de la fuerza de trabajo,II,2693.327963
 2025,Total región Central,Mujeres,Población fuera de la fuerza de trabajo,I,2710.126415
 2025,Total región Central,Mujeres,Población fuera de la fuerza de trabajo,II,2732.671205
+2026,Total región Central,Mujeres,Población fuera de la fuerza de trabajo,I,2723.582309
 2010,Total región Central,Mujeres,Población subocupada,I,275.46889
 2010,Total región Central,Mujeres,Población subocupada,II,260.242163
 2011,Total región Central,Mujeres,Población subocupada,I,264.688798
@@ -4539,6 +4680,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Central,Mujeres,Población subocupada,II,165.896018
 2025,Total región Central,Mujeres,Población subocupada,I,164.26628
 2025,Total región Central,Mujeres,Población subocupada,II,167.749635
+2026,Total región Central,Mujeres,Población subocupada,I,170.881993
 2010,Total región Central,Mujeres,Fuerza de trabajo potencial,I,0.0
 2010,Total región Central,Mujeres,Fuerza de trabajo potencial,II,0.0
 2011,Total región Central,Mujeres,Fuerza de trabajo potencial,I,0.0
@@ -4571,6 +4713,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región Central,Mujeres,Fuerza de trabajo potencial,II,172.852441
 2025,Total región Central,Mujeres,Fuerza de trabajo potencial,I,176.83443
 2025,Total región Central,Mujeres,Fuerza de trabajo potencial,II,175.333208
+2026,Total región Central,Mujeres,Fuerza de trabajo potencial,I,162.130189
 2010,Total región  Pacífica,Mujeres,% población en edad de trabajar,I,73.63686
 2010,Total región  Pacífica,Mujeres,% población en edad de trabajar,II,73.842685
 2011,Total región  Pacífica,Mujeres,% población en edad de trabajar,I,74.046774
@@ -4603,6 +4746,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región  Pacífica,Mujeres,% población en edad de trabajar,II,78.530066
 2025,Total región  Pacífica,Mujeres,% población en edad de trabajar,I,78.683478
 2025,Total región  Pacífica,Mujeres,% población en edad de trabajar,II,78.838535
+2026,Total región  Pacífica,Mujeres,% población en edad de trabajar,I,78.987819
 2010,Total región  Pacífica,Mujeres,Tasa Global de Participación (TGP),I,56.642838
 2010,Total región  Pacífica,Mujeres,Tasa Global de Participación (TGP),II,57.431902
 2011,Total región  Pacífica,Mujeres,Tasa Global de Participación (TGP),I,55.094992
@@ -4635,6 +4779,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región  Pacífica,Mujeres,Tasa Global de Participación (TGP),II,54.951921
 2025,Total región  Pacífica,Mujeres,Tasa Global de Participación (TGP),I,53.626674
 2025,Total región  Pacífica,Mujeres,Tasa Global de Participación (TGP),II,53.974646
+2026,Total región  Pacífica,Mujeres,Tasa Global de Participación (TGP),I,55.897523
 2010,Total región  Pacífica,Mujeres,Tasa de Ocupación (TO),I,44.650786
 2010,Total región  Pacífica,Mujeres,Tasa de Ocupación (TO),II,45.767587
 2011,Total región  Pacífica,Mujeres,Tasa de Ocupación (TO),I,43.803134
@@ -4667,6 +4812,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región  Pacífica,Mujeres,Tasa de Ocupación (TO),II,48.281359
 2025,Total región  Pacífica,Mujeres,Tasa de Ocupación (TO),I,47.307957
 2025,Total región  Pacífica,Mujeres,Tasa de Ocupación (TO),II,48.296676
+2026,Total región  Pacífica,Mujeres,Tasa de Ocupación (TO),I,49.834481
 2010,Total región  Pacífica,Mujeres,Tasa de Desocupación (TD),I,21.171347
 2010,Total región  Pacífica,Mujeres,Tasa de Desocupación (TD),II,20.309818
 2011,Total región  Pacífica,Mujeres,Tasa de Desocupación (TD),I,20.495252
@@ -4699,6 +4845,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región  Pacífica,Mujeres,Tasa de Desocupación (TD),II,12.138906
 2025,Total región  Pacífica,Mujeres,Tasa de Desocupación (TD),I,11.782788
 2025,Total región  Pacífica,Mujeres,Tasa de Desocupación (TD),II,10.519699
+2026,Total región  Pacífica,Mujeres,Tasa de Desocupación (TD),I,10.846708
 2010,Total región  Pacífica,Mujeres,Tasa de Subocupación (TS),I,13.298099
 2010,Total región  Pacífica,Mujeres,Tasa de Subocupación (TS),II,13.915748
 2011,Total región  Pacífica,Mujeres,Tasa de Subocupación (TS),I,11.776578
@@ -4731,6 +4878,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región  Pacífica,Mujeres,Tasa de Subocupación (TS),II,9.97523
 2025,Total región  Pacífica,Mujeres,Tasa de Subocupación (TS),I,8.840183
 2025,Total región  Pacífica,Mujeres,Tasa de Subocupación (TS),II,8.319354
+2026,Total región  Pacífica,Mujeres,Tasa de Subocupación (TS),I,8.812205
 2010,Total región  Pacífica,Mujeres,Población total,I,3940.052333
 2010,Total región  Pacífica,Mujeres,Población total,II,3955.864167
 2011,Total región  Pacífica,Mujeres,Población total,I,3971.374
@@ -4763,6 +4911,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región  Pacífica,Mujeres,Población total,II,4407.764667
 2025,Total región  Pacífica,Mujeres,Población total,I,4428.728167
 2025,Total región  Pacífica,Mujeres,Población total,II,4449.7825
+2026,Total región  Pacífica,Mujeres,Población total,I,4471.158833
 2010,Total región  Pacífica,Mujeres,Población en edad de trabajar,I,2901.330833
 2010,Total región  Pacífica,Mujeres,Población en edad de trabajar,II,2921.116333
 2011,Total región  Pacífica,Mujeres,Población en edad de trabajar,I,2940.674333
@@ -4795,6 +4944,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región  Pacífica,Mujeres,Población en edad de trabajar,II,3461.4205
 2025,Total región  Pacífica,Mujeres,Población en edad de trabajar,I,3484.677333
 2025,Total región  Pacífica,Mujeres,Población en edad de trabajar,II,3508.143333
+2026,Total región  Pacífica,Mujeres,Población en edad de trabajar,I,3531.670833
 2010,Total región  Pacífica,Mujeres,Fuerza de trabajo,I,1643.396121
 2010,Total región  Pacífica,Mujeres,Fuerza de trabajo,II,1677.652666
 2011,Total región  Pacífica,Mujeres,Fuerza de trabajo,I,1620.164286
@@ -4827,6 +4977,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región  Pacífica,Mujeres,Fuerza de trabajo,II,1902.117053
 2025,Total región  Pacífica,Mujeres,Fuerza de trabajo,I,1868.716559
 2025,Total región  Pacífica,Mujeres,Fuerza de trabajo,II,1893.507961
+2026,Total región  Pacífica,Mujeres,Fuerza de trabajo,I,1974.116507
 2010,Total región  Pacífica,Mujeres,Población ocupada,I,1295.46702
 2010,Total región  Pacífica,Mujeres,Población ocupada,II,1336.924461
 2011,Total región  Pacífica,Mujeres,Población ocupada,I,1288.107527
@@ -4859,6 +5010,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región  Pacífica,Mujeres,Población ocupada,II,1671.220854
 2025,Total región  Pacífica,Mujeres,Población ocupada,I,1648.529653
 2025,Total región  Pacífica,Mujeres,Población ocupada,II,1694.316614
+2026,Total región  Pacífica,Mujeres,Población ocupada,I,1759.989848
 2010,Total región  Pacífica,Mujeres,Población desocupada,I,347.9291
 2010,Total región  Pacífica,Mujeres,Población desocupada,II,340.728205
 2011,Total región  Pacífica,Mujeres,Población desocupada,I,332.056758
@@ -4891,6 +5043,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región  Pacífica,Mujeres,Población desocupada,II,230.896198
 2025,Total región  Pacífica,Mujeres,Población desocupada,I,220.186906
 2025,Total región  Pacífica,Mujeres,Población desocupada,II,199.191347
+2026,Total región  Pacífica,Mujeres,Población desocupada,I,214.126659
 2010,Total región  Pacífica,Mujeres,Población fuera de la fuerza de trabajo,I,1257.934713
 2010,Total región  Pacífica,Mujeres,Población fuera de la fuerza de trabajo,II,1243.463667
 2011,Total región  Pacífica,Mujeres,Población fuera de la fuerza de trabajo,I,1320.510048
@@ -4923,6 +5076,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región  Pacífica,Mujeres,Población fuera de la fuerza de trabajo,II,1559.303447
 2025,Total región  Pacífica,Mujeres,Población fuera de la fuerza de trabajo,I,1615.960774
 2025,Total región  Pacífica,Mujeres,Población fuera de la fuerza de trabajo,II,1614.635372
+2026,Total región  Pacífica,Mujeres,Población fuera de la fuerza de trabajo,I,1557.554326
 2010,Total región  Pacífica,Mujeres,Población subocupada,I,218.540449
 2010,Total región  Pacífica,Mujeres,Población subocupada,II,233.45791
 2011,Total región  Pacífica,Mujeres,Población subocupada,I,190.799911
@@ -4955,6 +5109,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región  Pacífica,Mujeres,Población subocupada,II,189.740559
 2025,Total región  Pacífica,Mujeres,Población subocupada,I,165.197956
 2025,Total región  Pacífica,Mujeres,Población subocupada,II,157.527636
+2026,Total región  Pacífica,Mujeres,Población subocupada,I,173.963191
 2010,Total región  Pacífica,Mujeres,Fuerza de trabajo potencial,I,0.0
 2010,Total región  Pacífica,Mujeres,Fuerza de trabajo potencial,II,0.0
 2011,Total región  Pacífica,Mujeres,Fuerza de trabajo potencial,I,0.0
@@ -4987,6 +5142,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Total región  Pacífica,Mujeres,Fuerza de trabajo potencial,II,267.525428
 2025,Total región  Pacífica,Mujeres,Fuerza de trabajo potencial,I,266.052082
 2025,Total región  Pacífica,Mujeres,Fuerza de trabajo potencial,II,288.815213
+2026,Total región  Pacífica,Mujeres,Fuerza de trabajo potencial,I,277.81991
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,% población en edad de trabajar,I,0.0
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,% población en edad de trabajar,II,0.0
 2011,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,% población en edad de trabajar,I,0.0
@@ -5019,6 +5175,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,% población en edad de trabajar,II,76.383982
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,% población en edad de trabajar,I,76.576716
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,% población en edad de trabajar,II,76.766738
+2026,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,% población en edad de trabajar,I,76.971389
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Tasa Global de Participación (TGP),I,0.0
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Tasa Global de Participación (TGP),II,0.0
 2011,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Tasa Global de Participación (TGP),I,0.0
@@ -5051,6 +5208,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Tasa Global de Participación (TGP),II,61.729449
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Tasa Global de Participación (TGP),I,61.735917
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Tasa Global de Participación (TGP),II,60.819688
+2026,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Tasa Global de Participación (TGP),I,59.650122
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Tasa de Ocupación (TO),I,0.0
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Tasa de Ocupación (TO),II,0.0
 2011,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Tasa de Ocupación (TO),I,0.0
@@ -5083,6 +5241,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Tasa de Ocupación (TO),II,52.309063
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Tasa de Ocupación (TO),I,51.606455
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Tasa de Ocupación (TO),II,53.062774
+2026,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Tasa de Ocupación (TO),I,51.892145
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Tasa de Desocupación (TD),I,0.0
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Tasa de Desocupación (TD),II,0.0
 2011,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Tasa de Desocupación (TD),I,0.0
@@ -5115,6 +5274,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Tasa de Desocupación (TD),II,15.260764
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Tasa de Desocupación (TD),I,16.407728
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Tasa de Desocupación (TD),II,12.753953
+2026,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Tasa de Desocupación (TD),I,13.005803
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Tasa de Subocupación (TS),I,0.0
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Tasa de Subocupación (TS),II,0.0
 2011,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Tasa de Subocupación (TS),I,0.0
@@ -5147,6 +5307,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Tasa de Subocupación (TS),II,6.860116
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Tasa de Subocupación (TS),I,4.901066
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Tasa de Subocupación (TS),II,5.160056
+2026,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Tasa de Subocupación (TS),I,4.338895
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población total,I,0.0
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población total,II,0.0
 2011,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población total,I,0.0
@@ -5179,6 +5340,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población total,II,240.519667
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población total,I,242.281
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población total,II,244.002182
+2026,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población total,I,245.7045
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población en edad de trabajar,I,0.0
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población en edad de trabajar,II,0.0
 2011,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población en edad de trabajar,I,0.0
@@ -5211,6 +5373,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población en edad de trabajar,II,183.7185
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población en edad de trabajar,I,185.530833
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población en edad de trabajar,II,187.312516
+2026,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población en edad de trabajar,I,189.122167
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Fuerza de trabajo,I,0.0
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Fuerza de trabajo,II,0.0
 2011,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Fuerza de trabajo,I,0.0
@@ -5243,6 +5406,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Fuerza de trabajo,II,113.408418
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Fuerza de trabajo,I,114.53916
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Fuerza de trabajo,II,113.922888
+2026,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Fuerza de trabajo,I,112.811604
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población ocupada,I,0.0
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población ocupada,II,0.0
 2011,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población ocupada,I,0.0
@@ -5275,6 +5439,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población ocupada,II,96.101426
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población ocupada,I,95.745886
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población ocupada,II,99.393216
+2026,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población ocupada,I,98.139549
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población desocupada,I,0.0
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población desocupada,II,0.0
 2011,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población desocupada,I,0.0
@@ -5307,6 +5472,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población desocupada,II,17.306992
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población desocupada,I,18.793274
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población desocupada,II,14.529672
+2026,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población desocupada,I,14.672055
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población fuera de la fuerza de trabajo,I,0.0
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población fuera de la fuerza de trabajo,II,0.0
 2011,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población fuera de la fuerza de trabajo,I,0.0
@@ -5339,6 +5505,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población fuera de la fuerza de trabajo,II,70.310082
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población fuera de la fuerza de trabajo,I,70.991673
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población fuera de la fuerza de trabajo,II,73.389628
+2026,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población fuera de la fuerza de trabajo,I,76.310563
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población subocupada,I,0.0
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población subocupada,II,0.0
 2011,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población subocupada,I,0.0
@@ -5371,6 +5538,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población subocupada,II,7.77995
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población subocupada,I,5.61364
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población subocupada,II,5.878484
+2026,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Población subocupada,I,4.894777
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Fuerza de trabajo potencial,I,0.0
 2010,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Fuerza de trabajo potencial,II,0.0
 2011,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Fuerza de trabajo potencial,I,0.0
@@ -5403,6 +5571,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Fuerza de trabajo potencial,II,6.117022
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Fuerza de trabajo potencial,I,5.324947
 2025,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Fuerza de trabajo potencial,II,5.775744
+2026,"Total regiones Orinoquía, Amazonía e Insular*",Mujeres,Fuerza de trabajo potencial,I,5.354605
 2010,Bogotá D. C.,Mujeres,% población en edad de trabajar,I,76.574328
 2010,Bogotá D. C.,Mujeres,% población en edad de trabajar,II,76.982128
 2011,Bogotá D. C.,Mujeres,% población en edad de trabajar,I,77.388391
@@ -5435,6 +5604,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Bogotá D. C.,Mujeres,% población en edad de trabajar,II,83.339786
 2025,Bogotá D. C.,Mujeres,% población en edad de trabajar,I,83.445904
 2025,Bogotá D. C.,Mujeres,% población en edad de trabajar,II,83.548026
+2026,Bogotá D. C.,Mujeres,% población en edad de trabajar,I,83.650727
 2010,Bogotá D. C.,Mujeres,Tasa Global de Participación (TGP),I,64.423405
 2010,Bogotá D. C.,Mujeres,Tasa Global de Participación (TGP),II,67.352101
 2011,Bogotá D. C.,Mujeres,Tasa Global de Participación (TGP),I,68.043634
@@ -5467,6 +5637,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Bogotá D. C.,Mujeres,Tasa Global de Participación (TGP),II,63.661466
 2025,Bogotá D. C.,Mujeres,Tasa Global de Participación (TGP),I,63.67245
 2025,Bogotá D. C.,Mujeres,Tasa Global de Participación (TGP),II,64.00227
+2026,Bogotá D. C.,Mujeres,Tasa Global de Participación (TGP),I,63.062803
 2010,Bogotá D. C.,Mujeres,Tasa de Ocupación (TO),I,55.835215
 2010,Bogotá D. C.,Mujeres,Tasa de Ocupación (TO),II,59.621145
 2011,Bogotá D. C.,Mujeres,Tasa de Ocupación (TO),I,59.370858
@@ -5499,6 +5670,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Bogotá D. C.,Mujeres,Tasa de Ocupación (TO),II,57.175597
 2025,Bogotá D. C.,Mujeres,Tasa de Ocupación (TO),I,57.073253
 2025,Bogotá D. C.,Mujeres,Tasa de Ocupación (TO),II,58.840589
+2026,Bogotá D. C.,Mujeres,Tasa de Ocupación (TO),I,57.528957
 2010,Bogotá D. C.,Mujeres,Tasa de Desocupación (TD),I,13.330853
 2010,Bogotá D. C.,Mujeres,Tasa de Desocupación (TD),II,11.478418
 2011,Bogotá D. C.,Mujeres,Tasa de Desocupación (TD),I,12.745903
@@ -5531,6 +5703,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Bogotá D. C.,Mujeres,Tasa de Desocupación (TD),II,10.18806
 2025,Bogotá D. C.,Mujeres,Tasa de Desocupación (TD),I,10.364288
 2025,Bogotá D. C.,Mujeres,Tasa de Desocupación (TD),II,8.06484
+2026,Bogotá D. C.,Mujeres,Tasa de Desocupación (TD),I,8.775135
 2010,Bogotá D. C.,Mujeres,Tasa de Subocupación (TS),I,14.257587
 2010,Bogotá D. C.,Mujeres,Tasa de Subocupación (TS),II,15.92622
 2011,Bogotá D. C.,Mujeres,Tasa de Subocupación (TS),I,15.081808
@@ -5563,6 +5736,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Bogotá D. C.,Mujeres,Tasa de Subocupación (TS),II,8.365245
 2025,Bogotá D. C.,Mujeres,Tasa de Subocupación (TS),I,7.359722
 2025,Bogotá D. C.,Mujeres,Tasa de Subocupación (TS),II,7.144355
+2026,Bogotá D. C.,Mujeres,Tasa de Subocupación (TS),I,6.584644
 2010,Bogotá D. C.,Mujeres,Población total,I,3672.7015
 2010,Bogotá D. C.,Mujeres,Población total,II,3689.3375
 2011,Bogotá D. C.,Mujeres,Población total,I,3704.277167
@@ -5595,6 +5769,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Bogotá D. C.,Mujeres,Población total,II,4179.647167
 2025,Bogotá D. C.,Mujeres,Población total,I,4196.775
 2025,Bogotá D. C.,Mujeres,Población total,II,4213.9655
+2026,Bogotá D. C.,Mujeres,Población total,I,4231.125833
 2010,Bogotá D. C.,Mujeres,Población en edad de trabajar,I,2812.3465
 2010,Bogotá D. C.,Mujeres,Población en edad de trabajar,II,2840.1305
 2011,Bogotá D. C.,Mujeres,Población en edad de trabajar,I,2866.6805
@@ -5627,6 +5802,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Bogotá D. C.,Mujeres,Población en edad de trabajar,II,3483.309
 2025,Bogotá D. C.,Mujeres,Población en edad de trabajar,I,3502.036833
 2025,Bogotá D. C.,Mujeres,Población en edad de trabajar,II,3520.685
+2026,Bogotá D. C.,Mujeres,Población en edad de trabajar,I,3539.3675
 2010,Bogotá D. C.,Mujeres,Fuerza de trabajo,I,1811.809369
 2010,Bogotá D. C.,Mujeres,Fuerza de trabajo,II,1912.887561
 2011,Bogotá D. C.,Mujeres,Fuerza de trabajo,I,1950.593595
@@ -5659,6 +5835,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Bogotá D. C.,Mujeres,Fuerza de trabajo,II,2217.525562
 2025,Bogotá D. C.,Mujeres,Fuerza de trabajo,I,2229.832646
 2025,Bogotá D. C.,Mujeres,Fuerza de trabajo,II,2253.318321
+2026,Bogotá D. C.,Mujeres,Fuerza de trabajo,I,2232.024361
 2010,Bogotá D. C.,Mujeres,Población ocupada,I,1570.279727
 2010,Bogotá D. C.,Mujeres,Población ocupada,II,1693.318329
 2011,Bogotá D. C.,Mujeres,Población ocupada,I,1701.972821
@@ -5691,6 +5868,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Bogotá D. C.,Mujeres,Población ocupada,II,1991.60273
 2025,Bogotá D. C.,Mujeres,Población ocupada,I,1998.726358
 2025,Bogotá D. C.,Mujeres,Población ocupada,II,2071.591801
+2026,Bogotá D. C.,Mujeres,Población ocupada,I,2036.161203
 2010,Bogotá D. C.,Mujeres,Población desocupada,I,241.529642
 2010,Bogotá D. C.,Mujeres,Población desocupada,II,219.569233
 2011,Bogotá D. C.,Mujeres,Población desocupada,I,248.620773
@@ -5723,6 +5901,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Bogotá D. C.,Mujeres,Población desocupada,II,225.922832
 2025,Bogotá D. C.,Mujeres,Población desocupada,I,231.106288
 2025,Bogotá D. C.,Mujeres,Población desocupada,II,181.726521
+2026,Bogotá D. C.,Mujeres,Población desocupada,I,195.863157
 2010,Bogotá D. C.,Mujeres,Población fuera de la fuerza de trabajo,I,1000.537131
 2010,Bogotá D. C.,Mujeres,Población fuera de la fuerza de trabajo,II,927.242939
 2011,Bogotá D. C.,Mujeres,Población fuera de la fuerza de trabajo,I,916.086905
@@ -5755,6 +5934,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Bogotá D. C.,Mujeres,Población fuera de la fuerza de trabajo,II,1265.783438
 2025,Bogotá D. C.,Mujeres,Población fuera de la fuerza de trabajo,I,1272.204187
 2025,Bogotá D. C.,Mujeres,Población fuera de la fuerza de trabajo,II,1267.366679
+2026,Bogotá D. C.,Mujeres,Población fuera de la fuerza de trabajo,I,1307.343139
 2010,Bogotá D. C.,Mujeres,Población subocupada,I,258.320299
 2010,Bogotá D. C.,Mujeres,Población subocupada,II,304.650678
 2011,Bogotá D. C.,Mujeres,Población subocupada,I,294.184779
@@ -5787,6 +5967,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Bogotá D. C.,Mujeres,Población subocupada,II,185.501447
 2025,Bogotá D. C.,Mujeres,Población subocupada,I,164.109494
 2025,Bogotá D. C.,Mujeres,Población subocupada,II,160.985053
+2026,Bogotá D. C.,Mujeres,Población subocupada,I,146.970857
 2010,Bogotá D. C.,Mujeres,Fuerza de trabajo potencial,I,0.0
 2010,Bogotá D. C.,Mujeres,Fuerza de trabajo potencial,II,0.0
 2011,Bogotá D. C.,Mujeres,Fuerza de trabajo potencial,I,0.0
@@ -5819,3 +6000,4 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2024,Bogotá D. C.,Mujeres,Fuerza de trabajo potencial,II,162.358803
 2025,Bogotá D. C.,Mujeres,Fuerza de trabajo potencial,I,150.844223
 2025,Bogotá D. C.,Mujeres,Fuerza de trabajo potencial,II,134.29381
+2026,Bogotá D. C.,Mujeres,Fuerza de trabajo potencial,I,107.251071
