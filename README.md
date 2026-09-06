@@ -140,6 +140,10 @@ logo/                 ← app logo (SVG)
 
 ## Data pipeline
 
+> **Note:** The `data/original/` folders were deleted due to limits with
+> Git LFS. If you want access to them, send me an email and I will share
+> them with you.
+
 Raw workbooks downloaded from each source live in `data/original/`. The
 scripts in `clean_data/` transform them into the clean CSVs under `data/`
 that the app reads:

@@ -145,6 +145,10 @@ logo/                 ← logo de la aplicación (SVG)
 
 ## Flujo de datos
 
+> **Nota:** Las carpetas `data/original/` fueron eliminadas debido a límites
+> con Git LFS. Si quieres acceder a ellas, envíame un correo y te las
+> compartiré.
+
 Los archivos originales descargados de cada fuente están en
 `data/original/`. Los scripts de `clean_data/` los transforman en los CSV
 limpios de `data/` que lee la aplicación:
