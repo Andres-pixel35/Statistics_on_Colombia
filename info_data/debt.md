@@ -4,7 +4,7 @@
 
 **debt**: Go to this [page](https://www.irc.gov.co/deuda-publica/perfil-deuda-publica-gnc), scroll down to "documentos" and download the file "Histórico Total currentMonthCurrentYear"; then store it at:
 ```bash
-"/path/to/the/repo/colombia/data/original/hacienda/debt/Histórico Total currentMonthCurrentYear.xls"
+"/path/to/the/repo/colombia/data/original/hacienda/debt/total.xls"
 ```
 
 ## Processing
