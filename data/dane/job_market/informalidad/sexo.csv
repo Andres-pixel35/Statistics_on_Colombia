@@ -63,6 +63,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,Total nacional,Total,Población ocupada,Feb - Abr,24241.02269
 2026,Total nacional,Total,Población ocupada,Mar - May,24404.076258
 2026,Total nacional,Total,Población ocupada,Abr - Jun,24439.674599
+2026,Total nacional,Total,Población ocupada,May - Jul,24529.599832
 2021,Total nacional,Total,Formal,Ene - Mar,7785.653908666667
 2021,Total nacional,Total,Formal,Feb - Abr,7909.355157000001
 2021,Total nacional,Total,Formal,Mar - May,8072.084484
@@ -127,6 +128,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,Total nacional,Total,Formal,Feb - Abr,10896.187587
 2026,Total nacional,Total,Formal,Mar - May,11055.548043
 2026,Total nacional,Total,Formal,Abr - Jun,11115.764133
+2026,Total nacional,Total,Formal,May - Jul,11134.238111
 2021,Total nacional,Total,Informal,Ene - Mar,12001.55655
 2021,Total nacional,Total,Informal,Feb - Abr,12094.802355666665
 2021,Total nacional,Total,Informal,Mar - May,11874.353662333333
@@ -191,6 +193,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,Total nacional,Total,Informal,Feb - Abr,13344.835103
 2026,Total nacional,Total,Informal,Mar - May,13348.528215
 2026,Total nacional,Total,Informal,Abr - Jun,13323.910466
+2026,Total nacional,Total,Informal,May - Jul,13395.361721
 2021,Total nacional,Hombres,Población ocupada,Ene - Mar,12111.381734
 2021,Total nacional,Hombres,Población ocupada,Feb - Abr,12236.584305333332
 2021,Total nacional,Hombres,Población ocupada,Mar - May,12198.133271333334
@@ -255,6 +258,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,Total nacional,Hombres,Población ocupada,Feb - Abr,14044.359246
 2026,Total nacional,Hombres,Población ocupada,Mar - May,14143.7301
 2026,Total nacional,Hombres,Población ocupada,Abr - Jun,14100.078559
+2026,Total nacional,Hombres,Población ocupada,May - Jul,14199.572437
 2021,Total nacional,Hombres,Formal,Ene - Mar,4397.8566433333335
 2021,Total nacional,Hombres,Formal,Feb - Abr,4517.76494
 2021,Total nacional,Hombres,Formal,Mar - May,4613.208385666668
@@ -319,6 +323,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,Total nacional,Hombres,Formal,Feb - Abr,5959.35986
 2026,Total nacional,Hombres,Formal,Mar - May,6084.001678
 2026,Total nacional,Hombres,Formal,Abr - Jun,6100.408521
+2026,Total nacional,Hombres,Formal,May - Jul,6124.808752
 2021,Total nacional,Hombres,Informal,Ene - Mar,7713.525090666666
 2021,Total nacional,Hombres,Informal,Feb - Abr,7718.819365333333
 2021,Total nacional,Hombres,Informal,Mar - May,7584.924885666666
@@ -383,6 +388,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,Total nacional,Hombres,Informal,Feb - Abr,8084.999385
 2026,Total nacional,Hombres,Informal,Mar - May,8059.728422
 2026,Total nacional,Hombres,Informal,Abr - Jun,7999.670038
+2026,Total nacional,Hombres,Informal,May - Jul,8074.763685
 2021,Total nacional,Mujeres,Población ocupada,Ene - Mar,7675.828724666666
 2021,Total nacional,Mujeres,Población ocupada,Feb - Abr,7767.573207333334
 2021,Total nacional,Mujeres,Población ocupada,Mar - May,7748.304875000001
@@ -447,6 +453,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,Total nacional,Mujeres,Población ocupada,Feb - Abr,10196.663444
 2026,Total nacional,Mujeres,Población ocupada,Mar - May,10260.346158
 2026,Total nacional,Mujeres,Población ocupada,Abr - Jun,10339.59604
+2026,Total nacional,Mujeres,Población ocupada,May - Jul,10330.027395
 2021,Total nacional,Mujeres,Formal,Ene - Mar,3387.797265333333
 2021,Total nacional,Mujeres,Formal,Feb - Abr,3391.590216666666
 2021,Total nacional,Mujeres,Formal,Mar - May,3458.876098
@@ -511,6 +518,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,Total nacional,Mujeres,Formal,Feb - Abr,4936.827726
 2026,Total nacional,Mujeres,Formal,Mar - May,4971.546365
 2026,Total nacional,Mujeres,Formal,Abr - Jun,5015.355612
+2026,Total nacional,Mujeres,Formal,May - Jul,5009.429358
 2021,Total nacional,Mujeres,Informal,Ene - Mar,4288.031459333334
 2021,Total nacional,Mujeres,Informal,Feb - Abr,4375.982990666667
 2021,Total nacional,Mujeres,Informal,Mar - May,4289.428777
@@ -575,6 +583,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,Total nacional,Mujeres,Informal,Feb - Abr,5259.835718
 2026,Total nacional,Mujeres,Informal,Mar - May,5288.799793
 2026,Total nacional,Mujeres,Informal,Abr - Jun,5324.240428
+2026,Total nacional,Mujeres,Informal,May - Jul,5320.598037
 2021,13 Ciudades y áreas metropolitanas,Total,Población ocupada,Ene - Mar,9226.413326333335
 2021,13 Ciudades y áreas metropolitanas,Total,Población ocupada,Feb - Abr,9320.446573000001
 2021,13 Ciudades y áreas metropolitanas,Total,Población ocupada,Mar - May,9341.646440999999
@@ -639,6 +648,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Total,Población ocupada,Feb - Abr,11386.328947
 2026,13 Ciudades y áreas metropolitanas,Total,Población ocupada,Mar - May,11420.206475
 2026,13 Ciudades y áreas metropolitanas,Total,Población ocupada,Abr - Jun,11419.706218
+2026,13 Ciudades y áreas metropolitanas,Total,Población ocupada,May - Jul,11448.753496
 2021,13 Ciudades y áreas metropolitanas,Total,Formal,Ene - Mar,4990.366199666666
 2021,13 Ciudades y áreas metropolitanas,Total,Formal,Feb - Abr,4999.7586716666665
 2021,13 Ciudades y áreas metropolitanas,Total,Formal,Mar - May,5089.547187333334
@@ -703,6 +713,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Total,Formal,Feb - Abr,6698.7158
 2026,13 Ciudades y áreas metropolitanas,Total,Formal,Mar - May,6771.720593
 2026,13 Ciudades y áreas metropolitanas,Total,Formal,Abr - Jun,6772.921121
+2026,13 Ciudades y áreas metropolitanas,Total,Formal,May - Jul,6804.090369
 2021,13 Ciudades y áreas metropolitanas,Total,Informal,Ene - Mar,4236.047126666667
 2021,13 Ciudades y áreas metropolitanas,Total,Informal,Feb - Abr,4320.687901333334
 2021,13 Ciudades y áreas metropolitanas,Total,Informal,Mar - May,4252.099253666666
@@ -767,6 +778,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Total,Informal,Feb - Abr,4687.613147
 2026,13 Ciudades y áreas metropolitanas,Total,Informal,Mar - May,4648.485882
 2026,13 Ciudades y áreas metropolitanas,Total,Informal,Abr - Jun,4646.785097
+2026,13 Ciudades y áreas metropolitanas,Total,Informal,May - Jul,4644.663127
 2021,13 Ciudades y áreas metropolitanas,Hombres,Población ocupada,Ene - Mar,5165.29887
 2021,13 Ciudades y áreas metropolitanas,Hombres,Población ocupada,Feb - Abr,5225.063846666667
 2021,13 Ciudades y áreas metropolitanas,Hombres,Población ocupada,Mar - May,5263.415121999999
@@ -831,6 +843,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Hombres,Población ocupada,Feb - Abr,6139.054208
 2026,13 Ciudades y áreas metropolitanas,Hombres,Población ocupada,Mar - May,6165.188485
 2026,13 Ciudades y áreas metropolitanas,Hombres,Población ocupada,Abr - Jun,6139.966441
+2026,13 Ciudades y áreas metropolitanas,Hombres,Población ocupada,May - Jul,6159.643221
 2021,13 Ciudades y áreas metropolitanas,Hombres,Formal,Ene - Mar,2707.158548666667
 2021,13 Ciudades y áreas metropolitanas,Hombres,Formal,Feb - Abr,2746.795418
 2021,13 Ciudades y áreas metropolitanas,Hombres,Formal,Mar - May,2799.9860243333333
@@ -895,6 +908,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Hombres,Formal,Feb - Abr,3528.88071
 2026,13 Ciudades y áreas metropolitanas,Hombres,Formal,Mar - May,3605.77069
 2026,13 Ciudades y áreas metropolitanas,Hombres,Formal,Abr - Jun,3582.240747
+2026,13 Ciudades y áreas metropolitanas,Hombres,Formal,May - Jul,3609.614149
 2021,13 Ciudades y áreas metropolitanas,Hombres,Informal,Ene - Mar,2458.1403213333333
 2021,13 Ciudades y áreas metropolitanas,Hombres,Informal,Feb - Abr,2478.2684286666668
 2021,13 Ciudades y áreas metropolitanas,Hombres,Informal,Mar - May,2463.4290976666666
@@ -959,6 +973,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Hombres,Informal,Feb - Abr,2610.173498
 2026,13 Ciudades y áreas metropolitanas,Hombres,Informal,Mar - May,2559.417795
 2026,13 Ciudades y áreas metropolitanas,Hombres,Informal,Abr - Jun,2557.725694
+2026,13 Ciudades y áreas metropolitanas,Hombres,Informal,May - Jul,2550.029071
 2021,13 Ciudades y áreas metropolitanas,Mujeres,Población ocupada,Ene - Mar,4061.1144563333332
 2021,13 Ciudades y áreas metropolitanas,Mujeres,Población ocupada,Feb - Abr,4095.3827263333333
 2021,13 Ciudades y áreas metropolitanas,Mujeres,Población ocupada,Mar - May,4078.231319
@@ -1023,6 +1038,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Mujeres,Población ocupada,Feb - Abr,5247.274739
 2026,13 Ciudades y áreas metropolitanas,Mujeres,Población ocupada,Mar - May,5255.01799
 2026,13 Ciudades y áreas metropolitanas,Mujeres,Población ocupada,Abr - Jun,5279.739777
+2026,13 Ciudades y áreas metropolitanas,Mujeres,Población ocupada,May - Jul,5289.110275
 2021,13 Ciudades y áreas metropolitanas,Mujeres,Formal,Ene - Mar,2283.207650666667
 2021,13 Ciudades y áreas metropolitanas,Mujeres,Formal,Feb - Abr,2252.9632533333333
 2021,13 Ciudades y áreas metropolitanas,Mujeres,Formal,Mar - May,2289.5611630000003
@@ -1087,6 +1103,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Mujeres,Formal,Feb - Abr,3169.835089
 2026,13 Ciudades y áreas metropolitanas,Mujeres,Formal,Mar - May,3165.949902
 2026,13 Ciudades y áreas metropolitanas,Mujeres,Formal,Abr - Jun,3190.680374
+2026,13 Ciudades y áreas metropolitanas,Mujeres,Formal,May - Jul,3194.47622
 2021,13 Ciudades y áreas metropolitanas,Mujeres,Informal,Ene - Mar,1777.9068053333333
 2021,13 Ciudades y áreas metropolitanas,Mujeres,Informal,Feb - Abr,1842.4194723333333
 2021,13 Ciudades y áreas metropolitanas,Mujeres,Informal,Mar - May,1788.6701556666667
@@ -1151,6 +1168,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Mujeres,Informal,Feb - Abr,2077.43965
 2026,13 Ciudades y áreas metropolitanas,Mujeres,Informal,Mar - May,2089.068087
 2026,13 Ciudades y áreas metropolitanas,Mujeres,Informal,Abr - Jun,2089.059403
+2026,13 Ciudades y áreas metropolitanas,Mujeres,Informal,May - Jul,2094.634055
 2021,23 Ciudades y áreas metropolitanas,Total,Población ocupada,Ene - Mar,10207.340572
 2021,23 Ciudades y áreas metropolitanas,Total,Población ocupada,Feb - Abr,10314.171929333332
 2021,23 Ciudades y áreas metropolitanas,Total,Población ocupada,Mar - May,10331.821430333332
@@ -1215,6 +1233,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Total,Población ocupada,Feb - Abr,12582.268196
 2026,23 Ciudades y áreas metropolitanas,Total,Población ocupada,Mar - May,12619.478694
 2026,23 Ciudades y áreas metropolitanas,Total,Población ocupada,Abr - Jun,12627.459838
+2026,23 Ciudades y áreas metropolitanas,Total,Población ocupada,May - Jul,12659.608284
 2021,23 Ciudades y áreas metropolitanas,Total,Formal,Ene - Mar,5381.842067
 2021,23 Ciudades y áreas metropolitanas,Total,Formal,Feb - Abr,5397.806292666667
 2021,23 Ciudades y áreas metropolitanas,Total,Formal,Mar - May,5488.904758333333
@@ -1279,6 +1298,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Total,Formal,Feb - Abr,7252.805243
 2026,23 Ciudades y áreas metropolitanas,Total,Formal,Mar - May,7326.40866
 2026,23 Ciudades y áreas metropolitanas,Total,Formal,Abr - Jun,7331.209974
+2026,23 Ciudades y áreas metropolitanas,Total,Formal,May - Jul,7357.198758
 2021,23 Ciudades y áreas metropolitanas,Total,Informal,Ene - Mar,4825.498504666667
 2021,23 Ciudades y áreas metropolitanas,Total,Informal,Feb - Abr,4916.365636333333
 2021,23 Ciudades y áreas metropolitanas,Total,Informal,Mar - May,4842.916671666667
@@ -1343,6 +1363,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Total,Informal,Feb - Abr,5329.462953
 2026,23 Ciudades y áreas metropolitanas,Total,Informal,Mar - May,5293.070033
 2026,23 Ciudades y áreas metropolitanas,Total,Informal,Abr - Jun,5296.249864
+2026,23 Ciudades y áreas metropolitanas,Total,Informal,May - Jul,5302.409526
 2021,23 Ciudades y áreas metropolitanas,Hombres,Población ocupada,Ene - Mar,5744.945690666667
 2021,23 Ciudades y áreas metropolitanas,Hombres,Población ocupada,Feb - Abr,5811.849338
 2021,23 Ciudades y áreas metropolitanas,Hombres,Población ocupada,Mar - May,5850.417673666667
@@ -1407,6 +1428,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Hombres,Población ocupada,Feb - Abr,6804.654601
 2026,23 Ciudades y áreas metropolitanas,Hombres,Población ocupada,Mar - May,6835.501223
 2026,23 Ciudades y áreas metropolitanas,Hombres,Población ocupada,Abr - Jun,6818.063967
+2026,23 Ciudades y áreas metropolitanas,Hombres,Población ocupada,May - Jul,6838.399678
 2021,23 Ciudades y áreas metropolitanas,Hombres,Formal,Ene - Mar,2922.5287346666664
 2021,23 Ciudades y áreas metropolitanas,Hombres,Formal,Feb - Abr,2964.8560403333336
 2021,23 Ciudades y áreas metropolitanas,Hombres,Formal,Mar - May,3020.713418
@@ -1471,6 +1493,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Hombres,Formal,Feb - Abr,3827.178065
 2026,23 Ciudades y áreas metropolitanas,Hombres,Formal,Mar - May,3905.154697
 2026,23 Ciudades y áreas metropolitanas,Hombres,Formal,Abr - Jun,3883.331377
+2026,23 Ciudades y áreas metropolitanas,Hombres,Formal,May - Jul,3906.22716
 2021,23 Ciudades y áreas metropolitanas,Hombres,Informal,Ene - Mar,2822.416956333333
 2021,23 Ciudades y áreas metropolitanas,Hombres,Informal,Feb - Abr,2846.9932983333333
 2021,23 Ciudades y áreas metropolitanas,Hombres,Informal,Mar - May,2829.704256333333
@@ -1535,6 +1558,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Hombres,Informal,Feb - Abr,2977.476536
 2026,23 Ciudades y áreas metropolitanas,Hombres,Informal,Mar - May,2930.346526
 2026,23 Ciudades y áreas metropolitanas,Hombres,Informal,Abr - Jun,2934.73259
+2026,23 Ciudades y áreas metropolitanas,Hombres,Informal,May - Jul,2932.172518
 2021,23 Ciudades y áreas metropolitanas,Mujeres,Población ocupada,Ene - Mar,4462.394881333333
 2021,23 Ciudades y áreas metropolitanas,Mujeres,Población ocupada,Feb - Abr,4502.322591333334
 2021,23 Ciudades y áreas metropolitanas,Mujeres,Población ocupada,Mar - May,4481.403756666667
@@ -1599,6 +1623,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Mujeres,Población ocupada,Feb - Abr,5777.613595
 2026,23 Ciudades y áreas metropolitanas,Mujeres,Población ocupada,Mar - May,5783.977471
 2026,23 Ciudades y áreas metropolitanas,Mujeres,Población ocupada,Abr - Jun,5809.395871
+2026,23 Ciudades y áreas metropolitanas,Mujeres,Población ocupada,May - Jul,5821.208606
 2021,23 Ciudades y áreas metropolitanas,Mujeres,Formal,Ene - Mar,2459.3133326666666
 2021,23 Ciudades y áreas metropolitanas,Mujeres,Formal,Feb - Abr,2432.950253
 2021,23 Ciudades y áreas metropolitanas,Mujeres,Formal,Mar - May,2468.1913409999997
@@ -1663,6 +1688,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Mujeres,Formal,Feb - Abr,3425.627178
 2026,23 Ciudades y áreas metropolitanas,Mujeres,Formal,Mar - May,3421.253963
 2026,23 Ciudades y áreas metropolitanas,Mujeres,Formal,Abr - Jun,3447.878597
+2026,23 Ciudades y áreas metropolitanas,Mujeres,Formal,May - Jul,3450.971598
 2021,23 Ciudades y áreas metropolitanas,Mujeres,Informal,Ene - Mar,2003.0815486666663
 2021,23 Ciudades y áreas metropolitanas,Mujeres,Informal,Feb - Abr,2069.372338333333
 2021,23 Ciudades y áreas metropolitanas,Mujeres,Informal,Mar - May,2013.2124156666666
@@ -1727,6 +1753,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Mujeres,Informal,Feb - Abr,2351.986417
 2026,23 Ciudades y áreas metropolitanas,Mujeres,Informal,Mar - May,2362.723507
 2026,23 Ciudades y áreas metropolitanas,Mujeres,Informal,Abr - Jun,2361.517274
+2026,23 Ciudades y áreas metropolitanas,Mujeres,Informal,May - Jul,2370.237008
 2021,Centros poblados y rural disperso,Total,Población ocupada,Ene - Mar,4334.333960666667
 2021,Centros poblados y rural disperso,Total,Población ocupada,Feb - Abr,4419.631038333333
 2021,Centros poblados y rural disperso,Total,Población ocupada,Mar - May,4374.181075666667
@@ -1791,6 +1818,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,Centros poblados y rural disperso,Total,Población ocupada,Feb - Abr,4950.252151
 2026,Centros poblados y rural disperso,Total,Población ocupada,Mar - May,5041.258684
 2026,Centros poblados y rural disperso,Total,Población ocupada,Abr - Jun,5052.134687
+2026,Centros poblados y rural disperso,Total,Población ocupada,May - Jul,5115.270956
 2021,Centros poblados y rural disperso,Total,Formal,Ene - Mar,595.0088723333333
 2021,Centros poblados y rural disperso,Total,Formal,Feb - Abr,636.2795226666667
 2021,Centros poblados y rural disperso,Total,Formal,Mar - May,634.9075863333334
@@ -1855,6 +1883,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,Centros poblados y rural disperso,Total,Formal,Feb - Abr,843.01489
 2026,Centros poblados y rural disperso,Total,Formal,Mar - May,860.326868
 2026,Centros poblados y rural disperso,Total,Formal,Abr - Jun,849.850628
+2026,Centros poblados y rural disperso,Total,Formal,May - Jul,859.758257
 2021,Centros poblados y rural disperso,Total,Informal,Ene - Mar,3739.3250883333335
 2021,Centros poblados y rural disperso,Total,Informal,Feb - Abr,3783.3515156666667
 2021,Centros poblados y rural disperso,Total,Informal,Mar - May,3739.273489333333
@@ -1919,6 +1948,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,Centros poblados y rural disperso,Total,Informal,Feb - Abr,4107.237261
 2026,Centros poblados y rural disperso,Total,Informal,Mar - May,4180.931816
 2026,Centros poblados y rural disperso,Total,Informal,Abr - Jun,4202.284059
+2026,Centros poblados y rural disperso,Total,Informal,May - Jul,4255.5126980000005
 2021,Centros poblados y rural disperso,Hombres,Población ocupada,Ene - Mar,3177.910845666667
 2021,Centros poblados y rural disperso,Hombres,Población ocupada,Feb - Abr,3218.5778443333334
 2021,Centros poblados y rural disperso,Hombres,Población ocupada,Mar - May,3180.710067
@@ -1983,6 +2013,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,Centros poblados y rural disperso,Hombres,Población ocupada,Feb - Abr,3405.560169
 2026,Centros poblados y rural disperso,Hombres,Población ocupada,Mar - May,3462.143178
 2026,Centros poblados y rural disperso,Hombres,Población ocupada,Abr - Jun,3450.313556
+2026,Centros poblados y rural disperso,Hombres,Población ocupada,May - Jul,3488.543024
 2021,Centros poblados y rural disperso,Hombres,Formal,Ene - Mar,417.862958
 2021,Centros poblados y rural disperso,Hombres,Formal,Feb - Abr,450.0665236666667
 2021,Centros poblados y rural disperso,Hombres,Formal,Mar - May,449.014571
@@ -2047,6 +2078,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,Centros poblados y rural disperso,Hombres,Formal,Feb - Abr,561.854749
 2026,Centros poblados y rural disperso,Hombres,Formal,Mar - May,576.191514
 2026,Centros poblados y rural disperso,Hombres,Formal,Abr - Jun,575.145475
+2026,Centros poblados y rural disperso,Hombres,Formal,May - Jul,563.260696
 2021,Centros poblados y rural disperso,Hombres,Informal,Ene - Mar,2760.047887666666
 2021,Centros poblados y rural disperso,Hombres,Informal,Feb - Abr,2768.5113203333335
 2021,Centros poblados y rural disperso,Hombres,Informal,Mar - May,2731.6954960000003
@@ -2111,6 +2143,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,Centros poblados y rural disperso,Hombres,Informal,Feb - Abr,2843.70542
 2026,Centros poblados y rural disperso,Hombres,Informal,Mar - May,2885.951664
 2026,Centros poblados y rural disperso,Hombres,Informal,Abr - Jun,2875.168081
+2026,Centros poblados y rural disperso,Hombres,Informal,May - Jul,2925.282329
 2021,Centros poblados y rural disperso,Mujeres,Población ocupada,Ene - Mar,1156.4231153333333
 2021,Centros poblados y rural disperso,Mujeres,Población ocupada,Feb - Abr,1201.0531943333335
 2021,Centros poblados y rural disperso,Mujeres,Población ocupada,Mar - May,1193.4710086666666
@@ -2175,6 +2208,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,Centros poblados y rural disperso,Mujeres,Población ocupada,Feb - Abr,1544.691982
 2026,Centros poblados y rural disperso,Mujeres,Población ocupada,Mar - May,1579.115506
 2026,Centros poblados y rural disperso,Mujeres,Población ocupada,Abr - Jun,1601.821131
+2026,Centros poblados y rural disperso,Mujeres,Población ocupada,May - Jul,1626.727931
 2021,Centros poblados y rural disperso,Mujeres,Formal,Ene - Mar,177.1459143333333
 2021,Centros poblados y rural disperso,Mujeres,Formal,Feb - Abr,186.212999
 2021,Centros poblados y rural disperso,Mujeres,Formal,Mar - May,185.89301533333335
@@ -2239,6 +2273,7 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,Centros poblados y rural disperso,Mujeres,Formal,Feb - Abr,281.160141
 2026,Centros poblados y rural disperso,Mujeres,Formal,Mar - May,284.135353
 2026,Centros poblados y rural disperso,Mujeres,Formal,Abr - Jun,274.705153
+2026,Centros poblados y rural disperso,Mujeres,Formal,May - Jul,296.497562
 2021,Centros poblados y rural disperso,Mujeres,Informal,Ene - Mar,979.2772006666668
 2021,Centros poblados y rural disperso,Mujeres,Informal,Feb - Abr,1014.8401950000001
 2021,Centros poblados y rural disperso,Mujeres,Informal,Mar - May,1007.5779933333333
@@ -2303,3 +2338,4 @@ Fecha,Perspectiva,Sexo,Concepto,Periodo,Valor
 2026,Centros poblados y rural disperso,Mujeres,Informal,Feb - Abr,1263.53184
 2026,Centros poblados y rural disperso,Mujeres,Informal,Mar - May,1294.980152
 2026,Centros poblados y rural disperso,Mujeres,Informal,Abr - Jun,1327.115978
+2026,Centros poblados y rural disperso,Mujeres,Informal,May - Jul,1330.23037

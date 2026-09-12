@@ -22,6 +22,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2022,Total nacional,Población ocupada,Sep - Nov,22493.886424333334
 2022,Total nacional,Población ocupada,Oct - Dic,22520.158621666666
 2022,Total nacional,Población ocupada,Nov - Ene,22148.664008666663
+2022,Total nacional,Población ocupada,Dic - Feb,22064.135597
 2023,Total nacional,Población ocupada,Ene - Mar,22172.651851333332
 2023,Total nacional,Población ocupada,Feb - Abr,22589.448848333337
 2023,Total nacional,Población ocupada,Mar - May,22701.036206666668
@@ -62,6 +63,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,Total nacional,Población ocupada,Feb - Abr,24241.02269
 2026,Total nacional,Población ocupada,Mar - May,24404.076258
 2026,Total nacional,Población ocupada,Abr - Jun,24439.674599
+2026,Total nacional,Población ocupada,May - Jul,24529.599832
 2021,Total nacional,Formal,Ene - Mar,7785.653908666667
 2021,Total nacional,Formal,Feb - Abr,7909.355157000001
 2021,Total nacional,Formal,Mar - May,8072.084484
@@ -85,6 +87,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2022,Total nacional,Formal,Sep - Nov,9449.594036333334
 2022,Total nacional,Formal,Oct - Dic,9555.084776000002
 2022,Total nacional,Formal,Nov - Ene,9378.897764333333
+2022,Total nacional,Formal,Dic - Feb,9306.445961
 2023,Total nacional,Formal,Ene - Mar,9275.529452333334
 2023,Total nacional,Formal,Feb - Abr,9606.630535666665
 2023,Total nacional,Formal,Mar - May,9844.298999666666
@@ -125,6 +128,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,Total nacional,Formal,Feb - Abr,10896.187587
 2026,Total nacional,Formal,Mar - May,11055.548043
 2026,Total nacional,Formal,Abr - Jun,11115.764133
+2026,Total nacional,Formal,May - Jul,11134.238111
 2021,Total nacional,Informal,Ene - Mar,12001.55655
 2021,Total nacional,Informal,Feb - Abr,12094.802355666665
 2021,Total nacional,Informal,Mar - May,11874.353662333333
@@ -148,6 +152,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2022,Total nacional,Informal,Sep - Nov,13044.292388666669
 2022,Total nacional,Informal,Oct - Dic,12965.073846666666
 2022,Total nacional,Informal,Nov - Ene,12769.766245
+2022,Total nacional,Informal,Dic - Feb,12757.689636333334
 2023,Total nacional,Informal,Ene - Mar,12897.122399
 2023,Total nacional,Informal,Feb - Abr,12982.818312666664
 2023,Total nacional,Informal,Mar - May,12856.737207
@@ -188,6 +193,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,Total nacional,Informal,Feb - Abr,13344.835103
 2026,Total nacional,Informal,Mar - May,13348.528215
 2026,Total nacional,Informal,Abr - Jun,13323.910466
+2026,Total nacional,Informal,May - Jul,13395.361721
 2021,Cabeceras,Población ocupada,Ene - Mar,15452.876498
 2021,Cabeceras,Población ocupada,Feb - Abr,15584.526474666665
 2021,Cabeceras,Población ocupada,Mar - May,15572.257071
@@ -252,6 +258,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,Cabeceras,Población ocupada,Feb - Abr,19290.770539
 2026,Cabeceras,Población ocupada,Mar - May,19362.817575
 2026,Cabeceras,Población ocupada,Abr - Jun,19387.539912
+2026,Cabeceras,Población ocupada,May - Jul,19414.328876
 2021,Cabeceras,Formal,Ene - Mar,7190.645035999999
 2021,Cabeceras,Formal,Feb - Abr,7273.075634
 2021,Cabeceras,Formal,Mar - May,7437.176897666667
@@ -316,6 +323,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,Cabeceras,Formal,Feb - Abr,10053.172696
 2026,Cabeceras,Formal,Mar - May,10195.221176
 2026,Cabeceras,Formal,Abr - Jun,10265.913505
+2026,Cabeceras,Formal,May - Jul,10274.479853
 2021,Cabeceras,Informal,Ene - Mar,8262.231461666668
 2021,Cabeceras,Informal,Feb - Abr,8311.45084
 2021,Cabeceras,Informal,Mar - May,8135.080172999999
@@ -380,6 +388,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,Cabeceras,Informal,Feb - Abr,9237.597843
 2026,Cabeceras,Informal,Mar - May,9167.596399
 2026,Cabeceras,Informal,Abr - Jun,9121.626407
+2026,Cabeceras,Informal,May - Jul,9139.849023
 2021,Centros poblados y rural disperso,Población ocupada,Ene - Mar,4334.333960666667
 2021,Centros poblados y rural disperso,Población ocupada,Feb - Abr,4419.631038333333
 2021,Centros poblados y rural disperso,Población ocupada,Mar - May,4374.181075666667
@@ -444,6 +453,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,Centros poblados y rural disperso,Población ocupada,Feb - Abr,4950.252151
 2026,Centros poblados y rural disperso,Población ocupada,Mar - May,5041.258684
 2026,Centros poblados y rural disperso,Población ocupada,Abr - Jun,5052.134687
+2026,Centros poblados y rural disperso,Población ocupada,May - Jul,5115.270956
 2021,Centros poblados y rural disperso,Formal,Ene - Mar,595.0088723333333
 2021,Centros poblados y rural disperso,Formal,Feb - Abr,636.2795226666667
 2021,Centros poblados y rural disperso,Formal,Mar - May,634.9075863333334
@@ -508,6 +518,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,Centros poblados y rural disperso,Formal,Feb - Abr,843.01489
 2026,Centros poblados y rural disperso,Formal,Mar - May,860.326868
 2026,Centros poblados y rural disperso,Formal,Abr - Jun,849.850628
+2026,Centros poblados y rural disperso,Formal,May - Jul,859.758257
 2021,Centros poblados y rural disperso,Informal,Ene - Mar,3739.3250883333335
 2021,Centros poblados y rural disperso,Informal,Feb - Abr,3783.3515156666667
 2021,Centros poblados y rural disperso,Informal,Mar - May,3739.273489333333
@@ -572,3 +583,4 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,Centros poblados y rural disperso,Informal,Feb - Abr,4107.237261
 2026,Centros poblados y rural disperso,Informal,Mar - May,4180.931816
 2026,Centros poblados y rural disperso,Informal,Abr - Jun,4202.284059
+2026,Centros poblados y rural disperso,Informal,May - Jul,4255.5126980000005
