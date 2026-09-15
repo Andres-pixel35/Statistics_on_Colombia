@@ -389,6 +389,8 @@ def render_informality() -> None:
 
     pct_note = ("Each value is a share of the occupied population." if is_total_like
                 else "Each value is a share of that group's total.")
+    compare_pct_note = (pct_note if is_total_like
+                         else "Each value is a share of that category's Formal+Informal total.")
 
     if compare:
         concept_sp = concepts_sp[0]
@@ -406,7 +408,7 @@ def render_informality() -> None:
             info = [f"{t(concept_labels[0])} — {t(file_label)} ({t(comp_subtitle)}) · {t(period)}", "Year", metric]
         _draw(chart_type, series, info)
         if percent:
-            st.caption(t(pct_note))
+            st.caption(t(compare_pct_note))
         st.caption(t("Source: DANE (GEIH)"))
         return
 
