@@ -258,24 +258,29 @@ def informality_gender_period_axis(sexo_df: pd.DataFrame, year: int, concept_sp:
 def informality_group_pivot(df: pd.DataFrame, period_sp, concept_sp: str,
                             *, percent: bool = False) -> pd.DataFrame:
     """Formal vs Informal for one concept, x = years. df has the `Grupo` column.
-    percent -> share of each group's own total."""
+    percent -> each group's share of that category's Formal+Informal combined total."""
     cols = {}
     for grupo in ("Formal", "Informal"):
         gdf = df[df["Grupo"] == grupo]
-        cols[grupo] = informality_pivot(
-            gdf, period_sp, [concept_sp], percent=percent, denom_sp=grupo).iloc[:, 0]
-    return pd.DataFrame(cols)
+        cols[grupo] = informality_pivot(gdf, period_sp, [concept_sp]).iloc[:, 0]
+    raw = pd.DataFrame(cols)
+    if percent:
+        return raw.div(raw.sum(axis=1, skipna=False), axis=0) * 100
+    return raw
 
 
 def informality_group_period_axis(df: pd.DataFrame, year: int, concept_sp: str,
                                   *, percent: bool = False) -> pd.DataFrame:
-    """Formal vs Informal for one concept and one year, x = rolling 3-month windows."""
+    """Formal vs Informal for one concept and one year, x = rolling 3-month windows.
+    percent -> each group's share of that category's Formal+Informal combined total."""
     cols = {}
     for grupo in ("Formal", "Informal"):
         gdf = df[df["Grupo"] == grupo]
-        cols[grupo] = informality_period_axis(
-            gdf, [year], [concept_sp], percent=percent, denom_sp=grupo).iloc[:, 0]
-    return pd.DataFrame(cols)
+        cols[grupo] = informality_period_axis(gdf, [year], [concept_sp]).iloc[:, 0]
+    raw = pd.DataFrame(cols)
+    if percent:
+        return raw.div(raw.sum(axis=1, skipna=False), axis=0) * 100
+    return raw
 
 
 # --- Regions dataset (data/dane/job_market/regiones/): region in `Perspectiva`, semesters I/II ---

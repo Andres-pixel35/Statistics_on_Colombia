@@ -238,6 +238,8 @@ UI_ES = {
         "Cada valor es una participación dentro de la población ocupada.",
     "Each value is a share of that group's total.":
         "Cada valor es una participación dentro del total de ese grupo.",
+    "Each value is a share of that category's Formal+Informal total.":
+        "Cada valor es una participación dentro del total Formal+Informal de esa categoría.",
     "Each percentage is relative to that gender's own total population, not the total.":
         "Cada porcentaje es relativo a la población total de ese sexo, no al total.",
     "Breakdowns use the official DANE rates (TTI / TTIAD / TTIADC); the age-group total is its share of the whole population.":
