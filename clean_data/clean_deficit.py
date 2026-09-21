@@ -21,6 +21,17 @@ def concepto_groups(concepts, levels):
     return groups
 
 
+def quarter_dates(cols):
+    """The Trimestral ($MM) sheet's 2026 headers are mis-dated (Jan/Feb instead of Mar/Jun).
+    Re-date positionally: the k-th column of a year is that year's quarter k (month 3k)."""
+    seen = {}
+    out = []
+    for c in cols:
+        seen[c.year] = seen.get(c.year, 0) + 1
+        out.append(c.replace(month=3 * seen[c.year], day=1))
+    return out
+
+
 def read_balance(xl, wb, sheet, year_cols=False):
     """Concepto rows x date columns: Anual/%PIB-anual/Mensual/Trimestral sheets."""
     df = pd.read_excel(xl, sheet_name=sheet, header=None)
@@ -63,7 +74,8 @@ def read_balance(xl, wb, sheet, year_cols=False):
     if year_cols:
         relabel = {c: (str(int(c)) if isinstance(c, (int, float)) else c.rstrip("*")) for c in date_cols}
     else:
-        relabel = {c: c.strftime("%Y-%m-%d") for c in date_cols}
+        dates = quarter_dates(date_cols) if sheet.startswith("Trimestral") else date_cols
+        relabel = {c: d.strftime("%Y-%m-%d") for c, d in zip(date_cols, dates)}
     df = df.rename(columns=relabel)
     date_cols = list(relabel.values())
 

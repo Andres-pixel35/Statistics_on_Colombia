@@ -189,16 +189,21 @@ def _inf_clean(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def informality_pivot(df: pd.DataFrame, period_sp, concepts_sp: list,
-                      *, percent: bool = False, denom_sp=None) -> pd.DataFrame:
+                      *, percent: bool = False, denom_sp=None, denom_df=None) -> pd.DataFrame:
     """Year x Concepto pivot. percent -> concept / denom_sp * 100 (denom_sp is a Concepto
-    row in df); else people x1000. period_sp None -> mean across 12 windows."""
-    d = _inf_clean(df)
-    if period_sp is not None:
-        d = d[d["Periodo"] == period_sp]
-    table = d.pivot_table(index="Fecha", columns="Concepto", values="Valor", aggfunc="mean")
+    row in df); with denom_df, each concept is instead divided by its own row in denom_df
+    (e.g. the Población ocupada Grupo). Else people x1000. period_sp None -> mean across 12 windows."""
+    def _table(frame):
+        d = _inf_clean(frame)
+        if period_sp is not None:
+            d = d[d["Periodo"] == period_sp]
+        return d.pivot_table(index="Fecha", columns="Concepto", values="Valor", aggfunc="mean")
+    table = _table(df)
     if percent:
-        out = {c: table[c] / table[denom_sp] * 100
-               for c in concepts_sp if c in table.columns and denom_sp in table.columns}
+        den = _table(denom_df) if denom_df is not None else table
+        den_of = (lambda c: c) if denom_df is not None else (lambda c: denom_sp)
+        out = {c: table[c] / den[den_of(c)] * 100
+               for c in concepts_sp if c in table.columns and den_of(c) in den.columns}
         pivot = pd.DataFrame(out).reindex(columns=concepts_sp)
     else:
         pivot = table.reindex(columns=concepts_sp) * 1000
@@ -206,20 +211,25 @@ def informality_pivot(df: pd.DataFrame, period_sp, concepts_sp: list,
 
 
 def informality_period_axis(df: pd.DataFrame, years: list, concepts_sp: list,
-                            *, percent: bool = False, denom_sp=None) -> pd.DataFrame:
+                            *, percent: bool = False, denom_sp=None, denom_df=None) -> pd.DataFrame:
     """x = rolling 3-month windows. >=2 concepts -> single year, one col per concept;
-    else one col per year for the single concept. percent -> share of denom_sp per window."""
+    else one col per year for the single concept. percent -> share of denom_sp per window,
+    or of each concept's own row in denom_df when given."""
     d = _inf_clean(df)
+    src = _inf_clean(denom_df) if denom_df is not None else d
+    den_of = (lambda c: c) if denom_df is not None else (lambda c: denom_sp)
     cols = {}
     if len(concepts_sp) >= 2:
         dy = d[d["Fecha"] == years[0]]
-        den = dy[dy["Concepto"] == denom_sp].set_index("Periodo")["Valor"] if percent else None
+        sy = src[src["Fecha"] == years[0]]
         for c in concepts_sp:
             s = dy[dy["Concepto"] == c].set_index("Periodo")["Valor"]
+            if percent:
+                den = sy[sy["Concepto"] == den_of(c)].set_index("Periodo")["Valor"]
             cols[c] = s / den * 100 if percent else s * 1000
     else:
         d_concept = d[d["Concepto"] == concepts_sp[0]]
-        d_den = d[d["Concepto"] == denom_sp] if percent else None
+        d_den = src[src["Concepto"] == den_of(concepts_sp[0])] if percent else None
         for y in years:
             s = d_concept[d_concept["Fecha"] == y].set_index("Periodo")["Valor"]
             if percent:
@@ -255,32 +265,36 @@ def informality_gender_period_axis(sexo_df: pd.DataFrame, year: int, concept_sp:
     return pd.DataFrame(cols)
 
 
+def _group_compare(df: pd.DataFrame, percent: bool, axis_fn) -> pd.DataFrame:
+    """Formal vs Informal columns from `axis_fn(gdf, denom_df)`. percent -> each group's share of
+    that concept's Población ocupada total; a group with no rows there is 0%, not a gap."""
+    total_df = df[df["Grupo"] == "Población ocupada"]
+    cols = {g: axis_fn(df[df["Grupo"] == g], total_df) for g in ("Formal", "Informal")}
+    raw = pd.DataFrame(cols)
+    if not percent:
+        return raw
+    total = axis_fn(total_df, None)
+    return raw.reindex(total.dropna().index).fillna(0)
+
+
 def informality_group_pivot(df: pd.DataFrame, period_sp, concept_sp: str,
                             *, percent: bool = False) -> pd.DataFrame:
     """Formal vs Informal for one concept, x = years. df has the `Grupo` column.
-    percent -> each group's share of that category's Formal+Informal combined total."""
-    cols = {}
-    for grupo in ("Formal", "Informal"):
-        gdf = df[df["Grupo"] == grupo]
-        cols[grupo] = informality_pivot(gdf, period_sp, [concept_sp]).iloc[:, 0]
-    raw = pd.DataFrame(cols)
-    if percent:
-        return raw.div(raw.sum(axis=1, skipna=False), axis=0) * 100
-    return raw
+    percent -> each group's share of that concept's Población ocupada total."""
+    def axis(gdf, total_df):
+        return informality_pivot(gdf, period_sp, [concept_sp], percent=percent and total_df is not None,
+                                 denom_df=total_df).iloc[:, 0]
+    return _group_compare(df, percent, axis)
 
 
 def informality_group_period_axis(df: pd.DataFrame, year: int, concept_sp: str,
                                   *, percent: bool = False) -> pd.DataFrame:
     """Formal vs Informal for one concept and one year, x = rolling 3-month windows.
-    percent -> each group's share of that category's Formal+Informal combined total."""
-    cols = {}
-    for grupo in ("Formal", "Informal"):
-        gdf = df[df["Grupo"] == grupo]
-        cols[grupo] = informality_period_axis(gdf, [year], [concept_sp]).iloc[:, 0]
-    raw = pd.DataFrame(cols)
-    if percent:
-        return raw.div(raw.sum(axis=1, skipna=False), axis=0) * 100
-    return raw
+    percent -> each group's share of that concept's Población ocupada total."""
+    def axis(gdf, total_df):
+        return informality_period_axis(gdf, [year], [concept_sp], percent=percent and total_df is not None,
+                                       denom_df=total_df).iloc[:, 0]
+    return _group_compare(df, percent, axis)
 
 
 # --- Regions dataset (data/dane/job_market/regiones/): region in `Perspectiva`, semesters I/II ---
