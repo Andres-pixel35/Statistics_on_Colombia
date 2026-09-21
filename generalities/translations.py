@@ -236,8 +236,6 @@ UI_ES = {
         "Cada porcentaje es relativo a la población en edad de trabajar (PET) de ese sexo, no al total.",
     "Each value is a share of the occupied population.":
         "Cada valor es una participación dentro de la población ocupada.",
-    "Each value is a share of that group's total.":
-        "Cada valor es una participación dentro del total de ese grupo.",
     "Each value is a share of that category's Formal+Informal total.":
         "Cada valor es una participación dentro del total Formal+Informal de esa categoría.",
     "Each percentage is relative to that gender's own total population, not the total.":

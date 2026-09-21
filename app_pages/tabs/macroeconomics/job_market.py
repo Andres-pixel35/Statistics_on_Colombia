@@ -340,12 +340,14 @@ def render_informality() -> None:
         # <sexo>.csv (all genders) always needed for Compare men vs. women
         compare_df = _inf_total_load(cfg["sexo"], cfg)
         denom_sp = "Población ocupada"
+        denom_df = None
     else:
         grouped = _inf_prep(load_csv(f"{INFORMALITY_BASE}{stem}.csv"))
         group_sp = jm.INFORMALITY_GROUP[scope]
         data = grouped[grouped["Grupo"] == group_sp]
         compare_df = grouped              # group-compare helper filters per Grupo
-        denom_sp = group_sp
+        denom_sp = None
+        denom_df = grouped[grouped["Grupo"] == "Población ocupada"]  # per-concept Formal+Informal total
         # Reused dicts carry rollups + concepts from other groups; keep only this group's breakdown.
         rollups = set(jm.INFORMALITY_GROUP.values())
         present = set(data["Concepto"])
@@ -388,9 +390,7 @@ def render_informality() -> None:
     year_set = _year_set(years_sel, presidents_sel, year_options)
 
     pct_note = ("Each value is a share of the occupied population." if is_total_like
-                else "Each value is a share of that group's total.")
-    compare_pct_note = (pct_note if is_total_like
-                         else "Each value is a share of that category's Formal+Informal total.")
+                else "Each value is a share of that category's Formal+Informal total.")
 
     if compare:
         concept_sp = concepts_sp[0]
@@ -408,7 +408,7 @@ def render_informality() -> None:
             info = [f"{t(concept_labels[0])} — {t(file_label)} ({t(comp_subtitle)}) · {t(period)}", "Year", metric]
         _draw(chart_type, series, info)
         if percent:
-            st.caption(t(compare_pct_note))
+            st.caption(t(pct_note))
         st.caption(t("Source: DANE (GEIH)"))
         return
 
@@ -421,7 +421,7 @@ def render_informality() -> None:
             labels = {}
             title_subject = concept_labels[0]
         series = mf.informality_period_axis(data, years_sorted, concepts_sp,
-                                            percent=percent, denom_sp=denom_sp)
+                                            percent=percent, denom_sp=denom_sp, denom_df=denom_df)
         info = [f"{t(title_subject)} — {t(file_label)} ({t(scope)}){t(' by 3-month window')}", "Period", metric]
         _draw(chart_type, series, info, labels=labels,
               display_names=list(eng_map.values()) if labels else None)
@@ -431,7 +431,7 @@ def render_informality() -> None:
         return
 
     period_sp = None if period == "Annual average" else find_key_by_value(jm.PERIOD_EN, period)
-    series = mf.informality_pivot(data, period_sp, concepts_sp, percent=percent, denom_sp=denom_sp)
+    series = mf.informality_pivot(data, period_sp, concepts_sp, percent=percent, denom_sp=denom_sp, denom_df=denom_df)
     info = [f"{t('Employment Formality')} — {t(file_label)} ({t(scope)}) · {t(period)}", "Year", metric]
     _draw(chart_type, series, info, labels=eng_map,
           display_names=list(eng_map.values()))
