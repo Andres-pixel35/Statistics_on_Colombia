@@ -177,7 +177,7 @@ def main():
     pd.concat(edus, ignore_index=True).to_csv(
         os.path.join(out_dir, "births_by_education.csv"), index=False)
 
-    print(f"Saved 5 CSVs to {out_dir} ({len(years)} years; 4/5/6 cover 2019-2025)")
+    print(f"Saved 5 CSVs to {out_dir} ({len(years)} years; 4/5/6 cover 2019-2026)")
 
 
 if __name__ == "__main__":
