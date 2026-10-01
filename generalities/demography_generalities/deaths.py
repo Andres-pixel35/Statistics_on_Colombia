@@ -62,6 +62,7 @@ CAUSE_EN = {
     "agresiones (homicidios) y secuelas": "Assault (homicide) and sequelae",
     "ahogamiento y sumersion accidentales": "Accidental drowning and submersion",
     "anemias: nutricionales, hemoliticas, aplasticas y otras": "Anemias: nutritional, hemolytic, aplastic and others",
+    "anemias: nutricionales, hemoliticas, aplasicas y otras": "Anemias: nutritional, hemolytic, aplastic and others",  # DANE 2025 spelling
     "aneurisma aortico": "Aortic aneurysm",
     "aterosclerosis": "Atherosclerosis",
     "caidas": "Falls",

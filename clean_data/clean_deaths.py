@@ -165,7 +165,11 @@ def cuadro5_dept_mun(year, path):
     check_groups(df, nat_index, 6, AGE_GROUPS_MUN, year, "Cuadro5")
 
     departamento = df.iloc[:, 2].astype("object").ffill().astype(str).str.strip()
-    municipio = df.iloc[:, 3].astype("object").ffill().astype(str).str.strip()
+    # 2025+ leaves municipio blank on each dept-aggregate header row (2019-2024 say
+    # "Total Dpto"); restore the label so ffill doesn't carry the previous municipio into it.
+    municipio = df.iloc[:, 3].astype("object")
+    dept_header = (df.index > nat_index) & df.iloc[:, 2].notna() & municipio.isna()
+    municipio = municipio.mask(dept_header, "Total Dpto").ffill().astype(str).str.strip()
     causa = df.iloc[:, 4].astype(str).str.strip()
     is_cause = causa.str.match(CAUSE_RE) & (municipio != "Total Dpto")
     rows = df[is_cause]
