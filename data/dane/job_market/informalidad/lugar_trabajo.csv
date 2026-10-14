@@ -64,6 +64,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Población ocupada,Población ocupada,Mar - May,24404.076258
 2026,Total nacional,Población ocupada,Población ocupada,Abr - Jun,24439.674599
 2026,Total nacional,Población ocupada,Población ocupada,May - Jul,24529.599832
+2026,Total nacional,Población ocupada,Población ocupada,Jun - Ago,24230.33781606552
 2021,Total nacional,Población ocupada,En esta vivienda,Ene - Mar,3630.381718
 2021,Total nacional,Población ocupada,En esta vivienda,Feb - Abr,3826.968097333333
 2021,Total nacional,Población ocupada,En esta vivienda,Mar - May,3798.7923553333335
@@ -129,6 +130,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Población ocupada,En esta vivienda,Mar - May,3264.325738
 2026,Total nacional,Población ocupada,En esta vivienda,Abr - Jun,3161.404236
 2026,Total nacional,Población ocupada,En esta vivienda,May - Jul,3198.729133
+2026,Total nacional,Población ocupada,En esta vivienda,Jun - Ago,3184.701325810604
 2021,Total nacional,Población ocupada,En otras viviendas,Ene - Mar,1903.4305679999998
 2021,Total nacional,Población ocupada,En otras viviendas,Feb - Abr,1930.5549089999997
 2021,Total nacional,Población ocupada,En otras viviendas,Mar - May,1947.4899306666666
@@ -194,6 +196,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Población ocupada,En otras viviendas,Mar - May,2291.131578
 2026,Total nacional,Población ocupada,En otras viviendas,Abr - Jun,2293.650478
 2026,Total nacional,Población ocupada,En otras viviendas,May - Jul,2344.912405
+2026,Total nacional,Población ocupada,En otras viviendas,Jun - Ago,2344.665888971979
 2021,Total nacional,Población ocupada,En kiosco - caseta,Ene - Mar,115.165434
 2021,Total nacional,Población ocupada,En kiosco - caseta,Feb - Abr,129.77256266666666
 2021,Total nacional,Población ocupada,En kiosco - caseta,Mar - May,124.73464433333332
@@ -259,6 +262,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Población ocupada,En kiosco - caseta,Mar - May,58.085975
 2026,Total nacional,Población ocupada,En kiosco - caseta,Abr - Jun,56.559613
 2026,Total nacional,Población ocupada,En kiosco - caseta,May - Jul,49.42928
+2026,Total nacional,Población ocupada,En kiosco - caseta,Jun - Ago,52.96699592525604
 2021,Total nacional,Población ocupada,En un vehículo,Ene - Mar,1074.4514026666668
 2021,Total nacional,Población ocupada,En un vehículo,Feb - Abr,1110.019383
 2021,Total nacional,Población ocupada,En un vehículo,Mar - May,1114.012987
@@ -324,6 +328,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Población ocupada,En un vehículo,Mar - May,1665.306657
 2026,Total nacional,Población ocupada,En un vehículo,Abr - Jun,1697.726794
 2026,Total nacional,Población ocupada,En un vehículo,May - Jul,1727.473898
+2026,Total nacional,Población ocupada,En un vehículo,Jun - Ago,1735.196808171006
 2021,Total nacional,Población ocupada,De puerta en puerta,Ene - Mar,478.4224526666667
 2021,Total nacional,Población ocupada,De puerta en puerta,Feb - Abr,478.1117213333334
 2021,Total nacional,Población ocupada,De puerta en puerta,Mar - May,461.436238
@@ -389,6 +394,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Población ocupada,De puerta en puerta,Mar - May,578.43728
 2026,Total nacional,Población ocupada,De puerta en puerta,Abr - Jun,545.92722
 2026,Total nacional,Población ocupada,De puerta en puerta,May - Jul,551.462995
+2026,Total nacional,Población ocupada,De puerta en puerta,Jun - Ago,547.5973539315614
 2021,Total nacional,Población ocupada,Sitio al descubierto en la calle,Ene - Mar,1046.408574
 2021,Total nacional,Población ocupada,Sitio al descubierto en la calle,Feb - Abr,1053.7214809999998
 2021,Total nacional,Población ocupada,Sitio al descubierto en la calle,Mar - May,1081.3178916666668
@@ -454,6 +460,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Población ocupada,Sitio al descubierto en la calle,Mar - May,1011.586517
 2026,Total nacional,Población ocupada,Sitio al descubierto en la calle,Abr - Jun,989.732652
 2026,Total nacional,Población ocupada,Sitio al descubierto en la calle,May - Jul,1004.456636
+2026,Total nacional,Población ocupada,Sitio al descubierto en la calle,Jun - Ago,1004.510013115929
 2021,Total nacional,Población ocupada,"Local fijo, oficina, fábrica, etc",Ene - Mar,7497.899622333333
 2021,Total nacional,Población ocupada,"Local fijo, oficina, fábrica, etc",Feb - Abr,7426.058873999999
 2021,Total nacional,Población ocupada,"Local fijo, oficina, fábrica, etc",Mar - May,7379.722075333334
@@ -519,6 +526,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Población ocupada,"Local fijo, oficina, fábrica, etc",Mar - May,11259.575345
 2026,Total nacional,Población ocupada,"Local fijo, oficina, fábrica, etc",Abr - Jun,11466.913619
 2026,Total nacional,Población ocupada,"Local fijo, oficina, fábrica, etc",May - Jul,11411.127583
+2026,Total nacional,Población ocupada,"Local fijo, oficina, fábrica, etc",Jun - Ago,11225.56558320157
 2021,Total nacional,Población ocupada,En el campo o área rural,Ene - Mar,2958.5786963333335
 2021,Total nacional,Población ocupada,En el campo o área rural,Feb - Abr,2967.7710819999998
 2021,Total nacional,Población ocupada,En el campo o área rural,Mar - May,2983.827525
@@ -584,6 +592,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Población ocupada,En el campo o área rural,Mar - May,3344.391205
 2026,Total nacional,Población ocupada,En el campo o área rural,Abr - Jun,3263.498107
 2026,Total nacional,Población ocupada,En el campo o área rural,May - Jul,3283.971968
+2026,Total nacional,Población ocupada,En el campo o área rural,Jun - Ago,3186.358432415359
 2021,Total nacional,Población ocupada,En una obra en construcción,Ene - Mar,670.2320136666666
 2021,Total nacional,Población ocupada,En una obra en construcción,Feb - Abr,663.4909723333334
 2021,Total nacional,Población ocupada,En una obra en construcción,Mar - May,670.9051263333333
@@ -649,6 +658,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Población ocupada,En una obra en construcción,Mar - May,734.267399
 2026,Total nacional,Población ocupada,En una obra en construcción,Abr - Jun,724.26372
 2026,Total nacional,Población ocupada,En una obra en construcción,May - Jul,754.340539
+2026,Total nacional,Población ocupada,En una obra en construcción,Jun - Ago,756.616546557777
 2021,Total nacional,Población ocupada,En una mina o cantera,Ene - Mar,110.27630366666666
 2021,Total nacional,Población ocupada,En una mina o cantera,Feb - Abr,133.85045399999998
 2021,Total nacional,Población ocupada,En una mina o cantera,Mar - May,122.78075166666666
@@ -714,6 +724,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Población ocupada,En una mina o cantera,Mar - May,148.694086
 2026,Total nacional,Población ocupada,En una mina o cantera,Abr - Jun,193.129412
 2026,Total nacional,Población ocupada,En una mina o cantera,May - Jul,158.581187
+2026,Total nacional,Población ocupada,En una mina o cantera,Jun - Ago,143.1781826641539
 2021,Total nacional,Población ocupada,Otro,Ene - Mar,301.96367433333336
 2021,Total nacional,Población ocupada,Otro,Feb - Abr,283.83797599999997
 2021,Total nacional,Población ocupada,Otro,Mar - May,261.41862066666664
@@ -779,6 +790,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Población ocupada,Otro,Mar - May,48.274478
 2026,Total nacional,Población ocupada,Otro,Abr - Jun,46.868748
 2026,Total nacional,Población ocupada,Otro,May - Jul,45.114209
+2026,Total nacional,Población ocupada,Otro,Jun - Ago,48.98068530032484
 2021,Total nacional,Formal,Formal,Ene - Mar,7785.653908666667
 2021,Total nacional,Formal,Formal,Feb - Abr,7909.355157000001
 2021,Total nacional,Formal,Formal,Mar - May,8072.084484
@@ -844,6 +856,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Formal,Formal,Mar - May,11055.548043
 2026,Total nacional,Formal,Formal,Abr - Jun,11115.764133
 2026,Total nacional,Formal,Formal,May - Jul,11134.238111
+2026,Total nacional,Formal,Formal,Jun - Ago,10947.14798872679
 2021,Total nacional,Formal,En esta vivienda,Ene - Mar,1197.32862
 2021,Total nacional,Formal,En esta vivienda,Feb - Abr,1309.083318
 2021,Total nacional,Formal,En esta vivienda,Mar - May,1337.253771
@@ -909,6 +922,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Formal,En esta vivienda,Mar - May,867.499294
 2026,Total nacional,Formal,En esta vivienda,Abr - Jun,846.293555
 2026,Total nacional,Formal,En esta vivienda,May - Jul,849.590989
+2026,Total nacional,Formal,En esta vivienda,Jun - Ago,901.1137871010031
 2021,Total nacional,Formal,En otras viviendas,Ene - Mar,226.523596
 2021,Total nacional,Formal,En otras viviendas,Feb - Abr,220.094297
 2021,Total nacional,Formal,En otras viviendas,Mar - May,209.08648033333336
@@ -974,6 +988,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Formal,En otras viviendas,Mar - May,264.074073
 2026,Total nacional,Formal,En otras viviendas,Abr - Jun,242.637015
 2026,Total nacional,Formal,En otras viviendas,May - Jul,242.251218
+2026,Total nacional,Formal,En otras viviendas,Jun - Ago,228.054527661551
 2021,Total nacional,Formal,En kiosco - caseta,Ene - Mar,17.421387
 2021,Total nacional,Formal,En kiosco - caseta,Feb - Abr,20.501903333333335
 2021,Total nacional,Formal,En kiosco - caseta,Mar - May,25.30190433333333
@@ -1039,6 +1054,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Formal,En kiosco - caseta,Mar - May,12.225848
 2026,Total nacional,Formal,En kiosco - caseta,Abr - Jun,7.482177
 2026,Total nacional,Formal,En kiosco - caseta,May - Jul,5.161901
+2026,Total nacional,Formal,En kiosco - caseta,Jun - Ago,4.647598863635483
 2021,Total nacional,Formal,En un vehículo,Ene - Mar,339.2445043333334
 2021,Total nacional,Formal,En un vehículo,Feb - Abr,351.938766
 2021,Total nacional,Formal,En un vehículo,Mar - May,331.0791246666667
@@ -1104,6 +1120,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Formal,En un vehículo,Mar - May,495.1283
 2026,Total nacional,Formal,En un vehículo,Abr - Jun,514.136512
 2026,Total nacional,Formal,En un vehículo,May - Jul,530.66071
+2026,Total nacional,Formal,En un vehículo,Jun - Ago,529.6973330888366
 2021,Total nacional,Formal,De puerta en puerta,Ene - Mar,103.07477066666667
 2021,Total nacional,Formal,De puerta en puerta,Feb - Abr,102.84744166666667
 2021,Total nacional,Formal,De puerta en puerta,Mar - May,104.54912366666667
@@ -1169,6 +1186,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Formal,De puerta en puerta,Mar - May,252.448657
 2026,Total nacional,Formal,De puerta en puerta,Abr - Jun,227.322908
 2026,Total nacional,Formal,De puerta en puerta,May - Jul,219.044354
+2026,Total nacional,Formal,De puerta en puerta,Jun - Ago,213.4629041677957
 2021,Total nacional,Formal,Sitio al descubierto en la calle,Ene - Mar,159.7576786666667
 2021,Total nacional,Formal,Sitio al descubierto en la calle,Feb - Abr,167.60576666666668
 2021,Total nacional,Formal,Sitio al descubierto en la calle,Mar - May,212.15560933333333
@@ -1234,6 +1252,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Formal,Sitio al descubierto en la calle,Mar - May,188.065061
 2026,Total nacional,Formal,Sitio al descubierto en la calle,Abr - Jun,188.066265
 2026,Total nacional,Formal,Sitio al descubierto en la calle,May - Jul,192.219798
+2026,Total nacional,Formal,Sitio al descubierto en la calle,Jun - Ago,185.5900176403235
 2021,Total nacional,Formal,"Local fijo, oficina, fábrica, etc",Ene - Mar,4952.204892000001
 2021,Total nacional,Formal,"Local fijo, oficina, fábrica, etc",Feb - Abr,4941.058079333333
 2021,Total nacional,Formal,"Local fijo, oficina, fábrica, etc",Mar - May,5004.716313333333
@@ -1299,6 +1318,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Formal,"Local fijo, oficina, fábrica, etc",Mar - May,8155.832533
 2026,Total nacional,Formal,"Local fijo, oficina, fábrica, etc",Abr - Jun,8319.961655
 2026,Total nacional,Formal,"Local fijo, oficina, fábrica, etc",May - Jul,8320.127231
+2026,Total nacional,Formal,"Local fijo, oficina, fábrica, etc",Jun - Ago,8138.167781518334
 2021,Total nacional,Formal,En el campo o área rural,Ene - Mar,364.77886400000006
 2021,Total nacional,Formal,En el campo o área rural,Feb - Abr,346.5208863333333
 2021,Total nacional,Formal,En el campo o área rural,Mar - May,386.02064633333333
@@ -1364,6 +1384,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Formal,En el campo o área rural,Mar - May,442.659285
 2026,Total nacional,Formal,En el campo o área rural,Abr - Jun,384.453718
 2026,Total nacional,Formal,En el campo o área rural,May - Jul,406.950258
+2026,Total nacional,Formal,En el campo o área rural,Jun - Ago,378.5697002413386
 2021,Total nacional,Formal,En una obra en construcción,Ene - Mar,199.44020633333332
 2021,Total nacional,Formal,En una obra en construcción,Feb - Abr,213.50157766666666
 2021,Total nacional,Formal,En una obra en construcción,Mar - May,223.02144066666665
@@ -1429,6 +1450,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Formal,En una obra en construcción,Mar - May,283.311722
 2026,Total nacional,Formal,En una obra en construcción,Abr - Jun,286.921313
 2026,Total nacional,Formal,En una obra en construcción,May - Jul,292.71375
+2026,Total nacional,Formal,En una obra en construcción,Jun - Ago,292.8339858558612
 2021,Total nacional,Formal,En una mina o cantera,Ene - Mar,50.54700966666667
 2021,Total nacional,Formal,En una mina o cantera,Feb - Abr,69.31089333333334
 2021,Total nacional,Formal,En una mina o cantera,Mar - May,63.361694
@@ -1494,6 +1516,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Formal,En una mina o cantera,Mar - May,70.94477
 2026,Total nacional,Formal,En una mina o cantera,Abr - Jun,76.833822
 2026,Total nacional,Formal,En una mina o cantera,May - Jul,55.87492
+2026,Total nacional,Formal,En una mina o cantera,Jun - Ago,53.22110914773208
 2021,Total nacional,Formal,Otro,Ene - Mar,175.3323796666667
 2021,Total nacional,Formal,Otro,Feb - Abr,166.89222733333335
 2021,Total nacional,Formal,Otro,Mar - May,175.538376
@@ -1559,6 +1582,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Formal,Otro,Mar - May,23.358499
 2026,Total nacional,Formal,Otro,Abr - Jun,21.655194
 2026,Total nacional,Formal,Otro,May - Jul,19.642982
+2026,Total nacional,Formal,Otro,Jun - Ago,21.78924344037439
 2021,Total nacional,Informal,Informal,Ene - Mar,12001.55655
 2021,Total nacional,Informal,Informal,Feb - Abr,12094.802355666665
 2021,Total nacional,Informal,Informal,Mar - May,11874.353662333333
@@ -1624,6 +1648,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Informal,Informal,Mar - May,13348.528215
 2026,Total nacional,Informal,Informal,Abr - Jun,13323.910466
 2026,Total nacional,Informal,Informal,May - Jul,13395.361721
+2026,Total nacional,Informal,Informal,Jun - Ago,13283.18982733873
 2021,Total nacional,Informal,En esta vivienda,Ene - Mar,2433.0530973333334
 2021,Total nacional,Informal,En esta vivienda,Feb - Abr,2517.884778666667
 2021,Total nacional,Informal,En esta vivienda,Mar - May,2461.5385843333333
@@ -1689,6 +1714,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Informal,En esta vivienda,Mar - May,2396.826444
 2026,Total nacional,Informal,En esta vivienda,Abr - Jun,2315.11068
 2026,Total nacional,Informal,En esta vivienda,May - Jul,2349.138144
+2026,Total nacional,Informal,En esta vivienda,Jun - Ago,2283.587538709601
 2021,Total nacional,Informal,En otras viviendas,Ene - Mar,1676.9069723333334
 2021,Total nacional,Informal,En otras viviendas,Feb - Abr,1710.4606123333333
 2021,Total nacional,Informal,En otras viviendas,Mar - May,1738.4034506666667
@@ -1754,6 +1780,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Informal,En otras viviendas,Mar - May,2027.057504
 2026,Total nacional,Informal,En otras viviendas,Abr - Jun,2051.013463
 2026,Total nacional,Informal,En otras viviendas,May - Jul,2102.661187
+2026,Total nacional,Informal,En otras viviendas,Jun - Ago,2116.611361310428
 2021,Total nacional,Informal,En kiosco - caseta,Ene - Mar,97.74404699999998
 2021,Total nacional,Informal,En kiosco - caseta,Feb - Abr,109.27065933333334
 2021,Total nacional,Informal,En kiosco - caseta,Mar - May,99.43274000000001
@@ -1819,6 +1846,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Informal,En kiosco - caseta,Mar - May,45.860126
 2026,Total nacional,Informal,En kiosco - caseta,Abr - Jun,49.077436
 2026,Total nacional,Informal,En kiosco - caseta,May - Jul,44.267379
+2026,Total nacional,Informal,En kiosco - caseta,Jun - Ago,48.31939706162056
 2021,Total nacional,Informal,En un vehículo,Ene - Mar,735.2068986666667
 2021,Total nacional,Informal,En un vehículo,Feb - Abr,758.0806176666666
 2021,Total nacional,Informal,En un vehículo,Mar - May,782.9338633333333
@@ -1884,6 +1912,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Informal,En un vehículo,Mar - May,1170.178357
 2026,Total nacional,Informal,En un vehículo,Abr - Jun,1183.590282
 2026,Total nacional,Informal,En un vehículo,May - Jul,1196.813188
+2026,Total nacional,Informal,En un vehículo,Jun - Ago,1205.49947508217
 2021,Total nacional,Informal,De puerta en puerta,Ene - Mar,375.34768166666663
 2021,Total nacional,Informal,De puerta en puerta,Feb - Abr,375.26427966666665
 2021,Total nacional,Informal,De puerta en puerta,Mar - May,356.88711433333333
@@ -1949,6 +1978,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Informal,De puerta en puerta,Mar - May,325.988623
 2026,Total nacional,Informal,De puerta en puerta,Abr - Jun,318.604312
 2026,Total nacional,Informal,De puerta en puerta,May - Jul,332.418641
+2026,Total nacional,Informal,De puerta en puerta,Jun - Ago,334.1344497637657
 2021,Total nacional,Informal,Sitio al descubierto en la calle,Ene - Mar,886.6508953333333
 2021,Total nacional,Informal,Sitio al descubierto en la calle,Feb - Abr,886.1157143333334
 2021,Total nacional,Informal,Sitio al descubierto en la calle,Mar - May,869.1622823333333
@@ -2014,6 +2044,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Informal,Sitio al descubierto en la calle,Mar - May,823.521456
 2026,Total nacional,Informal,Sitio al descubierto en la calle,Abr - Jun,801.666387
 2026,Total nacional,Informal,Sitio al descubierto en la calle,May - Jul,812.236839
+2026,Total nacional,Informal,Sitio al descubierto en la calle,Jun - Ago,818.9199954756052
 2021,Total nacional,Informal,"Local fijo, oficina, fábrica, etc",Ene - Mar,2545.6947299999997
 2021,Total nacional,Informal,"Local fijo, oficina, fábrica, etc",Feb - Abr,2485.0007943333335
 2021,Total nacional,Informal,"Local fijo, oficina, fábrica, etc",Mar - May,2375.005761666667
@@ -2079,6 +2110,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Informal,"Local fijo, oficina, fábrica, etc",Mar - May,3103.742812
 2026,Total nacional,Informal,"Local fijo, oficina, fábrica, etc",Abr - Jun,3146.951964
 2026,Total nacional,Informal,"Local fijo, oficina, fábrica, etc",May - Jul,3091.000351
+2026,Total nacional,Informal,"Local fijo, oficina, fábrica, etc",Jun - Ago,3087.397801683237
 2021,Total nacional,Informal,En el campo o área rural,Ene - Mar,2593.799832
 2021,Total nacional,Informal,En el campo o área rural,Feb - Abr,2621.2501953333335
 2021,Total nacional,Informal,En el campo o área rural,Mar - May,2597.806878
@@ -2144,6 +2176,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Informal,En el campo o área rural,Mar - May,2901.73192
 2026,Total nacional,Informal,En el campo o área rural,Abr - Jun,2879.044389
 2026,Total nacional,Informal,En el campo o área rural,May - Jul,2877.02171
+2026,Total nacional,Informal,En el campo o área rural,Jun - Ago,2807.788732174021
 2021,Total nacional,Informal,En una obra en construcción,Ene - Mar,470.79180733333334
 2021,Total nacional,Informal,En una obra en construcción,Feb - Abr,449.98939466666667
 2021,Total nacional,Informal,En una obra en construcción,Mar - May,447.8836856666667
@@ -2209,6 +2242,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Informal,En una obra en construcción,Mar - May,450.955677
 2026,Total nacional,Informal,En una obra en construcción,Abr - Jun,437.342408
 2026,Total nacional,Informal,En una obra en construcción,May - Jul,461.626789
+2026,Total nacional,Informal,En una obra en construcción,Jun - Ago,463.7825607019159
 2021,Total nacional,Informal,En una mina o cantera,Ene - Mar,59.729294333333335
 2021,Total nacional,Informal,En una mina o cantera,Feb - Abr,64.53956133333334
 2021,Total nacional,Informal,En una mina o cantera,Mar - May,59.41905800000001
@@ -2274,6 +2308,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Informal,En una mina o cantera,Mar - May,77.749316
 2026,Total nacional,Informal,En una mina o cantera,Abr - Jun,116.29559
 2026,Total nacional,Informal,En una mina o cantera,May - Jul,102.706268
+2026,Total nacional,Informal,En una mina o cantera,Jun - Ago,89.95707351642176
 2021,Total nacional,Informal,Otro,Ene - Mar,126.63129433333334
 2021,Total nacional,Informal,Otro,Feb - Abr,116.94574866666666
 2021,Total nacional,Informal,Otro,Mar - May,85.880245
@@ -2339,6 +2374,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,Total nacional,Informal,Otro,Mar - May,24.915979
 2026,Total nacional,Informal,Otro,Abr - Jun,25.213555
 2026,Total nacional,Informal,Otro,May - Jul,25.471226
+2026,Total nacional,Informal,Otro,Jun - Ago,27.19144185995045
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Ene - Mar,9226.413326333335
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Feb - Abr,9320.446573000001
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Mar - May,9341.646440999999
@@ -2404,6 +2440,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Mar - May,11420.206475
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Abr - Jun,11419.706218
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,May - Jul,11448.753496
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Jun - Ago,11406.551007007
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,En esta vivienda,Ene - Mar,1801.3345213333334
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,En esta vivienda,Feb - Abr,1975.8643906666668
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,En esta vivienda,Mar - May,2061.3782216666664
@@ -2469,6 +2506,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,En esta vivienda,Mar - May,1657.62078
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,En esta vivienda,Abr - Jun,1575.03619
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,En esta vivienda,May - Jul,1575.819732
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,En esta vivienda,Jun - Ago,1593.526748219557
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,En otras viviendas,Ene - Mar,877.3440786666666
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,En otras viviendas,Feb - Abr,933.9789873333334
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,En otras viviendas,Mar - May,967.179237
@@ -2534,6 +2572,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,En otras viviendas,Mar - May,1092.087573
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,En otras viviendas,Abr - Jun,1097.010498
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,En otras viviendas,May - Jul,1089.57123
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,En otras viviendas,Jun - Ago,1062.522421608021
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,En kiosco - caseta,Ene - Mar,40.18593433333333
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,En kiosco - caseta,Feb - Abr,50.461870999999995
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,En kiosco - caseta,Mar - May,53.093240333333334
@@ -2599,6 +2638,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,En kiosco - caseta,Mar - May,15.761495
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,En kiosco - caseta,Abr - Jun,13.683665
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,En kiosco - caseta,May - Jul,13.652361
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,En kiosco - caseta,Jun - Ago,13.68636166428883
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,En un vehículo,Ene - Mar,535.2280913333334
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,En un vehículo,Feb - Abr,546.908371
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,En un vehículo,Mar - May,540.5406643333333
@@ -2664,6 +2704,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,En un vehículo,Mar - May,855.802922
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,En un vehículo,Abr - Jun,854.338258
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,En un vehículo,May - Jul,865.226497
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,En un vehículo,Jun - Ago,882.0362510759837
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,De puerta en puerta,Ene - Mar,219.41053633333334
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,De puerta en puerta,Feb - Abr,224.35688733333333
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,De puerta en puerta,Mar - May,225.49295300000003
@@ -2729,6 +2770,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,De puerta en puerta,Mar - May,349.664675
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,De puerta en puerta,Abr - Jun,352.701228
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,De puerta en puerta,May - Jul,351.169581
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,De puerta en puerta,Jun - Ago,354.3631295021805
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Sitio al descubierto en la calle,Ene - Mar,595.469967
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Sitio al descubierto en la calle,Feb - Abr,630.9244916666667
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Sitio al descubierto en la calle,Mar - May,638.067736
@@ -2794,6 +2836,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Sitio al descubierto en la calle,Mar - May,504.584004
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Sitio al descubierto en la calle,Abr - Jun,495.136067
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Sitio al descubierto en la calle,May - Jul,501.146625
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,Sitio al descubierto en la calle,Jun - Ago,502.8395980161177
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,"Local fijo, oficina, fábrica, etc",Ene - Mar,4558.302417333333
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,"Local fijo, oficina, fábrica, etc",Feb - Abr,4382.130053333333
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,"Local fijo, oficina, fábrica, etc",Mar - May,4302.792046
@@ -2859,6 +2902,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,"Local fijo, oficina, fábrica, etc",Mar - May,6572.667657
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,"Local fijo, oficina, fábrica, etc",Abr - Jun,6655.820458
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,"Local fijo, oficina, fábrica, etc",May - Jul,6664.359274
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,"Local fijo, oficina, fábrica, etc",Jun - Ago,6605.59246788627
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,En el campo o área rural,Ene - Mar,100.64836266666667
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,En el campo o área rural,Feb - Abr,89.88330033333334
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,En el campo o área rural,Mar - May,70.949896
@@ -2924,6 +2968,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,En el campo o área rural,Mar - May,64.098001
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,En el campo o área rural,Abr - Jun,60.06247
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,En el campo o área rural,May - Jul,61.76358
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,En el campo o área rural,Jun - Ago,58.76265539350999
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,En una obra en construcción,Ene - Mar,279.27745466666664
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,En una obra en construcción,Feb - Abr,278.5564173333333
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,En una obra en construcción,Mar - May,287.505693
@@ -2989,6 +3034,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,En una obra en construcción,Mar - May,266.733369
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,En una obra en construcción,Abr - Jun,272.909832
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,En una obra en construcción,May - Jul,286.381766
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,En una obra en construcción,Jun - Ago,287.5850716858843
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,En una mina o cantera,Ene - Mar,12.909405333333332
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,En una mina o cantera,Feb - Abr,14.239409333333333
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,En una mina o cantera,Mar - May,12.23232233333333
@@ -3054,6 +3100,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,En una mina o cantera,Mar - May,7.781354
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,En una mina o cantera,Abr - Jun,6.004532
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,En una mina o cantera,May - Jul,4.516535
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,En una mina o cantera,Jun - Ago,5.669481471507875
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Otro,Ene - Mar,206.302558
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Otro,Feb - Abr,193.14239433333333
 2021,13 Ciudades y áreas metropolitanas,Población ocupada,Otro,Mar - May,182.41443133333334
@@ -3119,6 +3166,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Otro,Mar - May,33.404644
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Otro,Abr - Jun,37.00302
 2026,13 Ciudades y áreas metropolitanas,Población ocupada,Otro,May - Jul,35.146315
+2026,13 Ciudades y áreas metropolitanas,Población ocupada,Otro,Jun - Ago,39.96682048368513
 2021,13 Ciudades y áreas metropolitanas,Formal,Formal,Ene - Mar,4990.366199666666
 2021,13 Ciudades y áreas metropolitanas,Formal,Formal,Feb - Abr,4999.7586716666665
 2021,13 Ciudades y áreas metropolitanas,Formal,Formal,Mar - May,5089.547187333334
@@ -3184,6 +3232,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Formal,Formal,Mar - May,6771.720593
 2026,13 Ciudades y áreas metropolitanas,Formal,Formal,Abr - Jun,6772.921121
 2026,13 Ciudades y áreas metropolitanas,Formal,Formal,May - Jul,6804.090369
+2026,13 Ciudades y áreas metropolitanas,Formal,Formal,Jun - Ago,6758.467687979813
 2021,13 Ciudades y áreas metropolitanas,Formal,En esta vivienda,Ene - Mar,920.9336223333333
 2021,13 Ciudades y áreas metropolitanas,Formal,En esta vivienda,Feb - Abr,1032.9809036666668
 2021,13 Ciudades y áreas metropolitanas,Formal,En esta vivienda,Mar - May,1080.9939096666667
@@ -3249,6 +3298,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Formal,En esta vivienda,Mar - May,652.747487
 2026,13 Ciudades y áreas metropolitanas,Formal,En esta vivienda,Abr - Jun,615.155505
 2026,13 Ciudades y áreas metropolitanas,Formal,En esta vivienda,May - Jul,610.541408
+2026,13 Ciudades y áreas metropolitanas,Formal,En esta vivienda,Jun - Ago,651.07895130509
 2021,13 Ciudades y áreas metropolitanas,Formal,En otras viviendas,Ene - Mar,156.024434
 2021,13 Ciudades y áreas metropolitanas,Formal,En otras viviendas,Feb - Abr,162.04525233333334
 2021,13 Ciudades y áreas metropolitanas,Formal,En otras viviendas,Mar - May,153.5005933333333
@@ -3314,6 +3364,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Formal,En otras viviendas,Mar - May,163.54892
 2026,13 Ciudades y áreas metropolitanas,Formal,En otras viviendas,Abr - Jun,150.446805
 2026,13 Ciudades y áreas metropolitanas,Formal,En otras viviendas,May - Jul,145.44504
+2026,13 Ciudades y áreas metropolitanas,Formal,En otras viviendas,Jun - Ago,148.4490831868378
 2021,13 Ciudades y áreas metropolitanas,Formal,En kiosco - caseta,Ene - Mar,8.965675666666668
 2021,13 Ciudades y áreas metropolitanas,Formal,En kiosco - caseta,Feb - Abr,11.162158666666668
 2021,13 Ciudades y áreas metropolitanas,Formal,En kiosco - caseta,Mar - May,12.809157999999998
@@ -3379,6 +3430,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Formal,En kiosco - caseta,Mar - May,4.844621
 2026,13 Ciudades y áreas metropolitanas,Formal,En kiosco - caseta,Abr - Jun,2.315951
 2026,13 Ciudades y áreas metropolitanas,Formal,En kiosco - caseta,May - Jul,1.204159
+2026,13 Ciudades y áreas metropolitanas,Formal,En kiosco - caseta,Jun - Ago,0.6027773379412684
 2021,13 Ciudades y áreas metropolitanas,Formal,En un vehículo,Ene - Mar,208.740906
 2021,13 Ciudades y áreas metropolitanas,Formal,En un vehículo,Feb - Abr,208.83351266666668
 2021,13 Ciudades y áreas metropolitanas,Formal,En un vehículo,Mar - May,186.1566756666667
@@ -3444,6 +3496,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Formal,En un vehículo,Mar - May,295.314814
 2026,13 Ciudades y áreas metropolitanas,Formal,En un vehículo,Abr - Jun,292.725458
 2026,13 Ciudades y áreas metropolitanas,Formal,En un vehículo,May - Jul,289.977761
+2026,13 Ciudades y áreas metropolitanas,Formal,En un vehículo,Jun - Ago,296.2157997757786
 2021,13 Ciudades y áreas metropolitanas,Formal,De puerta en puerta,Ene - Mar,59.03546
 2021,13 Ciudades y áreas metropolitanas,Formal,De puerta en puerta,Feb - Abr,60.54267633333333
 2021,13 Ciudades y áreas metropolitanas,Formal,De puerta en puerta,Mar - May,62.864298
@@ -3509,6 +3562,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Formal,De puerta en puerta,Mar - May,168.254417
 2026,13 Ciudades y áreas metropolitanas,Formal,De puerta en puerta,Abr - Jun,169.810284
 2026,13 Ciudades y áreas metropolitanas,Formal,De puerta en puerta,May - Jul,164.759428
+2026,13 Ciudades y áreas metropolitanas,Formal,De puerta en puerta,Jun - Ago,153.6991235585075
 2021,13 Ciudades y áreas metropolitanas,Formal,Sitio al descubierto en la calle,Ene - Mar,105.474982
 2021,13 Ciudades y áreas metropolitanas,Formal,Sitio al descubierto en la calle,Feb - Abr,114.64259866666667
 2021,13 Ciudades y áreas metropolitanas,Formal,Sitio al descubierto en la calle,Mar - May,144.56372533333334
@@ -3574,6 +3628,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Formal,Sitio al descubierto en la calle,Mar - May,98.428828
 2026,13 Ciudades y áreas metropolitanas,Formal,Sitio al descubierto en la calle,Abr - Jun,103.508081
 2026,13 Ciudades y áreas metropolitanas,Formal,Sitio al descubierto en la calle,May - Jul,99.769876
+2026,13 Ciudades y áreas metropolitanas,Formal,Sitio al descubierto en la calle,Jun - Ago,93.01444012395348
 2021,13 Ciudades y áreas metropolitanas,Formal,"Local fijo, oficina, fábrica, etc",Ene - Mar,3232.3608409999997
 2021,13 Ciudades y áreas metropolitanas,Formal,"Local fijo, oficina, fábrica, etc",Feb - Abr,3102.906974666667
 2021,13 Ciudades y áreas metropolitanas,Formal,"Local fijo, oficina, fábrica, etc",Mar - May,3124.744102
@@ -3639,6 +3694,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Formal,"Local fijo, oficina, fábrica, etc",Mar - May,5179.22594
 2026,13 Ciudades y áreas metropolitanas,Formal,"Local fijo, oficina, fábrica, etc",Abr - Jun,5233.801838
 2026,13 Ciudades y áreas metropolitanas,Formal,"Local fijo, oficina, fábrica, etc",May - Jul,5275.173026
+2026,13 Ciudades y áreas metropolitanas,Formal,"Local fijo, oficina, fábrica, etc",Jun - Ago,5189.542970780612
 2021,13 Ciudades y áreas metropolitanas,Formal,En el campo o área rural,Ene - Mar,41.83980066666667
 2021,13 Ciudades y áreas metropolitanas,Formal,En el campo o área rural,Feb - Abr,37.278683
 2021,13 Ciudades y áreas metropolitanas,Formal,En el campo o área rural,Mar - May,35.605586666666674
@@ -3704,6 +3760,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Formal,En el campo o área rural,Mar - May,28.669585
 2026,13 Ciudades y áreas metropolitanas,Formal,En el campo o área rural,Abr - Jun,28.749052
 2026,13 Ciudades y áreas metropolitanas,Formal,En el campo o área rural,May - Jul,27.066065
+2026,13 Ciudades y áreas metropolitanas,Formal,En el campo o área rural,Jun - Ago,27.24387152852526
 2021,13 Ciudades y áreas metropolitanas,Formal,En una obra en construcción,Ene - Mar,122.05227666666667
 2021,13 Ciudades y áreas metropolitanas,Formal,En una obra en construcción,Feb - Abr,136.33548033333332
 2021,13 Ciudades y áreas metropolitanas,Formal,En una obra en construcción,Mar - May,146.875349
@@ -3769,6 +3826,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Formal,En una obra en construcción,Mar - May,156.017252
 2026,13 Ciudades y áreas metropolitanas,Formal,En una obra en construcción,Abr - Jun,154.110386
 2026,13 Ciudades y áreas metropolitanas,Formal,En una obra en construcción,May - Jul,171.318923
+2026,13 Ciudades y áreas metropolitanas,Formal,En una obra en construcción,Jun - Ago,175.7106226346277
 2021,13 Ciudades y áreas metropolitanas,Formal,En una mina o cantera,Ene - Mar,10.080465
 2021,13 Ciudades y áreas metropolitanas,Formal,En una mina o cantera,Feb - Abr,10.513540999999998
 2021,13 Ciudades y áreas metropolitanas,Formal,En una mina o cantera,Mar - May,8.542755333333334
@@ -3834,6 +3892,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Formal,En una mina o cantera,Mar - May,6.175497
 2026,13 Ciudades y áreas metropolitanas,Formal,En una mina o cantera,Abr - Jun,4.30634
 2026,13 Ciudades y áreas metropolitanas,Formal,En una mina o cantera,May - Jul,3.98987
+2026,13 Ciudades y áreas metropolitanas,Formal,En una mina o cantera,Jun - Ago,4.58574192624121
 2021,13 Ciudades y áreas metropolitanas,Formal,Otro,Ene - Mar,124.85773666666667
 2021,13 Ciudades y áreas metropolitanas,Formal,Otro,Feb - Abr,122.51689066666665
 2021,13 Ciudades y áreas metropolitanas,Formal,Otro,Mar - May,132.89103433333335
@@ -3899,6 +3958,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Formal,Otro,Mar - May,18.493232
 2026,13 Ciudades y áreas metropolitanas,Formal,Otro,Abr - Jun,17.991421
 2026,13 Ciudades y áreas metropolitanas,Formal,Otro,May - Jul,14.844812
+2026,13 Ciudades y áreas metropolitanas,Formal,Otro,Jun - Ago,18.32430582169804
 2021,13 Ciudades y áreas metropolitanas,Informal,Informal,Ene - Mar,4236.047126666667
 2021,13 Ciudades y áreas metropolitanas,Informal,Informal,Feb - Abr,4320.687901333334
 2021,13 Ciudades y áreas metropolitanas,Informal,Informal,Mar - May,4252.099253666666
@@ -3964,6 +4024,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Informal,Informal,Mar - May,4648.485882
 2026,13 Ciudades y áreas metropolitanas,Informal,Informal,Abr - Jun,4646.785097
 2026,13 Ciudades y áreas metropolitanas,Informal,Informal,May - Jul,4644.663127
+2026,13 Ciudades y áreas metropolitanas,Informal,Informal,Jun - Ago,4648.083319027192
 2021,13 Ciudades y áreas metropolitanas,Informal,En esta vivienda,Ene - Mar,880.4008989999999
 2021,13 Ciudades y áreas metropolitanas,Informal,En esta vivienda,Feb - Abr,942.8834870000001
 2021,13 Ciudades y áreas metropolitanas,Informal,En esta vivienda,Mar - May,980.3843123333332
@@ -4029,6 +4090,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Informal,En esta vivienda,Mar - May,1004.873293
 2026,13 Ciudades y áreas metropolitanas,Informal,En esta vivienda,Abr - Jun,959.880685
 2026,13 Ciudades y áreas metropolitanas,Informal,En esta vivienda,May - Jul,965.278324
+2026,13 Ciudades y áreas metropolitanas,Informal,En esta vivienda,Jun - Ago,942.4477969144666
 2021,13 Ciudades y áreas metropolitanas,Informal,En otras viviendas,Ene - Mar,721.3196443333333
 2021,13 Ciudades y áreas metropolitanas,Informal,En otras viviendas,Feb - Abr,771.933735
 2021,13 Ciudades y áreas metropolitanas,Informal,En otras viviendas,Mar - May,813.6786436666667
@@ -4094,6 +4156,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Informal,En otras viviendas,Mar - May,928.538654
 2026,13 Ciudades y áreas metropolitanas,Informal,En otras viviendas,Abr - Jun,946.563692
 2026,13 Ciudades y áreas metropolitanas,Informal,En otras viviendas,May - Jul,944.12619
+2026,13 Ciudades y áreas metropolitanas,Informal,En otras viviendas,Jun - Ago,914.0733384211832
 2021,13 Ciudades y áreas metropolitanas,Informal,En kiosco - caseta,Ene - Mar,31.220259
 2021,13 Ciudades y áreas metropolitanas,Informal,En kiosco - caseta,Feb - Abr,39.299712666666665
 2021,13 Ciudades y áreas metropolitanas,Informal,En kiosco - caseta,Mar - May,40.28408233333334
@@ -4159,6 +4222,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Informal,En kiosco - caseta,Mar - May,10.916874
 2026,13 Ciudades y áreas metropolitanas,Informal,En kiosco - caseta,Abr - Jun,11.367715
 2026,13 Ciudades y áreas metropolitanas,Informal,En kiosco - caseta,May - Jul,12.448202
+2026,13 Ciudades y áreas metropolitanas,Informal,En kiosco - caseta,Jun - Ago,13.08358432634757
 2021,13 Ciudades y áreas metropolitanas,Informal,En un vehículo,Ene - Mar,326.48718533333334
 2021,13 Ciudades y áreas metropolitanas,Informal,En un vehículo,Feb - Abr,338.0748586666666
 2021,13 Ciudades y áreas metropolitanas,Informal,En un vehículo,Mar - May,354.38398899999993
@@ -4224,6 +4288,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Informal,En un vehículo,Mar - May,560.488108
 2026,13 Ciudades y áreas metropolitanas,Informal,En un vehículo,Abr - Jun,561.6128
 2026,13 Ciudades y áreas metropolitanas,Informal,En un vehículo,May - Jul,575.248736
+2026,13 Ciudades y áreas metropolitanas,Informal,En un vehículo,Jun - Ago,585.820451300205
 2021,13 Ciudades y áreas metropolitanas,Informal,De puerta en puerta,Ene - Mar,160.375076
 2021,13 Ciudades y áreas metropolitanas,Informal,De puerta en puerta,Feb - Abr,163.814211
 2021,13 Ciudades y áreas metropolitanas,Informal,De puerta en puerta,Mar - May,162.628655
@@ -4289,6 +4354,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Informal,De puerta en puerta,Mar - May,181.410259
 2026,13 Ciudades y áreas metropolitanas,Informal,De puerta en puerta,Abr - Jun,182.890944
 2026,13 Ciudades y áreas metropolitanas,Informal,De puerta en puerta,May - Jul,186.410153
+2026,13 Ciudades y áreas metropolitanas,Informal,De puerta en puerta,Jun - Ago,200.664005943673
 2021,13 Ciudades y áreas metropolitanas,Informal,Sitio al descubierto en la calle,Ene - Mar,489.99498466666665
 2021,13 Ciudades y áreas metropolitanas,Informal,Sitio al descubierto en la calle,Feb - Abr,516.2818926666667
 2021,13 Ciudades y áreas metropolitanas,Informal,Sitio al descubierto en la calle,Mar - May,493.5040103333333
@@ -4354,6 +4420,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Informal,Sitio al descubierto en la calle,Mar - May,406.155176
 2026,13 Ciudades y áreas metropolitanas,Informal,Sitio al descubierto en la calle,Abr - Jun,391.627986
 2026,13 Ciudades y áreas metropolitanas,Informal,Sitio al descubierto en la calle,May - Jul,401.376749
+2026,13 Ciudades y áreas metropolitanas,Informal,Sitio al descubierto en la calle,Jun - Ago,409.8251578921642
 2021,13 Ciudades y áreas metropolitanas,Informal,"Local fijo, oficina, fábrica, etc",Ene - Mar,1325.9415763333334
 2021,13 Ciudades y áreas metropolitanas,Informal,"Local fijo, oficina, fábrica, etc",Feb - Abr,1279.2230786666667
 2021,13 Ciudades y áreas metropolitanas,Informal,"Local fijo, oficina, fábrica, etc",Mar - May,1178.047944
@@ -4419,6 +4486,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Informal,"Local fijo, oficina, fábrica, etc",Mar - May,1393.441717
 2026,13 Ciudades y áreas metropolitanas,Informal,"Local fijo, oficina, fábrica, etc",Abr - Jun,1422.01862
 2026,13 Ciudades y áreas metropolitanas,Informal,"Local fijo, oficina, fábrica, etc",May - Jul,1389.186248
+2026,13 Ciudades y áreas metropolitanas,Informal,"Local fijo, oficina, fábrica, etc",Jun - Ago,1416.049497105658
 2021,13 Ciudades y áreas metropolitanas,Informal,En el campo o área rural,Ene - Mar,58.80856166666666
 2021,13 Ciudades y áreas metropolitanas,Informal,En el campo o área rural,Feb - Abr,52.604616666666665
 2021,13 Ciudades y áreas metropolitanas,Informal,En el campo o área rural,Mar - May,35.344309
@@ -4484,6 +4552,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Informal,En el campo o área rural,Mar - May,35.428417
 2026,13 Ciudades y áreas metropolitanas,Informal,En el campo o área rural,Abr - Jun,31.313418
 2026,13 Ciudades y áreas metropolitanas,Informal,En el campo o área rural,May - Jul,34.697515
+2026,13 Ciudades y áreas metropolitanas,Informal,En el campo o área rural,Jun - Ago,31.51878386498473
 2021,13 Ciudades y áreas metropolitanas,Informal,En una obra en construcción,Ene - Mar,157.22517833333333
 2021,13 Ciudades y áreas metropolitanas,Informal,En una obra en construcción,Feb - Abr,142.22093733333335
 2021,13 Ciudades y áreas metropolitanas,Informal,En una obra en construcción,Mar - May,140.630344
@@ -4549,6 +4618,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Informal,En una obra en construcción,Mar - May,110.716117
 2026,13 Ciudades y áreas metropolitanas,Informal,En una obra en construcción,Abr - Jun,118.799446
 2026,13 Ciudades y áreas metropolitanas,Informal,En una obra en construcción,May - Jul,115.062842
+2026,13 Ciudades y áreas metropolitanas,Informal,En una obra en construcción,Jun - Ago,111.8744490512567
 2021,13 Ciudades y áreas metropolitanas,Informal,En una mina o cantera,Ene - Mar,2.8289406666666665
 2021,13 Ciudades y áreas metropolitanas,Informal,En una mina o cantera,Feb - Abr,3.725868666666667
 2021,13 Ciudades y áreas metropolitanas,Informal,En una mina o cantera,Mar - May,3.689567333333333
@@ -4614,6 +4684,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Informal,En una mina o cantera,Mar - May,1.605857
 2026,13 Ciudades y áreas metropolitanas,Informal,En una mina o cantera,Abr - Jun,1.698192
 2026,13 Ciudades y áreas metropolitanas,Informal,En una mina o cantera,May - Jul,0.526664
+2026,13 Ciudades y áreas metropolitanas,Informal,En una mina o cantera,Jun - Ago,1.083739545266665
 2021,13 Ciudades y áreas metropolitanas,Informal,Otro,Ene - Mar,81.44482166666667
 2021,13 Ciudades y áreas metropolitanas,Informal,Otro,Feb - Abr,70.62550366666666
 2021,13 Ciudades y áreas metropolitanas,Informal,Otro,Mar - May,49.52339666666666
@@ -4679,6 +4750,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,13 Ciudades y áreas metropolitanas,Informal,Otro,Mar - May,14.911413
 2026,13 Ciudades y áreas metropolitanas,Informal,Otro,Abr - Jun,19.011599
 2026,13 Ciudades y áreas metropolitanas,Informal,Otro,May - Jul,20.301504
+2026,13 Ciudades y áreas metropolitanas,Informal,Otro,Jun - Ago,21.64251466198709
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Ene - Mar,10207.340572
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Feb - Abr,10314.171929333332
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Mar - May,10331.821430333332
@@ -4744,6 +4816,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Mar - May,12619.478694
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Abr - Jun,12627.459838
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,May - Jul,12659.608284
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,Población ocupada,Jun - Ago,12612.19463609746
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,En esta vivienda,Ene - Mar,1959.262858
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,En esta vivienda,Feb - Abr,2140.10649
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,En esta vivienda,Mar - May,2221.612852333333
@@ -4809,6 +4882,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,En esta vivienda,Mar - May,1798.397199
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,En esta vivienda,Abr - Jun,1717.02562
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,En esta vivienda,May - Jul,1721.656672
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,En esta vivienda,Jun - Ago,1740.865441524958
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,En otras viviendas,Ene - Mar,992.6283323333333
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,En otras viviendas,Feb - Abr,1055.6386963333334
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,En otras viviendas,Mar - May,1092.8575323333334
@@ -4874,6 +4948,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,En otras viviendas,Mar - May,1239.724088
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,En otras viviendas,Abr - Jun,1244.278498
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,En otras viviendas,May - Jul,1238.241682
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,En otras viviendas,Jun - Ago,1210.635674770775
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,En kiosco - caseta,Ene - Mar,47.07883966666666
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,En kiosco - caseta,Feb - Abr,56.93644433333333
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,En kiosco - caseta,Mar - May,60.01519533333334
@@ -4939,6 +5014,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,En kiosco - caseta,Mar - May,18.943476
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,En kiosco - caseta,Abr - Jun,16.819208
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,En kiosco - caseta,May - Jul,16.98596
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,En kiosco - caseta,Jun - Ago,17.25999665788877
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,En un vehículo,Ene - Mar,613.0116503333333
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,En un vehículo,Feb - Abr,626.3811356666666
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,En un vehículo,Mar - May,623.4786623333333
@@ -5004,6 +5080,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,En un vehículo,Mar - May,972.440302
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,En un vehículo,Abr - Jun,973.04841
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,En un vehículo,May - Jul,983.369884
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,En un vehículo,Jun - Ago,998.5843120007535
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,De puerta en puerta,Ene - Mar,253.2608623333333
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,De puerta en puerta,Feb - Abr,255.49534300000002
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,De puerta en puerta,Mar - May,255.2269006666667
@@ -5069,6 +5146,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,De puerta en puerta,Mar - May,370.192399
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,De puerta en puerta,Abr - Jun,373.553138
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,De puerta en puerta,May - Jul,371.526686
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,De puerta en puerta,Jun - Ago,374.3709447950649
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Sitio al descubierto en la calle,Ene - Mar,675.0556686666666
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Sitio al descubierto en la calle,Feb - Abr,710.6101813333333
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Sitio al descubierto en la calle,Mar - May,716.1786543333333
@@ -5134,6 +5212,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Sitio al descubierto en la calle,Mar - May,583.868754
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Sitio al descubierto en la calle,Abr - Jun,571.176173
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Sitio al descubierto en la calle,May - Jul,578.876866
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,Sitio al descubierto en la calle,Jun - Ago,579.6547284857063
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,"Local fijo, oficina, fábrica, etc",Ene - Mar,4991.989770666666
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,"Local fijo, oficina, fábrica, etc",Feb - Abr,4820.510126333334
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,"Local fijo, oficina, fábrica, etc",Mar - May,4739.415420333334
@@ -5199,6 +5278,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,"Local fijo, oficina, fábrica, etc",Mar - May,7201.861999
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,"Local fijo, oficina, fábrica, etc",Abr - Jun,7291.358991
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,"Local fijo, oficina, fábrica, etc",May - Jul,7292.957437
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,"Local fijo, oficina, fábrica, etc",Jun - Ago,7231.385218152351
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,En el campo o área rural,Ene - Mar,126.70565933333334
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,En el campo o área rural,Feb - Abr,113.76196700000001
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,En el campo o área rural,Mar - May,92.66880800000001
@@ -5264,6 +5344,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,En el campo o área rural,Mar - May,88.919847
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,En el campo o área rural,Abr - Jun,84.338985
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,En el campo o área rural,May - Jul,87.42041
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,En el campo o área rural,Jun - Ago,85.14549636947106
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,En una obra en construcción,Ene - Mar,313.61151666666666
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,En una obra en construcción,Feb - Abr,315.00332199999997
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,En una obra en construcción,Mar - May,323.461876
@@ -5329,6 +5410,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,En una obra en construcción,Mar - May,300.698454
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,En una obra en construcción,Abr - Jun,310.102323
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,En una obra en construcción,May - Jul,325.934844
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,En una obra en construcción,Jun - Ago,325.7820883848512
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,En una mina o cantera,Ene - Mar,16.036220333333333
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,En una mina o cantera,Feb - Abr,17.073293000000003
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,En una mina o cantera,Mar - May,14.898057333333334
@@ -5394,6 +5476,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,En una mina o cantera,Mar - May,9.535502
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,En una mina o cantera,Abr - Jun,7.835825
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,En una mina o cantera,May - Jul,6.262467
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,En una mina o cantera,Jun - Ago,7.287007716635397
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Otro,Ene - Mar,218.699194
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Otro,Feb - Abr,202.65493033333334
 2021,23 Ciudades y áreas metropolitanas,Población ocupada,Otro,Mar - May,192.00747133333334
@@ -5459,6 +5542,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Otro,Mar - May,34.896674
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Otro,Abr - Jun,37.922668
 2026,23 Ciudades y áreas metropolitanas,Población ocupada,Otro,May - Jul,36.375376
+2026,23 Ciudades y áreas metropolitanas,Población ocupada,Otro,Jun - Ago,41.22372723900516
 2021,23 Ciudades y áreas metropolitanas,Formal,Formal,Ene - Mar,5381.842067
 2021,23 Ciudades y áreas metropolitanas,Formal,Formal,Feb - Abr,5397.806292666667
 2021,23 Ciudades y áreas metropolitanas,Formal,Formal,Mar - May,5488.904758333333
@@ -5524,6 +5608,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Formal,Formal,Mar - May,7326.40866
 2026,23 Ciudades y áreas metropolitanas,Formal,Formal,Abr - Jun,7331.209974
 2026,23 Ciudades y áreas metropolitanas,Formal,Formal,May - Jul,7357.198758
+2026,23 Ciudades y áreas metropolitanas,Formal,Formal,Jun - Ago,7315.233747470807
 2021,23 Ciudades y áreas metropolitanas,Formal,En esta vivienda,Ene - Mar,961.149841
 2021,23 Ciudades y áreas metropolitanas,Formal,En esta vivienda,Feb - Abr,1075.007537
 2021,23 Ciudades y áreas metropolitanas,Formal,En esta vivienda,Mar - May,1122.7711526666665
@@ -5589,6 +5674,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Formal,En esta vivienda,Mar - May,683.228637
 2026,23 Ciudades y áreas metropolitanas,Formal,En esta vivienda,Abr - Jun,646.31998
 2026,23 Ciudades y áreas metropolitanas,Formal,En esta vivienda,May - Jul,640.140814
+2026,23 Ciudades y áreas metropolitanas,Formal,En esta vivienda,Jun - Ago,682.0754473350298
 2021,23 Ciudades y áreas metropolitanas,Formal,En otras viviendas,Ene - Mar,164.02214533333333
 2021,23 Ciudades y áreas metropolitanas,Formal,En otras viviendas,Feb - Abr,170.131986
 2021,23 Ciudades y áreas metropolitanas,Formal,En otras viviendas,Mar - May,161.49277466666663
@@ -5654,6 +5740,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Formal,En otras viviendas,Mar - May,173.020886
 2026,23 Ciudades y áreas metropolitanas,Formal,En otras viviendas,Abr - Jun,160.640698
 2026,23 Ciudades y áreas metropolitanas,Formal,En otras viviendas,May - Jul,155.487441
+2026,23 Ciudades y áreas metropolitanas,Formal,En otras viviendas,Jun - Ago,159.0187523673208
 2021,23 Ciudades y áreas metropolitanas,Formal,En kiosco - caseta,Ene - Mar,9.671484666666666
 2021,23 Ciudades y áreas metropolitanas,Formal,En kiosco - caseta,Feb - Abr,11.841842999999999
 2021,23 Ciudades y áreas metropolitanas,Formal,En kiosco - caseta,Mar - May,13.682114333333333
@@ -5719,6 +5806,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Formal,En kiosco - caseta,Mar - May,5.388388
 2026,23 Ciudades y áreas metropolitanas,Formal,En kiosco - caseta,Abr - Jun,2.507588
 2026,23 Ciudades y áreas metropolitanas,Formal,En kiosco - caseta,May - Jul,1.37944
+2026,23 Ciudades y áreas metropolitanas,Formal,En kiosco - caseta,Jun - Ago,1.021291245623367
 2021,23 Ciudades y áreas metropolitanas,Formal,En un vehículo,Ene - Mar,225.63519066666672
 2021,23 Ciudades y áreas metropolitanas,Formal,En un vehículo,Feb - Abr,227.13178666666667
 2021,23 Ciudades y áreas metropolitanas,Formal,En un vehículo,Mar - May,203.4622413333333
@@ -5784,6 +5872,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Formal,En un vehículo,Mar - May,320.237
 2026,23 Ciudades y áreas metropolitanas,Formal,En un vehículo,Abr - Jun,318.838434
 2026,23 Ciudades y áreas metropolitanas,Formal,En un vehículo,May - Jul,316.609665
+2026,23 Ciudades y áreas metropolitanas,Formal,En un vehículo,Jun - Ago,322.2537326420534
 2021,23 Ciudades y áreas metropolitanas,Formal,De puerta en puerta,Ene - Mar,65.49613633333333
 2021,23 Ciudades y áreas metropolitanas,Formal,De puerta en puerta,Feb - Abr,66.41008366666667
 2021,23 Ciudades y áreas metropolitanas,Formal,De puerta en puerta,Mar - May,68.22670266666667
@@ -5849,6 +5938,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Formal,De puerta en puerta,Mar - May,177.827192
 2026,23 Ciudades y áreas metropolitanas,Formal,De puerta en puerta,Abr - Jun,178.038126
 2026,23 Ciudades y áreas metropolitanas,Formal,De puerta en puerta,May - Jul,171.968636
+2026,23 Ciudades y áreas metropolitanas,Formal,De puerta en puerta,Jun - Ago,160.7148224012635
 2021,23 Ciudades y áreas metropolitanas,Formal,Sitio al descubierto en la calle,Ene - Mar,117.50556466666667
 2021,23 Ciudades y áreas metropolitanas,Formal,Sitio al descubierto en la calle,Feb - Abr,125.899181
 2021,23 Ciudades y áreas metropolitanas,Formal,Sitio al descubierto en la calle,Mar - May,156.3198153333333
@@ -5914,6 +6004,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Formal,Sitio al descubierto en la calle,Mar - May,110.635913
 2026,23 Ciudades y áreas metropolitanas,Formal,Sitio al descubierto en la calle,Abr - Jun,114.975575
 2026,23 Ciudades y áreas metropolitanas,Formal,Sitio al descubierto en la calle,May - Jul,112.091586
+2026,23 Ciudades y áreas metropolitanas,Formal,Sitio al descubierto en la calle,Jun - Ago,105.9867659020324
 2021,23 Ciudades y áreas metropolitanas,Formal,"Local fijo, oficina, fábrica, etc",Ene - Mar,3515.174855333333
 2021,23 Ciudades y áreas metropolitanas,Formal,"Local fijo, oficina, fábrica, etc",Feb - Abr,3392.7539696666663
 2021,23 Ciudades y áreas metropolitanas,Formal,"Local fijo, oficina, fábrica, etc",Mar - May,3417.1994706666665
@@ -5979,6 +6070,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Formal,"Local fijo, oficina, fábrica, etc",Mar - May,5625.110681
 2026,23 Ciudades y áreas metropolitanas,Formal,"Local fijo, oficina, fábrica, etc",Abr - Jun,5682.180501
 2026,23 Ciudades y áreas metropolitanas,Formal,"Local fijo, oficina, fábrica, etc",May - Jul,5718.979726
+2026,23 Ciudades y áreas metropolitanas,Formal,"Local fijo, oficina, fábrica, etc",Jun - Ago,5635.110850256098
 2021,23 Ciudades y áreas metropolitanas,Formal,En el campo o área rural,Ene - Mar,49.869731333333334
 2021,23 Ciudades y áreas metropolitanas,Formal,En el campo o área rural,Feb - Abr,44.628500333333335
 2021,23 Ciudades y áreas metropolitanas,Formal,En el campo o área rural,Mar - May,41.87672666666666
@@ -6044,6 +6136,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Formal,En el campo o área rural,Mar - May,37.140841
 2026,23 Ciudades y áreas metropolitanas,Formal,En el campo o área rural,Abr - Jun,36.607693
 2026,23 Ciudades y áreas metropolitanas,Formal,En el campo o área rural,May - Jul,34.885361
+2026,23 Ciudades y áreas metropolitanas,Formal,En el campo o área rural,Jun - Ago,35.26428106426778
 2021,23 Ciudades y áreas metropolitanas,Formal,En una obra en construcción,Ene - Mar,128.89241233333334
 2021,23 Ciudades y áreas metropolitanas,Formal,En una obra en construcción,Feb - Abr,143.61789466666667
 2021,23 Ciudades y áreas metropolitanas,Formal,En una obra en construcción,Mar - May,154.38007466666667
@@ -6109,6 +6202,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Formal,En una obra en construcción,Mar - May,166.69401
 2026,23 Ciudades y áreas metropolitanas,Formal,En una obra en construcción,Abr - Jun,166.632744
 2026,23 Ciudades y áreas metropolitanas,Formal,En una obra en construcción,May - Jul,184.698852
+2026,23 Ciudades y áreas metropolitanas,Formal,En una obra en construcción,Jun - Ago,189.0775403516813
 2021,23 Ciudades y áreas metropolitanas,Formal,En una mina o cantera,Ene - Mar,12.206214666666668
 2021,23 Ciudades y áreas metropolitanas,Formal,En una mina o cantera,Feb - Abr,12.532871333333334
 2021,23 Ciudades y áreas metropolitanas,Formal,En una mina o cantera,Mar - May,10.611392333333333
@@ -6174,6 +6268,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Formal,En una mina o cantera,Mar - May,7.887973
 2026,23 Ciudades y áreas metropolitanas,Formal,En una mina o cantera,Abr - Jun,6.0333
 2026,23 Ciudades y áreas metropolitanas,Formal,En una mina o cantera,May - Jul,5.604967
+2026,23 Ciudades y áreas metropolitanas,Formal,En una mina o cantera,Jun - Ago,6.016680454141649
 2021,23 Ciudades y áreas metropolitanas,Formal,Otro,Ene - Mar,132.218491
 2021,23 Ciudades y áreas metropolitanas,Formal,Otro,Feb - Abr,127.85064
 2021,23 Ciudades y áreas metropolitanas,Formal,Otro,Mar - May,138.88229366666667
@@ -6239,6 +6334,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Formal,Otro,Mar - May,19.237139
 2026,23 Ciudades y áreas metropolitanas,Formal,Otro,Abr - Jun,18.435335
 2026,23 Ciudades y áreas metropolitanas,Formal,Otro,May - Jul,15.352269
+2026,23 Ciudades y áreas metropolitanas,Formal,Otro,Jun - Ago,18.69358345129487
 2021,23 Ciudades y áreas metropolitanas,Informal,Informal,Ene - Mar,4825.498504666667
 2021,23 Ciudades y áreas metropolitanas,Informal,Informal,Feb - Abr,4916.365636333333
 2021,23 Ciudades y áreas metropolitanas,Informal,Informal,Mar - May,4842.916671666667
@@ -6304,6 +6400,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Informal,Informal,Mar - May,5293.070033
 2026,23 Ciudades y áreas metropolitanas,Informal,Informal,Abr - Jun,5296.249864
 2026,23 Ciudades y áreas metropolitanas,Informal,Informal,May - Jul,5302.409526
+2026,23 Ciudades y áreas metropolitanas,Informal,Informal,Jun - Ago,5296.960888626653
 2021,23 Ciudades y áreas metropolitanas,Informal,En esta vivienda,Ene - Mar,998.1130173333335
 2021,23 Ciudades y áreas metropolitanas,Informal,En esta vivienda,Feb - Abr,1065.0989533333334
 2021,23 Ciudades y áreas metropolitanas,Informal,En esta vivienda,Mar - May,1098.8417
@@ -6369,6 +6466,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Informal,En esta vivienda,Mar - May,1115.168562
 2026,23 Ciudades y áreas metropolitanas,Informal,En esta vivienda,Abr - Jun,1070.70564
 2026,23 Ciudades y áreas metropolitanas,Informal,En esta vivienda,May - Jul,1081.515858
+2026,23 Ciudades y áreas metropolitanas,Informal,En esta vivienda,Jun - Ago,1058.789994189928
 2021,23 Ciudades y áreas metropolitanas,Informal,En otras viviendas,Ene - Mar,828.606187
 2021,23 Ciudades y áreas metropolitanas,Informal,En otras viviendas,Feb - Abr,885.50671
 2021,23 Ciudades y áreas metropolitanas,Informal,En otras viviendas,Mar - May,931.3647576666667
@@ -6434,6 +6532,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Informal,En otras viviendas,Mar - May,1066.703203
 2026,23 Ciudades y áreas metropolitanas,Informal,En otras viviendas,Abr - Jun,1083.637801
 2026,23 Ciudades y áreas metropolitanas,Informal,En otras viviendas,May - Jul,1082.754241
+2026,23 Ciudades y áreas metropolitanas,Informal,En otras viviendas,Jun - Ago,1051.616922403455
 2021,23 Ciudades y áreas metropolitanas,Informal,En kiosco - caseta,Ene - Mar,37.40735433333333
 2021,23 Ciudades y áreas metropolitanas,Informal,En kiosco - caseta,Feb - Abr,45.094601000000004
 2021,23 Ciudades y áreas metropolitanas,Informal,En kiosco - caseta,Mar - May,46.33308099999999
@@ -6499,6 +6598,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Informal,En kiosco - caseta,Mar - May,13.555087
 2026,23 Ciudades y áreas metropolitanas,Informal,En kiosco - caseta,Abr - Jun,14.311619
 2026,23 Ciudades y áreas metropolitanas,Informal,En kiosco - caseta,May - Jul,15.60652
+2026,23 Ciudades y áreas metropolitanas,Informal,En kiosco - caseta,Jun - Ago,16.2387054122654
 2021,23 Ciudades y áreas metropolitanas,Informal,En un vehículo,Ene - Mar,387.3764596666667
 2021,23 Ciudades y áreas metropolitanas,Informal,En un vehículo,Feb - Abr,399.2493493333333
 2021,23 Ciudades y áreas metropolitanas,Informal,En un vehículo,Mar - May,420.016421
@@ -6564,6 +6664,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Informal,En un vehículo,Mar - May,652.203302
 2026,23 Ciudades y áreas metropolitanas,Informal,En un vehículo,Abr - Jun,654.209976
 2026,23 Ciudades y áreas metropolitanas,Informal,En un vehículo,May - Jul,666.760218
+2026,23 Ciudades y áreas metropolitanas,Informal,En un vehículo,Jun - Ago,676.3305793587001
 2021,23 Ciudades y áreas metropolitanas,Informal,De puerta en puerta,Ene - Mar,187.764726
 2021,23 Ciudades y áreas metropolitanas,Informal,De puerta en puerta,Feb - Abr,189.0852593333333
 2021,23 Ciudades y áreas metropolitanas,Informal,De puerta en puerta,Mar - May,187.00019799999998
@@ -6629,6 +6730,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Informal,De puerta en puerta,Mar - May,192.365207
 2026,23 Ciudades y áreas metropolitanas,Informal,De puerta en puerta,Abr - Jun,195.515012
 2026,23 Ciudades y áreas metropolitanas,Informal,De puerta en puerta,May - Jul,199.55805
+2026,23 Ciudades y áreas metropolitanas,Informal,De puerta en puerta,Jun - Ago,213.6561223938014
 2021,23 Ciudades y áreas metropolitanas,Informal,Sitio al descubierto en la calle,Ene - Mar,557.5501043333334
 2021,23 Ciudades y áreas metropolitanas,Informal,Sitio al descubierto en la calle,Feb - Abr,584.7110006666667
 2021,23 Ciudades y áreas metropolitanas,Informal,Sitio al descubierto en la calle,Mar - May,559.8588393333333
@@ -6694,6 +6796,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Informal,Sitio al descubierto en la calle,Mar - May,473.232841
 2026,23 Ciudades y áreas metropolitanas,Informal,Sitio al descubierto en la calle,Abr - Jun,456.200598
 2026,23 Ciudades y áreas metropolitanas,Informal,Sitio al descubierto en la calle,May - Jul,466.78528
+2026,23 Ciudades y áreas metropolitanas,Informal,Sitio al descubierto en la calle,Jun - Ago,473.667962583674
 2021,23 Ciudades y áreas metropolitanas,Informal,"Local fijo, oficina, fábrica, etc",Ene - Mar,1476.8149156666666
 2021,23 Ciudades y áreas metropolitanas,Informal,"Local fijo, oficina, fábrica, etc",Feb - Abr,1427.756157
 2021,23 Ciudades y áreas metropolitanas,Informal,"Local fijo, oficina, fábrica, etc",Mar - May,1322.2159496666666
@@ -6759,6 +6862,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Informal,"Local fijo, oficina, fábrica, etc",Mar - May,1576.751318
 2026,23 Ciudades y áreas metropolitanas,Informal,"Local fijo, oficina, fábrica, etc",Abr - Jun,1609.17849
 2026,23 Ciudades y áreas metropolitanas,Informal,"Local fijo, oficina, fábrica, etc",May - Jul,1573.977712
+2026,23 Ciudades y áreas metropolitanas,Informal,"Local fijo, oficina, fábrica, etc",Jun - Ago,1596.274367896252
 2021,23 Ciudades y áreas metropolitanas,Informal,En el campo o área rural,Ene - Mar,76.835928
 2021,23 Ciudades y áreas metropolitanas,Informal,En el campo o área rural,Feb - Abr,69.133467
 2021,23 Ciudades y áreas metropolitanas,Informal,En el campo o área rural,Mar - May,50.79208133333333
@@ -6824,6 +6928,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Informal,En el campo o área rural,Mar - May,51.779006
 2026,23 Ciudades y áreas metropolitanas,Informal,En el campo o área rural,Abr - Jun,47.731292
 2026,23 Ciudades y áreas metropolitanas,Informal,En el campo o área rural,May - Jul,52.535048
+2026,23 Ciudades y áreas metropolitanas,Informal,En el campo o área rural,Jun - Ago,49.88121530520328
 2021,23 Ciudades y áreas metropolitanas,Informal,En una obra en construcción,Ene - Mar,184.71910433333332
 2021,23 Ciudades y áreas metropolitanas,Informal,En una obra en construcción,Feb - Abr,171.3854276666667
 2021,23 Ciudades y áreas metropolitanas,Informal,En una obra en construcción,Mar - May,169.08180166666668
@@ -6889,6 +6994,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Informal,En una obra en construcción,Mar - May,134.004444
 2026,23 Ciudades y áreas metropolitanas,Informal,En una obra en construcción,Abr - Jun,143.469579
 2026,23 Ciudades y áreas metropolitanas,Informal,En una obra en construcción,May - Jul,141.235992
+2026,23 Ciudades y áreas metropolitanas,Informal,En una obra en construcción,Jun - Ago,136.70454803317
 2021,23 Ciudades y áreas metropolitanas,Informal,En una mina o cantera,Ene - Mar,3.8300053333333337
 2021,23 Ciudades y áreas metropolitanas,Informal,En una mina o cantera,Feb - Abr,4.540421333333334
 2021,23 Ciudades y áreas metropolitanas,Informal,En una mina o cantera,Mar - May,4.286665
@@ -6954,6 +7060,7 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Informal,En una mina o cantera,Mar - May,1.647529
 2026,23 Ciudades y áreas metropolitanas,Informal,En una mina o cantera,Abr - Jun,1.802525
 2026,23 Ciudades y áreas metropolitanas,Informal,En una mina o cantera,May - Jul,0.6575
+2026,23 Ciudades y áreas metropolitanas,Informal,En una mina o cantera,Jun - Ago,1.270327262493749
 2021,23 Ciudades y áreas metropolitanas,Informal,Otro,Ene - Mar,86.48070333333334
 2021,23 Ciudades y áreas metropolitanas,Informal,Otro,Feb - Abr,74.80429033333333
 2021,23 Ciudades y áreas metropolitanas,Informal,Otro,Mar - May,53.12517766666667
@@ -7019,3 +7126,4 @@ Fecha,Perspectiva,Grupo,Concepto,Periodo,Valor
 2026,23 Ciudades y áreas metropolitanas,Informal,Otro,Mar - May,15.659534
 2026,23 Ciudades y áreas metropolitanas,Informal,Otro,Abr - Jun,19.487332
 2026,23 Ciudades y áreas metropolitanas,Informal,Otro,May - Jul,21.023107
+2026,23 Ciudades y áreas metropolitanas,Informal,Otro,Jun - Ago,22.53014378771029

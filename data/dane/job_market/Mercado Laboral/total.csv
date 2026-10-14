@@ -232,6 +232,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,% población en edad de trabajar,Mar - May,78.35642412189382
 2026,TOTAL NACIONAL,% población en edad de trabajar,Abr - Jun,78.38224744863925
 2026,TOTAL NACIONAL,% población en edad de trabajar,May - Jul,78.40654916956197
+2026,TOTAL NACIONAL,% población en edad de trabajar,Jun - Ago,78.431286989365
 2007,TOTAL NACIONAL,Tasa Global de Participación (TGP),Ene - Mar,62.90042867202412
 2007,TOTAL NACIONAL,Tasa Global de Participación (TGP),Feb - Abr,63.65488189995665
 2007,TOTAL NACIONAL,Tasa Global de Participación (TGP),Mar - May,63.47628375580625
@@ -465,6 +466,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,Tasa Global de Participación (TGP),Mar - May,64.90260241263937
 2026,TOTAL NACIONAL,Tasa Global de Participación (TGP),Abr - Jun,64.74222712074909
 2026,TOTAL NACIONAL,Tasa Global de Participación (TGP),May - Jul,64.75133732529827
+2026,TOTAL NACIONAL,Tasa Global de Participación (TGP),Jun - Ago,64.19990428087446
 2007,TOTAL NACIONAL,Tasa de Ocupación (TO),Ene - Mar,54.69169056166654
 2007,TOTAL NACIONAL,Tasa de Ocupación (TO),Feb - Abr,56.08331564097284
 2007,TOTAL NACIONAL,Tasa de Ocupación (TO),Mar - May,56.171163424492356
@@ -698,6 +700,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,Tasa de Ocupación (TO),Mar - May,59.36550687598843
 2026,TOTAL NACIONAL,Tasa de Ocupación (TO),Abr - Jun,59.38412833314259
 2026,TOTAL NACIONAL,Tasa de Ocupación (TO),May - Jul,59.53837042043432
+2026,TOTAL NACIONAL,Tasa de Ocupación (TO),Jun - Ago,58.74754458120491
 2007,TOTAL NACIONAL,Tasa de Desocupación (TD),Ene - Mar,13.050369105049583
 2007,TOTAL NACIONAL,Tasa de Desocupación (TD),Feb - Abr,11.894714171829703
 2007,TOTAL NACIONAL,Tasa de Desocupación (TD),Mar - May,11.508424720530613
@@ -931,6 +934,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,Tasa de Desocupación (TD),Mar - May,8.531392164662835
 2026,TOTAL NACIONAL,Tasa de Desocupación (TD),Abr - Jun,8.276049536217316
 2026,TOTAL NACIONAL,Tasa de Desocupación (TD),May - Jul,8.050747861275829
+2026,TOTAL NACIONAL,Tasa de Desocupación (TD),Jun - Ago,8.49278478070428
 2007,TOTAL NACIONAL,Tasa de Subocupación (TS),Ene - Mar,8.814455113597063
 2007,TOTAL NACIONAL,Tasa de Subocupación (TS),Feb - Abr,9.18638271303332
 2007,TOTAL NACIONAL,Tasa de Subocupación (TS),Mar - May,9.233544960843135
@@ -1157,6 +1161,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,Tasa de Subocupación (TS),Mar - May,6.872478490062515
 2026,TOTAL NACIONAL,Tasa de Subocupación (TS),Abr - Jun,7.166579664849221
 2026,TOTAL NACIONAL,Tasa de Subocupación (TS),May - Jul,7.014828507708234
+2026,TOTAL NACIONAL,Tasa de Subocupación (TS),Jun - Ago,6.880436949341097
 2007,TOTAL NACIONAL,Población total,Ene - Mar,41294.115666666665
 2007,TOTAL NACIONAL,Población total,Feb - Abr,41329.958999999995
 2007,TOTAL NACIONAL,Población total,Mar - May,41365.202
@@ -1390,6 +1395,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,Población total,Mar - May,52463.056000000004
 2026,TOTAL NACIONAL,Población total,Abr - Jun,52505.805
 2026,TOTAL NACIONAL,Población total,May - Jul,52546.18366666666
+2026,TOTAL NACIONAL,Población total,Jun - Ago,52587.24366666667
 2007,TOTAL NACIONAL,Población en edad de trabajar (PET),Ene - Mar,29288.903000000002
 2007,TOTAL NACIONAL,Población en edad de trabajar (PET),Feb - Abr,29331.869000000002
 2007,TOTAL NACIONAL,Población en edad de trabajar (PET),Mar - May,29374.440333333336
@@ -1623,6 +1629,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,Población en edad de trabajar (PET),Mar - May,41108.174666666666
 2026,TOTAL NACIONAL,Población en edad de trabajar (PET),Abr - Jun,41155.23
 2026,TOTAL NACIONAL,Población en edad de trabajar (PET),May - Jul,41199.649333333335
+2026,TOTAL NACIONAL,Población en edad de trabajar (PET),Jun - Ago,41244.852000000006
 2007,TOTAL NACIONAL,Fuerza de trabajo,Ene - Mar,18422.845540333336
 2007,TOTAL NACIONAL,Fuerza de trabajo,Feb - Abr,18671.166570999998
 2007,TOTAL NACIONAL,Fuerza de trabajo,Mar - May,18645.803097666667
@@ -1856,6 +1863,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,Fuerza de trabajo,Mar - May,26680.275163000002
 2026,TOTAL NACIONAL,Fuerza de trabajo,Abr - Jun,26644.81247866667
 2026,TOTAL NACIONAL,Fuerza de trabajo,May - Jul,26677.323916666664
+2026,TOTAL NACIONAL,Fuerza de trabajo,Jun - Ago,26479.15550478834
 2007,TOTAL NACIONAL,Población ocupada,Ene - Mar,16018.596197666668
 2007,TOTAL NACIONAL,Población ocupada,Feb - Abr,16450.284674666666
 2007,TOTAL NACIONAL,Población ocupada,Mar - May,16499.964884666664
@@ -2089,6 +2097,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,Población ocupada,Mar - May,24404.07625833333
 2026,TOTAL NACIONAL,Población ocupada,Abr - Jun,24439.674599
 2026,TOTAL NACIONAL,Población ocupada,May - Jul,24529.599831999996
+2026,TOTAL NACIONAL,Población ocupada,Jun - Ago,24230.33781615199
 2007,TOTAL NACIONAL,Población desocupada,Ene - Mar,2404.2493426666665
 2007,TOTAL NACIONAL,Población desocupada,Feb - Abr,2220.8818961666666
 2007,TOTAL NACIONAL,Población desocupada,Mar - May,2145.8382130333334
@@ -2322,6 +2331,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,Población desocupada,Mar - May,2276.1989047666666
 2026,TOTAL NACIONAL,Población desocupada,Abr - Jun,2205.1378795666665
 2026,TOTAL NACIONAL,Población desocupada,May - Jul,2147.724084666667
+2026,TOTAL NACIONAL,Población desocupada,Jun - Ago,2248.817688769684
 2007,TOTAL NACIONAL,Población fuera de la fuerza de trabajo,Ene - Mar,10866.057459666665
 2007,TOTAL NACIONAL,Población fuera de la fuerza de trabajo,Feb - Abr,10660.702428999999
 2007,TOTAL NACIONAL,Población fuera de la fuerza de trabajo,Mar - May,10728.637235666667
@@ -2555,6 +2565,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,Población fuera de la fuerza de trabajo,Mar - May,14427.899503666667
 2026,TOTAL NACIONAL,Población fuera de la fuerza de trabajo,Abr - Jun,14510.417521333335
 2026,TOTAL NACIONAL,Población fuera de la fuerza de trabajo,May - Jul,14522.325416666667
+2026,TOTAL NACIONAL,Población fuera de la fuerza de trabajo,Jun - Ago,14765.696495211661
 2007,TOTAL NACIONAL,Población subocupada,Ene - Mar,1623.8734508
 2007,TOTAL NACIONAL,Población subocupada,Feb - Abr,1715.2048181999999
 2007,TOTAL NACIONAL,Población subocupada,Mar - May,1721.6686123333336
@@ -2781,6 +2792,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,Población subocupada,Mar - May,1833.5961716666668
 2026,TOTAL NACIONAL,Población subocupada,Abr - Jun,1909.5217128333334
 2026,TOTAL NACIONAL,Población subocupada,May - Jul,1871.3685232
+2026,TOTAL NACIONAL,Población subocupada,Jun - Ago,1821.881599224944
 2021,TOTAL NACIONAL,Fuerza de trabajo potencial,Ene - Mar,1738.9367047333333
 2021,TOTAL NACIONAL,Fuerza de trabajo potencial,Feb - Abr,1509.6959736666668
 2021,TOTAL NACIONAL,Fuerza de trabajo potencial,Mar - May,1489.3524574333333
@@ -2846,6 +2858,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,Fuerza de trabajo potencial,Mar - May,1412.8773446333332
 2026,TOTAL NACIONAL,Fuerza de trabajo potencial,Abr - Jun,1452.6285894666664
 2026,TOTAL NACIONAL,Fuerza de trabajo potencial,May - Jul,1439.6133081
+2026,TOTAL NACIONAL,Fuerza de trabajo potencial,Jun - Ago,1534.9279461491544
 2007,HOMBRES,% población en edad de trabajar,Ene - Mar,69.76771555834603
 2007,HOMBRES,% población en edad de trabajar,Feb - Abr,69.80902775345756
 2007,HOMBRES,% población en edad de trabajar,Mar - May,69.85034179570513
@@ -3079,6 +3092,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,% población en edad de trabajar,Mar - May,77.30899812440201
 2026,HOMBRES,% población en edad de trabajar,Abr - Jun,77.33587137659013
 2026,HOMBRES,% población en edad de trabajar,May - Jul,77.36111438396937
+2026,HOMBRES,% población en edad de trabajar,Jun - Ago,77.3867802826124
 2007,HOMBRES,Tasa Global de Participación (TGP),Ene - Mar,77.72650638385953
 2007,HOMBRES,Tasa Global de Participación (TGP),Feb - Abr,78.24177450337699
 2007,HOMBRES,Tasa Global de Participación (TGP),Mar - May,77.96829717413172
@@ -3312,6 +3326,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,Tasa Global de Participación (TGP),Mar - May,77.12424620993494
 2026,HOMBRES,Tasa Global de Participación (TGP),Abr - Jun,76.66003823758435
 2026,HOMBRES,Tasa Global de Participación (TGP),May - Jul,76.98796451792644
+2026,HOMBRES,Tasa Global de Participación (TGP),Jun - Ago,76.16158705421915
 2007,HOMBRES,Tasa de Ocupación (TO),Ene - Mar,69.90997166128349
 2007,HOMBRES,Tasa de Ocupación (TO),Feb - Abr,71.1779955955935
 2007,HOMBRES,Tasa de Ocupación (TO),Mar - May,71.16740742752393
@@ -3545,6 +3560,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,Tasa de Ocupación (TO),Mar - May,71.75997383227491
 2026,HOMBRES,Tasa de Ocupación (TO),Abr - Jun,71.45894064450741
 2026,HOMBRES,Tasa de Ocupación (TO),May - Jul,71.88798156905408
+2026,HOMBRES,Tasa de Ocupación (TO),Jun - Ago,70.85393803871055
 2007,HOMBRES,Tasa de Desocupación (TD),Ene - Mar,10.056459616750955
 2007,HOMBRES,Tasa de Desocupación (TD),Feb - Abr,9.028142518428362
 2007,HOMBRES,Tasa de Desocupación (TD),Mar - May,8.72263470482174
@@ -3778,6 +3794,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,Tasa de Desocupación (TD),Mar - May,6.955364417740663
 2026,HOMBRES,Tasa de Desocupación (TD),Abr - Jun,6.78462692412303
 2026,HOMBRES,Tasa de Desocupación (TD),May - Jul,6.624389903694578
+2026,HOMBRES,Tasa de Desocupación (TD),Jun - Ago,6.968931741945078
 2007,HOMBRES,Tasa de Subocupación (TS),Ene - Mar,8.96329094005016
 2007,HOMBRES,Tasa de Subocupación (TS),Feb - Abr,9.379281632434518
 2007,HOMBRES,Tasa de Subocupación (TS),Mar - May,9.314128814256396
@@ -4004,6 +4021,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,Tasa de Subocupación (TS),Mar - May,6.397050541663384
 2026,HOMBRES,Tasa de Subocupación (TS),Abr - Jun,6.774182960643371
 2026,HOMBRES,Tasa de Subocupación (TS),May - Jul,6.738105271686503
+2026,HOMBRES,Tasa de Subocupación (TS),Jun - Ago,6.772451869324825
 2007,HOMBRES,Población total,Ene - Mar,20208.442
 2007,HOMBRES,Población total,Feb - Abr,20225.888333333332
 2007,HOMBRES,Población total,Mar - May,20243.037666666667
@@ -4237,6 +4255,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,Población total,Mar - May,25494.801999999996
 2026,HOMBRES,Población total,Abr - Jun,25514.31866666667
 2026,HOMBRES,Población total,May - Jul,25532.671666666665
+2026,HOMBRES,Población total,Jun - Ago,25551.343000000004
 2007,HOMBRES,Población en edad de trabajar (PET),Ene - Mar,14098.968333333332
 2007,HOMBRES,Población en edad de trabajar (PET),Feb - Abr,14119.496
 2007,HOMBRES,Población en edad de trabajar (PET),Mar - May,14139.831
@@ -4470,6 +4489,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,Población en edad de trabajar (PET),Mar - May,19709.776
 2026,HOMBRES,Población en edad de trabajar (PET),Abr - Jun,19731.720666666664
 2026,HOMBRES,Población en edad de trabajar (PET),May - Jul,19752.359333333337
+2026,HOMBRES,Población en edad de trabajar (PET),Jun - Ago,19773.361666666668
 2007,HOMBRES,Fuerza de trabajo,Ene - Mar,10958.635521666665
 2007,HOMBRES,Fuerza de trabajo,Feb - Abr,11047.344221333333
 2007,HOMBRES,Fuerza de trabajo,Mar - May,11024.585454
@@ -4703,6 +4723,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,Fuerza de trabajo,Mar - May,15201.016169666667
 2026,HOMBRES,Fuerza de trabajo,Abr - Jun,15126.344608
 2026,HOMBRES,Fuerza de trabajo,May - Jul,15206.939395000001
+2026,HOMBRES,Fuerza de trabajo,Jun - Ago,15059.706059303935
 2007,HOMBRES,Población ocupada,Ene - Mar,9856.584766366666
 2007,HOMBRES,Población ocupada,Feb - Abr,10049.974241
 2007,HOMBRES,Población ocupada,Mar - May,10062.951137333332
@@ -4936,6 +4957,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,Población ocupada,Mar - May,14143.7301
 2026,HOMBRES,Población ocupada,Abr - Jun,14100.078559333333
 2026,HOMBRES,Población ocupada,May - Jul,14199.572437
+2026,HOMBRES,Población ocupada,Jun - Ago,14010.205423470145
 2007,HOMBRES,Población desocupada,Ene - Mar,1102.0507557833334
 2007,HOMBRES,Población desocupada,Feb - Abr,997.3699808033334
 2007,HOMBRES,Población desocupada,Mar - May,961.6343168733333
@@ -5169,6 +5191,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,Población desocupada,Mar - May,1057.2860698
 2026,HOMBRES,Población desocupada,Abr - Jun,1026.26604891
 2026,HOMBRES,Población desocupada,May - Jul,1007.3669579433334
+2026,HOMBRES,Población desocupada,Jun - Ago,1049.500635810458
 2007,HOMBRES,Población fuera de la fuerza de trabajo,Ene - Mar,3140.3328113000002
 2007,HOMBRES,Población fuera de la fuerza de trabajo,Feb - Abr,3072.1517783666663
 2007,HOMBRES,Población fuera de la fuerza de trabajo,Mar - May,3115.2455458333334
@@ -5402,6 +5425,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,Población fuera de la fuerza de trabajo,Mar - May,4508.759830166667
 2026,HOMBRES,Población fuera de la fuerza de trabajo,Abr - Jun,4605.376058500001
 2026,HOMBRES,Población fuera de la fuerza de trabajo,May - Jul,4545.4199384
+2026,HOMBRES,Población fuera de la fuerza de trabajo,Jun - Ago,4713.65560746273
 2007,HOMBRES,Población subocupada,Ene - Mar,982.2543848666668
 2007,HOMBRES,Población subocupada,Feb - Abr,1036.1615274233334
 2007,HOMBRES,Población subocupada,Mar - May,1026.8440904233332
@@ -5628,6 +5652,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,Población subocupada,Mar - May,972.41668722
 2026,HOMBRES,Población subocupada,Abr - Jun,1024.6862590033334
 2026,HOMBRES,Población subocupada,May - Jul,1024.6595850366666
+2026,HOMBRES,Población subocupada,Jun - Ago,1019.9113445281532
 2021,HOMBRES,Fuerza de trabajo potencial,Ene - Mar,425.25345774
 2021,HOMBRES,Fuerza de trabajo potencial,Feb - Abr,354.01646022
 2021,HOMBRES,Fuerza de trabajo potencial,Mar - May,368.63723473
@@ -5693,6 +5718,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,Fuerza de trabajo potencial,Mar - May,389.56521918999994
 2026,HOMBRES,Fuerza de trabajo potencial,Abr - Jun,397.7194395733333
 2026,HOMBRES,Fuerza de trabajo potencial,May - Jul,390.29216612
+2026,HOMBRES,Fuerza de trabajo potencial,Jun - Ago,437.4057274266943
 2007,MUJERES,% población en edad de trabajar,Ene - Mar,72.03912432107735
 2007,MUJERES,% población en edad de trabajar,Feb - Abr,72.08264813113779
 2007,MUJERES,% población en edad de trabajar,Mar - May,72.12617557989203
@@ -5926,6 +5952,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,% población en edad de trabajar,Mar - May,79.34662239041008
 2026,MUJERES,% población en edad de trabajar,Abr - Jun,79.37135831929423
 2026,MUJERES,% población en edad de trabajar,May - Jul,79.39467478349354
+2026,MUJERES,% población en edad de trabajar,Jun - Ago,79.41843920075556
 2007,MUJERES,Tasa Global de Participación (TGP),Ene - Mar,49.139184481021694
 2007,MUJERES,Tasa Global de Participación (TGP),Feb - Abr,50.11593095480019
 2007,MUJERES,Tasa Global de Participación (TGP),Mar - May,50.02568478552825
@@ -6159,6 +6186,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,Tasa Global de Participación (TGP),Mar - May,53.645411379381116
 2026,MUJERES,Tasa Global de Participación (TGP),Abr - Jun,53.765551159000914
 2026,MUJERES,Tasa Global de Participación (TGP),May - Jul,53.48174301586198
+2026,MUJERES,Tasa Global de Participación (TGP),Jun - Ago,53.184242305511155
 2007,MUJERES,Tasa de Ocupación (TO),Ene - Mar,40.56641168436889
 2007,MUJERES,Tasa de Ocupación (TO),Feb - Abr,42.073057463377566
 2007,MUJERES,Tasa de Ocupación (TO),Mar - May,42.25256851920587
@@ -6392,6 +6420,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,Tasa de Ocupación (TO),Mar - May,47.949130765174395
 2026,MUJERES,Tasa de Ocupación (TO),Abr - Jun,48.26284937164357
 2026,MUJERES,Tasa de Ocupación (TO),May - Jul,48.16472102069771
+2026,MUJERES,Tasa de Ocupación (TO),Jun - Ago,47.59861674257254
 2007,MUJERES,Tasa de Desocupación (TD),Ene - Mar,17.445899615497883
 2007,MUJERES,Tasa de Desocupación (TD),Feb - Abr,16.048536538687266
 2007,MUJERES,Tasa de Desocupación (TD),Mar - May,15.538250599524492
@@ -6625,6 +6654,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,Tasa de Desocupación (TD),Mar - May,10.618393013648003
 2026,MUJERES,Tasa de Desocupación (TD),Abr - Jun,10.2346235963855
 2026,MUJERES,Tasa de Desocupación (TD),May - Jul,9.941751512740952
+2026,MUJERES,Tasa de Desocupación (TD),Jun - Ago,10.502406956319058
 2007,MUJERES,Tasa de Subocupación (TS),Ene - Mar,8.595940687069989
 2007,MUJERES,Tasa de Subocupación (TS),Feb - Abr,8.906861409600534
 2007,MUJERES,Tasa de Subocupación (TS),Mar - May,9.116975192256675
@@ -6851,6 +6881,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,Tasa de Subocupación (TS),Mar - May,7.502047692655682
 2026,MUJERES,Tasa de Subocupación (TS),Abr - Jun,7.681884984750037
 2026,MUJERES,Tasa de Subocupación (TS),May - Jul,7.381696198448847
+2026,MUJERES,Tasa de Subocupación (TS),Jun - Ago,7.022845177711967
 2007,MUJERES,Población total,Ene - Mar,21085.673666666666
 2007,MUJERES,Población total,Feb - Abr,21104.070666666667
 2007,MUJERES,Población total,Mar - May,21122.164333333334
@@ -7084,6 +7115,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,Población total,Mar - May,26968.254
 2026,MUJERES,Población total,Abr - Jun,26991.486333333334
 2026,MUJERES,Población total,May - Jul,27013.512000000002
+2026,MUJERES,Población total,Jun - Ago,27035.900666666665
 2007,MUJERES,Población en edad de trabajar (PET),Ene - Mar,15189.934666666668
 2007,MUJERES,Población en edad de trabajar (PET),Feb - Abr,15212.373
 2007,MUJERES,Población en edad de trabajar (PET),Mar - May,15234.609333333334
@@ -7317,6 +7349,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,Población en edad de trabajar (PET),Mar - May,21398.398666666664
 2026,MUJERES,Población en edad de trabajar (PET),Abr - Jun,21423.50933333333
 2026,MUJERES,Población en edad de trabajar (PET),May - Jul,21447.29
+2026,MUJERES,Población en edad de trabajar (PET),Jun - Ago,21471.49033333333
 2007,MUJERES,Fuerza de trabajo,Ene - Mar,7464.210018400001
 2007,MUJERES,Fuerza de trabajo,Feb - Abr,7623.822349266666
 2007,MUJERES,Fuerza de trabajo,Mar - May,7621.217643399999
@@ -7550,6 +7583,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,Fuerza de trabajo,Mar - May,11479.258993333335
 2026,MUJERES,Fuerza de trabajo,Abr - Jun,11518.467870666667
 2026,MUJERES,Fuerza de trabajo,May - Jul,11470.384521666667
+2026,MUJERES,Fuerza de trabajo,Jun - Ago,11419.449445484404
 2007,MUJERES,Población ocupada,Ene - Mar,6162.011431466667
 2007,MUJERES,Población ocupada,Feb - Abr,6400.310433833333
 2007,MUJERES,Población ocupada,Mar - May,6437.0137472
@@ -7783,6 +7817,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,Población ocupada,Mar - May,10260.346158333334
 2026,MUJERES,Población ocupada,Abr - Jun,10339.596039666667
 2026,MUJERES,Población ocupada,May - Jul,10330.027395
+2026,MUJERES,Población ocupada,Jun - Ago,10220.132392681844
 2007,MUJERES,Población desocupada,Ene - Mar,1302.1985869
 2007,MUJERES,Población desocupada,Feb - Abr,1223.5119153666667
 2007,MUJERES,Población desocupada,Mar - May,1184.2038961666667
@@ -8016,6 +8051,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,Población desocupada,Mar - May,1218.9128349666669
 2026,MUJERES,Población desocupada,Abr - Jun,1178.8718306333333
 2026,MUJERES,Población desocupada,May - Jul,1140.3571267
+2026,MUJERES,Población desocupada,Jun - Ago,1199.3170529358922
 2007,MUJERES,Población fuera de la fuerza de trabajo,Ene - Mar,7725.724648266667
 2007,MUJERES,Población fuera de la fuerza de trabajo,Feb - Abr,7588.550650733334
 2007,MUJERES,Población fuera de la fuerza de trabajo,Mar - May,7613.3916899333335
@@ -8249,6 +8285,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,Población fuera de la fuerza de trabajo,Mar - May,9919.139673333333
 2026,MUJERES,Población fuera de la fuerza de trabajo,Abr - Jun,9905.041462766667
 2026,MUJERES,Población fuera de la fuerza de trabajo,May - Jul,9976.905478333332
+2026,MUJERES,Población fuera de la fuerza de trabajo,Jun - Ago,10052.040887848932
 2007,MUJERES,Población subocupada,Ene - Mar,641.61906594
 2007,MUJERES,Población subocupada,Feb - Abr,679.0432907633334
 2007,MUJERES,Población subocupada,Mar - May,694.8245218966666
@@ -8475,6 +8512,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,Población subocupada,Mar - May,861.1794844433333
 2026,MUJERES,Población subocupada,Abr - Jun,884.83545383
 2026,MUJERES,Población subocupada,May - Jul,846.7089381833333
+2026,MUJERES,Población subocupada,Jun - Ago,801.9702547034575
 2021,MUJERES,Fuerza de trabajo potencial,Ene - Mar,1313.683247
 2021,MUJERES,Fuerza de trabajo potencial,Feb - Abr,1155.6795134333333
 2021,MUJERES,Fuerza de trabajo potencial,Mar - May,1120.7152227333333
@@ -8540,3 +8578,4 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,Fuerza de trabajo potencial,Mar - May,1023.3121254633334
 2026,MUJERES,Fuerza de trabajo potencial,Abr - Jun,1054.9091498999999
 2026,MUJERES,Fuerza de trabajo potencial,May - Jul,1049.3211419666666
+2026,MUJERES,Fuerza de trabajo potencial,Jun - Ago,1097.5222187057932
