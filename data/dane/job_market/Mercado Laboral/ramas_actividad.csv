@@ -136,6 +136,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,Población ocupada Total Nacional,Mar - May,24404.07625833333
 2026,TOTAL NACIONAL,Población ocupada Total Nacional,Abr - Jun,24439.674599
 2026,TOTAL NACIONAL,Población ocupada Total Nacional,May - Jul,24529.599831999996
+2026,TOTAL NACIONAL,Población ocupada Total Nacional,Jun - Ago,24230.33781615199
 2015,TOTAL NACIONAL,No informa,Ene - Mar,0.940673386
 2015,TOTAL NACIONAL,No informa,Feb - Abr,0.15618603866666667
 2015,TOTAL NACIONAL,No informa,Mar - May,0.20949562200000002
@@ -273,6 +274,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,No informa,Mar - May,0.17498915199999998
 2026,TOTAL NACIONAL,No informa,Abr - Jun,0.102039748
 2026,TOTAL NACIONAL,No informa,May - Jul,0.05306128500000001
+2026,TOTAL NACIONAL,No informa,Jun - Ago,0.38917996105898034
 2015,TOTAL NACIONAL,"Agricultura, ganadería, caza, silvicultura y pesca",Ene - Mar,3333.8018903333327
 2015,TOTAL NACIONAL,"Agricultura, ganadería, caza, silvicultura y pesca",Feb - Abr,3324.4783960333334
 2015,TOTAL NACIONAL,"Agricultura, ganadería, caza, silvicultura y pesca",Mar - May,3138.6517376333336
@@ -410,6 +412,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,"Agricultura, ganadería, caza, silvicultura y pesca",Mar - May,3371.3163372
 2026,TOTAL NACIONAL,"Agricultura, ganadería, caza, silvicultura y pesca",Abr - Jun,3317.1773835
 2026,TOTAL NACIONAL,"Agricultura, ganadería, caza, silvicultura y pesca",May - Jul,3327.5655901000005
+2026,TOTAL NACIONAL,"Agricultura, ganadería, caza, silvicultura y pesca",Jun - Ago,3193.4491841381146
 2015,TOTAL NACIONAL,Explotación de minas y canteras,Ene - Mar,169.49912968333334
 2015,TOTAL NACIONAL,Explotación de minas y canteras,Feb - Abr,147.87937391333332
 2015,TOTAL NACIONAL,Explotación de minas y canteras,Mar - May,229.29117864
@@ -547,6 +550,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,Explotación de minas y canteras,Mar - May,327.5806523833333
 2026,TOTAL NACIONAL,Explotación de minas y canteras,Abr - Jun,341.73978164666664
 2026,TOTAL NACIONAL,Explotación de minas y canteras,May - Jul,311.4690992866667
+2026,TOTAL NACIONAL,Explotación de minas y canteras,Jun - Ago,310.9021676885097
 2015,TOTAL NACIONAL,Industrias manufactureras,Ene - Mar,2435.9362013333334
 2015,TOTAL NACIONAL,Industrias manufactureras,Feb - Abr,2637.4272800333333
 2015,TOTAL NACIONAL,Industrias manufactureras,Mar - May,2567.379351533333
@@ -684,6 +688,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,Industrias manufactureras,Mar - May,2543.283913533334
 2026,TOTAL NACIONAL,Industrias manufactureras,Abr - Jun,2611.3201784666667
 2026,TOTAL NACIONAL,Industrias manufactureras,May - Jul,2657.8611764
+2026,TOTAL NACIONAL,Industrias manufactureras,Jun - Ago,2579.0895510989235
 2015,TOTAL NACIONAL,"Suministro de electricidad gas, agua y gestión de desechos",Ene - Mar,177.21539683666666
 2015,TOTAL NACIONAL,"Suministro de electricidad gas, agua y gestión de desechos",Feb - Abr,183.76369932666663
 2015,TOTAL NACIONAL,"Suministro de electricidad gas, agua y gestión de desechos",Mar - May,168.53075812333333
@@ -821,6 +826,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,"Suministro de electricidad gas, agua y gestión de desechos",Mar - May,305.44660185
 2026,TOTAL NACIONAL,"Suministro de electricidad gas, agua y gestión de desechos",Abr - Jun,306.94192282666666
 2026,TOTAL NACIONAL,"Suministro de electricidad gas, agua y gestión de desechos",May - Jul,308.53510891999997
+2026,TOTAL NACIONAL,"Suministro de electricidad gas, agua y gestión de desechos",Jun - Ago,304.5911409367074
 2015,TOTAL NACIONAL,Construcción,Ene - Mar,1467.7016023666667
 2015,TOTAL NACIONAL,Construcción,Feb - Abr,1456.7954724
 2015,TOTAL NACIONAL,Construcción,Mar - May,1501.1089768333334
@@ -958,6 +964,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,Construcción,Mar - May,1677.4320359
 2026,TOTAL NACIONAL,Construcción,Abr - Jun,1655.4990160333334
 2026,TOTAL NACIONAL,Construcción,May - Jul,1696.4997971333335
+2026,TOTAL NACIONAL,Construcción,Jun - Ago,1763.915442505372
 2015,TOTAL NACIONAL,Comercio y reparación de vehículos,Ene - Mar,3741.8477371000004
 2015,TOTAL NACIONAL,Comercio y reparación de vehículos,Feb - Abr,3755.3291375666668
 2015,TOTAL NACIONAL,Comercio y reparación de vehículos,Mar - May,3848.5407628333337
@@ -1095,6 +1102,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,Comercio y reparación de vehículos,Mar - May,4171.762219166667
 2026,TOTAL NACIONAL,Comercio y reparación de vehículos,Abr - Jun,4113.332207133333
 2026,TOTAL NACIONAL,Comercio y reparación de vehículos,May - Jul,4173.4375005
+2026,TOTAL NACIONAL,Comercio y reparación de vehículos,Jun - Ago,4134.575486747782
 2015,TOTAL NACIONAL,Alojamiento y servicios de comida,Ene - Mar,1497.7482008666666
 2015,TOTAL NACIONAL,Alojamiento y servicios de comida,Feb - Abr,1470.0705113333333
 2015,TOTAL NACIONAL,Alojamiento y servicios de comida,Mar - May,1449.2403437
@@ -1232,6 +1240,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,Alojamiento y servicios de comida,Mar - May,1841.4870709
 2026,TOTAL NACIONAL,Alojamiento y servicios de comida,Abr - Jun,1943.0080316666665
 2026,TOTAL NACIONAL,Alojamiento y servicios de comida,May - Jul,1904.507008433333
+2026,TOTAL NACIONAL,Alojamiento y servicios de comida,Jun - Ago,1893.9257973918081
 2015,TOTAL NACIONAL,Transporte y almacenamiento,Ene - Mar,1444.3297804666665
 2015,TOTAL NACIONAL,Transporte y almacenamiento,Feb - Abr,1469.4006314333335
 2015,TOTAL NACIONAL,Transporte y almacenamiento,Mar - May,1520.0640152333335
@@ -1369,6 +1378,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,Transporte y almacenamiento,Mar - May,1804.3167019
 2026,TOTAL NACIONAL,Transporte y almacenamiento,Abr - Jun,1836.8673263
 2026,TOTAL NACIONAL,Transporte y almacenamiento,May - Jul,1833.9393008999998
+2026,TOTAL NACIONAL,Transporte y almacenamiento,Jun - Ago,1856.9248337042902
 2015,TOTAL NACIONAL,Información y comunicaciones,Ene - Mar,350.0561556233333
 2015,TOTAL NACIONAL,Información y comunicaciones,Feb - Abr,360.79432727
 2015,TOTAL NACIONAL,Información y comunicaciones,Mar - May,369.08849132666666
@@ -1506,6 +1516,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,Información y comunicaciones,Mar - May,412.22029578666667
 2026,TOTAL NACIONAL,Información y comunicaciones,Abr - Jun,406.88046938
 2026,TOTAL NACIONAL,Información y comunicaciones,May - Jul,408.7864589833334
+2026,TOTAL NACIONAL,Información y comunicaciones,Jun - Ago,412.2831891797104
 2015,TOTAL NACIONAL,Actividades financieras y de seguros,Ene - Mar,282.42485199666663
 2015,TOTAL NACIONAL,Actividades financieras y de seguros,Feb - Abr,269.9656619833333
 2015,TOTAL NACIONAL,Actividades financieras y de seguros,Mar - May,265.2326794333333
@@ -1643,6 +1654,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,Actividades financieras y de seguros,Mar - May,455.99442763999997
 2026,TOTAL NACIONAL,Actividades financieras y de seguros,Abr - Jun,430.2561677133333
 2026,TOTAL NACIONAL,Actividades financieras y de seguros,May - Jul,445.4647021966667
+2026,TOTAL NACIONAL,Actividades financieras y de seguros,Jun - Ago,456.57755882216134
 2015,TOTAL NACIONAL,Actividades inmobiliarias,Ene - Mar,232.96334871666667
 2015,TOTAL NACIONAL,Actividades inmobiliarias,Feb - Abr,227.80103422333332
 2015,TOTAL NACIONAL,Actividades inmobiliarias,Mar - May,232.89931974333334
@@ -1780,6 +1792,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,Actividades inmobiliarias,Mar - May,325.59583857666667
 2026,TOTAL NACIONAL,Actividades inmobiliarias,Abr - Jun,315.75863918
 2026,TOTAL NACIONAL,Actividades inmobiliarias,May - Jul,318.3005809566667
+2026,TOTAL NACIONAL,Actividades inmobiliarias,Jun - Ago,324.3103785590188
 2015,TOTAL NACIONAL,"Actividades profesionales, científicas, técnicas y servicios administrativos",Ene - Mar,1126.0893559666667
 2015,TOTAL NACIONAL,"Actividades profesionales, científicas, técnicas y servicios administrativos",Feb - Abr,1116.8835906666666
 2015,TOTAL NACIONAL,"Actividades profesionales, científicas, técnicas y servicios administrativos",Mar - May,1139.1604660333333
@@ -1917,6 +1930,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,"Actividades profesionales, científicas, técnicas y servicios administrativos",Mar - May,1921.1099957333333
 2026,TOTAL NACIONAL,"Actividades profesionales, científicas, técnicas y servicios administrativos",Abr - Jun,1941.6315365333332
 2026,TOTAL NACIONAL,"Actividades profesionales, científicas, técnicas y servicios administrativos",May - Jul,1946.6290561666665
+2026,TOTAL NACIONAL,"Actividades profesionales, científicas, técnicas y servicios administrativos",Jun - Ago,1872.435776007382
 2015,TOTAL NACIONAL,"Administración pública y defensa, educación y atención de la salud humana",Ene - Mar,2172.1083247
 2015,TOTAL NACIONAL,"Administración pública y defensa, educación y atención de la salud humana",Feb - Abr,2298.8516997666666
 2015,TOTAL NACIONAL,"Administración pública y defensa, educación y atención de la salud humana",Mar - May,2374.5542948
@@ -2054,6 +2068,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,"Administración pública y defensa, educación y atención de la salud humana",Mar - May,3208.2441236
 2026,TOTAL NACIONAL,"Administración pública y defensa, educación y atención de la salud humana",Abr - Jun,3200.4366628666667
 2026,TOTAL NACIONAL,"Administración pública y defensa, educación y atención de la salud humana",May - Jul,3170.5298761999998
+2026,TOTAL NACIONAL,"Administración pública y defensa, educación y atención de la salud humana",Jun - Ago,3118.834607069344
 2015,TOTAL NACIONAL,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Ene - Mar,1857.5841658333331
 2015,TOTAL NACIONAL,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Feb - Abr,1852.8004448666668
 2015,TOTAL NACIONAL,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Mar - May,1951.8712768666664
@@ -2191,6 +2206,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,TOTAL NACIONAL,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Mar - May,2038.111055
 2026,TOTAL NACIONAL,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Abr - Jun,2018.7232361666665
 2026,TOTAL NACIONAL,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",May - Jul,2026.0215145333332
+2026,TOTAL NACIONAL,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Jun - Ago,2008.1335222701398
 2015,HOMBRES,Población ocupada,Ene - Mar,11982.088864333333
 2015,HOMBRES,Población ocupada,Feb - Abr,12029.572660333333
 2015,HOMBRES,Población ocupada,Mar - May,12046.631701333332
@@ -2328,6 +2344,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,Población ocupada,Mar - May,14143.7301
 2026,HOMBRES,Población ocupada,Abr - Jun,14100.078559333333
 2026,HOMBRES,Población ocupada,May - Jul,14199.572437
+2026,HOMBRES,Población ocupada,Jun - Ago,14010.205423470145
 2015,HOMBRES,No informa,Ene - Mar,0.5273492783333333
 2015,HOMBRES,No informa,Feb - Abr,0.15618603866666667
 2015,HOMBRES,No informa,Mar - May,0.20949562200000002
@@ -2465,6 +2482,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,No informa,Mar - May,0.17498915199999998
 2026,HOMBRES,No informa,Abr - Jun,0.102039748
 2026,HOMBRES,No informa,May - Jul,0.05306128500000001
+2026,HOMBRES,No informa,Jun - Ago,0.38917996105898034
 2015,HOMBRES,"Agricultura, ganadería, caza, silvicultura y pesca",Ene - Mar,2787.1360058666664
 2015,HOMBRES,"Agricultura, ganadería, caza, silvicultura y pesca",Feb - Abr,2715.1025836333333
 2015,HOMBRES,"Agricultura, ganadería, caza, silvicultura y pesca",Mar - May,2543.043005833333
@@ -2602,6 +2620,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,"Agricultura, ganadería, caza, silvicultura y pesca",Mar - May,2757.2554136333333
 2026,HOMBRES,"Agricultura, ganadería, caza, silvicultura y pesca",Abr - Jun,2693.4265292666664
 2026,HOMBRES,"Agricultura, ganadería, caza, silvicultura y pesca",May - Jul,2700.3482379666666
+2026,HOMBRES,"Agricultura, ganadería, caza, silvicultura y pesca",Jun - Ago,2604.1575882424404
 2015,HOMBRES,Explotación de minas y canteras,Ene - Mar,151.86778354333333
 2015,HOMBRES,Explotación de minas y canteras,Feb - Abr,134.00148191666668
 2015,HOMBRES,Explotación de minas y canteras,Mar - May,196.74538107
@@ -2739,6 +2758,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,Explotación de minas y canteras,Mar - May,260.05763935
 2026,HOMBRES,Explotación de minas y canteras,Abr - Jun,285.64274726
 2026,HOMBRES,Explotación de minas y canteras,May - Jul,254.68871930333333
+2026,HOMBRES,Explotación de minas y canteras,Jun - Ago,255.02837471141643
 2015,HOMBRES,Industrias manufactureras,Ene - Mar,1429.4528351666668
 2015,HOMBRES,Industrias manufactureras,Feb - Abr,1540.3277139
 2015,HOMBRES,Industrias manufactureras,Mar - May,1474.3578180333334
@@ -2876,6 +2896,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,Industrias manufactureras,Mar - May,1466.8227872999998
 2026,HOMBRES,Industrias manufactureras,Abr - Jun,1492.5725783333335
 2026,HOMBRES,Industrias manufactureras,May - Jul,1544.1011128999999
+2026,HOMBRES,Industrias manufactureras,Jun - Ago,1492.2757809396742
 2015,HOMBRES,"Suministro de electricidad gas, agua y gestión de desechos",Ene - Mar,135.41771772666667
 2015,HOMBRES,"Suministro de electricidad gas, agua y gestión de desechos",Feb - Abr,140.72678487
 2015,HOMBRES,"Suministro de electricidad gas, agua y gestión de desechos",Mar - May,130.66791641
@@ -3013,6 +3034,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,"Suministro de electricidad gas, agua y gestión de desechos",Mar - May,216.28194601666667
 2026,HOMBRES,"Suministro de electricidad gas, agua y gestión de desechos",Abr - Jun,228.15987657333335
 2026,HOMBRES,"Suministro de electricidad gas, agua y gestión de desechos",May - Jul,229.77340840666668
+2026,HOMBRES,"Suministro de electricidad gas, agua y gestión de desechos",Jun - Ago,228.64859999332717
 2015,HOMBRES,Construcción,Ene - Mar,1392.4311547666666
 2015,HOMBRES,Construcción,Feb - Abr,1384.8728431666666
 2015,HOMBRES,Construcción,Mar - May,1417.3037877
@@ -3150,6 +3172,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,Construcción,Mar - May,1559.8656318333333
 2026,HOMBRES,Construcción,Abr - Jun,1538.7540518333335
 2026,HOMBRES,Construcción,May - Jul,1584.5837951
+2026,HOMBRES,Construcción,Jun - Ago,1634.4454124503607
 2015,HOMBRES,Comercio y reparación de vehículos,Ene - Mar,1977.0306419
 2015,HOMBRES,Comercio y reparación de vehículos,Feb - Abr,1965.5161618
 2015,HOMBRES,Comercio y reparación de vehículos,Mar - May,2026.0879424666666
@@ -3287,6 +3310,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,Comercio y reparación de vehículos,Mar - May,2271.7406635333336
 2026,HOMBRES,Comercio y reparación de vehículos,Abr - Jun,2210.002171
 2026,HOMBRES,Comercio y reparación de vehículos,May - Jul,2228.702364566667
+2026,HOMBRES,Comercio y reparación de vehículos,Jun - Ago,2212.1666427021546
 2015,HOMBRES,Alojamiento y servicios de comida,Ene - Mar,483.8206377633333
 2015,HOMBRES,Alojamiento y servicios de comida,Feb - Abr,475.29709709
 2015,HOMBRES,Alojamiento y servicios de comida,Mar - May,470.7379549766667
@@ -3424,6 +3448,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,Alojamiento y servicios de comida,Mar - May,587.1519450699999
 2026,HOMBRES,Alojamiento y servicios de comida,Abr - Jun,610.44943522
 2026,HOMBRES,Alojamiento y servicios de comida,May - Jul,610.8267513133333
+2026,HOMBRES,Alojamiento y servicios de comida,Jun - Ago,598.0454791856966
 2015,HOMBRES,Transporte y almacenamiento,Ene - Mar,1319.1786223666666
 2015,HOMBRES,Transporte y almacenamiento,Feb - Abr,1340.1805364333334
 2015,HOMBRES,Transporte y almacenamiento,Mar - May,1388.3239588
@@ -3561,6 +3586,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,Transporte y almacenamiento,Mar - May,1617.7673971333334
 2026,HOMBRES,Transporte y almacenamiento,Abr - Jun,1655.2508445
 2026,HOMBRES,Transporte y almacenamiento,May - Jul,1657.6290749333332
+2026,HOMBRES,Transporte y almacenamiento,Jun - Ago,1668.3577421914235
 2015,HOMBRES,Información y comunicaciones,Ene - Mar,179.82123466333334
 2015,HOMBRES,Información y comunicaciones,Feb - Abr,188.69754188666664
 2015,HOMBRES,Información y comunicaciones,Mar - May,189.15340855
@@ -3698,6 +3724,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,Información y comunicaciones,Mar - May,264.60574804333334
 2026,HOMBRES,Información y comunicaciones,Abr - Jun,268.53321639
 2026,HOMBRES,Información y comunicaciones,May - Jul,270.3864001033333
+2026,HOMBRES,Información y comunicaciones,Jun - Ago,277.3191229357711
 2015,HOMBRES,Actividades financieras y de seguros,Ene - Mar,124.12141262333334
 2015,HOMBRES,Actividades financieras y de seguros,Feb - Abr,124.53109654666667
 2015,HOMBRES,Actividades financieras y de seguros,Mar - May,125.30352823
@@ -3835,6 +3862,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,Actividades financieras y de seguros,Mar - May,212.75582793333334
 2026,HOMBRES,Actividades financieras y de seguros,Abr - Jun,189.5989512366667
 2026,HOMBRES,Actividades financieras y de seguros,May - Jul,203.00953585000002
+2026,HOMBRES,Actividades financieras y de seguros,Jun - Ago,201.24197826637942
 2015,HOMBRES,Actividades inmobiliarias,Ene - Mar,158.44448539
 2015,HOMBRES,Actividades inmobiliarias,Feb - Abr,159.51794203
 2015,HOMBRES,Actividades inmobiliarias,Mar - May,168.01154069333333
@@ -3972,6 +4000,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,Actividades inmobiliarias,Mar - May,202.16684251333334
 2026,HOMBRES,Actividades inmobiliarias,Abr - Jun,195.68974265666668
 2026,HOMBRES,Actividades inmobiliarias,May - Jul,205.5958964
+2026,HOMBRES,Actividades inmobiliarias,Jun - Ago,214.84629256514373
 2015,HOMBRES,"Actividades profesionales, científicas, técnicas y servicios administrativos",Ene - Mar,501.31805452
 2015,HOMBRES,"Actividades profesionales, científicas, técnicas y servicios administrativos",Feb - Abr,488.68601304666663
 2015,HOMBRES,"Actividades profesionales, científicas, técnicas y servicios administrativos",Mar - May,492.9850199433333
@@ -4109,6 +4138,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,"Actividades profesionales, científicas, técnicas y servicios administrativos",Mar - May,863.2579569766667
 2026,HOMBRES,"Actividades profesionales, científicas, técnicas y servicios administrativos",Abr - Jun,881.6924328533332
 2026,HOMBRES,"Actividades profesionales, científicas, técnicas y servicios administrativos",May - Jul,876.2165302833333
+2026,HOMBRES,"Actividades profesionales, científicas, técnicas y servicios administrativos",Jun - Ago,830.9649678765267
 2015,HOMBRES,"Administración pública y defensa, educación y atención de la salud humana",Ene - Mar,804.0340724600001
 2015,HOMBRES,"Administración pública y defensa, educación y atención de la salud humana",Feb - Abr,827.07062861
 2015,HOMBRES,"Administración pública y defensa, educación y atención de la salud humana",Mar - May,859.0610194766667
@@ -4246,6 +4276,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,"Administración pública y defensa, educación y atención de la salud humana",Mar - May,1208.7310501000002
 2026,HOMBRES,"Administración pública y defensa, educación y atención de la salud humana",Abr - Jun,1182.322050966667
 2026,HOMBRES,"Administración pública y defensa, educación y atención de la salud humana",May - Jul,1171.7329191333336
+2026,HOMBRES,"Administración pública y defensa, educación y atención de la salud humana",Jun - Ago,1164.1642003318395
 2015,HOMBRES,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Ene - Mar,537.4868562833333
 2015,HOMBRES,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Feb - Abr,544.8880493233333
 2015,HOMBRES,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Mar - May,564.63992335
@@ -4383,6 +4414,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,HOMBRES,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Mar - May,655.0942613866666
 2026,HOMBRES,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Abr - Jun,667.88189141
 2026,HOMBRES,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",May - Jul,661.9246294266667
+2026,HOMBRES,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Jun - Ago,628.1540610152662
 2015,MUJERES,Población ocupada,Ene - Mar,8308.1579509
 2015,MUJERES,Población ocupada,Feb - Abr,8542.824786533334
 2015,MUJERES,Población ocupada,Mar - May,8709.1914472
@@ -4520,6 +4552,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,Población ocupada,Mar - May,10260.346158333334
 2026,MUJERES,Población ocupada,Abr - Jun,10339.596039666667
 2026,MUJERES,Población ocupada,May - Jul,10330.027395
+2026,MUJERES,Población ocupada,Jun - Ago,10220.132392681844
 2015,MUJERES,No informa,Ene - Mar,0.41332410733333336
 2015,MUJERES,No informa,Feb - Abr,0.0
 2015,MUJERES,No informa,Mar - May,0.0
@@ -4657,6 +4690,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,No informa,Mar - May,0.0
 2026,MUJERES,No informa,Abr - Jun,0.0
 2026,MUJERES,No informa,May - Jul,0.0
+2026,MUJERES,No informa,Jun - Ago,0.0
 2015,MUJERES,"Agricultura, ganadería, caza, silvicultura y pesca",Ene - Mar,546.6658844066667
 2015,MUJERES,"Agricultura, ganadería, caza, silvicultura y pesca",Feb - Abr,609.3758123333333
 2015,MUJERES,"Agricultura, ganadería, caza, silvicultura y pesca",Mar - May,595.6087317733334
@@ -4794,6 +4828,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,"Agricultura, ganadería, caza, silvicultura y pesca",Mar - May,614.0609235866667
 2026,MUJERES,"Agricultura, ganadería, caza, silvicultura y pesca",Abr - Jun,623.7508542266667
 2026,MUJERES,"Agricultura, ganadería, caza, silvicultura y pesca",May - Jul,627.2173521266667
+2026,MUJERES,"Agricultura, ganadería, caza, silvicultura y pesca",Jun - Ago,589.2915958590069
 2015,MUJERES,Explotación de minas y canteras,Ene - Mar,17.631346140999998
 2015,MUJERES,Explotación de minas y canteras,Feb - Abr,13.877891995666667
 2015,MUJERES,Explotación de minas y canteras,Mar - May,32.54579756933334
@@ -4931,6 +4966,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,Explotación de minas y canteras,Mar - May,67.52301303399999
 2026,MUJERES,Explotación de minas y canteras,Abr - Jun,56.09703438966667
 2026,MUJERES,Explotación de minas y canteras,May - Jul,56.78037998733333
+2026,MUJERES,Explotación de minas y canteras,Jun - Ago,55.873792982093214
 2015,MUJERES,Industrias manufactureras,Ene - Mar,1006.4833661666667
 2015,MUJERES,Industrias manufactureras,Feb - Abr,1097.0995661333334
 2015,MUJERES,Industrias manufactureras,Mar - May,1093.0215335333335
@@ -5068,6 +5104,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,Industrias manufactureras,Mar - May,1076.4611261666666
 2026,MUJERES,Industrias manufactureras,Abr - Jun,1118.7476001000002
 2026,MUJERES,Industrias manufactureras,May - Jul,1113.7600634666667
+2026,MUJERES,Industrias manufactureras,Jun - Ago,1086.8137701592498
 2015,MUJERES,"Suministro de electricidad gas, agua y gestión de desechos",Ene - Mar,41.79767911233333
 2015,MUJERES,"Suministro de electricidad gas, agua y gestión de desechos",Feb - Abr,43.036914459
 2015,MUJERES,"Suministro de electricidad gas, agua y gestión de desechos",Mar - May,37.86284171133334
@@ -5205,6 +5242,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,"Suministro de electricidad gas, agua y gestión de desechos",Mar - May,89.16465583166666
 2026,MUJERES,"Suministro de electricidad gas, agua y gestión de desechos",Abr - Jun,78.78204625233333
 2026,MUJERES,"Suministro de electricidad gas, agua y gestión de desechos",May - Jul,78.761700514
+2026,MUJERES,"Suministro de electricidad gas, agua y gestión de desechos",Jun - Ago,75.94254094504694
 2015,MUJERES,Construcción,Ene - Mar,75.270447645
 2015,MUJERES,Construcción,Feb - Abr,71.922629266
 2015,MUJERES,Construcción,Mar - May,83.80518914599999
@@ -5342,6 +5380,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,Construcción,Mar - May,117.56640408333334
 2026,MUJERES,Construcción,Abr - Jun,116.74496421333333
 2026,MUJERES,Construcción,May - Jul,111.91600206666665
+2026,MUJERES,Construcción,Jun - Ago,129.4700300783446
 2015,MUJERES,Comercio y reparación de vehículos,Ene - Mar,1764.8170952
 2015,MUJERES,Comercio y reparación de vehículos,Feb - Abr,1789.8129757666666
 2015,MUJERES,Comercio y reparación de vehículos,Mar - May,1822.4528203333332
@@ -5479,6 +5518,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,Comercio y reparación de vehículos,Mar - May,1900.0215556333333
 2026,MUJERES,Comercio y reparación de vehículos,Abr - Jun,1903.3300361333334
 2026,MUJERES,Comercio y reparación de vehículos,May - Jul,1944.7351359333334
+2026,MUJERES,Comercio y reparación de vehículos,Jun - Ago,1922.4088440456278
 2015,MUJERES,Alojamiento y servicios de comida,Ene - Mar,1013.9275631
 2015,MUJERES,Alojamiento y servicios de comida,Feb - Abr,994.7734142533333
 2015,MUJERES,Alojamiento y servicios de comida,Mar - May,978.5023887133334
@@ -5616,6 +5656,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,Alojamiento y servicios de comida,Mar - May,1254.3351258333332
 2026,MUJERES,Alojamiento y servicios de comida,Abr - Jun,1332.5585964333334
 2026,MUJERES,Alojamiento y servicios de comida,May - Jul,1293.6802571
+2026,MUJERES,Alojamiento y servicios de comida,Jun - Ago,1295.8803181994447
 2015,MUJERES,Transporte y almacenamiento,Ene - Mar,125.15115813333334
 2015,MUJERES,Transporte y almacenamiento,Feb - Abr,129.22009503666666
 2015,MUJERES,Transporte y almacenamiento,Mar - May,131.74005647666667
@@ -5753,6 +5794,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,Transporte y almacenamiento,Mar - May,186.54930472333334
 2026,MUJERES,Transporte y almacenamiento,Abr - Jun,181.61648177666666
 2026,MUJERES,Transporte y almacenamiento,May - Jul,176.31022595333332
+2026,MUJERES,Transporte y almacenamiento,Jun - Ago,188.5670915128668
 2015,MUJERES,Información y comunicaciones,Ene - Mar,170.23492096333334
 2015,MUJERES,Información y comunicaciones,Feb - Abr,172.09678538666665
 2015,MUJERES,Información y comunicaciones,Mar - May,179.9350827766667
@@ -5890,6 +5932,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,Información y comunicaciones,Mar - May,147.61454774
 2026,MUJERES,Información y comunicaciones,Abr - Jun,138.3472529866667
 2026,MUJERES,Información y comunicaciones,May - Jul,138.40005887666666
+2026,MUJERES,Información y comunicaciones,Jun - Ago,134.96406624060594
 2015,MUJERES,Actividades financieras y de seguros,Ene - Mar,158.30343937333336
 2015,MUJERES,Actividades financieras y de seguros,Feb - Abr,145.43456543666665
 2015,MUJERES,Actividades financieras y de seguros,Mar - May,139.92915120333333
@@ -6027,6 +6070,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,Actividades financieras y de seguros,Mar - May,243.23859971000002
 2026,MUJERES,Actividades financieras y de seguros,Abr - Jun,240.65721648
 2026,MUJERES,Actividades financieras y de seguros,May - Jul,242.45516635
+2026,MUJERES,Actividades financieras y de seguros,Jun - Ago,255.33558055578192
 2015,MUJERES,Actividades inmobiliarias,Ene - Mar,74.51886332666666
 2015,MUJERES,Actividades inmobiliarias,Feb - Abr,68.28309219133332
 2015,MUJERES,Actividades inmobiliarias,Mar - May,64.887779048
@@ -6164,6 +6208,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,Actividades inmobiliarias,Mar - May,123.42899605999999
 2026,MUJERES,Actividades inmobiliarias,Abr - Jun,120.06889651666665
 2026,MUJERES,Actividades inmobiliarias,May - Jul,112.70468455333332
+2026,MUJERES,Actividades inmobiliarias,Jun - Ago,109.46408599054166
 2015,MUJERES,"Actividades profesionales, científicas, técnicas y servicios administrativos",Ene - Mar,624.77130145
 2015,MUJERES,"Actividades profesionales, científicas, técnicas y servicios administrativos",Feb - Abr,628.19757762
 2015,MUJERES,"Actividades profesionales, científicas, técnicas y servicios administrativos",Mar - May,646.1754460833332
@@ -6301,6 +6346,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,"Actividades profesionales, científicas, técnicas y servicios administrativos",Mar - May,1057.8520387666667
 2026,MUJERES,"Actividades profesionales, científicas, técnicas y servicios administrativos",Abr - Jun,1059.9391036666668
 2026,MUJERES,"Actividades profesionales, científicas, técnicas y servicios administrativos",May - Jul,1070.4125258666666
+2026,MUJERES,"Actividades profesionales, científicas, técnicas y servicios administrativos",Jun - Ago,1041.4708081308552
 2015,MUJERES,"Administración pública y defensa, educación y atención de la salud humana",Ene - Mar,1368.0742522666667
 2015,MUJERES,"Administración pública y defensa, educación y atención de la salud humana",Feb - Abr,1471.7810711666668
 2015,MUJERES,"Administración pública y defensa, educación y atención de la salud humana",Mar - May,1515.4932753666665
@@ -6438,6 +6484,7 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,"Administración pública y defensa, educación y atención de la salud humana",Mar - May,1999.5130735
 2026,MUJERES,"Administración pública y defensa, educación y atención de la salud humana",Abr - Jun,2018.1146118666666
 2026,MUJERES,"Administración pública y defensa, educación y atención de la salud humana",May - Jul,1998.7969570333332
+2026,MUJERES,"Administración pública y defensa, educación y atención de la salud humana",Jun - Ago,1954.6704067375042
 2015,MUJERES,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Ene - Mar,1320.0973095333334
 2015,MUJERES,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Feb - Abr,1307.9123955
 2015,MUJERES,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Mar - May,1387.2313535
@@ -6575,3 +6622,4 @@ Fecha,Perspectiva,Concepto,Periodo,Valor
 2026,MUJERES,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Mar - May,1383.0167935999998
 2026,MUJERES,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Abr - Jun,1350.8413447333332
 2026,MUJERES,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",May - Jul,1364.0968851
+2026,MUJERES,"Actividades artísticas, entretenimiento, recreación y otras actividades de servicios",Jun - Ago,1379.9794612415405
