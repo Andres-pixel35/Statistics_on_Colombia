@@ -17,7 +17,7 @@ FILES = [
     {"file": "informalidad.xlsx", "dim": "Perspectiva", "folder": "informalidad",
      "sheets": {6: "total", 8: "sexo", 9: "educacion", 10: "ramas_actividad",
                 11: "posicion_ocupacional", 12: "lugar_trabajo", 13: "tamano_empresa",
-                14: "seguridad_social", 15: "seguridad_social_sexo"}},
+                14: "seguridad_social", 16: "seguridad_social_sexo"}},
     {"file": "regiones.xls", "dim": "Perspectiva", "folder": "regiones",
      "sheets": {3: "total", 4: "sexo"}},
     {"file": "infantil.xlsx", "dim": "Perspectiva", "folder": "infantil",
